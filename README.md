@@ -62,13 +62,15 @@ Reproducibility comes from the cache, not from sampling settings.
 ```bash
 python -m synthetic plan                     # scenario coverage of the plan (no API)
 python -m synthetic plan --full              # every meeting: roles, absences, product, scenarios
-python -m synthetic generate                 # API calls on cache misses only; writes cache/ and data/raw/
+python -m synthetic generate --workers 5     # API calls on cache misses only; writes cache/ and data/raw/
+                                             # --workers runs series in parallel; output is identical for any value
 python -m synthetic validate                 # re-check every built meeting
 python -m synthetic split                    # data/splits/synthetic_splits.json
 ```
 
 To regenerate truly from scratch, delete `cache/SY*` first. Otherwise `generate` resumes: cached
-meetings are reused, and only missing ones are requested. Use `generate --series SY0101 SY0102` to
+meetings are reused, and only missing ones are requested. An API error stops only its own
+series (raw output kept in `cache/_failed_calls/`); rerun `generate` to resume. Use `generate --series SY0101 SY0102` to
 limit a run.
 
 ## Rebuild from cache (zero API calls)

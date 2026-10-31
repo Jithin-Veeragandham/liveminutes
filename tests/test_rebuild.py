@@ -1,5 +1,5 @@
 """`build` must be reproducible: zero API calls and byte-identical output on every run."""
-import filecmp
+import json
 from pathlib import Path
 
 import pytest
@@ -42,6 +42,15 @@ def test_build_twice_is_byte_identical(tmp_cfg, tmp_path, monkeypatch):
     assert set(manifest["files"]) == set(t1) - {"manifest.json"}
 
 
+def test_parallel_generate_matches_sequential(tmp_cfg, tmp_path, monkeypatch):
+    monkeypatch.setattr(pipeline, "make_client", lambda cfg: FakeClient(tmp_cfg["model"], fail_first={"SY0101b"}))
+    run(tmp_cfg, allow_api=True, workers=4)
+    par = _tree(Path(tmp_cfg["paths"]["raw_dir"]))
+    monkeypatch.setattr(pipeline, "make_client", _no_api)
+    run(tmp_cfg, allow_api=False, out_dir=tmp_path / "seq")
+    assert par == _tree(tmp_path / "seq")
+
+
 def test_generate_reuses_cache(tmp_cfg, monkeypatch):
     fake = FakeClient(tmp_cfg["model"])
     monkeypatch.setattr(pipeline, "make_client", lambda cfg: fake)
@@ -80,6 +89,14 @@ def test_committed_dry_run_rebuilds_identically(tmp_path, monkeypatch):
     monkeypatch.setattr(pipeline, "make_client", _no_api)
     cfg = load_config("config/dryrun.yaml")
     run(cfg, allow_api=False, out_dir=tmp_path / "r")
-    committed = ROOT / "samples" / "raw"
-    cmp = filecmp.dircmp(committed, tmp_path / "r")
-    assert _tree(committed) == _tree(tmp_path / "r"), cmp.report()
+    committed, fresh = _tree(ROOT / "samples" / "raw"), _tree(tmp_path / "r")
+    assert committed.keys() == fresh.keys()
+    for k in committed:
+        if k == "manifest.json":
+            continue
+        assert committed[k] == fresh[k], f"{k} differs from the committed dry run"
+    # The manifest records the code's git commit, which moves with every commit;
+    # everything else in it, including every output file hash, must match.
+    a, b = (json.loads(t["manifest.json"]) for t in (committed, fresh))
+    a.pop("git"), b.pop("git")
+    assert a == b

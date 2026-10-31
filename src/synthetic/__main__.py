@@ -23,15 +23,17 @@ def cmd_plan(args):
 
 
 def _report(res):
-    print(json.dumps({k: v for k, v in res.items() if k != "failed"}, indent=2))
+    print(json.dumps({k: v for k, v in res.items() if k not in ("failed", "api_errors")}, indent=2))
     for f in res["failed"]:
         print(f"FAILED {f['meeting_id']}: {f['last_errors'][:3]}", file=sys.stderr)
-    return 1 if res["failed"] else 0
+    for e in res.get("api_errors", []):
+        print(f"API ERROR {e['meeting_id']} (rerun generate to resume): {e['error'][:300]}", file=sys.stderr)
+    return 1 if res["failed"] or res.get("api_errors") else 0
 
 
 def cmd_generate(args):
     from .pipeline import run
-    return _report(run(_cfg(args), allow_api=True, only_series=args.series))
+    return _report(run(_cfg(args), allow_api=True, only_series=args.series, workers=args.workers))
 
 
 def cmd_build(args):
@@ -134,6 +136,7 @@ def main(argv=None):
     p.set_defaults(fn=cmd_plan)
     p = sub.add_parser("generate", help="call the LLM on cache misses, then write the dataset")
     p.add_argument("--series", nargs="*", help="only these series IDs")
+    p.add_argument("--workers", type=int, default=1, help="series generated in parallel (output is identical)")
     p.set_defaults(fn=cmd_generate)
     p = sub.add_parser("build", help="rebuild the dataset from cache with zero API calls")
     p.add_argument("--out", help="output dir (default paths.raw_dir)")
