@@ -1,0 +1,110 @@
+{
+  "dataset": "liveminutes-synthetic",
+  "schema_version": "1.0",
+  "git": {
+    "commit": "316ef753673f8675489c8a15ba83fbe2b0246916",
+    "dirty": false
+  },
+  "config_file": "config/dryrun.yaml",
+  "config": {
+    "model": {
+      "provider": "anthropic",
+      "backend": "claude_cli",
+      "name": "claude-opus-5-5",
+      "version": "claude-opus-5-5",
+      "cli": {
+        "executable": "claude",
+        "effort": "high",
+        "timeout_sec": 1200
+      },
+      "sampling": {
+        "temperature": null,
+        "top_p": null,
+        "max_tokens": null,
+        "seed": null
+      }
+    },
+    "generation": {
+      "seed": 6170,
+      "prompt_version": "v1",
+      "scenarios_file": "scenarios/scenarios.yaml",
+      "series_per_feature": {
+        "F1": 0,
+        "F2": 1,
+        "F3": 0
+      },
+      "max_series_per_feature": {
+        "F3": 5
+      },
+      "meetings_per_series": 2,
+      "scenarios_per_meeting": 2,
+      "target_segments": [
+        90,
+        140
+      ],
+      "max_attempts": 3,
+      "products": [
+        "a smart thermostat for student apartments",
+        "a bike-share docking station app",
+        "a voice-controlled kitchen timer",
+        "a library self-checkout kiosk",
+        "a wearable step counter for seniors",
+        "a campus parking availability display",
+        "a reusable coffee cup with a deposit system",
+        "a children's educational tablet case"
+      ]
+    },
+    "paths": {
+      "cache_dir": "samples/cache",
+      "raw_dir": "samples/raw",
+      "reviewed_dir": "samples/reviewed",
+      "splits_dir": "samples/splits",
+      "review_dir": "samples/review"
+    },
+    "splits": {
+      "seed": 6170,
+      "ratios": {
+        "train": 0.6,
+        "dev": 0.2,
+        "test": 0.2
+      },
+      "stratify_by": "feature"
+    }
+  },
+  "model": {
+    "provider": "anthropic",
+    "name": "claude-opus-5-5",
+    "version_pinned": "claude-opus-5-5",
+    "versions_in_responses": [
+      "claude-opus-5-5"
+    ]
+  },
+  "generation_timestamp": {
+    "first_response": "2026-10-31T16:35:36Z",
+    "last_response": "2026-10-31T16:37:50Z"
+  },
+  "scenario_spec": {
+    "version": 1,
+    "sha256": "5a261f1f7d4d34402d41fae3b61fa512e957572b2e383b2027abea73a6d7150b"
+  },
+  "prompt_templates": {
+    "repair.txt": "c68d9f457b7f1b7e8c5a367d6a7f0473a92eaee7865e63f87b2d3b41e528feca",
+    "system.txt": "13d829271334deb9d97574d53eabb46b0228a28450a66c28d93206b0fbca11a7",
+    "user.txt": "d48a68bcc2d7b1e28e338931196ecdb5cf8484061eaf1fa617b4764f9443be2b"
+  },
+  "schema_sha256": "287c136e9e2457925851a777948127cf954be2465a6b45b910117c8286a9ce22",
+  "counts": {
+    "meetings": 2,
+    "series": 1,
+    "failed": 0,
+    "blocked": 0
+  },
+  "failed_meetings": [],
+  "files": {
+    "index.json": "0e512c96ba72a8cc0f7cbdff765b0439084f51fe0f83330c869bb1cf822d6405",
+    "meetings/SY0201a.json": "00227e4766d1a1af7d2087fac46f2b4c18e49846dc4f5333a8960ab5b942e773",
+    "meetings/SY0201b.json": "f91b07ac90fc7b181618050ae37a90c4eb8bfae2ffc88815c2151dce37c1c888",
+    "plan.json": "63e508c3c034a32e77e1726d6b2bf36cdb4c045ec647f19354cf3e39fa8f3a39",
+    "validation_report.json": "5df2f517d904223a2297e8d3dea2c90c9400e443f415adbe7956e6e9c9777f24"
+  }
+}
