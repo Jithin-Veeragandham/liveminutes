@@ -1,0 +1,1119 @@
+{
+  "meeting_id": "SY0305d",
+  "raw_sha256": "7259c2999e86681340688947521e2e8e25bcfc133d7066b3b2d83e7eb5f44ca8",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting, noted that the marketing expert was absent because he was ill, and relayed that he had emailed his evaluation criteria and the Wilson Street branch's wishes for the front panel (logo, opening hours and an events strip).",
+        "The industrial designer presented the prototype in warm white with a clip-on printed front panel, the screen at about 100 cm and tilted back, and confirmed on the prototype that the RFID shelf on the right with the scanner and keypad on the left works with a stack of books; she proposed a raised lip on the RFID shelf so tall stacks do not slide off.",
+        "The user interface designer presented the branded screens with the three-button start screen, high-contrast text and large text mode, and agreed to turn the small large text icon into a proper button on the start screen. He also announced that the receipt printer would be dropped in favour of email receipts only, but this was not agreed and was set aside.",
+        "The industrial designer reported that the cost had risen from about 1,240 to about 1,290 euros with the steel body and powder coat, still about 110 euros under the 1,400 euro limit.",
+        "The team evaluated the design against the marketing expert's six criteria, scoring mostly ones and twos with a three for originality, and judged it a pass. The project manager assigned the absent marketing expert a trial of the prototype at the Wilson Street branch and closed the meeting."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will add a raised lip along the front of the RFID shelf to the final drawings.",
+        "The user interface designer will make large text mode a full-size button on the start screen in the final version.",
+        "The marketing expert (absent) is to set up a one-week trial of the prototype at the Wilson Street branch once he is back, gather feedback from staff and patrons, and ask whether users want paper or email receipts. The project manager assigned this task.",
+        "The project manager will email the marketing expert about his task.",
+        "The project manager will write up the minutes and the final report for management."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The layout of the RFID shelf on the right and the barcode scanner and PIN keypad on the left is kept, after testing on the prototype.",
+        "A raised lip will be added along the front of the RFID shelf so stacks of books do not slide off.",
+        "Large text mode will be switched on with a full-size button on the start screen instead of a small corner icon.",
+        "The design passes the evaluation, scoring 2 for stack processing, 2 for accessibility, 1 for ease of use, 1 for branding, 3 for originality and 1 for cost."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The user interface designer's proposal to drop the receipt printer and offer email receipts only was not agreed; older users are known to like paper slips, and the question is open until user feedback is collected. The printer remains in the current cost sheet.",
+        "How returned books are handled after check-in is still unresolved and has been flagged for a future version.",
+        "The cost margin is about 110 euros under the 1,400 euro limit, mainly because powder coating cost more than expected.",
+        "Barcode-only libraries still have to scan books one at a time, and small children still cannot reach the screen comfortably.",
+        "The design is judged only moderately original, scoring 3 out of 7."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0305d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0305d.ai1",
+        "description": "Add a raised lip along the front of the RFID shelf to the final drawings",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0305d.s0034",
+            "event": "proposed",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0305d.s0038",
+            "event": "assigned",
+            "by": "C",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0305d.s0039",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0305d.s0033",
+          "SY0305d.s0034",
+          "SY0305d.s0036",
+          "SY0305d.s0037",
+          "SY0305d.s0038",
+          "SY0305d.s0039"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0305d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0305d.ai2",
+        "description": "Make large text mode a full-size button on the start screen in the final version of the screens",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0305d.s0053",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0305d.s0055",
+            "event": "assigned",
+            "by": "C",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0305d.s0056",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0305d.s0049",
+          "SY0305d.s0050",
+          "SY0305d.s0051",
+          "SY0305d.s0053",
+          "SY0305d.s0054",
+          "SY0305d.s0055",
+          "SY0305d.s0056"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0305d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0305d.ai3",
+        "description": "Once back, set up a one-week trial of the prototype in the Wilson Street branch foyer, gather staff and patron feedback, and ask whether users want paper or email receipts",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0305d.s0114",
+            "event": "assigned",
+            "by": "C",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0305d.s0118",
+            "event": "restated",
+            "by": "C",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0305d.s0114",
+          "SY0305d.s0115",
+          "SY0305d.s0116",
+          "SY0305d.s0117",
+          "SY0305d.s0118"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0305d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0305d.ai4",
+        "description": "Email the absent marketing expert about his trial task",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0305d.s0120",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0305d.s0120"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0305d.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0305d.ai5",
+        "description": "Write up the meeting minutes and the final report for management",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0305d.s0123",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0305d.s0123"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305d.f1",
+        "type": "absence",
+        "fact": "Tomasz (B), the marketing expert, was absent from the detailed design meeting because he was off sick with a cold.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305d.s0005",
+          "SY0305d.s0007"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305d.f2",
+        "type": "other",
+        "fact": "Tomasz emailed his evaluation criteria and the Wilson Street front panel wishes to Helen before the meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0305c",
+        "evidence_segments": [
+          "SY0305d.s0008",
+          "SY0305d.s0080"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305d.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "Helen relayed that Wilson Street, as Tomasz found out following his task from the conceptual design meeting, wants the logo, opening hours and an events strip on the front panel.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0305c",
+        "evidence_segments": [
+          "SY0305d.s0020",
+          "SY0305d.s0021",
+          "SY0305d.s0022"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305d.f4",
+        "type": "reference_to_prior_meeting",
+        "fact": "Helen confirmed she had sent round the minutes from the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0305c",
+        "evidence_segments": [
+          "SY0305d.s0010",
+          "SY0305d.s0011",
+          "SY0305d.s0012"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305d.f5",
+        "type": "decision",
+        "fact": "The team kept the layout with the RFID shelf on the right and the scanner and keypad on the left after Priya tested it on the prototype with a stack of six books.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305d.s0028",
+          "SY0305d.s0029",
+          "SY0305d.s0030",
+          "SY0305d.s0031",
+          "SY0305d.s0032"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305d.f6",
+        "type": "decision",
+        "fact": "A raised lip will be added along the front of the RFID shelf so tall stacks do not slide off; it adds essentially no cost.",
+        "agreed": true,
+        "related_action_item": "SY0305d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305d.s0033",
+          "SY0305d.s0034",
+          "SY0305d.s0036",
+          "SY0305d.s0037",
+          "SY0305d.s0076"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305d.f7",
+        "type": "action_item",
+        "fact": "Priya (A) will add the raised lip on the RFID shelf to the final drawings, as Helen asked.",
+        "agreed": null,
+        "related_action_item": "SY0305d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305d.s0038",
+          "SY0305d.s0039"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305d.f8",
+        "type": "plan_change",
+        "fact": "Large text mode, previously switched on with a small corner icon, will instead have a full-size button on the start screen.",
+        "agreed": null,
+        "related_action_item": "SY0305d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305d.s0049",
+          "SY0305d.s0050",
+          "SY0305d.s0051",
+          "SY0305d.s0053",
+          "SY0305d.s0054"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305d.f9",
+        "type": "action_item",
+        "fact": "Kofi (D) will make large text mode a proper button on the start screen in the final version.",
+        "agreed": null,
+        "related_action_item": "SY0305d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305d.s0053",
+          "SY0305d.s0055",
+          "SY0305d.s0056"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305d.f10",
+        "type": "unagreed_proposal",
+        "fact": "Kofi (D) declared that the receipt printer would be dropped and receipts sent by email only, calling it sorted; Priya noted the printer is in all the quotes and the casing, Helen doubted it because older users like paper slips, and Helen set it aside without agreement.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305d.s0058",
+          "SY0305d.s0059",
+          "SY0305d.s0060",
+          "SY0305d.s0061",
+          "SY0305d.s0062",
+          "SY0305d.s0063",
+          "SY0305d.s0064",
+          "SY0305d.s0065",
+          "SY0305d.s0066",
+          "SY0305d.s0067"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305d.f11",
+        "type": "plan_change",
+        "fact": "The production cost rose from about 1,240 euros to about 1,290 euros with the steel body and warm white powder coat, now about 110 euros under the 1,400 euro limit.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0305c",
+        "evidence_segments": [
+          "SY0305d.s0069",
+          "SY0305d.s0070",
+          "SY0305d.s0071",
+          "SY0305d.s0072",
+          "SY0305d.s0073"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305d.f12",
+        "type": "reference_to_prior_meeting",
+        "fact": "Helen noted that staying under budget had been the big worry since the kickoff meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0305a",
+        "evidence_segments": [
+          "SY0305d.s0077"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305d.f13",
+        "type": "decision",
+        "fact": "The design passed the evaluation with scores of 2 for stack processing, 2 for accessibility, 1 for ease of use, 1 for branding, 3 for originality and 1 for cost, on a scale where 1 is best.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305d.s0080",
+          "SY0305d.s0082",
+          "SY0305d.s0086",
+          "SY0305d.s0087",
+          "SY0305d.s0089",
+          "SY0305d.s0090",
+          "SY0305d.s0091",
+          "SY0305d.s0092",
+          "SY0305d.s0093",
+          "SY0305d.s0094",
+          "SY0305d.s0095",
+          "SY0305d.s0096",
+          "SY0305d.s0097",
+          "SY0305d.s0098",
+          "SY0305d.s0099",
+          "SY0305d.s0100",
+          "SY0305d.s0102",
+          "SY0305d.s0103",
+          "SY0305d.s0104",
+          "SY0305d.s0106",
+          "SY0305d.s0107"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305d.f14",
+        "type": "reference_to_prior_meeting",
+        "fact": "Kofi referred back to his return slot proposal from the conceptual design meeting; Helen said return handling is a second product and flagged it for the next version.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0305c",
+        "evidence_segments": [
+          "SY0305d.s0108",
+          "SY0305d.s0109",
+          "SY0305d.s0110",
+          "SY0305d.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305d.f15",
+        "type": "action_item",
+        "fact": "Helen (C) assigned the absent Tomasz (B) to set up a one-week trial of the prototype at Wilson Street once he is back, collect staff and patron feedback, and ask about paper versus email receipts.",
+        "agreed": null,
+        "related_action_item": "SY0305d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305d.s0114",
+          "SY0305d.s0115",
+          "SY0305d.s0116",
+          "SY0305d.s0117",
+          "SY0305d.s0118"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305d.f16",
+        "type": "action_item",
+        "fact": "Helen (C) will email Tomasz tonight to tell him about the trial task.",
+        "agreed": null,
+        "related_action_item": "SY0305d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305d.s0120"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305d.f17",
+        "type": "action_item",
+        "fact": "Helen (C) will write up the minutes and the final report for management.",
+        "agreed": null,
+        "related_action_item": "SY0305d.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305d.s0123"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_TASK_TO_ABSENT",
+        "segments": [
+          "SY0305d.s0005",
+          "SY0305d.s0007",
+          "SY0305d.s0114",
+          "SY0305d.s0115",
+          "SY0305d.s0116",
+          "SY0305d.s0117",
+          "SY0305d.s0118",
+          "SY0305d.s0120"
+        ],
+        "note": "Helen assigns the absent, ill Tomasz the Wilson Street prototype trial and receipt question, and says she will email him."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_UNAGREED_DECISION",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_UNAGREED_DECISION",
+        "segments": [
+          "SY0305d.s0058",
+          "SY0305d.s0059",
+          "SY0305d.s0060",
+          "SY0305d.s0061",
+          "SY0305d.s0062",
+          "SY0305d.s0063",
+          "SY0305d.s0064",
+          "SY0305d.s0065",
+          "SY0305d.s0066",
+          "SY0305d.s0067"
+        ],
+        "note": "Kofi declares the printer dropped for email-only receipts as settled; Priya and Helen raise doubts and Helen moves on without agreement."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

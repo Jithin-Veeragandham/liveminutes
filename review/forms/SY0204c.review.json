@@ -1,0 +1,1486 @@
+{
+  "meeting_id": "SY0204c",
+  "raw_sha256": "d78967eff9b7f32071a56a1b92bb82ab6a088c74a37f99b1fee67fad595fa93b",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the conceptual design meeting, welcomed the industrial designer back after his illness, and confirmed that the minutes and the email with the previous meeting's decisions had gone round.",
+        "The marketing expert reported component costs from the supplier price lists: about 10.30 euros in parts without a vibration motor and 11.20 euros with one, excluding the battery, assembly and packaging.",
+        "The user panel's response to a vibration goal alert was mixed, so the team dropped the vibration motor and chose a star icon on the display when a fixed daily goal of 5000 steps is reached.",
+        "The industrial designer presented his battery and clip comparisons, and the team chose a coin-cell battery behind a large twist-off cap and a spring-steel clip.",
+        "The user interface designer presented a mock-up of the three screens with 1.8 centimetre digits, which the marketing expert will test with the user panel."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The marketing expert will take the mock-up to the user panel to check whether it can be read at arm's length.",
+        "The marketing expert will update the cost list for a device with no motor, a coin cell and a steel clip.",
+        "The industrial designer will make a model of the housing with the clip and the twist-off battery cap.",
+        "The user interface designer will finish the screen layout, including the star icon.",
+        "The project manager will send round the minutes.",
+        "Checking what assembly and packaging add to the cost was raised twice, but no owner was assigned."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The vibration goal alert is dropped. No vibration motor will be included.",
+        "A star icon will appear on the steps screen when the daily goal is reached.",
+        "The daily goal is fixed at 5000 steps and cannot be set by the user.",
+        "The device will use a CR2032 coin-cell battery behind a twist-off cap about 3 centimetres across, with a ridged edge and no screws.",
+        "The device will use a spring-steel clip."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "Assembly and packaging costs are unknown, and nobody is assigned to check them.",
+        "The parts alone cost about 10.30 euros, which leaves little margin under the 12.50 euro limit.",
+        "The industrial designer's safety cord loop was left open until the total cost is known.",
+        "The marketing expert again raised the family app, but it remains rejected for this version."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0204c.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0204c.ai1",
+        "description": "Find out what assembly and packaging add on top of the parts cost",
+        "owner": null,
+        "owner_unclear": true,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0204c.s0031",
+            "event": "proposed",
+            "by": "D",
+            "owner": null
+          },
+          {
+            "segment": "SY0204c.s0127",
+            "event": "restated",
+            "by": "D",
+            "owner": null
+          }
+        ],
+        "evidence_segments": [
+          "SY0204c.s0027",
+          "SY0204c.s0028",
+          "SY0204c.s0029",
+          "SY0204c.s0030",
+          "SY0204c.s0031",
+          "SY0204c.s0032",
+          "SY0204c.s0033",
+          "SY0204c.s0034",
+          "SY0204c.s0126",
+          "SY0204c.s0127",
+          "SY0204c.s0128"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0204c.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0204c.ai2",
+        "description": "Check whether a vibration motor fits in the clip housing next to the battery",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "dropped",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0204c.s0037",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0204c.s0038",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0204c.s0088",
+            "event": "dropped",
+            "by": "D",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0204c.s0035",
+          "SY0204c.s0036",
+          "SY0204c.s0037",
+          "SY0204c.s0038",
+          "SY0204c.s0057",
+          "SY0204c.s0087",
+          "SY0204c.s0088",
+          "SY0204c.s0089",
+          "SY0204c.s0090"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0204c.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0204c.ai3",
+        "description": "Take the screen mock-up to the user panel to check whether it can be read at arm's length",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0204c.s0114",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0204c.s0115",
+            "event": "accepted",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0204c.s0116",
+            "event": "restated",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0204c.s0114",
+          "SY0204c.s0115",
+          "SY0204c.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0204c.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0204c.ai4",
+        "description": "Make a model of the housing with the clip and the twist-off battery cap",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0204c.s0118",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0204c.s0119",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0204c.s0118",
+          "SY0204c.s0119"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0204c.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0204c.ai5",
+        "description": "Finish the screen layout, including the star icon",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0204c.s0120",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0204c.s0121",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0204c.s0109",
+          "SY0204c.s0120",
+          "SY0204c.s0121"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0204c.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0204c.ai6",
+        "description": "Update the cost list for no motor, a coin cell and a steel clip",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0204c.s0122",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0204c.s0123",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0204c.s0122",
+          "SY0204c.s0123"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0204c.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0204c.ai7",
+        "description": "Send round the minutes of the meeting",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0204c.s0124",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0204c.s0124"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f1",
+        "type": "decision",
+        "fact": "The team dropped the vibration goal alert and will not include a vibration motor.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204c.s0047",
+          "SY0204c.s0053",
+          "SY0204c.s0054",
+          "SY0204c.s0055",
+          "SY0204c.s0056",
+          "SY0204c.s0057"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f2",
+        "type": "decision",
+        "fact": "A star icon will appear on the steps screen when the daily goal is reached.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204c.s0049",
+          "SY0204c.s0050",
+          "SY0204c.s0052",
+          "SY0204c.s0053",
+          "SY0204c.s0054",
+          "SY0204c.s0055",
+          "SY0204c.s0056",
+          "SY0204c.s0057",
+          "SY0204c.s0109"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f3",
+        "type": "decision",
+        "fact": "The daily goal is fixed at 5000 steps and is not set by the user.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204c.s0058",
+          "SY0204c.s0059",
+          "SY0204c.s0065",
+          "SY0204c.s0066",
+          "SY0204c.s0067"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f4",
+        "type": "decision",
+        "fact": "The device will use a CR2032 coin-cell battery behind a twist-off cap about 3 centimetres across, with a ridged edge and no screws.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204c.s0070",
+          "SY0204c.s0076",
+          "SY0204c.s0077",
+          "SY0204c.s0080",
+          "SY0204c.s0081",
+          "SY0204c.s0082",
+          "SY0204c.s0083",
+          "SY0204c.s0084",
+          "SY0204c.s0085",
+          "SY0204c.s0086"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f5",
+        "type": "decision",
+        "fact": "The device will use a spring-steel clip rather than a plastic one.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204c.s0092",
+          "SY0204c.s0093",
+          "SY0204c.s0094",
+          "SY0204c.s0102",
+          "SY0204c.s0103"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f6",
+        "type": "plan_change",
+        "fact": "The vibration goal alert, left pending at the functional design meeting, was dropped and replaced by an on-screen star icon.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0204b",
+        "evidence_segments": [
+          "SY0204c.s0041",
+          "SY0204c.s0042",
+          "SY0204c.s0043",
+          "SY0204c.s0045",
+          "SY0204c.s0048",
+          "SY0204c.s0049",
+          "SY0204c.s0053",
+          "SY0204c.s0057"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f7",
+        "type": "plan_change",
+        "fact": "The user interface designer had objected that coin cells are hard to change, but she accepted a coin cell once the industrial designer proposed a large twist-off cap.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0204b",
+        "evidence_segments": [
+          "SY0204c.s0075",
+          "SY0204c.s0076",
+          "SY0204c.s0077",
+          "SY0204c.s0078",
+          "SY0204c.s0080",
+          "SY0204c.s0081"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f8",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert again suggested a family app so that family members could set the goal. The user interface designer and project manager rejected it for this version.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0204b",
+        "evidence_segments": [
+          "SY0204c.s0060",
+          "SY0204c.s0061",
+          "SY0204c.s0062",
+          "SY0204c.s0063",
+          "SY0204c.s0064"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f9",
+        "type": "unagreed_proposal",
+        "fact": "The industrial designer proposed a loop for a safety cord on the clip. The marketing expert liked it, but the project manager left it open until the total cost is known.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204c.s0096",
+          "SY0204c.s0097",
+          "SY0204c.s0098",
+          "SY0204c.s0099",
+          "SY0204c.s0100"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f10",
+        "type": "action_item",
+        "fact": "Finding out what assembly and packaging add to the cost was raised, but nobody took it.",
+        "agreed": null,
+        "related_action_item": "SY0204c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204c.s0029",
+          "SY0204c.s0031",
+          "SY0204c.s0032",
+          "SY0204c.s0033",
+          "SY0204c.s0126",
+          "SY0204c.s0127",
+          "SY0204c.s0128"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f11",
+        "type": "action_item",
+        "fact": "The project manager asked the industrial designer to check whether a vibration motor would fit in the clip housing with the battery.",
+        "agreed": null,
+        "related_action_item": "SY0204c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204c.s0035",
+          "SY0204c.s0037",
+          "SY0204c.s0038"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f12",
+        "type": "action_item_removed",
+        "fact": "The industrial designer's task to check whether the vibration motor fits was dropped after the motor was removed from the design.",
+        "agreed": null,
+        "related_action_item": "SY0204c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204c.s0087",
+          "SY0204c.s0088",
+          "SY0204c.s0089",
+          "SY0204c.s0090"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f13",
+        "type": "action_item",
+        "fact": "The marketing expert will take the mock-up to the user panel to check whether it can be read at arm's length.",
+        "agreed": null,
+        "related_action_item": "SY0204c.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204c.s0114",
+          "SY0204c.s0115",
+          "SY0204c.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f14",
+        "type": "action_item",
+        "fact": "The industrial designer will make a model of the housing with the clip and the twist-off cap.",
+        "agreed": null,
+        "related_action_item": "SY0204c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204c.s0118",
+          "SY0204c.s0119"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f15",
+        "type": "action_item",
+        "fact": "The user interface designer will finish the screen layout, including the star icon.",
+        "agreed": null,
+        "related_action_item": "SY0204c.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204c.s0120",
+          "SY0204c.s0121"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f16",
+        "type": "action_item",
+        "fact": "The marketing expert will update the cost list for no motor, a coin cell and a steel clip.",
+        "agreed": null,
+        "related_action_item": "SY0204c.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204c.s0122",
+          "SY0204c.s0123"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f17",
+        "type": "action_item",
+        "fact": "The project manager will send round the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0204c.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204c.s0124"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f18",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer, who missed the functional design meeting through illness, confirmed he received the project manager's email with that meeting's decisions.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0204b",
+        "evidence_segments": [
+          "SY0204c.s0003",
+          "SY0204c.s0004",
+          "SY0204c.s0005",
+          "SY0204c.s0006"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f19",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert completed her task from the previous meeting of pricing components from supplier price lists, using screen sizes the user interface designer sent her.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0204b",
+        "evidence_segments": [
+          "SY0204c.s0014",
+          "SY0204c.s0015",
+          "SY0204c.s0016"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f20",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert recalled that at the last meeting the user panel clearly did not want to recharge the device.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0204b",
+        "evidence_segments": [
+          "SY0204c.s0073",
+          "SY0204c.s0074"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f21",
+        "type": "other",
+        "fact": "The component costs are about 2.40 euros for the sensor, 3.10 for the 4 by 3 centimetre segment screen, 1.80 for the chip, 0.30 for the button, 1.20 for the clip, 1.50 for the housing and 0.90 for a vibration motor. That totals about 10.30 euros without the motor and 11.20 euros with it, excluding the battery.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204c.s0017",
+          "SY0204c.s0018",
+          "SY0204c.s0020",
+          "SY0204c.s0022",
+          "SY0204c.s0023",
+          "SY0204c.s0025"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f22",
+        "type": "other",
+        "fact": "The user panel's response to vibration was mixed. About a third liked it, some found it startling, and some said they would not feel it on a belt.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204c.s0041",
+          "SY0204c.s0042",
+          "SY0204c.s0043",
+          "SY0204c.s0045"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f23",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f23",
+        "type": "other",
+        "fact": "A coin cell costs about 35 cents and lasts about a year without vibration. A rechargeable cell would cost about 2.50 euros more with contacts and a cradle.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204c.s0070",
+          "SY0204c.s0071",
+          "SY0204c.s0072",
+          "SY0204c.s0087"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204c.f24",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204c.f24",
+        "type": "other",
+        "fact": "The user interface designer's mock-up shows step digits 1.8 centimetres tall, a time screen and a yesterday screen labelled 'yesterday'. One press of the button moves to the next screen, and a three-second hold sets the time.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204c.s0105",
+          "SY0204c.s0106",
+          "SY0204c.s0108",
+          "SY0204c.s0111",
+          "SY0204c.s0112",
+          "SY0204c.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_VAGUE_NO_OWNER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_VAGUE_NO_OWNER",
+        "segments": [
+          "SY0204c.s0029",
+          "SY0204c.s0031",
+          "SY0204c.s0032",
+          "SY0204c.s0033",
+          "SY0204c.s0034",
+          "SY0204c.s0126",
+          "SY0204c.s0127",
+          "SY0204c.s0128"
+        ],
+        "note": "The project manager says someone should probably check assembly and packaging costs. People only backchannel, and when the user interface designer asks again at the end, it is still left with no owner."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_REASSIGNED_OR_DROPPED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_REASSIGNED_OR_DROPPED",
+        "segments": [
+          "SY0204c.s0035",
+          "SY0204c.s0037",
+          "SY0204c.s0038",
+          "SY0204c.s0087",
+          "SY0204c.s0088",
+          "SY0204c.s0089",
+          "SY0204c.s0090"
+        ],
+        "note": "The industrial designer accepts a task to check whether the vibration motor fits in the housing. After the motor is removed, the project manager drops the task."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

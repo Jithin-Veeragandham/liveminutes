@@ -1,0 +1,1202 @@
+{
+  "meeting_id": "SY0304c",
+  "raw_sha256": "efe4abc3f6725b6072acac1355f49da46f1955533d86f254bd14fa4f65103b09",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the conceptual design meeting, noted that the industrial designer was off sick, and confirmed she had sent round the minutes of the previous meeting.",
+        "She reported that the estates office would like the central sign near the main gate but has no separate budget for it, so the team left it out of this phase as a later idea.",
+        "The user interface designer presented the sixty-centimetre layout with the car park name in white on a navy strip, the LED number below on a colour panel, and the agreed thresholds. The marketing expert reported that eleven visitors surveyed at the open day did not know the car park names and wanted a P symbol, and that most disliked flashing, which estates also discourage next to roads. The team therefore dropped flashing and cancelled the flashing mock-up.",
+        "Relaying the industrial designer's email, the project manager reported that four of the five barriers have a spare mains supply but the underground library car park does not. She assigned the absent industrial designer to get an electrician's quote for a new supply there and to specify the mounting. The team chose a navy IP65 powder-coated aluminium casing and noted a cost of about three hundred and ninety pounds per sign, excluding the library supply."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer (absent) is to get an electrician's quote for running a new mains supply at the library car park and to specify the mounting (post or wall bracket), checking the wall mounting with estates. The project manager assigned this.",
+        "The project manager will email the industrial designer to tell him about his task.",
+        "The project manager will ask the estates office whether they could pay for the library electrics separately.",
+        "The user interface designer will produce the final layout with the P symbol, the navy strip and no flashing, shown on the navy casing.",
+        "The marketing expert will write up the open day survey results and send them round.",
+        "The project manager will send the minutes round."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The central sign near the main gate is left out of this phase and flagged as a later idea.",
+        "A P symbol will be added to the left of the car park name strip.",
+        "The number will not flash. Red at five or fewer free spaces is the warning.",
+        "The whole casing will be navy, matching the university signage.",
+        "The barrier counters keep the nightly reset with attendant correction for now."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "There is no spare mains supply at the underground library car park, and the cost of a new supply is unknown. It could push that sign over the four-hundred-pound budget.",
+        "At about three hundred and ninety pounds per sign, only about ten pounds of margin is left.",
+        "Barrier counter drift is still only partly addressed by the nightly reset.",
+        "The marketing expert's suggestion of a QR code on the casing for a future app was not agreed and was left open.",
+        "The visitor survey sample is still small, with eleven open day visitors plus two earlier respondents."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304c.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304c.ai1",
+        "description": "Make an animated mock-up of the layout with and without flashing so the team can compare them",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "dropped",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304c.s0034",
+            "event": "assigned",
+            "by": "C",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0304c.s0035",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0304c.s0059",
+            "event": "dropped",
+            "by": "C",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304c.s0034",
+          "SY0304c.s0035",
+          "SY0304c.s0059",
+          "SY0304c.s0060",
+          "SY0304c.s0061"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304c.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304c.ai2",
+        "description": "Get an electrician's quote for running a new mains supply at the library car park, and specify the mounting (post or wall bracket), checking the wall mounting with estates",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304c.s0088",
+            "event": "assigned",
+            "by": "C",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0304c.s0105",
+            "event": "restated",
+            "by": "C",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304c.s0087",
+          "SY0304c.s0088",
+          "SY0304c.s0089",
+          "SY0304c.s0092",
+          "SY0304c.s0093",
+          "SY0304c.s0105"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304c.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304c.ai3",
+        "description": "Email the industrial designer to tell him about the electrician quote and mounting task",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304c.s0091",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0304c.s0105",
+            "event": "restated",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304c.s0090",
+          "SY0304c.s0091",
+          "SY0304c.s0093",
+          "SY0304c.s0105"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304c.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304c.ai4",
+        "description": "Ask the estates office whether they could pay for the library car park electrics separately",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304c.s0078",
+            "event": "proposed",
+            "by": "B",
+            "owner": null
+          },
+          {
+            "segment": "SY0304c.s0079",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304c.s0078",
+          "SY0304c.s0079"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304c.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304c.ai5",
+        "description": "Produce the final layout with the P symbol, the navy strip and no flashing, shown on the navy casing",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304c.s0100",
+            "event": "assigned",
+            "by": "C",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0304c.s0101",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304c.s0045",
+          "SY0304c.s0100",
+          "SY0304c.s0101",
+          "SY0304c.s0102"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304c.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304c.ai6",
+        "description": "Write up the open day survey results and send them round",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304c.s0103",
+            "event": "assigned",
+            "by": "C",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0304c.s0104",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304c.s0103",
+          "SY0304c.s0104"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304c.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304c.ai7",
+        "description": "Send the minutes round to the team",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304c.s0106",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304c.s0106"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304c.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304c.f1",
+        "type": "absence",
+        "fact": "Marcus, the industrial designer (D), was absent from the conceptual design meeting because he was off sick.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304c.s0003",
+          "SY0304c.s0087"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304c.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304c.f2",
+        "type": "action_item",
+        "fact": "While the industrial designer was absent, he was given the task of getting an electrician's quote for a new mains supply at the library car park and specifying the mounting.",
+        "agreed": null,
+        "related_action_item": "SY0304c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304c.s0087",
+          "SY0304c.s0088",
+          "SY0304c.s0089",
+          "SY0304c.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304c.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304c.f3",
+        "type": "action_item",
+        "fact": "The project manager (C) assigned the absent industrial designer's task and will email him about it.",
+        "agreed": null,
+        "related_action_item": "SY0304c.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304c.s0088",
+          "SY0304c.s0091",
+          "SY0304c.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304c.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304c.f4",
+        "type": "action_item",
+        "fact": "The user interface designer was asked to make a flashing and non-flashing mock-up and accepted.",
+        "agreed": null,
+        "related_action_item": "SY0304c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304c.s0034",
+          "SY0304c.s0035"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304c.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304c.f5",
+        "type": "action_item_removed",
+        "fact": "The project manager cancelled the flashing mock-up after the team decided against flashing.",
+        "agreed": null,
+        "related_action_item": "SY0304c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304c.s0056",
+          "SY0304c.s0059",
+          "SY0304c.s0060",
+          "SY0304c.s0061"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304c.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304c.f6",
+        "type": "decision",
+        "fact": "The central sign near the main gate is left out of this phase because estates has no separate budget for it.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304c.s0012",
+          "SY0304c.s0016",
+          "SY0304c.s0017",
+          "SY0304c.s0018",
+          "SY0304c.s0019"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304c.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304c.f7",
+        "type": "decision",
+        "fact": "A P symbol will be added on the left of the car park name strip.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304c.s0044",
+          "SY0304c.s0045",
+          "SY0304c.s0046",
+          "SY0304c.s0047"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304c.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304c.f8",
+        "type": "decision",
+        "fact": "The number will not flash. Red at five or fewer free spaces serves as the warning.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304c.s0050",
+          "SY0304c.s0051",
+          "SY0304c.s0054",
+          "SY0304c.s0055",
+          "SY0304c.s0056",
+          "SY0304c.s0057",
+          "SY0304c.s0058"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304c.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304c.f9",
+        "type": "decision",
+        "fact": "The casing will be navy all over, matching the navy strip and the university signage.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304c.s0081",
+          "SY0304c.s0082",
+          "SY0304c.s0083",
+          "SY0304c.s0084",
+          "SY0304c.s0085"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304c.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304c.f10",
+        "type": "decision",
+        "fact": "The barrier counters keep the nightly reset with attendant correction for now.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304c.s0107",
+          "SY0304c.s0108",
+          "SY0304c.s0109"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304c.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304c.f11",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert proposed a QR code on the casing for a future app. The user interface designer doubted it, and the project manager deferred it without agreement.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304c.s0062",
+          "SY0304c.s0063",
+          "SY0304c.s0064",
+          "SY0304c.s0065",
+          "SY0304c.s0066",
+          "SY0304c.s0111",
+          "SY0304c.s0112",
+          "SY0304c.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304c.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304c.f12",
+        "type": "other",
+        "fact": "Four of the five barriers have a spare mains supply. The underground library car park barrier is on a different circuit with no spare capacity.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304c.s0069",
+          "SY0304c.s0070",
+          "SY0304c.s0071",
+          "SY0304c.s0075"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304c.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304c.f13",
+        "type": "other",
+        "fact": "The estimated cost is about three hundred and ninety pounds per sign, excluding the library supply, leaving about ten pounds of margin.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304c.s0094",
+          "SY0304c.s0095",
+          "SY0304c.s0096",
+          "SY0304c.s0098"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304c.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304c.f14",
+        "type": "other",
+        "fact": "At the open day the marketing expert surveyed eleven visitors. They did not know the car park names and mostly found flashing distracting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304c.s0038",
+          "SY0304c.s0039",
+          "SY0304c.s0041",
+          "SY0304c.s0042",
+          "SY0304c.s0050",
+          "SY0304c.s0051"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304c.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304c.f15",
+        "type": "reference_to_prior_meeting",
+        "fact": "The team recalled that flashing below ten was never agreed in the functional design meeting because the industrial designer began to object.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0304b",
+        "evidence_segments": [
+          "SY0304c.s0030",
+          "SY0304c.s0031",
+          "SY0304c.s0032"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304c.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304c.f16",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer recalled that the library car park was also where solar power would not have worked, as raised at the kickoff.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0304a",
+        "evidence_segments": [
+          "SY0304c.s0073"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304c.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304c.f17",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager followed up her action from the functional design meeting to ask estates about the central sign.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0304b",
+        "evidence_segments": [
+          "SY0304c.s0011",
+          "SY0304c.s0012"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_TASK_TO_ABSENT",
+        "segments": [
+          "SY0304c.s0003",
+          "SY0304c.s0087",
+          "SY0304c.s0088",
+          "SY0304c.s0089",
+          "SY0304c.s0090",
+          "SY0304c.s0091",
+          "SY0304c.s0105"
+        ],
+        "note": "The industrial designer is off sick, and the project manager assigns him the electrician quote and mounting specification, then offers to email him."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_ACTION_REMOVED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_ACTION_REMOVED",
+        "segments": [
+          "SY0304c.s0034",
+          "SY0304c.s0035",
+          "SY0304c.s0056",
+          "SY0304c.s0059",
+          "SY0304c.s0060",
+          "SY0304c.s0061"
+        ],
+        "note": "The user interface designer accepts a flashing mock-up task, and the project manager cancels it once the team decides against flashing."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

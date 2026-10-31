@@ -1,0 +1,1474 @@
+{
+  "meeting_id": "SY0108d",
+  "raw_sha256": "ea60717c64642f196b05f3b71f60a09ebe8fa3fbe3349d690f83d64f03e21999",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting, the last in the series, and confirmed she had sent the minutes of the conceptual design meeting and the invitation.",
+        "The marketing expert reported the accent colour survey, and the industrial designer presented a foam mock-up of the puck-shaped casing, about eight centimetres across and three centimetres deep, with a large flat button on top and the display on the front. Because the battery door would clash with the magnet, the team placed the magnet in the centre of the back and the battery door on the bottom edge.",
+        "The industrial designer reported a firm supplier quote of 1.30 euros for the casing plus 0.15 for the magnet, bringing the unit cost to 8.45 euros. The team adopted the user interface designer's three-kilohertz pulsing alarm, which the industrial designer found clearly audible from two metres on the highest extractor setting.",
+        "The user interface designer presented the final two-line display; a backlight and the earlier idea of spoken replies were both left out to protect the margin. The accent colour was revised to teal, because the best-selling competitor timer is white and red.",
+        "In the evaluation the product scored mostly fours and fives, with the display readability the weakest point, and final tasks were assigned for the report, a quick-start card and the supplier specification."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The project manager will put together the final report.",
+        "The project manager will update the notes to record the change of accent colour to teal.",
+        "The marketing expert will send the competitor section and the survey results to the project manager today.",
+        "The user interface designer will write a quick-start card listing the wake word and the command phrases.",
+        "The industrial designer will confirm with the supplier that the teal pigment does not change the quote.",
+        "The industrial designer will send the final specification to the supplier once the teal is confirmed.",
+        "The industrial designer will test the alarm with a radio playing as well as the extractor fan."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The magnet will sit in the centre of the back of the casing and the battery door will slide in from the bottom edge.",
+        "The alarm will be a pulsing pattern of three short beeps at about three kilohertz followed by a gap, repeating.",
+        "The accent colour will be teal, so the timer will be white with a teal accent (revised during the meeting from an earlier choice of red).",
+        "No backlight will be added to the display; the flashing line for a ringing timer is considered sufficient.",
+        "Spoken replies will not be included in this version and are left as a possible feature for a later version."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The display is readable from about two metres but not from across the kitchen, and it scored lowest in the evaluation.",
+        "The alarm has only been tested against an extractor fan, not with a radio playing, and is only moderately audible at three metres.",
+        "The supplier still has to confirm that the teal pigment does not change the casing quote; the unit cost of 8.45 euros assumes it does not.",
+        "Spoken replies, wanted by some survey participants, were deferred because of cost, re-recording effort and possible chip memory limits."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108d.ai1",
+        "description": "Put together the final report, including the competitor section and survey results.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0108d.s0110",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108d.s0110",
+          "SY0108d.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108d.ai2",
+        "description": "Update the notes to record the change of accent colour from red to teal.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0108d.s0093",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108d.s0092",
+          "SY0108d.s0093"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108d.ai3",
+        "description": "Send the competitor section and the survey results to the project manager today.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0108d.s0111",
+            "event": "assigned",
+            "by": "A",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0108d.s0112",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108d.s0111",
+          "SY0108d.s0112"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108d.ai4",
+        "description": "Write a quick-start card with the wake word and the command list.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0108d.s0113",
+            "event": "assigned",
+            "by": "A",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0108d.s0114",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108d.s0113",
+          "SY0108d.s0114"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108d.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108d.ai5",
+        "description": "Confirm with the supplier that the teal pigment does not change the casing quote.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0108d.s0089",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0108d.s0094",
+            "event": "assigned",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0108d.s0095",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108d.s0089",
+          "SY0108d.s0094",
+          "SY0108d.s0095"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108d.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108d.ai6",
+        "description": "Send the final specification to the supplier once the teal is confirmed.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0108d.s0115",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0108d.s0116",
+            "event": "accepted",
+            "by": "A",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108d.s0115",
+          "SY0108d.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108d.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108d.ai7",
+        "description": "Test the alarm with a radio playing as well as the extractor fan.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0108d.s0118",
+            "event": "proposed",
+            "by": "C",
+            "owner": null
+          },
+          {
+            "segment": "SY0108d.s0119",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0108d.s0120",
+            "event": "accepted",
+            "by": "A",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108d.s0052",
+          "SY0108d.s0053",
+          "SY0108d.s0118",
+          "SY0108d.s0119",
+          "SY0108d.s0120"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f1",
+        "type": "decision",
+        "fact": "The magnet will be in the centre of the back of the casing and the battery door will slide in from the bottom edge.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0024",
+          "SY0108d.s0026",
+          "SY0108d.s0027",
+          "SY0108d.s0029",
+          "SY0108d.s0031"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f2",
+        "type": "decision",
+        "fact": "The alarm will be a pulsing pattern of three short beeps at about three kilohertz followed by a gap, repeating.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0045",
+          "SY0108d.s0046",
+          "SY0108d.s0057",
+          "SY0108d.s0059",
+          "SY0108d.s0060"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f3",
+        "type": "decision",
+        "fact": "The accent colour will be teal, making the timer white with a teal accent.",
+        "agreed": true,
+        "related_action_item": "SY0108d.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0087",
+          "SY0108d.s0088",
+          "SY0108d.s0090",
+          "SY0108d.s0092"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f4",
+        "type": "plan_change",
+        "fact": "The team first agreed on a red accent colour, the survey favourite, then switched to teal because the best-selling competitor timer is white and red.",
+        "agreed": null,
+        "related_action_item": "SY0108d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0011",
+          "SY0108d.s0014",
+          "SY0108d.s0017",
+          "SY0108d.s0082",
+          "SY0108d.s0083",
+          "SY0108d.s0085",
+          "SY0108d.s0087",
+          "SY0108d.s0090",
+          "SY0108d.s0092"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f5",
+        "type": "decision",
+        "fact": "No backlight will be added to the display.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0072",
+          "SY0108d.s0073"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f6",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer proposed a display backlight that comes on only while a timer is ringing; it was not adopted because of cost (about 0.20 euros) and battery drain.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0069",
+          "SY0108d.s0070",
+          "SY0108d.s0071",
+          "SY0108d.s0072"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f7",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer proposed adding spoken replies again, at about 8.90 euros per unit; it was not adopted for this version.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0108b",
+        "evidence_segments": [
+          "SY0108d.s0074",
+          "SY0108d.s0075",
+          "SY0108d.s0076",
+          "SY0108d.s0077",
+          "SY0108d.s0078"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f8",
+        "type": "decision",
+        "fact": "Spoken replies are left out of this version and kept as a possible feature for a later version.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0079",
+          "SY0108d.s0080"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f9",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer recalled that spoken replies were put on hold for cost reasons in the functional design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0108b",
+        "evidence_segments": [
+          "SY0108d.s0074"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f10",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager said she had sent the minutes of the conceptual design meeting and the invitation for this meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0108c",
+        "evidence_segments": [
+          "SY0108d.s0004",
+          "SY0108d.s0005"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f11",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer noted the new unit cost is ten cents up from the 8.35 euros estimated in the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0108c",
+        "evidence_segments": [
+          "SY0108d.s0042"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f12",
+        "type": "other",
+        "fact": "The supplier quoted 1.30 euros for the casing and 0.15 euros for the magnet, bringing the unit cost to 8.45 euros, still under the 10-euro target.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0036",
+          "SY0108d.s0037",
+          "SY0108d.s0039",
+          "SY0108d.s0040",
+          "SY0108d.s0041"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f13",
+        "type": "other",
+        "fact": "In the colour survey seven of eight participants replied: five chose red, two chose teal, and nobody chose yellow.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0009",
+          "SY0108d.s0010",
+          "SY0108d.s0011",
+          "SY0108d.s0013"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f14",
+        "type": "other",
+        "fact": "The foam mock-up is about eight centimetres across and three centimetres deep, with a large flat button on top and the display on the front.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0019",
+          "SY0108d.s0021",
+          "SY0108d.s0023",
+          "SY0108d.s0033"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f15",
+        "type": "other",
+        "fact": "With the pulsing alarm, the sample speaker was clearly audible from two metres on the highest extractor setting and moderately audible at three metres; it was not tested with a radio.",
+        "agreed": null,
+        "related_action_item": "SY0108d.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0047",
+          "SY0108d.s0049",
+          "SY0108d.s0053"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f16",
+        "type": "other",
+        "fact": "The final display has two lines, one per timer, a microphone icon top left, a battery icon top right, and a flashing line for a ringing timer; it is readable from about two metres.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0062",
+          "SY0108d.s0063",
+          "SY0108d.s0064",
+          "SY0108d.s0067",
+          "SY0108d.s0068"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f17",
+        "type": "other",
+        "fact": "In the evaluation the timer scored five for hands-free use, four for loudness, five for ease of cleaning, five for cost and three for the display.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0100",
+          "SY0108d.s0101",
+          "SY0108d.s0103",
+          "SY0108d.s0105",
+          "SY0108d.s0107",
+          "SY0108d.s0108",
+          "SY0108d.s0109"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f18",
+        "type": "other",
+        "fact": "The marketing expert has finished the competitor price write-up: 8 to 15 euros for basic timers and over 50 euros for smart speakers.",
+        "agreed": null,
+        "related_action_item": "SY0108d.ai3",
+        "refers_to_meeting": "SY0108c",
+        "evidence_segments": [
+          "SY0108d.s0096",
+          "SY0108d.s0097"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f19",
+        "type": "action_item",
+        "fact": "The project manager will put together the final report.",
+        "agreed": null,
+        "related_action_item": "SY0108d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f20",
+        "type": "action_item",
+        "fact": "The project manager will update the notes with the change of accent colour.",
+        "agreed": null,
+        "related_action_item": "SY0108d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0093"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f21",
+        "type": "action_item",
+        "fact": "The marketing expert will send the competitor section and survey results to the project manager today.",
+        "agreed": null,
+        "related_action_item": "SY0108d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0111",
+          "SY0108d.s0112"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f22",
+        "type": "action_item",
+        "fact": "The user interface designer will write a quick-start card with the command list.",
+        "agreed": null,
+        "related_action_item": "SY0108d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0113",
+          "SY0108d.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f23",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f23",
+        "type": "action_item",
+        "fact": "The industrial designer will confirm with the supplier that teal does not change the quote.",
+        "agreed": null,
+        "related_action_item": "SY0108d.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0089",
+          "SY0108d.s0094",
+          "SY0108d.s0095"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f24",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f24",
+        "type": "action_item",
+        "fact": "The industrial designer will send the final specification to the supplier once teal is confirmed.",
+        "agreed": null,
+        "related_action_item": "SY0108d.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0115"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108d.f25",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108d.f25",
+        "type": "action_item",
+        "fact": "The industrial designer will test the alarm with a radio playing.",
+        "agreed": null,
+        "related_action_item": "SY0108d.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108d.s0118",
+          "SY0108d.s0119",
+          "SY0108d.s0120"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_PLAN_CHANGE",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_PLAN_CHANGE",
+        "segments": [
+          "SY0108d.s0011",
+          "SY0108d.s0014",
+          "SY0108d.s0015",
+          "SY0108d.s0016",
+          "SY0108d.s0017",
+          "SY0108d.s0081",
+          "SY0108d.s0082",
+          "SY0108d.s0083",
+          "SY0108d.s0085",
+          "SY0108d.s0086",
+          "SY0108d.s0087",
+          "SY0108d.s0088",
+          "SY0108d.s0090",
+          "SY0108d.s0092"
+        ],
+        "note": "The team agrees early on a red accent colour from the survey, then switches to teal after the marketing expert notes the best-selling competitor is white and red."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_SARCASM_AS_FACT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_SARCASM_AS_FACT",
+        "segments": [
+          "SY0108d.s0054",
+          "SY0108d.s0055",
+          "SY0108d.s0056",
+          "SY0108d.s0057"
+        ],
+        "note": "The industrial designer jokes that the manual will just tell users to turn off their extractor fan; the team laughs it off and adopts the pulsing alarm instead."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

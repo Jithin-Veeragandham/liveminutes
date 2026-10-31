@@ -1,0 +1,1473 @@
+{
+  "schema_version": "1.0",
+  "source": "synthetic",
+  "meeting_id": "SY0202b",
+  "series_id": "SY0202",
+  "meeting_letter": "b",
+  "scenario_type": "scenario",
+  "stage": "functional design",
+  "duration_sec": 519.65,
+  "participants": [
+    {
+      "label": "A",
+      "role": "ID",
+      "name": "Tomas",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "B",
+      "role": "ME",
+      "name": "Priya",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "C",
+      "role": "UI",
+      "name": "Hannah",
+      "global_id": null,
+      "status": "absent"
+    },
+    {
+      "label": "D",
+      "role": "PM",
+      "name": "Marcus",
+      "global_id": null,
+      "status": "present"
+    }
+  ],
+  "segments": [
+    {
+      "id": "SY0202b.s0001",
+      "speaker": "D",
+      "start": 5.0,
+      "end": 7.31,
+      "text": "Okay, um, shall we get started?",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0202b.s0002",
+      "speaker": "B",
+      "start": 7.82,
+      "end": 8.22,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0003",
+      "speaker": "A",
+      "start": 9.06,
+      "end": 9.46,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0004",
+      "speaker": "D",
+      "start": 9.76,
+      "end": 13.61,
+      "text": "So this is the second meeting, the functional design one.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0005",
+      "speaker": "D",
+      "start": 14.6,
+      "end": 19.98,
+      "text": "Hannah can't make it today, she sent her apologies this morning, she's off sick.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0006",
+      "speaker": "B",
+      "start": 20.17,
+      "end": 20.94,
+      "text": "Oh, okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0007",
+      "speaker": "D",
+      "start": 21.84,
+      "end": 25.3,
+      "text": "Um, so it'll just be the three of us.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0008",
+      "speaker": "D",
+      "start": 25.48,
+      "end": 33.17,
+      "text": "Uh, first thing, I did send round the brief and the notes from last time, hopefully you both got those.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0009",
+      "speaker": "A",
+      "start": 33.33,
+      "end": 34.48,
+      "text": "Yeah, got them.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0010",
+      "speaker": "B",
+      "start": 35.24,
+      "end": 36.01,
+      "text": "Yep, yeah.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0011",
+      "speaker": "D",
+      "start": 36.68,
+      "end": 45.53,
+      "text": "Great. So just to recap, last time we said the kiosk does checkout and renewals, no returns, those stay with the book drop.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0012",
+      "speaker": "D",
+      "start": 46.36,
+      "end": 53.67,
+      "text": "And people log in with the library card or the QR code on the app, one scanner for both.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0013",
+      "speaker": "A",
+      "start": 54.65,
+      "end": 55.05,
+      "text": "Right.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0014",
+      "speaker": "D",
+      "start": 55.42,
+      "end": 62.73,
+      "text": "And then there were a few things we left open. Barcode or RFID, the receipt, and the button question.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0015",
+      "speaker": "D",
+      "start": 62.9,
+      "end": 66.75,
+      "text": "Oh, and the RFID cost, nobody actually picked that up.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0016",
+      "speaker": "B",
+      "start": 67.12,
+      "end": 70.2,
+      "text": "Yeah, that sort of fell through the cracks.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0202b.s0017",
+      "speaker": "D",
+      "start": 71.18,
+      "end": 76.18,
+      "text": "Tomas, since you're doing the components anyway, could you take the RFID pricing?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0202b.s0018",
+      "speaker": "A",
+      "start": 76.51,
+      "end": 79.97,
+      "text": "Um, yeah, I suppose that makes sense, it's hardware.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0202b.s0019",
+      "speaker": "A",
+      "start": 80.63,
+      "end": 82.55,
+      "text": "Yeah, I'll look into it.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0202b.s0020",
+      "speaker": "D",
+      "start": 83.36,
+      "end": 89.13,
+      "text": "Cool. Okay. So, uh, Tomas, do you want to go first with the working design?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0202b.s0021",
+      "speaker": "A",
+      "start": 89.74,
+      "end": 90.51,
+      "text": "Sure. Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0022",
+      "speaker": "A",
+      "start": 90.86,
+      "end": 96.63,
+      "text": "So basically inside it's, um, a small PC, like an embedded unit, that runs everything.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0023",
+      "speaker": "A",
+      "start": 97.01,
+      "end": 100.47,
+      "text": "Then a touchscreen, I've been looking at fifteen inch.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0024",
+      "speaker": "A",
+      "start": 100.86,
+      "end": 106.63,
+      "text": "The scanner for the cards and QR codes, that's one unit, sits under the screen.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0025",
+      "speaker": "A",
+      "start": 107.12,
+      "end": 115.2,
+      "text": "And then a book reader, which is either a barcode scanner pad or an RFID pad, depending what we go for.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0026",
+      "speaker": "D",
+      "start": 116.02,
+      "end": 116.42,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0027",
+      "speaker": "A",
+      "start": 117.15,
+      "end": 121.0,
+      "text": "And a small thermal printer, if we keep the printer.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0028",
+      "speaker": "A",
+      "start": 121.39,
+      "end": 128.31,
+      "text": "Layout-wise, screen at the top, angled back a bit, then a shelf where you put the books down.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0029",
+      "speaker": "B",
+      "start": 128.5,
+      "end": 131.19,
+      "text": "Where's the shelf in terms of height?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0202b.s0030",
+      "speaker": "A",
+      "start": 131.69,
+      "end": 134.77,
+      "text": "Uh, I had it at about ninety centimetres.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0031",
+      "speaker": "B",
+      "start": 135.4,
+      "end": 140.02,
+      "text": "Okay, that's actually something I'll come back to, from the accessibility side.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0032",
+      "speaker": "A",
+      "start": 140.94,
+      "end": 141.71,
+      "text": "Yeah, yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0033",
+      "speaker": "A",
+      "start": 142.32,
+      "end": 146.55,
+      "text": "Rough costs, without RFID, I'm at about two thousand nine hundred.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0034",
+      "speaker": "A",
+      "start": 146.73,
+      "end": 155.58,
+      "text": "That's screen around six hundred, the PC five hundred, scanner three hundred, printer two-fifty, and the casing's the big one, about twelve hundred.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0035",
+      "speaker": "D",
+      "start": 156.19,
+      "end": 158.11,
+      "text": "Why's the casing so expensive?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0202b.s0036",
+      "speaker": "A",
+      "start": 158.71,
+      "end": 166.79,
+      "text": "Because of the library look thing from the brief. If it's wood panelling instead of just sheet metal, it costs more.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0037",
+      "speaker": "D",
+      "start": 167.72,
+      "end": 168.87,
+      "text": "Okay, fair enough.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0202b.s0038",
+      "speaker": "B",
+      "start": 169.61,
+      "end": 174.99,
+      "text": "I think that's worth it though, honestly, that's what the libraries said they want.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0202b.s0039",
+      "speaker": "D",
+      "start": 175.57,
+      "end": 179.03,
+      "text": "So with RFID we'd be, what, over four thousand?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0202b.s0040",
+      "speaker": "A",
+      "start": 179.23,
+      "end": 183.08,
+      "text": "Don't know yet. That's the bit I need to check.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0041",
+      "speaker": "A",
+      "start": 183.32,
+      "end": 186.4,
+      "text": "If the reader's under a thousand we're fine.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0042",
+      "speaker": "D",
+      "start": 186.84,
+      "end": 187.24,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0043",
+      "speaker": "D",
+      "start": 187.84,
+      "end": 189.38,
+      "text": "Anything else on that?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0202b.s0044",
+      "speaker": "A",
+      "start": 189.79,
+      "end": 192.87,
+      "text": "Um, just the receipt thing, I still think...",
+      "da_type": "fra"
+    },
+    {
+      "id": "SY0202b.s0045",
+      "speaker": "A",
+      "start": 193.29,
+      "end": 198.67,
+      "text": "if we drop the printer we save two-fifty and there's no paper to refill.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0202b.s0046",
+      "speaker": "B",
+      "start": 199.05,
+      "end": 204.05,
+      "text": "Yeah, but, um, that's actually in my findings, so maybe let me go.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0202b.s0047",
+      "speaker": "A",
+      "start": 204.55,
+      "end": 206.09,
+      "text": "Okay, go for it.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0048",
+      "speaker": "B",
+      "start": 207.02,
+      "end": 213.56,
+      "text": "So I met with library services again, and I've got the user requirements and the accessibility stuff.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0049",
+      "speaker": "B",
+      "start": 214.06,
+      "end": 222.14,
+      "text": "Main thing for borrowers is speed. They want to be in and out, like under a minute for a few books.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0050",
+      "speaker": "B",
+      "start": 222.62,
+      "end": 229.54,
+      "text": "And a lot of older borrowers don't have email set up with the library, or don't want it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0051",
+      "speaker": "B",
+      "start": 229.78,
+      "end": 236.7,
+      "text": "Staff said something like a third of borrowers still ask for a printed slip with the due dates.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0052",
+      "speaker": "A",
+      "start": 237.2,
+      "end": 240.28,
+      "text": "A third, okay. That's more than I thought.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0202b.s0053",
+      "speaker": "B",
+      "start": 240.61,
+      "end": 245.61,
+      "text": "So I'd say email as the default, but you can tap to print.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0202b.s0054",
+      "speaker": "D",
+      "start": 245.78,
+      "end": 248.47,
+      "text": "Tomas, would you be okay with that?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0202b.s0055",
+      "speaker": "A",
+      "start": 249.22,
+      "end": 254.6,
+      "text": "Yeah, I mean if it's a third of people, we can't really drop it.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0202b.s0056",
+      "speaker": "A",
+      "start": 255.53,
+      "end": 258.99,
+      "text": "Optional print is fine, I'll keep the printer in.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0202b.s0057",
+      "speaker": "D",
+      "start": 259.46,
+      "end": 263.31,
+      "text": "Okay, so that's decided then, email by default, printing optional.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0058",
+      "speaker": "B",
+      "start": 263.86,
+      "end": 264.26,
+      "text": "Good.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0059",
+      "speaker": "B",
+      "start": 265.19,
+      "end": 268.65,
+      "text": "Then accessibility. So library services gave me a list.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0060",
+      "speaker": "B",
+      "start": 269.39,
+      "end": 277.08,
+      "text": "The touchscreen, the controls need to be reachable from a wheelchair, so nothing above about a hundred and twenty centimetres.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0061",
+      "speaker": "B",
+      "start": 277.89,
+      "end": 282.89,
+      "text": "And the book shelf should be lower, they said around seventy-five to eighty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0062",
+      "speaker": "A",
+      "start": 283.72,
+      "end": 286.03,
+      "text": "Oh, so lower than my ninety.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0202b.s0063",
+      "speaker": "B",
+      "start": 286.75,
+      "end": 287.15,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0064",
+      "speaker": "A",
+      "start": 288.07,
+      "end": 293.84,
+      "text": "That's fine, I can drop it. The screen angle might need to change a bit.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0202b.s0065",
+      "speaker": "B",
+      "start": 294.35,
+      "end": 300.5,
+      "text": "And then for visually impaired borrowers they want audio, so a headphone jack and spoken instructions.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0066",
+      "speaker": "B",
+      "start": 300.81,
+      "end": 308.5,
+      "text": "And, this is the button thing, they really want at least one physical button. Something you can find by touch.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0067",
+      "speaker": "A",
+      "start": 309.37,
+      "end": 312.45,
+      "text": "See, that's what I was saying last time.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0202b.s0068",
+      "speaker": "B",
+      "start": 313.42,
+      "end": 315.34,
+      "text": "Yeah, you win that one.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0069",
+      "speaker": "A",
+      "start": 316.34,
+      "end": 317.11,
+      "text": "Ha, yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0070",
+      "speaker": "D",
+      "start": 317.97,
+      "end": 321.43,
+      "text": "So what would the button be, help or cancel?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0202b.s0071",
+      "speaker": "B",
+      "start": 322.25,
+      "end": 330.33,
+      "text": "They said a help button that calls staff, and that also, like, switches on the audio mode if you hold it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0072",
+      "speaker": "A",
+      "start": 330.68,
+      "end": 334.14,
+      "text": "That's easy enough, it's one switch, barely any cost.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0202b.s0073",
+      "speaker": "D",
+      "start": 335.11,
+      "end": 342.03,
+      "text": "Okay. Hannah wanted it all touchscreen though, so I don't want to steamroll her when she's not here.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0202b.s0074",
+      "speaker": "B",
+      "start": 342.29,
+      "end": 346.91,
+      "text": "Yeah, but it's a requirement from the libraries, it's not really optional.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0202b.s0075",
+      "speaker": "D",
+      "start": 347.77,
+      "end": 348.92,
+      "text": "No, that's true.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0202b.s0076",
+      "speaker": "D",
+      "start": 349.5,
+      "end": 354.88,
+      "text": "Okay, let's go with one hardware help button, and the rest on the touchscreen.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0077",
+      "speaker": "A",
+      "start": 355.24,
+      "end": 355.64,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0078",
+      "speaker": "B",
+      "start": 356.46,
+      "end": 356.86,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0079",
+      "speaker": "D",
+      "start": 357.06,
+      "end": 363.6,
+      "text": "Priya, did you send the accessibility list to Hannah yet? That was on you from last time.",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0202b.s0080",
+      "speaker": "B",
+      "start": 364.24,
+      "end": 368.09,
+      "text": "Not yet, I only got it from them on Tuesday.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0081",
+      "speaker": "B",
+      "start": 368.94,
+      "end": 371.25,
+      "text": "I'll email it to her today.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0202b.s0082",
+      "speaker": "D",
+      "start": 371.82,
+      "end": 372.22,
+      "text": "Great.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0083",
+      "speaker": "D",
+      "start": 372.74,
+      "end": 376.59,
+      "text": "So since Hannah's not here we haven't seen the flow.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0084",
+      "speaker": "D",
+      "start": 376.86,
+      "end": 386.09,
+      "text": "Hannah needs to update the checkout and renewal flow for all this, the help button, audio mode, and the print option at the end.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0202b.s0085",
+      "speaker": "D",
+      "start": 386.68,
+      "end": 390.53,
+      "text": "I'll put that down as hers and let her know.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0086",
+      "speaker": "A",
+      "start": 390.77,
+      "end": 393.85,
+      "text": "Did she say if she'd finished the screens?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0202b.s0087",
+      "speaker": "D",
+      "start": 394.05,
+      "end": 397.9,
+      "text": "She said she'd got a draft, she'll send it round.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0088",
+      "speaker": "D",
+      "start": 398.33,
+      "end": 404.87,
+      "text": "So Hannah, update the flow with today's changes and send round the screens before the next meeting.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0202b.s0089",
+      "speaker": "B",
+      "start": 405.2,
+      "end": 405.6,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0090",
+      "speaker": "D",
+      "start": 406.07,
+      "end": 408.76,
+      "text": "Right, back to barcode or RFID then.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0091",
+      "speaker": "B",
+      "start": 409.19,
+      "end": 411.5,
+      "text": "Oh, actually, about the RFID cost.",
+      "da_type": "fra"
+    },
+    {
+      "id": "SY0202b.s0092",
+      "speaker": "B",
+      "start": 412.45,
+      "end": 417.83,
+      "text": "Library services mentioned they already have a supplier for RFID, for the staff desks.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0093",
+      "speaker": "B",
+      "start": 418.09,
+      "end": 420.78,
+      "text": "They've got a price list from them.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0094",
+      "speaker": "A",
+      "start": 421.12,
+      "end": 423.04,
+      "text": "Oh really? For the readers?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0202b.s0095",
+      "speaker": "B",
+      "start": 423.89,
+      "end": 430.81,
+      "text": "Yeah, the readers and the tags. I think it'd be quicker if I just ask them for it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0096",
+      "speaker": "A",
+      "start": 431.21,
+      "end": 435.06,
+      "text": "Yeah, that would save me a lot of digging around.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0202b.s0097",
+      "speaker": "D",
+      "start": 435.43,
+      "end": 439.66,
+      "text": "Okay, so Priya, you take the RFID pricing instead of Tomas?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0202b.s0098",
+      "speaker": "B",
+      "start": 439.85,
+      "end": 441.39,
+      "text": "Yeah, I'll do it.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0202b.s0099",
+      "speaker": "D",
+      "start": 441.58,
+      "end": 445.04,
+      "text": "Fine, Tomas, you're off the hook for that one.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0100",
+      "speaker": "A",
+      "start": 445.89,
+      "end": 446.29,
+      "text": "Cheers.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0101",
+      "speaker": "D",
+      "start": 446.44,
+      "end": 451.44,
+      "text": "And do we have a view on barcode versus RFID in the meantime?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0202b.s0102",
+      "speaker": "A",
+      "start": 451.78,
+      "end": 456.4,
+      "text": "RFID is faster, you can put a whole stack down at once.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0103",
+      "speaker": "B",
+      "start": 457.27,
+      "end": 459.19,
+      "text": "Which fits the speed thing.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0202b.s0104",
+      "speaker": "A",
+      "start": 459.92,
+      "end": 466.07,
+      "text": "But if the books aren't tagged yet, RFID means the libraries have to tag everything first.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0105",
+      "speaker": "B",
+      "start": 466.33,
+      "end": 471.71,
+      "text": "I'm not sure all branches are tagged, actually, I think some are still barcode-only.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0106",
+      "speaker": "A",
+      "start": 472.43,
+      "end": 475.12,
+      "text": "Maybe we do both, like Hannah said.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0202b.s0107",
+      "speaker": "D",
+      "start": 475.99,
+      "end": 480.22,
+      "text": "Yeah, but we can't decide that until we've got the cost.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0202b.s0108",
+      "speaker": "D",
+      "start": 480.82,
+      "end": 484.67,
+      "text": "So let's leave it open until Priya has the numbers.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0109",
+      "speaker": "B",
+      "start": 485.56,
+      "end": 485.96,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0110",
+      "speaker": "A",
+      "start": 486.34,
+      "end": 486.74,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0111",
+      "speaker": "D",
+      "start": 487.3,
+      "end": 495.38,
+      "text": "Tomas, for the next meeting, can you do the look of the casing? Materials, the wood panelling, that kind of thing.",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0202b.s0112",
+      "speaker": "A",
+      "start": 495.81,
+      "end": 499.27,
+      "text": "Yeah, I'll do some sketches, with the new heights.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0202b.s0113",
+      "speaker": "D",
+      "start": 499.51,
+      "end": 506.82,
+      "text": "Great. And I'll write up the notes and send them round, and I'll fill Hannah in on the button.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0202b.s0114",
+      "speaker": "B",
+      "start": 507.41,
+      "end": 508.18,
+      "text": "Sounds good.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0202b.s0115",
+      "speaker": "D",
+      "start": 508.59,
+      "end": 509.36,
+      "text": "Anything else?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0202b.s0116",
+      "speaker": "A",
+      "start": 509.66,
+      "end": 511.97,
+      "text": "Um, no, I think that's it.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0202b.s0117",
+      "speaker": "B",
+      "start": 512.26,
+      "end": 513.41,
+      "text": "Nope, I'm good.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0202b.s0118",
+      "speaker": "D",
+      "start": 514.34,
+      "end": 516.65,
+      "text": "Okay, thanks, see you next time.",
+      "da_type": "oth"
+    }
+  ],
+  "summary": {
+    "abstract": [
+      "The project manager opened the functional design meeting, noted that the user interface designer was absent through illness, and confirmed that he had sent round the brief and the kickoff notes. He recapped the earlier decisions: checkout and renewals only, and one scanner for library cards and app QR codes.",
+      "The industrial designer presented the working design: an embedded PC, a fifteen-inch touchscreen, a card and QR scanner, a barcode or RFID book reader, and a small thermal printer. Without RFID, his rough cost estimate came to about 2,900 euros, and the wood-panelled casing was the largest cost.",
+      "The marketing expert presented the user requirements and the accessibility requirements from library services. These covered speed, the fact that about a third of borrowers want printed slips, wheelchair reach heights, audio output, and a physical button.",
+      "The team agreed on email receipts by default with optional printing, and on one hardware help button with everything else on the touchscreen. They also agreed to lower the book shelf to accessible heights.",
+      "The RFID pricing task was first given to the industrial designer and then passed to the marketing expert, because library services already has an RFID supplier price list. The barcode versus RFID decision was left open until those numbers are available."
+    ],
+    "actions": [
+      "The marketing expert will get RFID reader and tag prices from library services' existing supplier. This task was first assigned to the industrial designer.",
+      "The user interface designer, who was absent, will update the checkout and renewal flow for the help button, audio mode and print option, and will send round her draft screens before the next meeting.",
+      "The marketing expert will email the accessibility requirements to the user interface designer today.",
+      "The industrial designer will prepare sketches of the casing look and materials, using the new accessible heights.",
+      "The project manager will write up and circulate the notes and brief the user interface designer on the button decision."
+    ],
+    "decisions": [
+      "Receipts will be sent by email by default, and borrowers can choose to print one; the printer stays in the design.",
+      "The kiosk will have one physical help button. The button calls staff, and holding it switches on audio mode. All other controls stay on the touchscreen.",
+      "The layout will follow the accessibility heights: the book shelf will be about 75 to 80 cm instead of 90 cm, and no controls will be above about 120 cm.",
+      "The kiosk will provide audio support, with a headphone jack and spoken instructions, for visually impaired borrowers."
+    ],
+    "problems": [
+      "The choice between barcode and RFID, or supporting both, is still open until the RFID prices are known.",
+      "It is unclear whether adding RFID keeps the unit under the 4,000-euro production cost target.",
+      "Some library branches may still be barcode-only and not RFID-tagged.",
+      "The user interface designer has not yet presented the flow or screens, and she was absent when the hardware button was decided against her earlier all-touchscreen proposal."
+    ]
+  },
+  "action_items": [
+    {
+      "id": "SY0202b.ai1",
+      "description": "Check the cost of RFID readers and tags, using library services' existing supplier price list. This follows up the unowned SY0202a.ai5.",
+      "owner": "B",
+      "owner_unclear": false,
+      "status": "reassigned",
+      "previous_owners": [
+        "A"
+      ],
+      "history": [
+        {
+          "segment": "SY0202b.s0017",
+          "event": "assigned",
+          "by": "D",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0202b.s0019",
+          "event": "accepted",
+          "by": "A",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0202b.s0097",
+          "event": "reassigned",
+          "by": "D",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0202b.s0098",
+          "event": "accepted",
+          "by": "B",
+          "owner": "B"
+        }
+      ],
+      "evidence_segments": [
+        "SY0202b.s0015",
+        "SY0202b.s0017",
+        "SY0202b.s0018",
+        "SY0202b.s0019",
+        "SY0202b.s0040",
+        "SY0202b.s0091",
+        "SY0202b.s0092",
+        "SY0202b.s0093",
+        "SY0202b.s0095",
+        "SY0202b.s0096",
+        "SY0202b.s0097",
+        "SY0202b.s0098",
+        "SY0202b.s0099"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0202b.ai2",
+      "description": "Update the checkout and renewal flow for the hardware help button, audio mode and optional print, and send round the draft screens before the next meeting",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0202b.s0084",
+          "event": "assigned",
+          "by": "D",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0202b.s0088",
+          "event": "restated",
+          "by": "D",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0202b.s0083",
+        "SY0202b.s0084",
+        "SY0202b.s0085",
+        "SY0202b.s0087",
+        "SY0202b.s0088"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0202b.ai3",
+      "description": "Email the accessibility requirements from library services to the user interface designer. This carries over SY0202a.ai4.",
+      "owner": "B",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0202b.s0079",
+          "event": "restated",
+          "by": "D",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0202b.s0081",
+          "event": "offered",
+          "by": "B",
+          "owner": "B"
+        }
+      ],
+      "evidence_segments": [
+        "SY0202b.s0079",
+        "SY0202b.s0080",
+        "SY0202b.s0081"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0202b.ai4",
+      "description": "Prepare sketches of the casing look and materials (wood panelling), using the new accessible heights",
+      "owner": "A",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0202b.s0111",
+          "event": "assigned",
+          "by": "D",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0202b.s0112",
+          "event": "accepted",
+          "by": "A",
+          "owner": "A"
+        }
+      ],
+      "evidence_segments": [
+        "SY0202b.s0064",
+        "SY0202b.s0111",
+        "SY0202b.s0112"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0202b.ai5",
+      "description": "Write up and circulate the meeting notes and brief the user interface designer on the hardware button decision",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0202b.s0113",
+          "event": "offered",
+          "by": "D",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0202b.s0073",
+        "SY0202b.s0113"
+      ],
+      "owner_source": "gold"
+    }
+  ],
+  "qa_facts": [
+    {
+      "id": "SY0202b.f1",
+      "type": "absence",
+      "fact": "The user interface designer, Hannah (C), was absent because she was off sick and had sent her apologies.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0202b.s0005",
+        "SY0202b.s0007"
+      ]
+    },
+    {
+      "id": "SY0202b.f2",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager recapped the kickoff decisions: checkout and renewals only with no returns, and one scanner for the library card and the app QR code.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0202a",
+      "evidence_segments": [
+        "SY0202b.s0011",
+        "SY0202b.s0012"
+      ]
+    },
+    {
+      "id": "SY0202b.f3",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager confirmed that he had sent round the brief and the kickoff notes, which completes SY0202a.ai6.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0202a",
+      "evidence_segments": [
+        "SY0202b.s0008",
+        "SY0202b.s0009",
+        "SY0202b.s0010"
+      ]
+    },
+    {
+      "id": "SY0202b.f4",
+      "type": "reference_to_prior_meeting",
+      "fact": "The industrial designer pointed out that he had argued for a physical button in the previous meeting.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0202a",
+      "evidence_segments": [
+        "SY0202b.s0066",
+        "SY0202b.s0067",
+        "SY0202b.s0068"
+      ]
+    },
+    {
+      "id": "SY0202b.f5",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager reminded the marketing expert that sharing the accessibility list with the user interface designer was her task from the kickoff meeting.",
+      "agreed": null,
+      "related_action_item": "SY0202b.ai3",
+      "refers_to_meeting": "SY0202a",
+      "evidence_segments": [
+        "SY0202b.s0079",
+        "SY0202b.s0080",
+        "SY0202b.s0081"
+      ]
+    },
+    {
+      "id": "SY0202b.f6",
+      "type": "other",
+      "fact": "The industrial designer's rough component cost without RFID is about 2,900 euros. This breaks down as screen 600, PC 500, scanner 300, printer 250 and casing 1,200.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0202b.s0033",
+        "SY0202b.s0034"
+      ]
+    },
+    {
+      "id": "SY0202b.f7",
+      "type": "unagreed_proposal",
+      "fact": "The industrial designer again proposed dropping the printer to save 250 euros. He withdrew the proposal after hearing that about a third of borrowers want printed slips.",
+      "agreed": false,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0202b.s0044",
+        "SY0202b.s0045",
+        "SY0202b.s0051",
+        "SY0202b.s0055"
+      ]
+    },
+    {
+      "id": "SY0202b.f8",
+      "type": "decision",
+      "fact": "The team agreed on email receipts by default, with printing optional.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0202b.s0053",
+        "SY0202b.s0055",
+        "SY0202b.s0056",
+        "SY0202b.s0057"
+      ]
+    },
+    {
+      "id": "SY0202b.f9",
+      "type": "decision",
+      "fact": "The team agreed to include one physical help button. It calls staff, holding it switches on audio mode, and all other controls stay on the touchscreen.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0202b.s0066",
+        "SY0202b.s0071",
+        "SY0202b.s0072",
+        "SY0202b.s0074",
+        "SY0202b.s0075",
+        "SY0202b.s0076",
+        "SY0202b.s0077",
+        "SY0202b.s0078"
+      ]
+    },
+    {
+      "id": "SY0202b.f10",
+      "type": "plan_change",
+      "fact": "The book shelf height changes from about 90 cm to about 75 to 80 cm, and no controls will be above about 120 cm, to meet the wheelchair accessibility requirements.",
+      "agreed": null,
+      "related_action_item": "SY0202b.ai4",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0202b.s0030",
+        "SY0202b.s0060",
+        "SY0202b.s0061",
+        "SY0202b.s0062",
+        "SY0202b.s0064"
+      ]
+    },
+    {
+      "id": "SY0202b.f11",
+      "type": "decision",
+      "fact": "The kiosk will offer audio support, with a headphone jack and spoken instructions, for visually impaired borrowers.",
+      "agreed": true,
+      "related_action_item": "SY0202b.ai2",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0202b.s0065",
+        "SY0202b.s0071",
+        "SY0202b.s0084"
+      ]
+    },
+    {
+      "id": "SY0202b.f12",
+      "type": "action_item",
+      "fact": "The industrial designer was first asked to check the RFID pricing.",
+      "agreed": null,
+      "related_action_item": "SY0202b.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0202b.s0017",
+        "SY0202b.s0018",
+        "SY0202b.s0019"
+      ]
+    },
+    {
+      "id": "SY0202b.f13",
+      "type": "plan_change",
+      "fact": "The RFID pricing task was reassigned from the industrial designer to the marketing expert, because library services already has a supplier price list.",
+      "agreed": null,
+      "related_action_item": "SY0202b.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0202b.s0092",
+        "SY0202b.s0093",
+        "SY0202b.s0095",
+        "SY0202b.s0096",
+        "SY0202b.s0097",
+        "SY0202b.s0098",
+        "SY0202b.s0099"
+      ]
+    },
+    {
+      "id": "SY0202b.f14",
+      "type": "action_item",
+      "fact": "The absent user interface designer was assigned to update the checkout and renewal flow for the help button, audio mode and print option, and to send round her screens.",
+      "agreed": null,
+      "related_action_item": "SY0202b.ai2",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0202b.s0084",
+        "SY0202b.s0085",
+        "SY0202b.s0088"
+      ]
+    },
+    {
+      "id": "SY0202b.f15",
+      "type": "action_item",
+      "fact": "The marketing expert will email the accessibility requirements to the user interface designer today.",
+      "agreed": null,
+      "related_action_item": "SY0202b.ai3",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0202b.s0081"
+      ]
+    },
+    {
+      "id": "SY0202b.f16",
+      "type": "action_item",
+      "fact": "The industrial designer will sketch the casing look and materials, using the new heights.",
+      "agreed": null,
+      "related_action_item": "SY0202b.ai4",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0202b.s0111",
+        "SY0202b.s0112"
+      ]
+    },
+    {
+      "id": "SY0202b.f17",
+      "type": "action_item",
+      "fact": "The project manager will circulate the notes and brief the user interface designer on the button decision.",
+      "agreed": null,
+      "related_action_item": "SY0202b.ai5",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0202b.s0113"
+      ]
+    },
+    {
+      "id": "SY0202b.f18",
+      "type": "unagreed_proposal",
+      "fact": "The industrial designer suggested supporting both barcode and RFID, as the user interface designer had proposed before. This was not decided because the cost is unknown.",
+      "agreed": false,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0202a",
+      "evidence_segments": [
+        "SY0202b.s0106",
+        "SY0202b.s0107"
+      ]
+    },
+    {
+      "id": "SY0202b.f19",
+      "type": "other",
+      "fact": "The barcode versus RFID decision was left open until the marketing expert has the RFID prices.",
+      "agreed": null,
+      "related_action_item": "SY0202b.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0202b.s0101",
+        "SY0202b.s0107",
+        "SY0202b.s0108"
+      ]
+    }
+  ],
+  "edge_cases": [
+    {
+      "scenario_id": "F2_REASSIGNED_OR_DROPPED",
+      "segments": [
+        "SY0202b.s0015",
+        "SY0202b.s0017",
+        "SY0202b.s0018",
+        "SY0202b.s0019",
+        "SY0202b.s0091",
+        "SY0202b.s0092",
+        "SY0202b.s0093",
+        "SY0202b.s0095",
+        "SY0202b.s0096",
+        "SY0202b.s0097",
+        "SY0202b.s0098",
+        "SY0202b.s0099"
+      ],
+      "note": "The RFID pricing task is assigned to the industrial designer early in the meeting, then reassigned to the marketing expert because library services already has a supplier price list."
+    },
+    {
+      "scenario_id": "F2_TASK_TO_ABSENT",
+      "segments": [
+        "SY0202b.s0005",
+        "SY0202b.s0083",
+        "SY0202b.s0084",
+        "SY0202b.s0085",
+        "SY0202b.s0088"
+      ],
+      "note": "The project manager assigns the absent user interface designer, Hannah, to update the checkout flow and send round her screens."
+    }
+  ],
+  "provenance": {
+    "generator": "liveminutes-synthetic",
+    "cache_key": "e33118db7575a11b02d351a1c7a1ad75115bf02a87f3312f923dbd80d436f802",
+    "attempt": 0,
+    "model": "claude-opus-5-5",
+    "prompt_version": "v1",
+    "scenario_spec_version": 1,
+    "feature": "F2",
+    "product": "a library self-checkout kiosk",
+    "planned_scenarios": [
+      "F2_REASSIGNED_OR_DROPPED",
+      "F2_TASK_TO_ABSENT"
+    ]
+  }
+}

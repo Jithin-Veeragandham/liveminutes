@@ -1,0 +1,1468 @@
+{
+  "meeting_id": "SY0209b",
+  "raw_sha256": "71b0bb818e7c8dd9f0f0ecc98d1bdec4525c282541eca90c0c2619ba40c1d735",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the functional design meeting and noted that the marketing expert was absent through illness. She confirmed she had sent round the kickoff minutes and reported early survey feedback from the marketing expert, which pointed to drop protection and easy cleaning as parents' main concerns. The industrial designer presented his drop test research, and the team set a drop rating target of 1.2 metres; he then compared silicone, polycarbonate and EVA foam, and the team chose EVA foam for the body. The user interface designer presented the functional design, covering a carrying handle, covered power and volume buttons, an open charging port, a camera cut-out and a raised lip around the screen. The team rejected the fold-out stand because of the finger-pinching risk and chose a fixed moulded handle. The team also dropped swappable covers, and the task of checking competitor prices moved from the user interface designer to the absent marketing expert."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The marketing expert will send the full survey results to the team before the next meeting.",
+        "The marketing expert will check the retail prices of existing children's tablet cases. This task was first given to the user interface designer and then reassigned.",
+        "The user interface designer will sketch the fixed handle and the positions of the cut-outs.",
+        "The industrial designer will get a supplier quote for the whole EVA foam case, including the handle and the raised lip.",
+        "The project manager will write up and send round the minutes.",
+        "The project manager will email the marketing expert about his tasks and about the decision against the fold-out stand.",
+        "The industrial designer's task of costing a hinge for a fold-out stand was dropped once the stand was rejected."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The case should survive a drop of 1.2 metres.",
+        "The case body will be made of EVA foam with thick corners.",
+        "The power and volume buttons will be covered by press-through foam bumps, the charging port will be an open cut-out, and there will be a cut-out for the rear camera.",
+        "The screen will be protected by a raised lip rather than a flap.",
+        "The case will have a fixed handle moulded into the foam, with no fold-out stand.",
+        "Swappable covers are dropped because of the budget."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "Only about a dozen survey responses have come in so far.",
+        "It is still unknown whether 25 Euros is a competitive price. The price check now sits with the absent marketing expert, and it is unclear whether he can finish it before the next meeting.",
+        "Whether to give the back of the case a wedge shape so it can stand up was deferred to the conceptual design meeting, because of concerns about extra foam and weight.",
+        "The name tag window is still undecided and waits on teacher feedback from the survey.",
+        "Colours were not discussed and were deferred to the next meeting.",
+        "The marketing expert has not yet been told that his fold-out stand idea was rejected."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0209b.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0209b.ai1",
+        "description": "Check the retail prices of existing children's tablet cases in the main shops",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "reassigned",
+        "previous_owners": [
+          "C"
+        ],
+        "history": [
+          {
+            "segment": "SY0209b.s0014",
+            "event": "assigned",
+            "by": "A",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0209b.s0015",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0209b.s0108",
+            "event": "reassigned",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0209b.s0117",
+            "event": "restated",
+            "by": "A",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0209b.s0012",
+          "SY0209b.s0013",
+          "SY0209b.s0014",
+          "SY0209b.s0015",
+          "SY0209b.s0104",
+          "SY0209b.s0105",
+          "SY0209b.s0106",
+          "SY0209b.s0107",
+          "SY0209b.s0108",
+          "SY0209b.s0110",
+          "SY0209b.s0111",
+          "SY0209b.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0209b.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0209b.ai2",
+        "description": "Send the full parent and teacher survey results to the team before the next meeting",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0209b.s0023",
+            "event": "assigned",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0209b.s0117",
+            "event": "restated",
+            "by": "A",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0209b.s0017",
+          "SY0209b.s0018",
+          "SY0209b.s0023",
+          "SY0209b.s0024",
+          "SY0209b.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0209b.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0209b.ai3",
+        "description": "Find out what a hinge for a fold-out handle stand would cost",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "dropped",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0209b.s0078",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0209b.s0079",
+            "event": "accepted",
+            "by": "A",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0209b.s0090",
+            "event": "dropped",
+            "by": "A",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0209b.s0077",
+          "SY0209b.s0078",
+          "SY0209b.s0079",
+          "SY0209b.s0089",
+          "SY0209b.s0090",
+          "SY0209b.s0091"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0209b.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0209b.ai4",
+        "description": "Sketch the fixed handle and the positions of the button, port and camera cut-outs",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0209b.s0113",
+            "event": "assigned",
+            "by": "A",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0209b.s0114",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0209b.s0109",
+          "SY0209b.s0113",
+          "SY0209b.s0114"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0209b.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0209b.ai5",
+        "description": "Get a supplier quote for the whole EVA foam case, including the handle and the raised lip",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0209b.s0115",
+            "event": "assigned",
+            "by": "A",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0209b.s0116",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0209b.s0115",
+          "SY0209b.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0209b.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0209b.ai6",
+        "description": "Write up the meeting minutes and send them round",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0209b.s0118",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0209b.s0118"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0209b.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0209b.ai7",
+        "description": "Email the marketing expert about his assigned tasks and the decision against the fold-out stand",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0209b.s0024",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0209b.s0092",
+            "event": "restated",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0209b.s0108",
+            "event": "restated",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0209b.s0024",
+          "SY0209b.s0092",
+          "SY0209b.s0108",
+          "SY0209b.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f1",
+        "type": "absence",
+        "fact": "The marketing expert, Tomasz, was absent from the functional design meeting because he was off sick.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0004",
+          "SY0209b.s0006"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager pointed out that at the kickoff no one had taken the task of checking competitor case prices.",
+        "agreed": null,
+        "related_action_item": "SY0209b.ai1",
+        "refers_to_meeting": "SY0209a",
+        "evidence_segments": [
+          "SY0209b.s0012",
+          "SY0209b.s0013"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager confirmed that she had sent round the minutes of the kickoff meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0209a",
+        "evidence_segments": [
+          "SY0209b.s0007",
+          "SY0209b.s0008",
+          "SY0209b.s0009"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f4",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recalled that at the kickoff the marketing expert had suggested the handle fold out into a stand.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0209a",
+        "evidence_segments": [
+          "SY0209b.s0077"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f5",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer repeated her point from the kickoff that young children would rip off a screen flap.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0209a",
+        "evidence_segments": [
+          "SY0209b.s0070",
+          "SY0209b.s0071"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f6",
+        "type": "other",
+        "fact": "Early survey results, from about a dozen responses, showed parents were mainly concerned about drops and cleaning sticky fingers.",
+        "agreed": null,
+        "related_action_item": "SY0209b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0018",
+          "SY0209b.s0019",
+          "SY0209b.s0020",
+          "SY0209b.s0022"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f7",
+        "type": "other",
+        "fact": "The industrial designer found that competing cases are rated for drops of about one to one and a half metres, and that the commonly quoted military standard is about 1.2 metres.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0028",
+          "SY0209b.s0029",
+          "SY0209b.s0030",
+          "SY0209b.s0032"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f8",
+        "type": "decision",
+        "fact": "The team set a drop rating target of 1.2 metres.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0034",
+          "SY0209b.s0036",
+          "SY0209b.s0037",
+          "SY0209b.s0038"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f9",
+        "type": "other",
+        "fact": "The industrial designer estimated a moulded EVA foam body at about two to three Euros per unit.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0046",
+          "SY0209b.s0047",
+          "SY0209b.s0048"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f10",
+        "type": "decision",
+        "fact": "The case body will be made of EVA foam with thick corners.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0053",
+          "SY0209b.s0055",
+          "SY0209b.s0056"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f11",
+        "type": "decision",
+        "fact": "The power and volume buttons will be covered by press-through foam bumps, while the charging port will be an open cut-out.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0065",
+          "SY0209b.s0066",
+          "SY0209b.s0067",
+          "SY0209b.s0068",
+          "SY0209b.s0069"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f12",
+        "type": "decision",
+        "fact": "The screen will be protected by a raised lip rather than a flap.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0070",
+          "SY0209b.s0072",
+          "SY0209b.s0073",
+          "SY0209b.s0074",
+          "SY0209b.s0075"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f13",
+        "type": "decision",
+        "fact": "The case will have a fixed handle moulded into the foam, with no fold-out stand, because of the finger-pinching risk.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0081",
+          "SY0209b.s0082",
+          "SY0209b.s0086",
+          "SY0209b.s0088",
+          "SY0209b.s0089"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f14",
+        "type": "decision",
+        "fact": "Swappable covers were dropped because they cost too much for the budget.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0101",
+          "SY0209b.s0102",
+          "SY0209b.s0103"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f15",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer suggested a wedge-shaped back so the case can stand up; it was deferred to the conceptual design meeting.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0086",
+          "SY0209b.s0093",
+          "SY0209b.s0094",
+          "SY0209b.s0095"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f16",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer again proposed a name tag window for schools; it was left undecided until the survey results come in.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0096",
+          "SY0209b.s0097",
+          "SY0209b.s0098",
+          "SY0209b.s0099"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f17",
+        "type": "action_item",
+        "fact": "The project manager assigned the marketing expert, who was absent, to send the full survey results before the next meeting.",
+        "agreed": null,
+        "related_action_item": "SY0209b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0023",
+          "SY0209b.s0024",
+          "SY0209b.s0117"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f18",
+        "type": "plan_change",
+        "fact": "The competitor price check was first given to the user interface designer and then reassigned to the marketing expert, because it is a marketing task.",
+        "agreed": null,
+        "related_action_item": "SY0209b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0014",
+          "SY0209b.s0015",
+          "SY0209b.s0105",
+          "SY0209b.s0106",
+          "SY0209b.s0107",
+          "SY0209b.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f19",
+        "type": "action_item_removed",
+        "fact": "The industrial designer's task of costing a hinge for the fold-out stand was dropped after the stand was rejected.",
+        "agreed": null,
+        "related_action_item": "SY0209b.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0078",
+          "SY0209b.s0079",
+          "SY0209b.s0090",
+          "SY0209b.s0091"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f20",
+        "type": "action_item",
+        "fact": "The user interface designer will sketch the fixed handle and the cut-out positions.",
+        "agreed": null,
+        "related_action_item": "SY0209b.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0113",
+          "SY0209b.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f21",
+        "type": "action_item",
+        "fact": "The industrial designer will get a supplier quote for the whole EVA foam case.",
+        "agreed": null,
+        "related_action_item": "SY0209b.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0115",
+          "SY0209b.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f22",
+        "type": "action_item",
+        "fact": "The project manager will write up and send round the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0209b.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0118"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f23",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f23",
+        "type": "action_item",
+        "fact": "The project manager will email the marketing expert about his tasks and the stand decision.",
+        "agreed": null,
+        "related_action_item": "SY0209b.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0024",
+          "SY0209b.s0092",
+          "SY0209b.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209b.f24",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209b.f24",
+        "type": "other",
+        "fact": "Colours were not discussed and were deferred to the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209b.s0120",
+          "SY0209b.s0121"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_REASSIGNED_OR_DROPPED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_REASSIGNED_OR_DROPPED",
+        "segments": [
+          "SY0209b.s0012",
+          "SY0209b.s0014",
+          "SY0209b.s0015",
+          "SY0209b.s0104",
+          "SY0209b.s0105",
+          "SY0209b.s0106",
+          "SY0209b.s0107",
+          "SY0209b.s0108",
+          "SY0209b.s0078",
+          "SY0209b.s0079",
+          "SY0209b.s0090",
+          "SY0209b.s0091"
+        ],
+        "note": "The price check is assigned to the user interface designer early on and later reassigned to the marketing expert; the industrial designer's hinge costing task is also dropped once the fold-out stand is rejected."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_TASK_TO_ABSENT",
+        "segments": [
+          "SY0209b.s0023",
+          "SY0209b.s0024",
+          "SY0209b.s0108",
+          "SY0209b.s0117"
+        ],
+        "note": "The absent marketing expert is given the survey results task and, by reassignment, the competitor price check."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

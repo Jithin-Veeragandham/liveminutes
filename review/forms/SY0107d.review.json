@@ -1,0 +1,1106 @@
+{
+  "meeting_id": "SY0107d",
+  "raw_sha256": "a22c8ee39c7c2956178c8677e055a5f561a59c28d1107dc03e6472d3c7fe6bb6",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting and confirmed that the conceptual design minutes had been sent.",
+        "The industrial designer presented a clay model of the countertop stand, with a front tilted back by about twenty degrees, the two AA batteries in a weighted base, the two microphones behind slots at the front corners and a large stop button on the wood-effect top. He also presented the full cost breakdown, which totals 10.40 euros per unit, within the 12.50 euro limit.",
+        "The team rejected a splash cover because it would block the microphones and agreed to keep the remaining budget as a buffer.",
+        "The user interface designer presented the final display, with three colour-coded countdown rows, each beside its LED, and the final fixed voice command list. A user-chosen wake word was rejected on cost grounds.",
+        "The marketing expert proposed the wake word 'Okay Timer', which the team adopted. She then led an evaluation against five criteria, and the design scored an average of about 1.8 on a scale from one to seven, where one is best. The weakest score was for noise handling, because of the microphone's two-metre range."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The marketing expert will write box text telling users to place the timer near where they cook.",
+        "The user interface designer will make a quick start card with the voice command list to go in the box.",
+        "The project manager will write up the minutes and the final report for management.",
+        "The industrial designer will send the project manager the corrected cost sheet showing 10.40 euros."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The production cost per unit is 10.40 euros, within the 12.50 euro limit.",
+        "The remaining budget of about 2.10 euros will be kept as a buffer and not spent on extra features.",
+        "No splash cover will be added, because it would cover the microphone slots and the casing is wipeable anyway.",
+        "The stop button is placed on the wood-effect top of the stand, large enough to press with an elbow.",
+        "The display has three rows (red, blue, green from top to bottom), each with a countdown and a matching LED to its left. When a timer finishes, its row flashes, its LED blinks and the timer is announced by colour.",
+        "The voice command list is final and fixed: wake word, colour, time. The first free timer is used if no colour is given. Users can also say stop, cancel, ask how long is left and add time.",
+        "The wake word will be 'Okay Timer'.",
+        "The team was satisfied with the design after the evaluation, which averaged about 1.8."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The microphone only works reliably within about two metres, which gave the noise handling criterion the weakest score (three). Users will need to be told to place the timer near the hob.",
+        "The cost of 10.40 euros is higher than the earlier rough estimate of 9.50 to 10 euros, mainly because of the wood-effect casing."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0107d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0107d.ai1",
+        "description": "Write box/packaging text telling users to place the timer near where they cook",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0107d.s0113",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0107d.s0114",
+            "event": "accepted",
+            "by": "D",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0107d.s0112",
+          "SY0107d.s0113",
+          "SY0107d.s0114"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0107d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0107d.ai2",
+        "description": "Make a quick start card with the voice command list to go in the box",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0107d.s0115",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0107d.s0116",
+            "event": "accepted",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0107d.s0115",
+          "SY0107d.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0107d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0107d.ai3",
+        "description": "Write up the minutes and the final report for management",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0107d.s0117",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0107d.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0107d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0107d.ai4",
+        "description": "Send the project manager the corrected cost sheet (10.40 euros)",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0107d.s0118",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0107d.s0119",
+            "event": "accepted",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0107d.s0120",
+            "event": "restated",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0107d.s0118",
+          "SY0107d.s0119",
+          "SY0107d.s0120"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107d.f1",
+        "type": "decision",
+        "fact": "The production cost per unit is 10.40 euros, within the 12.50 euro limit.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107d.s0036",
+          "SY0107d.s0037",
+          "SY0107d.s0038",
+          "SY0107d.s0039",
+          "SY0107d.s0058",
+          "SY0107d.s0059",
+          "SY0107d.s0060"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107d.f2",
+        "type": "decision",
+        "fact": "The remaining budget of about 2.10 euros will be kept as a buffer.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107d.s0055",
+          "SY0107d.s0056",
+          "SY0107d.s0058",
+          "SY0107d.s0059",
+          "SY0107d.s0060"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107d.f3",
+        "type": "decision",
+        "fact": "No splash cover will be added, because it would block the microphone slots.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107d.s0046",
+          "SY0107d.s0047",
+          "SY0107d.s0053",
+          "SY0107d.s0054"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107d.f4",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested a clear splash cover over the front, but it was rejected.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107d.s0045",
+          "SY0107d.s0046",
+          "SY0107d.s0047",
+          "SY0107d.s0053"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107d.f5",
+        "type": "decision",
+        "fact": "The stop button is on the wood-effect top of the stand and can be pressed with an elbow.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107d.s0020",
+          "SY0107d.s0021",
+          "SY0107d.s0022"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107d.f6",
+        "type": "decision",
+        "fact": "The display has three colour rows (red, blue, green) with countdowns and matching LEDs on the left.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107d.s0063",
+          "SY0107d.s0064",
+          "SY0107d.s0065",
+          "SY0107d.s0067"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107d.f7",
+        "type": "decision",
+        "fact": "The voice command list stays fixed: wake word, colour, time, plus stop, cancel, how long, and add time.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107d.s0074",
+          "SY0107d.s0075",
+          "SY0107d.s0076",
+          "SY0107d.s0082"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107d.f8",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer suggested letting users record their own wake word; it was rejected because it would need a more expensive chip.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107d.s0078",
+          "SY0107d.s0079",
+          "SY0107d.s0080",
+          "SY0107d.s0081"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107d.f9",
+        "type": "decision",
+        "fact": "The wake word will be 'Okay Timer'.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107d.s0085",
+          "SY0107d.s0089",
+          "SY0107d.s0093",
+          "SY0107d.s0094",
+          "SY0107d.s0095",
+          "SY0107d.s0096"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107d.f10",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer brought up 'Hey Chef' as the wake word again; the marketing expert still found it cheesy.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0107c",
+        "evidence_segments": [
+          "SY0107d.s0086",
+          "SY0107d.s0087",
+          "SY0107d.s0088"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107d.f11",
+        "type": "other",
+        "fact": "The design scored an average of about 1.8 on the five evaluation criteria (1 to 7 scale, 1 best). Noise handling scored lowest, at 3.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107d.s0097",
+          "SY0107d.s0098",
+          "SY0107d.s0101",
+          "SY0107d.s0102",
+          "SY0107d.s0104",
+          "SY0107d.s0106",
+          "SY0107d.s0108",
+          "SY0107d.s0109",
+          "SY0107d.s0110",
+          "SY0107d.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107d.f12",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer said the handling of two timers finishing at once follows what was decided in the functional design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0107b",
+        "evidence_segments": [
+          "SY0107d.s0071",
+          "SY0107d.s0072"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107d.f13",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager noted that the cost is a bit more than the 9.50 to 10 euro estimate from the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0107c",
+        "evidence_segments": [
+          "SY0107d.s0040",
+          "SY0107d.s0041"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107d.f14",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager said the custom wake word idea had the same problem as naming the timers in the functional design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0107b",
+        "evidence_segments": [
+          "SY0107d.s0079",
+          "SY0107d.s0080"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107d.f15",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager confirmed the conceptual design minutes had been sent.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0107c",
+        "evidence_segments": [
+          "SY0107d.s0005",
+          "SY0107d.s0006"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107d.f16",
+        "type": "action_item",
+        "fact": "The marketing expert will write box text telling users to place the timer near where they cook.",
+        "agreed": null,
+        "related_action_item": "SY0107d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107d.s0112",
+          "SY0107d.s0113",
+          "SY0107d.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107d.f17",
+        "type": "action_item",
+        "fact": "The user interface designer will make a quick start card with the command list.",
+        "agreed": null,
+        "related_action_item": "SY0107d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107d.s0115",
+          "SY0107d.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107d.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107d.f18",
+        "type": "action_item",
+        "fact": "The project manager will write up the minutes and the final report for management.",
+        "agreed": null,
+        "related_action_item": "SY0107d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107d.s0117"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107d.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107d.f19",
+        "type": "action_item",
+        "fact": "The industrial designer will send the corrected cost sheet to the project manager.",
+        "agreed": null,
+        "related_action_item": "SY0107d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107d.s0118",
+          "SY0107d.s0119",
+          "SY0107d.s0120"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_SARCASM_AS_FACT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_SARCASM_AS_FACT",
+        "segments": [
+          "SY0107d.s0049",
+          "SY0107d.s0050",
+          "SY0107d.s0051",
+          "SY0107d.s0052"
+        ],
+        "note": "The marketing expert sarcastically says they'll tie the cook to the hob with a two-metre rope to solve the range problem; the team laughs and the project manager dismisses it."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_SELF_CORRECTION",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_SELF_CORRECTION",
+        "segments": [
+          "SY0107d.s0035",
+          "SY0107d.s0036"
+        ],
+        "note": "The industrial designer states the total cost as eleven forty, then immediately corrects it to ten forty because he had counted the speaker twice."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

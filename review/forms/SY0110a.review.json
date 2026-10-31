@@ -1,0 +1,1047 @@
+{
+  "meeting_id": "SY0110a",
+  "raw_sha256": "6d09a7d103893977e1a80ee23f7f3c324fada97481c6bc7968066059c22e6cf3",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the kickoff meeting, introduced herself, and the industrial designer and user interface designer introduced themselves. The marketing expert was absent because she was attending a hospitality trade fair in Cologne, and the team saw this as a chance to gather input from cafe owners there.",
+        "The project manager presented the project: a reusable coffee cup with a deposit system, sold to cafes, where end users pay a deposit and return the cup to any partner cafe to get it back.",
+        "Management's constraints are a deposit of one euro per cup, a production cost under three euros per cup, and a target of fifty partner cafes in the first year.",
+        "The industrial designer raised durability in hot industrial dishwashers and suggested a collapsible silicone cup, while the user interface designer raised the question of how cups are returned and suggested a tracking app with a QR code; neither idea was adopted.",
+        "The team agreed that the cup must be dishwasher-safe and fit standard takeaway lid sizes, and distributed research tasks ahead of the functional design meeting."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will research durable, dishwasher-safe materials within the three-euro production cost and bring options to the next meeting.",
+        "The user interface designer will investigate the return process and how existing deposit systems handle it.",
+        "The marketing expert (absent) is to talk to cafe owners at the trade fair about whether they would join a deposit system and what they would want from it.",
+        "The project manager will write up the minutes and send them to the marketing expert together with her task."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The cup must be dishwasher-safe.",
+        "The cup must fit the standard takeaway lid sizes cafes already use.",
+        "The tracking app idea is on hold until the marketing expert's findings are available."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "With a one-euro deposit and a production cost of up to three euros, lost cups could be costly for cafes; the team left open how to address this.",
+        "Whether a collapsible silicone design is viable remains open, given cleaning concerns.",
+        "The return mechanism (counter, machine or app) has not been decided."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0110a.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0110a.ai1",
+        "description": "Research durable, dishwasher-safe materials that keep production cost under three euros per cup and bring options to the next meeting.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0110a.s0092",
+            "event": "assigned",
+            "by": "C",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0110a.s0093",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0110a.s0092",
+          "SY0110a.s0093"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0110a.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0110a.ai2",
+        "description": "Investigate the cup return process and how existing deposit systems let customers get their deposit back.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0110a.s0094",
+            "event": "assigned",
+            "by": "C",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0110a.s0095",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0110a.s0094",
+          "SY0110a.s0095"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0110a.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0110a.ai3",
+        "description": "Talk to cafe owners at the trade fair about whether they would join a deposit system and what they would want from it.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0110a.s0023",
+            "event": "proposed",
+            "by": "B",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0110a.s0097",
+            "event": "assigned",
+            "by": "C",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0110a.s0021",
+          "SY0110a.s0022",
+          "SY0110a.s0023",
+          "SY0110a.s0024",
+          "SY0110a.s0096",
+          "SY0110a.s0097"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0110a.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0110a.ai4",
+        "description": "Send the meeting minutes and her task to the absent marketing expert.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "reassigned",
+        "previous_owners": [
+          "B"
+        ],
+        "history": [
+          {
+            "segment": "SY0110a.s0099",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0110a.s0100",
+            "event": "reassigned",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0110a.s0099",
+          "SY0110a.s0100",
+          "SY0110a.s0101"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110a.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110a.f1",
+        "type": "absence",
+        "fact": "The marketing expert (Marta) was absent because she was attending a hospitality trade fair in Cologne, booked before the project started.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110a.s0015",
+          "SY0110a.s0016",
+          "SY0110a.s0017",
+          "SY0110a.s0018",
+          "SY0110a.s0019"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110a.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110a.f2",
+        "type": "other",
+        "fact": "The marketing expert is expected back on Thursday and will attend the next meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110a.s0102",
+          "SY0110a.s0103"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110a.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110a.f3",
+        "type": "other",
+        "fact": "The project is a reusable coffee cup with a deposit system, sold to cafes; end users pay a deposit and get it back when they return the cup to any partner cafe.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110a.s0026",
+          "SY0110a.s0027",
+          "SY0110a.s0029",
+          "SY0110a.s0030"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110a.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110a.f4",
+        "type": "other",
+        "fact": "The deposit per cup is fixed at one euro.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110a.s0033",
+          "SY0110a.s0039",
+          "SY0110a.s0040"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110a.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110a.f5",
+        "type": "other",
+        "fact": "The production cost must stay under three euros per cup (the project manager first said five euros, then corrected it to three).",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110a.s0034",
+          "SY0110a.s0035",
+          "SY0110a.s0036"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110a.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110a.f6",
+        "type": "other",
+        "fact": "Management's target is fifty partner cafes in the first year.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110a.s0044",
+          "SY0110a.s0046"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110a.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110a.f7",
+        "type": "decision",
+        "fact": "The team agreed the cup must fit the standard takeaway lid sizes cafes already use.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110a.s0083",
+          "SY0110a.s0084",
+          "SY0110a.s0085",
+          "SY0110a.s0086"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110a.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110a.f8",
+        "type": "decision",
+        "fact": "The team agreed the cup must be dishwasher-safe.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110a.s0087",
+          "SY0110a.s0088",
+          "SY0110a.s0089",
+          "SY0110a.s0090"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110a.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110a.f9",
+        "type": "decision",
+        "fact": "The team agreed to put the tracking app idea on hold until the marketing expert's findings come back.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110a.s0077",
+          "SY0110a.s0078",
+          "SY0110a.s0079"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110a.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110a.f10",
+        "type": "unagreed_proposal",
+        "fact": "The industrial designer proposed a collapsible silicone cup; the user interface designer raised cleaning concerns and it was kept only as an idea.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110a.s0066",
+          "SY0110a.s0067",
+          "SY0110a.s0068",
+          "SY0110a.s0069"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110a.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110a.f11",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer proposed an app that tracks cups via a QR code on the bottom; it was not adopted.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110a.s0074",
+          "SY0110a.s0075",
+          "SY0110a.s0076",
+          "SY0110a.s0077",
+          "SY0110a.s0078"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110a.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110a.f12",
+        "type": "other",
+        "fact": "The user interface designer raised that lost cups are a problem because the one-euro deposit is less than the production cost; this was left as an open issue.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110a.s0041",
+          "SY0110a.s0042",
+          "SY0110a.s0043",
+          "SY0110a.s0106",
+          "SY0110a.s0107"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110a.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110a.f13",
+        "type": "action_item",
+        "fact": "The industrial designer was asked to research durable, dishwasher-safe materials within the three-euro cost limit.",
+        "agreed": null,
+        "related_action_item": "SY0110a.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110a.s0092",
+          "SY0110a.s0093"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110a.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110a.f14",
+        "type": "action_item",
+        "fact": "The user interface designer was asked to investigate the return process and existing deposit systems.",
+        "agreed": null,
+        "related_action_item": "SY0110a.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110a.s0094",
+          "SY0110a.s0095"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110a.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110a.f15",
+        "type": "action_item",
+        "fact": "The absent marketing expert is to be asked to talk to cafe owners at the trade fair about joining a deposit system.",
+        "agreed": null,
+        "related_action_item": "SY0110a.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110a.s0023",
+          "SY0110a.s0024",
+          "SY0110a.s0097"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110a.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110a.f16",
+        "type": "action_item",
+        "fact": "The user interface designer offered to message the marketing expert, but the project manager took the task, sending her the minutes along with her task.",
+        "agreed": null,
+        "related_action_item": "SY0110a.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110a.s0099",
+          "SY0110a.s0100",
+          "SY0110a.s0101"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110a.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110a.f17",
+        "type": "other",
+        "fact": "The next meeting is the functional design meeting, in about half an hour.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110a.s0047",
+          "SY0110a.s0048",
+          "SY0110a.s0109",
+          "SY0110a.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_ABSENT_DISCUSSED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_ABSENT_DISCUSSED",
+        "segments": [
+          "SY0110a.s0015",
+          "SY0110a.s0016",
+          "SY0110a.s0017",
+          "SY0110a.s0018",
+          "SY0110a.s0019",
+          "SY0110a.s0020",
+          "SY0110a.s0021",
+          "SY0110a.s0022",
+          "SY0110a.s0023",
+          "SY0110a.s0024",
+          "SY0110a.s0077",
+          "SY0110a.s0078",
+          "SY0110a.s0080",
+          "SY0110a.s0081",
+          "SY0110a.s0096",
+          "SY0110a.s0097",
+          "SY0110a.s0099",
+          "SY0110a.s0100",
+          "SY0110a.s0102",
+          "SY0110a.s0103"
+        ],
+        "note": "The marketing expert is away at a trade fair; the others discuss why she is absent, speculate about her opinion on the app, assign her a task and plan to send her the minutes. She never speaks."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_SELF_CORRECTION",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_SELF_CORRECTION",
+        "segments": [
+          "SY0110a.s0034",
+          "SY0110a.s0035"
+        ],
+        "note": "The project manager says the production cost limit is five euros per cup, then immediately corrects herself to three euros."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

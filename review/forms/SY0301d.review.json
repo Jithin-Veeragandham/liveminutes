@@ -1,0 +1,1262 @@
+{
+  "meeting_id": "SY0301d",
+  "raw_sha256": "079636992fe956c76f4fe3b82ee801554d96663a53fd8dfbc9c332d9d6dad881",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting, welcomed back the user interface designer after his absence from the previous two meetings, and confirmed she had emailed him the minutes and his tasks after both.",
+        "The user interface designer presented the three-screen flow (scan library card by barcode, scan items by RFID pad or barcode window with an automatic prompt to try the barcode, and a receipt choice of email, print or both) and showed mock-ups on the 21-inch layout. He also presented the wheelchair height and tilt range, which he had already sent to the industrial designer.",
+        "The industrial designer showed the foam model of the 60 by 60 cm pedestal and reported that the real casing quote was 290 euros rather than the 260 euro catalogue figure, bringing the total to about 2,230 euros per unit.",
+        "The marketing expert reported that the consortium has a style guide that specifies a darker official green, a single font (Source Sans) and the logo at the top of the unit. His statement that the kiosk would include a voice reading out each screen was not taken up, and the project manager moved on.",
+        "The project manager's request that the marketing expert check with consortium IT about borrower email addresses was cancelled after the user interface designer explained that the kiosk can send receipts through the library system's existing email function. The team signed off the final design."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The user interface designer will update the mock-ups with the style guide's official green and font by Friday.",
+        "The marketing expert will send the consortium style guide PDF to the user interface designer and the industrial designer.",
+        "The industrial designer will fit the consortium logo on the top panel of the casing, above the screen.",
+        "The industrial designer will send the project manager the final cost breakdown and dimensions.",
+        "The marketing expert will write a short paragraph on the survey results for the final report, explaining the email and print receipt choice.",
+        "The project manager will write the final report for the consortium."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The bottom of the screen will be at about 90 cm and the screen will tilt from 15 to 45 degrees.",
+        "The kiosk will use the official consortium green from the style guide, with the consortium logo on the casing above the screen.",
+        "The team signed off the final design: three screens (card, scan, receipt), RFID and barcode reading, a moulded plastic freestanding pedestal, at an estimated cost of about 2,230 euros per unit."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The marketing expert's idea of a voice that reads out each screen was raised but not discussed or agreed, and its cost was not considered.",
+        "The margin under the 2,500 euro budget is now about 270 euros, after the casing quote came in 30 euros above the catalogue figure."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301d.ai1",
+        "description": "Ask the consortium's IT staff whether borrower email addresses are available to the kiosk for emailed receipts",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "dropped",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301d.s0057",
+            "event": "assigned",
+            "by": "B",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0301d.s0058",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0301d.s0094",
+            "event": "dropped",
+            "by": "B",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301d.s0054",
+          "SY0301d.s0055",
+          "SY0301d.s0056",
+          "SY0301d.s0057",
+          "SY0301d.s0058",
+          "SY0301d.s0091",
+          "SY0301d.s0092",
+          "SY0301d.s0093",
+          "SY0301d.s0094",
+          "SY0301d.s0095"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301d.ai2",
+        "description": "Update the screen mock-ups with the style guide's official green and Source Sans font, by Friday",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301d.s0087",
+            "event": "assigned",
+            "by": "B",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0301d.s0088",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0301d.s0107",
+            "event": "restated",
+            "by": "B",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0301d.s0108",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301d.s0077",
+          "SY0301d.s0087",
+          "SY0301d.s0088",
+          "SY0301d.s0107",
+          "SY0301d.s0108"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301d.ai3",
+        "description": "Send the consortium style guide PDF to the user interface designer and the industrial designer",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301d.s0085",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301d.s0074",
+          "SY0301d.s0085",
+          "SY0301d.s0086"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301d.ai4",
+        "description": "Fit the consortium logo on the top panel of the casing, above the screen",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301d.s0083",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301d.s0081",
+          "SY0301d.s0082",
+          "SY0301d.s0083",
+          "SY0301d.s0084"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301d.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301d.ai5",
+        "description": "Write the final report for the consortium",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301d.s0104",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301d.s0097",
+          "SY0301d.s0104"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301d.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301d.ai6",
+        "description": "Send the project manager the final cost breakdown and dimensions for the report",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301d.s0105",
+            "event": "assigned",
+            "by": "B",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0301d.s0106",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301d.s0105",
+          "SY0301d.s0106"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301d.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301d.ai7",
+        "description": "Write a short paragraph on the survey results for the final report, explaining the email and print receipt choice",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301d.s0110",
+            "event": "assigned",
+            "by": "B",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0301d.s0111",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301d.s0109",
+          "SY0301d.s0110",
+          "SY0301d.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301d.f1",
+        "type": "decision",
+        "fact": "The bottom of the screen will be at about 90 cm and the screen will tilt from 15 to 45 degrees.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301d.s0038",
+          "SY0301d.s0049",
+          "SY0301d.s0050",
+          "SY0301d.s0051",
+          "SY0301d.s0052",
+          "SY0301d.s0053"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301d.f2",
+        "type": "decision",
+        "fact": "The kiosk will use the official consortium green from the style guide, with the logo on the casing above the screen.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301d.s0075",
+          "SY0301d.s0080",
+          "SY0301d.s0082",
+          "SY0301d.s0083",
+          "SY0301d.s0084"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301d.f3",
+        "type": "decision",
+        "fact": "The team signed off the final design at about 2,230 euros per unit: three screens, RFID and barcode, moulded plastic freestanding pedestal.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301d.s0098",
+          "SY0301d.s0099",
+          "SY0301d.s0100",
+          "SY0301d.s0101",
+          "SY0301d.s0102",
+          "SY0301d.s0103"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301d.f4",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert stated that the kiosk would have a voice reading out each screen. Nobody agreed, and the project manager moved on to the colour.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301d.s0068",
+          "SY0301d.s0069",
+          "SY0301d.s0070",
+          "SY0301d.s0071",
+          "SY0301d.s0072"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301d.f5",
+        "type": "action_item",
+        "fact": "The project manager asked the marketing expert to check with consortium IT whether borrower email addresses are available to the kiosk.",
+        "agreed": null,
+        "related_action_item": "SY0301d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301d.s0057",
+          "SY0301d.s0058"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301d.f6",
+        "type": "action_item_removed",
+        "fact": "The project manager cancelled the marketing expert's IT enquiry because the kiosk can send receipts through the library system's existing email function.",
+        "agreed": null,
+        "related_action_item": "SY0301d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301d.s0091",
+          "SY0301d.s0092",
+          "SY0301d.s0093",
+          "SY0301d.s0094",
+          "SY0301d.s0095"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301d.f7",
+        "type": "action_item",
+        "fact": "The user interface designer will update the mock-ups with the official green and font by Friday.",
+        "agreed": null,
+        "related_action_item": "SY0301d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301d.s0087",
+          "SY0301d.s0088",
+          "SY0301d.s0107",
+          "SY0301d.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301d.f8",
+        "type": "action_item",
+        "fact": "The marketing expert will send the style guide PDF to the user interface designer and the industrial designer.",
+        "agreed": null,
+        "related_action_item": "SY0301d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301d.s0085"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301d.f9",
+        "type": "action_item",
+        "fact": "The industrial designer will fit the logo on the casing's top panel above the screen.",
+        "agreed": null,
+        "related_action_item": "SY0301d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301d.s0083"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301d.f10",
+        "type": "action_item",
+        "fact": "The project manager will write the final report for the consortium.",
+        "agreed": null,
+        "related_action_item": "SY0301d.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301d.s0104"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301d.f11",
+        "type": "action_item",
+        "fact": "The industrial designer will send the project manager the final cost breakdown and dimensions.",
+        "agreed": null,
+        "related_action_item": "SY0301d.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301d.s0105",
+          "SY0301d.s0106"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301d.f12",
+        "type": "action_item",
+        "fact": "The marketing expert will write a paragraph on the survey results for the final report.",
+        "agreed": null,
+        "related_action_item": "SY0301d.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301d.s0110",
+          "SY0301d.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301d.f13",
+        "type": "plan_change",
+        "fact": "The casing cost rose from the 260 euro catalogue figure to a quoted 290 euros, bringing the total to about 2,230 euros per unit.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0301c",
+        "evidence_segments": [
+          "SY0301d.s0061",
+          "SY0301d.s0062",
+          "SY0301d.s0063",
+          "SY0301d.s0064"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301d.f14",
+        "type": "plan_change",
+        "fact": "Emailed receipts will be sent through the library system's existing email function, so the kiosk does not need the borrower's email address.",
+        "agreed": null,
+        "related_action_item": "SY0301d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301d.s0091",
+          "SY0301d.s0092",
+          "SY0301d.s0093",
+          "SY0301d.s0094"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301d.f15",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer said he kept the flow to three screens, as agreed at the kickoff meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0301a",
+        "evidence_segments": [
+          "SY0301d.s0015"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301d.f16",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager said the receipt screen matched what was decided in the functional design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0301b",
+        "evidence_segments": [
+          "SY0301d.s0025",
+          "SY0301d.s0026"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301d.f17",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager confirmed she had emailed the user interface designer the minutes and his tasks after the two meetings he missed.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0301c",
+        "evidence_segments": [
+          "SY0301d.s0006",
+          "SY0301d.s0008",
+          "SY0301d.s0009"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301d.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301d.f18",
+        "type": "other",
+        "fact": "The user interface designer had already sent his height and tilt range to the industrial designer, who built the foam model using those numbers.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0301c",
+        "evidence_segments": [
+          "SY0301d.s0039",
+          "SY0301d.s0040"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301d.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301d.f19",
+        "type": "other",
+        "fact": "The consortium style guide specifies a darker green, the Source Sans font, and the logo at the top with clear space around it.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301d.s0074",
+          "SY0301d.s0075",
+          "SY0301d.s0076",
+          "SY0301d.s0078"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_ACTION_REMOVED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_ACTION_REMOVED",
+        "segments": [
+          "SY0301d.s0056",
+          "SY0301d.s0057",
+          "SY0301d.s0058",
+          "SY0301d.s0089",
+          "SY0301d.s0090",
+          "SY0301d.s0091",
+          "SY0301d.s0092",
+          "SY0301d.s0093",
+          "SY0301d.s0094",
+          "SY0301d.s0095"
+        ],
+        "note": "The PM asks the ME to check borrower emails with consortium IT, then cancels it once the UI designer explains the library system's email API handles receipts."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_UNAGREED_DECISION",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_UNAGREED_DECISION",
+        "segments": [
+          "SY0301d.s0068",
+          "SY0301d.s0069",
+          "SY0301d.s0070",
+          "SY0301d.s0071",
+          "SY0301d.s0072"
+        ],
+        "note": "The ME states that a screen-reading voice is 'in now'. Nobody agrees, and the PM moves on to the colour without settling it."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

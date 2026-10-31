@@ -1,0 +1,208 @@
+{
+  "dataset": "liveminutes-synthetic",
+  "schema_version": "1.0",
+  "git": {
+    "commit": "f831c63f79ed20098402fdc0771622d020620d26",
+    "dirty": false
+  },
+  "config_file": "config/generation.yaml",
+  "config": {
+    "model": {
+      "provider": "anthropic",
+      "backend": "claude_cli",
+      "name": "claude-opus-5-5",
+      "version": "claude-opus-5-5",
+      "cli": {
+        "executable": "claude",
+        "effort": "high",
+        "timeout_sec": 1200
+      },
+      "sampling": {
+        "temperature": null,
+        "top_p": null,
+        "max_tokens": null,
+        "seed": null
+      }
+    },
+    "generation": {
+      "seed": 6170,
+      "prompt_version": "v1",
+      "scenarios_file": "scenarios/scenarios.yaml",
+      "series_per_feature": {
+        "F1": 10,
+        "F2": 10,
+        "F3": 5
+      },
+      "max_series_per_feature": {
+        "F3": 5
+      },
+      "meetings_per_series": 4,
+      "scenarios_per_meeting": 2,
+      "target_segments": [
+        90,
+        140
+      ],
+      "max_attempts": 3,
+      "products": [
+        "a smart thermostat for student apartments",
+        "a bike-share docking station app",
+        "a voice-controlled kitchen timer",
+        "a library self-checkout kiosk",
+        "a wearable step counter for seniors",
+        "a campus parking availability display",
+        "a reusable coffee cup with a deposit system",
+        "a children's educational tablet case"
+      ]
+    },
+    "paths": {
+      "cache_dir": "cache",
+      "raw_dir": "data/raw",
+      "reviewed_dir": "data/reviewed",
+      "splits_dir": "data/splits",
+      "review_dir": "review"
+    },
+    "splits": {
+      "seed": 6170,
+      "ratios": {
+        "train": 0.6,
+        "dev": 0.2,
+        "test": 0.2
+      },
+      "stratify_by": "feature"
+    }
+  },
+  "model": {
+    "provider": "anthropic",
+    "name": "claude-opus-5-5",
+    "version_pinned": "claude-opus-5-5",
+    "versions_in_responses": [
+      "claude-opus-5-5"
+    ]
+  },
+  "generation_timestamp": {
+    "first_response": "2026-10-31T16:42:01Z",
+    "last_response": "2026-10-31T20:52:34Z"
+  },
+  "scenario_spec": {
+    "version": 1,
+    "sha256": "5a261f1f7d4d34402d41fae3b61fa512e957572b2e383b2027abea73a6d7150b"
+  },
+  "prompt_templates": {
+    "repair.txt": "c68d9f457b7f1b7e8c5a367d6a7f0473a92eaee7865e63f87b2d3b41e528feca",
+    "system.txt": "13d829271334deb9d97574d53eabb46b0228a28450a66c28d93206b0fbca11a7",
+    "user.txt": "d48a68bcc2d7b1e28e338931196ecdb5cf8484061eaf1fa617b4764f9443be2b"
+  },
+  "schema_sha256": "287c136e9e2457925851a777948127cf954be2465a6b45b910117c8286a9ce22",
+  "counts": {
+    "meetings": 100,
+    "series": 25,
+    "failed": 0,
+    "blocked": 0
+  },
+  "failed_meetings": [],
+  "files": {
+    "index.json": "601f3a900b578503ca82b16aa802de04c85850b80fce0717d4f3f6cd64d9e85d",
+    "meetings/SY0101a.json": "163e746a5f7b01ea2d489d77dc0843ad593b0b91e119711623f608ad8322f2c8",
+    "meetings/SY0101b.json": "c5cfe9fc3aeb7a33d0dfee0387fc1851a311331af908301e56b86150e0d44f00",
+    "meetings/SY0101c.json": "cd7eba81152c4b996c89197b6f19f43cf15facc7890c88b04c73929bc614d53b",
+    "meetings/SY0101d.json": "699605d242d75f6f60948c9132e31c3d525950e4f1127499512cb8e5db08546d",
+    "meetings/SY0102a.json": "103e6c8a389a9c5f74579369ebf41e76b79c11fd83bd3f8a45b4bc5488cc6686",
+    "meetings/SY0102b.json": "0f7be4f336c2b0ca3f0eb47ae929f8b177fbcc6e75a1bdaf3f768c02f7cfe58c",
+    "meetings/SY0102c.json": "ac7af5139a41217b4574bdabd9bbe20909fcb658d61a2546686d5e415717e6e7",
+    "meetings/SY0102d.json": "896e36ec9b114a2cbb9ed2e15f23e08067aa73a7f4df6c39893ed5095c5571db",
+    "meetings/SY0103a.json": "8aadd1d7306c3585a832dbb0ce6528cb442f182a3876206c5a464be5fd4f6717",
+    "meetings/SY0103b.json": "e1a0cd9723a5a6c7367aa947b1e19ae7ec04cf1d0ff7239bec65cdc61ec21ade",
+    "meetings/SY0103c.json": "db23413f28039b88db4402bd0c8afad7e0e93fc651758401e084312081d56f77",
+    "meetings/SY0103d.json": "2559356892e41cd005b3a0e22f45b7a8658447e4d642957e0781fd64c35987e9",
+    "meetings/SY0104a.json": "1b589522b584ad95fa39cdb53ba943cf5ef5f4cf4a0af5f35c84ca0581ec3e15",
+    "meetings/SY0104b.json": "2e9a42bb1dc708915dafeca78da9d9a84f9164f52f91b4fc00d4328c69c1a3ac",
+    "meetings/SY0104c.json": "b8d5b4354f37a37c7de8ddd37965dd17e5995dd963a0302eddaea77763927920",
+    "meetings/SY0104d.json": "4f3a78aecb7a635aa7f3a14ba7609e34faf4770ccbdba3b01ff4f77ad13d3ef3",
+    "meetings/SY0105a.json": "0f475f2e313663a459b87932694138a320ce87652f755921f317639b6ed24523",
+    "meetings/SY0105b.json": "f2b56377abc5dcdf2951b44172279b5fcb2d64ada8075b154040500681ceb2f1",
+    "meetings/SY0105c.json": "e206e91b1dca8f6c8ffc198b6a2f0c65de1c5beeaaf4f3e32de0bb004731a307",
+    "meetings/SY0105d.json": "677bc9096554d010b75ce40aff9bf27ee12cfa82463e76f6e6ba3a4d834bfda3",
+    "meetings/SY0106a.json": "e73f29a03424cd98ff31a908c0f35cb4517056207e01aa6ca1e06893629737af",
+    "meetings/SY0106b.json": "5191faf78a45a7ab2c872cba0d454f11884b522ef2b763167ca10e70e13a3ae3",
+    "meetings/SY0106c.json": "dba334b29572c64b8e146577e064e8e661ba3364e6a1301df03efa4b465c0e20",
+    "meetings/SY0106d.json": "965f9a3ad37106f52192751730c5de31cccaf9245a421d4d4ef78edad95f2a92",
+    "meetings/SY0107a.json": "1deed924ac6fdd21da8a5b2fc80f29905b43bcac39779c49f1c22d6bbe6fd93e",
+    "meetings/SY0107b.json": "6d44c092efb0016f5e265c0c09c54f3091a21f13ede1b65b0da3a070bd2fb482",
+    "meetings/SY0107c.json": "ed81a777184f58d9569dfbd08679880612c22f145fd8823fd5a7e020abeca7e5",
+    "meetings/SY0107d.json": "a22c8ee39c7c2956178c8677e055a5f561a59c28d1107dc03e6472d3c7fe6bb6",
+    "meetings/SY0108a.json": "ab233740d949ce2259fae92179a5a1ef4761cc31d2c1e6363a748caf0f48a6d3",
+    "meetings/SY0108b.json": "0a436a246e594c29c2d4434ca73b19579e3fdbae255b4c4f440b9652291cae87",
+    "meetings/SY0108c.json": "b48de78549edb90bd4ad7c9b7a00097ad50224f0f975fec02ed0682594f51591",
+    "meetings/SY0108d.json": "ea60717c64642f196b05f3b71f60a09ebe8fa3fbe3349d690f83d64f03e21999",
+    "meetings/SY0109a.json": "014b1fc1a92cc3c96ff43db11b1ca3795535de7adf575af0d5dbf67372d02b62",
+    "meetings/SY0109b.json": "7731344ebc9da700fdfe7ec6bd6ff0d33bda0146dcb8dd85d446f192abd9723e",
+    "meetings/SY0109c.json": "738c5fe44e1037fdd62a7caf0dc2edf015623c15e25542cb2faa6899ebe573ed",
+    "meetings/SY0109d.json": "dff96af43207cfe07896b0bfa71dd1215aaa1f9ecc27c8a331713dc65a19c688",
+    "meetings/SY0110a.json": "6d09a7d103893977e1a80ee23f7f3c324fada97481c6bc7968066059c22e6cf3",
+    "meetings/SY0110b.json": "b06df95ba803d24889240e74f89aac2d71d3ce26a02f2a3d187280f1961f58e2",
+    "meetings/SY0110c.json": "e61fa424b782df72da426c3c25fe8efa51591f501efc75dffb26e0976e066ce3",
+    "meetings/SY0110d.json": "fedcbcaaee54a5c3bfe2e547557428405521068b8ee233f639c2700471339cb0",
+    "meetings/SY0201a.json": "dafc214ae3763492c4a1b1012cd342ad86fadae7e4cfeaa3010fe38392f516aa",
+    "meetings/SY0201b.json": "f2de9791b2608a5c9c2ffc255971ca908f9ed4321e7f4a20b154fb0fbbd7c873",
+    "meetings/SY0201c.json": "c3cdb742f19a55fb54941aff7de0d2e97955ed265b4ce00477d346668414a907",
+    "meetings/SY0201d.json": "a6eb586f22a21231aeae05c341105f42dab12c9338904ee166969ce387b4f8bd",
+    "meetings/SY0202a.json": "38e6f5de9f687794f499c0f8194de097951e854ebab981a9a74e59cdf99dd94f",
+    "meetings/SY0202b.json": "fe25c8daefde83fbbe70fcb3450046c32e486cbc5a8544729b9387389c9a71bb",
+    "meetings/SY0202c.json": "25e94df3c213fa0b9ed8b37c8e4896217ab1690f9a9c8bfd00c988b64d31d4da",
+    "meetings/SY0202d.json": "fcffac338e2d24491dc692c3dede259699cf5b68d7fbc6ba334de452ef4f4438",
+    "meetings/SY0203a.json": "8eb67c2dc2e8bfc7d30b2b23821f5dd27c5ad8b1c7e03d027d31a8663cd19668",
+    "meetings/SY0203b.json": "80b93a26baa7264eb80c0c8e7eac88867114b623d5c79a5749a43007eddd1019",
+    "meetings/SY0203c.json": "efeb16c70fd4fac44b6d13aa4c595ab991f07c919126183b326174d4de8c23aa",
+    "meetings/SY0203d.json": "fc800b2ea3ac4f6ca3dae36cf0f3c82a0d0897916f8220c6e76d61953891d014",
+    "meetings/SY0204a.json": "df1e2ac2fca57b6332e69eeb945fc1db863bffc8b7d0b98a086a9faab78cb328",
+    "meetings/SY0204b.json": "96a18f09e91c784d6488f1d9665e3e682db5a2a5d7878dd7fd154741688396ba",
+    "meetings/SY0204c.json": "d78967eff9b7f32071a56a1b92bb82ab6a088c74a37f99b1fee67fad595fa93b",
+    "meetings/SY0204d.json": "4f673f184cfb1d7d14cfc01f4edbee306fa7186c4a9e96bf744e1932e2035bc8",
+    "meetings/SY0205a.json": "f29d9c7b35908188f9d209170dcd5b69b9159effcadd1c24380bb3576974d56c",
+    "meetings/SY0205b.json": "32e304dd1e711e7b379d859e5c5239e20cb0106292a7ca4f551bd004608c98dd",
+    "meetings/SY0205c.json": "7c69c322443be54c0812ae091097e27500325b32c09f36bdb8b924a0490b0e5e",
+    "meetings/SY0205d.json": "1f8da8bbeface013666f67cfedcff0538bf3f3ff23872e1d917862129183cd4c",
+    "meetings/SY0206a.json": "ee19dab8e4329b6aefd08e783e50312c43994b24469804c8ba8d8af6d1bed2e1",
+    "meetings/SY0206b.json": "5f553aa05b77ece64f821022ff23fea3728156529c01945eb15856d6c1b34e1a",
+    "meetings/SY0206c.json": "badffe6eeedb0e150dd98738c0cfcd70220eb35dcc045600b44479c5771f58c1",
+    "meetings/SY0206d.json": "245262a1bd663e5cf78508461d3334095bf0da4bb67786111d1f7ad24d43ee4d",
+    "meetings/SY0207a.json": "1aedb6301c7af342f4144a4d92c88df7c805869491df508e3740f860a57da760",
+    "meetings/SY0207b.json": "03a74d8dd0d0529ab1a088518f5a417ba4f78d960b8b0106e79326513626b778",
+    "meetings/SY0207c.json": "aac3b5a3fbd84ae5c1750b108026edf827bc62de7bda298e0aa9340d72eacacf",
+    "meetings/SY0207d.json": "a43109104e122eaf5fcc0882e5704b11db8f84a52fa784992e8f91d83577caa5",
+    "meetings/SY0208a.json": "984d316326827604e8381cf4ee6a3309cad51ce202835a2fe47cdd933951ce80",
+    "meetings/SY0208b.json": "41968e27f853f7b96dbc1888f0c56cb9a5b99e1be2fb6bec6b69fac508ad6aef",
+    "meetings/SY0208c.json": "034c8cd683f2bb6bb0adbf79504cf7e302a0558bf66591a7203a2496c8567bde",
+    "meetings/SY0208d.json": "57045f33244958408c8196041c0f81793f13560d36a65160fe55eadc69e8ec92",
+    "meetings/SY0209a.json": "66e1190ce880fffa719f64127bf529c7fd34933ac09f09e3608501c1132618fc",
+    "meetings/SY0209b.json": "71b0bb818e7c8dd9f0f0ecc98d1bdec4525c282541eca90c0c2619ba40c1d735",
+    "meetings/SY0209c.json": "86ace6b2054d1255b0993ec1a97550566cc8ee7287de1a7b81e860a5f06443c8",
+    "meetings/SY0209d.json": "935aa996de28d4355bc377f3437fe0a3a9a2fe65e1e6f9525d6fa58b59d42b0c",
+    "meetings/SY0210a.json": "e4e9d4ed18e1590b04ed8cc4ea9cb1777e0a68a29f52a00c1ee8e1a2559f2c4e",
+    "meetings/SY0210b.json": "9832e0592cff4e6df2836201cf412c1bf09c47039c9b9e65ccd5b68f0cfb5ec0",
+    "meetings/SY0210c.json": "ba1ba3df25675f7a8fcc40fa7d3b5a0a25a30eb0e0d11f0949ef214f1041bef8",
+    "meetings/SY0210d.json": "9606753fc4a283a41194642e7b32fc18368f447d958e048977663cdad632fe44",
+    "meetings/SY0301a.json": "c0b406de44bd15ac63607d34ec9300185162316c7f3dabef3c8f339a343532df",
+    "meetings/SY0301b.json": "91bdbc298b812101420aab517a0b1f0b5a05040d0ed946fdc6d685b60862af5a",
+    "meetings/SY0301c.json": "3fb9189c93df3be0176ab3c523c30373f4563c725fbcc182f3fd9e7b7d08096d",
+    "meetings/SY0301d.json": "079636992fe956c76f4fe3b82ee801554d96663a53fd8dfbc9c332d9d6dad881",
+    "meetings/SY0302a.json": "01d5660e246d4f68c3977de6cfb618346705a07b3c5559639167e56054b034b9",
+    "meetings/SY0302b.json": "9c4d1cfe389c612be25a41ae26f71b65d0c0c4e86d8077e1209f76fd988255e4",
+    "meetings/SY0302c.json": "3b5d2c2760cc735744882a5861d3d3319ad848868677224e32ae45c033a9cefd",
+    "meetings/SY0302d.json": "a9844e36842457622bfc01c9892211eeccd79a296c33fd19fef65d123d89faf4",
+    "meetings/SY0303a.json": "d9b907f7620fa7103cb36928094a5984863ac4aea3357b5d42985d0b6af701af",
+    "meetings/SY0303b.json": "e2c9a0e80e5d9495d459268ce867fb6bb238a6a372785a75a1eaa0e68ce36de4",
+    "meetings/SY0303c.json": "4a4aec7e87224b3f03e6aa903f434d2b2c4dc66ded71af4c810ad0db05518a7f",
+    "meetings/SY0303d.json": "492812e1c847595a556736dc8bb2c0cdb76f1b7c61e5ba65f1b32497093ab273",
+    "meetings/SY0304a.json": "b3a7b323daa5ccc5e4c95ca0e7d79c96c97a658b099c06eb94c13a4ef9d91ce1",
+    "meetings/SY0304b.json": "c0117ffe5d3fb743e5097db1b15e52e0f8fbf12dfbe0588b6b19a4b1eff0a6e2",
+    "meetings/SY0304c.json": "efe4abc3f6725b6072acac1355f49da46f1955533d86f254bd14fa4f65103b09",
+    "meetings/SY0304d.json": "e56848a167d2859ea0c6e5b44b331179667901fe22c09c99922cf3dce7360064",
+    "meetings/SY0305a.json": "7165d410d3c4e170f46a8035a4e9c85ccfca04a3f33b987ca99143501f33c980",
+    "meetings/SY0305b.json": "c35fa1c6e887cc064a1d764eff9a6bc411f7d472c4047f584efd8a6708ac56d9",
+    "meetings/SY0305c.json": "9a7df8a63a7f76c071fdef869e641fafd004f58d87e21dc8f53672368311d27b",
+    "meetings/SY0305d.json": "7259c2999e86681340688947521e2e8e25bcfc133d7066b3b2d83e7eb5f44ca8",
+    "plan.json": "0719224d6cbf604c0d655f7943655891892b36eda51e586c502d8be7691b7b9c",
+    "validation_report.json": "9508d31c57b883174dbc16937f350d323384a6a6ff6247a8e1648bfdcb56ea19"
+  }
+}

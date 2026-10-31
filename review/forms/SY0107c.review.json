@@ -1,0 +1,1278 @@
+{
+  "meeting_id": "SY0107c",
+  "raw_sha256": "ed81a777184f58d9569dfbd08679880612c22f145fd8823fd5a7e020abeca7e5",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the conceptual design meeting, welcomed back the industrial designer after his illness, and confirmed that the decisions email and the functional design minutes had been sent.",
+        "The industrial designer presented his component research. A single cheap microphone misses about one in three wake words over fan noise, while a two-microphone set with a noise filter chip (about 2.80 euros) copes with a fan but only within about two metres of the cook. He also confirmed that a loud enough speaker (about 1.20 euros), the stop button and the three coloured LEDs are all affordable.",
+        "Because of the microphone's limited range, the team revised its earlier choice of a fridge magnet and decided on a small countertop stand placed near the hob.",
+        "The user interface designer presented the voice command list (wake word, colour, time, with the first free timer used if no colour is given) and a display sketch with three countdown rows beside the coloured lights. The front will be tilted back so it can be read from above.",
+        "The marketing expert presented kitchen trends (matte finishes, sage green, off-white, wood looks), and the team chose a rounded matte off-white body with a wood-effect top, powered by two AA batteries. The rough cost is about 9.50 to 10 euros, within the 12.50 euro limit."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will produce a full cost breakdown for the detailed design meeting.",
+        "The industrial designer will build a model of the countertop stand.",
+        "The user interface designer will finish the display design for the tilted front and finalise the voice command list.",
+        "The marketing expert will propose a wake word.",
+        "The marketing expert will prepare the criteria for evaluating the design.",
+        "The project manager will write up and distribute the minutes."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The timer will use a two-microphone set with a noise filter chip.",
+        "The timer will be a small freestanding unit on the counter near the hob, not a fridge magnet. This revised an earlier decision in the same meeting.",
+        "The physical stop button is confirmed, together with a speaker loud enough to be heard over a fan and three coloured LEDs.",
+        "The casing will be rounded and easy to wipe, with a matte off-white body and a wood-effect plastic top.",
+        "The front of the timer will be tilted back so the display can be read from above.",
+        "The timer will be powered by two AA batteries rather than a rechargeable battery."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The wake word is still undecided. 'Hey Chef' was suggested but considered cheesy.",
+        "The microphone only works reliably within about two metres of the cook, so the timer has to be placed near the hob.",
+        "The marketing expert regretted losing the benefit of keeping the timer off the crowded counter.",
+        "The cost figure of about 9.50 to 10 euros is only a rough estimate until the full breakdown is done."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0107c.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0107c.ai1",
+        "description": "Check that a magnet is strong enough to hold the timer on the fridge with batteries in",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "dropped",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0107c.s0025",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0107c.s0026",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0107c.s0067",
+            "event": "dropped",
+            "by": "D",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0107c.s0025",
+          "SY0107c.s0026",
+          "SY0107c.s0066",
+          "SY0107c.s0067",
+          "SY0107c.s0068"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0107c.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0107c.ai2",
+        "description": "Produce a full cost breakdown for the detailed design meeting",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0107c.s0117",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0107c.s0119",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0107c.s0120",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0107c.s0115",
+          "SY0107c.s0116",
+          "SY0107c.s0117",
+          "SY0107c.s0119",
+          "SY0107c.s0120"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0107c.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0107c.ai3",
+        "description": "Build a model of the countertop stand",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0107c.s0119",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0107c.s0120",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0107c.s0119",
+          "SY0107c.s0120"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0107c.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0107c.ai4",
+        "description": "Finish the display design for the tilted front and finalise the voice command list",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0107c.s0121",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0107c.s0122",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0107c.s0078",
+          "SY0107c.s0079",
+          "SY0107c.s0121",
+          "SY0107c.s0122"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0107c.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0107c.ai5",
+        "description": "Propose a wake word",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0107c.s0123",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0107c.s0124",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0107c.s0080",
+          "SY0107c.s0081",
+          "SY0107c.s0082",
+          "SY0107c.s0123",
+          "SY0107c.s0124"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0107c.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0107c.ai6",
+        "description": "Prepare the criteria for evaluating the design",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0107c.s0123",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0107c.s0124",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0107c.s0123",
+          "SY0107c.s0124"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0107c.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0107c.ai7",
+        "description": "Write up and distribute the meeting minutes",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0107c.s0125",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0107c.s0125"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107c.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107c.f1",
+        "type": "decision",
+        "fact": "The timer will use a two-microphone set with a noise filter chip, costing about 2.80 euros, because a single cheap microphone misses about one in three wake words over fan noise.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107c.s0030",
+          "SY0107c.s0031",
+          "SY0107c.s0033",
+          "SY0107c.s0035",
+          "SY0107c.s0036",
+          "SY0107c.s0052",
+          "SY0107c.s0053",
+          "SY0107c.s0054",
+          "SY0107c.s0055"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107c.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107c.f2",
+        "type": "decision",
+        "fact": "The timer will be a small countertop stand near the hob instead of a fridge magnet.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107c.s0057",
+          "SY0107c.s0059",
+          "SY0107c.s0061",
+          "SY0107c.s0062",
+          "SY0107c.s0063",
+          "SY0107c.s0064",
+          "SY0107c.s0065",
+          "SY0107c.s0066"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107c.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107c.f3",
+        "type": "plan_change",
+        "fact": "The team first agreed on a fridge magnet. Later in the same meeting they changed to a countertop stand, because the microphone only works within about two metres of the cook.",
+        "agreed": null,
+        "related_action_item": "SY0107c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107c.s0021",
+          "SY0107c.s0022",
+          "SY0107c.s0023",
+          "SY0107c.s0024",
+          "SY0107c.s0038",
+          "SY0107c.s0042",
+          "SY0107c.s0043",
+          "SY0107c.s0044",
+          "SY0107c.s0062",
+          "SY0107c.s0066"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107c.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107c.f4",
+        "type": "decision",
+        "fact": "The physical stop button is confirmed as cheap and feasible. The speaker (about 1.20 euros) is loud enough over a fan, and the three coloured LEDs cost almost nothing.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107c.s0047",
+          "SY0107c.s0048",
+          "SY0107c.s0049",
+          "SY0107c.s0050",
+          "SY0107c.s0051"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107c.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107c.f5",
+        "type": "decision",
+        "fact": "The casing will be rounded, with a matte off-white body and a wood-effect plastic top.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107c.s0100",
+          "SY0107c.s0101",
+          "SY0107c.s0103",
+          "SY0107c.s0104",
+          "SY0107c.s0105",
+          "SY0107c.s0106",
+          "SY0107c.s0107"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107c.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107c.f6",
+        "type": "decision",
+        "fact": "The timer will run on two AA batteries rather than a rechargeable battery.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107c.s0110",
+          "SY0107c.s0112",
+          "SY0107c.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107c.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107c.f7",
+        "type": "decision",
+        "fact": "The front of the timer will be tilted back so the display can be read from above.",
+        "agreed": true,
+        "related_action_item": "SY0107c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107c.s0078",
+          "SY0107c.s0079"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107c.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107c.f8",
+        "type": "other",
+        "fact": "Voice commands take the form wake word, then colour, then time. If no colour is given, the first free timer is used.",
+        "agreed": null,
+        "related_action_item": "SY0107c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107c.s0071",
+          "SY0107c.s0072",
+          "SY0107c.s0073",
+          "SY0107c.s0074"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107c.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107c.f9",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer suggested 'Hey Chef' as the wake word. The marketing expert found it cheesy, and the decision was deferred.",
+        "agreed": false,
+        "related_action_item": "SY0107c.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107c.s0080",
+          "SY0107c.s0081",
+          "SY0107c.s0082"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107c.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107c.f10",
+        "type": "other",
+        "fact": "The rough production cost estimate is about 9.50 to 10 euros, which is under the 12.50 euro limit.",
+        "agreed": null,
+        "related_action_item": "SY0107c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107c.s0115",
+          "SY0107c.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107c.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107c.f11",
+        "type": "action_item_removed",
+        "fact": "The industrial designer's task of checking magnet strength was dropped once the fridge magnet was abandoned.",
+        "agreed": null,
+        "related_action_item": "SY0107c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107c.s0025",
+          "SY0107c.s0026",
+          "SY0107c.s0067",
+          "SY0107c.s0068"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107c.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107c.f12",
+        "type": "action_item",
+        "fact": "The industrial designer will produce a full cost breakdown and a model of the stand.",
+        "agreed": null,
+        "related_action_item": "SY0107c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107c.s0117",
+          "SY0107c.s0119",
+          "SY0107c.s0120"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107c.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107c.f13",
+        "type": "action_item",
+        "fact": "The user interface designer will finish the display for the tilted front and the final command list.",
+        "agreed": null,
+        "related_action_item": "SY0107c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107c.s0121",
+          "SY0107c.s0122"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107c.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107c.f14",
+        "type": "action_item",
+        "fact": "The marketing expert will propose a wake word and prepare evaluation criteria.",
+        "agreed": null,
+        "related_action_item": "SY0107c.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107c.s0123",
+          "SY0107c.s0124"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107c.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107c.f15",
+        "type": "action_item",
+        "fact": "The project manager will write up the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0107c.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107c.s0125"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107c.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107c.f16",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager said she had emailed the industrial designer the decisions from the functional design meeting, which he had missed through a stomach bug. He confirmed receiving them.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0107b",
+        "evidence_segments": [
+          "SY0107c.s0005",
+          "SY0107c.s0006",
+          "SY0107c.s0007",
+          "SY0107c.s0008",
+          "SY0107c.s0009",
+          "SY0107c.s0010",
+          "SY0107c.s0011"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107c.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107c.f17",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager noted that the fridge magnet idea came from the marketing expert at the kickoff meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0107a",
+        "evidence_segments": [
+          "SY0107c.s0012",
+          "SY0107c.s0016",
+          "SY0107c.s0017"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107c.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107c.f18",
+        "type": "other",
+        "fact": "The industrial designer attended this meeting after recovering from the illness that kept him away from the functional design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0107b",
+        "evidence_segments": [
+          "SY0107c.s0005",
+          "SY0107c.s0006",
+          "SY0107c.s0008"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_PLAN_CHANGE",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_PLAN_CHANGE",
+        "segments": [
+          "SY0107c.s0016",
+          "SY0107c.s0017",
+          "SY0107c.s0018",
+          "SY0107c.s0019",
+          "SY0107c.s0020",
+          "SY0107c.s0021",
+          "SY0107c.s0022",
+          "SY0107c.s0023",
+          "SY0107c.s0024",
+          "SY0107c.s0025",
+          "SY0107c.s0026",
+          "SY0107c.s0038",
+          "SY0107c.s0042",
+          "SY0107c.s0043",
+          "SY0107c.s0044",
+          "SY0107c.s0056",
+          "SY0107c.s0057",
+          "SY0107c.s0058",
+          "SY0107c.s0059",
+          "SY0107c.s0060",
+          "SY0107c.s0061",
+          "SY0107c.s0062",
+          "SY0107c.s0063",
+          "SY0107c.s0064",
+          "SY0107c.s0065",
+          "SY0107c.s0066",
+          "SY0107c.s0067",
+          "SY0107c.s0068"
+        ],
+        "note": "The team agrees on a fridge magnet early on, then switches to a countertop stand after learning the microphone's two-metre range, and the magnet-strength task is dropped."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_OFF_TOPIC_TANGENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_OFF_TOPIC_TANGENT",
+        "segments": [
+          "SY0107c.s0084",
+          "SY0107c.s0085",
+          "SY0107c.s0086",
+          "SY0107c.s0087",
+          "SY0107c.s0088",
+          "SY0107c.s0089",
+          "SY0107c.s0090",
+          "SY0107c.s0091",
+          "SY0107c.s0092",
+          "SY0107c.s0093",
+          "SY0107c.s0094"
+        ],
+        "note": "An eleven-segment tangent about a TV baking competition final, started by the 'Hey Chef' wake word idea, before the project manager returns to the agenda."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}
