@@ -20,7 +20,7 @@ def test_plan_is_deterministic_and_stable_when_counts_change():
     p1, p2 = build_plan(cfg, sc), build_plan(cfg, sc)
     assert p1 == p2
     bigger = copy.deepcopy(cfg)
-    bigger["generation"]["series_per_feature"]["F1"] = 5
+    bigger["generation"]["series_per_feature"]["F1"] += 2
     p3 = build_plan(bigger, sc)
     by_id = {s["series_id"]: s for s in p3}
     for s in p1:

@@ -98,7 +98,8 @@ def assemble(draft: dict, mplan: dict, prior: list[dict], provenance: dict) -> t
             "id": f"{mid}.f{k}",
             "type": f.get("type"),
             "fact": f.get("fact", ""),
-            "agreed": f.get("agreed"),
+            # agreed is only meaningful for decisions and proposals
+            "agreed": f.get("agreed") if f.get("type") in ("decision", "unagreed_proposal") else None,
             "related_action_item": ai_ids.get(rel) if rel is not None else None,
             "refers_to_meeting": f.get("refers_to_meeting"),
             "evidence_segments": refs(f.get("evidence_segments")),

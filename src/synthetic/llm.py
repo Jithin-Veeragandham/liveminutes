@@ -14,6 +14,7 @@ import shutil
 import subprocess
 import tempfile
 import time
+from pathlib import Path
 
 
 class LLMError(RuntimeError):
@@ -26,16 +27,29 @@ _NESTED_ENV = ("CLAUDECODE", "CLAUDE_CODE_ENTRYPOINT", "CLAUDE_CODE_CHILD_SESSIO
                "CLAUDE_CODE_SSE_PORT", "CLAUDE_PID", "CLAUDE_EFFORT", "CLAUDE_CODE_SESSION_ATTENDED")
 
 
+def _real_executable(name: str) -> str:
+    """Resolve the binary itself. On Windows, npm installs a claude.CMD shim, and
+    cmd.exe truncates arguments at the first newline. That silently drops every flag
+    after the multi-line system prompt, so the shim must never be used."""
+    exe = shutil.which(name)
+    if not exe:
+        raise LLMError(f"executable {name!r} not found on PATH")
+    if exe.lower().endswith((".cmd", ".bat")):
+        real = Path(exe).parent / "node_modules" / "@anthropic-ai" / "claude-code" / "bin" / "claude.exe"
+        if not real.exists():
+            raise LLMError(f"{exe} is a cmd shim and {real} was not found; set model.cli.executable to claude.exe")
+        exe = str(real)
+    return exe
+
+
 class ClaudeCLIClient:
     def __init__(self, model_cfg: dict):
         self.cfg = model_cfg
         unsupported = {k: v for k, v in model_cfg.get("sampling", {}).items() if v is not None}
         if unsupported:
             raise LLMError(f"claude_cli backend cannot apply sampling params {unsupported}; set them to null")
-        exe = shutil.which(model_cfg["cli"]["executable"])
-        if not exe:
-            raise LLMError(f"executable {model_cfg['cli']['executable']!r} not found on PATH")
-        self.exe = exe
+        self.exe = _real_executable(model_cfg["cli"]["executable"])
+        exe = self.exe
         ver = subprocess.run([exe, "--version"], capture_output=True, text=True, encoding="utf-8")
         self.cli_version = ver.stdout.strip()
 
@@ -59,17 +73,20 @@ class ClaudeCLIClient:
             proc = subprocess.run([self.exe, *argv[1:]], input=user, capture_output=True, text=True,
                                   encoding="utf-8", env=env, cwd=cwd, timeout=self.cfg["cli"]["timeout_sec"])
         elapsed = round(time.time() - t0, 1)
+        def fail(msg):
+            raise LLMError(msg, {"argv": argv, "stdout": proc.stdout, "stderr": proc.stderr,
+                                 "returncode": proc.returncode, "elapsed_sec": elapsed})
         if proc.returncode != 0:
-            raise LLMError(f"claude exited {proc.returncode}: {(proc.stderr or proc.stdout)[:2000]}")
+            fail(f"claude exited {proc.returncode}: {(proc.stderr or proc.stdout)[:2000]}")
         try:
             out = json.loads(proc.stdout)
-        except json.JSONDecodeError as e:
-            raise LLMError(f"unparseable CLI output: {proc.stdout[:500]}") from e
+        except json.JSONDecodeError:
+            fail(f"CLI output is not the JSON envelope (flags lost?): {proc.stdout[:300]}")
         if out.get("is_error") or out.get("subtype") != "success":
-            raise LLMError(f"CLI reported error: {str(out)[:2000]}")
+            fail(f"CLI reported error: {str(out)[:2000]}")
         models = sorted(out.get("modelUsage", {}))
         if models != [self.cfg["version"]]:
-            raise LLMError(f"response came from {models}, expected [{self.cfg['version']}]")
+            fail(f"response came from {models}, expected [{self.cfg['version']}]")
         return {"argv": argv, "raw_stdout": proc.stdout, "elapsed_sec": elapsed, "cli_version": self.cli_version}
 
 

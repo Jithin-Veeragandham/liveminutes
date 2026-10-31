@@ -12,12 +12,13 @@ from __future__ import annotations
 
 import json
 import shutil
+from datetime import datetime, timezone
 import sys
 from pathlib import Path
 
 from . import cache
 from .assemble import DraftError, assemble, parse_draft
-from .llm import make_client, response_model, response_text
+from .llm import LLMError, make_client, response_model, response_text
 from .plan import build_plan, coverage
 from .prompts import load_templates, render, template_hashes
 from .util import ROOT, canonical, git_state, load_scenarios, resolve, sha256_file, write_json
@@ -74,7 +75,15 @@ def run(cfg: dict, allow_api: bool, out_dir: Path | None = None, only_series: li
                                         f"(run `generate` first; build makes no API calls)")
                     client = client or make_client(model_cfg)
                     _log(f"[api] {mid} attempt {attempt} -> {model_cfg['name']} ...")
-                    result = client.complete(request["system"], request["user"])
+                    try:
+                        result = client.complete(request["system"], request["user"])
+                    except LLMError as e:
+                        # Keep the raw output of failed calls; they are not cache entries.
+                        if len(e.args) > 1:
+                            stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+                            write_json(cache_dir / "_failed_calls" / f"{mid}.a{attempt}.{stamp}.json",
+                                       {"key": key, "error": e.args[0], **e.args[1]})
+                        raise
                     entry = cache.store(cache_dir, mid, attempt, key, payload, result)
                     api_calls += 1
                     _append_log(cache_dir, {"meeting_id": mid, "attempt": attempt, "key": key,
