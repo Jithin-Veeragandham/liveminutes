@@ -1,0 +1,16 @@
+diff --git a/bots/teams_bot_adapter/teams_chromedriver_payload.js b/bots/teams_bot_adapter/teams_chromedriver_payload.js
+index 61325ab..bafc35f 100644
+--- a/bots/teams_bot_adapter/teams_chromedriver_payload.js
++++ b/bots/teams_bot_adapter/teams_chromedriver_payload.js
+@@ -2390,7 +2390,10 @@ class ReceiverManager {
+                 continue;
+             }
+ 
+-            const recentContributingSources = contributingSources.filter(contributingSource => currentTime - contributingSource.timestamp <= 50);
++            // LIVEMINUTES FIX: source timestamps use the performance clock, not Date.now(). The two drift
++            // apart (e.g. when Docker resyncs its clock); compared across clocks, nobody is ever "recent".
++            const sourceClockNow = performance.timeOrigin + performance.now();
++            const recentContributingSources = contributingSources.filter(contributingSource => sourceClockNow - contributingSource.timestamp <= 50);
+             const receiverSpeakingParticipantIds = window.callManager?.getSpeakingParticipantIds(recentContributingSources) || [];
+ 
+             for (const speakingParticipantId of receiverSpeakingParticipantIds) {

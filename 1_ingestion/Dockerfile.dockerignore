@@ -1,0 +1,6 @@
+# Only what the bridge image needs is sent to Docker (paths are from the repo root).
+# Keeps out .env, certs, meeting recordings, datasets and attendee/.
+*
+!requirements.txt
+!1_ingestion/*.py
+!1_ingestion/*.html

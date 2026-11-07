@@ -1,0 +1,26 @@
+# secrets
+.env
+*.key
+*.pem
+1_ingestion/certs/
+
+# meeting data: people's voices and transcripts
+1_ingestion/sessions/
+1_ingestion/tools/receiver/sessions/
+*.wav
+.last_bot.json
+
+# datasets (large / licensed)
+5_data/raw/
+5_data/processed/
+
+# third-party code, cloned at setup
+1_ingestion/attendee/
+
+# tooling
+.venv/
+__pycache__/
+*.pyc
+1_ingestion/tools/receiver/models/
+*.log
+.DS_Store
