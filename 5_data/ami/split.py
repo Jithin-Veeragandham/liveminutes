@@ -14,8 +14,7 @@ import re
 import sys
 import xml.etree.ElementTree as ET
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import ami_settings as config  # noqa: E402
+import ami_settings
 
 # >>> THE SPLIT IS MADE HERE. AMI's official scenario-only partition (AMI corpus website, "Scenario-only"):
 DEV_SERIES = ["ES2003", "ES2011", "IS1008", "TS3004", "TS3006"]
@@ -25,7 +24,7 @@ EVAL_SERIES = ["ES2004", "ES2014", "IS1009", "TS3003", "TS3007"]
 
 # Return every scenario meeting id that has a transcript, e.g. ["ES2002a", ...] (non-scenario meetings excluded).
 def scenario_meetings():
-    files = glob.glob(os.path.join(config.AMI_DIR, "words", "*.words.xml"))
+    files = glob.glob(os.path.join(ami_settings.AMI_DIR, "words", "*.words.xml"))
     ids = {os.path.basename(f).split(".")[0] for f in files}
     return sorted(m for m in ids if re.match(r"^(ES|IS|TS)\d{4}[a-d]$", m))
 
@@ -41,7 +40,7 @@ def build_split():
 
 # Map each meeting to the participant ids (e.g. "MEE006") who spoke in it.
 def participants_by_meeting():
-    root = ET.parse(os.path.join(config.AMI_DIR, "corpusResources", "meetings.xml")).getroot()
+    root = ET.parse(os.path.join(ami_settings.AMI_DIR, "corpusResources", "meetings.xml")).getroot()
     return {m.get("observation"): {s.get("global_name") for s in m.iter("speaker")} for m in root.iter("meeting")}
 
 
@@ -59,7 +58,7 @@ def check_no_leakage(split):
 
 # Load the committed split file and confirm it matches the rule above and has no leakage.
 def load_split():
-    with open(config.SPLIT_FILE) as f:
+    with open(ami_settings.SPLIT_FILE) as f:
         split = json.load(f)["split"]
     if split != build_split():
         sys.exit("split file does not match split.py; run  python 5_data/ami/split.py  and commit the result")
@@ -74,10 +73,10 @@ def write_split():
     out = {"source": "AMI official scenario-only partition, split by series (team)",
            "dev_series": DEV_SERIES, "eval_series": EVAL_SERIES,
            "counts": {k: len(v) for k, v in split.items()}, "participants": people,
-           "smoke": config.SMOKE_MEETINGS, "split": split}
-    with open(config.SPLIT_FILE, "w") as f:
+           "smoke": ami_settings.SMOKE_MEETINGS, "split": split}
+    with open(ami_settings.SPLIT_FILE, "w") as f:
         json.dump(out, f, indent=2)
-    print(f"wrote {config.SPLIT_FILE}: {out['counts']} meetings, {people} people, no overlap")
+    print(f"wrote {ami_settings.SPLIT_FILE}: {out['counts']} meetings, {people} people, no overlap")
 
 
 if __name__ == "__main__":

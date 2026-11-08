@@ -4,8 +4,6 @@ Summarizes about 60 seconds of meeting at a time, then summarizes those window s
 meeting summary ("summary of summaries"), the way a live summary would be built during a meeting.
 Needs requirements-bart.txt (torch + transformers). Downloads the pinned model (~1.6 GB) on first use.
 """
-import time
-
 import torch
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 from transformers.utils import logging as hf_logging
@@ -41,7 +39,6 @@ class BartSummarizer:
         self.model = AutoModelForSeq2SeqLM.from_pretrained(cfg["model"], revision=cfg["revision"])
         self.model = self.model.to(cfg["device"]).eval()
         hf_logging.set_verbosity_error()   # length limits are set on purpose; hide the warnings
-        self.seconds_per_window = []
 
     # Summarize one text (BART reads at most 1024 tokens; longer input is cut). Beam search, no sampling.
     @torch.no_grad()
@@ -62,8 +59,6 @@ class BartSummarizer:
     def summarize(self, lines):
         parts = []
         for window in make_windows(lines, self.cfg["window_seconds"]):
-            start = time.perf_counter()
             useful = [l for l in window if len(l.text.split()) > 2] or window
             parts.append(self.summarize_text(as_dialogue(useful), max_new_tokens=60))
-            self.seconds_per_window.append(time.perf_counter() - start)
         return self.combine(parts)

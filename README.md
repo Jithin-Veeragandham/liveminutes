@@ -367,15 +367,16 @@ FIRST_SEED = 42   # seeds are 42, 43, ..., 61
 
 ### 2.3 How it works (the flow)
 
-`2_summarization/run.py` does these steps in order:
+`main()` at the bottom of `2_summarization/run.py` does these steps in order, each one marked with a comment:
 
 ```
-1. fix PYTHONHASHSEED  -> same hashing every run
-2. fetch_data.py       -> download AMI, check its hash against MANIFEST.json
-3. split.py            -> load the train/dev/eval split, check no person is in two splits
-4. for each seed:      -> set seeds, summarize each meeting (ami.py reads it), score it (metrics.py)
-5. average             -> mean and std over seeds
-6. save                -> add one line to 6_evaluation/summarization/results/results_log.jsonl
+0. seeds          -> pick the seeds (top of the file or --seeds / --seed), fix PYTHONHASHSEED
+1. check data     -> fetch_data.py: download AMI if missing, check its hash against MANIFEST.json
+2. load split     -> split.py: load train/dev/eval, check no person is in two splits
+3. build model    -> TextRank (or BART)
+4. run            -> for each seed: set seeds, summarize each meeting (ami.py reads it), score it (metrics.py)
+5. average        -> mean and std over seeds
+6. save           -> one line in 6_evaluation/summarization/results/results_log.jsonl
 ```
 
 ### 2.4 What each file does

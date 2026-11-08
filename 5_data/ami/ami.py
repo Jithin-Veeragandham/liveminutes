@@ -7,7 +7,7 @@ import os
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 
-import ami_settings as config
+import ami_settings
 
 NITE = "{http://nite.sourceforge.net/}"
 ROLE_NAMES = {"PM": "Project Manager", "ME": "Marketing Expert",
@@ -30,7 +30,7 @@ class Meeting:
 
 # Map each speaker letter (A-D) of a meeting to its scenario role (PM, ME, ID, UI).
 def speaker_roles(meeting):
-    root = ET.parse(os.path.join(config.AMI_DIR, "corpusResources", "meetings.xml")).getroot()
+    root = ET.parse(os.path.join(ami_settings.AMI_DIR, "corpusResources", "meetings.xml")).getroot()
     for m in root.iter("meeting"):
         if m.get("observation") == meeting:
             return {s.get("nxt_agent"): s.get("role") for s in m.iter("speaker")}
@@ -39,7 +39,7 @@ def speaker_roles(meeting):
 
 # Read one speaker's words: {word id: (start time or None, text, is punctuation)}, in file order.
 def read_words(meeting, agent):
-    path = os.path.join(config.AMI_DIR, "words", f"{meeting}.{agent}.words.xml")
+    path = os.path.join(ami_settings.AMI_DIR, "words", f"{meeting}.{agent}.words.xml")
     words = {}
     for w in ET.parse(path).getroot():
         if w.tag == "w":   # skip vocal sounds, gaps and disfluency markers
@@ -56,26 +56,32 @@ def join_words(tokens):
     return text.strip()
 
 
-# Build the transcript lines of one speaker from their dialogue acts.
+# A dialogue act points at its words like "ES2004a.A.words.xml#id(ES2004a.A.words0)..id(ES2004a.A.words5)".
+# Return the first and last word id: ("ES2004a.A.words0", "ES2004a.A.words5").
+def word_range(href):
+    ids = [part.split(")")[0] for part in href.split("id(")[1:]]
+    return ids[0], ids[-1]
+
+
+# Build one speaker's transcript lines: each dialogue act (one utterance) becomes one line.
 def read_lines(meeting, agent, role):
-    da_path = os.path.join(config.AMI_DIR, "dialogueActs", f"{meeting}.{agent}.dialog-act.xml")
-    if not os.path.exists(da_path):
+    path = os.path.join(ami_settings.AMI_DIR, "dialogueActs", f"{meeting}.{agent}.dialog-act.xml")
+    if not os.path.exists(path):
         return []
     words = read_words(meeting, agent)
-    ids = list(words)
-    position = {w: i for i, w in enumerate(ids)}
+    word_ids = list(words)                                  # in file order
+    position = {w: i for i, w in enumerate(word_ids)}
     lines = []
-    for dact in ET.parse(da_path).getroot().iter("dact"):
+    for dact in ET.parse(path).getroot().iter("dact"):
         child = dact.find(NITE + "child")
         if child is None:
             continue
-        # href looks like "ES2004a.A.words.xml#id(ES2004a.A.words0)..id(ES2004a.A.words5)"
-        span = [part.split(")")[0] for part in child.get("href").split("id(")[1:]]
-        if span[0] not in position or span[-1] not in position:
+        first, last = word_range(child.get("href"))
+        if first not in position or last not in position:
             continue
-        span_ids = ids[position[span[0]]: position[span[-1]] + 1]
-        times = [words[w][0] for w in span_ids if words[w][0] is not None]
-        text = join_words([(words[w][1], words[w][2]) for w in span_ids])
+        span = word_ids[position[first]: position[last] + 1]   # every word id from first to last
+        text = join_words([(words[w][1], words[w][2]) for w in span])
+        times = [words[w][0] for w in span if words[w][0] is not None]
         if text and times:
             lines.append(Line(role, min(times), text))
     return lines
@@ -83,7 +89,7 @@ def read_lines(meeting, agent, role):
 
 # Read the human-written abstract of a meeting as one string.
 def read_reference(meeting):
-    path = os.path.join(config.AMI_DIR, "abstractive", f"{meeting}.abssumm.xml")
+    path = os.path.join(ami_settings.AMI_DIR, "abstractive", f"{meeting}.abssumm.xml")
     if not os.path.exists(path):
         return ""
     root = ET.parse(path).getroot()
