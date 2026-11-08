@@ -1,0 +1,15 @@
+# Baseline environment (TextRank + ROUGE). Python 3.12 (see .python-version). Every package pinned, dependencies included.
+# Resolved with: uv pip install --exclude-newer 2026-10-20 summa rouge-score numpy   (then uv pip freeze)
+absl-py==2.5.1
+click==8.5.0
+cloudpickle==3.1.2
+defusedxml==0.7.1
+joblib==1.6.0
+nltk==3.10.3
+numpy==2.5.4
+regex==2026.9.29
+rouge-score==0.1.2
+scipy==1.18.1
+six==1.17.0
+summa==1.2.0
+tqdm==4.70.1
