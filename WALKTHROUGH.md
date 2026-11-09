@@ -16,7 +16,7 @@ git push origin walkthrough-v1
 ## Submission checklist (from the assignment)
 
 - [ ] Instructor has read access to the repo (GitHub username: ______)
-- [x] README states one command that runs the baseline on the smoke test ([2.1](README.md#21-run-it-smoke-test-under-1-minute-no-gpu-no-credentials))
+- [x] README states one command that runs the baseline on the smoke test ([README section 4](README.md#4-quick-start-fresh-clone-to-the-smoke-test-number))
 - [x] Environment is a committed file: `.python-version` + pinned `requirements.txt`
 - [x] Seeds are set in code that runs every time (top of `2_summarization/run.py`)
 - [x] Data version recorded: `5_data/ami/MANIFEST.json` (source, retrieval date, hashes)
