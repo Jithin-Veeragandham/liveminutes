@@ -319,7 +319,7 @@ You need Python 3.12 and [uv](https://docs.astral.sh/uv/) (`brew install uv` or 
 
 ```bash
 uv venv --python 3.12 .venv
-uv pip install --python .venv/bin/python -r 2_summarization/requirements.txt
+uv pip install --python .venv/bin/python -r requirements.txt
 .venv/bin/python 2_summarization/run.py --model textrank --split smoke
 ```
 
@@ -346,7 +346,7 @@ Run it twice: the numbers are the same.
 | Baseline on the 20 dev meetings | `.venv/bin/python 2_summarization/run.py --model textrank --split dev` |
 | Use 5 seeds instead of 20 | add `--seeds 5` |
 | Use exactly one seed (e.g. 7) | add `--seed 7` |
-| BART | `uv pip install --python .venv/bin/python -r 2_summarization/requirements-bart.txt`<br>`.venv/bin/python 2_summarization/run.py --model bart --split smoke --seeds 3 --bertscore` (~3 GB download once) |
+| BART | `uv pip install --python .venv/bin/python -r requirements-bart.txt`<br>`.venv/bin/python 2_summarization/run.py --model bart --split smoke --seeds 3 --bertscore` (~3 GB download once) |
 | Only check the data | `.venv/bin/python 5_data/ami/fetch_data.py --verify` |
 | Only check the split | `.venv/bin/python 5_data/ami/split.py --check` |
 | Run without saving a result | add `--no-log` |
@@ -387,9 +387,6 @@ FIRST_SEED = 42   # seeds are 42, 43, ..., 61
 | `2_summarization/settings.py` | Model settings: TextRank, BART and BERTScore versions. |
 | `2_summarization/textrank_baseline.py` | The baseline. ~30 lines. |
 | `2_summarization/bart_summarizer.py` | The deep model. Summarizes ~60 s chunks, then combines them. |
-| `2_summarization/requirements.txt` | Exact package versions for the baseline. |
-| `2_summarization/requirements-bart.txt` | Packages for BART + BERTScore. |
-| `2_summarization/.python-version` | Python 3.12. |
 | `5_data/ami/ami_settings.py` | Where the AMI data lives, and the 3 smoke-test meetings. |
 | `5_data/ami/fetch_data.py` | Downloads AMI and checks it matches the expected hash. |
 | `5_data/ami/split.py` | Decides which meetings go to train / dev / eval. Checks no person is in two splits. |
@@ -402,7 +399,7 @@ FIRST_SEED = 42   # seeds are 42, 43, ..., 61
 | `6_evaluation/summarization/results/results_log.jsonl` | One line per run: scores + everything needed to repeat it. |
 | `6_evaluation/summarization/results/runs/<run_id>.json` | Same, plus every summary the model wrote, per seed and meeting. |
 
-Why separate requirements files: the root `requirements.txt` builds the ingestion Docker image, and these packages (torch especially) would make that image much bigger.
+**Environment files are at the repo root:** `requirements.txt` (ingestion + summarization baseline, every summarization package pinned), `requirements-bart.txt` (optional extra for BART + BERTScore; kept separate because torch, ~2 GB, would otherwise go into the ingestion Docker image), and `.python-version` (3.12).
 
 ### 2.5 Libraries we used
 
@@ -433,7 +430,7 @@ Each log line has (what the walkthrough checks): the scores (mean, std, per seed
 
 | Check | Where |
 |---|---|
-| **Environment** | `2_summarization/requirements.txt` (every package pinned), `.python-version` (3.12). Each run logs Python, packages, hardware. |
+| **Environment** | `requirements.txt` at the repo root (every package pinned), `.python-version` (3.12). Each run logs Python, packages, hardware. |
 | **Seeds** | Top of `2_summarization/run.py`, applied every run (see [2.2](#22-seeds)). |
 | **Data version** | `5_data/ami/MANIFEST.json`: URL, retrieval date, zip SHA-256, `data_hash`. Checked every run; the run stops if it doesn't match. Delete `5_data/raw/ami/` and run again to get the same bytes back. |
 | **Split** | `5_data/ami/split.py`, look for `THE SPLIT IS MADE HERE`. Checked every run. |
