@@ -39,7 +39,7 @@ TextRank has no randomness, so every seed gives the same summary (std 0). The se
 
 ## 4. Quick start: fresh clone to the smoke-test number
 
-**You need:** macOS or Linux, `git`, internet access, about 150 MB of disk, and [uv](https://docs.astral.sh/uv/getting-started/installation/) (check with `uv --version`; on macOS `brew install uv`). uv downloads **Python 3.12** for you if you don't have it. **No GPU, no accounts, no API keys.**
+**You need:** macOS or Linux, `git`, internet access, about 300 MB of disk, and [uv](https://docs.astral.sh/uv/getting-started/installation/) (check with `uv --version`; on macOS `brew install uv`). uv downloads **Python 3.12** for you if you don't have it. Any 3.12.x works; the logged runs used 3.12.16. **No GPU, no accounts, no API keys.**
 Tested on macOS 27 (Apple M5) with uv 0.12. Windows is untested: use Git Bash and `.venv/Scripts/python` in place of `.venv/bin/python`.
 
 ```bash
@@ -49,13 +49,15 @@ uv venv --python 3.12 .venv
 uv pip install --python .venv/bin/python -r requirements.txt
 ```
 
+There's no need to activate the environment (uv suggests `source .venv/bin/activate`): every command below calls `.venv/bin/python` directly.
+
 **The one command** (runs the baseline on the smoke-test subset):
 
 ```bash
 .venv/bin/python 2_summarization/run.py --model textrank --split smoke
 ```
 
-First run: about 30 s, mostly the 23 MB download. Later runs: about 3 s. It downloads AMI and checks its hashes, checks the split, then summarizes the 3 smoke meetings once per seed (20 seeds) and scores them. You should see:
+First run: 30 to 40 s, mostly the 23 MB download. Later runs: about 3 s. It downloads AMI and checks its hashes, checks the split, then summarizes the 3 smoke meetings once per seed (20 seeds) and scores them. You should see:
 
 ```
 downloading https://groups.inf.ed.ac.uk/ami/AMICorpusAnnotations/ami_public_manual_1.6.2.zip (23 MB) ...
@@ -79,7 +81,9 @@ grep '"split": "smoke"' 6_evaluation/summarization/results/results_log.jsonl | .
 ```
 
 Good to know:
-- **Each run adds a line to `results_log.jsonl` and a file in `results/runs/`**, which are committed files, so `git status` shows them afterwards. Add `--no-log` for a run you don't want to keep. To undo a run: `git checkout -- 6_evaluation/summarization/results/results_log.jsonl`, then delete the new file in `results/runs/`.
+- **Each run adds a line to `results_log.jsonl` and a file in `results/runs/`**, which are committed files, so `git status` shows them afterwards. Add `--no-log` for a run you don't want to keep. To undo every run you haven't committed:
+  `git checkout -- 6_evaluation/summarization/results/results_log.jsonl && git clean -f 6_evaluation/summarization/results/runs/`
+  (`git clean` there only deletes run files that aren't committed.)
 - The script **restarts itself once** at the start, to fix Python's hash seed (`PYTHONHASHSEED`). That's expected.
 - If the download fails, check you can reach `groups.inf.ed.ac.uk`. If you delete `5_data/raw/ami/`, the next run downloads the same files again and checks them against the manifest.
 
@@ -90,10 +94,10 @@ From the repo root, after the quick start. Times measured on the machine above.
 | Stage | Command | Time |
 |---|---|---|
 | Set up the environment | `uv venv` + `uv pip install` (quick start) | under 10 s |
-| Download + check data (first run only) | runs automatically, or `.venv/bin/python 5_data/ami/fetch_data.py` | about 25 s |
+| Download + check data (first run only) | runs automatically, or `.venv/bin/python 5_data/ami/fetch_data.py` | 10 to 30 s (network) |
 | Baseline, smoke (3 meetings × 20 seeds) | `.venv/bin/python 2_summarization/run.py --model textrank --split smoke` | about 3 s |
 | **Baseline, eval (20 test meetings × 20 seeds)** | `.venv/bin/python 2_summarization/run.py --model textrank --split eval` | about 70 s |
-| Baseline, dev (20 meetings × 20 seeds) | `.venv/bin/python 2_summarization/run.py --model textrank --split dev` | about 2 min |
+| Baseline, dev (20 meetings × 20 seeds) | `.venv/bin/python 2_summarization/run.py --model textrank --split dev` | about 65 s |
 | Optional: BART + BERTScore | `uv pip install --python .venv/bin/python -r requirements-bart.txt` then `.venv/bin/python 2_summarization/run.py --model bart --split smoke --seeds 3 --bertscore` | about 8 min the first time: a one-time download of about 4.5 GB of models, then about 30 s per meeting per seed on CPU |
 
 Useful flags: `--seeds 5` (5 seeds), `--seed 7` (exactly one seed), `--no-log`. Checks on their own: `.venv/bin/python 5_data/ami/fetch_data.py --verify` (data) and `.venv/bin/python 5_data/ami/split.py --check` (split). More in [docs/SUMMARIZATION.md](docs/SUMMARIZATION.md).
