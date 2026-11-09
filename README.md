@@ -140,7 +140,7 @@ Then open `../.env` in an editor and set `GROQ_API_KEY=gsk_...` (your key). Star
 
 ```bash
 dc up -d liveminutes-bridge
-dc ps                                      # 6 services Up; liveminutes-bridge (healthy)
+dc ps                                      # 6 services Up; liveminutes-bridge (healthy) after about 30 s
 curl http://127.0.0.1:8776/health          # -> ok
 ```
 
