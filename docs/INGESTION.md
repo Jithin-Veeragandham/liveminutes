@@ -38,7 +38,7 @@ Everything else:
 | `send_bot.sh` | Sends an Attendee bot to a Meet or Teams link, wired to the bridge (same request as the live view's Send bot tab) |
 | `make_account.sh` | Creates a verified Attendee login + API key and writes the key to the repo's `.env` (no browser sign-up) |
 | `make_certs.sh` | Local TLS certs (Attendee only accepts `wss://`) |
-| `Dockerfile` + `Dockerfile.dockerignore` | Image for the bridge (`liveminutes-bridge`): python:3.12-slim, non-root, `/health` check. Built from the repo root for the shared `requirements.txt` |
+| `Dockerfile` + `Dockerfile.dockerignore` | Image for the bridge (`liveminutes-bridge`): python:3.12-slim, non-root, `/health` check. Built from the repo root for the shared `requirements.txt`, and installs only its section 1 (ingestion), so torch stays out |
 | `compose.local.yaml` | Our additions to Attendee's compose: the bridge container, the bot trusting our certs, two Attendee settings |
 | `../.env.example`, `../requirements.txt` | At the repo root, shared by all components: the API key template (see [1.5](#15-configuration)) and Python packages |
 | `tests/test_consent.py` | Offline unit tests for consent replies, vouching and chat formatting (Attendee mocked, no Groq) |
