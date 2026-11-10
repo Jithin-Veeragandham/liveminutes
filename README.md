@@ -346,7 +346,7 @@ Run it twice: the numbers are the same.
 | Baseline on the 20 dev meetings | `.venv/bin/python 2_summarization/run.py --model textrank --split dev` |
 | Use 5 seeds instead of 20 | add `--seeds 5` |
 | Use exactly one seed (e.g. 7) | add `--seed 7` |
-| BART | `uv pip install --python .venv/bin/python -r requirements-bart.txt`<br>`.venv/bin/python 2_summarization/run.py --model bart --split smoke --seeds 3 --bertscore` (~3 GB download once) |
+| BART | `.venv/bin/python 2_summarization/run.py --model bart --split smoke --seeds 3 --bertscore` (~3 GB download once) |
 | Only check the data | `.venv/bin/python 5_data/ami/fetch_data.py --verify` |
 | Only check the split | `.venv/bin/python 5_data/ami/split.py --check` |
 | Run without saving a result | add `--no-log` |
@@ -363,6 +363,7 @@ FIRST_SEED = 42   # seeds are 42, 43, ..., 61
 - Change it there, or per run on the command line: `--seeds N` (N seeds) or `--seed S` (one seed, S).
 - For every seed, `set_seeds()` fixes Python `random`, NumPy and torch. `PYTHONHASHSEED` is set to the first seed (the script restarts itself once, since it only works at startup).
 - The log keeps each seed's score, plus the mean and standard deviation across seeds.
+- Every run record also has a `seed_variation` section that answers "what changed between seeds, and why": a one-line `verdict`; `why` (what the seed can and cannot change for this model); for each metric its std, min and max with the seed that gave them, and the range; and `per_meeting`, listing every meeting whose summary text differed between seeds (how many distinct summaries, which seeds differed from the first, and that meeting's std and range per metric). The same summary is printed at the end of the run.
 - TextRank has no randomness, so all 20 seeds give the same summary (`identical_across_seeds: true`, std 0). Seeds start to matter with BART and the LLM.
 
 ### 2.3 How it works (the flow)
@@ -399,7 +400,7 @@ FIRST_SEED = 42   # seeds are 42, 43, ..., 61
 | `6_evaluation/summarization/results/results_log.jsonl` | One line per run: scores + everything needed to repeat it. |
 | `6_evaluation/summarization/results/runs/<run_id>.json` | Same, plus every summary the model wrote, per seed and meeting. |
 
-**Environment files are at the repo root:** `requirements.txt` (ingestion + summarization baseline, every summarization package pinned), `requirements-bart.txt` (optional extra for BART + BERTScore; kept separate because torch, ~2 GB, would otherwise go into the ingestion Docker image), and `.python-version` (3.12).
+**Environment files are at the repo root:** one `requirements.txt` (section 1 ingestion, section 2 summarization baseline, section 3 BART + BERTScore; every summarization package pinned) and `.python-version` (3.12). The ingestion Docker image installs only section 1, so torch (~2 GB) stays out of it.
 
 ### 2.5 Libraries we used
 

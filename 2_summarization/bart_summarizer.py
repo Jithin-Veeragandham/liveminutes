@@ -2,7 +2,7 @@
 
 Summarizes about 60 seconds of meeting at a time, then summarizes those window summaries into one
 meeting summary ("summary of summaries"), the way a live summary would be built during a meeting.
-Needs requirements-bart.txt (torch + transformers). Downloads the pinned model (~1.6 GB) on first use.
+Needs torch + transformers (section 3 of requirements.txt). Downloads the pinned model (~1.6 GB) on first use.
 """
 import torch
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer

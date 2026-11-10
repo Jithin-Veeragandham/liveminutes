@@ -4,11 +4,13 @@
     python 2_summarization/run.py --model textrank --split eval              # baseline, 20 test meetings
     python 2_summarization/run.py --model textrank --split smoke --seeds 5   # 5 seeds
     python 2_summarization/run.py --model textrank --split smoke --seed 7    # one seed: 7
-    python 2_summarization/run.py --model bart --split smoke --seeds 3       # deep model (needs requirements-bart.txt)
+    python 2_summarization/run.py --model bart --split smoke --seeds 3       # deep model (BART packages are in requirements.txt)
 
 Steps (see main() at the bottom):
   1. check the data     2. load the split     3. build the model
-  4. summarize + score every meeting, once per seed     5. average over seeds     6. save to the results log
+  4. summarize + score every meeting, once per seed     5. average over seeds, and record what changed between
+     seeds (seed_variation: per-metric std/min/max with the seed, which meetings' summaries changed, and why)
+  6. save to the results log
 """
 
 # =====================================================================================================
@@ -127,6 +129,72 @@ def average_over_seeds(results):
     return mean, std
 
 
+# ---------------------------------------------------------------- what changed between seeds
+
+# What the seed can and cannot change, per model. Goes into the log next to the measured variation,
+# so "why did / didn't the numbers move between seeds?" is answered by the run record itself.
+SEED_EFFECT = {
+    "textrank": "TextRank (summa) has no random step: PageRank over a sentence-similarity graph, fixed input order. "
+                "The seed cannot change the summary, so every seed should give the same text and std 0.",
+    "bart": "BART decodes with beam search (do_sample=False), so on the same hardware it is deterministic too. "
+            "Differences between seeds can only come from nondeterministic float math (e.g. GPU kernels, "
+            "thread scheduling), which can flip a beam choice and change a few words.",
+}
+SEEDED = "Each seed sets Python random, NumPy and torch. PYTHONHASHSEED is fixed to the FIRST seed for the whole run."
+
+
+# For every metric: spread across seeds, and the seeds that gave the lowest / highest score.
+def metric_spread(seeds, results, mean, std):
+    out = {}
+    for name in mean:
+        values = [r["scores"][name] for r in results]
+        lo, hi = int(np.argmin(values)), int(np.argmax(values))
+        out[name] = {"mean": mean[name], "std": std[name], "min": values[lo], "min_seed": seeds[lo],
+                     "max": values[hi], "max_seed": seeds[hi], "range": round(values[hi] - values[lo], 4)}
+    return out
+
+
+# For every meeting: did the summary text change between seeds, how many different summaries, and the
+# std of each metric across seeds. Only meetings that changed are listed in detail.
+def per_meeting_changes(seeds, results, meeting_ids):
+    changed = {}
+    for m in meeting_ids:
+        texts = [r["predictions"][m] for r in results]
+        if len(set(texts)) == 1:
+            continue
+        scores = [r["per_meeting"][m] for r in results]
+        changed[m] = {
+            "distinct_summaries": len(set(texts)),
+            "seeds_differing_from_first": [s for s, t in zip(seeds, texts) if t != texts[0]],
+            "std": {n: round(float(np.std([s[n] for s in scores], ddof=1)), 4) for n in scores[0]},
+            "range": {n: round(float(max(s[n] for s in scores) - min(s[n] for s in scores)), 4) for n in scores[0]},
+        }
+    return changed
+
+
+# The full "what changed between seeds" section of the run record.
+def seed_variation(model_name, seeds, results, mean, std, meeting_ids):
+    changed = per_meeting_changes(seeds, results, meeting_ids)
+    if len(seeds) == 1:
+        verdict = "Only one seed was run, so there is no seed variation to measure."
+    elif not changed:
+        verdict = (f"Nothing changed: all {len(seeds)} seeds produced identical summaries for all "
+                   f"{len(meeting_ids)} meetings, so every metric has std 0.")
+    else:
+        moved = [n for n in std if std[n] > 0]
+        verdict = (f"{len(changed)} of {len(meeting_ids)} meetings got a different summary under some seed "
+                   f"({', '.join(sorted(changed))}); metrics that moved: {', '.join(moved) or 'none (changes were too small to show at 4 decimals)'}.")
+    return {
+        "verdict": verdict,
+        "why": SEED_EFFECT.get(model_name, "") + " " + SEEDED,
+        "seeds": seeds,
+        "metrics": metric_spread(seeds, results, mean, std),
+        "meetings_changed": len(changed),
+        "meetings_total": len(meeting_ids),
+        "per_meeting": changed,
+    }
+
+
 # ---------------------------------------------------------------- results log
 
 # Current git commit, and files changed but not committed (results/ is ignored, since runs write there).
@@ -173,7 +241,7 @@ def main():
     seed_options = p.add_mutually_exclusive_group()
     seed_options.add_argument("--seeds", type=int, help=f"number of seeds (default {N_SEEDS})")
     seed_options.add_argument("--seed", type=int, help="run exactly one seed, with this value")
-    p.add_argument("--bertscore", action="store_true", help="also compute BERTScore (needs requirements-bart.txt)")
+    p.add_argument("--bertscore", action="store_true", help="also compute BERTScore (BART packages are in requirements.txt)")
     p.add_argument("--no-log", action="store_true", help="don't save the result")
     args = p.parse_args()
 
@@ -202,6 +270,7 @@ def main():
     # 5. Average over seeds.
     mean, std = average_over_seeds(results)
     identical = all(r["predictions"] == results[0]["predictions"] for r in results)
+    variation = seed_variation(args.model, seeds, results, mean, std, [m.id for m in meetings])
     seconds_per_meeting = round(sum(r["seconds"] for r in results) / (len(seeds) * len(meetings)), 3)
 
     # 6. Save the scores together with everything needed to reproduce them.
@@ -218,7 +287,7 @@ def main():
         "meetings_hash": short_hash([m.id for m in meetings]),
         "n_seeds": len(seeds), "metrics_mean": mean, "metrics_std": std,
         "metrics_per_seed": {str(s): r["scores"] for s, r in zip(seeds, results)},
-        "identical_across_seeds": identical, "seconds_per_meeting": seconds_per_meeting,
+        "identical_across_seeds": identical, "seed_variation": variation, "seconds_per_meeting": seconds_per_meeting,
         "python": platform.python_version(), "packages": package_versions(),
         "hardware": {"machine": platform.machine(), "system": platform.platform(), "cpus": os.cpu_count()},
     }
@@ -227,6 +296,10 @@ def main():
 
     print(f"\nmean over {len(seeds)} seeds:  " + "  ".join(f"{k} {mean[k]} (±{std[k]})" for k in mean))
     print(f"seconds_per_meeting {seconds_per_meeting}  identical_across_seeds {identical}")
+    print("seed variation: " + variation["verdict"])
+    for name, s in variation["metrics"].items():
+        print(f"  {name:12} std {s['std']}  min {s['min']} (seed {s['min_seed']})  "
+              f"max {s['max']} (seed {s['max_seed']})  range {s['range']}")
     print(f"{'not logged (--no-log)' if args.no_log else 'logged'} {record['run_id']}  commit {commit[:12]}  "
           f"data {data_hash[:12]}  config {record['config_hash']}")
     if changed:

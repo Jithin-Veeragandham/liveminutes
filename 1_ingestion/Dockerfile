@@ -8,7 +8,9 @@ ENV PYTHONUNBUFFERED=1 \
 
 WORKDIR /app
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Install only section 1 (ingestion) of the shared file; the summarization sections (torch, ~2 GB) stay out.
+RUN sed -n '/^# ---- 1\. Ingestion/,/^# ---- 2\./p' requirements.txt > ingestion.txt \
+ && pip install --no-cache-dir -r ingestion.txt && rm ingestion.txt
 COPY 1_ingestion/*.py 1_ingestion/*.html ./
 
 # Run as a normal user, not root. certs/ and sessions/ are mounted in by compose.
