@@ -39,8 +39,9 @@ TextRank has no randomness, so every seed gives the same summary (std 0). The se
 
 ## 4. Quick start: fresh clone to the smoke-test number
 
-**You need:** macOS or Linux, `git`, internet access, about 300 MB of disk, and [uv](https://docs.astral.sh/uv/getting-started/installation/) (check with `uv --version`; on macOS `brew install uv`). uv downloads **Python 3.12** for you if you don't have it. Any 3.12.x works; the logged runs used 3.12.16. **No GPU, no accounts, no API keys.**
+**You need:** macOS or Linux, `git`, internet access, about 1.1 GB of disk, and [uv](https://docs.astral.sh/uv/getting-started/installation/) (check with `uv --version`; on macOS `brew install uv`). uv downloads **Python 3.12** for you if you don't have it. Any 3.12.x works; the logged runs used 3.12.16. **No GPU, no accounts, no API keys.**
 Tested on macOS 27 (Apple M5) with uv 0.12. Windows is untested: use Git Bash and `.venv/Scripts/python` in place of `.venv/bin/python`.
+`requirements.txt` includes torch for the optional BART model, so the install downloads about 900 MB on macOS. On Linux x86_64 it's about 3 GB, because torch also pulls in NVIDIA GPU libraries, which `requirements.txt` doesn't pin and the baseline doesn't use.
 
 ```bash
 git clone https://github.com/Jithin-Veeragandham/liveminutes.git
@@ -96,7 +97,7 @@ From the repo root, after the quick start. Times measured on the machine above.
 
 | Stage | Command | Time |
 |---|---|---|
-| Set up the environment | `uv venv` + `uv pip install` (quick start) | 1 to 3 min (includes torch for BART, about 2 GB) |
+| Set up the environment | `uv venv` + `uv pip install` (quick start) | about 5 s here from an empty cache: a 900 MB download, mostly torch for BART (about 3 GB on Linux x86_64), so longer on a slow connection |
 | Download + check data (first run only) | runs automatically, or `.venv/bin/python 5_data/ami/fetch_data.py` | 10 to 30 s (network) |
 | Baseline, smoke (3 meetings × 20 seeds) | `.venv/bin/python 2_summarization/run.py --model textrank --split smoke` | about 3 s |
 | **Baseline, eval (20 test meetings × 20 seeds)** | `.venv/bin/python 2_summarization/run.py --model textrank --split eval` | about 70 s |
@@ -115,7 +116,7 @@ Useful flags: `--seeds 5` (5 seeds), `--seed 7` (exactly one seed), `--no-log`. 
 | **Split** | Rule in [`5_data/ami/split.py`](5_data/ami/split.py), result in [`ami_scenario_split.json`](5_data/ami/ami_scenario_split.json). Every run rebuilds the split, compares it with the file, and checks that no person or meeting is in two splits. Each log line records the split file's SHA-256 (`split_file_sha256`). |
 | **Results log** | [`6_evaluation/summarization/results/results_log.jsonl`](6_evaluation/summarization/results/results_log.jsonl), one line per run: the scores (mean, std and per seed), `commit` + `uncommitted_changes`, `config` + `config_hash`, `data_hash`, `split_file_sha256`, the meetings, the seeds, Python, packages and hardware. `results/runs/<run_id>.json` has the same plus every summary written. |
 
-The current baseline is the last two lines of the log (smoke and eval). They were made at commit `a43e185` with no uncommitted changes, `data_hash 1ce0450de10c…`, `config_hash f92e56918eb9`, on arm64 macOS with 14 CPUs and Python 3.12.16.
+The current baseline is lines 5 and 6 of the log (smoke and eval, 20 seeds). They were made at commit `a43e185` with no uncommitted changes, `data_hash 1ce0450de10c…`, `config_hash f92e56918eb9`, on arm64 macOS with 14 CPUs and Python 3.12.16. Line 7 is the eval split again with one seed (42), at commit `fb7907f` (same code), and has the same scores. Its `config_hash` (`692b39f49764`) differs only because the seed list is part of the config.
 
 ## 7. Meeting bot (optional demo)
 
