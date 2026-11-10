@@ -69,6 +69,9 @@ seeds: 20 (42..61)
 
 mean over 20 seeds:  rouge1 0.26 (±0.0)  rouge2 0.0399 (±0.0)  rougeL 0.1498 (±0.0)  rougeSU4 0.0757 (±0.0)
 seconds_per_meeting 0.04  identical_across_seeds True
+seed variation: Nothing changed: all 20 seeds produced identical summaries for all 3 meetings, so every metric has std 0.
+  rouge1       std 0.0  min 0.26 (seed 42)  max 0.26 (seed 42)  range 0.0
+  ... (the same line for rouge2, rougeL, rougeSU4)
 logged <run_id>  commit <current commit>  data 1ce0450de10c  config f92e56918eb9
 ```
 
@@ -93,12 +96,12 @@ From the repo root, after the quick start. Times measured on the machine above.
 
 | Stage | Command | Time |
 |---|---|---|
-| Set up the environment | `uv venv` + `uv pip install` (quick start) | under 10 s |
+| Set up the environment | `uv venv` + `uv pip install` (quick start) | 1 to 3 min (includes torch for BART, about 2 GB) |
 | Download + check data (first run only) | runs automatically, or `.venv/bin/python 5_data/ami/fetch_data.py` | 10 to 30 s (network) |
 | Baseline, smoke (3 meetings × 20 seeds) | `.venv/bin/python 2_summarization/run.py --model textrank --split smoke` | about 3 s |
 | **Baseline, eval (20 test meetings × 20 seeds)** | `.venv/bin/python 2_summarization/run.py --model textrank --split eval` | about 70 s |
 | Baseline, dev (20 meetings × 20 seeds) | `.venv/bin/python 2_summarization/run.py --model textrank --split dev` | about 65 s |
-| Optional: BART + BERTScore | `uv pip install --python .venv/bin/python -r requirements-bart.txt` then `.venv/bin/python 2_summarization/run.py --model bart --split smoke --seeds 3 --bertscore` | about 8 min the first time: a one-time download of about 4.5 GB of models, then about 30 s per meeting per seed on CPU |
+| Optional: BART + BERTScore | `.venv/bin/python 2_summarization/run.py --model bart --split smoke --seeds 3 --bertscore` | about 8 min the first time: a one-time download of about 4.5 GB of models, then about 30 s per meeting per seed on CPU |
 
 Useful flags: `--seeds 5` (5 seeds), `--seed 7` (exactly one seed), `--no-log`. Checks on their own: `.venv/bin/python 5_data/ami/fetch_data.py --verify` (data) and `.venv/bin/python 5_data/ami/split.py --check` (split). More in [docs/SUMMARIZATION.md](docs/SUMMARIZATION.md).
 
@@ -106,8 +109,8 @@ Useful flags: `--seeds 5` (5 seeds), `--seed 7` (exactly one seed), `--no-log`. 
 
 | What | Where |
 |---|---|
-| **Environment** | [`.python-version`](.python-version) (3.12), [`requirements.txt`](requirements.txt) (baseline packages pinned with `==`), [`requirements-bart.txt`](requirements-bart.txt) (optional BART extra, pinned). Each run also logs its Python version, package versions and hardware. |
-| **Seeds** | Top of [`2_summarization/run.py`](2_summarization/run.py): `N_SEEDS = 20`, `FIRST_SEED = 42`. Python `random`, NumPy and torch are seeded again for every seed, and `PYTHONHASHSEED` is fixed. |
+| **Environment** | [`.python-version`](.python-version) (3.12), [`requirements.txt`](requirements.txt) (one file: ingestion, baseline, and BART + BERTScore, summarization packages pinned with `==`). Each run also logs its Python version, package versions and hardware. |
+| **Seeds** | Top of [`2_summarization/run.py`](2_summarization/run.py): `N_SEEDS = 20`, `FIRST_SEED = 42`. Python `random`, NumPy and torch are seeded again for every seed, and `PYTHONHASHSEED` is fixed. Each run records what changed between seeds and why (`seed_variation`, see [docs/SUMMARIZATION.md](docs/SUMMARIZATION.md#22-seeds)). |
 | **Data version + hashes** | [`5_data/ami/MANIFEST.json`](5_data/ami/MANIFEST.json): URL, retrieval date, zip SHA-256 `b56e5bab…`, `data_hash` `1ce0450de10c…`. Checked on every run by [`fetch_data.py`](5_data/ami/fetch_data.py). |
 | **Split** | Rule in [`5_data/ami/split.py`](5_data/ami/split.py), result in [`ami_scenario_split.json`](5_data/ami/ami_scenario_split.json). Every run rebuilds the split, compares it with the file, and checks that no person or meeting is in two splits. Each log line records the split file's SHA-256 (`split_file_sha256`). |
 | **Results log** | [`6_evaluation/summarization/results/results_log.jsonl`](6_evaluation/summarization/results/results_log.jsonl), one line per run: the scores (mean, std and per seed), `commit` + `uncommitted_changes`, `config` + `config_hash`, `data_hash`, `split_file_sha256`, the meetings, the seeds, Python, packages and hardware. `results/runs/<run_id>.json` has the same plus every summary written. |
