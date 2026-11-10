@@ -39,9 +39,11 @@ TextRank has no randomness, so every seed gives the same summary (std 0). The se
 
 ## 4. Quick start: fresh clone to the smoke-test number
 
-**You need:** macOS or Linux, `git`, internet access, about 1.1 GB of disk, and [uv](https://docs.astral.sh/uv/getting-started/installation/) (check with `uv --version`; on macOS `brew install uv`). uv downloads **Python 3.12** for you if you don't have it. Any 3.12.x works; the logged runs used 3.12.16. **No GPU, no accounts, no API keys.**
-Tested on macOS 27 (Apple M5) with uv 0.12. Windows is untested: use Git Bash and `.venv/Scripts/python` in place of `.venv/bin/python`.
+**You need:** macOS, Linux or Windows, `git`, internet access, about 1.1 GB of disk, and [uv](https://docs.astral.sh/uv/getting-started/installation/) (check with `uv --version`). Install uv with `brew install uv` (macOS), `curl -LsSf https://astral.sh/uv/install.sh | sh` (Linux) or `winget install astral-sh.uv` (Windows, then open a new terminal). uv downloads **Python 3.12** for you if you don't have it. Any 3.12.x works; the logged runs used 3.12.16. **No GPU, no accounts, no API keys.**
+Tested on macOS 27 (Apple M5) with uv 0.12, and on Windows 11 (PowerShell, Python 3.12.10): same scores and hashes.
 `requirements.txt` includes torch for the optional BART model, so the install downloads about 900 MB on macOS. On Linux x86_64 it's about 3 GB, because torch also pulls in NVIDIA GPU libraries, which `requirements.txt` doesn't pin and the baseline doesn't use.
+
+**macOS / Linux** (Terminal):
 
 ```bash
 git clone https://github.com/Jithin-Veeragandham/liveminutes.git
@@ -50,12 +52,30 @@ uv venv --python 3.12 .venv
 uv pip install --python .venv/bin/python -r requirements.txt
 ```
 
-There's no need to activate the environment (uv suggests `source .venv/bin/activate`): every command below calls `.venv/bin/python` directly.
+**Windows** (PowerShell):
+
+```powershell
+git clone https://github.com/Jithin-Veeragandham/liveminutes.git
+cd liveminutes
+uv venv --python 3.12 .venv
+uv pip install --python .venv\Scripts\python.exe -r requirements.txt
+```
+
+The only difference is where the environment keeps Python: `.venv/bin/python` on macOS/Linux, `.venv\Scripts\python` on Windows. **Every command in this README uses `.venv/bin/python`: on Windows, type `.venv\Scripts\python` instead.** There's no need to activate the environment (uv suggests it): every command calls that Python directly. On Windows, keep the repo outside a OneDrive folder; installs there are much slower.
 
 **The one command** (runs the baseline on the smoke-test subset):
 
+macOS / Linux:
+
 ```bash
 .venv/bin/python 2_summarization/run.py --model textrank --split smoke
+```
+
+Windows (PowerShell):
+
+```powershell
+$env:PYTHONHASHSEED = "42"
+.venv\Scripts\python 2_summarization\run.py --model textrank --split smoke
 ```
 
 First run: 30 to 40 s, mostly the 23 MB download. Later runs: about 3 s. It downloads AMI and checks its hashes, checks the split, then summarizes the 3 smoke meetings once per seed (20 seeds) and scores them. You should see:
@@ -80,20 +100,29 @@ logged <run_id>  commit <current commit>  data 1ce0450de10c  config f92e56918eb9
 
 **Run it again:** you get the same numbers (no download this time). To compare your runs with the committed ones, print every smoke line in the results log:
 
+macOS / Linux:
+
 ```bash
 grep '"split": "smoke"' 6_evaluation/summarization/results/results_log.jsonl | .venv/bin/python -c "import sys, json; [print(d['run_id'], d['commit'][:7], d['metrics_mean']) for d in map(json.loads, sys.stdin)]"
+```
+
+Windows (PowerShell):
+
+```powershell
+.venv\Scripts\python -c "import json; [print(d['run_id'], d['commit'][:7], d['metrics_mean']) for d in map(json.loads, open('6_evaluation/summarization/results/results_log.jsonl')) if d['split'] == 'smoke']"
 ```
 
 Good to know:
 - **Each run adds a line to `results_log.jsonl` and a file in `results/runs/`**, which are committed files, so `git status` shows them afterwards. Add `--no-log` for a run you don't want to keep. To undo every run you haven't committed:
   `git checkout -- 6_evaluation/summarization/results/results_log.jsonl && git clean -f 6_evaluation/summarization/results/runs/`
   (`git clean` there only deletes run files that aren't committed.)
-- The script **restarts itself once** at the start, to fix Python's hash seed (`PYTHONHASHSEED`). That's expected.
+- The script **restarts itself once** at the start, to fix Python's hash seed (`PYTHONHASHSEED`). That's expected. On Windows a restart starts a new process, so its output can appear after the prompt returns; setting `$env:PYTHONHASHSEED = "42"` first (as above) avoids the restart. It lasts until you close that PowerShell window.
+- Undo command on Windows: the same two `git` commands, run one after the other (Windows PowerShell has no `&&`).
 - If the download fails, check you can reach `groups.inf.ed.ac.uk`. If you delete `5_data/raw/ami/`, the next run downloads the same files again and checks them against the manifest.
 
 ## 5. Full run
 
-From the repo root, after the quick start. Times measured on the machine above.
+From the repo root, after the quick start. Times measured on the macOS machine above. **Windows:** type `.venv\Scripts\python` in place of `.venv/bin/python` (and `\` in paths is fine too).
 
 | Stage | Command | Time |
 |---|---|---|
@@ -151,6 +180,7 @@ curl http://127.0.0.1:8776/health          # -> ok
 **Demo:** open http://localhost:8776/live, go to **Send bot**, paste a Google Meet link and press **Send bot**. Admit "LiveMinutes" from the lobby (it takes 20 to 60 s), and everyone types `yes` in the chat. The transcript then appears live. **Stop:** `dc down` (keeps the database and transcripts). **Start again later:** `dc up -d`.
 
 Notes:
+- **Windows:** run this whole section in **Git Bash** (installed with Git for Windows), not PowerShell: the commands then work exactly as written. In PowerShell, `bash` starts WSL instead of Git Bash, and `>` writes files in UTF-16, which breaks `attendee/.env`. Start Docker Desktop first.
 - Run the scripts with `bash` (they aren't marked executable in git).
 - The `grep` line lets `make_account.sh` write the key on macOS. Its `sed -i` only works with GNU sed.
 - Port 8000 (Attendee) must be free.
