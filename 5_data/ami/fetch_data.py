@@ -31,10 +31,11 @@ def sha256_file(path):
 
 
 # One hash for the whole extracted dataset: SHA-256 over every used file's path and hash, in sorted order.
+# Paths are written with "/" on every OS, so Windows gets the same hash as macOS/Linux.
 def data_hash(root=ami_settings.AMI_DIR):
     h = hashlib.sha256()
-    for path in sorted(used_files(root)):
-        h.update(f"{os.path.relpath(path, root)}  {sha256_file(path)}\n".encode())
+    for rel in sorted(os.path.relpath(path, root).replace(os.sep, "/") for path in used_files(root)):
+        h.update(f"{rel}  {sha256_file(os.path.join(root, rel))}\n".encode())
     return h.hexdigest()
 
 
