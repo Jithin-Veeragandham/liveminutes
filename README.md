@@ -169,10 +169,11 @@ dc exec -T attendee-app-local python manage.py migrate
 bash make_account.sh you@example.com      # writes ATTENDEE_API_KEY to ../.env, prints a local login
 ```
 
-Then open `../.env` in an editor and set `GROQ_API_KEY=gsk_...` (your key). Start the bridge and check:
+Then open `../.env` in an editor and set `GROQ_API_KEY=gsk_...` (your key). Start everything and check:
 
 ```bash
-dc up -d liveminutes-bridge
+dc up -d                                   # starts all 6 services, including postgres and redis
+curl -s -o /dev/null -w "%{http_code}\n" http://localhost:8000/accounts/login/    # -> 200 (can take 30 to 60 s)
 dc ps                                      # 6 services Up; liveminutes-bridge (healthy) after about 30 s
 curl http://127.0.0.1:8776/health          # -> ok
 ```
@@ -180,11 +181,12 @@ curl http://127.0.0.1:8776/health          # -> ok
 **Demo:** open http://localhost:8776/live, go to **Send bot**, paste a Google Meet link and press **Send bot**. Admit "LiveMinutes" from the lobby (it takes 20 to 60 s), and everyone types `yes` in the chat. The transcript then appears live. **Stop:** `dc down` (keeps the database and transcripts). **Start again later:** `dc up -d`.
 
 Notes:
-- **Windows:** run this whole section in **Git Bash** (installed with Git for Windows), not PowerShell: the commands then work exactly as written. In PowerShell, `bash` starts WSL instead of Git Bash, and `>` writes files in UTF-16, which breaks `attendee/.env`. Start Docker Desktop first.
+- **Windows:** run this whole section in **Git Bash** (installed with Git for Windows), not PowerShell: the commands then work exactly as written, including `dc up -d`, the `curl` checks and `dc restart attendee-app-local`. In PowerShell, `bash` starts WSL instead of Git Bash, and `>` writes files in UTF-16, which breaks `attendee/.env`. Start Docker Desktop first.
 - Run the scripts with `bash` (they aren't marked executable in git).
 - The repo's `.env` must exist before the first `dc` command: `compose.local.yaml` loads it for the bridge, and `docker compose exec` (the `migrate` step) fails with `env file .../.env not found` without it.
 - The `grep` line lets `make_account.sh` write the key on macOS. Its `sed -i` only works with GNU sed.
 - Port 8000 (Attendee) must be free.
+- If the page says 'Attendee is not reachable', run `dc restart attendee-app-local` and wait for 200 again. It happens if the database wasn't up when Attendee started.
 - Attendee's database volume is shared by every clone on a computer. If you set Attendee up before in another clone, copy that clone's `attendee/.env` here instead of running `init_env.py`.
 
 Full guide (consent rules, settings, troubleshooting): [docs/INGESTION.md](docs/INGESTION.md). Code comments that say "README section 1.x" mean section 1.x of that file.
