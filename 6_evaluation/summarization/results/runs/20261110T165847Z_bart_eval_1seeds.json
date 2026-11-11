@@ -1,0 +1,305 @@
+{
+  "run_id": "20261110T165847Z_bart_eval_1seeds",
+  "commit": "22e7fdd26fc929e005cdb4632c7c5114a22a4edd",
+  "uncommitted_changes": [],
+  "data_hash": "1ce0450de10c44aa3d794865f7b53f50eab8a94b0027899c51d5dd2e6797c048",
+  "split_file_sha256": "09e6d3ee32281507391f23bb3bda6d6d98bacac9979e68cbd173702d4e1068c0",
+  "config": {
+    "model": {
+      "model": "philschmid/bart-large-cnn-samsum",
+      "revision": "e49b3d60d923f12db22bdd363356f1a4c68532ad",
+      "window_seconds": 60,
+      "num_beams": 4,
+      "device": "cpu"
+    },
+    "seeds": [
+      42
+    ],
+    "pythonhashseed": 42,
+    "bertscore": {
+      "model": "FacebookAI/roberta-large",
+      "revision": "722cf37b1afa9454edce342e7895e588b6ff1d59",
+      "rescale_with_baseline": false
+    }
+  },
+  "config_hash": "5af15f92b426",
+  "model": "bart",
+  "model_version": "philschmid/bart-large-cnn-samsum@e49b3d60d923",
+  "split": "eval",
+  "meetings": [
+    "ES2004a",
+    "ES2004b",
+    "ES2004c",
+    "ES2004d",
+    "ES2014a",
+    "ES2014b",
+    "ES2014c",
+    "ES2014d",
+    "IS1009a",
+    "IS1009b",
+    "IS1009c",
+    "IS1009d",
+    "TS3003a",
+    "TS3003b",
+    "TS3003c",
+    "TS3003d",
+    "TS3007a",
+    "TS3007b",
+    "TS3007c",
+    "TS3007d"
+  ],
+  "meetings_hash": "cc86e00bd353",
+  "n_seeds": 1,
+  "metrics_mean": {
+    "rouge1": 0.2991,
+    "rouge2": 0.08,
+    "rougeL": 0.1769,
+    "rougeSU4": 0.101,
+    "bertscore_f1": 0.8536
+  },
+  "metrics_std": {
+    "rouge1": 0.0,
+    "rouge2": 0.0,
+    "rougeL": 0.0,
+    "rougeSU4": 0.0,
+    "bertscore_f1": 0.0
+  },
+  "metrics_per_seed": {
+    "42": {
+      "rouge1": 0.2991,
+      "rouge2": 0.08,
+      "rougeL": 0.1769,
+      "rougeSU4": 0.101,
+      "bertscore_f1": 0.8536
+    }
+  },
+  "identical_across_seeds": true,
+  "seed_variation": {
+    "verdict": "Only one seed was run, so there is no seed variation to measure.",
+    "why": "BART decodes with beam search (do_sample=False), so on the same hardware it is deterministic too. Differences between seeds can only come from nondeterministic float math (e.g. GPU kernels, thread scheduling), which can flip a beam choice and change a few words. Each seed sets Python random, NumPy and torch. PYTHONHASHSEED is fixed to the FIRST seed for the whole run.",
+    "seeds": [
+      42
+    ],
+    "metrics": {
+      "rouge1": {
+        "mean": 0.2991,
+        "std": 0.0,
+        "min": 0.2991,
+        "min_seed": 42,
+        "max": 0.2991,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rouge2": {
+        "mean": 0.08,
+        "std": 0.0,
+        "min": 0.08,
+        "min_seed": 42,
+        "max": 0.08,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rougeL": {
+        "mean": 0.1769,
+        "std": 0.0,
+        "min": 0.1769,
+        "min_seed": 42,
+        "max": 0.1769,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rougeSU4": {
+        "mean": 0.101,
+        "std": 0.0,
+        "min": 0.101,
+        "min_seed": 42,
+        "max": 0.101,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "bertscore_f1": {
+        "mean": 0.8536,
+        "std": 0.0,
+        "min": 0.8536,
+        "min_seed": 42,
+        "max": 0.8536,
+        "max_seed": 42,
+        "range": 0.0
+      }
+    },
+    "meetings_changed": 0,
+    "meetings_total": 20,
+    "per_meeting": {}
+  },
+  "seconds_per_meeting": 117.819,
+  "python": "3.12.16",
+  "packages": {
+    "summa": "1.2.0",
+    "rouge-score": "0.1.2",
+    "numpy": "2.5.4",
+    "torch": "2.14.1",
+    "transformers": "5.20.2",
+    "bert-score": "0.3.13"
+  },
+  "hardware": {
+    "machine": "arm64",
+    "system": "macOS-14.8.3-arm64-arm-64bit",
+    "cpus": 14
+  },
+  "per_seed_runs": {
+    "42": {
+      "scores": {
+        "rouge1": 0.2991,
+        "rouge2": 0.08,
+        "rougeL": 0.1769,
+        "rougeSU4": 0.101,
+        "bertscore_f1": 0.8536
+      },
+      "per_meeting": {
+        "ES2004a": {
+          "rouge1": 0.3434343434343435,
+          "rouge2": 0.10204081632653061,
+          "rougeL": 0.20202020202020204,
+          "rougeSU4": 0.10017271157167529
+        },
+        "ES2004b": {
+          "rouge1": 0.2932330827067669,
+          "rouge2": 0.053030303030303025,
+          "rougeL": 0.12781954887218047,
+          "rougeSU4": 0.07790549169859515
+        },
+        "ES2004c": {
+          "rouge1": 0.31226765799256506,
+          "rouge2": 0.059925093632958816,
+          "rougeL": 0.17100371747211895,
+          "rougeSU4": 0.10858585858585858
+        },
+        "ES2004d": {
+          "rouge1": 0.31963470319634707,
+          "rouge2": 0.10138248847926268,
+          "rougeL": 0.2374429223744292,
+          "rougeSU4": 0.12616822429906543
+        },
+        "ES2014a": {
+          "rouge1": 0.4043715846994535,
+          "rouge2": 0.143646408839779,
+          "rougeL": 0.2076502732240437,
+          "rougeSU4": 0.13108614232209737
+        },
+        "ES2014b": {
+          "rouge1": 0.35842293906810035,
+          "rouge2": 0.08664259927797834,
+          "rougeL": 0.1863799283154122,
+          "rougeSU4": 0.12287104622871046
+        },
+        "ES2014c": {
+          "rouge1": 0.2650602409638554,
+          "rouge2": 0.10526315789473685,
+          "rougeL": 0.15261044176706826,
+          "rougeSU4": 0.10109289617486339
+        },
+        "ES2014d": {
+          "rouge1": 0.24615384615384617,
+          "rouge2": 0.031007751937984496,
+          "rougeL": 0.14615384615384616,
+          "rougeSU4": 0.08496732026143791
+        },
+        "IS1009a": {
+          "rouge1": 0.2821576763485477,
+          "rouge2": 0.09205020920502091,
+          "rougeL": 0.14937759336099585,
+          "rougeSU4": 0.11299435028248588
+        },
+        "IS1009b": {
+          "rouge1": 0.23430962343096234,
+          "rouge2": 0.05063291139240506,
+          "rougeL": 0.1589958158995816,
+          "rougeSU4": 0.06837606837606837
+        },
+        "IS1009c": {
+          "rouge1": 0.30039525691699603,
+          "rouge2": 0.1195219123505976,
+          "rougeL": 0.1818181818181818,
+          "rougeSU4": 0.1088709677419355
+        },
+        "IS1009d": {
+          "rouge1": 0.24669603524229075,
+          "rouge2": 0.09777777777777778,
+          "rougeL": 0.18502202643171808,
+          "rougeSU4": 0.09609609609609608
+        },
+        "TS3003a": {
+          "rouge1": 0.2966507177033493,
+          "rouge2": 0.0676328502415459,
+          "rougeL": 0.21052631578947367,
+          "rougeSU4": 0.08823529411764706
+        },
+        "TS3003b": {
+          "rouge1": 0.40322580645161293,
+          "rouge2": 0.08130081300813008,
+          "rougeL": 0.22580645161290325,
+          "rougeSU4": 0.14266117969821673
+        },
+        "TS3003c": {
+          "rouge1": 0.3141361256544502,
+          "rouge2": 0.08465608465608465,
+          "rougeL": 0.19895287958115182,
+          "rougeSU4": 0.10573476702508962
+        },
+        "TS3003d": {
+          "rouge1": 0.2117647058823529,
+          "rouge2": 0.03952569169960474,
+          "rougeL": 0.12549019607843137,
+          "rougeSU4": 0.06666666666666667
+        },
+        "TS3007a": {
+          "rouge1": 0.34309623430962344,
+          "rouge2": 0.09282700421940926,
+          "rougeL": 0.20920502092050208,
+          "rougeSU4": 0.11253561253561253
+        },
+        "TS3007b": {
+          "rouge1": 0.2509505703422053,
+          "rouge2": 0.04597701149425287,
+          "rougeL": 0.1520912547528517,
+          "rougeSU4": 0.08656330749354005
+        },
+        "TS3007c": {
+          "rouge1": 0.2813688212927757,
+          "rouge2": 0.05363984674329502,
+          "rougeL": 0.1520912547528517,
+          "rougeSU4": 0.082687338501292
+        },
+        "TS3007d": {
+          "rouge1": 0.27499999999999997,
+          "rouge2": 0.09243697478991597,
+          "rougeL": 0.15833333333333333,
+          "rougeSU4": 0.09503546099290781
+        }
+      },
+      "predictions": {
+        "ES2004a": "Sarah and Project Manager are meeting for the first time. They are developing a remote control. They have to do some training, talk about the project plan and discuss their own ideas. They practice drawing their favourite animals on the white board. The pen is worth one point four Euro. The production cost is twelve fifty pounds and profit aim is fifty million Euros in the first year.",
+        "ES2004b": "Project Manager and Marketing Expert are having their second meeting today. They decided upon a universal control, one handset for all, T_V_ and video equipment. Industrial Designer will present three presentations on a flip-open design, reducing the size of the control and an electronic panel for further features like programming. According to Marketing Expert's market research, 80% of users would spend more money for a nicer looking remote control.",
+        "ES2004c": "Project Manager and Industrial Designer are having a conceptual design meeting. Project Manager wants to create a remote control that can be clipped to a pocket or worn on the person's pocket. Marketing Expert recommends a plastic remote control with a flip top and a display on the top side and rubberised buttons on the bottom side. The division has developed a new speech recognition feature and they will check the financial feasibility of incorporating it.",
+        "ES2004d": "Project Manager, Marketing Expert and User Interface Designer switched on the kinetic charger. Marketing Expert wants to offer the voice recognition initially to business class customers. Project Manager thinks the company's costs are below budget and recommends that the budget be increased. The production cost of the phone was higher than expected. The project manager wants to use a special colour.",
+        "ES2014a": "Project Manager, Marketing Expert, User Interface Designer, Industrial Designer, Project Manager, Alastair and the project leader are meeting to discuss the need for tool training. Project Manager wants to come up with a new remote control device to be more user friendly and trendier. The project is divided into three parts: functional design, conceptional design and detailed design.",
+        "ES2014b": "Project Manager, Industrial Designer and Marketing Expert are meeting to discuss the various options for a new project. They have to prepare a PowerPoint presentation each. The components of a remote control are an energy source, a battery supply, a sender and a receiver. Marketing Expert recommends a high-tech design with fewer buttons and a menu for other functions on the remote control. Project Manager wants to get the project finished within the short time window of 4 hours.",
+        "ES2014c": "Project Manager will give Industrial Designer a summary of the last conceptual design meeting. Industrial Designer has an integrated push button, a scroll wheel, solar cells and buttons. Marketing Expert suggests a circuit board for the scroll wheel. Project Manager wants to focus on the rubber buttons and not on the scroll buttons.",
+        "ES2014d": "User Interface Designer and Industrial Designer have made a prototype of their product. Marketing Expert will have a look at it. The production cost is expected to be under 12.5 Euros. Project Manager will plug the kinetic energy source into the back of the curved case. He wants to buy a voice recognition remote control. The wife of Project Manager is a computer tutor.",
+        "IS1009a": "Marketing Expert, Francina, Eileen, Industrial Designer, Jeanne-Oui and Betty are going to meet with Project Manager to discuss the presentation. Project Manager and others will design a new remote control. The profit aim for the company is fifty million Euro. The production cost should be less than twelve fifty Euro.",
+        "IS1009b": "Marketing Expert wants to go to market by September. The project costs twenty five Euros. Marketing Expert, Project Manager and Industrial Designer are the next people to be chosen for the project. Industrial Designer explains how a remote controller is designed for a single device. Project Manager wants to design one remote for each person.",
+        "IS1009c": "Project Manager is going over the minutes of the last meeting. Marketing manager suggests using a slogan and infra-red bits. User Interface Designer would like to have a speech recognition feature in his remote control. Industrial Designer wants to make a rechargeable battery to cut the cost of remote controllers. Jana and Francine have to work together on a prototype using modelling clay.",
+        "IS1009d": "Project Manager has to redo the meetings from the minutes from the last meeting. Project Manager, User Interface Designer and Industrial Designer have made a prototype of the project. Marketing Expert gave Be Betsy a one and Project Manager a four. They have a final meeting in 40 minutes to discuss the project evaluation.",
+        "TS3003a": "Project Manager is working for Real Reaction, a company in electronics. Project Manager's company is going to create a new remote control. The functional design is the first. The Industrial Designer will work on the working design, components design and a bit of the look and feel design. The User Interface Designer will do the technical function design, user interface concept and user interface design. Marketing Expert and Project Manager have to work together to reach their aims.",
+        "TS3003b": "Project Manager and his team are going into the functional design phase. Freek Van Ponnen is the marketing expert. 70% of people think their remote control is ugly and 80% would spend more money on a fancy-looking one. Channel selection and volume selection are the most important functions on a remote control. The power button got a nine on a scale of one to ten for relevancy. 60% of the market consists of users between the ages of 16 and 40. Marketing Expert suggests the audio sign and the L_C_D screen.",
+        "TS3003c": "Project Manager and Marketing Expert are going to present to 60 to 80-year-old customers. Marketing Expert has done some market research. The older people prefer dark colours, recognisable shapes and familiar material. The docking station and small screen are the main points of interest. The Industrial Designer and User Interface Designer will work together on this one.",
+        "TS3003d": "Marketing Expert got stuck in the traffic on his way to the fourth and last meeting with Project Manager. They are going to discuss the final design and evaluation of the product and the project. Project Manager and Marketing Expert want to buy a rechargeable remote control. The project is expected to be worth $15.15 million.",
+        "TS3007a": "Project Manager informs Marketing Expert and Project Manager that they are being watched by Big Brother. Project Manager explains to Marketing Expert how to set the camera settings so they don't have their laptops in front of the cameras. Marketing Expert, Project Manager and Industrial Designer are going to build a remote control car. The production cost may be twenty and a half Euro. Next meeting of Project Manager, User Interface Designer and Industrial designer starts in 30 minutes.",
+        "TS3007b": "Industrial Designer dissected the current remote controls and created a scheme about how they are organised. Marketing Expert recommends targeting the audience from 16 to 40 to get the most revenue. User Interface Designer advises Industrial Designer to use big clear buttons and more advanced options on the remote. Project Manager has updated the code and put it in the shared folder.",
+        "TS3007c": "Project Manager is going to the conceptual design meeting for Real Reaction. Industrial Designer wants to make a kinetic remote control for Project Manager. Marketing Expert went to Paris and Milan for some trend-watching. Marketing expert recommends building games like Snake or Tetris to amuse younger users. Project Manager thinks the parental control is a good function to put in the remote.",
+        "TS3007d": "Industrial Designer and Project Manager have to prepare a presentation and an evaluation of the SMARTboard. Marketing Expert, Project Manager and Industrial Designer are going to vote on a TV remote control design. The advanced chip on print costs three Euro. Project Manager's project is evaluated and the costs are within the budget."
+      },
+      "seconds": 2356.3886850840063
+    }
+  }
+}

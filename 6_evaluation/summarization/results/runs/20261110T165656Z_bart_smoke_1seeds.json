@@ -1,0 +1,169 @@
+{
+  "run_id": "20261110T165656Z_bart_smoke_1seeds",
+  "commit": "22e7fdd26fc929e005cdb4632c7c5114a22a4edd",
+  "uncommitted_changes": [],
+  "data_hash": "1ce0450de10c44aa3d794865f7b53f50eab8a94b0027899c51d5dd2e6797c048",
+  "split_file_sha256": "09e6d3ee32281507391f23bb3bda6d6d98bacac9979e68cbd173702d4e1068c0",
+  "config": {
+    "model": {
+      "model": "philschmid/bart-large-cnn-samsum",
+      "revision": "e49b3d60d923f12db22bdd363356f1a4c68532ad",
+      "window_seconds": 60,
+      "num_beams": 4,
+      "device": "cpu"
+    },
+    "seeds": [
+      42
+    ],
+    "pythonhashseed": 42,
+    "bertscore": {
+      "model": "FacebookAI/roberta-large",
+      "revision": "722cf37b1afa9454edce342e7895e588b6ff1d59",
+      "rescale_with_baseline": false
+    }
+  },
+  "config_hash": "5af15f92b426",
+  "model": "bart",
+  "model_version": "philschmid/bart-large-cnn-samsum@e49b3d60d923",
+  "split": "smoke",
+  "meetings": [
+    "ES2003a",
+    "IS1008a",
+    "TS3004a"
+  ],
+  "meetings_hash": "d395181e3eb5",
+  "n_seeds": 1,
+  "metrics_mean": {
+    "rouge1": 0.2689,
+    "rouge2": 0.0522,
+    "rougeL": 0.1616,
+    "rougeSU4": 0.0897,
+    "bertscore_f1": 0.8532
+  },
+  "metrics_std": {
+    "rouge1": 0.0,
+    "rouge2": 0.0,
+    "rougeL": 0.0,
+    "rougeSU4": 0.0,
+    "bertscore_f1": 0.0
+  },
+  "metrics_per_seed": {
+    "42": {
+      "rouge1": 0.2689,
+      "rouge2": 0.0522,
+      "rougeL": 0.1616,
+      "rougeSU4": 0.0897,
+      "bertscore_f1": 0.8532
+    }
+  },
+  "identical_across_seeds": true,
+  "seed_variation": {
+    "verdict": "Only one seed was run, so there is no seed variation to measure.",
+    "why": "BART decodes with beam search (do_sample=False), so on the same hardware it is deterministic too. Differences between seeds can only come from nondeterministic float math (e.g. GPU kernels, thread scheduling), which can flip a beam choice and change a few words. Each seed sets Python random, NumPy and torch. PYTHONHASHSEED is fixed to the FIRST seed for the whole run.",
+    "seeds": [
+      42
+    ],
+    "metrics": {
+      "rouge1": {
+        "mean": 0.2689,
+        "std": 0.0,
+        "min": 0.2689,
+        "min_seed": 42,
+        "max": 0.2689,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rouge2": {
+        "mean": 0.0522,
+        "std": 0.0,
+        "min": 0.0522,
+        "min_seed": 42,
+        "max": 0.0522,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rougeL": {
+        "mean": 0.1616,
+        "std": 0.0,
+        "min": 0.1616,
+        "min_seed": 42,
+        "max": 0.1616,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rougeSU4": {
+        "mean": 0.0897,
+        "std": 0.0,
+        "min": 0.0897,
+        "min_seed": 42,
+        "max": 0.0897,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "bertscore_f1": {
+        "mean": 0.8532,
+        "std": 0.0,
+        "min": 0.8532,
+        "min_seed": 42,
+        "max": 0.8532,
+        "max_seed": 42,
+        "range": 0.0
+      }
+    },
+    "meetings_changed": 0,
+    "meetings_total": 3,
+    "per_meeting": {}
+  },
+  "seconds_per_meeting": 74.816,
+  "python": "3.12.16",
+  "packages": {
+    "summa": "1.2.0",
+    "rouge-score": "0.1.2",
+    "numpy": "2.5.4",
+    "torch": "2.14.1",
+    "transformers": "5.20.2",
+    "bert-score": "0.3.13"
+  },
+  "hardware": {
+    "machine": "arm64",
+    "system": "macOS-14.8.3-arm64-arm-64bit",
+    "cpus": 14
+  },
+  "per_seed_runs": {
+    "42": {
+      "scores": {
+        "rouge1": 0.2689,
+        "rouge2": 0.0522,
+        "rougeL": 0.1616,
+        "rougeSU4": 0.0897,
+        "bertscore_f1": 0.8532
+      },
+      "per_meeting": {
+        "ES2003a": {
+          "rouge1": 0.21935483870967742,
+          "rouge2": 0.0392156862745098,
+          "rougeL": 0.14193548387096772,
+          "rougeSU4": 0.05777777777777778
+        },
+        "IS1008a": {
+          "rouge1": 0.3069306930693069,
+          "rouge2": 0.09000000000000001,
+          "rougeL": 0.19801980198019803,
+          "rougeSU4": 0.14043993231810492
+        },
+        "TS3004a": {
+          "rouge1": 0.28054298642533937,
+          "rouge2": 0.0273972602739726,
+          "rougeL": 0.14479638009049775,
+          "rougeSU4": 0.07098765432098765
+        }
+      },
+      "predictions": {
+        "ES2003a": "Project Manager, Adam Duguid, Marketing Expert, Tarik Rahman, Dave Cochrane and User Interface Designer are meeting today to discuss the design of a new remote control. Marketing Expert will draw his favourite animal for Project Manager Ebenezer. Tarik will clip the lapel mic to his belt. Industrial Designer is supposed to clip it and it will follow him. Project Manager will write up what they've done.",
+        "IS1008a": "Shrida Daseri is a project manager for a new project. Agnes is a user interface designer and Christine is a Marketing Expert. The project is to improve the sales and the accounting. Marketing Expert wants to make a remote control for the new TV set. Industrial Designer didn't understand the project goal.",
+        "TS3004a": "Project Manager wants to sell a remote control for about twenty five Euros and make a profit of fifty million Euros. Marketing Expert and Project Manager are looking for a control that can be used everywhere in your room. They need to do a lot of testing before they can make a special remote control."
+      },
+      "seconds": 224.44727808400057
+    }
+  }
+}
