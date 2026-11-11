@@ -95,7 +95,7 @@ The numbers are in `6_evaluation/summarization/results/results_log.jsonl`. **Tex
 | smoke (3 meetings) | 0.260 | 0.040 | 0.150 | 0 | 0.05 s |
 | **eval (20 test meetings)** | **0.238** | **0.027** | **0.129** | 0 | 0.2 s |
 
-- **Compared with the paper:** published TextRank ROUGE-1 on AMI is 35.25 (Zhu et al. 2020); ours is 23.8. Likely reasons, not checked yet: different summary length and a different set of test meetings.
+- **Compared with the paper:** published TextRank ROUGE-1 on AMI is 35.25 ([Zhu et al. 2020](https://aclanthology.org/2020.findings-emnlp.19/), Table 2); ours is 23.8. Likely reasons, not checked yet: different summary length and a different set of test meetings.
 - **BART:** not run yet.
 
 Each log line has (what the walkthrough checks): the scores (mean, std, per seed), **git commit**, **config + config hash**, **data hash**, split-file hash, meeting list, seeds, Python version, package versions and hardware.

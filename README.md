@@ -23,7 +23,7 @@ CS6170 AI Capstone, Northeastern. This README covers the **summarization baselin
 
 | | What | Why |
 |---|---|---|
-| **Baseline: TextRank** ([`textrank_baseline.py`](2_summarization/textrank_baseline.py), `summa` 1.2.0) | Builds a graph of transcript lines linked by shared words, ranks them with PageRank, and keeps the top lines (in meeting order) up to 160 words. 160 = the average length of the **train** summaries. | No training (nothing can leak, no GPU). Fast. Only copies real lines, so it can't make things up. A standard published AMI baseline, so we can compare. |
+| **Baseline: TextRank** ([Mihalcea & Tarau 2004](https://aclanthology.org/W04-3252/); [`textrank_baseline.py`](2_summarization/textrank_baseline.py), `summa` 1.2.0) | Builds a graph of transcript lines linked by shared words, ranks them with PageRank, and keeps the top lines (in meeting order) up to 160 words. 160 = the average length of the **train** summaries. | No training (nothing can leak, no GPU). Fast. Only copies real lines, so it can't make things up. A standard published AMI baseline, so we can compare. |
 | **Deep model: BART** ([`bart_summarizer.py`](2_summarization/bart_summarizer.py), `philschmid/bart-large-cnn-samsum`, pinned revision) | Summarizes every 60 s of meeting, then summarizes those summaries. | Writes new sentences, like a person would. Trained on chat summaries (SAMSum), never on AMI. **Not logged yet.** |
 | **Metric: ROUGE-1 / 2 / L** (+ ROUGE-SU4) ([`metrics.py`](6_evaluation/summarization/metrics.py), Google `rouge-score` 0.1.2, stemming on) | Word overlap between our summary and AMI's human summary. F-measure, 0 to 1, averaged over meetings. | The standard metric in AMI summarization papers, so our numbers are comparable. Cheap and deterministic. |
 | **Metric: BERTScore** (`bert-score` 0.3.13, `roberta-large`, pinned revision) | Meaning overlap, using a language model's embeddings. | ROUGE gives no credit for paraphrases. BERTScore does, which is fair to BART. |
@@ -35,7 +35,7 @@ CS6170 AI Capstone, Northeastern. This README covers the **summarization baselin
 | smoke (3 dev meetings) | 0.260 | 0.040 | 0.150 | 0 | 0.05 s |
 | **eval (20 test meetings)** | **0.238** | **0.027** | **0.129** | 0 | 0.2 s |
 
-TextRank has no randomness, so every seed gives the same summary (std 0). The seeds start to matter for BART and later models. The published TextRank ROUGE-1 on AMI is 35.25 (Zhu et al. 2020). Possible reasons ours is lower (not checked yet): we compare against the abstract part of the human summary only, we use a 160-word budget, and the ROUGE implementation differs.
+TextRank has no randomness, so every seed gives the same summary (std 0). The seeds start to matter for BART and later models. The published TextRank ROUGE-1 on AMI is 35.25 ([Zhu et al. 2020](https://aclanthology.org/2020.findings-emnlp.19/), Table 2). Possible reasons ours is lower (not checked yet): we compare against the abstract part of the human summary only, we use a 160-word budget, and the ROUGE implementation differs.
 
 ## 4. Quick start: fresh clone to the smoke-test number
 
