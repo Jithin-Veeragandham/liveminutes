@@ -11,6 +11,7 @@ import hashlib
 import json
 import os
 import sys
+import time
 import urllib.request
 import zipfile
 
@@ -19,6 +20,10 @@ import ami_settings
 # Only these parts of the corpus are used: transcripts (words + dialogue acts), human summaries, speaker info.
 USED_PARTS = ("words/", "dialogueActs/", "abstractive/", "corpusResources/meetings.xml",
               "corpusResources/participants.xml", "LICENCE.txt", "00README_MANUAL.txt")
+
+# The AMI server sometimes refuses or drops a download (HTTP 403, connection reset); it usually works on a
+# later try. Wait 2 s after the first failure, then 4, 6, ... (at most 30 s), up to DOWNLOAD_TRIES tries.
+DOWNLOAD_TRIES = 10
 
 
 # Return the SHA-256 hex digest of one file.
@@ -56,6 +61,26 @@ def load_manifest():
         return json.load(f)
 
 
+# Download url to path, trying up to DOWNLOAD_TRIES times. The file is written as <path>.part and only
+# renamed to path once complete, so a failed download never leaves a half-written zip behind.
+def download(url, path):
+    part = path + ".part"
+    for attempt in range(1, DOWNLOAD_TRIES + 1):
+        try:
+            urllib.request.urlretrieve(url, part)
+            os.replace(part, path)
+            return
+        except OSError as e:   # HTTP errors (403, 503), connection resets, timeouts
+            if os.path.exists(part):
+                os.remove(part)
+            if attempt == DOWNLOAD_TRIES:
+                sys.exit(f"download failed {DOWNLOAD_TRIES} times (last error: {e}). "
+                         "The AMI server may be busy: try again in a few minutes.")
+            wait = min(2 * attempt, 30)
+            print(f"  try {attempt}/{DOWNLOAD_TRIES} failed ({e}); retrying in {wait} s", flush=True)
+            time.sleep(wait)
+
+
 # Download the zip if needed, check its hash, and extract the used parts.
 def fetch():
     m = load_manifest()
@@ -63,7 +88,7 @@ def fetch():
     zip_path = os.path.join(ami_settings.RAW_DIR, m["file"])
     if not os.path.exists(zip_path):
         print(f"downloading {m['url']} ({m['bytes'] / 1e6:.0f} MB) ...", flush=True)
-        urllib.request.urlretrieve(m["url"], zip_path)
+        download(m["url"], zip_path)
     got = sha256_file(zip_path)
     if got != m["sha256"]:
         os.remove(zip_path)
