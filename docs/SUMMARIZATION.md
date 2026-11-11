@@ -46,7 +46,7 @@ FIRST_SEED = 42   # seeds are 42, 43, ..., 61
 ```
 0. seeds          -> pick the seeds (top of the file or --seeds / --seed), fix PYTHONHASHSEED
 1. check data     -> fetch_data.py: download AMI if missing, check its hash against MANIFEST.json
-2. load split     -> split.py: load train/dev/eval, check no person is in two splits
+2. load split     -> split.py: load train/dev/eval, check it against MANIFEST.json, check no person is in two splits
 3. build model    -> TextRank (or BART)
 4. run            -> for each seed: set seeds, summarize each meeting (ami.py reads it), score it (metrics.py)
 5. average        -> mean and std over seeds, and seed_variation (what changed between seeds, and why)
@@ -65,7 +65,7 @@ FIRST_SEED = 42   # seeds are 42, 43, ..., 61
 | `5_data/ami/fetch_data.py` | Downloads AMI and checks it matches the expected hash. |
 | `5_data/ami/split.py` | Decides which meetings go to train / dev / eval. Checks no person is in two splits. |
 | `5_data/ami/ami.py` | Reads AMI's XML files into transcript lines (speaker, time, text) and the human summary. |
-| `5_data/ami/MANIFEST.json` | Where the data came from, when, and its hashes. |
+| `5_data/ami/MANIFEST.json` | Where the data came from, when, and its hashes; also the split's paths and hashes (`split`). |
 | `5_data/ami/LICENSE_AMI.txt` | AMI licence (CC BY 4.0). |
 | `5_data/ami/ami_scenario_split.json` | The saved split. |
 | `5_data/raw/ami/` | Downloaded data. **Not committed** (gitignored). |
@@ -107,7 +107,7 @@ Each log line has (what the walkthrough checks): the scores (mean, std, per seed
 | **Environment** | `requirements.txt` at the repo root (every package pinned), `.python-version` (3.12). Each run logs Python, packages, hardware. |
 | **Seeds** | Top of `2_summarization/run.py`, applied every run (see [2.2](#22-seeds)). |
 | **Data version** | `5_data/ami/MANIFEST.json`: URL, retrieval date, zip SHA-256, `data_hash`. Checked every run; the run stops if it doesn't match. Delete `5_data/raw/ami/` and run again to get the same bytes back. |
-| **Split** | `5_data/ami/split.py`, look for `THE SPLIT IS MADE HERE`. Checked every run. |
+| **Split** | `5_data/ami/split.py`, look for `THE SPLIT IS MADE HERE`. Saved in `ami_scenario_split.json`; its path, SHA-256 and one SHA-256 per train/dev/eval list are in `MANIFEST.json` under `split`. Checked every run against both. `python 5_data/ami/split.py` rebuilds the file and updates the manifest entry. |
 | **Results log** | Every number is saved with its commit, config and data hash. |
 
 ## 2.8 The split

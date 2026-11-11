@@ -7,7 +7,29 @@
   "sha256": "b56e5babb2496b8795deeeda7e71178d7fbc9963f94276cf2a3f4b56ebbc9f9d",
   "retrieved": "2026-11-07",
   "license": "CC BY 4.0 (see 5_data/ami/LICENSE_AMI.txt)",
-  "used_parts": ["words/", "dialogueActs/", "abstractive/", "corpusResources/meetings.xml", "corpusResources/participants.xml"],
+  "used_parts": [
+    "words/",
+    "dialogueActs/",
+    "abstractive/",
+    "corpusResources/meetings.xml",
+    "corpusResources/participants.xml"
+  ],
   "data_hash": "1ce0450de10c44aa3d794865f7b53f50eab8a94b0027899c51d5dd2e6797c048",
-  "data_hash_method": "sha256 over sorted lines '<relative path>  <sha256 of file>' for every extracted used file (fetch_data.py: data_hash)"
+  "data_hash_method": "sha256 over sorted lines '<relative path>  <sha256 of file>' for every extracted used file (fetch_data.py: data_hash)",
+  "split": {
+    "rule": "5_data/ami/split.py",
+    "file": "5_data/ami/ami_scenario_split.json",
+    "file_sha256": "09e6d3ee32281507391f23bb3bda6d6d98bacac9979e68cbd173702d4e1068c0",
+    "counts": {
+      "train": 98,
+      "dev": 20,
+      "eval": 20
+    },
+    "list_sha256": {
+      "train": "5a7a78fb7a8e2fce4c22cfec535303311acf7aa5a874f418b75c4e66a113c283",
+      "dev": "5aeeef66151f528c5186df8b73b52caa875d7e18972f1d31984fd2f4652cc3ce",
+      "eval": "cc86e00bd35358d4f96f56fef489e5393fc5d7b7cb1e18fec4d7dc9cc663a6d4"
+    },
+    "list_sha256_method": "sha256 of json.dumps(sorted(meeting ids)) per split (split.py: list_hashes)"
+  }
 }
