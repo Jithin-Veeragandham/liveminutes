@@ -159,13 +159,13 @@ dc() { (cd attendee && docker compose -f dev.docker-compose.yaml -f ../compose.l
 git clone -c core.autocrlf=false https://github.com/attendee-labs/attendee.git attendee
 git -C attendee checkout eaacec16f2939b595f196b3957a717bbb0ed23e9
 git -C attendee apply ../patches/teams-speaker-clock.patch
+[ -f ../.env ] || cp ../.env.example ../.env    # must exist before any dc command (compose.local.yaml reads it)
+grep -v '^ATTENDEE_API_KEY=' ../.env > ../.env.tmp && mv ../.env.tmp ../.env
 dc build
 dc run --rm -T attendee-app-local python init_env.py > attendee/.env
 bash make_certs.sh
 dc up -d postgres redis attendee-app-local attendee-worker-local attendee-scheduler-local
 dc exec -T attendee-app-local python manage.py migrate
-[ -f ../.env ] || cp ../.env.example ../.env
-grep -v '^ATTENDEE_API_KEY=' ../.env > ../.env.tmp && mv ../.env.tmp ../.env
 bash make_account.sh you@example.com      # writes ATTENDEE_API_KEY to ../.env, prints a local login
 ```
 
@@ -182,6 +182,7 @@ curl http://127.0.0.1:8776/health          # -> ok
 Notes:
 - **Windows:** run this whole section in **Git Bash** (installed with Git for Windows), not PowerShell: the commands then work exactly as written. In PowerShell, `bash` starts WSL instead of Git Bash, and `>` writes files in UTF-16, which breaks `attendee/.env`. Start Docker Desktop first.
 - Run the scripts with `bash` (they aren't marked executable in git).
+- The repo's `.env` must exist before the first `dc` command: `compose.local.yaml` loads it for the bridge, and `docker compose exec` (the `migrate` step) fails with `env file .../.env not found` without it.
 - The `grep` line lets `make_account.sh` write the key on macOS. Its `sed -i` only works with GNU sed.
 - Port 8000 (Attendee) must be free.
 - Attendee's database volume is shared by every clone on a computer. If you set Attendee up before in another clone, copy that clone's `attendee/.env` here instead of running `init_env.py`.

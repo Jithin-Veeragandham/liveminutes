@@ -98,7 +98,14 @@ git -C attendee apply ../patches/teams-speaker-clock.patch
 ```
 The patch is our only change to Attendee. Its Teams bot decides who is speaking by checking which audio sources were heard in the last 50 ms, but it compared the sources' timestamps (the browser's `performance` clock) with `Date.now()` (the wall clock). When those drift apart, which happens when Docker resyncs its clock, nobody is ever "recent": no speech events, and every Teams line becomes "Unknown speaker". The patch compares on the same clock.
 
-**2. Build the images** (Attendee + bridge). The first build takes 10–20 min (Chrome, X server, audio libraries). Later builds are cached.
+**2. Create the repo's `.env`.** It must exist before any `dc` command: `compose.local.yaml` loads it for the bridge, and `dc exec` (step 4) fails with `env file .../.env not found` without it.
+```bash
+[ -f ../.env ] || cp ../.env.example ../.env
+grep -v '^ATTENDEE_API_KEY=' ../.env > ../.env.tmp && mv ../.env.tmp ../.env
+```
+The `grep` line removes an old `ATTENDEE_API_KEY=` line, so `make_account.sh` (step 5) appends the new key. That's needed on macOS: the script's in-place edit (`sed -i`) only works with GNU sed, and without this line the key is created in Attendee but never written to `.env`.
+
+**2b. Build the images** (Attendee + bridge). The first build takes 10–20 min (Chrome, X server, audio libraries). Later builds are cached.
 ```bash
 dc build
 ```
@@ -117,16 +124,13 @@ dc exec -T attendee-app-local python manage.py migrate
 ```
 Check: http://localhost:8000 shows Attendee's login page.
 
-**5. Create your Attendee login and API key.** This makes the account with the email already verified (no confirmation link), creates an API key and writes it to the repo's `.env` (creating it from `.env.example` if needed) as `ATTENDEE_API_KEY`. It prints the password for http://localhost:8000.
+**5. Create your Attendee login and API key.** This makes the account with the email already verified (no confirmation link), creates an API key and writes it to the repo's `.env` (made in step 2) as `ATTENDEE_API_KEY`. It prints the password for http://localhost:8000.
 ```bash
-[ -f ../.env ] || cp ../.env.example ../.env
-grep -v '^ATTENDEE_API_KEY=' ../.env > ../.env.tmp && mv ../.env.tmp ../.env
 bash make_account.sh you@example.com
 ```
-The `grep` line removes an old `ATTENDEE_API_KEY=` line, so the script appends the new key. That's needed on macOS: the script's in-place edit (`sed -i`) only works with GNU sed, and without this line the key is created in Attendee but never written to `.env`.
 (Alternative: sign up in the browser at http://localhost:8000/accounts/signup/, get the confirmation link with `dc logs attendee-app-local | grep confirm-email`, create a key under **API Keys**, and paste it into `.env`.)
 
-**6. Add your Groq key** to `.env` in the repo root: `GROQ_API_KEY=gsk_...` (get one at https://console.groq.com/keys; see [1.5](#15-configuration)). The file was created from `.env.example` in step 5. Then start the bridge:
+**6. Add your Groq key** to `.env` in the repo root: `GROQ_API_KEY=gsk_...` (get one at https://console.groq.com/keys; see [1.5](#15-configuration)). The file was created from `.env.example` in step 2. Then start the bridge:
 ```bash
 dc up -d liveminutes-bridge
 ```
