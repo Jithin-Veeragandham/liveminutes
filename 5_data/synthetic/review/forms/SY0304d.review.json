@@ -1,0 +1,1399 @@
+{
+  "meeting_id": "SY0304d",
+  "raw_sha256": "e56848a167d2859ea0c6e5b44b331179667901fe22c09c99922cf3dce7360064",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting and noted that the user interface designer was absent on a first aid training course but had sent his final layout. She confirmed that she had emailed the industrial designer about his electrician and mounting task and had sent round the minutes.",
+        "The industrial designer reported an electrician's quote of three hundred and twenty pounds for a new mains supply at the underground library car park, and the project manager reported that the estates office will pay for it from its building maintenance budget.",
+        "The team chose navy steel posts for the four surface car parks and a wall bracket for the library car park, signed off the user interface designer's layout, and assigned the absent user interface designer to produce five print-ready name strip files for the supplier.",
+        "The project manager costed the signs at three hundred and ninety pounds for each surface sign and three hundred and seventy-two pounds for the library sign, one thousand nine hundred and thirty-two pounds in total, and the team agreed to keep the nightly counter reset and decide on a midday reset after hand spot counts.",
+        "The marketing expert evaluated the design against the survey findings, and the team judged that it meets the brief. The team agreed there would be no QR code in this phase, and the app and the central sign remain later ideas."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The user interface designer (absent) is to produce five print-ready vector files for the car park name strips, to the supplier's specification, by the end of next week. The project manager assigned this.",
+        "The project manager will email the user interface designer about the print files tonight, copying in the industrial designer with the specification.",
+        "The industrial designer will forward the supplier's template to the project manager.",
+        "The industrial designer will send the final specification (casing, posts, bracket and LED panels) to the supplier on Monday.",
+        "The industrial designer will book the electrician for the library car park supply with the estates office before term.",
+        "The marketing expert will do hand spot counts on a couple of afternoons in the first fortnight after installation, to check counter drift.",
+        "The marketing expert will draft a piece for the campus newsletter explaining what the colours mean.",
+        "The project manager will write up the minutes and the final design report and send them to the estates office."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The estates office will pay for the new library car park mains supply from its building maintenance budget, outside the sign budget.",
+        "The four surface car park signs will be mounted on navy-painted galvanised steel posts about two point two metres high, and the library car park sign on a wall bracket.",
+        "The user interface designer's final layout is signed off: a navy strip with the car park name in white, a P symbol on the left, the LED number on a green, amber or red panel, and no flashing.",
+        "The nightly counter reset with attendant correction is kept. Whether a midday reset is needed will be decided after the spot counts.",
+        "There will be no QR code on the casing in this phase.",
+        "The app and the central sign near the main gate remain later ideas."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The budget margin is only ten pounds on each surface sign, at three hundred and ninety pounds per sign.",
+        "Counter drift from tailgating could reach four or five cars by the afternoon on busy days, which is significant when red is at five free spaces. A midday reset is undecided pending the spot counts.",
+        "The marketing expert's statement that a full car park would show the word FULL instead of zero was not agreed. The industrial designer noted that the LED panel shows only digits, and the point was left unresolved.",
+        "Ordering the panels depends on print files from the user interface designer, who was absent.",
+        "The app many users asked for, and the central sign, are not part of this phase."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304d.ai1",
+        "description": "Produce five print-ready vector files for the car park name strips, to the supplier's specification, by the end of next week",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304d.s0060",
+            "event": "assigned",
+            "by": "C",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0304d.s0122",
+            "event": "restated",
+            "by": "C",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304d.s0055",
+          "SY0304d.s0056",
+          "SY0304d.s0057",
+          "SY0304d.s0059",
+          "SY0304d.s0060",
+          "SY0304d.s0122"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304d.ai2",
+        "description": "Email the user interface designer about the print files tonight, copying in the industrial designer with the specification",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304d.s0061",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0304d.s0122",
+            "event": "restated",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304d.s0061",
+          "SY0304d.s0122"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304d.ai3",
+        "description": "Forward the supplier's print template to the project manager",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304d.s0062",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304d.s0062"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304d.ai4",
+        "description": "Send the final specification (casing, posts, bracket, LED panels) to the supplier on Monday",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304d.s0111",
+            "event": "assigned",
+            "by": "C",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0304d.s0112",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304d.s0111",
+          "SY0304d.s0112"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304d.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304d.ai5",
+        "description": "Book the electrician for the library car park mains supply with the estates office before term",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304d.s0114",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304d.s0113",
+          "SY0304d.s0114",
+          "SY0304d.s0115"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304d.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304d.ai6",
+        "description": "Do hand spot counts on a couple of afternoons in the first fortnight after installation to check barrier counter drift",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304d.s0088",
+            "event": "proposed",
+            "by": "D",
+            "owner": null
+          },
+          {
+            "segment": "SY0304d.s0090",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0304d.s0116",
+            "event": "restated",
+            "by": "C",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0304d.s0117",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304d.s0088",
+          "SY0304d.s0089",
+          "SY0304d.s0090",
+          "SY0304d.s0091",
+          "SY0304d.s0116",
+          "SY0304d.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304d.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304d.ai7",
+        "description": "Draft a campus newsletter piece explaining what the sign colours mean",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304d.s0118",
+            "event": "proposed",
+            "by": "A",
+            "owner": null
+          },
+          {
+            "segment": "SY0304d.s0120",
+            "event": "assigned",
+            "by": "C",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0304d.s0121",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304d.s0118",
+          "SY0304d.s0119",
+          "SY0304d.s0120",
+          "SY0304d.s0121"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304d.ai8",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304d.ai8",
+        "description": "Write up the minutes and the final design report and send them to the estates office",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304d.s0123",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304d.s0123",
+          "SY0304d.s0124"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f1",
+        "type": "absence",
+        "fact": "Tom, the user interface designer (B), was absent from the detailed design meeting because he was on a first aid training course all day.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304d.s0005"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f2",
+        "type": "action_item",
+        "fact": "While absent, the user interface designer (B) was assigned by the project manager (C) to produce five print-ready vector files for the car park name strips, to the supplier's specification, by the end of next week.",
+        "agreed": null,
+        "related_action_item": "SY0304d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304d.s0059",
+          "SY0304d.s0060",
+          "SY0304d.s0122"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f3",
+        "type": "action_item",
+        "fact": "The project manager will email the absent user interface designer about the print files tonight and copy in the industrial designer with the specification.",
+        "agreed": null,
+        "related_action_item": "SY0304d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304d.s0061",
+          "SY0304d.s0122"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f4",
+        "type": "other",
+        "fact": "The user interface designer sent his final layout to the project manager the night before the meeting, and she presented it on his behalf.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0304c",
+        "evidence_segments": [
+          "SY0304d.s0006",
+          "SY0304d.s0047",
+          "SY0304d.s0048",
+          "SY0304d.s0049",
+          "SY0304d.s0050"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f5",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager confirmed that she had emailed the industrial designer after the conceptual design meeting about the electrician quote and mounting task, and that the minutes had gone round.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0304c",
+        "evidence_segments": [
+          "SY0304d.s0009",
+          "SY0304d.s0010",
+          "SY0304d.s0011"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f6",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager reported back on the conceptual design meeting's action of asking the estates office whether it would pay for the library electrics separately.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0304c",
+        "evidence_segments": [
+          "SY0304d.s0023",
+          "SY0304d.s0024"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f7",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager noted that the layout has no flashing, as agreed at the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0304c",
+        "evidence_segments": [
+          "SY0304d.s0050"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f8",
+        "type": "other",
+        "fact": "The estates electrician quoted three hundred and twenty pounds to run a new mains supply in conduit from the distribution board by the lift lobby, about eight metres from the library barrier.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304d.s0017",
+          "SY0304d.s0018",
+          "SY0304d.s0019"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f9",
+        "type": "decision",
+        "fact": "The library car park electrics will be paid from the estates office's building maintenance budget, not the sign budget.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304d.s0024",
+          "SY0304d.s0027",
+          "SY0304d.s0028",
+          "SY0304d.s0029",
+          "SY0304d.s0030"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f10",
+        "type": "decision",
+        "fact": "The four surface car park signs will be mounted on navy-painted galvanised steel posts about two point two metres high, and the library car park sign on a wall bracket, which estates approved.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304d.s0032",
+          "SY0304d.s0033",
+          "SY0304d.s0036",
+          "SY0304d.s0037",
+          "SY0304d.s0038",
+          "SY0304d.s0039",
+          "SY0304d.s0040",
+          "SY0304d.s0041"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f11",
+        "type": "decision",
+        "fact": "The user interface designer's final layout was signed off, with the navy name strip, P symbol, colour panel and no flashing.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304d.s0048",
+          "SY0304d.s0049",
+          "SY0304d.s0050",
+          "SY0304d.s0051",
+          "SY0304d.s0052",
+          "SY0304d.s0054",
+          "SY0304d.s0064"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f12",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert stated that a full car park would show the word FULL instead of zero, as if it were decided. The industrial designer started to object that the LED panel shows only digits, nobody agreed, and the project manager moved on to costs.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304d.s0065",
+          "SY0304d.s0066",
+          "SY0304d.s0067",
+          "SY0304d.s0068"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f13",
+        "type": "other",
+        "fact": "Per-sign costs are LED panel one hundred and sixty pounds, casing one hundred and forty, controller and counter link sixty, and post thirty, which makes three hundred and ninety for each surface sign. The library sign is three hundred and seventy-two with the bracket, and the total for five signs is one thousand nine hundred and thirty-two pounds.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304d.s0042",
+          "SY0304d.s0044",
+          "SY0304d.s0069",
+          "SY0304d.s0070",
+          "SY0304d.s0071",
+          "SY0304d.s0072",
+          "SY0304d.s0073",
+          "SY0304d.s0074",
+          "SY0304d.s0079"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f14",
+        "type": "decision",
+        "fact": "The nightly counter reset with attendant correction is kept, and whether a midday reset is needed will be decided after the marketing expert's spot counts.",
+        "agreed": true,
+        "related_action_item": "SY0304d.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304d.s0082",
+          "SY0304d.s0083",
+          "SY0304d.s0089",
+          "SY0304d.s0092"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f15",
+        "type": "action_item",
+        "fact": "The marketing expert will do hand spot counts on a couple of afternoons in the first fortnight after installation, as the industrial designer suggested.",
+        "agreed": null,
+        "related_action_item": "SY0304d.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304d.s0088",
+          "SY0304d.s0090",
+          "SY0304d.s0116",
+          "SY0304d.s0117"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f16",
+        "type": "decision",
+        "fact": "There will be no QR code on the casing in this phase. A sticker could be added later if an app happens.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304d.s0103",
+          "SY0304d.s0104",
+          "SY0304d.s0105",
+          "SY0304d.s0106"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f17",
+        "type": "decision",
+        "fact": "The app and the central sign near the main gate remain later ideas.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304d.s0101",
+          "SY0304d.s0102"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f18",
+        "type": "other",
+        "fact": "In the marketing expert's evaluation against the survey findings, the team judged that the design meets the brief, although the budget is tight.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304d.s0095",
+          "SY0304d.s0096",
+          "SY0304d.s0098",
+          "SY0304d.s0099",
+          "SY0304d.s0100",
+          "SY0304d.s0107",
+          "SY0304d.s0108",
+          "SY0304d.s0109"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f19",
+        "type": "action_item",
+        "fact": "The industrial designer will send the final specification to the supplier on Monday and will book the library electrician with the estates office.",
+        "agreed": null,
+        "related_action_item": "SY0304d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304d.s0111",
+          "SY0304d.s0112",
+          "SY0304d.s0113",
+          "SY0304d.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f20",
+        "type": "action_item",
+        "fact": "The marketing expert will draft a campus newsletter piece explaining what the colours mean.",
+        "agreed": null,
+        "related_action_item": "SY0304d.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304d.s0118",
+          "SY0304d.s0119",
+          "SY0304d.s0120",
+          "SY0304d.s0121"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304d.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304d.f21",
+        "type": "action_item",
+        "fact": "The project manager will send the minutes and the final design report to the estates office.",
+        "agreed": null,
+        "related_action_item": "SY0304d.ai8",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304d.s0123"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_UNAGREED_DECISION",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_UNAGREED_DECISION",
+        "segments": [
+          "SY0304d.s0065",
+          "SY0304d.s0066",
+          "SY0304d.s0067",
+          "SY0304d.s0068"
+        ],
+        "note": "The marketing expert declares that full car parks will show the word FULL instead of zero, as if decided. The industrial designer starts to object and the project manager moves on to costs without settling it."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_TASK_TO_ABSENT",
+        "segments": [
+          "SY0304d.s0005",
+          "SY0304d.s0055",
+          "SY0304d.s0056",
+          "SY0304d.s0057",
+          "SY0304d.s0059",
+          "SY0304d.s0060",
+          "SY0304d.s0061",
+          "SY0304d.s0122"
+        ],
+        "note": "The user interface designer is absent on a training course, and the project manager assigns him the five print-ready name strip files and says she will email him."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

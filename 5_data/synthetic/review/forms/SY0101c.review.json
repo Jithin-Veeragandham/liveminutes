@@ -1,0 +1,1324 @@
+{
+  "meeting_id": "SY0101c",
+  "raw_sha256": "cd7eba81152c4b996c89197b6f19f43cf15facc7890c88b04c73929bc614d53b",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the conceptual design meeting and welcomed back the user interface designer, who confirmed that he had received her email with the decisions and chip prices from the functional design meeting.",
+        "The marketing expert presented the list of ten timer names taken from the survey: pasta, rice, eggs, potatoes, vegetables, roast, oven, bread, cake and tea. The user interface designer showed that the names, the wake word, four commands and the number words use exactly the forty words the chip can recognise, and the team kept all ten names.",
+        "The industrial designer reported a speaker quote of 1.40 euros, which brings voice input and output to 4.20 euros, and a backup battery quote of about 0.90 euros against an estimated unit cost of about 11.10 euros. The team left the backup battery out for now.",
+        "The user interface designer presented a backlit segment LCD with large digits and printed icons for the timer names. The team rejected his touch strip in favour of a rotary dial with a separate cancel button.",
+        "For the casing, the team chose a splash-proof, wipe-clean ABS body with rubber seals and a flat display window, available in white and black."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer and the user interface designer will build a mock-up model of the casing with the dial and the display for the detailed design meeting.",
+        "The industrial designer will prepare a full cost breakdown, including whether the backup battery fits the budget.",
+        "The user interface designer will write up the final forty-word vocabulary list with example phrases and decide the alarm wording.",
+        "The marketing expert will put together evaluation criteria from the survey to check the design against.",
+        "The project manager will send round the minutes."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "All ten timer names from the marketing expert's list are kept, which uses the chip's full forty-word vocabulary, so no words can be added later.",
+        "The speaker costs 1.40 euros, so voice input and output together cost 4.20 euros.",
+        "The backup battery is left out for now and may be added back if the final costing leaves room.",
+        "The display will be a backlit segment LCD that shows one timer in large digits, with printed icons for the timer names and for other running timers.",
+        "The button fallback will be a rotary dial (turn to set, push to start, push and hold to choose a timer) plus a separate cancel button. The touch strip was rejected.",
+        "The casing will be an ABS plastic body with rubber seals around the dial and button and a flat display window. It will be splash-proof and wipe-clean, but not dishwasher safe.",
+        "The timer will come in white and black."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The vocabulary is at the chip's limit of forty words, so there is no room to add any commands or names later.",
+        "The estimated unit cost of about 11.10 euros leaves little margin, and whether the 0.90 euro backup battery can be included depends on the full cost breakdown.",
+        "A third colour, such as sage green, is still open.",
+        "The marketing expert's idea of a fridge magnet was not adopted because of the mains cable, and is only being kept in mind.",
+        "The exact alarm wording (for example 'pasta is done') is not yet decided."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0101c.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0101c.ai1",
+        "description": "Build a mock-up model of the casing with the dial and the display for the detailed design meeting, together with the user interface designer.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0101c.s0107",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0101c.s0108",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0101c.s0107",
+          "SY0101c.s0108",
+          "SY0101c.s0109"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0101c.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0101c.ai2",
+        "description": "Prepare a full cost breakdown of the timer, including whether the backup battery fits the budget.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0101c.s0110",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0101c.s0111",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0101c.s0059",
+          "SY0101c.s0110",
+          "SY0101c.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0101c.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0101c.ai3",
+        "description": "Write up the final forty-word vocabulary list with example phrases and decide the alarm wording.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0101c.s0112",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0101c.s0113",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0101c.s0122",
+            "event": "restated",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0101c.s0112",
+          "SY0101c.s0113",
+          "SY0101c.s0118",
+          "SY0101c.s0122",
+          "SY0101c.s0123"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0101c.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0101c.ai4",
+        "description": "Put together evaluation criteria from the survey to check the design against.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0101c.s0114",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0101c.s0115",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0101c.s0114",
+          "SY0101c.s0115"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0101c.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0101c.ai5",
+        "description": "Send round the minutes of the conceptual design meeting.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0101c.s0116",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0101c.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f1",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer confirmed that he received the project manager's email with the functional design decisions and the chip prices (2.80 versus 6.50 euros).",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0101b",
+        "evidence_segments": [
+          "SY0101c.s0006",
+          "SY0101c.s0007",
+          "SY0101c.s0008"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer referred back to the kickoff decision for large digits and no colour screen.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0101a",
+        "evidence_segments": [
+          "SY0101c.s0063"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f3",
+        "type": "other",
+        "fact": "The marketing expert's ten timer names are pasta, rice, eggs, potatoes, vegetables, roast, oven, bread, cake and tea.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0017",
+          "SY0101c.s0021"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f4",
+        "type": "other",
+        "fact": "The vocabulary (wake word, four commands, twenty-three number words, minutes and hour, and ten names) totals exactly forty words, the chip's limit.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0024",
+          "SY0101c.s0025",
+          "SY0101c.s0026",
+          "SY0101c.s0027",
+          "SY0101c.s0029",
+          "SY0101c.s0035"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f5",
+        "type": "decision",
+        "fact": "The team keeps all ten timer names, accepting that no words can be added later.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0036",
+          "SY0101c.s0037",
+          "SY0101c.s0038"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f6",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer suggested dropping one or two timer names to leave spare vocabulary. The marketing expert objected and it was not adopted.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0032",
+          "SY0101c.s0033",
+          "SY0101c.s0036"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f7",
+        "type": "other",
+        "fact": "The speaker quote is 1.40 euros, making voice input and output 4.20 euros in total.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0042",
+          "SY0101c.s0047"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f8",
+        "type": "other",
+        "fact": "The backup battery costs about 0.90 euros and the estimated unit cost without it is about 11.10 euros.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0049",
+          "SY0101c.s0056",
+          "SY0101c.s0057"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f9",
+        "type": "decision",
+        "fact": "The backup battery is left out for now and may be added back if the final costing allows.",
+        "agreed": true,
+        "related_action_item": "SY0101c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0059",
+          "SY0101c.s0060"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f10",
+        "type": "unagreed_proposal",
+        "fact": "The industrial designer argued for including the backup battery so timers survive unplugging. The team did not adopt it for now.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0051",
+          "SY0101c.s0052",
+          "SY0101c.s0053",
+          "SY0101c.s0059"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f11",
+        "type": "decision",
+        "fact": "The display will be a backlit segment LCD showing one timer in large digits, with printed icons for timer names and other running timers.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0064",
+          "SY0101c.s0065",
+          "SY0101c.s0067",
+          "SY0101c.s0068",
+          "SY0101c.s0069",
+          "SY0101c.s0070"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f12",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer proposed a touch strip for setting minutes. It was rejected because of wet and dirty hands.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0072",
+          "SY0101c.s0073",
+          "SY0101c.s0074",
+          "SY0101c.s0083"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f13",
+        "type": "decision",
+        "fact": "The button fallback will be a rotary dial (turn to set, push to start, push and hold to select a timer) plus a separate cancel button.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0076",
+          "SY0101c.s0077",
+          "SY0101c.s0079",
+          "SY0101c.s0080",
+          "SY0101c.s0081",
+          "SY0101c.s0082",
+          "SY0101c.s0083"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f14",
+        "type": "decision",
+        "fact": "The casing will be ABS plastic with rubber seals around the dial and button and a flat display window. It will be splash-proof and wipe-clean.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0087",
+          "SY0101c.s0088",
+          "SY0101c.s0094",
+          "SY0101c.s0095",
+          "SY0101c.s0096"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f15",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert asked whether the timer could be dishwasher safe. The industrial designer said this is not possible with electronics inside.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0089",
+          "SY0101c.s0090"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f16",
+        "type": "decision",
+        "fact": "The timer will be offered in white and black.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0100"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f17",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested a third colour such as sage green. This was left open.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0099",
+          "SY0101c.s0100"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f18",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert proposed a magnet on the back for fridge mounting. It was not adopted because of the mains cable and is only kept in mind.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0101",
+          "SY0101c.s0102",
+          "SY0101c.s0103"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f19",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested the alarm say 'pasta is done'. The wording was left to the user interface designer.",
+        "agreed": false,
+        "related_action_item": "SY0101c.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0118",
+          "SY0101c.s0119",
+          "SY0101c.s0122"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f20",
+        "type": "action_item",
+        "fact": "The industrial designer and the user interface designer will build a mock-up model of the casing with the dial and display.",
+        "agreed": null,
+        "related_action_item": "SY0101c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0107",
+          "SY0101c.s0108",
+          "SY0101c.s0109"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f21",
+        "type": "action_item",
+        "fact": "The industrial designer will prepare a full cost breakdown including the backup battery.",
+        "agreed": null,
+        "related_action_item": "SY0101c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0110",
+          "SY0101c.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f22",
+        "type": "action_item",
+        "fact": "The user interface designer will write up the final forty-word vocabulary list with example phrases and decide the alarm wording.",
+        "agreed": null,
+        "related_action_item": "SY0101c.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0112",
+          "SY0101c.s0113",
+          "SY0101c.s0122",
+          "SY0101c.s0123"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f23",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f23",
+        "type": "action_item",
+        "fact": "The marketing expert will put together evaluation criteria from the survey.",
+        "agreed": null,
+        "related_action_item": "SY0101c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0114",
+          "SY0101c.s0115"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101c.f24",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101c.f24",
+        "type": "action_item",
+        "fact": "The project manager will send round the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0101c.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101c.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_SARCASM_AS_FACT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_SARCASM_AS_FACT",
+        "segments": [
+          "SY0101c.s0091",
+          "SY0101c.s0092",
+          "SY0101c.s0093",
+          "SY0101c.s0094"
+        ],
+        "note": "The industrial designer jokes that the timer will be fully submersible and can be dropped in the pasta water. The team brushes it off, and he restates the real spec: splash-proof, not waterproof."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_SELF_CORRECTION",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_SELF_CORRECTION",
+        "segments": [
+          "SY0101c.s0041",
+          "SY0101c.s0042"
+        ],
+        "note": "The industrial designer says the speaker quote is 1.80 euros, then corrects himself in his next turn to 1.40 euros. 1.80 was the louder model."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

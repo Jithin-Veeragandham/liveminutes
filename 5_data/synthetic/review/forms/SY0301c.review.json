@@ -1,0 +1,1490 @@
+{
+  "meeting_id": "SY0301c",
+  "raw_sha256": "3fb9189c93df3be0176ab3c523c30373f4563c725fbcc182f3fd9e7b7d08096d",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the conceptual design meeting and noted that the user interface designer was absent again, this time on a training course. She confirmed she had emailed him the minutes and his task from the functional design meeting, and said he had not yet sent his screen flow.",
+        "The marketing expert reported the consortium's RFID list: seven of the twelve branches are fully tagged, three are partly tagged and two have no RFID. This confirmed the earlier decision to read both RFID tags and barcodes. He added that all library cards carry a barcode, so no separate card reader is needed.",
+        "The industrial designer presented a full cost breakdown of 1,940 euros per unit before the casing. A brushed steel casing would bring the total to about 2,360 euros, and a moulded plastic casing to about 2,200 euros. She dropped her preference for steel, and the team chose moulded plastic and a freestanding pedestal.",
+        "The marketing expert's statement that the idle screen would show library event adverts was not taken up, and the meeting moved on. The team provisionally favoured the consortium's green, pending the consortium's style guide.",
+        "The project manager gave the absent user interface designer an extra task: mock-ups of the three screens. She also asked him to send his height and tilt range to the industrial designer."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The user interface designer, who was absent, will continue the screen flow for scanning and the receipt choice and the wheelchair height and tilt range, as assigned at the functional design meeting.",
+        "The user interface designer, who was absent, was assigned by the project manager to produce mock-ups of the three screens on the 21-inch screen in the consortium green for the detailed design meeting.",
+        "The user interface designer will send his height and tilt range to the industrial designer as soon as he has it, so that she can finalise the pedestal.",
+        "The project manager will email the user interface designer about his new tasks.",
+        "The marketing expert will ask the consortium whether it has a branding style guide.",
+        "The industrial designer will get a proper quote for the plastic casing mould.",
+        "The industrial designer will build a rough foam model of the pedestal for the detailed design meeting."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "Library cards will be scanned with the barcode scanner, so there will be no separate card reader.",
+        "The kiosk will have a moulded plastic casing instead of brushed steel, giving an estimated cost of about 2,200 euros per unit.",
+        "The kiosk will be a freestanding pedestal unit."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The colour is only provisionally the consortium green and depends on the consortium's style guide.",
+        "The plastic casing cost of 260 euros is a catalogue figure and still needs a real quote.",
+        "The pedestal and screen height cannot be finalised until the user interface designer supplies his height and tilt range, and his screen flow has not yet been delivered.",
+        "Three branches are only partly RFID-tagged. The consortium expects tagging to be completed in about a year but would not commit to this."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301c.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301c.ai1",
+        "description": "Work out the screen flow for scanning and the receipt choice, and define the wheelchair height and tilt range (carried over from SY0301b)",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301c.s0006",
+            "event": "restated",
+            "by": "B",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0301c.s0114",
+            "event": "restated",
+            "by": "B",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301c.s0006",
+          "SY0301c.s0007",
+          "SY0301c.s0064",
+          "SY0301c.s0114"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301c.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301c.ai2",
+        "description": "Produce mock-ups of the three screens on the 21-inch screen in the consortium green for the detailed design meeting",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301c.s0089",
+            "event": "assigned",
+            "by": "B",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0301c.s0114",
+            "event": "restated",
+            "by": "B",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301c.s0088",
+          "SY0301c.s0089",
+          "SY0301c.s0090",
+          "SY0301c.s0114"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301c.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301c.ai3",
+        "description": "Send the height and tilt range to the industrial designer as soon as it is available, so she can finalise the pedestal",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301c.s0092",
+            "event": "proposed",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0301c.s0093",
+            "event": "assigned",
+            "by": "B",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0301c.s0114",
+            "event": "restated",
+            "by": "B",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301c.s0092",
+          "SY0301c.s0093",
+          "SY0301c.s0114"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301c.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301c.ai4",
+        "description": "Email the absent user interface designer his new tasks (the mock-ups and the height and tilt range for the industrial designer)",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301c.s0094",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0301c.s0115",
+            "event": "restated",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301c.s0093",
+          "SY0301c.s0094",
+          "SY0301c.s0115"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301c.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301c.ai5",
+        "description": "Ask the consortium whether it has branding rules or a style guide",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301c.s0082",
+            "event": "proposed",
+            "by": "B",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0301c.s0083",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0301c.s0113",
+            "event": "restated",
+            "by": "B",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301c.s0080",
+          "SY0301c.s0081",
+          "SY0301c.s0082",
+          "SY0301c.s0083",
+          "SY0301c.s0113"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301c.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301c.ai6",
+        "description": "Get a proper quote for the moulded plastic casing mould",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301c.s0097",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0301c.s0100",
+            "event": "restated",
+            "by": "B",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0301c.s0113",
+            "event": "restated",
+            "by": "B",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301c.s0097",
+          "SY0301c.s0100",
+          "SY0301c.s0113"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301c.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301c.ai7",
+        "description": "Make a rough foam model of the pedestal for the detailed design meeting",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301c.s0098",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0301c.s0099",
+            "event": "accepted",
+            "by": "B",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0301c.s0113",
+            "event": "restated",
+            "by": "B",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301c.s0098",
+          "SY0301c.s0099",
+          "SY0301c.s0100",
+          "SY0301c.s0113"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301c.ai8",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301c.ai8",
+        "description": "Ask the branches how much floor space they have for the kiosk",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "dropped",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301c.s0102",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0301c.s0103",
+            "event": "accepted",
+            "by": "B",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0301c.s0105",
+            "event": "dropped",
+            "by": "B",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301c.s0102",
+          "SY0301c.s0103",
+          "SY0301c.s0104",
+          "SY0301c.s0105",
+          "SY0301c.s0106"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f1",
+        "type": "absence",
+        "fact": "The user interface designer (Tomas, A) was absent from the conceptual design meeting because he was on a training course all week.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301c.s0003",
+          "SY0301c.s0005"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager confirmed she had emailed the absent user interface designer the minutes and his task from the functional design meeting. He replied that he was working on it but had not sent anything yet.",
+        "agreed": null,
+        "related_action_item": "SY0301c.ai1",
+        "refers_to_meeting": "SY0301b",
+        "evidence_segments": [
+          "SY0301c.s0006",
+          "SY0301c.s0007"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert followed up on his task from the functional design meeting and contacted the consortium for the list of RFID-tagged branches.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0301b",
+        "evidence_segments": [
+          "SY0301c.s0013"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f4",
+        "type": "other",
+        "fact": "According to the consortium, seven of the twelve branches are fully RFID-tagged, three are partly tagged (mostly adult fiction) and two, Harlow and Meresby, have no RFID at all.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301c.s0014",
+          "SY0301c.s0015",
+          "SY0301c.s0016",
+          "SY0301c.s0017",
+          "SY0301c.s0022"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f5",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager said the RFID list confirmed the functional design meeting's decision to use both RFID and barcode readers.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0301b",
+        "evidence_segments": [
+          "SY0301c.s0018"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f6",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer said it was good that the team had not gone RFID only, the position she had declared at the kickoff.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0301a",
+        "evidence_segments": [
+          "SY0301c.s0019",
+          "SY0301c.s0020"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f7",
+        "type": "decision",
+        "fact": "Library cards will be scanned with the barcode scanner, because all cards have a barcode, so no separate card reader is needed.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301c.s0025",
+          "SY0301c.s0026",
+          "SY0301c.s0027",
+          "SY0301c.s0028",
+          "SY0301c.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f8",
+        "type": "other",
+        "fact": "The industrial designer's breakdown came to 1,940 euros per unit before the casing: RFID reader 450, barcode scanner 120, thermal printer 180, touchscreen 600, computer unit 400, tilt mount 90 and wiring and assembly 100.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301c.s0031",
+          "SY0301c.s0032",
+          "SY0301c.s0033",
+          "SY0301c.s0034",
+          "SY0301c.s0036"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f9",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer said the roughly 160 euro casing estimate from the previous meeting was too low. A steel casing costs about 420 euros, for a total of about 2,360 euros per unit.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0301b",
+        "evidence_segments": [
+          "SY0301c.s0039",
+          "SY0301c.s0040",
+          "SY0301c.s0041",
+          "SY0301c.s0042"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f10",
+        "type": "decision",
+        "fact": "The team chose a moulded plastic (ABS) casing at about 260 euros instead of brushed steel, bringing the unit cost to about 2,200 euros.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301c.s0044",
+          "SY0301c.s0045",
+          "SY0301c.s0052",
+          "SY0301c.s0054",
+          "SY0301c.s0055",
+          "SY0301c.s0056",
+          "SY0301c.s0108",
+          "SY0301c.s0109"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f11",
+        "type": "plan_change",
+        "fact": "The industrial designer originally wanted a steel casing, but switched to plastic because of the budget margin.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301c.s0040",
+          "SY0301c.s0052"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f12",
+        "type": "decision",
+        "fact": "The kiosk will be a freestanding pedestal rather than wall- or counter-mounted, partly because old branch buildings will not allow drilling into walls.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301c.s0058",
+          "SY0301c.s0059",
+          "SY0301c.s0060",
+          "SY0301c.s0061",
+          "SY0301c.s0066",
+          "SY0301c.s0067",
+          "SY0301c.s0068",
+          "SY0301c.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f13",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert stated as if it were decided that the idle screen would show adverts for library events. Nobody agreed, and the project manager moved on to colours without settling it.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301c.s0070",
+          "SY0301c.s0071",
+          "SY0301c.s0072",
+          "SY0301c.s0073",
+          "SY0301c.s0074"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f14",
+        "type": "other",
+        "fact": "The team provisionally favoured the consortium's logo green for the casing. The colour was not finalised and depends on the consortium's style guide.",
+        "agreed": null,
+        "related_action_item": "SY0301c.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301c.s0078",
+          "SY0301c.s0079",
+          "SY0301c.s0085",
+          "SY0301c.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f15",
+        "type": "action_item",
+        "fact": "The user interface designer (A) still has to deliver the screen flow and the wheelchair height and tilt range from the previous meeting.",
+        "agreed": null,
+        "related_action_item": "SY0301c.ai1",
+        "refers_to_meeting": "SY0301b",
+        "evidence_segments": [
+          "SY0301c.s0006",
+          "SY0301c.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f16",
+        "type": "action_item",
+        "fact": "While he was absent, the user interface designer (Tomas, A) was given the task of producing mock-ups of the three screens on the 21-inch screen in the consortium green for the detailed design meeting.",
+        "agreed": null,
+        "related_action_item": "SY0301c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301c.s0088",
+          "SY0301c.s0089",
+          "SY0301c.s0090",
+          "SY0301c.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f17",
+        "type": "action_item",
+        "fact": "The project manager (Helen, B) assigned the mock-up task to the absent user interface designer.",
+        "agreed": null,
+        "related_action_item": "SY0301c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301c.s0089",
+          "SY0301c.s0090"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f18",
+        "type": "action_item",
+        "fact": "At the industrial designer's request, the project manager asked the absent user interface designer to send his height and tilt range to the industrial designer as soon as possible.",
+        "agreed": null,
+        "related_action_item": "SY0301c.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301c.s0092",
+          "SY0301c.s0093"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f19",
+        "type": "action_item",
+        "fact": "The project manager will email the absent user interface designer his new tasks.",
+        "agreed": null,
+        "related_action_item": "SY0301c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301c.s0094",
+          "SY0301c.s0115"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f20",
+        "type": "action_item",
+        "fact": "The marketing expert will ask the consortium whether it has a branding style guide.",
+        "agreed": null,
+        "related_action_item": "SY0301c.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301c.s0082",
+          "SY0301c.s0083",
+          "SY0301c.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f21",
+        "type": "action_item",
+        "fact": "The industrial designer will get a proper quote for the plastic mould, because the 260 euro figure came from a catalogue.",
+        "agreed": null,
+        "related_action_item": "SY0301c.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301c.s0097",
+          "SY0301c.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f22",
+        "type": "action_item",
+        "fact": "The industrial designer will make a rough foam model of the pedestal for the detailed design meeting.",
+        "agreed": null,
+        "related_action_item": "SY0301c.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301c.s0098",
+          "SY0301c.s0099",
+          "SY0301c.s0100"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301c.f23",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301c.f23",
+        "type": "action_item_removed",
+        "fact": "The marketing expert's offer to ask the branches about floor space was dropped by the project manager, because the pedestal is only about 60 by 60 cm.",
+        "agreed": null,
+        "related_action_item": "SY0301c.ai8",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301c.s0102",
+          "SY0301c.s0103",
+          "SY0301c.s0104",
+          "SY0301c.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_UNAGREED_DECISION",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_UNAGREED_DECISION",
+        "segments": [
+          "SY0301c.s0069",
+          "SY0301c.s0070",
+          "SY0301c.s0071",
+          "SY0301c.s0072",
+          "SY0301c.s0073",
+          "SY0301c.s0074",
+          "SY0301c.s0075"
+        ],
+        "note": "The marketing expert declares that the idle screen will show library event adverts. The industrial designer only says 'Hmm', the project manager steers to colours, and the point is never settled."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_TASK_TO_ABSENT",
+        "segments": [
+          "SY0301c.s0003",
+          "SY0301c.s0088",
+          "SY0301c.s0089",
+          "SY0301c.s0090",
+          "SY0301c.s0092",
+          "SY0301c.s0093",
+          "SY0301c.s0094",
+          "SY0301c.s0114"
+        ],
+        "note": "The absent user interface designer (A) is assigned the screen mock-ups and the hand-off of his height and tilt range by the project manager (B), who will email him."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

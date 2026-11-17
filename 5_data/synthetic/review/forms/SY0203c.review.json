@@ -1,0 +1,1367 @@
+{
+  "meeting_id": "SY0203c",
+  "raw_sha256": "efeb16c70fd4fac44b6d13aa4c595ab991f07c919126183b326174d4de8c23aa",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the conceptual design meeting, welcomed back the industrial designer and recapped the functional design meeting: one ten inch tablet model, a carrying handle and no shoulder strap.",
+        "The industrial designer reported that EVA foam costs about five euros per case against about nine for silicone and absorbs drops better, and the team chose EVA foam.",
+        "He found that a handle folding into a stand would need a hinge and locking clip, adding about four and a half euros and pushing the cost to around sixteen euros. The marketing expert added that loose small parts like hinges and clips are flagged as choking hazards under the EN71 toy safety standard. The team therefore dropped the stand in favour of a one-piece handle moulded into the foam.",
+        "The user interface designer presented the cutout layout for the ten inch model, with the handle along the top long edge so the case hangs landscape, and agreed to add raised bumper corners. The marketing expert presented bright two-tone colour schemes, which the team adopted, bringing the estimated production cost to roughly eleven to twelve euros.",
+        "The mock-up for the detailed design meeting was first given to the user interface designer and then handed to the industrial designer, who will build it from real foam offcuts from the supplier."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will build a mock-up of the case from the supplier's foam offcuts for the detailed design meeting. This task was reassigned from the user interface designer.",
+        "The industrial designer will prepare a final cost breakdown.",
+        "The user interface designer will update the layout with raised bumper corners and send it to the industrial designer.",
+        "The marketing expert will prepare three colour combinations to present.",
+        "The project manager will send round the meeting notes.",
+        "Checking how much packaging adds to the production cost was raised, but nobody took it on."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The case body will be made of EVA foam rather than silicone.",
+        "The handle will be moulded into the foam as one piece, with no hinge or clips.",
+        "The folding handle stand is dropped, because it would exceed the 15 euro production cost and the hinge and clip would be choking hazards.",
+        "The case will use a bright two-tone design, with a contrasting colour for the handle and corners.",
+        "The corners will be raised like a bumper for drop protection."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "Nobody is responsible for checking how much packaging adds to the production cost.",
+        "Whether to put a logo on the case was deferred to the detailed design meeting.",
+        "The cost estimate of eleven to twelve euros is rough and still needs a final breakdown."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0203c.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0203c.ai1",
+        "description": "Build a mock-up of the case for the detailed design meeting, using the supplier's foam offcuts",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "reassigned",
+        "previous_owners": [
+          "B"
+        ],
+        "history": [
+          {
+            "segment": "SY0203c.s0016",
+            "event": "assigned",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0203c.s0017",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0203c.s0098",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0203c.s0102",
+            "event": "reassigned",
+            "by": "A",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0203c.s0107",
+            "event": "restated",
+            "by": "A",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0203c.s0015",
+          "SY0203c.s0016",
+          "SY0203c.s0017",
+          "SY0203c.s0096",
+          "SY0203c.s0097",
+          "SY0203c.s0098",
+          "SY0203c.s0099",
+          "SY0203c.s0100",
+          "SY0203c.s0101",
+          "SY0203c.s0102",
+          "SY0203c.s0103",
+          "SY0203c.s0107",
+          "SY0203c.s0108"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0203c.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0203c.ai2",
+        "description": "Check how much packaging adds to the production cost",
+        "owner": null,
+        "owner_unclear": true,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0203c.s0092",
+            "event": "proposed",
+            "by": "A",
+            "owner": null
+          }
+        ],
+        "evidence_segments": [
+          "SY0203c.s0091",
+          "SY0203c.s0092",
+          "SY0203c.s0093",
+          "SY0203c.s0094",
+          "SY0203c.s0095"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0203c.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0203c.ai3",
+        "description": "Prepare a final cost breakdown for the case",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0203c.s0107",
+            "event": "assigned",
+            "by": "A",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0203c.s0108",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0203c.s0107",
+          "SY0203c.s0108"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0203c.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0203c.ai4",
+        "description": "Update the cutout layout with raised bumper corners and send it to the industrial designer",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0203c.s0069",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0203c.s0104",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0203c.s0109",
+            "event": "assigned",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0203c.s0110",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0203c.s0068",
+          "SY0203c.s0069",
+          "SY0203c.s0104",
+          "SY0203c.s0109",
+          "SY0203c.s0110"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0203c.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0203c.ai5",
+        "description": "Prepare three colour combinations to present at the detailed design meeting",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0203c.s0111",
+            "event": "assigned",
+            "by": "A",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0203c.s0112",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0203c.s0111",
+          "SY0203c.s0112"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0203c.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0203c.ai6",
+        "description": "Send round the meeting notes",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0203c.s0113",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0203c.s0113"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f1",
+        "type": "decision",
+        "fact": "The team chose EVA foam over silicone for the case body, because it costs about five euros per case against nine and absorbs drops better.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203c.s0020",
+          "SY0203c.s0021",
+          "SY0203c.s0022",
+          "SY0203c.s0024",
+          "SY0203c.s0028",
+          "SY0203c.s0029",
+          "SY0203c.s0030",
+          "SY0203c.s0031"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f2",
+        "type": "decision",
+        "fact": "The handle will be moulded into the foam as one piece, with no hinge or clips, at about 1.50 euros extra.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203c.s0046",
+          "SY0203c.s0047",
+          "SY0203c.s0048",
+          "SY0203c.s0052"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f3",
+        "type": "decision",
+        "fact": "The folding handle stand was dropped, because the hinge and locking clip would add about 4.50 euros and bring the cost to around 16 euros, and they would be choking hazards.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203c.s0034",
+          "SY0203c.s0035",
+          "SY0203c.s0037",
+          "SY0203c.s0041",
+          "SY0203c.s0049",
+          "SY0203c.s0050",
+          "SY0203c.s0051",
+          "SY0203c.s0052"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f4",
+        "type": "plan_change",
+        "fact": "The handle-that-folds-into-a-stand idea, left pending at the functional design meeting, was rejected in this meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0203b",
+        "evidence_segments": [
+          "SY0203c.s0033",
+          "SY0203c.s0049",
+          "SY0203c.s0050",
+          "SY0203c.s0051",
+          "SY0203c.s0052"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f5",
+        "type": "decision",
+        "fact": "The case will have a bright two-tone design, with a contrasting colour for the handle and corners.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203c.s0072",
+          "SY0203c.s0073",
+          "SY0203c.s0076",
+          "SY0203c.s0081",
+          "SY0203c.s0082",
+          "SY0203c.s0083",
+          "SY0203c.s0084"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f6",
+        "type": "decision",
+        "fact": "The corners will be raised like a bumper for drop protection.",
+        "agreed": true,
+        "related_action_item": "SY0203c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203c.s0068",
+          "SY0203c.s0069",
+          "SY0203c.s0070"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f7",
+        "type": "other",
+        "fact": "The user interface designer's layout puts the camera cutout top left on the back, open power and volume buttons on the right edge, open ports on the bottom, and the handle along the top long edge so the case hangs landscape.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203c.s0058",
+          "SY0203c.s0059",
+          "SY0203c.s0060",
+          "SY0203c.s0061",
+          "SY0203c.s0062",
+          "SY0203c.s0063",
+          "SY0203c.s0064",
+          "SY0203c.s0065"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f8",
+        "type": "other",
+        "fact": "The industrial designer estimated the production cost at roughly eleven to twelve euros, under the 15 euro limit.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203c.s0078",
+          "SY0203c.s0079"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f9",
+        "type": "other",
+        "fact": "The marketing expert reported that the EN71 toy safety standard flags loose small parts such as hinge pins and clips as choking hazards.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203c.s0040",
+          "SY0203c.s0041",
+          "SY0203c.s0043"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f10",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer proposed cutting a groove in the back of the case so it can be propped up instead of using a stand. The industrial designer said it would weaken the foam, and it was not adopted.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203c.s0053",
+          "SY0203c.s0054",
+          "SY0203c.s0055",
+          "SY0203c.s0056"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f11",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert proposed including a sticker sheet so kids can decorate the case. It was left out over choking concerns and poor adhesion to foam.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203c.s0085",
+          "SY0203c.s0086",
+          "SY0203c.s0087",
+          "SY0203c.s0088",
+          "SY0203c.s0089",
+          "SY0203c.s0090"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f12",
+        "type": "action_item",
+        "fact": "The industrial designer will build the case mock-up from the supplier's foam offcuts.",
+        "agreed": null,
+        "related_action_item": "SY0203c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203c.s0098",
+          "SY0203c.s0102",
+          "SY0203c.s0107",
+          "SY0203c.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f13",
+        "type": "plan_change",
+        "fact": "The mock-up task was first assigned to the user interface designer and then reassigned to the industrial designer, because he has real foam offcuts from the supplier.",
+        "agreed": null,
+        "related_action_item": "SY0203c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203c.s0016",
+          "SY0203c.s0017",
+          "SY0203c.s0098",
+          "SY0203c.s0099",
+          "SY0203c.s0100",
+          "SY0203c.s0101",
+          "SY0203c.s0102"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f14",
+        "type": "action_item",
+        "fact": "Someone should check how much packaging adds to the production cost, but nobody took it on.",
+        "agreed": null,
+        "related_action_item": "SY0203c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203c.s0092",
+          "SY0203c.s0093",
+          "SY0203c.s0094",
+          "SY0203c.s0095"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f15",
+        "type": "action_item",
+        "fact": "The industrial designer will prepare a final cost breakdown.",
+        "agreed": null,
+        "related_action_item": "SY0203c.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203c.s0107",
+          "SY0203c.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f16",
+        "type": "action_item",
+        "fact": "The user interface designer will update the layout with raised corners and send it to the industrial designer.",
+        "agreed": null,
+        "related_action_item": "SY0203c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203c.s0069",
+          "SY0203c.s0104",
+          "SY0203c.s0109",
+          "SY0203c.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f17",
+        "type": "action_item",
+        "fact": "The marketing expert will prepare three colour combinations.",
+        "agreed": null,
+        "related_action_item": "SY0203c.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203c.s0111",
+          "SY0203c.s0112"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f18",
+        "type": "action_item",
+        "fact": "The project manager will send round the meeting notes.",
+        "agreed": null,
+        "related_action_item": "SY0203c.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203c.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f19",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recapped the functional design meeting: one ten inch tablet model, a carrying handle, no shoulder strap, and the open question of the handle folding into a stand.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0203b",
+        "evidence_segments": [
+          "SY0203c.s0009",
+          "SY0203c.s0010",
+          "SY0203c.s0011",
+          "SY0203c.s0012"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f20",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer, who missed the functional design meeting, confirmed he received the project manager's email with his tasks and the notes.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0203b",
+        "evidence_segments": [
+          "SY0203c.s0005",
+          "SY0203c.s0006",
+          "SY0203c.s0007",
+          "SY0203c.s0008"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f21",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert recalled that thick corners were discussed at the kickoff meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0203a",
+        "evidence_segments": [
+          "SY0203c.s0066"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203c.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203c.f22",
+        "type": "other",
+        "fact": "Whether to put a logo on the case was deferred to the detailed design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203c.s0115",
+          "SY0203c.s0116",
+          "SY0203c.s0117"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_REASSIGNED_OR_DROPPED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_REASSIGNED_OR_DROPPED",
+        "segments": [
+          "SY0203c.s0015",
+          "SY0203c.s0016",
+          "SY0203c.s0017",
+          "SY0203c.s0096",
+          "SY0203c.s0097",
+          "SY0203c.s0098",
+          "SY0203c.s0099",
+          "SY0203c.s0100",
+          "SY0203c.s0101",
+          "SY0203c.s0102"
+        ],
+        "note": "The mock-up is assigned to the UI designer early on, then reassigned to the industrial designer, who has real foam offcuts from the supplier."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_VAGUE_NO_OWNER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_VAGUE_NO_OWNER",
+        "segments": [
+          "SY0203c.s0091",
+          "SY0203c.s0092",
+          "SY0203c.s0093",
+          "SY0203c.s0094",
+          "SY0203c.s0095"
+        ],
+        "note": "The PM says someone should probably check what packaging adds to the cost. Nobody takes it and the conversation moves on."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

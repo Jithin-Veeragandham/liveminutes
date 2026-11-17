@@ -1,0 +1,1316 @@
+{
+  "meeting_id": "SY0204d",
+  "raw_sha256": "4f673f184cfb1d7d14cfc01f4edbee306fa7186c4a9e96bf744e1932e2035bc8",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting, noted that the user interface designer was absent on a training course, and confirmed that the previous minutes had gone round.",
+        "The marketing expert reported that eleven of twelve user panel members could read the 1.8 centimetre digits on the mock-up at arm's length, but that some wanted bolder digits and a larger star icon.",
+        "She gave an updated parts cost of 10.60 euros with the coin cell and steel clip. The open task of finding assembly and packaging costs was offered by the industrial designer but taken by the marketing expert, who already has the relevant supplier contacts.",
+        "The industrial designer presented a foam model of the housing with the spring-steel clip, the twist-off battery cap and a moulded safety cord loop. The team kept the loop and chose a single dark blue housing colour.",
+        "The team reviewed the user interface designer's screen layout and asked for the word 'yesterday' to be written out. The marketing expert raised the family app again and it was rejected. In the evaluation the product met the simplicity and readability aims, with total cost still to be confirmed."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The marketing expert will get quotes for assembly and packaging costs, which the industrial designer had first offered to do, and will report at once if the figure comes close to the 1.90 euro margin.",
+        "The user interface designer (absent) will update the screen layout with bolder digits at the same height, a larger star icon and 'yesterday' written out instead of a Y label.",
+        "The user interface designer (absent) will write a short instruction card on changing the battery and setting the time.",
+        "The industrial designer will make a final printed plastic model in dark blue, including the safety cord loop, for sign-off.",
+        "The project manager will email the user interface designer with the changes and her tasks, and will send round the minutes."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The step-count digits stay 1.8 centimetres tall but will use a bolder, heavier font.",
+        "The star icon will be made larger, about half the height of the digits.",
+        "The safety cord loop moulded into the top of the clip will be kept. No cord will be included in the box.",
+        "The housing will come in one colour only for launch: dark blue with a white screen face.",
+        "The yesterday screen will show the word 'yesterday' written out instead of a Y label.",
+        "The family app is not part of this product."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "Assembly and packaging costs are still unknown. Parts cost 10.60 euros, which leaves 1.90 euros under the 12.50 euro limit.",
+        "The marketing expert still sees demand for a family app, but it has been rejected for this version.",
+        "The marketing expert would have liked several housing colours, but only one colour will be made for launch."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0204d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0204d.ai1",
+        "description": "Get quotes for assembly and packaging costs on top of the parts cost, and report straight away if the figure comes close to the 1.90 euro margin",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0204d.s0043",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0204d.s0046",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0204d.s0050",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0204d.s0051",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0204d.s0109",
+            "event": "restated",
+            "by": "D",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0204d.s0038",
+          "SY0204d.s0039",
+          "SY0204d.s0040",
+          "SY0204d.s0042",
+          "SY0204d.s0043",
+          "SY0204d.s0045",
+          "SY0204d.s0046",
+          "SY0204d.s0047",
+          "SY0204d.s0049",
+          "SY0204d.s0050",
+          "SY0204d.s0051",
+          "SY0204d.s0053",
+          "SY0204d.s0054",
+          "SY0204d.s0109",
+          "SY0204d.s0110"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0204d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0204d.ai2",
+        "description": "Update the screen layout with bolder digits at the same height, a larger star icon about half the digit height, and 'yesterday' written out instead of the Y label",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0204d.s0030",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0204d.s0090",
+            "event": "restated",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0204d.s0113",
+            "event": "restated",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0204d.s0019",
+          "SY0204d.s0021",
+          "SY0204d.s0025",
+          "SY0204d.s0027",
+          "SY0204d.s0028",
+          "SY0204d.s0030",
+          "SY0204d.s0088",
+          "SY0204d.s0090",
+          "SY0204d.s0113"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0204d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0204d.ai3",
+        "description": "Write a short instruction card explaining how to change the battery and set the time",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0204d.s0114",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0204d.s0114",
+          "SY0204d.s0115"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0204d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0204d.ai4",
+        "description": "Make a final printed plastic model of the housing in dark blue, including the safety cord loop, to show at sign-off",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0204d.s0111",
+            "event": "proposed",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0204d.s0112",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0204d.s0111",
+          "SY0204d.s0112"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0204d.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0204d.ai5",
+        "description": "Email the user interface designer with the layout changes and her tasks",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0204d.s0032",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0204d.s0116",
+            "event": "restated",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0204d.s0032",
+          "SY0204d.s0090",
+          "SY0204d.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0204d.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0204d.ai6",
+        "description": "Send round the minutes of the meeting",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0204d.s0116",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0204d.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f1",
+        "type": "absence",
+        "fact": "The user interface designer (Grace) was absent because she was on a training course all day.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204d.s0004"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager confirmed that the minutes of the previous meeting had gone round.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0204c",
+        "evidence_segments": [
+          "SY0204d.s0007",
+          "SY0204d.s0008",
+          "SY0204d.s0009"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert took the user interface designer's mock-up with 1.8 centimetre digits to the user panel, as agreed at the conceptual design meeting. Eleven of twelve panel members could read it at arm's length.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0204c",
+        "evidence_segments": [
+          "SY0204d.s0013",
+          "SY0204d.s0014",
+          "SY0204d.s0016"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f4",
+        "type": "decision",
+        "fact": "The digits stay the same height but will use a bolder, heavier font.",
+        "agreed": true,
+        "related_action_item": "SY0204d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204d.s0019",
+          "SY0204d.s0020",
+          "SY0204d.s0021",
+          "SY0204d.s0022",
+          "SY0204d.s0028"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f5",
+        "type": "decision",
+        "fact": "The star icon will be made larger, about half the height of the digits, because some panel members did not notice it.",
+        "agreed": true,
+        "related_action_item": "SY0204d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204d.s0025",
+          "SY0204d.s0026",
+          "SY0204d.s0027",
+          "SY0204d.s0028"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f6",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert said the earlier 10.30 euro parts cost excluded the battery. The updated parts cost with the coin cell and steel clip is 10.60 euros.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0204c",
+        "evidence_segments": [
+          "SY0204d.s0034",
+          "SY0204d.s0035",
+          "SY0204d.s0037"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f7",
+        "type": "other",
+        "fact": "After 10.60 euros in parts, 1.90 euros are left under the 12.50 euro production cost limit for assembly and packaging.",
+        "agreed": null,
+        "related_action_item": "SY0204d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204d.s0042",
+          "SY0204d.s0053"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f8",
+        "type": "plan_change",
+        "fact": "The task of finding assembly and packaging costs, which had no owner at the previous meeting, was offered by the industrial designer and then taken by the marketing expert.",
+        "agreed": null,
+        "related_action_item": "SY0204d.ai1",
+        "refers_to_meeting": "SY0204c",
+        "evidence_segments": [
+          "SY0204d.s0040",
+          "SY0204d.s0043",
+          "SY0204d.s0045",
+          "SY0204d.s0046",
+          "SY0204d.s0049",
+          "SY0204d.s0050"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f9",
+        "type": "action_item",
+        "fact": "The marketing expert will get quotes for assembly and packaging costs.",
+        "agreed": null,
+        "related_action_item": "SY0204d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204d.s0046",
+          "SY0204d.s0050",
+          "SY0204d.s0051",
+          "SY0204d.s0109",
+          "SY0204d.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f10",
+        "type": "action_item",
+        "fact": "The user interface designer, who was absent, was assigned to update the layout with bolder digits, a larger star and 'yesterday' written out.",
+        "agreed": null,
+        "related_action_item": "SY0204d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204d.s0030",
+          "SY0204d.s0090",
+          "SY0204d.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f11",
+        "type": "action_item",
+        "fact": "The user interface designer, who was absent, was assigned to write an instruction card on changing the battery and setting the time.",
+        "agreed": null,
+        "related_action_item": "SY0204d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204d.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f12",
+        "type": "action_item",
+        "fact": "The industrial designer will make a final printed plastic model in dark blue with the safety cord loop for sign-off.",
+        "agreed": null,
+        "related_action_item": "SY0204d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204d.s0111",
+          "SY0204d.s0112"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f13",
+        "type": "action_item",
+        "fact": "The project manager will email the user interface designer and send round the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0204d.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204d.s0032",
+          "SY0204d.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f14",
+        "type": "other",
+        "fact": "The industrial designer's foam model has the spring-steel clip on the back, a 3 centimetre ridged twist-off battery cap at the bottom that opens with a quarter turn, and a large round button below the screen.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204d.s0057",
+          "SY0204d.s0059",
+          "SY0204d.s0060",
+          "SY0204d.s0062",
+          "SY0204d.s0064"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f15",
+        "type": "plan_change",
+        "fact": "The safety cord loop, left open at the conceptual design meeting until costs were known, is now included because it is moulded into the clip at almost no cost.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0204c",
+        "evidence_segments": [
+          "SY0204d.s0066",
+          "SY0204d.s0067",
+          "SY0204d.s0068",
+          "SY0204d.s0069",
+          "SY0204d.s0072",
+          "SY0204d.s0073"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f16",
+        "type": "decision",
+        "fact": "The safety cord loop is kept, but no cord will be included in the box.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204d.s0069",
+          "SY0204d.s0073",
+          "SY0204d.s0074",
+          "SY0204d.s0075"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f17",
+        "type": "decision",
+        "fact": "The housing will be made in one colour only for launch: dark blue with a white screen face.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204d.s0077",
+          "SY0204d.s0080",
+          "SY0204d.s0081",
+          "SY0204d.s0082"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f18",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert proposed offering several housing colours, such as red. The project manager preferred one colour because each colour adds a moulding set-up.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204d.s0078",
+          "SY0204d.s0079",
+          "SY0204d.s0080"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f19",
+        "type": "decision",
+        "fact": "The yesterday screen will show the word 'yesterday' written out instead of a Y label.",
+        "agreed": true,
+        "related_action_item": "SY0204d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204d.s0086",
+          "SY0204d.s0088",
+          "SY0204d.s0089",
+          "SY0204d.s0090"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f20",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert again raised the family app for a future version. The project manager and industrial designer rejected it for this product.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204d.s0093",
+          "SY0204d.s0094",
+          "SY0204d.s0095",
+          "SY0204d.s0096",
+          "SY0204d.s0097"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0204d.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0204d.f21",
+        "type": "other",
+        "fact": "In the evaluation, the team judged the product simple and readable, with the total cost still to be confirmed once assembly and packaging figures are known.",
+        "agreed": null,
+        "related_action_item": "SY0204d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0204d.s0099",
+          "SY0204d.s0100",
+          "SY0204d.s0101",
+          "SY0204d.s0102",
+          "SY0204d.s0103",
+          "SY0204d.s0104",
+          "SY0204d.s0105",
+          "SY0204d.s0106"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_OFFERED_TAKEN_BY_OTHER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_OFFERED_TAKEN_BY_OTHER",
+        "segments": [
+          "SY0204d.s0043",
+          "SY0204d.s0044",
+          "SY0204d.s0045",
+          "SY0204d.s0046",
+          "SY0204d.s0047",
+          "SY0204d.s0048",
+          "SY0204d.s0049",
+          "SY0204d.s0050",
+          "SY0204d.s0051"
+        ],
+        "note": "The industrial designer offers to ring the assembly firm, but the marketing expert takes the assembly and packaging costing because she already has the supplier contacts. The industrial designer agrees and the project manager confirms her as owner."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_TASK_TO_ABSENT",
+        "segments": [
+          "SY0204d.s0004",
+          "SY0204d.s0030",
+          "SY0204d.s0032",
+          "SY0204d.s0090",
+          "SY0204d.s0113",
+          "SY0204d.s0114"
+        ],
+        "note": "The absent user interface designer is given the layout changes and the instruction card, and the project manager will email her."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

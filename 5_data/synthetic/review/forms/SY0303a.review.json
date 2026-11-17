@@ -1,0 +1,1000 @@
+{
+  "meeting_id": "SY0303a",
+  "raw_sha256": "d9b907f7620fa7103cb36928094a5984863ac4aea3357b5d42985d0b6af701af",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the kickoff meeting, noted that the marketing expert was absent for the day, and had the user interface designer and industrial designer introduce themselves.",
+        "He presented the project, a protective case for the company's existing children's educational tablet, to be sold separately as an accessory and sold internationally, and led a whiteboard warm-up in which each member drew a favourite animal.",
+        "He gave the financial targets: a selling price of 25 euros and a maximum unit production cost of 12.50 euros, excluding packaging.",
+        "The team discussed initial ideas, including the need to survive frequent drops and a carrying handle that could fold into a stand, and agreed on a target age group of four to eight.",
+        "The industrial designer declared EVA foam as the material, but nobody agreed and the project manager deferred the material question. He then assigned preparation tasks, including market research for the absent marketing expert."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will research the working design, including materials and drop protection.",
+        "The user interface designer will study how children interact with the case, including the handle, stand, access to buttons and charging port, and the screen protector.",
+        "The marketing expert, who was absent, will do market research on what parents want in a case and on competitors' products and prices.",
+        "The project manager will email the brief and her task to the marketing expert.",
+        "The project manager will send out the minutes of the meeting.",
+        "The project manager will check with management whether there is a required company colour scheme."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The target age group for the case is children aged four to eight."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The case material is unresolved. EVA foam was put forward but not agreed, and the decision was postponed until costs are known.",
+        "The 12.50 euro production cost limit is considered tight for a durable children's case.",
+        "It is unknown whether the case must follow a company colour scheme or look.",
+        "The marketing expert has not yet been informed of her assignment."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303a.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303a.ai1",
+        "description": "Research the working design of the case, including materials and drop protection, for the next meeting.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303a.s0078",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0303a.s0080",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0303a.s0105",
+            "event": "restated",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303a.s0078",
+          "SY0303a.s0079",
+          "SY0303a.s0080",
+          "SY0303a.s0105"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303a.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303a.ai2",
+        "description": "Study how children interact with the case (handle, stand, access to buttons and charging port), including the screen protector.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303a.s0081",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0303a.s0083",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0303a.s0105",
+            "event": "restated",
+            "by": "D",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303a.s0081",
+          "SY0303a.s0082",
+          "SY0303a.s0083",
+          "SY0303a.s0084",
+          "SY0303a.s0085",
+          "SY0303a.s0105"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303a.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303a.ai3",
+        "description": "Do market research on what parents look for in a tablet case and on competitors' cases and prices.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303a.s0087",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0303a.s0105",
+            "event": "restated",
+            "by": "D",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303a.s0005",
+          "SY0303a.s0087",
+          "SY0303a.s0088",
+          "SY0303a.s0089",
+          "SY0303a.s0090",
+          "SY0303a.s0105"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303a.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303a.ai4",
+        "description": "Email the project brief and her market research task to the absent marketing expert.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303a.s0090",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303a.s0089",
+          "SY0303a.s0090"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303a.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303a.ai5",
+        "description": "Send out the minutes of the kickoff meeting.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303a.s0094",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303a.s0094"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303a.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303a.ai6",
+        "description": "Check with management whether the case must follow a company colour scheme or look.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303a.s0101",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303a.s0100",
+          "SY0303a.s0101"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303a.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303a.f1",
+        "type": "absence",
+        "fact": "Priya (A), the marketing expert, was absent from the kickoff meeting, reportedly at a trade show all day.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303a.s0005",
+          "SY0303a.s0006",
+          "SY0303a.s0007",
+          "SY0303a.s0008"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303a.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303a.f2",
+        "type": "action_item",
+        "fact": "While absent, Priya (A), the marketing expert, was assigned the market research by the project manager Marcus (D): what parents want in a case, what competitors sell, and at what price.",
+        "agreed": null,
+        "related_action_item": "SY0303a.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303a.s0087",
+          "SY0303a.s0088"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303a.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303a.f3",
+        "type": "other",
+        "fact": "Priya (A) had not yet been told about her task during the meeting. Marcus (D) said he would email her the brief and the task afterwards.",
+        "agreed": null,
+        "related_action_item": "SY0303a.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303a.s0089",
+          "SY0303a.s0090"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303a.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303a.f4",
+        "type": "action_item",
+        "fact": "Lena (C), the industrial designer, was assigned by Marcus (D) to research the working design, including materials and drop protection, and accepted.",
+        "agreed": null,
+        "related_action_item": "SY0303a.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303a.s0078",
+          "SY0303a.s0079",
+          "SY0303a.s0080"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303a.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303a.f5",
+        "type": "action_item",
+        "fact": "Tom (B), the user interface designer, was assigned by Marcus (D) to look at how children interact with the case: the handle, stand, buttons, charging port and screen protector.",
+        "agreed": null,
+        "related_action_item": "SY0303a.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303a.s0081",
+          "SY0303a.s0082",
+          "SY0303a.s0083",
+          "SY0303a.s0084",
+          "SY0303a.s0085"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303a.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303a.f6",
+        "type": "action_item",
+        "fact": "Marcus (D) will send out the minutes of the meeting.",
+        "agreed": null,
+        "related_action_item": "SY0303a.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303a.s0094"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303a.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303a.f7",
+        "type": "action_item",
+        "fact": "Marcus (D) will check with management whether a company colour scheme applies.",
+        "agreed": null,
+        "related_action_item": "SY0303a.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303a.s0100",
+          "SY0303a.s0101"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303a.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303a.f8",
+        "type": "decision",
+        "fact": "The team agreed on a target age group of four to eight years.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303a.s0065",
+          "SY0303a.s0066",
+          "SY0303a.s0067",
+          "SY0303a.s0068",
+          "SY0303a.s0069",
+          "SY0303a.s0070"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303a.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303a.f9",
+        "type": "unagreed_proposal",
+        "fact": "Lena (C) declared that the case would be made of EVA foam and called it decided, but nobody agreed. Tom (B) hesitated and Marcus (D) postponed the material question until costs are known.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303a.s0072",
+          "SY0303a.s0073",
+          "SY0303a.s0074",
+          "SY0303a.s0075",
+          "SY0303a.s0076",
+          "SY0303a.s0077"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303a.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303a.f10",
+        "type": "other",
+        "fact": "The target selling price is 25 euros and the maximum production cost is 12.50 euros per unit, excluding packaging.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303a.s0047",
+          "SY0303a.s0048",
+          "SY0303a.s0049",
+          "SY0303a.s0050"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303a.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303a.f11",
+        "type": "other",
+        "fact": "The product is a protective case for the company's existing children's educational tablet, sold separately as an accessory and marketed internationally. The tablet's shape cannot be changed.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303a.s0021",
+          "SY0303a.s0022",
+          "SY0303a.s0023",
+          "SY0303a.s0024",
+          "SY0303a.s0025",
+          "SY0303a.s0027",
+          "SY0303a.s0028",
+          "SY0303a.s0052",
+          "SY0303a.s0097",
+          "SY0303a.s0098"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303a.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303a.f12",
+        "type": "other",
+        "fact": "A carrying handle that folds back into a stand was suggested and received positively, but it was not formally decided.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303a.s0060",
+          "SY0303a.s0061",
+          "SY0303a.s0062",
+          "SY0303a.s0063",
+          "SY0303a.s0064"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303a.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303a.f13",
+        "type": "other",
+        "fact": "The next meeting is in about half an hour in the same room.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303a.s0107",
+          "SY0303a.s0108",
+          "SY0303a.s0109"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_TASK_TO_ABSENT",
+        "segments": [
+          "SY0303a.s0005",
+          "SY0303a.s0006",
+          "SY0303a.s0087",
+          "SY0303a.s0088",
+          "SY0303a.s0089",
+          "SY0303a.s0090",
+          "SY0303a.s0105"
+        ],
+        "note": "The PM assigns the market research task to the absent marketing expert Priya (A) and says he will email her, since she does not yet know about it."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_UNAGREED_DECISION",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_UNAGREED_DECISION",
+        "segments": [
+          "SY0303a.s0072",
+          "SY0303a.s0073",
+          "SY0303a.s0074",
+          "SY0303a.s0075",
+          "SY0303a.s0076",
+          "SY0303a.s0077"
+        ],
+        "note": "The ID declares EVA foam 'decided', but the UI hesitates, the PM defers materials, and the meeting moves on without agreement. It is omitted from decisions and the recap."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

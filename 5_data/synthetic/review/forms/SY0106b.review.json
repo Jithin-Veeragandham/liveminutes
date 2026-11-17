@@ -1,0 +1,1253 @@
+{
+  "meeting_id": "SY0106b",
+  "raw_sha256": "5191faf78a45a7ab2c872cba0d454f11884b522ef2b763167ca10e70e13a3ae3",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the functional design meeting and welcomed back the user interface designer, who confirmed she had received the kickoff minutes, the brief, the height question and the fines idea.",
+        "The industrial designer presented component costs: an RFID pad at about 280 euros, a barcode scanner at about 110, a thermal printer at about 140, a 22-inch touchscreen at 650 euros and a PC unit at about 300, totalling 1,480 euros before a housing estimated at 300 to 400 euros, which puts the kiosk at or over the 1,800 euro budget. He also reported on his visit to the central library, where staff named printer jams and paper running out as the main problem, liked the key-locked front panel, and asked for a staff maintenance mode, and he showed a first housing sketch.",
+        "The marketing expert reported that university users want speed while public library users want obviousness, that competitors offer checkout, renewals and loan lists, and that a language button on the first screen is common; her suggestion of email receipts was parked.",
+        "The user interface designer reported accessibility guidelines from her workshop and presented the screen flow from card scan to receipt. She advised displaying fines but taking payment at the desk, and identified SIP2 as a likely standard interface to library catalogue systems."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will produce a housing concept using the agreed heights, with a firmer cost breakdown, and look for cheaper sheet metal to save money.",
+        "The user interface designer will produce screen mock-ups for the checkout flow and the staff maintenance mode.",
+        "The user interface designer will confirm whether the major library catalogue vendors support the SIP2 standard, and whether patron email addresses are available through it.",
+        "The marketing expert will research look and feel for the conceptual design, including what library networks prefer in colours, materials and trends.",
+        "The marketing expert will find out which languages libraries need for the language button.",
+        "The project manager will write up the minutes and send them to the team."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The kiosk will keep the 22-inch touchscreen rather than the cheaper 15-inch one, and savings will be sought elsewhere.",
+        "The screen will be tilted at about one metre high and the book pad will sit at about 80 centimetres, within the accessibility guidelines' reach range.",
+        "The interface flow will be: a start screen with one large check-out button and a language button, card scan, books placed on the pad or barcodes scanned, a list of items, then done with a choice of receipt or no receipt; renew and loan list options will be secondary.",
+        "There will be a hidden staff maintenance mode opened with a staff card.",
+        "The kiosk will display outstanding fines after the card scan, but fines will be paid at the desk, not at the kiosk.",
+        "The next meeting, on conceptual design, will be at the same time next Thursday."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The estimated cost of 1,480 euros plus a 300 to 400 euro housing puts the kiosk at or over the 1,800 euro production budget; savings on the housing are still to be found.",
+        "Email receipts were suggested but parked, because it is unknown whether the catalogue system provides patron email addresses.",
+        "It is not yet confirmed that all major catalogue vendors support the SIP2 standard.",
+        "Fine payment at the kiosk might be considered for a later version but is out of the current design."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0106b.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0106b.ai1",
+        "description": "Produce a housing concept using the agreed screen and pad heights, with a firmer cost breakdown, and look for cheaper sheet metal to reduce cost.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0106b.s0035",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0106b.s0107",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0106b.s0108",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0106b.s0109",
+            "event": "restated",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0106b.s0035",
+          "SY0106b.s0107",
+          "SY0106b.s0108",
+          "SY0106b.s0109"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0106b.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0106b.ai2",
+        "description": "Produce screen mock-ups for the checkout flow and the staff maintenance mode.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0106b.s0110",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0106b.s0111",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0106b.s0110",
+          "SY0106b.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0106b.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0106b.ai3",
+        "description": "Confirm whether the major library catalogue vendors support the SIP2 standard for checking cards and marking books out, and whether patron email addresses come through.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0106b.s0095",
+            "event": "restated",
+            "by": "D",
+            "owner": null
+          },
+          {
+            "segment": "SY0106b.s0100",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0106b.s0101",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0106b.s0095",
+          "SY0106b.s0096",
+          "SY0106b.s0098",
+          "SY0106b.s0100",
+          "SY0106b.s0101",
+          "SY0106b.s0103"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0106b.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0106b.ai4",
+        "description": "Research look and feel for the conceptual design: what library networks prefer in colours, materials and trends.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0106b.s0112",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0106b.s0113",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0106b.s0112",
+          "SY0106b.s0113"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0106b.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0106b.ai5",
+        "description": "Find out which languages libraries need for the language button.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0106b.s0113",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0106b.s0054",
+          "SY0106b.s0113"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0106b.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0106b.ai6",
+        "description": "Write up the minutes and send them to the team.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0106b.s0115",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0106b.s0115"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f1",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer confirmed she received the kickoff minutes from the project manager, including the brief, the screen and pad height question, and the fines payment idea.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0106a",
+        "evidence_segments": [
+          "SY0106b.s0006",
+          "SY0106b.s0007"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer carried out the central library visit assigned at the kickoff, going with his cousin; staff said printer jams and paper running out are the main problem, liked the key-locked front panel, and asked for a staff mode.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0106a",
+        "evidence_segments": [
+          "SY0106b.s0037",
+          "SY0106b.s0039",
+          "SY0106b.s0040",
+          "SY0106b.s0041",
+          "SY0106b.s0043"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager raised the catalogue interface question left without an owner at the kickoff.",
+        "agreed": null,
+        "related_action_item": "SY0106b.ai3",
+        "refers_to_meeting": "SY0106a",
+        "evidence_segments": [
+          "SY0106b.s0095"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f4",
+        "type": "other",
+        "fact": "The 22-inch touchscreen costs 650 euros; the 400 euro figure the industrial designer first gave was for a 15-inch screen.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106b.s0018",
+          "SY0106b.s0019"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f5",
+        "type": "other",
+        "fact": "Components before the housing total 1,480 euros (RFID pad 280, barcode scanner 110, printer 140, 22-inch screen 650, PC unit 300), and the housing is estimated at 300 to 400 euros, putting the kiosk at or over the 1,800 euro budget.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106b.s0015",
+          "SY0106b.s0016",
+          "SY0106b.s0017",
+          "SY0106b.s0019",
+          "SY0106b.s0021",
+          "SY0106b.s0023",
+          "SY0106b.s0024",
+          "SY0106b.s0025"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f6",
+        "type": "decision",
+        "fact": "The team will keep the 22-inch touchscreen and look for savings elsewhere.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106b.s0032",
+          "SY0106b.s0033",
+          "SY0106b.s0034"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f7",
+        "type": "unagreed_proposal",
+        "fact": "The project manager asked whether a smaller 15-inch screen could be used to save money; it was rejected for readability and touch-target reasons.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106b.s0031",
+          "SY0106b.s0032",
+          "SY0106b.s0033",
+          "SY0106b.s0034"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f8",
+        "type": "decision",
+        "fact": "The screen will be tilted at about one metre high and the book pad will be at about 80 centimetres.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106b.s0067",
+          "SY0106b.s0068",
+          "SY0106b.s0070",
+          "SY0106b.s0071",
+          "SY0106b.s0072",
+          "SY0106b.s0073",
+          "SY0106b.s0074",
+          "SY0106b.s0075"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f9",
+        "type": "decision",
+        "fact": "The interface flow is a start screen with a large check-out button and a language button, card scan, books on the pad or barcode scan, item list, then done with receipt or no receipt; renew and loans are secondary options.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106b.s0076",
+          "SY0106b.s0077",
+          "SY0106b.s0078",
+          "SY0106b.s0079",
+          "SY0106b.s0080",
+          "SY0106b.s0081",
+          "SY0106b.s0082",
+          "SY0106b.s0083"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f10",
+        "type": "decision",
+        "fact": "The kiosk will have a hidden staff maintenance mode opened with a staff card.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106b.s0043",
+          "SY0106b.s0044",
+          "SY0106b.s0084"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f11",
+        "type": "decision",
+        "fact": "The kiosk will display outstanding fines after the card scan, but payment will be made at the desk, not at the kiosk.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106b.s0087",
+          "SY0106b.s0088",
+          "SY0106b.s0089",
+          "SY0106b.s0090",
+          "SY0106b.s0092",
+          "SY0106b.s0093",
+          "SY0106b.s0094"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f12",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested offering email receipts; it was parked until it is known whether the catalogue system provides email addresses.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106b.s0059",
+          "SY0106b.s0060",
+          "SY0106b.s0061",
+          "SY0106b.s0062",
+          "SY0106b.s0063"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f13",
+        "type": "decision",
+        "fact": "The next meeting, on conceptual design, will be at the same time next Thursday.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106b.s0106",
+          "SY0106b.s0116",
+          "SY0106b.s0117",
+          "SY0106b.s0118",
+          "SY0106b.s0119"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f14",
+        "type": "plan_change",
+        "fact": "The catalogue interface question, which had no owner after the kickoff, was taken on by the user interface designer, who will confirm SIP2 support.",
+        "agreed": null,
+        "related_action_item": "SY0106b.ai3",
+        "refers_to_meeting": "SY0106a",
+        "evidence_segments": [
+          "SY0106b.s0095",
+          "SY0106b.s0100",
+          "SY0106b.s0101"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f15",
+        "type": "action_item",
+        "fact": "The industrial designer will produce a housing concept with the agreed heights and a firmer cost breakdown, looking for cheaper sheet metal.",
+        "agreed": null,
+        "related_action_item": "SY0106b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106b.s0035",
+          "SY0106b.s0107",
+          "SY0106b.s0108",
+          "SY0106b.s0109"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f16",
+        "type": "action_item",
+        "fact": "The user interface designer will produce screen mock-ups for the checkout flow and staff mode.",
+        "agreed": null,
+        "related_action_item": "SY0106b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106b.s0110",
+          "SY0106b.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f17",
+        "type": "action_item",
+        "fact": "The user interface designer will confirm whether major catalogue vendors support SIP2.",
+        "agreed": null,
+        "related_action_item": "SY0106b.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106b.s0100",
+          "SY0106b.s0101"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f18",
+        "type": "action_item",
+        "fact": "The marketing expert will research look and feel preferences of library networks.",
+        "agreed": null,
+        "related_action_item": "SY0106b.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106b.s0112",
+          "SY0106b.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f19",
+        "type": "action_item",
+        "fact": "The marketing expert will check which languages libraries need for the language button.",
+        "agreed": null,
+        "related_action_item": "SY0106b.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106b.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106b.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106b.f20",
+        "type": "action_item",
+        "fact": "The project manager will write up and send the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0106b.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106b.s0115"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_SARCASM_AS_FACT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_SARCASM_AS_FACT",
+        "segments": [
+          "SY0106b.s0027",
+          "SY0106b.s0028",
+          "SY0106b.s0029",
+          "SY0106b.s0030",
+          "SY0106b.s0031"
+        ],
+        "note": "The marketing expert jokes that people will just bring their own screens; the industrial designer plays along, the project manager moves on, and nothing is adopted."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_SELF_CORRECTION",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_SELF_CORRECTION",
+        "segments": [
+          "SY0106b.s0018",
+          "SY0106b.s0019"
+        ],
+        "note": "The industrial designer says the touchscreen costs about 400 euros, then corrects himself: that is the 15-inch, and the 22-inch costs 650 euros."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

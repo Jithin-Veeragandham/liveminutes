@@ -1,0 +1,1359 @@
+{
+  "meeting_id": "SY0103d",
+  "raw_sha256": "2559356892e41cd005b3a0e22f45b7a8658447e4d642957e0781fd64c35987e9",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting, confirmed that the minutes and the user interface designer's command list had been sent, and set out the agenda: the model, the display and button, colours, the final cost and an evaluation.",
+        "The industrial designer reported that the chip supplier had retrained the Kiko wake word model against 'cocoa' and similar words at no extra cost, and the user interface designer's laptop retest gave no false triggers in forty attempts; a test on the real hardware is still needed.",
+        "The industrial designer presented a palm-sized foam model about nine centimetres across, with the whole top as the button, the display in the middle and the USB-C socket at the back, and proposed adding rubber feet for grip.",
+        "The team discussed display and button behaviour together with product colours. The display will alternate automatically between the two timers, a short press will stop the alarm and a three-second hold will cancel both timers. The timer will come in two colourways, white with orange and charcoal with lime, with a white LED display.",
+        "The final unit cost is 11.40 euros, leaving 1.10 euros under the 12.50 euro limit, and the team evaluated the design as meeting its goals of hands-free use, a loud alarm and a viable 25 euro price, with offline operation as the main selling point."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will test the tuned Kiko wake word model on the real development board.",
+        "The industrial designer will get rubber colour samples from the moulding supplier; this was first offered by the marketing expert.",
+        "The user interface designer will write a one-sided quick-start card listing the commands and explaining the button.",
+        "The marketing expert will draft the box text and launch material around offline use, the gift angle and the two colourways.",
+        "The project manager will write the minutes and the final report for management."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "A rubber ring of feet (about 10 cents) will be added to the bottom so the timer does not slide when pressed.",
+        "The two-digit display shows minutes, and below one minute it shows blinking seconds.",
+        "With two timers running, the display alternates every three seconds between them, and the decimal point lights up when timer two is shown; the double-press idea was dropped.",
+        "A short press of the top button stops the alarm, a short press does nothing when no alarm is ringing, and holding the button for three seconds cancels both timers.",
+        "The timer will be sold in two colourways, white with an orange top and charcoal grey with a lime green top, at no extra unit cost.",
+        "The display will use a white LED instead of the red one originally priced, at the same cost.",
+        "The final unit cost is 11.40 euros, leaving 1.10 euros of margin under the 12.50 euro limit.",
+        "The fridge magnet stays out of the design to protect the margin.",
+        "Offline operation, with no wifi or app, will be the headline selling point on the box."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The tuned Kiko wake word model has only been tested on a laptop microphone, not on the timer's real microphone and hardware.",
+        "The margin of 1.10 euros under the cost limit is tight, so no further features such as the fridge magnet can be added.",
+        "The colours have not yet been seen as real rubber samples."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0103d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0103d.ai1",
+        "description": "Test the tuned Kiko wake word model on the real development board and microphone",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0103d.s0020",
+            "event": "proposed",
+            "by": "B",
+            "owner": null
+          },
+          {
+            "segment": "SY0103d.s0022",
+            "event": "assigned",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0103d.s0023",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0103d.s0116",
+            "event": "restated",
+            "by": "A",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0103d.s0019",
+          "SY0103d.s0020",
+          "SY0103d.s0021",
+          "SY0103d.s0022",
+          "SY0103d.s0023",
+          "SY0103d.s0116",
+          "SY0103d.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0103d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0103d.ai2",
+        "description": "Get rubber colour samples of the chosen colourways from the moulding supplier",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "reassigned",
+        "previous_owners": [
+          "D"
+        ],
+        "history": [
+          {
+            "segment": "SY0103d.s0090",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0103d.s0092",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0103d.s0093",
+            "event": "reassigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0103d.s0094",
+            "event": "restated",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0103d.s0116",
+            "event": "restated",
+            "by": "A",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0103d.s0090",
+          "SY0103d.s0091",
+          "SY0103d.s0092",
+          "SY0103d.s0093",
+          "SY0103d.s0094",
+          "SY0103d.s0116",
+          "SY0103d.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0103d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0103d.ai3",
+        "description": "Write a one-sided quick-start card with the commands, phrases and button behaviour",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0103d.s0118",
+            "event": "assigned",
+            "by": "A",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0103d.s0119",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0103d.s0118",
+          "SY0103d.s0119"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0103d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0103d.ai4",
+        "description": "Draft the box text and launch material around offline use, the gift angle and the two colourways",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0103d.s0120",
+            "event": "assigned",
+            "by": "A",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0103d.s0121",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0103d.s0120",
+          "SY0103d.s0121"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0103d.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0103d.ai5",
+        "description": "Write the minutes and the final report for management",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0103d.s0122",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0103d.s0122"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f1",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager said she had sent round the minutes of the previous meeting, and the user interface designer confirmed she had sent the full command list with confirmation phrases.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0103c",
+        "evidence_segments": [
+          "SY0103d.s0006",
+          "SY0103d.s0007",
+          "SY0103d.s0008",
+          "SY0103d.s0009"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer referred back to the previous meeting's laptop test, in which Kiko triggered on 'cocoa' in two of about forty attempts.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0103c",
+        "evidence_segments": [
+          "SY0103d.s0012",
+          "SY0103d.s0013"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f3",
+        "type": "other",
+        "fact": "The chip supplier retrained the Kiko wake word model against 'cocoa', 'kiwi' and 'cookie' at no extra cost, and the user interface designer's laptop retest gave zero false triggers in forty attempts.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0103d.s0014",
+          "SY0103d.s0015",
+          "SY0103d.s0017"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f4",
+        "type": "action_item",
+        "fact": "The industrial designer will test the tuned Kiko model on the real development board, which is due next week.",
+        "agreed": null,
+        "related_action_item": "SY0103d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0103d.s0020",
+          "SY0103d.s0022",
+          "SY0103d.s0023",
+          "SY0103d.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f5",
+        "type": "other",
+        "fact": "The industrial designer's model is about nine centimetres across, with the whole top as the button, the display in a window in the middle and the USB-C socket low at the back.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0103d.s0026",
+          "SY0103d.s0028",
+          "SY0103d.s0029",
+          "SY0103d.s0031"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f6",
+        "type": "decision",
+        "fact": "A rubber ring of feet costing about ten cents will be added to the bottom so the timer does not slide.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0103d.s0033",
+          "SY0103d.s0034",
+          "SY0103d.s0035",
+          "SY0103d.s0036",
+          "SY0103d.s0037"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f7",
+        "type": "decision",
+        "fact": "The display shows minutes, and below one minute it shows seconds, blinking.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0103d.s0040",
+          "SY0103d.s0041"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f8",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer proposed double-pressing the button to show timer two; it was dropped as too fiddly on a soft rubber top with messy hands.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0103d.s0043",
+          "SY0103d.s0044",
+          "SY0103d.s0045",
+          "SY0103d.s0046",
+          "SY0103d.s0067",
+          "SY0103d.s0068"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f9",
+        "type": "decision",
+        "fact": "With two timers running, the display alternates every three seconds between them, and the decimal point lights up when timer two is shown.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0103d.s0062",
+          "SY0103d.s0063",
+          "SY0103d.s0064",
+          "SY0103d.s0065",
+          "SY0103d.s0076",
+          "SY0103d.s0077",
+          "SY0103d.s0078",
+          "SY0103d.s0079"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f10",
+        "type": "decision",
+        "fact": "A short press stops the alarm, a short press does nothing when no alarm is ringing, and a three-second hold cancels both timers.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0103d.s0070",
+          "SY0103d.s0071",
+          "SY0103d.s0072",
+          "SY0103d.s0073",
+          "SY0103d.s0074",
+          "SY0103d.s0076",
+          "SY0103d.s0077",
+          "SY0103d.s0078",
+          "SY0103d.s0079"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f11",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested a brushed metal look on the body for the gift market; it was rejected because it would add about 1.50 euros per unit.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0103d.s0055",
+          "SY0103d.s0056",
+          "SY0103d.s0059",
+          "SY0103d.s0060"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f12",
+        "type": "decision",
+        "fact": "The timer will be sold in two colourways, white with an orange top and charcoal grey with a lime green top, at no extra unit cost.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0103d.s0051",
+          "SY0103d.s0053",
+          "SY0103d.s0081",
+          "SY0103d.s0082",
+          "SY0103d.s0083",
+          "SY0103d.s0088"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f13",
+        "type": "plan_change",
+        "fact": "The display LED was changed from the red LED originally priced to a white LED, at the same price, so it is readable on both top colours.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0103d.s0049",
+          "SY0103d.s0050",
+          "SY0103d.s0086",
+          "SY0103d.s0087",
+          "SY0103d.s0088"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f14",
+        "type": "action_item",
+        "fact": "The marketing expert offered to get rubber colour samples, but the task was handed to the industrial designer because he is already in contact with the moulding supplier.",
+        "agreed": null,
+        "related_action_item": "SY0103d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0103d.s0090",
+          "SY0103d.s0091",
+          "SY0103d.s0092",
+          "SY0103d.s0093",
+          "SY0103d.s0094"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f15",
+        "type": "decision",
+        "fact": "The final unit cost is 11.40 euros (the previous 11.30 plus the rubber feet), leaving 1.10 euros under the 12.50 euro limit.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0103d.s0096",
+          "SY0103d.s0097",
+          "SY0103d.s0098",
+          "SY0103d.s0099",
+          "SY0103d.s0100"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f16",
+        "type": "decision",
+        "fact": "The fridge magnet stays out of the design to keep the 1.10 euro margin.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0103d.s0101",
+          "SY0103d.s0102"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f17",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer said the alarm ramps up in volume, as agreed in the second meeting, and reaches about 85 decibels.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0103b",
+        "evidence_segments": [
+          "SY0103d.s0108",
+          "SY0103d.s0109"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f18",
+        "type": "decision",
+        "fact": "Offline operation, with no wifi or app needed, will be the headline on the box.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0103d.s0111",
+          "SY0103d.s0112",
+          "SY0103d.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f19",
+        "type": "other",
+        "fact": "In the evaluation, the team judged that the design meets its goals of hands-free use, a loud alarm and a viable 25 euro price.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0103d.s0104",
+          "SY0103d.s0105",
+          "SY0103d.s0106",
+          "SY0103d.s0107",
+          "SY0103d.s0108",
+          "SY0103d.s0109",
+          "SY0103d.s0110",
+          "SY0103d.s0111",
+          "SY0103d.s0113",
+          "SY0103d.s0114",
+          "SY0103d.s0115"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f20",
+        "type": "action_item",
+        "fact": "The user interface designer will write a one-sided quick-start card with the commands and button behaviour.",
+        "agreed": null,
+        "related_action_item": "SY0103d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0103d.s0118",
+          "SY0103d.s0119"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f21",
+        "type": "action_item",
+        "fact": "The marketing expert will draft the box text and launch material.",
+        "agreed": null,
+        "related_action_item": "SY0103d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0103d.s0120",
+          "SY0103d.s0121"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0103d.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0103d.f22",
+        "type": "action_item",
+        "fact": "The project manager will write the minutes and the final report for management.",
+        "agreed": null,
+        "related_action_item": "SY0103d.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0103d.s0122"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_SARCASM_AS_FACT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_SARCASM_AS_FACT",
+        "segments": [
+          "SY0103d.s0055",
+          "SY0103d.s0056",
+          "SY0103d.s0057",
+          "SY0103d.s0058",
+          "SY0103d.s0059",
+          "SY0103d.s0060"
+        ],
+        "note": "The industrial designer sarcastically states 'metal's in' and that the team will cut its own salaries to pay for it; the project manager rejects the metal finish and the marketing expert drops it."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_INTERLEAVED_TOPICS",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_INTERLEAVED_TOPICS",
+        "segments": [
+          "SY0103d.s0040",
+          "SY0103d.s0041",
+          "SY0103d.s0043",
+          "SY0103d.s0044",
+          "SY0103d.s0045",
+          "SY0103d.s0046",
+          "SY0103d.s0047",
+          "SY0103d.s0049",
+          "SY0103d.s0050",
+          "SY0103d.s0051",
+          "SY0103d.s0052",
+          "SY0103d.s0053",
+          "SY0103d.s0054",
+          "SY0103d.s0055",
+          "SY0103d.s0056",
+          "SY0103d.s0057",
+          "SY0103d.s0058",
+          "SY0103d.s0059",
+          "SY0103d.s0060",
+          "SY0103d.s0061",
+          "SY0103d.s0062",
+          "SY0103d.s0063",
+          "SY0103d.s0064",
+          "SY0103d.s0065",
+          "SY0103d.s0066",
+          "SY0103d.s0067",
+          "SY0103d.s0068",
+          "SY0103d.s0069",
+          "SY0103d.s0070",
+          "SY0103d.s0071",
+          "SY0103d.s0072",
+          "SY0103d.s0073",
+          "SY0103d.s0074",
+          "SY0103d.s0075",
+          "SY0103d.s0076",
+          "SY0103d.s0077",
+          "SY0103d.s0078",
+          "SY0103d.s0079",
+          "SY0103d.s0080",
+          "SY0103d.s0081",
+          "SY0103d.s0082",
+          "SY0103d.s0083",
+          "SY0103d.s0084",
+          "SY0103d.s0085",
+          "SY0103d.s0086",
+          "SY0103d.s0087",
+          "SY0103d.s0088"
+        ],
+        "note": "Display and button behaviour (40-46), then colours (47-60), then back to display and button (61-79), then back to colours and LED colour (80-88)."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

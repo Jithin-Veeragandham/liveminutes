@@ -1,0 +1,1590 @@
+{
+  "schema_version": "1.0",
+  "source": "synthetic",
+  "meeting_id": "SY0210d",
+  "series_id": "SY0210",
+  "meeting_letter": "d",
+  "scenario_type": "scenario",
+  "stage": "detailed design",
+  "duration_sec": 571.44,
+  "participants": [
+    {
+      "label": "A",
+      "role": "PM",
+      "name": "Rachel",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "B",
+      "role": "ME",
+      "name": "Tom",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "C",
+      "role": "UI",
+      "name": "Priya",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "D",
+      "role": "ID",
+      "name": "Marcus",
+      "global_id": null,
+      "status": "present"
+    }
+  ],
+  "segments": [
+    {
+      "id": "SY0210d.s0001",
+      "speaker": "A",
+      "start": 5.0,
+      "end": 6.15,
+      "text": "Okay, um, right.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0210d.s0002",
+      "speaker": "A",
+      "start": 6.52,
+      "end": 10.37,
+      "text": "So this is our last one, the detailed design meeting.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0003",
+      "speaker": "A",
+      "start": 10.59,
+      "end": 15.97,
+      "text": "And it's good to have everyone here this time. Priya, you're back from Rotterdam.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0004",
+      "speaker": "C",
+      "start": 16.41,
+      "end": 19.87,
+      "text": "Yeah, back. The training day was actually quite useful.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0005",
+      "speaker": "A",
+      "start": 20.74,
+      "end": 25.74,
+      "text": "And you got my email with the top panel task and the notes?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0210d.s0006",
+      "speaker": "C",
+      "start": 26.2,
+      "end": 27.74,
+      "text": "Yep, got it, thanks.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0007",
+      "speaker": "A",
+      "start": 28.38,
+      "end": 34.53,
+      "text": "Great. And the minutes from last time went round on Thursday, so hopefully everyone's seen those.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0008",
+      "speaker": "B",
+      "start": 35.5,
+      "end": 35.9,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0210d.s0009",
+      "speaker": "D",
+      "start": 36.53,
+      "end": 36.93,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0210d.s0010",
+      "speaker": "A",
+      "start": 37.85,
+      "end": 50.16,
+      "text": "So, agenda. Um, first I'll report back on the accent thing, then Marcus has the model, Priya has the top panel, then Tom's evaluation criteria, and we finish with the final costing.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0011",
+      "speaker": "B",
+      "start": 50.83,
+      "end": 51.23,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0210d.s0012",
+      "speaker": "A",
+      "start": 51.98,
+      "end": 56.6,
+      "text": "Right, so the accent question. I rang the chip supplier on Tuesday.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0013",
+      "speaker": "A",
+      "start": 57.19,
+      "end": 69.11,
+      "text": "Um, they said the chip ships with a few acoustic models. There's a British English one, an American one, and a general one that's trained on a wide mix of accents.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0014",
+      "speaker": "D",
+      "start": 70.1,
+      "end": 72.79,
+      "text": "And is that the one we'd get?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0210d.s0015",
+      "speaker": "A",
+      "start": 73.62,
+      "end": 81.31,
+      "text": "Yeah, we'll go with the general one. It's no extra cost, and they said it's fine for most regional accents.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0016",
+      "speaker": "C",
+      "start": 81.93,
+      "end": 86.93,
+      "text": "That's good, 'cause the word 'timer' is pretty, uh, consistent across accents anyway.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0017",
+      "speaker": "B",
+      "start": 87.11,
+      "end": 90.57,
+      "text": "'Most' though. Did they say what it struggles with?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0210d.s0018",
+      "speaker": "A",
+      "start": 90.77,
+      "end": 98.85,
+      "text": "Um, they were a bit vague. They said with very strong accents the user might need to speak a bit slower.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0019",
+      "speaker": "B",
+      "start": 99.14,
+      "end": 104.14,
+      "text": "Hmm. That's the kind of thing that ends up in a bad review.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0020",
+      "speaker": "D",
+      "start": 104.63,
+      "end": 114.63,
+      "text": "Someone should probably actually test it, you know, get a few people with different accents to try it on a sample board before we sign off.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0210d.s0021",
+      "speaker": "A",
+      "start": 115.55,
+      "end": 115.95,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0210d.s0022",
+      "speaker": "C",
+      "start": 116.54,
+      "end": 118.46,
+      "text": "Mm, that would be sensible.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0023",
+      "speaker": "A",
+      "start": 119.21,
+      "end": 125.36,
+      "text": "Okay, yeah, that's, um, that's something to bear in mind. Let's move on to the model.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0024",
+      "speaker": "B",
+      "start": 125.53,
+      "end": 125.93,
+      "text": "Mm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0210d.s0025",
+      "speaker": "A",
+      "start": 126.31,
+      "end": 127.46,
+      "text": "Marcus, the model?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0210d.s0026",
+      "speaker": "D",
+      "start": 128.19,
+      "end": 132.81,
+      "text": "Yeah, so here it is. The clay model of the round case.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0027",
+      "speaker": "D",
+      "start": 133.2,
+      "end": 136.28,
+      "text": "It's about nine centimetres across and four high.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0028",
+      "speaker": "B",
+      "start": 137.03,
+      "end": 139.72,
+      "text": "Oh, that's nice. Smaller than I imagined.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0029",
+      "speaker": "D",
+      "start": 140.42,
+      "end": 147.73,
+      "text": "The stop button sits right on top in the middle, that's the orange bit. I just painted the clay.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0030",
+      "speaker": "D",
+      "start": 148.52,
+      "end": 154.67,
+      "text": "And underneath there's four little rubber feet, like we agreed last time instead of the magnet.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0031",
+      "speaker": "C",
+      "start": 154.92,
+      "end": 156.84,
+      "text": "Where do the microphones go?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0210d.s0032",
+      "speaker": "D",
+      "start": 157.4,
+      "end": 164.32,
+      "text": "Two little holes on the top edge, here and here, so they're spaced apart for the noise cancelling.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0033",
+      "speaker": "D",
+      "start": 164.96,
+      "end": 172.65,
+      "text": "The speaker grille is round the side at the back, and the cable comes out the back near the bottom.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0034",
+      "speaker": "C",
+      "start": 173.29,
+      "end": 175.98,
+      "text": "Okay, that works with my layout actually.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0035",
+      "speaker": "A",
+      "start": 176.3,
+      "end": 180.15,
+      "text": "And the case cost, did you get a firm quote?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0210d.s0036",
+      "speaker": "D",
+      "start": 180.48,
+      "end": 184.33,
+      "text": "Yes. Um, so last time I said about one fifty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0037",
+      "speaker": "D",
+      "start": 185.23,
+      "end": 192.54,
+      "text": "The firm quote is one sixty per unit for the matte white, because of the texture on the mould.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0038",
+      "speaker": "A",
+      "start": 192.85,
+      "end": 194.39,
+      "text": "So ten cents up.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0210d.s0039",
+      "speaker": "D",
+      "start": 194.99,
+      "end": 196.53,
+      "text": "Ten cents up, yeah.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0040",
+      "speaker": "B",
+      "start": 197.13,
+      "end": 201.36,
+      "text": "Is it still easy to wipe? Matte can hold grease sometimes.",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0210d.s0041",
+      "speaker": "D",
+      "start": 202.29,
+      "end": 211.52,
+      "text": "It's a fine matte. I tried it with a bit of oil on a sample and it came off okay with a damp cloth.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0042",
+      "speaker": "B",
+      "start": 212.07,
+      "end": 215.92,
+      "text": "Good, 'cause that was the big one from the survey.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0043",
+      "speaker": "A",
+      "start": 216.59,
+      "end": 220.44,
+      "text": "Everyone happy with the shape and size as it is?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0210d.s0044",
+      "speaker": "C",
+      "start": 220.75,
+      "end": 222.29,
+      "text": "Yeah, I like it.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0045",
+      "speaker": "B",
+      "start": 222.9,
+      "end": 223.3,
+      "text": "Yeah.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0046",
+      "speaker": "A",
+      "start": 223.52,
+      "end": 228.14,
+      "text": "Okay, so the case as it is on the model is agreed.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0047",
+      "speaker": "A",
+      "start": 228.75,
+      "end": 229.9,
+      "text": "Priya, top panel.",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0210d.s0048",
+      "speaker": "C",
+      "start": 230.78,
+      "end": 233.86,
+      "text": "Okay. So, um, I've got a sketch here.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0049",
+      "speaker": "C",
+      "start": 234.24,
+      "end": 242.7,
+      "text": "Stop button in the centre, like Marcus has it, and the three LEDs in a little arc above it, towards the back.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0050",
+      "speaker": "C",
+      "start": 243.5,
+      "end": 251.19,
+      "text": "Each LED has a tiny number next to it, one two three, moulded in, so you know which is which.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0051",
+      "speaker": "D",
+      "start": 251.61,
+      "end": 253.53,
+      "text": "Moulded in, so not printed?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0210d.s0052",
+      "speaker": "C",
+      "start": 254.35,
+      "end": 258.58,
+      "text": "Yeah, raised, because printing would wear off with all the wiping.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0053",
+      "speaker": "D",
+      "start": 258.77,
+      "end": 262.62,
+      "text": "Okay, that's fine on the mould. No extra cost really.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0054",
+      "speaker": "C",
+      "start": 262.99,
+      "end": 266.84,
+      "text": "And the light behaviour. Steady on when a timer's running.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0055",
+      "speaker": "C",
+      "start": 267.42,
+      "end": 269.73,
+      "text": "Slow blinking in the last minute.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0056",
+      "speaker": "C",
+      "start": 270.71,
+      "end": 278.4,
+      "text": "And fast flashing when it's finished, with the beep and the announcement, until you say stop or hit the button.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0057",
+      "speaker": "B",
+      "start": 278.65,
+      "end": 283.27,
+      "text": "Ooh, the last-minute blink is nice. You'd see that across the room.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0058",
+      "speaker": "A",
+      "start": 283.49,
+      "end": 285.03,
+      "text": "And what colour LEDs?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0210d.s0059",
+      "speaker": "C",
+      "start": 285.73,
+      "end": 291.5,
+      "text": "I'd say white, so it matches the body and doesn't fight with the orange button.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0210d.s0060",
+      "speaker": "D",
+      "start": 291.93,
+      "end": 294.62,
+      "text": "White's the same price as anything else.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0061",
+      "speaker": "A",
+      "start": 294.8,
+      "end": 301.72,
+      "text": "Okay. So white LEDs, steady when running, slow blink in the last minute, fast flash when it's done.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0210d.s0062",
+      "speaker": "C",
+      "start": 302.43,
+      "end": 302.83,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0210d.s0063",
+      "speaker": "A",
+      "start": 303.31,
+      "end": 306.77,
+      "text": "And the countdown screen, did you look at that?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0210d.s0064",
+      "speaker": "C",
+      "start": 307.38,
+      "end": 315.84,
+      "text": "Yeah, so the screen is about two euros, and it needs a bigger top, so Marcus would have to change the case.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0065",
+      "speaker": "C",
+      "start": 316.07,
+      "end": 322.99,
+      "text": "And honestly, um, with 'how long left' and the blinking LEDs, I don't think it adds that much.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0066",
+      "speaker": "C",
+      "start": 323.58,
+      "end": 326.27,
+      "text": "So I'd recommend we don't add it.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0210d.s0067",
+      "speaker": "B",
+      "start": 327.08,
+      "end": 331.7,
+      "text": "I mean, I still think people like to glance at a number.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0068",
+      "speaker": "B",
+      "start": 332.32,
+      "end": 338.09,
+      "text": "Could we do just a tiny two-digit display instead, minutes only? That'd be cheaper, surely.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0210d.s0069",
+      "speaker": "D",
+      "start": 338.69,
+      "end": 346.77,
+      "text": "A two-digit LED display is maybe ninety cents, but then which timer is it showing? You'd need a button to switch.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0070",
+      "speaker": "C",
+      "start": 347.12,
+      "end": 350.97,
+      "text": "Yeah, and we said one button only. It gets complicated.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0071",
+      "speaker": "B",
+      "start": 351.67,
+      "end": 355.13,
+      "text": "Fair enough. I just think it's a selling point.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0072",
+      "speaker": "A",
+      "start": 355.87,
+      "end": 358.95,
+      "text": "So, do we want any display or not?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0210d.s0073",
+      "speaker": "D",
+      "start": 359.65,
+      "end": 361.96,
+      "text": "I'd leave it. Keep it simple.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0074",
+      "speaker": "A",
+      "start": 362.21,
+      "end": 370.29,
+      "text": "Okay, so no screen. We stick with the LEDs and the voice. Tom, we'll leave your two-digit idea aside for now.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0075",
+      "speaker": "B",
+      "start": 370.87,
+      "end": 371.26,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0210d.s0076",
+      "speaker": "A",
+      "start": 371.49,
+      "end": 372.26,
+      "text": "Tom, criteria.",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0210d.s0077",
+      "speaker": "B",
+      "start": 372.98,
+      "end": 378.36,
+      "text": "Right. So, um, from the survey and the trends stuff I've got six criteria.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0078",
+      "speaker": "B",
+      "start": 378.87,
+      "end": 394.64,
+      "text": "One, easy to wipe clean. Two, alarm loud enough over an extractor fan. Three, usable with messy hands. Four, does it look current. Five, works for two or three things at once. Six, price, so does it work at twenty-five euros.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0079",
+      "speaker": "B",
+      "start": 395.45,
+      "end": 400.83,
+      "text": "And I thought we'd score each one from one to seven, one is best.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0210d.s0080",
+      "speaker": "A",
+      "start": 401.14,
+      "end": 401.54,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0210d.s0081",
+      "speaker": "B",
+      "start": 401.76,
+      "end": 402.91,
+      "text": "So, wipe clean?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0210d.s0082",
+      "speaker": "D",
+      "start": 403.73,
+      "end": 407.96,
+      "text": "One. It's smooth, no gaps, and the raised numbers are shallow.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0083",
+      "speaker": "C",
+      "start": 408.55,
+      "end": 412.01,
+      "text": "One or two. The button edge might catch crumbs.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0084",
+      "speaker": "B",
+      "start": 412.7,
+      "end": 414.24,
+      "text": "Let's say two then.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0210d.s0085",
+      "speaker": "B",
+      "start": 414.63,
+      "end": 416.55,
+      "text": "Alarm over the extractor fan?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0210d.s0086",
+      "speaker": "D",
+      "start": 417.03,
+      "end": 422.03,
+      "text": "The speaker's decent, but we haven't actually heard it over a fan yet.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0087",
+      "speaker": "C",
+      "start": 422.56,
+      "end": 424.87,
+      "text": "Three maybe, until we hear it.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0088",
+      "speaker": "B",
+      "start": 425.85,
+      "end": 426.25,
+      "text": "Three.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0210d.s0089",
+      "speaker": "B",
+      "start": 426.71,
+      "end": 427.48,
+      "text": "Messy hands?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0210d.s0090",
+      "speaker": "C",
+      "start": 428.24,
+      "end": 432.47,
+      "text": "That's the whole point, it's voice, and the button's big. One.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0091",
+      "speaker": "A",
+      "start": 432.77,
+      "end": 433.54,
+      "text": "Yeah, one.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0210d.s0092",
+      "speaker": "B",
+      "start": 434.18,
+      "end": 434.95,
+      "text": "Looks current?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0210d.s0093",
+      "speaker": "B",
+      "start": 435.33,
+      "end": 441.48,
+      "text": "I'd give it a two myself. The orange is very on trend, but it's quite plain.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0094",
+      "speaker": "D",
+      "start": 442.2,
+      "end": 442.97,
+      "text": "Mm, fair.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0210d.s0095",
+      "speaker": "B",
+      "start": 443.6,
+      "end": 445.91,
+      "text": "Two or three things at once?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0210d.s0096",
+      "speaker": "C",
+      "start": 446.39,
+      "end": 448.31,
+      "text": "Three timers, three lights. One.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0097",
+      "speaker": "B",
+      "start": 449.29,
+      "end": 450.06,
+      "text": "And price.",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0210d.s0098",
+      "speaker": "A",
+      "start": 451.01,
+      "end": 454.86,
+      "text": "Let's do the cost first and come back to that.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0210d.s0099",
+      "speaker": "B",
+      "start": 455.25,
+      "end": 455.65,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0210d.s0100",
+      "speaker": "A",
+      "start": 456.42,
+      "end": 463.73,
+      "text": "So, production cost. Electronics six euros. Case now one sixty. Stop button twenty cents. LEDs and feet forty-five cents.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0101",
+      "speaker": "A",
+      "start": 464.0,
+      "end": 465.92,
+      "text": "That's eight twenty-five in total.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0102",
+      "speaker": "D",
+      "start": 466.54,
+      "end": 467.69,
+      "text": "Eight twenty-five, yeah.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0210d.s0103",
+      "speaker": "A",
+      "start": 468.17,
+      "end": 473.17,
+      "text": "And the limit from the kickoff was twelve fifty, so we're well under.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0104",
+      "speaker": "B",
+      "start": 473.46,
+      "end": 476.15,
+      "text": "So price is a one then, easily.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0105",
+      "speaker": "A",
+      "start": 476.35,
+      "end": 476.75,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0210d.s0106",
+      "speaker": "B",
+      "start": 477.5,
+      "end": 484.04,
+      "text": "So overall that's two, three, one, two, one, one. An average of about one point six seven.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0107",
+      "speaker": "C",
+      "start": 484.38,
+      "end": 485.53,
+      "text": "That's pretty good.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0108",
+      "speaker": "A",
+      "start": 486.35,
+      "end": 488.27,
+      "text": "Yeah, I'm happy with that.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0109",
+      "speaker": "A",
+      "start": 488.95,
+      "end": 491.64,
+      "text": "Um, so what's left to sort out?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0210d.s0110",
+      "speaker": "D",
+      "start": 491.99,
+      "end": 499.3,
+      "text": "I can test the speaker with the extractor fan in our test kitchen next week, for that alarm score.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0210d.s0111",
+      "speaker": "A",
+      "start": 499.71,
+      "end": 500.48,
+      "text": "Great, thanks.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0210d.s0112",
+      "speaker": "A",
+      "start": 501.13,
+      "end": 508.44,
+      "text": "One more thing, the command list. People need to know the phrases, so we want a little quick-start card.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0113",
+      "speaker": "B",
+      "start": 508.81,
+      "end": 513.43,
+      "text": "I could write that up, a quick-start card with the commands on.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0210d.s0114",
+      "speaker": "C",
+      "start": 513.75,
+      "end": 521.83,
+      "text": "Actually, um, I've got all the phrasings from the smart speaker comparison, 'set a timer' and 'set timer' and so on.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0115",
+      "speaker": "C",
+      "start": 522.7,
+      "end": 528.47,
+      "text": "It'd probably be quicker if I do it. I'd just be copying from my notes.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0210d.s0116",
+      "speaker": "B",
+      "start": 529.46,
+      "end": 532.15,
+      "text": "Oh yeah, fair enough, go for it.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0210d.s0117",
+      "speaker": "A",
+      "start": 532.63,
+      "end": 538.4,
+      "text": "Okay, Priya does the quick-start card. Card in the box, or printed on the base?",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0118",
+      "speaker": "C",
+      "start": 539.29,
+      "end": 544.67,
+      "text": "In the box, I think. A sticker on the base would just get grubby.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0210d.s0119",
+      "speaker": "A",
+      "start": 544.82,
+      "end": 546.74,
+      "text": "Okay, in the box then.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0210d.s0120",
+      "speaker": "A",
+      "start": 547.1,
+      "end": 554.79,
+      "text": "And I'll write up the final report for management with the costing and the evaluation, and send round the minutes.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0121",
+      "speaker": "B",
+      "start": 555.38,
+      "end": 555.78,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0210d.s0122",
+      "speaker": "A",
+      "start": 555.96,
+      "end": 557.5,
+      "text": "Anything else from anyone?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0210d.s0123",
+      "speaker": "D",
+      "start": 557.81,
+      "end": 559.73,
+      "text": "No, I think that's me.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0124",
+      "speaker": "C",
+      "start": 560.57,
+      "end": 560.97,
+      "text": "Nope.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0210d.s0125",
+      "speaker": "B",
+      "start": 561.13,
+      "end": 565.36,
+      "text": "Just that it's turned out a, um, a nice little product.",
+      "da_type": "oth"
+    },
+    {
+      "id": "SY0210d.s0126",
+      "speaker": "A",
+      "start": 565.65,
+      "end": 567.57,
+      "text": "Yeah. Thanks everyone, good work.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0210d.s0127",
+      "speaker": "C",
+      "start": 568.04,
+      "end": 568.44,
+      "text": "Thanks.",
+      "da_type": "be.pos"
+    }
+  ],
+  "summary": {
+    "abstract": [
+      "The project manager opened the detailed design meeting for the voice-controlled kitchen timer with all four team members present, and the user interface designer confirmed she had received the email with her top panel task. The project manager reported that the speech chip supplier offers a general acoustic model trained on many accents at no extra cost, which the team will use, although strong accents may need slower speech; the industrial designer said someone should test it with real speakers, but nobody took this on. The industrial designer presented the clay model of the round case, about nine centimetres across and four high, with the orange stop button on top, two microphone holes, a rear speaker grille and rubber feet, and gave a firm case quote of 1.60 euros. The user interface designer presented the top panel layout and LED behaviour and recommended against a countdown screen, which the team accepted. The marketing expert presented six evaluation criteria, and the design scored an average of about 1.67 on a one-to-seven scale (one is best), with a final production cost of 8.25 euros against the 12.50 euro limit."
+    ],
+    "actions": [
+      "The industrial designer will test the speaker against an extractor fan in the test kitchen next week to confirm the alarm is loud enough.",
+      "The user interface designer will write the quick-start card listing the voice commands, to go in the box. The marketing expert first offered to do this, but she took it because she already has the command phrasings from her smart speaker comparison.",
+      "The project manager will write the final report for management, including the costing and the evaluation.",
+      "The project manager will send round the minutes of this meeting.",
+      "The industrial designer said someone should test the speech chip with people with different accents before sign-off, but nobody took this task."
+    ],
+    "decisions": [
+      "The speech chip will use the supplier's general multi-accent acoustic model, at no extra cost.",
+      "The round case is agreed as shown on the clay model: about nine centimetres across and four high, with the stop button in the centre of the top, two microphone holes on the top edge, a speaker grille at the back, the cable out of the back and four rubber feet.",
+      "The three LEDs sit in an arc above the stop button, with raised moulded numbers one to three beside them.",
+      "The LEDs will be white. They stay steady while a timer is running, blink slowly in the last minute and flash fast when the timer finishes, until the user says stop or presses the button.",
+      "No countdown screen or other display will be added.",
+      "A quick-start card with the voice commands will go in the box rather than being printed on the base.",
+      "The final production cost is 8.25 euros per unit: 6.00 for electronics, 1.60 for the case, 0.20 for the stop button and 0.45 for the LEDs and feet.",
+      "The design scored 2 for wipe-clean, 3 for alarm loudness, 1 for messy hands, 2 for looking current, 1 for multiple timers and 1 for price, an average of about 1.67."
+    ],
+    "problems": [
+      "The speech chip may struggle with very strong accents, and nobody has taken on testing it with real speakers.",
+      "The alarm has not yet been heard over an extractor fan, so its score of 3 is provisional until the industrial designer's test.",
+      "The marketing expert's small two-digit minutes display (about 90 cents) was set aside because it would need a second button to switch between timers. He still sees a visible number as a selling point."
+    ]
+  },
+  "action_items": [
+    {
+      "id": "SY0210d.ai1",
+      "description": "Test the speech chip with a few people with different accents on a sample board before sign-off",
+      "owner": null,
+      "owner_unclear": true,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0210d.s0020",
+          "event": "proposed",
+          "by": "D",
+          "owner": null
+        }
+      ],
+      "evidence_segments": [
+        "SY0210d.s0017",
+        "SY0210d.s0018",
+        "SY0210d.s0019",
+        "SY0210d.s0020",
+        "SY0210d.s0021",
+        "SY0210d.s0022",
+        "SY0210d.s0023"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0210d.ai2",
+      "description": "Test the speaker against an extractor fan in the test kitchen next week to check the alarm is loud enough",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0210d.s0110",
+          "event": "offered",
+          "by": "D",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0210d.s0111",
+          "event": "accepted",
+          "by": "A",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0210d.s0086",
+        "SY0210d.s0087",
+        "SY0210d.s0110",
+        "SY0210d.s0111"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0210d.ai3",
+      "description": "Write the quick-start card listing the voice commands, to go in the box",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0210d.s0113",
+          "event": "offered",
+          "by": "B",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0210d.s0115",
+          "event": "offered",
+          "by": "C",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0210d.s0116",
+          "event": "accepted",
+          "by": "B",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0210d.s0117",
+          "event": "assigned",
+          "by": "A",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0210d.s0112",
+        "SY0210d.s0113",
+        "SY0210d.s0114",
+        "SY0210d.s0115",
+        "SY0210d.s0116",
+        "SY0210d.s0117",
+        "SY0210d.s0118",
+        "SY0210d.s0119"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0210d.ai4",
+      "description": "Write the final report for management with the costing and the evaluation",
+      "owner": "A",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0210d.s0120",
+          "event": "offered",
+          "by": "A",
+          "owner": "A"
+        }
+      ],
+      "evidence_segments": [
+        "SY0210d.s0120"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0210d.ai5",
+      "description": "Send round the minutes of the detailed design meeting",
+      "owner": "A",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0210d.s0120",
+          "event": "offered",
+          "by": "A",
+          "owner": "A"
+        }
+      ],
+      "evidence_segments": [
+        "SY0210d.s0120"
+      ],
+      "owner_source": "gold"
+    }
+  ],
+  "qa_facts": [
+    {
+      "id": "SY0210d.f1",
+      "type": "other",
+      "fact": "The user interface designer confirmed she received the project manager's email with her top panel task and the notes from the conceptual design meeting.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0210c",
+      "evidence_segments": [
+        "SY0210d.s0003",
+        "SY0210d.s0004",
+        "SY0210d.s0005",
+        "SY0210d.s0006"
+      ]
+    },
+    {
+      "id": "SY0210d.f2",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager said the minutes from the conceptual design meeting had been sent round on Thursday.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0210c",
+      "evidence_segments": [
+        "SY0210d.s0007"
+      ]
+    },
+    {
+      "id": "SY0210d.f3",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager reported back on the accent check she took on at the conceptual design meeting: she rang the speech chip supplier on Tuesday.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0210c",
+      "evidence_segments": [
+        "SY0210d.s0010",
+        "SY0210d.s0012",
+        "SY0210d.s0013"
+      ]
+    },
+    {
+      "id": "SY0210d.f4",
+      "type": "decision",
+      "fact": "The team will use the speech chip's general acoustic model, trained on a wide mix of accents, at no extra cost.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0210d.s0013",
+        "SY0210d.s0014",
+        "SY0210d.s0015"
+      ]
+    },
+    {
+      "id": "SY0210d.f5",
+      "type": "other",
+      "fact": "The supplier said the chip handles most regional accents, but users with very strong accents may need to speak more slowly.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0210d.s0015",
+        "SY0210d.s0017",
+        "SY0210d.s0018"
+      ]
+    },
+    {
+      "id": "SY0210d.f6",
+      "type": "action_item",
+      "fact": "The industrial designer said someone should test the chip with people with different accents before sign-off, but nobody took the task.",
+      "agreed": null,
+      "related_action_item": "SY0210d.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0210d.s0020",
+        "SY0210d.s0021",
+        "SY0210d.s0022",
+        "SY0210d.s0023"
+      ]
+    },
+    {
+      "id": "SY0210d.f7",
+      "type": "reference_to_prior_meeting",
+      "fact": "The industrial designer noted the clay model has rubber feet instead of the magnetic back, as agreed at the conceptual design meeting.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0210c",
+      "evidence_segments": [
+        "SY0210d.s0030"
+      ]
+    },
+    {
+      "id": "SY0210d.f8",
+      "type": "decision",
+      "fact": "The round case is agreed as on the clay model: about nine centimetres across and four high, with the orange stop button in the centre of the top, two microphone holes on the top edge, a rear speaker grille, the cable out of the back and rubber feet.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0210d.s0026",
+        "SY0210d.s0027",
+        "SY0210d.s0029",
+        "SY0210d.s0030",
+        "SY0210d.s0032",
+        "SY0210d.s0033",
+        "SY0210d.s0043",
+        "SY0210d.s0044",
+        "SY0210d.s0045",
+        "SY0210d.s0046"
+      ]
+    },
+    {
+      "id": "SY0210d.f9",
+      "type": "reference_to_prior_meeting",
+      "fact": "The industrial designer corrected the case cost from the roughly 1.50 euros he gave at the conceptual design meeting to a firm quote of 1.60 euros per unit, because of the matte texture.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0210c",
+      "evidence_segments": [
+        "SY0210d.s0036",
+        "SY0210d.s0037",
+        "SY0210d.s0038",
+        "SY0210d.s0039"
+      ]
+    },
+    {
+      "id": "SY0210d.f10",
+      "type": "other",
+      "fact": "The industrial designer tested oil on a sample of the matte finish and it wiped off with a damp cloth.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0210d.s0040",
+        "SY0210d.s0041",
+        "SY0210d.s0042"
+      ]
+    },
+    {
+      "id": "SY0210d.f11",
+      "type": "decision",
+      "fact": "The three LEDs sit in an arc above the central stop button, with raised moulded numbers one to three beside them.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0210d.s0049",
+        "SY0210d.s0050",
+        "SY0210d.s0051",
+        "SY0210d.s0052",
+        "SY0210d.s0053"
+      ]
+    },
+    {
+      "id": "SY0210d.f12",
+      "type": "decision",
+      "fact": "The LEDs will be white. They stay steady while a timer runs, blink slowly in the last minute and flash fast when it finishes, until the user says stop or presses the button.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0210d.s0054",
+        "SY0210d.s0055",
+        "SY0210d.s0056",
+        "SY0210d.s0057",
+        "SY0210d.s0058",
+        "SY0210d.s0059",
+        "SY0210d.s0060",
+        "SY0210d.s0061",
+        "SY0210d.s0062"
+      ]
+    },
+    {
+      "id": "SY0210d.f13",
+      "type": "decision",
+      "fact": "No countdown screen will be added, on the user interface designer's recommendation. The screen would cost about 2 euros and need a bigger case.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0210d.s0063",
+        "SY0210d.s0064",
+        "SY0210d.s0065",
+        "SY0210d.s0066",
+        "SY0210d.s0072",
+        "SY0210d.s0073",
+        "SY0210d.s0074"
+      ]
+    },
+    {
+      "id": "SY0210d.f14",
+      "type": "unagreed_proposal",
+      "fact": "The marketing expert proposed a small two-digit minutes display (about 90 cents) instead of a screen. It was set aside because it would need a second button to choose which timer to show.",
+      "agreed": false,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0210d.s0067",
+        "SY0210d.s0068",
+        "SY0210d.s0069",
+        "SY0210d.s0070",
+        "SY0210d.s0071",
+        "SY0210d.s0074"
+      ]
+    },
+    {
+      "id": "SY0210d.f15",
+      "type": "other",
+      "fact": "The marketing expert's six evaluation criteria were wipe-clean, alarm loud enough over an extractor fan, usable with messy hands, looks current, works for two or three things at once, and price. Each was scored from one to seven, with one best.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0210d.s0077",
+        "SY0210d.s0078",
+        "SY0210d.s0079"
+      ]
+    },
+    {
+      "id": "SY0210d.f16",
+      "type": "decision",
+      "fact": "The design scored 2 for wipe-clean, 3 for alarm, 1 for messy hands, 2 for looks, 1 for multiple timers and 1 for price, an average of about 1.67.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0210d.s0084",
+        "SY0210d.s0087",
+        "SY0210d.s0088",
+        "SY0210d.s0090",
+        "SY0210d.s0091",
+        "SY0210d.s0093",
+        "SY0210d.s0096",
+        "SY0210d.s0104",
+        "SY0210d.s0106",
+        "SY0210d.s0107",
+        "SY0210d.s0108"
+      ]
+    },
+    {
+      "id": "SY0210d.f17",
+      "type": "decision",
+      "fact": "The final production cost is 8.25 euros per unit: 6.00 for electronics, 1.60 for the case, 0.20 for the stop button and 0.45 for the LEDs and feet.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0210d.s0100",
+        "SY0210d.s0101",
+        "SY0210d.s0102"
+      ]
+    },
+    {
+      "id": "SY0210d.f18",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager compared the final cost with the 12.50 euro production cost limit set at the kickoff meeting.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0210a",
+      "evidence_segments": [
+        "SY0210d.s0103"
+      ]
+    },
+    {
+      "id": "SY0210d.f19",
+      "type": "action_item",
+      "fact": "The industrial designer will test the speaker against an extractor fan in the test kitchen next week.",
+      "agreed": null,
+      "related_action_item": "SY0210d.ai2",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0210d.s0086",
+        "SY0210d.s0110",
+        "SY0210d.s0111"
+      ]
+    },
+    {
+      "id": "SY0210d.f20",
+      "type": "action_item",
+      "fact": "The user interface designer will write the quick-start card with the voice commands. The marketing expert offered first, but she took it because she has the phrasings from her smart speaker comparison.",
+      "agreed": null,
+      "related_action_item": "SY0210d.ai3",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0210d.s0113",
+        "SY0210d.s0114",
+        "SY0210d.s0115",
+        "SY0210d.s0116",
+        "SY0210d.s0117"
+      ]
+    },
+    {
+      "id": "SY0210d.f21",
+      "type": "decision",
+      "fact": "The quick-start card will go in the box rather than being printed on the base, because a sticker on the base would get grubby.",
+      "agreed": true,
+      "related_action_item": "SY0210d.ai3",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0210d.s0117",
+        "SY0210d.s0118",
+        "SY0210d.s0119"
+      ]
+    },
+    {
+      "id": "SY0210d.f22",
+      "type": "action_item",
+      "fact": "The project manager will write the final report for management with the costing and the evaluation.",
+      "agreed": null,
+      "related_action_item": "SY0210d.ai4",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0210d.s0120"
+      ]
+    },
+    {
+      "id": "SY0210d.f23",
+      "type": "action_item",
+      "fact": "The project manager will send round the minutes of the detailed design meeting.",
+      "agreed": null,
+      "related_action_item": "SY0210d.ai5",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0210d.s0120"
+      ]
+    }
+  ],
+  "edge_cases": [
+    {
+      "scenario_id": "F2_VAGUE_NO_OWNER",
+      "segments": [
+        "SY0210d.s0020",
+        "SY0210d.s0021",
+        "SY0210d.s0022",
+        "SY0210d.s0023"
+      ],
+      "note": "The industrial designer says someone should test the chip with different accents. Others agree, but the project manager just says to bear it in mind and moves on, so nobody owns it."
+    },
+    {
+      "scenario_id": "F2_OFFERED_TAKEN_BY_OTHER",
+      "segments": [
+        "SY0210d.s0113",
+        "SY0210d.s0114",
+        "SY0210d.s0115",
+        "SY0210d.s0116",
+        "SY0210d.s0117"
+      ],
+      "note": "The marketing expert offers to write the quick-start card. The user interface designer takes it because she has the command phrasings, and the marketing expert and project manager accept this."
+    }
+  ],
+  "provenance": {
+    "generator": "liveminutes-synthetic",
+    "cache_key": "6e04a76fab2fb4458c6d6155ec64d53bc628b0805123fcc5f3e12774a40d18a5",
+    "attempt": 0,
+    "model": "claude-opus-5-5",
+    "prompt_version": "v1",
+    "scenario_spec_version": 1,
+    "feature": "F2",
+    "product": "a voice-controlled kitchen timer",
+    "planned_scenarios": [
+      "F2_VAGUE_NO_OWNER",
+      "F2_OFFERED_TAKEN_BY_OTHER"
+    ]
+  }
+}

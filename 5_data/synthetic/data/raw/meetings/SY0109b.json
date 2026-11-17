@@ -1,0 +1,1535 @@
+{
+  "schema_version": "1.0",
+  "source": "synthetic",
+  "meeting_id": "SY0109b",
+  "series_id": "SY0109",
+  "meeting_letter": "b",
+  "scenario_type": "scenario",
+  "stage": "functional design",
+  "duration_sec": 501.08,
+  "participants": [
+    {
+      "label": "A",
+      "role": "ID",
+      "name": "Tomas",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "B",
+      "role": "UI",
+      "name": "Priya",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "C",
+      "role": "ME",
+      "name": "Hannah",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "D",
+      "role": "PM",
+      "name": "Marcus",
+      "global_id": null,
+      "status": "present"
+    }
+  ],
+  "segments": [
+    {
+      "id": "SY0109b.s0001",
+      "speaker": "D",
+      "start": 5.0,
+      "end": 7.31,
+      "text": "Okay, um, are we all here?",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0109b.s0002",
+      "speaker": "C",
+      "start": 7.91,
+      "end": 8.31,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109b.s0003",
+      "speaker": "A",
+      "start": 8.67,
+      "end": 9.07,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109b.s0004",
+      "speaker": "D",
+      "start": 9.32,
+      "end": 13.55,
+      "text": "Right, so this is the second one, the functional design meeting.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0005",
+      "speaker": "D",
+      "start": 14.24,
+      "end": 22.32,
+      "text": "Um, I sent round the minutes from the kickoff and the brief and the folder link, so hopefully everyone got those.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0006",
+      "speaker": "B",
+      "start": 22.55,
+      "end": 24.09,
+      "text": "Yeah, got them, thanks.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109b.s0007",
+      "speaker": "D",
+      "start": 24.67,
+      "end": 34.29,
+      "text": "So the plan today is, uh, go through what everyone went away to do, and then pin down what the app actually has to do.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0008",
+      "speaker": "D",
+      "start": 34.96,
+      "end": 41.5,
+      "text": "Tomas, do you wanna start with the dock supplier? 'Cause that was kind of the big unknown.",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109b.s0009",
+      "speaker": "A",
+      "start": 42.46,
+      "end": 43.61,
+      "text": "Yeah, uh, sure.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0109b.s0010",
+      "speaker": "A",
+      "start": 44.13,
+      "end": 49.9,
+      "text": "So I spoke to them on Tuesday, and the docks use Bluetooth, Bluetooth Low Energy.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0011",
+      "speaker": "A",
+      "start": 50.59,
+      "end": 56.36,
+      "text": "And each dock also has a QR sticker on it, which is, like, the backup.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0012",
+      "speaker": "A",
+      "start": 57.25,
+      "end": 58.79,
+      "text": "No NFC at all.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0013",
+      "speaker": "D",
+      "start": 59.02,
+      "end": 60.17,
+      "text": "And the screen?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109b.s0014",
+      "speaker": "A",
+      "start": 60.86,
+      "end": 65.86,
+      "text": "No screen. There's just an LED ring round the lock, green, amber, red.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0015",
+      "speaker": "B",
+      "start": 66.4,
+      "end": 70.25,
+      "text": "Oh, so nothing to read on the dock at all.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0109b.s0016",
+      "speaker": "A",
+      "start": 70.68,
+      "end": 76.06,
+      "text": "Nope. So anything the rider needs to read has to be on the phone.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0017",
+      "speaker": "C",
+      "start": 77.02,
+      "end": 79.33,
+      "text": "That's quite a big deal actually.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109b.s0018",
+      "speaker": "D",
+      "start": 79.89,
+      "end": 82.2,
+      "text": "Yeah. Okay, that answers a lot.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109b.s0019",
+      "speaker": "B",
+      "start": 82.71,
+      "end": 88.09,
+      "text": "Does the Bluetooth need pairing? Like, do people have to go into their settings?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109b.s0020",
+      "speaker": "A",
+      "start": 88.99,
+      "end": 94.76,
+      "text": "No, no, they said the app just talks to it directly, there's no pairing screen.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0021",
+      "speaker": "B",
+      "start": 95.34,
+      "end": 96.11,
+      "text": "Oh good.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0109b.s0022",
+      "speaker": "A",
+      "start": 96.39,
+      "end": 102.93,
+      "text": "Range is only a couple of metres though, so you have to be standing right at it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0023",
+      "speaker": "D",
+      "start": 103.16,
+      "end": 107.39,
+      "text": "So which one do we make the main way to unlock?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0109b.s0024",
+      "speaker": "B",
+      "start": 108.0,
+      "end": 114.92,
+      "text": "I'd say Bluetooth as the main one, 'cause that gives us the one-tap thing we said last time.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109b.s0025",
+      "speaker": "B",
+      "start": 115.17,
+      "end": 120.17,
+      "text": "You just tap unlock and it finds the dock you're standing next to.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0026",
+      "speaker": "C",
+      "start": 120.44,
+      "end": 125.82,
+      "text": "And QR's a pain in the rain, we said that at the kickoff too.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109b.s0027",
+      "speaker": "A",
+      "start": 126.71,
+      "end": 130.94,
+      "text": "Yeah, the sticker gets wet, and at night the camera struggles.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0028",
+      "speaker": "D",
+      "start": 131.92,
+      "end": 136.54,
+      "text": "So Bluetooth first, and QR as the fallback if the Bluetooth fails.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109b.s0029",
+      "speaker": "B",
+      "start": 137.23,
+      "end": 137.63,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109b.s0030",
+      "speaker": "C",
+      "start": 137.9,
+      "end": 138.3,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109b.s0031",
+      "speaker": "A",
+      "start": 138.7,
+      "end": 139.47,
+      "text": "Makes sense.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109b.s0032",
+      "speaker": "D",
+      "start": 140.25,
+      "end": 143.33,
+      "text": "Okay, so that's decided. Bluetooth main, QR fallback.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0033",
+      "speaker": "A",
+      "start": 143.79,
+      "end": 149.56,
+      "text": "Great, so we're putting a little umbrella over every dock then, and QR works fine.",
+      "da_type": "oth"
+    },
+    {
+      "id": "SY0109b.s0034",
+      "speaker": "C",
+      "start": 150.55,
+      "end": 152.09,
+      "text": "Ha, yeah, fourteen umbrellas.",
+      "da_type": "oth"
+    },
+    {
+      "id": "SY0109b.s0035",
+      "speaker": "D",
+      "start": 152.64,
+      "end": 154.95,
+      "text": "Put it in the budget, Tomas.",
+      "da_type": "oth"
+    },
+    {
+      "id": "SY0109b.s0036",
+      "speaker": "A",
+      "start": 155.89,
+      "end": 157.43,
+      "text": "I'll get a quote.",
+      "da_type": "oth"
+    },
+    {
+      "id": "SY0109b.s0037",
+      "speaker": "D",
+      "start": 158.38,
+      "end": 158.78,
+      "text": "Anyway.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0109b.s0038",
+      "speaker": "D",
+      "start": 159.66,
+      "end": 160.43,
+      "text": "Priya, wireframes?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109b.s0039",
+      "speaker": "B",
+      "start": 160.89,
+      "end": 167.04,
+      "text": "Yeah, so I did three rough flows, find, unlock and return. They're in the shared folder.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0040",
+      "speaker": "B",
+      "start": 167.36,
+      "end": 174.28,
+      "text": "Find is basically a map with the fourteen docks, and each pin shows how many bikes are there.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0041",
+      "speaker": "B",
+      "start": 174.79,
+      "end": 177.87,
+      "text": "Unlock is just the big button, one tap.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0042",
+      "speaker": "B",
+      "start": 178.61,
+      "end": 183.61,
+      "text": "And return, at the moment it's just a screen that says ride ended.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0043",
+      "speaker": "C",
+      "start": 184.39,
+      "end": 188.62,
+      "text": "Does the map show the empty slots as well? For returning?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109b.s0044",
+      "speaker": "B",
+      "start": 188.77,
+      "end": 191.08,
+      "text": "Um, no, not yet. Just bikes.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0045",
+      "speaker": "C",
+      "start": 191.54,
+      "end": 195.39,
+      "text": "'Cause that was the top thing in the survey, actually.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0046",
+      "speaker": "D",
+      "start": 195.9,
+      "end": 199.75,
+      "text": "Oh, go on then, Hannah, how did the survey go?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109b.s0047",
+      "speaker": "C",
+      "start": 200.15,
+      "end": 206.3,
+      "text": "So it went out Monday, and we got two hundred and twelve responses back by Thursday.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0048",
+      "speaker": "C",
+      "start": 206.9,
+      "end": 214.59,
+      "text": "The biggest ask, by quite a way, was knowing if there's a free slot at the dock you're riding to.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0049",
+      "speaker": "C",
+      "start": 215.23,
+      "end": 219.08,
+      "text": "Like, people are scared of turning up and it's full.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0050",
+      "speaker": "A",
+      "start": 219.46,
+      "end": 222.54,
+      "text": "Right, and then you're stuck with the bike.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0109b.s0051",
+      "speaker": "C",
+      "start": 223.24,
+      "end": 225.16,
+      "text": "Exactly. And still being charged.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0052",
+      "speaker": "C",
+      "start": 225.58,
+      "end": 230.58,
+      "text": "The second one was knowing what a ride's gonna cost before you start.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0053",
+      "speaker": "D",
+      "start": 231.42,
+      "end": 232.96,
+      "text": "And the leaderboard question?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109b.s0054",
+      "speaker": "C",
+      "start": 233.23,
+      "end": 237.46,
+      "text": "Uh, not much love. About eighteen percent said they'd use it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0055",
+      "speaker": "A",
+      "start": 238.08,
+      "end": 239.23,
+      "text": "Ah. Fair enough.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109b.s0056",
+      "speaker": "D",
+      "start": 239.51,
+      "end": 244.13,
+      "text": "So I think we just drop the leaderboard for the pilot, yeah?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109b.s0057",
+      "speaker": "A",
+      "start": 244.52,
+      "end": 246.06,
+      "text": "Yeah, no, that's fine.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109b.s0058",
+      "speaker": "B",
+      "start": 246.94,
+      "end": 247.34,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109b.s0059",
+      "speaker": "C",
+      "start": 247.51,
+      "end": 249.05,
+      "text": "I think that's right.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109b.s0060",
+      "speaker": "D",
+      "start": 249.72,
+      "end": 250.87,
+      "text": "Okay, leaderboard's out.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0061",
+      "speaker": "C",
+      "start": 251.07,
+      "end": 257.61,
+      "text": "And for the competitor stuff, I looked at three other bike-share apps and read through their reviews.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0062",
+      "speaker": "C",
+      "start": 257.87,
+      "end": 261.72,
+      "text": "The one-star reviews are almost all the same two things.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0063",
+      "speaker": "C",
+      "start": 262.09,
+      "end": 267.86,
+      "text": "Either the bike wouldn't unlock, or they docked it and the app kept charging them.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0064",
+      "speaker": "B",
+      "start": 268.67,
+      "end": 270.98,
+      "text": "So it never registered the return.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0109b.s0065",
+      "speaker": "C",
+      "start": 271.88,
+      "end": 276.11,
+      "text": "Yeah, there's no confirmation. People don't know if it's actually locked.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0066",
+      "speaker": "B",
+      "start": 276.54,
+      "end": 281.16,
+      "text": "And with no screen on the dock that's even worse for us.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109b.s0067",
+      "speaker": "A",
+      "start": 282.15,
+      "end": 286.77,
+      "text": "Well, the LED goes green, but people won't know what green means.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0068",
+      "speaker": "B",
+      "start": 287.24,
+      "end": 295.32,
+      "text": "So I think the return screen needs to be a proper confirmation. Like, bike locked, ride ended, here's what you paid.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109b.s0069",
+      "speaker": "D",
+      "start": 295.64,
+      "end": 297.18,
+      "text": "Yeah, I like that.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109b.s0070",
+      "speaker": "C",
+      "start": 297.78,
+      "end": 301.24,
+      "text": "That would kill most of those one-star reviews, honestly.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109b.s0071",
+      "speaker": "D",
+      "start": 302.23,
+      "end": 307.61,
+      "text": "Tomas, does the dock actually tell the system when it's locked? Like, straight away?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109b.s0072",
+      "speaker": "A",
+      "start": 308.05,
+      "end": 311.9,
+      "text": "Um, I think so, but I didn't ask how fast.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0073",
+      "speaker": "A",
+      "start": 312.13,
+      "end": 313.68,
+      "text": "I can ask them.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0109b.s0074",
+      "speaker": "D",
+      "start": 314.14,
+      "end": 320.29,
+      "text": "Yeah, can you? Find out how long it takes for the dock to report a return.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109b.s0075",
+      "speaker": "A",
+      "start": 320.45,
+      "end": 320.85,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109b.s0076",
+      "speaker": "D",
+      "start": 321.66,
+      "end": 328.2,
+      "text": "Okay, so let me just list the functions. Find, with bikes and free slots on the map.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0077",
+      "speaker": "B",
+      "start": 328.7,
+      "end": 329.1,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109b.s0078",
+      "speaker": "D",
+      "start": 329.33,
+      "end": 333.18,
+      "text": "Unlock, one tap via Bluetooth, with QR as the fallback.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0079",
+      "speaker": "D",
+      "start": 333.84,
+      "end": 336.92,
+      "text": "Return, with a confirmation screen and the cost.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0080",
+      "speaker": "C",
+      "start": 337.43,
+      "end": 340.12,
+      "text": "And the price shown before you unlock.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109b.s0081",
+      "speaker": "D",
+      "start": 340.65,
+      "end": 342.57,
+      "text": "Yeah, price before unlocking. Good.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109b.s0082",
+      "speaker": "B",
+      "start": 343.52,
+      "end": 348.14,
+      "text": "And payment's still at sign-up, like we said in the first meeting?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0109b.s0083",
+      "speaker": "D",
+      "start": 348.77,
+      "end": 353.39,
+      "text": "Yeah, that stays. Card at sign-up, nothing to do at the dock.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0084",
+      "speaker": "B",
+      "start": 354.29,
+      "end": 359.67,
+      "text": "Then there's the night thing. I'd like a high-contrast mode, dark background, big text.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109b.s0085",
+      "speaker": "A",
+      "start": 360.07,
+      "end": 366.22,
+      "text": "Yeah, since there's no screen on the dock, the phone's the only thing they can read.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109b.s0086",
+      "speaker": "D",
+      "start": 366.91,
+      "end": 369.22,
+      "text": "Yeah, let's have a high-contrast mode.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109b.s0087",
+      "speaker": "C",
+      "start": 369.76,
+      "end": 375.91,
+      "text": "Sorry, random, but has anyone managed to get the coffee machine on the third floor working?",
+      "da_type": "oth"
+    },
+    {
+      "id": "SY0109b.s0088",
+      "speaker": "A",
+      "start": 376.58,
+      "end": 380.04,
+      "text": "No, it's been flashing descale for like a week.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0089",
+      "speaker": "B",
+      "start": 380.91,
+      "end": 383.6,
+      "text": "I pressed every button this morning. Nothing.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0090",
+      "speaker": "C",
+      "start": 384.24,
+      "end": 388.09,
+      "text": "I ended up going to that place across the road.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0091",
+      "speaker": "D",
+      "start": 388.29,
+      "end": 393.29,
+      "text": "The one with the green door? Their flat whites are actually really good.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0092",
+      "speaker": "C",
+      "start": 394.01,
+      "end": 396.32,
+      "text": "They're so good. But four pounds.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109b.s0093",
+      "speaker": "A",
+      "start": 396.78,
+      "end": 399.86,
+      "text": "Someone said facilities have ordered a new one.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0094",
+      "speaker": "B",
+      "start": 400.53,
+      "end": 402.07,
+      "text": "Did they say when?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109b.s0095",
+      "speaker": "A",
+      "start": 402.47,
+      "end": 404.78,
+      "text": "Next month, apparently, which means never.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0096",
+      "speaker": "B",
+      "start": 404.93,
+      "end": 405.33,
+      "text": "Ha.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109b.s0097",
+      "speaker": "C",
+      "start": 405.94,
+      "end": 408.25,
+      "text": "I'm just gonna bring a flask.",
+      "da_type": "oth"
+    },
+    {
+      "id": "SY0109b.s0098",
+      "speaker": "D",
+      "start": 408.72,
+      "end": 410.64,
+      "text": "Okay, okay. Back to it.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0109b.s0099",
+      "speaker": "D",
+      "start": 410.93,
+      "end": 418.24,
+      "text": "So, the high-contrast thing. Hannah, could you check if there's guidance on readability outdoors, like contrast and text size?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109b.s0100",
+      "speaker": "C",
+      "start": 418.67,
+      "end": 420.59,
+      "text": "Um, I can, but honestly",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0109b.s0101",
+      "speaker": "C",
+      "start": 420.91,
+      "end": 425.91,
+      "text": "I think that's more Priya's area? She'll know the standards better than me.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109b.s0102",
+      "speaker": "B",
+      "start": 426.56,
+      "end": 430.41,
+      "text": "Yeah, I can take that, I've done contrast checks before.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0109b.s0103",
+      "speaker": "D",
+      "start": 431.27,
+      "end": 435.89,
+      "text": "Okay, Priya, you take the readability check then, Hannah's off the hook.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0104",
+      "speaker": "C",
+      "start": 436.53,
+      "end": 436.93,
+      "text": "Thanks.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109b.s0105",
+      "speaker": "D",
+      "start": 437.8,
+      "end": 443.18,
+      "text": "And Priya, you'll update the wireframes with the free slots and the return confirmation?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109b.s0106",
+      "speaker": "B",
+      "start": 444.02,
+      "end": 448.25,
+      "text": "Yeah. And the price before unlock, and a QR fallback screen.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0107",
+      "speaker": "D",
+      "start": 449.19,
+      "end": 449.59,
+      "text": "Great.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109b.s0108",
+      "speaker": "B",
+      "start": 450.32,
+      "end": 452.24,
+      "text": "When do you need them?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109b.s0109",
+      "speaker": "D",
+      "start": 452.78,
+      "end": 454.7,
+      "text": "For the next meeting, ideally.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0110",
+      "speaker": "C",
+      "start": 455.19,
+      "end": 462.11,
+      "text": "I'll put the survey results and the competitor notes in the shared folder, I haven't uploaded them yet.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0109b.s0111",
+      "speaker": "D",
+      "start": 463.04,
+      "end": 463.81,
+      "text": "Perfect, thanks.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109b.s0112",
+      "speaker": "A",
+      "start": 464.13,
+      "end": 469.51,
+      "text": "Should I also ask them what happens if Bluetooth's switched off on the phone?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0109b.s0113",
+      "speaker": "B",
+      "start": 470.43,
+      "end": 471.57,
+      "text": "Oh, good point.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109b.s0114",
+      "speaker": "D",
+      "start": 472.41,
+      "end": 479.33,
+      "text": "Uh, I think that's on our side really, the app can just tell them to switch it on.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109b.s0115",
+      "speaker": "B",
+      "start": 480.23,
+      "end": 483.69,
+      "text": "Yeah, I'll put a prompt in the unlock flow.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109b.s0116",
+      "speaker": "A",
+      "start": 483.89,
+      "end": 484.29,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109b.s0117",
+      "speaker": "D",
+      "start": 484.66,
+      "end": 488.89,
+      "text": "Right, so the next meeting is conceptual design. Tuesday at two?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0109b.s0118",
+      "speaker": "C",
+      "start": 489.58,
+      "end": 490.73,
+      "text": "Works for me.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109b.s0119",
+      "speaker": "A",
+      "start": 490.95,
+      "end": 491.35,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109b.s0120",
+      "speaker": "B",
+      "start": 492.06,
+      "end": 492.46,
+      "text": "Fine.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109b.s0121",
+      "speaker": "D",
+      "start": 492.79,
+      "end": 495.48,
+      "text": "I'll send the minutes and an invite.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0109b.s0122",
+      "speaker": "D",
+      "start": 495.84,
+      "end": 496.99,
+      "text": "Okay, thanks everyone.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0109b.s0123",
+      "speaker": "B",
+      "start": 497.68,
+      "end": 498.08,
+      "text": "Thanks.",
+      "da_type": "bck"
+    }
+  ],
+  "summary": {
+    "abstract": [
+      "The project manager opened the functional design meeting and confirmed he had sent out the kickoff minutes, the brief and the shared folder link.",
+      "The industrial designer reported back from the dock supplier: the docks use Bluetooth Low Energy with a QR sticker as backup, there is no NFC, and there is no screen, only an LED ring. The team chose Bluetooth as the main unlock method with QR as the fallback.",
+      "The user interface designer presented rough wireframes for the find, unlock and return flows. The marketing expert presented the rider survey results: the top request was seeing free return slots, the second was knowing the price before a ride, and only about eighteen percent were interested in a leaderboard. The leaderboard was dropped for the pilot.",
+      "The marketing expert's competitor review showed that most one-star reviews concern failed unlocks and returns that were never registered. This led the team to add a proper return confirmation screen showing the cost.",
+      "The project manager summarised the functions: find with bikes and free slots on the map, one-tap Bluetooth unlock with QR fallback and the price shown beforehand, and return with confirmation. Payment stays at sign-up, and a high-contrast mode will be added for night use. The next meeting was set for Tuesday at two."
+    ],
+    "actions": [
+      "The industrial designer will ask the dock supplier how long it takes for a dock to report a return.",
+      "The user interface designer will update the wireframes. The updates are: free slots on the map, a return confirmation with the cost, the price before unlock, a QR fallback screen, and a prompt to switch on Bluetooth.",
+      "The user interface designer will check guidance on outdoor readability, such as contrast and text size. This task was first given to the marketing expert.",
+      "The marketing expert will upload the survey results and the competitor review notes to the shared folder.",
+      "The project manager will send out the minutes and an invite for the next meeting."
+    ],
+    "decisions": [
+      "Bluetooth will be the main way to unlock a bike, with the dock's QR sticker as the fallback.",
+      "The leaderboard is dropped for the pilot, given weak survey interest.",
+      "The map will show free return slots as well as available bikes.",
+      "The return flow will end with a confirmation screen stating that the bike is locked, the ride has ended and what was paid.",
+      "The price will be shown to the rider before unlocking.",
+      "Payment setup stays at sign-up, as agreed at the kickoff.",
+      "The app will have a high-contrast mode for night use.",
+      "If Bluetooth is off on the phone, the app will prompt the rider to switch it on.",
+      "The next meeting (conceptual design) will be on Tuesday at two."
+    ],
+    "problems": [
+      "It is not yet known how quickly a dock reports a return to the system. This matters for the return confirmation.",
+      "The Bluetooth range is only about two metres, so riders must stand at the dock.",
+      "Riders may not understand the dock's LED colours, so the phone has to carry all feedback.",
+      "The QR fallback remains unreliable in rain and at night.",
+      "The readability standards for outdoor and night use still need to be checked."
+    ]
+  },
+  "action_items": [
+    {
+      "id": "SY0109b.ai1",
+      "description": "Ask the dock supplier how long it takes for a dock to report a returned bike to the system",
+      "owner": "A",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0109b.s0073",
+          "event": "offered",
+          "by": "A",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0109b.s0074",
+          "event": "assigned",
+          "by": "D",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0109b.s0075",
+          "event": "accepted",
+          "by": "A",
+          "owner": "A"
+        }
+      ],
+      "evidence_segments": [
+        "SY0109b.s0071",
+        "SY0109b.s0072",
+        "SY0109b.s0073",
+        "SY0109b.s0074",
+        "SY0109b.s0075"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0109b.ai2",
+      "description": "Update the wireframes: free slots on the map, a return confirmation with the cost, the price before unlock, a QR fallback screen and a Bluetooth-on prompt",
+      "owner": "B",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0109b.s0105",
+          "event": "assigned",
+          "by": "D",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0109b.s0106",
+          "event": "accepted",
+          "by": "B",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0109b.s0115",
+          "event": "restated",
+          "by": "B",
+          "owner": "B"
+        }
+      ],
+      "evidence_segments": [
+        "SY0109b.s0105",
+        "SY0109b.s0106",
+        "SY0109b.s0108",
+        "SY0109b.s0109",
+        "SY0109b.s0114",
+        "SY0109b.s0115"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0109b.ai3",
+      "description": "Check guidance on outdoor readability (contrast, text size) for the high-contrast mode",
+      "owner": "B",
+      "owner_unclear": false,
+      "status": "reassigned",
+      "previous_owners": [
+        "C"
+      ],
+      "history": [
+        {
+          "segment": "SY0109b.s0099",
+          "event": "assigned",
+          "by": "D",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0109b.s0102",
+          "event": "offered",
+          "by": "B",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0109b.s0103",
+          "event": "reassigned",
+          "by": "D",
+          "owner": "B"
+        }
+      ],
+      "evidence_segments": [
+        "SY0109b.s0099",
+        "SY0109b.s0100",
+        "SY0109b.s0101",
+        "SY0109b.s0102",
+        "SY0109b.s0103",
+        "SY0109b.s0104"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0109b.ai4",
+      "description": "Upload the survey results and the competitor review notes to the shared folder",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0109b.s0110",
+          "event": "offered",
+          "by": "C",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0109b.s0111",
+          "event": "accepted",
+          "by": "D",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0109b.s0110",
+        "SY0109b.s0111"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0109b.ai5",
+      "description": "Send out the minutes and an invite for the next meeting",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0109b.s0121",
+          "event": "offered",
+          "by": "D",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0109b.s0117",
+        "SY0109b.s0121"
+      ],
+      "owner_source": "gold"
+    }
+  ],
+  "qa_facts": [
+    {
+      "id": "SY0109b.f1",
+      "type": "decision",
+      "fact": "Bluetooth is the main unlock method and the QR sticker is the fallback.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109b.s0024",
+        "SY0109b.s0028",
+        "SY0109b.s0029",
+        "SY0109b.s0030",
+        "SY0109b.s0031",
+        "SY0109b.s0032"
+      ]
+    },
+    {
+      "id": "SY0109b.f2",
+      "type": "decision",
+      "fact": "The leaderboard is dropped for the pilot.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109b.s0054",
+        "SY0109b.s0056",
+        "SY0109b.s0057",
+        "SY0109b.s0058",
+        "SY0109b.s0059",
+        "SY0109b.s0060"
+      ]
+    },
+    {
+      "id": "SY0109b.f3",
+      "type": "decision",
+      "fact": "The map will show free return slots as well as available bikes.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109b.s0043",
+        "SY0109b.s0048",
+        "SY0109b.s0076",
+        "SY0109b.s0077"
+      ]
+    },
+    {
+      "id": "SY0109b.f4",
+      "type": "decision",
+      "fact": "The return flow ends with a confirmation screen showing that the bike is locked, the ride has ended and the cost.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109b.s0068",
+        "SY0109b.s0069",
+        "SY0109b.s0070",
+        "SY0109b.s0079"
+      ]
+    },
+    {
+      "id": "SY0109b.f5",
+      "type": "decision",
+      "fact": "The price is shown before unlocking.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109b.s0080",
+        "SY0109b.s0081"
+      ]
+    },
+    {
+      "id": "SY0109b.f6",
+      "type": "decision",
+      "fact": "Payment setup stays at sign-up.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109b.s0082",
+        "SY0109b.s0083"
+      ]
+    },
+    {
+      "id": "SY0109b.f7",
+      "type": "decision",
+      "fact": "The app will have a high-contrast mode for night use.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109b.s0084",
+        "SY0109b.s0085",
+        "SY0109b.s0086"
+      ]
+    },
+    {
+      "id": "SY0109b.f8",
+      "type": "decision",
+      "fact": "The app will prompt riders to switch on Bluetooth if it is off, instead of the industrial designer asking the supplier about it.",
+      "agreed": true,
+      "related_action_item": "SY0109b.ai2",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109b.s0112",
+        "SY0109b.s0113",
+        "SY0109b.s0114",
+        "SY0109b.s0115",
+        "SY0109b.s0116"
+      ]
+    },
+    {
+      "id": "SY0109b.f9",
+      "type": "decision",
+      "fact": "The next meeting (conceptual design) is on Tuesday at two.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109b.s0117",
+        "SY0109b.s0118",
+        "SY0109b.s0119",
+        "SY0109b.s0120"
+      ]
+    },
+    {
+      "id": "SY0109b.f10",
+      "type": "action_item",
+      "fact": "The industrial designer will ask the dock supplier how quickly a dock reports a return.",
+      "agreed": null,
+      "related_action_item": "SY0109b.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109b.s0073",
+        "SY0109b.s0074",
+        "SY0109b.s0075"
+      ]
+    },
+    {
+      "id": "SY0109b.f11",
+      "type": "action_item",
+      "fact": "The user interface designer will update the wireframes with the new screens and features.",
+      "agreed": null,
+      "related_action_item": "SY0109b.ai2",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109b.s0105",
+        "SY0109b.s0106",
+        "SY0109b.s0115"
+      ]
+    },
+    {
+      "id": "SY0109b.f12",
+      "type": "action_item",
+      "fact": "The outdoor readability check was first given to the marketing expert and then reassigned to the user interface designer.",
+      "agreed": null,
+      "related_action_item": "SY0109b.ai3",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109b.s0099",
+        "SY0109b.s0101",
+        "SY0109b.s0102",
+        "SY0109b.s0103"
+      ]
+    },
+    {
+      "id": "SY0109b.f13",
+      "type": "action_item",
+      "fact": "The marketing expert will upload the survey results and the competitor notes to the shared folder.",
+      "agreed": null,
+      "related_action_item": "SY0109b.ai4",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109b.s0110",
+        "SY0109b.s0111"
+      ]
+    },
+    {
+      "id": "SY0109b.f14",
+      "type": "action_item",
+      "fact": "The project manager will send the minutes and the next meeting invite.",
+      "agreed": null,
+      "related_action_item": "SY0109b.ai5",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109b.s0121"
+      ]
+    },
+    {
+      "id": "SY0109b.f15",
+      "type": "reference_to_prior_meeting",
+      "fact": "The user interface designer linked the Bluetooth choice to the one-tap unlocking agreed at the kickoff.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0109a",
+      "evidence_segments": [
+        "SY0109b.s0024"
+      ]
+    },
+    {
+      "id": "SY0109b.f16",
+      "type": "reference_to_prior_meeting",
+      "fact": "The user interface designer confirmed that payment stays at sign-up, as decided in the first meeting.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0109a",
+      "evidence_segments": [
+        "SY0109b.s0082",
+        "SY0109b.s0083"
+      ]
+    },
+    {
+      "id": "SY0109b.f17",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager reported that he had sent the kickoff minutes, the brief and the shared folder link.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0109a",
+      "evidence_segments": [
+        "SY0109b.s0005",
+        "SY0109b.s0006"
+      ]
+    },
+    {
+      "id": "SY0109b.f18",
+      "type": "other",
+      "fact": "The dock supplier confirmed that the docks use Bluetooth Low Energy with a QR sticker backup, no NFC and no screen, only an LED ring.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0109a",
+      "evidence_segments": [
+        "SY0109b.s0010",
+        "SY0109b.s0011",
+        "SY0109b.s0012",
+        "SY0109b.s0014"
+      ]
+    },
+    {
+      "id": "SY0109b.f19",
+      "type": "other",
+      "fact": "The rider survey got 212 responses. The top request was seeing free slots, the second was the price before a ride, and about 18% were interested in a leaderboard.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0109a",
+      "evidence_segments": [
+        "SY0109b.s0047",
+        "SY0109b.s0048",
+        "SY0109b.s0052",
+        "SY0109b.s0054"
+      ]
+    },
+    {
+      "id": "SY0109b.f20",
+      "type": "other",
+      "fact": "The competitor review found that most one-star reviews concern failed unlocks and unregistered returns.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0109a",
+      "evidence_segments": [
+        "SY0109b.s0061",
+        "SY0109b.s0062",
+        "SY0109b.s0063",
+        "SY0109b.s0065"
+      ]
+    }
+  ],
+  "edge_cases": [
+    {
+      "scenario_id": "F1_OFF_TOPIC_TANGENT",
+      "segments": [
+        "SY0109b.s0087",
+        "SY0109b.s0088",
+        "SY0109b.s0089",
+        "SY0109b.s0090",
+        "SY0109b.s0091",
+        "SY0109b.s0092",
+        "SY0109b.s0093",
+        "SY0109b.s0094",
+        "SY0109b.s0095",
+        "SY0109b.s0096",
+        "SY0109b.s0097",
+        "SY0109b.s0098"
+      ],
+      "note": "A twelve-segment tangent about the broken coffee machine and a café across the road. The project manager ends it at 98."
+    },
+    {
+      "scenario_id": "F1_SARCASM_AS_FACT",
+      "segments": [
+        "SY0109b.s0033",
+        "SY0109b.s0034",
+        "SY0109b.s0035",
+        "SY0109b.s0036",
+        "SY0109b.s0037"
+      ],
+      "note": "The industrial designer jokes that they are putting an umbrella over every dock so QR works. Others play along, the project manager moves on, and it is not adopted."
+    }
+  ],
+  "provenance": {
+    "generator": "liveminutes-synthetic",
+    "cache_key": "2b390884d2b97b8d81598f72cfea3ac48bc33fe0898d61dfd1968698d3ddd777",
+    "attempt": 0,
+    "model": "claude-opus-5-5",
+    "prompt_version": "v1",
+    "scenario_spec_version": 1,
+    "feature": "F1",
+    "product": "a bike-share docking station app",
+    "planned_scenarios": [
+      "F1_OFF_TOPIC_TANGENT",
+      "F1_SARCASM_AS_FACT"
+    ]
+  }
+}

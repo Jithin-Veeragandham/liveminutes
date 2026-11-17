@@ -1,0 +1,1747 @@
+{
+  "schema_version": "1.0",
+  "source": "synthetic",
+  "meeting_id": "SY0205b",
+  "series_id": "SY0205",
+  "meeting_letter": "b",
+  "scenario_type": "scenario",
+  "stage": "functional design",
+  "duration_sec": 623.54,
+  "participants": [
+    {
+      "label": "A",
+      "role": "ME",
+      "name": "Priya",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "B",
+      "role": "UI",
+      "name": "Tomas",
+      "global_id": null,
+      "status": "absent"
+    },
+    {
+      "label": "C",
+      "role": "PM",
+      "name": "Helen",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "D",
+      "role": "ID",
+      "name": "Marcus",
+      "global_id": null,
+      "status": "present"
+    }
+  ],
+  "segments": [
+    {
+      "id": "SY0205b.s0001",
+      "speaker": "C",
+      "start": 5.0,
+      "end": 7.69,
+      "text": "Okay, um, I think we can start.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0205b.s0002",
+      "speaker": "C",
+      "start": 8.33,
+      "end": 11.02,
+      "text": "So this is the functional design meeting.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0003",
+      "speaker": "C",
+      "start": 11.99,
+      "end": 19.3,
+      "text": "Tomas isn't with us today, he's at the, uh, the dev conference in Rotterdam, he let me know yesterday.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0004",
+      "speaker": "A",
+      "start": 19.58,
+      "end": 20.35,
+      "text": "Ah, okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0205b.s0005",
+      "speaker": "D",
+      "start": 21.27,
+      "end": 21.67,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0205b.s0006",
+      "speaker": "C",
+      "start": 22.29,
+      "end": 24.98,
+      "text": "So it's just the three of us.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0007",
+      "speaker": "C",
+      "start": 25.63,
+      "end": 34.86,
+      "text": "Um, quick agenda. First the bits left over from last time, then Priya's user requirements and the competitor review, then Marcus on the docks.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0008",
+      "speaker": "C",
+      "start": 35.23,
+      "end": 40.23,
+      "text": "And then we try to pin down the functions, the actual functional requirements.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0009",
+      "speaker": "A",
+      "start": 40.69,
+      "end": 41.09,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0205b.s0010",
+      "speaker": "C",
+      "start": 41.49,
+      "end": 48.03,
+      "text": "So, from the kickoff. I did send round the minutes and the brief, hopefully everyone got them.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0011",
+      "speaker": "D",
+      "start": 48.52,
+      "end": 50.06,
+      "text": "Yeah, got them, thanks.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0205b.s0012",
+      "speaker": "C",
+      "start": 50.65,
+      "end": 56.8,
+      "text": "The brand guide, I asked the operator for it, but I haven't had it back yet.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0013",
+      "speaker": "C",
+      "start": 57.36,
+      "end": 59.67,
+      "text": "I'll chase them again this week.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0205b.s0014",
+      "speaker": "A",
+      "start": 60.04,
+      "end": 66.19,
+      "text": "Okay. We'll need the colours before we can really do much with the pins, I guess.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0205b.s0015",
+      "speaker": "C",
+      "start": 66.77,
+      "end": 67.54,
+      "text": "Yeah, exactly.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0205b.s0016",
+      "speaker": "A",
+      "start": 67.8,
+      "end": 73.18,
+      "text": "And I did send Marcus the contact, the, uh, the guy at the operator.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0017",
+      "speaker": "D",
+      "start": 74.01,
+      "end": 80.55,
+      "text": "Yeah, Jan. I spoke to him on Tuesday, that's where most of my stuff comes from actually.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0018",
+      "speaker": "C",
+      "start": 80.85,
+      "end": 81.25,
+      "text": "Great.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0205b.s0019",
+      "speaker": "C",
+      "start": 81.73,
+      "end": 84.81,
+      "text": "Okay, Priya, do you want to go first?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0205b.s0020",
+      "speaker": "A",
+      "start": 85.35,
+      "end": 86.5,
+      "text": "Sure, um, yeah.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0205b.s0021",
+      "speaker": "A",
+      "start": 87.19,
+      "end": 91.04,
+      "text": "So I split it like we said, commuters and tourists.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0022",
+      "speaker": "A",
+      "start": 91.35,
+      "end": 105.2,
+      "text": "For commuters it's really all about speed. They do the same trip every day, they just want to know is there a bike at my dock and is there a free slot at the other end.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0023",
+      "speaker": "A",
+      "start": 105.86,
+      "end": 110.86,
+      "text": "So the favourites idea Tomas had last time, that came up a lot.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0024",
+      "speaker": "C",
+      "start": 111.85,
+      "end": 112.25,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0205b.s0025",
+      "speaker": "A",
+      "start": 113.08,
+      "end": 120.77,
+      "text": "People I talked to, they said they'd open the app basically on the doorstep and want the answer straight away.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0026",
+      "speaker": "D",
+      "start": 120.97,
+      "end": 123.28,
+      "text": "How many did you talk to?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0205b.s0027",
+      "speaker": "A",
+      "start": 123.93,
+      "end": 129.31,
+      "text": "Uh, twelve commuters, and I did a little survey that got about sixty answers.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0028",
+      "speaker": "D",
+      "start": 130.0,
+      "end": 130.4,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0205b.s0029",
+      "speaker": "A",
+      "start": 131.34,
+      "end": 141.34,
+      "text": "For tourists it's different. They don't know the city, so the map matters more, and language. They want English at least, probably German and French too.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0030",
+      "speaker": "A",
+      "start": 141.55,
+      "end": 147.32,
+      "text": "And they really don't want to make an account. That was the number one complaint.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0031",
+      "speaker": "C",
+      "start": 147.87,
+      "end": 151.33,
+      "text": "Which is the day pass thing from last time.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0205b.s0032",
+      "speaker": "A",
+      "start": 152.16,
+      "end": 158.7,
+      "text": "Yeah, exactly. And I actually asked Jan about it, sorry Marcus, I stole him for a minute.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0033",
+      "speaker": "D",
+      "start": 159.28,
+      "end": 160.43,
+      "text": "No, that's fine.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0205b.s0034",
+      "speaker": "A",
+      "start": 160.93,
+      "end": 174.01,
+      "text": "He said they can do a guest day pass, no full account, as long as there's a card pre-authorisation. So they hold like a hundred and fifty euros on the card as the deposit.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0035",
+      "speaker": "C",
+      "start": 174.19,
+      "end": 177.27,
+      "text": "Oh, that's good, that sorts the theft worry.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0205b.s0036",
+      "speaker": "A",
+      "start": 178.16,
+      "end": 179.7,
+      "text": "Yeah, I think so.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0205b.s0037",
+      "speaker": "C",
+      "start": 180.28,
+      "end": 186.82,
+      "text": "So are we happy to go with that? Guest day pass with the card hold, no account?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0205b.s0038",
+      "speaker": "D",
+      "start": 187.01,
+      "end": 188.93,
+      "text": "Yeah, makes sense to me.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0205b.s0039",
+      "speaker": "A",
+      "start": 189.49,
+      "end": 189.89,
+      "text": "Definitely.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0205b.s0040",
+      "speaker": "C",
+      "start": 190.55,
+      "end": 192.47,
+      "text": "Okay, so that's decided then.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0041",
+      "speaker": "A",
+      "start": 193.04,
+      "end": 194.96,
+      "text": "Um, then the competitor review.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0042",
+      "speaker": "A",
+      "start": 195.41,
+      "end": 201.95,
+      "text": "I looked at four apps, the two big ones in Paris and London and two smaller ones.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0043",
+      "speaker": "A",
+      "start": 202.46,
+      "end": 210.92,
+      "text": "The main thing is, the good ones put the number of bikes right on the map pin. You don't have to tap.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0044",
+      "speaker": "A",
+      "start": 211.87,
+      "end": 219.56,
+      "text": "The bad ones, you tap the station, a panel slides up, and only then you see the numbers. Takes ages.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0045",
+      "speaker": "D",
+      "start": 219.73,
+      "end": 222.42,
+      "text": "Yeah, that's annoying, I've used that one.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0205b.s0046",
+      "speaker": "A",
+      "start": 223.32,
+      "end": 232.17,
+      "text": "And one of them only uses colour, green and red, which, you know, last time we said that's a problem for colour-blind people.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0047",
+      "speaker": "C",
+      "start": 232.57,
+      "end": 232.97,
+      "text": "Right.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0205b.s0048",
+      "speaker": "A",
+      "start": 233.52,
+      "end": 241.6,
+      "text": "So my suggestion would be the number on the pin, plus a shape. Like a full circle, half circle, empty ring.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0205b.s0049",
+      "speaker": "D",
+      "start": 242.12,
+      "end": 245.2,
+      "text": "I like that, the shape plus the number.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0205b.s0050",
+      "speaker": "C",
+      "start": 245.77,
+      "end": 250.0,
+      "text": "And then colour on top of that, but not just colour?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0205b.s0051",
+      "speaker": "A",
+      "start": 250.39,
+      "end": 253.85,
+      "text": "Yeah, colour as an extra, not the only thing.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0205b.s0052",
+      "speaker": "C",
+      "start": 254.01,
+      "end": 259.78,
+      "text": "Okay, so let's say numbers and shapes on the pins, colour as a secondary cue.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0053",
+      "speaker": "D",
+      "start": 260.01,
+      "end": 260.41,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0205b.s0054",
+      "speaker": "A",
+      "start": 260.99,
+      "end": 261.39,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0205b.s0055",
+      "speaker": "C",
+      "start": 262.14,
+      "end": 267.14,
+      "text": "Now, these findings have to go to Tomas really, he's doing the screens.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0056",
+      "speaker": "A",
+      "start": 267.71,
+      "end": 273.86,
+      "text": "I was going to send him the screenshots anyway, that was the plan from last time.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0057",
+      "speaker": "C",
+      "start": 274.81,
+      "end": 286.35,
+      "text": "Yeah. Can you send them today, and I'll put it on Tomas to do a first version of the map screen with the pins, using your findings, for next time.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0205b.s0058",
+      "speaker": "A",
+      "start": 287.19,
+      "end": 289.11,
+      "text": "Sure, I'll send them tonight.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0205b.s0059",
+      "speaker": "C",
+      "start": 289.36,
+      "end": 294.74,
+      "text": "Okay, so Tomas, map screen mock-up with the numbered pins. I'll let him know.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0060",
+      "speaker": "D",
+      "start": 295.28,
+      "end": 300.28,
+      "text": "Is he going to have time, though? Last time he was already overloaded.",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0205b.s0061",
+      "speaker": "C",
+      "start": 300.45,
+      "end": 306.99,
+      "text": "He said the conference is only two days, so, I think it's fine. I'll check with him.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0062",
+      "speaker": "D",
+      "start": 307.62,
+      "end": 308.02,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0205b.s0063",
+      "speaker": "C",
+      "start": 308.22,
+      "end": 317.45,
+      "text": "And his technical functions, the list he was meant to bring today, he's sent me a couple of lines, but it's not really finished.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0064",
+      "speaker": "C",
+      "start": 318.28,
+      "end": 322.51,
+      "text": "So I'd say that moves to the next meeting as well.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0065",
+      "speaker": "A",
+      "start": 323.29,
+      "end": 324.06,
+      "text": "Yeah, fair.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0205b.s0066",
+      "speaker": "C",
+      "start": 324.76,
+      "end": 326.3,
+      "text": "Okay, Marcus, the docks.",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0205b.s0067",
+      "speaker": "D",
+      "start": 327.04,
+      "end": 328.19,
+      "text": "Yeah, um, so.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0205b.s0068",
+      "speaker": "D",
+      "start": 328.35,
+      "end": 334.5,
+      "text": "The good news first, every dock has a QR code printed on it. All four hundred.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0069",
+      "speaker": "C",
+      "start": 335.04,
+      "end": 335.44,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0205b.s0070",
+      "speaker": "D",
+      "start": 336.15,
+      "end": 343.46,
+      "text": "And most of them have a Bluetooth module, so the phone could in theory unlock it without scanning anything.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0071",
+      "speaker": "D",
+      "start": 344.15,
+      "end": 352.23,
+      "text": "The older ones, the first generation, they don't have Bluetooth, they have a keypad. That's, uh, about a hundred and twenty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0072",
+      "speaker": "D",
+      "start": 353.22,
+      "end": 360.14,
+      "text": "No, sorry, I'm wrong, a hundred and twenty was the original install. Some got upgraded. It's ninety now.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0073",
+      "speaker": "C",
+      "start": 360.41,
+      "end": 361.95,
+      "text": "Ninety with keypad only.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0205b.s0074",
+      "speaker": "D",
+      "start": 362.5,
+      "end": 368.65,
+      "text": "Yeah, ninety keypad, the rest Bluetooth. And no NFC at all, so we can forget NFC.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0075",
+      "speaker": "A",
+      "start": 369.12,
+      "end": 369.52,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0205b.s0076",
+      "speaker": "D",
+      "start": 370.01,
+      "end": 384.24,
+      "text": "And for how the app talks to the dock. With QR, you scan, the app sends the code to the operator's server, the server tells the dock to release. That's about three, four seconds according to Jan.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0077",
+      "speaker": "C",
+      "start": 384.82,
+      "end": 387.51,
+      "text": "So that's fine for the thirty seconds.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0205b.s0078",
+      "speaker": "D",
+      "start": 388.26,
+      "end": 395.95,
+      "text": "That's fine, yeah. The thirty seconds is more about how many screens you have to get through before you scan.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0205b.s0079",
+      "speaker": "D",
+      "start": 396.9,
+      "end": 403.44,
+      "text": "Personally I'd go Bluetooth as the main way. You walk up, you tap unlock, done. Even faster.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0205b.s0080",
+      "speaker": "A",
+      "start": 403.74,
+      "end": 409.89,
+      "text": "But does that work if you've got Bluetooth turned off? Loads of people have it off.",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0205b.s0081",
+      "speaker": "D",
+      "start": 410.12,
+      "end": 414.74,
+      "text": "Mm, yeah, then you'd have to prompt them to turn it on.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0205b.s0082",
+      "speaker": "C",
+      "start": 414.92,
+      "end": 418.77,
+      "text": "And it doesn't work on the ninety old docks anyway.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0205b.s0083",
+      "speaker": "D",
+      "start": 419.14,
+      "end": 419.54,
+      "text": "True.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0205b.s0084",
+      "speaker": "A",
+      "start": 420.37,
+      "end": 426.14,
+      "text": "I think tourists especially, scanning a code, everyone gets that now. Bluetooth pairing is confusing.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0205b.s0085",
+      "speaker": "C",
+      "start": 426.92,
+      "end": 432.3,
+      "text": "So, I'd rather keep QR as the main unlock, it works on every dock.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0205b.s0086",
+      "speaker": "C",
+      "start": 432.56,
+      "end": 437.18,
+      "text": "Bluetooth maybe later, but not as the main thing. Is that okay?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0205b.s0087",
+      "speaker": "D",
+      "start": 437.89,
+      "end": 442.51,
+      "text": "Yeah, okay. I still think Bluetooth's nicer but, yeah, QR works everywhere.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0205b.s0088",
+      "speaker": "C",
+      "start": 442.85,
+      "end": 445.93,
+      "text": "So QR scan is the main unlock method.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0089",
+      "speaker": "C",
+      "start": 446.62,
+      "end": 448.54,
+      "text": "And for the keypad docks?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0205b.s0090",
+      "speaker": "D",
+      "start": 449.1,
+      "end": 456.79,
+      "text": "The keypad ones also have the QR code, so scanning still works, the server sends the release the same way.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0091",
+      "speaker": "D",
+      "start": 457.41,
+      "end": 465.87,
+      "text": "The keypad is just a fallback, if the scan fails you could get a code in the app and type it in.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0092",
+      "speaker": "C",
+      "start": 466.22,
+      "end": 469.3,
+      "text": "Okay, so that covers the old docks too.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0205b.s0093",
+      "speaker": "A",
+      "start": 470.15,
+      "end": 475.15,
+      "text": "Wait, so we'd show a code in the app, like a one-time code?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0205b.s0094",
+      "speaker": "D",
+      "start": 475.62,
+      "end": 480.24,
+      "text": "Yeah, a five digit code that's valid for a minute or so.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0095",
+      "speaker": "A",
+      "start": 480.96,
+      "end": 485.19,
+      "text": "Nice, that's good for when the camera won't focus at night.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0205b.s0096",
+      "speaker": "C",
+      "start": 485.4,
+      "end": 488.09,
+      "text": "So keypad code as the fallback. Good.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0097",
+      "speaker": "C",
+      "start": 489.04,
+      "end": 497.89,
+      "text": "Okay. One thing I was wondering about. The live availability, the numbers on the pins, that's all coming from the operator's server, right?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0205b.s0098",
+      "speaker": "D",
+      "start": 498.06,
+      "end": 500.75,
+      "text": "Yeah, there's a data feed, an API.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0099",
+      "speaker": "C",
+      "start": 501.56,
+      "end": 509.25,
+      "text": "Is that free? Because we've got the hundred and twenty thousand for the app and if they charge per call...",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0205b.s0100",
+      "speaker": "D",
+      "start": 509.96,
+      "end": 512.65,
+      "text": "No idea, honestly. Jan didn't mention it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0101",
+      "speaker": "A",
+      "start": 512.8,
+      "end": 518.18,
+      "text": "Some operators do charge third parties, I saw that in one of the reviews.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0102",
+      "speaker": "C",
+      "start": 518.76,
+      "end": 524.91,
+      "text": "Hm. Yeah, someone should probably check what that feed costs before we design everything around it.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0205b.s0103",
+      "speaker": "D",
+      "start": 525.2,
+      "end": 525.6,
+      "text": "Mm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0205b.s0104",
+      "speaker": "A",
+      "start": 526.39,
+      "end": 526.79,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0205b.s0105",
+      "speaker": "C",
+      "start": 527.04,
+      "end": 527.81,
+      "text": "Anyway, um.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0205b.s0106",
+      "speaker": "A",
+      "start": 528.2,
+      "end": 537.43,
+      "text": "Oh, one more thing from the survey. A few commuters said they'd like a notification when their favourite dock is running out of bikes.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0205b.s0107",
+      "speaker": "D",
+      "start": 538.36,
+      "end": 540.67,
+      "text": "Hmm, that could get spammy though.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0205b.s0108",
+      "speaker": "C",
+      "start": 541.0,
+      "end": 545.62,
+      "text": "Maybe. Let's not decide that today, I'd want Tomas's view on it.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0205b.s0109",
+      "speaker": "A",
+      "start": 546.15,
+      "end": 546.92,
+      "text": "Okay, fine.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0205b.s0110",
+      "speaker": "C",
+      "start": 547.63,
+      "end": 551.86,
+      "text": "So, uh, let me try and pull together the functions then.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0205b.s0111",
+      "speaker": "C",
+      "start": 552.3,
+      "end": 559.99,
+      "text": "Main screen is the map, like we said last time, with the live numbers and the shapes on the pins.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0112",
+      "speaker": "C",
+      "start": 560.52,
+      "end": 563.6,
+      "text": "Favourite home and work docks for the commuters.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0113",
+      "speaker": "C",
+      "start": 564.6,
+      "end": 566.52,
+      "text": "QR unlock, keypad code fallback.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0114",
+      "speaker": "C",
+      "start": 566.93,
+      "end": 570.39,
+      "text": "Guest day pass for tourists with the card hold.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0115",
+      "speaker": "A",
+      "start": 570.54,
+      "end": 573.23,
+      "text": "And languages. English, German, French at least.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0205b.s0116",
+      "speaker": "C",
+      "start": 573.96,
+      "end": 577.04,
+      "text": "Yeah, add languages. Everyone fine with that list?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0205b.s0117",
+      "speaker": "D",
+      "start": 577.38,
+      "end": 577.78,
+      "text": "Yep.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0205b.s0118",
+      "speaker": "A",
+      "start": 578.02,
+      "end": 578.79,
+      "text": "Yeah, good.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0205b.s0119",
+      "speaker": "C",
+      "start": 579.16,
+      "end": 580.31,
+      "text": "Okay, actions then.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0120",
+      "speaker": "C",
+      "start": 581.09,
+      "end": 591.47,
+      "text": "Marcus, can you work out the full unlock flow, step by step, screens and the server calls, so we can check it really fits in thirty seconds.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0205b.s0121",
+      "speaker": "D",
+      "start": 592.08,
+      "end": 597.08,
+      "text": "Yeah, I can do that. I'll check the code timing with Jan too.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0205b.s0122",
+      "speaker": "C",
+      "start": 598.01,
+      "end": 606.47,
+      "text": "Priya, the languages, can you find out if tourists need any others beyond those three, from the tourist office numbers or something.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0205b.s0123",
+      "speaker": "A",
+      "start": 607.2,
+      "end": 609.51,
+      "text": "Sure, I'll get the visitor stats.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0205b.s0124",
+      "speaker": "C",
+      "start": 609.85,
+      "end": 615.23,
+      "text": "And I'll chase the brand guide, and send Tomas the minutes and his bits.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0125",
+      "speaker": "C",
+      "start": 615.96,
+      "end": 618.65,
+      "text": "Okay, I think that's it. Thanks both.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0205b.s0126",
+      "speaker": "D",
+      "start": 618.89,
+      "end": 619.29,
+      "text": "Cheers.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0205b.s0127",
+      "speaker": "A",
+      "start": 619.77,
+      "end": 620.54,
+      "text": "Thanks, bye.",
+      "da_type": "bck"
+    }
+  ],
+  "summary": {
+    "abstract": [
+      "The project manager opened the functional design meeting and noted that the user interface designer was absent because he was at a conference. She reported that the minutes and brief had been circulated but the operator's brand guide had not yet arrived. The marketing expert presented user requirements for commuters and tourists and her competitor app review, and reported that the operator allows a no-account guest day pass with a card pre-authorisation. The industrial designer reported that all four hundred docks have QR codes, ninety older docks have only keypads and the rest have Bluetooth, and none support NFC. The team agreed on QR scanning as the main unlock method with a one-time keypad code as fallback, and on map pins showing numbers and shapes with colour only as a secondary cue. The project manager summarised the agreed functions and assigned follow-up work, including a map screen mock-up for the absent user interface designer."
+    ],
+    "actions": [
+      "The marketing expert will send her competitor review screenshots and findings to the user interface designer.",
+      "The user interface designer will produce a first version of the map screen with numbered and shaped pins, based on the competitor findings.",
+      "The user interface designer's list of technical functions is carried over to the next meeting.",
+      "The industrial designer will work out the full unlock flow step by step, including screens and server calls, to check it fits within thirty seconds.",
+      "The industrial designer will check the timing of the one-time keypad code with the operator contact.",
+      "The marketing expert will find out from visitor statistics whether tourists need languages beyond English, German and French.",
+      "The project manager will chase the operator's brand guide again.",
+      "The project manager will send the user interface designer the minutes and his tasks, and check that he has time for them.",
+      "Checking what the operator's live data feed costs was raised, but nobody took it on."
+    ],
+    "decisions": [
+      "Tourists can buy a guest day pass without a full account, secured by a card pre-authorisation of about 150 euros.",
+      "Map pins will show the number of bikes and a shape (full circle, half circle or empty ring), with colour only as a secondary cue.",
+      "QR code scanning is the main unlock method because it works on every dock.",
+      "A one-time five-digit keypad code shown in the app is the fallback unlock method.",
+      "NFC is ruled out because no docks support it.",
+      "The agreed functions are the live availability map as main screen, favourite home and work docks, QR unlock with keypad code fallback, a guest day pass, and English, German and French language support."
+    ],
+    "problems": [
+      "The operator's brand guide has not been received, and pin colours depend on it.",
+      "It is unknown whether the operator charges for its live availability data feed, which could affect the 120,000 euro budget, and nobody took on checking it.",
+      "The user interface designer's technical functions list is not yet finished.",
+      "There is concern about whether the user interface designer has enough time, given his workload.",
+      "The marketing expert's idea of notifications when a favourite dock runs low on bikes was left open pending the user interface designer's view.",
+      "The thirty-second unlock target depends on the number of screens before scanning, which is still to be worked out."
+    ]
+  },
+  "action_items": [
+    {
+      "id": "SY0205b.ai1",
+      "description": "Send the competitor review screenshots and interface findings to the user interface designer",
+      "owner": "A",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0205b.s0056",
+          "event": "restated",
+          "by": "A",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0205b.s0057",
+          "event": "assigned",
+          "by": "C",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0205b.s0058",
+          "event": "accepted",
+          "by": "A",
+          "owner": "A"
+        }
+      ],
+      "evidence_segments": [
+        "SY0205b.s0055",
+        "SY0205b.s0056",
+        "SY0205b.s0057",
+        "SY0205b.s0058"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0205b.ai2",
+      "description": "Produce a first version of the map screen mock-up with numbered and shaped pins using the competitor findings, for the next meeting",
+      "owner": "B",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0205b.s0057",
+          "event": "assigned",
+          "by": "C",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0205b.s0059",
+          "event": "restated",
+          "by": "C",
+          "owner": "B"
+        }
+      ],
+      "evidence_segments": [
+        "SY0205b.s0055",
+        "SY0205b.s0057",
+        "SY0205b.s0059",
+        "SY0205b.s0060",
+        "SY0205b.s0061"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0205b.ai3",
+      "description": "Check with the user interface designer that he has time for the map screen mock-up",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0205b.s0061",
+          "event": "offered",
+          "by": "C",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0205b.s0060",
+        "SY0205b.s0061"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0205b.ai4",
+      "description": "Finish the list of technical functions of the app, carried over to the next meeting",
+      "owner": "B",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0205b.s0063",
+          "event": "restated",
+          "by": "C",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0205b.s0064",
+          "event": "restated",
+          "by": "C",
+          "owner": "B"
+        }
+      ],
+      "evidence_segments": [
+        "SY0205b.s0063",
+        "SY0205b.s0064",
+        "SY0205b.s0065"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0205b.ai5",
+      "description": "Check what the operator's live availability data feed costs",
+      "owner": null,
+      "owner_unclear": true,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0205b.s0102",
+          "event": "proposed",
+          "by": "C",
+          "owner": null
+        }
+      ],
+      "evidence_segments": [
+        "SY0205b.s0097",
+        "SY0205b.s0098",
+        "SY0205b.s0099",
+        "SY0205b.s0100",
+        "SY0205b.s0101",
+        "SY0205b.s0102",
+        "SY0205b.s0103",
+        "SY0205b.s0104"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0205b.ai6",
+      "description": "Work out the full unlock flow step by step, including screens and server calls, to check it fits within thirty seconds",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0205b.s0120",
+          "event": "assigned",
+          "by": "C",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0205b.s0121",
+          "event": "accepted",
+          "by": "D",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0205b.s0120",
+        "SY0205b.s0121"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0205b.ai7",
+      "description": "Check the one-time keypad code timing with the operator contact",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0205b.s0121",
+          "event": "offered",
+          "by": "D",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0205b.s0094",
+        "SY0205b.s0121"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0205b.ai8",
+      "description": "Find out from visitor statistics whether tourists need languages beyond English, German and French",
+      "owner": "A",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0205b.s0122",
+          "event": "assigned",
+          "by": "C",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0205b.s0123",
+          "event": "accepted",
+          "by": "A",
+          "owner": "A"
+        }
+      ],
+      "evidence_segments": [
+        "SY0205b.s0115",
+        "SY0205b.s0122",
+        "SY0205b.s0123"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0205b.ai9",
+      "description": "Chase the operator again for the brand guide",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0205b.s0013",
+          "event": "offered",
+          "by": "C",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0205b.s0124",
+          "event": "restated",
+          "by": "C",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0205b.s0012",
+        "SY0205b.s0013",
+        "SY0205b.s0124"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0205b.ai10",
+      "description": "Send the user interface designer the minutes and his tasks",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0205b.s0059",
+          "event": "offered",
+          "by": "C",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0205b.s0124",
+          "event": "restated",
+          "by": "C",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0205b.s0059",
+        "SY0205b.s0124"
+      ],
+      "owner_source": "gold"
+    }
+  ],
+  "qa_facts": [
+    {
+      "id": "SY0205b.f1",
+      "type": "absence",
+      "fact": "The user interface designer, Tomas, was absent because he was at a developer conference in Rotterdam.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0205b.s0003",
+        "SY0205b.s0006"
+      ]
+    },
+    {
+      "id": "SY0205b.f2",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager reported that she had circulated the kickoff minutes and the brief, as agreed in the kickoff meeting.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0205a",
+      "evidence_segments": [
+        "SY0205b.s0010",
+        "SY0205b.s0011"
+      ]
+    },
+    {
+      "id": "SY0205b.f3",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager had requested the brand guide from the operator after the kickoff, but it had not yet arrived.",
+      "agreed": null,
+      "related_action_item": "SY0205b.ai9",
+      "refers_to_meeting": "SY0205a",
+      "evidence_segments": [
+        "SY0205b.s0012",
+        "SY0205b.s0013"
+      ]
+    },
+    {
+      "id": "SY0205b.f4",
+      "type": "reference_to_prior_meeting",
+      "fact": "The marketing expert had forwarded the operator contact, Jan, to the industrial designer as agreed in the kickoff.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0205a",
+      "evidence_segments": [
+        "SY0205b.s0016",
+        "SY0205b.s0017"
+      ]
+    },
+    {
+      "id": "SY0205b.f5",
+      "type": "reference_to_prior_meeting",
+      "fact": "The marketing expert said the favourite docks idea the user interface designer raised in the kickoff came up often with commuters.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0205a",
+      "evidence_segments": [
+        "SY0205b.s0023"
+      ]
+    },
+    {
+      "id": "SY0205b.f6",
+      "type": "reference_to_prior_meeting",
+      "fact": "The open question from the kickoff about a no-account day pass for tourists was resolved when the marketing expert checked with the operator.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0205a",
+      "evidence_segments": [
+        "SY0205b.s0031",
+        "SY0205b.s0032",
+        "SY0205b.s0034"
+      ]
+    },
+    {
+      "id": "SY0205b.f7",
+      "type": "other",
+      "fact": "The marketing expert interviewed twelve commuters and ran a survey with about sixty responses.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0205b.s0026",
+        "SY0205b.s0027"
+      ]
+    },
+    {
+      "id": "SY0205b.f8",
+      "type": "decision",
+      "fact": "Tourists can buy a guest day pass without a full account, secured by a card pre-authorisation of about 150 euros.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0205b.s0034",
+        "SY0205b.s0037",
+        "SY0205b.s0038",
+        "SY0205b.s0039",
+        "SY0205b.s0040"
+      ]
+    },
+    {
+      "id": "SY0205b.f9",
+      "type": "other",
+      "fact": "The marketing expert reviewed four competitor apps and found that the best ones show bike numbers directly on the map pins.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0205b.s0042",
+        "SY0205b.s0043",
+        "SY0205b.s0044"
+      ]
+    },
+    {
+      "id": "SY0205b.f10",
+      "type": "decision",
+      "fact": "Map pins will show numbers and shapes, with colour only as a secondary cue, so they work for colour-blind users.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0205b.s0046",
+        "SY0205b.s0048",
+        "SY0205b.s0049",
+        "SY0205b.s0050",
+        "SY0205b.s0051",
+        "SY0205b.s0052"
+      ]
+    },
+    {
+      "id": "SY0205b.f11",
+      "type": "action_item",
+      "fact": "The marketing expert will send her competitor screenshots and findings to the user interface designer.",
+      "agreed": null,
+      "related_action_item": "SY0205b.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0205b.s0056",
+        "SY0205b.s0057",
+        "SY0205b.s0058"
+      ]
+    },
+    {
+      "id": "SY0205b.f12",
+      "type": "action_item",
+      "fact": "The absent user interface designer was assigned a first map screen mock-up with numbered and shaped pins.",
+      "agreed": null,
+      "related_action_item": "SY0205b.ai2",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0205b.s0057",
+        "SY0205b.s0059"
+      ]
+    },
+    {
+      "id": "SY0205b.f13",
+      "type": "plan_change",
+      "fact": "The user interface designer's technical functions list, due for this meeting, was moved to the next meeting because it was unfinished.",
+      "agreed": null,
+      "related_action_item": "SY0205b.ai4",
+      "refers_to_meeting": "SY0205a",
+      "evidence_segments": [
+        "SY0205b.s0063",
+        "SY0205b.s0064",
+        "SY0205b.s0065"
+      ]
+    },
+    {
+      "id": "SY0205b.f14",
+      "type": "other",
+      "fact": "All four hundred docks have a printed QR code, ninety older docks have only a keypad and the rest have Bluetooth. The industrial designer first said 120 keypad docks, then corrected it to ninety.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0205b.s0068",
+        "SY0205b.s0070",
+        "SY0205b.s0071",
+        "SY0205b.s0072",
+        "SY0205b.s0073",
+        "SY0205b.s0074"
+      ]
+    },
+    {
+      "id": "SY0205b.f15",
+      "type": "decision",
+      "fact": "NFC is ruled out because no docks support it.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0205b.s0074"
+      ]
+    },
+    {
+      "id": "SY0205b.f16",
+      "type": "other",
+      "fact": "A QR unlock goes through the operator's server and takes about three to four seconds.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0205b.s0076",
+        "SY0205b.s0077",
+        "SY0205b.s0078"
+      ]
+    },
+    {
+      "id": "SY0205b.f17",
+      "type": "unagreed_proposal",
+      "fact": "The industrial designer proposed Bluetooth as the main unlock method. It was not adopted because many users keep Bluetooth off and the ninety older docks lack it.",
+      "agreed": false,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0205b.s0079",
+        "SY0205b.s0080",
+        "SY0205b.s0081",
+        "SY0205b.s0082",
+        "SY0205b.s0084",
+        "SY0205b.s0085",
+        "SY0205b.s0086",
+        "SY0205b.s0087"
+      ]
+    },
+    {
+      "id": "SY0205b.f18",
+      "type": "decision",
+      "fact": "QR code scanning is the main unlock method.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0205b.s0085",
+        "SY0205b.s0086",
+        "SY0205b.s0087",
+        "SY0205b.s0088"
+      ]
+    },
+    {
+      "id": "SY0205b.f19",
+      "type": "decision",
+      "fact": "A one-time five-digit keypad code shown in the app, valid for about a minute, is the fallback unlock method.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0205b.s0091",
+        "SY0205b.s0092",
+        "SY0205b.s0093",
+        "SY0205b.s0094",
+        "SY0205b.s0095",
+        "SY0205b.s0096"
+      ]
+    },
+    {
+      "id": "SY0205b.f20",
+      "type": "action_item",
+      "fact": "Checking the cost of the operator's live data feed was raised but nobody took it on.",
+      "agreed": null,
+      "related_action_item": "SY0205b.ai5",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0205b.s0099",
+        "SY0205b.s0100",
+        "SY0205b.s0101",
+        "SY0205b.s0102",
+        "SY0205b.s0103",
+        "SY0205b.s0104"
+      ]
+    },
+    {
+      "id": "SY0205b.f21",
+      "type": "unagreed_proposal",
+      "fact": "The marketing expert suggested notifications when a favourite dock runs low on bikes. It was left open pending the user interface designer's view.",
+      "agreed": false,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0205b.s0106",
+        "SY0205b.s0107",
+        "SY0205b.s0108",
+        "SY0205b.s0109"
+      ]
+    },
+    {
+      "id": "SY0205b.f22",
+      "type": "decision",
+      "fact": "The agreed functions are the live availability map as main screen, favourite home and work docks, QR unlock with keypad code fallback, a guest day pass, and English, German and French support.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0205a",
+      "evidence_segments": [
+        "SY0205b.s0111",
+        "SY0205b.s0112",
+        "SY0205b.s0113",
+        "SY0205b.s0114",
+        "SY0205b.s0115",
+        "SY0205b.s0116",
+        "SY0205b.s0117",
+        "SY0205b.s0118"
+      ]
+    },
+    {
+      "id": "SY0205b.f23",
+      "type": "action_item",
+      "fact": "The industrial designer will work out the full unlock flow and check the code timing with the operator contact.",
+      "agreed": null,
+      "related_action_item": "SY0205b.ai6",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0205b.s0120",
+        "SY0205b.s0121"
+      ]
+    },
+    {
+      "id": "SY0205b.f24",
+      "type": "action_item",
+      "fact": "The marketing expert will check visitor statistics for any further languages tourists need.",
+      "agreed": null,
+      "related_action_item": "SY0205b.ai8",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0205b.s0122",
+        "SY0205b.s0123"
+      ]
+    },
+    {
+      "id": "SY0205b.f25",
+      "type": "action_item",
+      "fact": "The project manager will chase the brand guide and send the user interface designer the minutes and his tasks.",
+      "agreed": null,
+      "related_action_item": "SY0205b.ai10",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0205b.s0124"
+      ]
+    }
+  ],
+  "edge_cases": [
+    {
+      "scenario_id": "F2_VAGUE_NO_OWNER",
+      "segments": [
+        "SY0205b.s0097",
+        "SY0205b.s0098",
+        "SY0205b.s0099",
+        "SY0205b.s0100",
+        "SY0205b.s0101",
+        "SY0205b.s0102",
+        "SY0205b.s0103",
+        "SY0205b.s0104",
+        "SY0205b.s0105"
+      ],
+      "note": "The PM says 'someone should probably check what that feed costs', the others only backchannel, and the topic moves on with no owner."
+    },
+    {
+      "scenario_id": "F2_TASK_TO_ABSENT",
+      "segments": [
+        "SY0205b.s0055",
+        "SY0205b.s0057",
+        "SY0205b.s0059",
+        "SY0205b.s0060",
+        "SY0205b.s0061",
+        "SY0205b.s0063",
+        "SY0205b.s0064"
+      ],
+      "note": "The PM assigns the map screen mock-up to Tomas, the absent UI designer, and carries his unfinished technical functions list over to the next meeting."
+    }
+  ],
+  "provenance": {
+    "generator": "liveminutes-synthetic",
+    "cache_key": "dea81b4de0339f46bb009121462799dba339f14bf157dfa782054df47142d62f",
+    "attempt": 0,
+    "model": "claude-opus-5-5",
+    "prompt_version": "v1",
+    "scenario_spec_version": 1,
+    "feature": "F2",
+    "product": "a bike-share docking station app",
+    "planned_scenarios": [
+      "F2_VAGUE_NO_OWNER",
+      "F2_TASK_TO_ABSENT"
+    ]
+  }
+}

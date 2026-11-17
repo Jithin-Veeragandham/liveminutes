@@ -1,0 +1,1595 @@
+{
+  "meeting_id": "SY0201c",
+  "raw_sha256": "c3cdb742f19a55fb54941aff7de0d2e97955ed265b4ce00477d346668414a907",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the conceptual design meeting and welcomed back the marketing expert, who confirmed he had received her email about the decisions of the previous meeting.",
+        "The marketing expert presented his competitor research and user requirements: most competitors are clip-ons with small, hard-to-read screens priced between 20 and 40 euros, and seniors want readable numbers, one-handed fastening, no charging and a sense of progress. He reported that management requires the company logo to be visible on the device but leaves the colours open.",
+        "The user interface designer presented her mock-ups, and the team added a ten-bar daily goal indicator with a default goal of 5,000 steps. The industrial designer priced the components at 10.80 euros per unit, including a 1.80 euro hypoallergenic silicone strap, which leaves 1.70 euros under the 12.50 euro limit before packaging.",
+        "The team dropped the hourly vibration reminder and agreed on a dark grey, matte, pebble-shaped case with the logo under the display, a twist-off battery cover with a wide coin slot and a pin-and-loop strap clasp.",
+        "Testing the mock-ups with seniors was offered by the user interface designer but taken on by the marketing expert, who has contacts with a seniors' walking group."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The marketing expert will test the user interface designer's mock-ups with a seniors' walking group before the next meeting. The user interface designer had offered to do this.",
+        "The user interface designer will send the marketing expert full-size printouts of the screens for the test.",
+        "The marketing expert will send the company logo file to the industrial designer today.",
+        "The industrial designer will price straps in a couple of extra colours for the next meeting.",
+        "The industrial designer will make a rough clay or foam model of the device for the detailed design meeting.",
+        "The user interface designer will finalise the screens, including the goal bar and the setup sequence.",
+        "The project manager will write up the minutes and send them round.",
+        "Someone should check the cost of packaging and the instruction leaflet, but nobody took this on."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "A row of ten bars showing progress towards a daily goal will be added along the bottom of the display.",
+        "The default daily goal will be 5,000 steps, set during setup by holding the button.",
+        "The hourly vibration reminder is dropped.",
+        "Fall detection remains parked.",
+        "The battery will have a twist-off cover with a wide coin slot.",
+        "The strap will use a pin-and-loop clasp rather than a buckle or a magnetic clasp.",
+        "The case will be dark grey, matte and pebble-shaped, with the company logo small under the display."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The cost of packaging and the instruction leaflet is unknown and comes out of the same 12.50 euro budget, and nobody has taken on checking it.",
+        "Whether to offer straps in several colours is undecided until extra colours have been priced.",
+        "The mock-ups have not yet been tested with real seniors."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0201c.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0201c.ai1",
+        "description": "Test the interface mock-ups with seniors (a seniors' walking group) before the next meeting.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0201c.s0053",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0201c.s0055",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0201c.s0056",
+            "event": "accepted",
+            "by": "C",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0201c.s0057",
+            "event": "assigned",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0201c.s0058",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0201c.s0122",
+            "event": "restated",
+            "by": "A",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0201c.s0052",
+          "SY0201c.s0053",
+          "SY0201c.s0054",
+          "SY0201c.s0055",
+          "SY0201c.s0056",
+          "SY0201c.s0057",
+          "SY0201c.s0058",
+          "SY0201c.s0122"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0201c.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0201c.ai2",
+        "description": "Check the cost of packaging and the instruction leaflet.",
+        "owner": null,
+        "owner_unclear": true,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0201c.s0073",
+            "event": "proposed",
+            "by": "B",
+            "owner": null
+          }
+        ],
+        "evidence_segments": [
+          "SY0201c.s0070",
+          "SY0201c.s0071",
+          "SY0201c.s0072",
+          "SY0201c.s0073",
+          "SY0201c.s0074",
+          "SY0201c.s0075",
+          "SY0201c.s0076"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0201c.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0201c.ai3",
+        "description": "Send the company logo file to the industrial designer.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0201c.s0031",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0201c.s0122",
+            "event": "restated",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0201c.s0123",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0201c.s0029",
+          "SY0201c.s0031",
+          "SY0201c.s0032",
+          "SY0201c.s0122",
+          "SY0201c.s0123"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0201c.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0201c.ai4",
+        "description": "Send the marketing expert full-size printouts of the mock-up screens for the user test.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0201c.s0059",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0201c.s0059",
+          "SY0201c.s0060"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0201c.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0201c.ai5",
+        "description": "Price straps in a couple of extra colours for the next meeting.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0201c.s0110",
+            "event": "assigned",
+            "by": "A",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0201c.s0111",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0201c.s0108",
+          "SY0201c.s0109",
+          "SY0201c.s0110",
+          "SY0201c.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0201c.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0201c.ai6",
+        "description": "Make a rough clay or foam model of the device for the detailed design meeting.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0201c.s0118",
+            "event": "assigned",
+            "by": "A",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0201c.s0119",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0201c.s0118",
+          "SY0201c.s0119"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0201c.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0201c.ai7",
+        "description": "Finalise the screens, including the goal bar and the setup sequence.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0201c.s0120",
+            "event": "assigned",
+            "by": "A",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0201c.s0121",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0201c.s0120",
+          "SY0201c.s0121"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0201c.ai8",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0201c.ai8",
+        "description": "Write up the minutes of the meeting and send them round.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0201c.s0124",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0201c.s0124"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f1",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recapped that the previous meeting chose a wristband, a replaceable coin cell, a segment display and one button, and the marketing expert said his research supports these choices.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0201b",
+        "evidence_segments": [
+          "SY0201c.s0008",
+          "SY0201c.s0009"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert confirmed he received the project manager's email after the previous meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0201b",
+        "evidence_segments": [
+          "SY0201c.s0006",
+          "SY0201c.s0007"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager said parking fall detection at the kickoff was the right call, given that competitors with fall detection cost 80 to 90 euros plus a subscription.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0201a",
+        "evidence_segments": [
+          "SY0201c.s0019",
+          "SY0201c.s0020",
+          "SY0201c.s0021"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f4",
+        "type": "other",
+        "fact": "Competitor step counters for seniors are mostly clip-ons with small, hard-to-read LCD screens, priced between about 20 and 40 euros.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0012",
+          "SY0201c.s0013",
+          "SY0201c.s0015",
+          "SY0201c.s0017"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f5",
+        "type": "other",
+        "fact": "The user requirements are numbers readable at arm's length, one-handed fastening, no charging, and a sense of whether the user has done enough that day.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0022",
+          "SY0201c.s0025"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f6",
+        "type": "other",
+        "fact": "Management said the company logo must be visible on the device, but the colours are up to the team.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0028",
+          "SY0201c.s0029",
+          "SY0201c.s0030",
+          "SY0201c.s0031"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f7",
+        "type": "other",
+        "fact": "The industrial designer priced the components at 10.80 euros per unit, leaving 1.70 euros under the 12.50 euro limit, not including packaging.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0062",
+          "SY0201c.s0063",
+          "SY0201c.s0064",
+          "SY0201c.s0065",
+          "SY0201c.s0066",
+          "SY0201c.s0067",
+          "SY0201c.s0068",
+          "SY0201c.s0069",
+          "SY0201c.s0071"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f8",
+        "type": "other",
+        "fact": "The soft hypoallergenic silicone strap costs 1.80 euros per unit.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0201b",
+        "evidence_segments": [
+          "SY0201c.s0065"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f9",
+        "type": "decision",
+        "fact": "A ten-bar progress indicator towards a daily goal will be added along the bottom of the display.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0039",
+          "SY0201c.s0040",
+          "SY0201c.s0041",
+          "SY0201c.s0042",
+          "SY0201c.s0043",
+          "SY0201c.s0044",
+          "SY0201c.s0045",
+          "SY0201c.s0046"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f10",
+        "type": "decision",
+        "fact": "The default daily goal is 5,000 steps, adjustable during setup by holding the button.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0047",
+          "SY0201c.s0048",
+          "SY0201c.s0049",
+          "SY0201c.s0050",
+          "SY0201c.s0051"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f11",
+        "type": "decision",
+        "fact": "The hourly vibration reminder is dropped because it would cut battery life to about four months and users tend to turn such reminders off.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0077",
+          "SY0201c.s0078",
+          "SY0201c.s0079",
+          "SY0201c.s0080",
+          "SY0201c.s0081",
+          "SY0201c.s0082",
+          "SY0201c.s0083",
+          "SY0201c.s0084",
+          "SY0201c.s0085",
+          "SY0201c.s0086"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f12",
+        "type": "plan_change",
+        "fact": "The hourly vibration reminder, left open at the functional design meeting, has now been dropped, with the user interface designer who proposed it agreeing.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0201b",
+        "evidence_segments": [
+          "SY0201c.s0081",
+          "SY0201c.s0083",
+          "SY0201c.s0086"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f13",
+        "type": "decision",
+        "fact": "Fall detection remains parked.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0086",
+          "SY0201c.s0087"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f14",
+        "type": "decision",
+        "fact": "The battery will have a twist-off cover with a wide coin slot.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0092",
+          "SY0201c.s0093",
+          "SY0201c.s0094",
+          "SY0201c.s0095",
+          "SY0201c.s0096",
+          "SY0201c.s0097",
+          "SY0201c.s0098",
+          "SY0201c.s0099"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f15",
+        "type": "decision",
+        "fact": "The strap will use a pin-and-loop clasp.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0100",
+          "SY0201c.s0101",
+          "SY0201c.s0105",
+          "SY0201c.s0106",
+          "SY0201c.s0107"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f16",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer suggested a magnetic clasp. The industrial designer said it adds about a euro and comes undone more easily.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0102",
+          "SY0201c.s0103",
+          "SY0201c.s0104"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f17",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert proposed offering straps in about three colours. The decision was deferred until extra colours are priced.",
+        "agreed": false,
+        "related_action_item": "SY0201c.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0108",
+          "SY0201c.s0109",
+          "SY0201c.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f18",
+        "type": "decision",
+        "fact": "The case will be dark grey, matte and pebble-shaped, with the company logo small under the display.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0089",
+          "SY0201c.s0090",
+          "SY0201c.s0091",
+          "SY0201c.s0113",
+          "SY0201c.s0114",
+          "SY0201c.s0115",
+          "SY0201c.s0116",
+          "SY0201c.s0117"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f19",
+        "type": "action_item",
+        "fact": "The marketing expert will test the mock-ups with a seniors' walking group. The user interface designer had offered to set up tests herself.",
+        "agreed": null,
+        "related_action_item": "SY0201c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0053",
+          "SY0201c.s0054",
+          "SY0201c.s0055",
+          "SY0201c.s0056",
+          "SY0201c.s0057",
+          "SY0201c.s0058"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f20",
+        "type": "action_item",
+        "fact": "Checking the cost of packaging and the instruction leaflet was raised, but nobody took it on.",
+        "agreed": null,
+        "related_action_item": "SY0201c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0073",
+          "SY0201c.s0074",
+          "SY0201c.s0075",
+          "SY0201c.s0076"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f21",
+        "type": "action_item",
+        "fact": "The marketing expert will send the logo file to the industrial designer today.",
+        "agreed": null,
+        "related_action_item": "SY0201c.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0031",
+          "SY0201c.s0123"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f22",
+        "type": "action_item",
+        "fact": "The user interface designer will send the marketing expert full-size printouts of the screens.",
+        "agreed": null,
+        "related_action_item": "SY0201c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0059"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f23",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f23",
+        "type": "action_item",
+        "fact": "The industrial designer will price a couple of extra strap colours.",
+        "agreed": null,
+        "related_action_item": "SY0201c.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0110",
+          "SY0201c.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f24",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f24",
+        "type": "action_item",
+        "fact": "The industrial designer will make a rough clay or foam model for the detailed design meeting.",
+        "agreed": null,
+        "related_action_item": "SY0201c.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0118",
+          "SY0201c.s0119"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f25",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f25",
+        "type": "action_item",
+        "fact": "The user interface designer will finalise the screens with the goal bar and setup sequence.",
+        "agreed": null,
+        "related_action_item": "SY0201c.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0120",
+          "SY0201c.s0121"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0201c.f26",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0201c.f26",
+        "type": "action_item",
+        "fact": "The project manager will write up the minutes and send them round.",
+        "agreed": null,
+        "related_action_item": "SY0201c.ai8",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0201c.s0124"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_OFFERED_TAKEN_BY_OTHER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_OFFERED_TAKEN_BY_OTHER",
+        "segments": [
+          "SY0201c.s0052",
+          "SY0201c.s0053",
+          "SY0201c.s0054",
+          "SY0201c.s0055",
+          "SY0201c.s0056",
+          "SY0201c.s0057",
+          "SY0201c.s0058"
+        ],
+        "note": "The user interface designer offers to set up tests of the mock-ups with seniors, but the marketing expert takes the task because he has walking-group contacts. The user interface designer accepts and the project manager confirms him as owner."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_VAGUE_NO_OWNER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_VAGUE_NO_OWNER",
+        "segments": [
+          "SY0201c.s0070",
+          "SY0201c.s0071",
+          "SY0201c.s0072",
+          "SY0201c.s0073",
+          "SY0201c.s0074",
+          "SY0201c.s0075",
+          "SY0201c.s0076"
+        ],
+        "note": "The marketing expert says someone should check the packaging and leaflet costs. Others only backchannel, the project manager moves on, and nobody takes it."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

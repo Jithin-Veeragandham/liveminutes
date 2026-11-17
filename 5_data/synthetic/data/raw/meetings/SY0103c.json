@@ -1,0 +1,1756 @@
+{
+  "schema_version": "1.0",
+  "source": "synthetic",
+  "meeting_id": "SY0103c",
+  "series_id": "SY0103",
+  "meeting_letter": "c",
+  "scenario_type": "scenario",
+  "stage": "conceptual design",
+  "duration_sec": 589.65,
+  "participants": [
+    {
+      "label": "A",
+      "role": "PM",
+      "name": "Laura",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "B",
+      "role": "ID",
+      "name": "Tomasz",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "C",
+      "role": "UI",
+      "name": "Priya",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "D",
+      "role": "ME",
+      "name": "Ben",
+      "global_id": null,
+      "status": "present"
+    }
+  ],
+  "segments": [
+    {
+      "id": "SY0103c.s0001",
+      "speaker": "A",
+      "start": 5.0,
+      "end": 7.69,
+      "text": "Okay, um, I think we're all here.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0103c.s0002",
+      "speaker": "A",
+      "start": 8.3,
+      "end": 10.99,
+      "text": "So this is the conceptual design meeting.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0003",
+      "speaker": "A",
+      "start": 11.59,
+      "end": 15.05,
+      "text": "And Tomasz, good to have you back. Feeling better?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0103c.s0004",
+      "speaker": "B",
+      "start": 15.69,
+      "end": 17.61,
+      "text": "Yeah, yeah, much better, thanks.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0005",
+      "speaker": "B",
+      "start": 17.91,
+      "end": 21.37,
+      "text": "Still a bit of a cough but, uh, fine.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0006",
+      "speaker": "A",
+      "start": 22.16,
+      "end": 26.39,
+      "text": "Good. Um, so did you get my email with the minutes?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0103c.s0007",
+      "speaker": "B",
+      "start": 27.12,
+      "end": 30.97,
+      "text": "I did, yeah. About switching to the two numbered timers.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0008",
+      "speaker": "A",
+      "start": 31.3,
+      "end": 33.22,
+      "text": "And checking the chip, yeah?",
+      "da_type": "el.und"
+    },
+    {
+      "id": "SY0103c.s0009",
+      "speaker": "B",
+      "start": 33.98,
+      "end": 37.06,
+      "text": "Yep, I've done that, I'll come to it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0010",
+      "speaker": "A",
+      "start": 37.4,
+      "end": 40.09,
+      "text": "Okay. So just quickly, where we are.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0011",
+      "speaker": "A",
+      "start": 40.46,
+      "end": 46.23,
+      "text": "From the kick-off we've got twenty-five euros selling price and twelve fifty max production cost.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0012",
+      "speaker": "A",
+      "start": 47.0,
+      "end": 54.69,
+      "text": "And last time we settled on two timers, timer one and timer two, and Kiko as the working wake word.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0013",
+      "speaker": "A",
+      "start": 55.53,
+      "end": 60.91,
+      "text": "And we parked the power question and the display until we had Tomasz's numbers.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0014",
+      "speaker": "C",
+      "start": 61.42,
+      "end": 61.82,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0103c.s0015",
+      "speaker": "A",
+      "start": 62.79,
+      "end": 68.56,
+      "text": "So today I want actual decisions on components, power, and what the thing looks like.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0016",
+      "speaker": "A",
+      "start": 69.45,
+      "end": 71.76,
+      "text": "Tomasz, do you want to start?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0103c.s0017",
+      "speaker": "B",
+      "start": 72.39,
+      "end": 74.7,
+      "text": "Sure. Um, so first the chip.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0018",
+      "speaker": "B",
+      "start": 75.35,
+      "end": 81.5,
+      "text": "The one I looked at takes a custom wake word plus up to about twenty commands.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0019",
+      "speaker": "B",
+      "start": 82.14,
+      "end": 89.06,
+      "text": "So set, stop, how long left, cancel, add a minute, times two timers, that's fine, we're well under.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0020",
+      "speaker": "D",
+      "start": 89.34,
+      "end": 90.11,
+      "text": "Oh good.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0103c.s0021",
+      "speaker": "B",
+      "start": 90.86,
+      "end": 94.32,
+      "text": "Cost is three fifty per unit at our volumes.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0022",
+      "speaker": "A",
+      "start": 95.14,
+      "end": 96.29,
+      "text": "And the rest?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0103c.s0023",
+      "speaker": "B",
+      "start": 96.81,
+      "end": 102.58,
+      "text": "Right, so, two microphones, so it hears you from across the kitchen, one twenty together.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0024",
+      "speaker": "B",
+      "start": 103.02,
+      "end": 109.17,
+      "text": "Speaker plus a little amplifier, one forty. That's loud enough for the alarm getting louder thing.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0025",
+      "speaker": "B",
+      "start": 109.43,
+      "end": 113.66,
+      "text": "Casing about two euros, the button thirty cents, assembly fifty cents.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0026",
+      "speaker": "B",
+      "start": 114.21,
+      "end": 119.59,
+      "text": "And power, I'll explain, but a USB-C socket plus a plug adapter, one fifty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0027",
+      "speaker": "B",
+      "start": 120.45,
+      "end": 123.53,
+      "text": "So all in, that comes to eleven forty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0028",
+      "speaker": "B",
+      "start": 123.85,
+      "end": 130.39,
+      "text": "Sorry, ten forty. I had the adapter down as two fifty in my head, it's one fifty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0029",
+      "speaker": "A",
+      "start": 130.61,
+      "end": 131.76,
+      "text": "Ten forty. Okay.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0103c.s0030",
+      "speaker": "C",
+      "start": 132.02,
+      "end": 134.33,
+      "text": "So that's with mains power then?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0103c.s0031",
+      "speaker": "B",
+      "start": 135.16,
+      "end": 136.7,
+      "text": "Yeah. That's my recommendation.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0032",
+      "speaker": "B",
+      "start": 137.11,
+      "end": 143.26,
+      "text": "Because the chip, when it's always listening for the wake word, it draws quite a lot.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0033",
+      "speaker": "B",
+      "start": 144.14,
+      "end": 147.6,
+      "text": "On two AA batteries you'd get maybe three weeks.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0034",
+      "speaker": "D",
+      "start": 147.86,
+      "end": 149.4,
+      "text": "Three weeks? That's nothing.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0103c.s0035",
+      "speaker": "B",
+      "start": 149.63,
+      "end": 155.4,
+      "text": "Yeah, people would be changing batteries constantly. And when it's flat it just stops listening.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0036",
+      "speaker": "C",
+      "start": 155.94,
+      "end": 160.94,
+      "text": "That's the worst thing for a voice product, honestly. It just goes deaf.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0103c.s0037",
+      "speaker": "D",
+      "start": 161.29,
+      "end": 168.21,
+      "text": "What about rechargeable though? So you could take it out to the garden, for a barbecue or whatever.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0103c.s0038",
+      "speaker": "B",
+      "start": 168.42,
+      "end": 173.42,
+      "text": "I looked at that. Battery pack plus charging, it's about two euros more.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0039",
+      "speaker": "B",
+      "start": 174.24,
+      "end": 178.47,
+      "text": "And you'd still have to charge it every week or so.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0040",
+      "speaker": "D",
+      "start": 179.32,
+      "end": 185.09,
+      "text": "I mean, I could do a quick survey, ask people if they'd mind a cable.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0103c.s0041",
+      "speaker": "A",
+      "start": 185.73,
+      "end": 191.88,
+      "text": "Hmm. Two euros on top of ten forty though, that eats a lot of our margin.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0103c.s0042",
+      "speaker": "C",
+      "start": 192.44,
+      "end": 197.44,
+      "text": "And everyone's got a plug by the counter anyway. Kettle's there, toaster's there.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0043",
+      "speaker": "D",
+      "start": 197.81,
+      "end": 201.66,
+      "text": "Yeah, true. Most people would use it at the counter.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0103c.s0044",
+      "speaker": "A",
+      "start": 202.57,
+      "end": 207.19,
+      "text": "So are we agreed? Mains power through USB-C, adapter in the box?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0103c.s0045",
+      "speaker": "C",
+      "start": 207.97,
+      "end": 208.37,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0103c.s0046",
+      "speaker": "D",
+      "start": 209.17,
+      "end": 209.94,
+      "text": "Yeah, fine.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0103c.s0047",
+      "speaker": "B",
+      "start": 210.8,
+      "end": 211.2,
+      "text": "Agreed.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0103c.s0048",
+      "speaker": "A",
+      "start": 211.91,
+      "end": 217.29,
+      "text": "Okay, mains it is. So Ben, I don't think we need that survey then.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0049",
+      "speaker": "D",
+      "start": 218.16,
+      "end": 219.31,
+      "text": "No, fair enough.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0103c.s0050",
+      "speaker": "C",
+      "start": 219.75,
+      "end": 223.98,
+      "text": "So does that mean we've got room for the display now?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0103c.s0051",
+      "speaker": "A",
+      "start": 224.43,
+      "end": 227.12,
+      "text": "The two-digit one you wanted last time.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0103c.s0052",
+      "speaker": "C",
+      "start": 228.07,
+      "end": 233.84,
+      "text": "Yeah. Just so you can glance at it and see the minutes left without asking.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0053",
+      "speaker": "B",
+      "start": 234.02,
+      "end": 239.02,
+      "text": "I priced one, actually. A small two-digit LED, ninety cents with the driver.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0054",
+      "speaker": "A",
+      "start": 239.26,
+      "end": 241.95,
+      "text": "So ten forty plus ninety, eleven thirty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0055",
+      "speaker": "B",
+      "start": 242.81,
+      "end": 246.66,
+      "text": "Yeah, eleven thirty. Leaves us one twenty under the limit.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0056",
+      "speaker": "D",
+      "start": 246.82,
+      "end": 253.74,
+      "text": "I think it helps the gift thing too. It looks more like a proper gadget with a display.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0103c.s0057",
+      "speaker": "A",
+      "start": 254.69,
+      "end": 255.46,
+      "text": "Anyone against?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0103c.s0058",
+      "speaker": "B",
+      "start": 256.01,
+      "end": 261.01,
+      "text": "No, I'm fine, as long as we don't add anything else after this.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0103c.s0059",
+      "speaker": "A",
+      "start": 261.79,
+      "end": 264.87,
+      "text": "Right, that's basically our margin. Okay, display's in.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0103c.s0060",
+      "speaker": "C",
+      "start": 265.61,
+      "end": 266.01,
+      "text": "Great.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0103c.s0061",
+      "speaker": "D",
+      "start": 266.66,
+      "end": 272.04,
+      "text": "Sorry, can I just, is anyone else's coffee from the machine downstairs completely cold?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0103c.s0062",
+      "speaker": "C",
+      "start": 272.43,
+      "end": 275.12,
+      "text": "Oh, it's been like that all week.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0063",
+      "speaker": "B",
+      "start": 276.03,
+      "end": 279.11,
+      "text": "Since Monday. Someone said the heating element's gone.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0064",
+      "speaker": "D",
+      "start": 279.26,
+      "end": 286.57,
+      "text": "I went up to the fourth floor one this morning and there was a queue of like ten people.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0065",
+      "speaker": "C",
+      "start": 287.06,
+      "end": 291.68,
+      "text": "The fourth floor one is better anyway. It does the oat milk.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0066",
+      "speaker": "B",
+      "start": 292.64,
+      "end": 294.95,
+      "text": "Does it? I didn't know that.",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0103c.s0067",
+      "speaker": "C",
+      "start": 295.57,
+      "end": 300.95,
+      "text": "Yeah, there's a little button at the bottom, you have to hold it down.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0068",
+      "speaker": "D",
+      "start": 301.58,
+      "end": 303.12,
+      "text": "That's a terrible interface.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0103c.s0069",
+      "speaker": "C",
+      "start": 303.76,
+      "end": 305.3,
+      "text": "Don't get me started.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0103c.s0070",
+      "speaker": "B",
+      "start": 306.18,
+      "end": 309.26,
+      "text": "Facilities said they'd have someone in on Thursday.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0071",
+      "speaker": "D",
+      "start": 309.87,
+      "end": 312.56,
+      "text": "I'll believe it when I see it.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0103c.s0072",
+      "speaker": "A",
+      "start": 313.33,
+      "end": 316.02,
+      "text": "Okay, um, let's get back to it.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0103c.s0073",
+      "speaker": "A",
+      "start": 316.33,
+      "end": 320.18,
+      "text": "Priya, you had the command list and the Kiko testing.",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0103c.s0074",
+      "speaker": "C",
+      "start": 320.91,
+      "end": 325.14,
+      "text": "Yeah. So the command list is done, I'll send it round.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0075",
+      "speaker": "C",
+      "start": 325.88,
+      "end": 329.73,
+      "text": "Basically it's always Kiko, then the command, then which timer.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0076",
+      "speaker": "C",
+      "start": 330.33,
+      "end": 336.48,
+      "text": "Like \"Kiko, set timer one for ten minutes,\" and it says back \"Timer one, ten minutes.\"",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0077",
+      "speaker": "C",
+      "start": 337.33,
+      "end": 342.33,
+      "text": "If you don't say a number it goes to timer one by default.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0078",
+      "speaker": "B",
+      "start": 342.76,
+      "end": 345.84,
+      "text": "And how long left, does that read both?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0103c.s0079",
+      "speaker": "C",
+      "start": 346.32,
+      "end": 352.47,
+      "text": "If both are running it says both, yeah. \"Timer one, four minutes. Timer two, twelve minutes.\"",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0080",
+      "speaker": "D",
+      "start": 352.88,
+      "end": 353.28,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0103c.s0081",
+      "speaker": "C",
+      "start": 353.57,
+      "end": 362.42,
+      "text": "And then the Kiko test. I used a free wake word tool on my laptop and read through a bunch of recipe phrases.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0082",
+      "speaker": "C",
+      "start": 362.67,
+      "end": 367.29,
+      "text": "Mostly fine. But it did trigger on \"cocoa\" a couple of times.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0083",
+      "speaker": "D",
+      "start": 367.97,
+      "end": 371.05,
+      "text": "Cocoa. Kiko, cocoa. Yeah, I can hear it.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0103c.s0084",
+      "speaker": "C",
+      "start": 371.38,
+      "end": 374.84,
+      "text": "Two out of about forty times I said it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0085",
+      "speaker": "A",
+      "start": 375.76,
+      "end": 378.84,
+      "text": "Is that bad enough to change the name?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0103c.s0086",
+      "speaker": "C",
+      "start": 379.02,
+      "end": 384.79,
+      "text": "I don't think so. A false trigger just means it says \"yes?\" and nothing happens.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0103c.s0087",
+      "speaker": "B",
+      "start": 385.06,
+      "end": 393.52,
+      "text": "And the laptop tool's not the real thing. The chip supplier trains the wake word model properly, they can tune the sensitivity.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0088",
+      "speaker": "D",
+      "start": 394.11,
+      "end": 397.96,
+      "text": "We could go back to Olli, if it's a problem.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0103c.s0089",
+      "speaker": "C",
+      "start": 398.81,
+      "end": 403.04,
+      "text": "I'd rather keep Kiko, honestly. Olli's a name people actually have.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0103c.s0090",
+      "speaker": "A",
+      "start": 403.79,
+      "end": 410.71,
+      "text": "Yeah, I'd keep Kiko. Tomasz, can you ask the supplier about tuning it against cocoa and similar words?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0103c.s0091",
+      "speaker": "B",
+      "start": 411.6,
+      "end": 413.14,
+      "text": "Yeah, I'll email them.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0103c.s0092",
+      "speaker": "A",
+      "start": 413.9,
+      "end": 415.44,
+      "text": "Okay, so Kiko stays.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0093",
+      "speaker": "A",
+      "start": 416.13,
+      "end": 417.67,
+      "text": "Ben, the competitor stuff?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0103c.s0094",
+      "speaker": "D",
+      "start": 418.52,
+      "end": 422.75,
+      "text": "Right. So, dedicated voice timers, there's hardly any. I found two.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0095",
+      "speaker": "D",
+      "start": 423.63,
+      "end": 428.63,
+      "text": "Both around thirty-five, forty euros, and both need an app to set up.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0096",
+      "speaker": "D",
+      "start": 429.19,
+      "end": 436.88,
+      "text": "The main competition is really smart speakers, which do timers, but those are fifty euros plus and they need wifi.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0097",
+      "speaker": "D",
+      "start": 437.46,
+      "end": 443.61,
+      "text": "And a lot of reviews complain about them, you know, always being connected, the privacy thing.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0098",
+      "speaker": "C",
+      "start": 443.92,
+      "end": 447.38,
+      "text": "So us being offline is actually a selling point.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0103c.s0099",
+      "speaker": "D",
+      "start": 448.16,
+      "end": 454.31,
+      "text": "Exactly. No app, no wifi, nothing goes to the internet. I'd put that on the box.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0103c.s0100",
+      "speaker": "A",
+      "start": 455.14,
+      "end": 458.22,
+      "text": "That's good. And it makes twenty-five look reasonable.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0103c.s0101",
+      "speaker": "D",
+      "start": 458.6,
+      "end": 462.45,
+      "text": "Yeah, I'm less worried about the price than I was.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0103c.s0102",
+      "speaker": "A",
+      "start": 463.41,
+      "end": 467.64,
+      "text": "Okay, so the marketing line is works offline, no app needed.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0103",
+      "speaker": "A",
+      "start": 467.87,
+      "end": 470.95,
+      "text": "Last thing, what it actually looks like. Tomasz?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0103c.s0104",
+      "speaker": "B",
+      "start": 471.39,
+      "end": 477.16,
+      "text": "So I was thinking round, like a little puck, about the size of your palm.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0103c.s0105",
+      "speaker": "B",
+      "start": 477.57,
+      "end": 482.95,
+      "text": "Smooth plastic shell you can wipe, with the button on top in soft rubber.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0103c.s0106",
+      "speaker": "C",
+      "start": 483.73,
+      "end": 488.73,
+      "text": "Big button. If your hands are greasy you want to just slap it.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0103c.s0107",
+      "speaker": "B",
+      "start": 489.28,
+      "end": 495.05,
+      "text": "Yeah, the whole top could be the button basically, with the display in the middle.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0103c.s0108",
+      "speaker": "C",
+      "start": 495.21,
+      "end": 496.75,
+      "text": "Oh, I like that.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0103c.s0109",
+      "speaker": "D",
+      "start": 497.05,
+      "end": 502.82,
+      "text": "And could we do a magnet on the back? So it sticks to the fridge.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0103c.s0110",
+      "speaker": "B",
+      "start": 503.0,
+      "end": 507.62,
+      "text": "I mean, with the cable hanging down the fridge? I'm not sure.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0103c.s0111",
+      "speaker": "A",
+      "start": 508.14,
+      "end": 512.76,
+      "text": "Let's leave the magnet for now. We've only got one twenty left.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0103c.s0112",
+      "speaker": "D",
+      "start": 513.54,
+      "end": 519.31,
+      "text": "And colours. For the gift angle I'd want a few bright ones, not just white.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0103c.s0113",
+      "speaker": "B",
+      "start": 519.59,
+      "end": 523.44,
+      "text": "Colours don't really cost more if it's the plastic itself.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0114",
+      "speaker": "A",
+      "start": 524.32,
+      "end": 528.94,
+      "text": "Okay, let's decide colours next time. Ben, can you bring some options?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0103c.s0115",
+      "speaker": "D",
+      "start": 529.87,
+      "end": 532.56,
+      "text": "Yeah, I'll pull together three or four.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0103c.s0116",
+      "speaker": "A",
+      "start": 533.24,
+      "end": 539.39,
+      "text": "So round, wipeable plastic, the top as one big rubber button with the display in it?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0103c.s0117",
+      "speaker": "B",
+      "start": 540.24,
+      "end": 540.64,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0103c.s0118",
+      "speaker": "C",
+      "start": 541.55,
+      "end": 542.7,
+      "text": "Yeah, sounds good.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0103c.s0119",
+      "speaker": "D",
+      "start": 542.9,
+      "end": 543.3,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0103c.s0120",
+      "speaker": "A",
+      "start": 543.64,
+      "end": 550.18,
+      "text": "For next time it'd be great to have a rough model. Priya, could you make a mock-up?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0103c.s0121",
+      "speaker": "C",
+      "start": 550.92,
+      "end": 552.46,
+      "text": "Um, I could, but—",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0103c.s0122",
+      "speaker": "B",
+      "start": 553.05,
+      "end": 558.82,
+      "text": "Actually, I've got the foam and the modelling stuff at my desk. I'll do it.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0103c.s0123",
+      "speaker": "A",
+      "start": 559.42,
+      "end": 561.73,
+      "text": "Okay, Tomasz does the model then.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0103c.s0124",
+      "speaker": "C",
+      "start": 562.06,
+      "end": 565.14,
+      "text": "I'll send you the display size I want.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0103c.s0125",
+      "speaker": "A",
+      "start": 565.37,
+      "end": 569.22,
+      "text": "So, actions. Tomasz, the model, and the supplier about Kiko.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0126",
+      "speaker": "B",
+      "start": 569.54,
+      "end": 569.94,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0103c.s0127",
+      "speaker": "A",
+      "start": 570.45,
+      "end": 578.53,
+      "text": "Priya, the command list to everyone, and work out what the display shows with two timers and how the button behaves.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0128",
+      "speaker": "C",
+      "start": 578.9,
+      "end": 579.3,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0103c.s0129",
+      "speaker": "A",
+      "start": 580.23,
+      "end": 581.38,
+      "text": "Ben, colour options.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0103c.s0130",
+      "speaker": "D",
+      "start": 581.83,
+      "end": 582.23,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0103c.s0131",
+      "speaker": "A",
+      "start": 582.76,
+      "end": 584.68,
+      "text": "And I'll do the minutes.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0103c.s0132",
+      "speaker": "A",
+      "start": 585.5,
+      "end": 586.65,
+      "text": "Okay. Thanks everyone.",
+      "da_type": "oth"
+    }
+  ],
+  "summary": {
+    "abstract": [
+      "The project manager opened the conceptual design meeting, welcomed back the industrial designer after his illness, and recapped the earlier decisions on the 25 euro price, the 12.50 euro cost limit, two numbered timers and the wake word Kiko.",
+      "The industrial designer confirmed that the speech chip handles the two-timer command set and presented a cost breakdown totalling 10.40 euros per unit with mains power; the team chose mains power over batteries because always-on listening would drain AA batteries in about three weeks.",
+      "With the resulting margin, the team added the small two-digit LED display, which brings the unit cost to 11.30 euros and leaves 1.20 euros under the limit.",
+      "The user interface designer presented the command list and reported that Kiko occasionally triggered on the word 'cocoa' in a laptop test, but the team kept Kiko and will ask the chip supplier to tune it.",
+      "The marketing expert reported that few dedicated voice timers exist, at around 35 to 40 euros, and that smart speakers need wifi and raise privacy complaints, so offline operation will be the main selling point.",
+      "The team agreed on a round, palm-sized, wipeable plastic body whose whole top is one soft rubber button with the display in the middle, and deferred colours to the next meeting."
+    ],
+    "actions": [
+      "The industrial designer will ask the chip supplier to tune the Kiko wake word against 'cocoa' and similar words.",
+      "The industrial designer will build a rough model of the timer for the next meeting; this was first asked of the user interface designer.",
+      "The user interface designer will send the completed command list to the team.",
+      "The user interface designer will work out what the display shows with two timers and how the button behaves, and send the display size to the industrial designer.",
+      "The marketing expert will bring three or four colour options to the next meeting.",
+      "The project manager will write up the minutes."
+    ],
+    "decisions": [
+      "The timer will be mains powered through a USB-C socket, with a plug adapter included in the box; batteries and a rechargeable pack were rejected.",
+      "A small two-digit LED display (0.90 euros) will be included, bringing the unit cost to 11.30 euros.",
+      "Kiko stays as the wake word despite occasional false triggers on 'cocoa'.",
+      "The product will be marketed as working offline, with no app and no wifi needed.",
+      "The timer will be a round, palm-sized puck in wipeable plastic, with the whole top acting as one soft rubber button and the display in the middle."
+    ],
+    "problems": [
+      "Kiko triggered on 'cocoa' in two of about forty attempts in a laptop test; whether the chip supplier can tune this away is not yet known.",
+      "Only 1.20 euros of margin remains under the 12.50 euro limit, so no further components can be added, and the fridge magnet was left out for now.",
+      "Product colours are not yet decided."
+    ]
+  },
+  "action_items": [
+    {
+      "id": "SY0103c.ai1",
+      "description": "Ask the chip supplier to tune the Kiko wake word model against 'cocoa' and similar words",
+      "owner": "B",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0103c.s0090",
+          "event": "assigned",
+          "by": "A",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0103c.s0091",
+          "event": "accepted",
+          "by": "B",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0103c.s0125",
+          "event": "restated",
+          "by": "A",
+          "owner": "B"
+        }
+      ],
+      "evidence_segments": [
+        "SY0103c.s0087",
+        "SY0103c.s0090",
+        "SY0103c.s0091",
+        "SY0103c.s0125",
+        "SY0103c.s0126"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0103c.ai2",
+      "description": "Build a rough model (mock-up) of the timer for the next meeting",
+      "owner": "B",
+      "owner_unclear": false,
+      "status": "reassigned",
+      "previous_owners": [
+        "C"
+      ],
+      "history": [
+        {
+          "segment": "SY0103c.s0120",
+          "event": "assigned",
+          "by": "A",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0103c.s0122",
+          "event": "offered",
+          "by": "B",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0103c.s0123",
+          "event": "reassigned",
+          "by": "A",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0103c.s0125",
+          "event": "restated",
+          "by": "A",
+          "owner": "B"
+        }
+      ],
+      "evidence_segments": [
+        "SY0103c.s0120",
+        "SY0103c.s0121",
+        "SY0103c.s0122",
+        "SY0103c.s0123",
+        "SY0103c.s0125",
+        "SY0103c.s0126"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0103c.ai3",
+      "description": "Send the completed command list to the team",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0103c.s0074",
+          "event": "offered",
+          "by": "C",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0103c.s0127",
+          "event": "restated",
+          "by": "A",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0103c.s0074",
+        "SY0103c.s0127",
+        "SY0103c.s0128"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0103c.ai4",
+      "description": "Work out what the display shows with two timers and how the button behaves, and send the display size to the industrial designer",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0103c.s0124",
+          "event": "offered",
+          "by": "C",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0103c.s0127",
+          "event": "assigned",
+          "by": "A",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0103c.s0124",
+        "SY0103c.s0127",
+        "SY0103c.s0128"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0103c.ai5",
+      "description": "Bring three or four colour options to the next meeting",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0103c.s0114",
+          "event": "assigned",
+          "by": "A",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0103c.s0115",
+          "event": "accepted",
+          "by": "D",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0103c.s0129",
+          "event": "restated",
+          "by": "A",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0103c.s0112",
+        "SY0103c.s0114",
+        "SY0103c.s0115",
+        "SY0103c.s0129",
+        "SY0103c.s0130"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0103c.ai6",
+      "description": "Write up the minutes of this meeting",
+      "owner": "A",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0103c.s0131",
+          "event": "offered",
+          "by": "A",
+          "owner": "A"
+        }
+      ],
+      "evidence_segments": [
+        "SY0103c.s0131"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0103c.ai7",
+      "description": "Survey users on whether they would mind a power cable",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "dropped",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0103c.s0040",
+          "event": "offered",
+          "by": "D",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0103c.s0048",
+          "event": "dropped",
+          "by": "A",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0103c.s0040",
+        "SY0103c.s0048",
+        "SY0103c.s0049"
+      ],
+      "owner_source": "gold"
+    }
+  ],
+  "qa_facts": [
+    {
+      "id": "SY0103c.f1",
+      "type": "other",
+      "fact": "The industrial designer was back after being ill for the previous meeting.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0103b",
+      "evidence_segments": [
+        "SY0103c.s0003",
+        "SY0103c.s0004",
+        "SY0103c.s0005"
+      ]
+    },
+    {
+      "id": "SY0103c.f2",
+      "type": "reference_to_prior_meeting",
+      "fact": "The industrial designer confirmed he received the project manager's email with the minutes about the switch to two numbered timers and the request to check the chip.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0103b",
+      "evidence_segments": [
+        "SY0103c.s0006",
+        "SY0103c.s0007",
+        "SY0103c.s0008",
+        "SY0103c.s0009"
+      ]
+    },
+    {
+      "id": "SY0103c.f3",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager recalled the kick-off targets of a 25 euro selling price and 12.50 euro maximum production cost.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0103a",
+      "evidence_segments": [
+        "SY0103c.s0011"
+      ]
+    },
+    {
+      "id": "SY0103c.f4",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager recalled that the previous meeting settled on two numbered timers and Kiko as the wake word, and parked the power question and the display.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0103b",
+      "evidence_segments": [
+        "SY0103c.s0012",
+        "SY0103c.s0013"
+      ]
+    },
+    {
+      "id": "SY0103c.f5",
+      "type": "other",
+      "fact": "The speech chip supports a custom wake word and about twenty commands, which is enough for the two-timer command set, and costs 3.50 euros per unit.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0018",
+        "SY0103c.s0019",
+        "SY0103c.s0021"
+      ]
+    },
+    {
+      "id": "SY0103c.f6",
+      "type": "other",
+      "fact": "The industrial designer's cost breakdown totals 10.40 euros per unit with mains power (he first said 11.40, then corrected himself).",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0023",
+        "SY0103c.s0024",
+        "SY0103c.s0025",
+        "SY0103c.s0026",
+        "SY0103c.s0027",
+        "SY0103c.s0028",
+        "SY0103c.s0029"
+      ]
+    },
+    {
+      "id": "SY0103c.f7",
+      "type": "other",
+      "fact": "On two AA batteries the always-listening timer would last only about three weeks.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0032",
+        "SY0103c.s0033"
+      ]
+    },
+    {
+      "id": "SY0103c.f8",
+      "type": "decision",
+      "fact": "The timer will be mains powered through USB-C, with a plug adapter included in the box.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0044",
+        "SY0103c.s0045",
+        "SY0103c.s0046",
+        "SY0103c.s0047",
+        "SY0103c.s0048"
+      ]
+    },
+    {
+      "id": "SY0103c.f9",
+      "type": "unagreed_proposal",
+      "fact": "The marketing expert suggested a rechargeable battery so the timer could be taken outside; it was not adopted because it adds about two euros and still needs regular charging.",
+      "agreed": false,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0037",
+        "SY0103c.s0038",
+        "SY0103c.s0039",
+        "SY0103c.s0041"
+      ]
+    },
+    {
+      "id": "SY0103c.f10",
+      "type": "action_item_removed",
+      "fact": "The marketing expert's offer to survey users about a power cable was dropped once mains power was decided.",
+      "agreed": null,
+      "related_action_item": "SY0103c.ai7",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0040",
+        "SY0103c.s0048",
+        "SY0103c.s0049"
+      ]
+    },
+    {
+      "id": "SY0103c.f11",
+      "type": "decision",
+      "fact": "A small two-digit LED display costing 0.90 euros will be included, bringing the unit cost to 11.30 euros and leaving 1.20 euros under the limit.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0053",
+        "SY0103c.s0054",
+        "SY0103c.s0055",
+        "SY0103c.s0057",
+        "SY0103c.s0058",
+        "SY0103c.s0059"
+      ]
+    },
+    {
+      "id": "SY0103c.f12",
+      "type": "plan_change",
+      "fact": "The two-digit display, parked in the functional design meeting, was now added to the design.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0103b",
+      "evidence_segments": [
+        "SY0103c.s0050",
+        "SY0103c.s0051",
+        "SY0103c.s0059"
+      ]
+    },
+    {
+      "id": "SY0103c.f13",
+      "type": "other",
+      "fact": "In the command list, a command without a timer number goes to timer one by default, and 'how long left' reads out both timers when both are running.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0077",
+        "SY0103c.s0078",
+        "SY0103c.s0079"
+      ]
+    },
+    {
+      "id": "SY0103c.f14",
+      "type": "other",
+      "fact": "In the user interface designer's laptop test, Kiko falsely triggered on 'cocoa' about two out of forty times.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0081",
+        "SY0103c.s0082",
+        "SY0103c.s0084"
+      ]
+    },
+    {
+      "id": "SY0103c.f15",
+      "type": "decision",
+      "fact": "Kiko stays as the wake word.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0086",
+        "SY0103c.s0089",
+        "SY0103c.s0090",
+        "SY0103c.s0092"
+      ]
+    },
+    {
+      "id": "SY0103c.f16",
+      "type": "unagreed_proposal",
+      "fact": "The marketing expert suggested going back to Olli as the wake word; Kiko was kept instead.",
+      "agreed": false,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0103b",
+      "evidence_segments": [
+        "SY0103c.s0088",
+        "SY0103c.s0089",
+        "SY0103c.s0090"
+      ]
+    },
+    {
+      "id": "SY0103c.f17",
+      "type": "other",
+      "fact": "Dedicated voice timers are rare and cost around 35 to 40 euros and need an app; smart speakers cost over 50 euros and need wifi.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0094",
+        "SY0103c.s0095",
+        "SY0103c.s0096",
+        "SY0103c.s0097"
+      ]
+    },
+    {
+      "id": "SY0103c.f18",
+      "type": "decision",
+      "fact": "The product will be marketed as working offline, with no app and no wifi.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0098",
+        "SY0103c.s0099",
+        "SY0103c.s0100",
+        "SY0103c.s0102"
+      ]
+    },
+    {
+      "id": "SY0103c.f19",
+      "type": "decision",
+      "fact": "The timer will be a round, palm-sized puck in wipeable plastic, with the whole top as one soft rubber button and the display in the middle.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0104",
+        "SY0103c.s0105",
+        "SY0103c.s0107",
+        "SY0103c.s0116",
+        "SY0103c.s0117",
+        "SY0103c.s0118",
+        "SY0103c.s0119"
+      ]
+    },
+    {
+      "id": "SY0103c.f20",
+      "type": "unagreed_proposal",
+      "fact": "The marketing expert suggested a magnet on the back so the timer sticks to the fridge; it was left out for now.",
+      "agreed": false,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0109",
+        "SY0103c.s0110",
+        "SY0103c.s0111"
+      ]
+    },
+    {
+      "id": "SY0103c.f21",
+      "type": "other",
+      "fact": "Product colours were deferred to the next meeting.",
+      "agreed": null,
+      "related_action_item": "SY0103c.ai5",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0112",
+        "SY0103c.s0113",
+        "SY0103c.s0114"
+      ]
+    },
+    {
+      "id": "SY0103c.f22",
+      "type": "action_item",
+      "fact": "The industrial designer will ask the chip supplier to tune Kiko against 'cocoa' and similar words.",
+      "agreed": null,
+      "related_action_item": "SY0103c.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0090",
+        "SY0103c.s0091",
+        "SY0103c.s0125"
+      ]
+    },
+    {
+      "id": "SY0103c.f23",
+      "type": "action_item",
+      "fact": "The industrial designer will build a rough model of the timer; the project manager first asked the user interface designer.",
+      "agreed": null,
+      "related_action_item": "SY0103c.ai2",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0120",
+        "SY0103c.s0122",
+        "SY0103c.s0123",
+        "SY0103c.s0125"
+      ]
+    },
+    {
+      "id": "SY0103c.f24",
+      "type": "action_item",
+      "fact": "The user interface designer will send the command list to the team.",
+      "agreed": null,
+      "related_action_item": "SY0103c.ai3",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0074",
+        "SY0103c.s0127"
+      ]
+    },
+    {
+      "id": "SY0103c.f25",
+      "type": "action_item",
+      "fact": "The user interface designer will work out the display content for two timers and the button behaviour.",
+      "agreed": null,
+      "related_action_item": "SY0103c.ai4",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0124",
+        "SY0103c.s0127"
+      ]
+    },
+    {
+      "id": "SY0103c.f26",
+      "type": "action_item",
+      "fact": "The marketing expert will bring colour options.",
+      "agreed": null,
+      "related_action_item": "SY0103c.ai5",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0114",
+        "SY0103c.s0115",
+        "SY0103c.s0129"
+      ]
+    },
+    {
+      "id": "SY0103c.f27",
+      "type": "action_item",
+      "fact": "The project manager will write up the minutes.",
+      "agreed": null,
+      "related_action_item": "SY0103c.ai6",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0103c.s0131"
+      ]
+    }
+  ],
+  "edge_cases": [
+    {
+      "scenario_id": "F1_OFF_TOPIC_TANGENT",
+      "segments": [
+        "SY0103c.s0061",
+        "SY0103c.s0062",
+        "SY0103c.s0063",
+        "SY0103c.s0064",
+        "SY0103c.s0065",
+        "SY0103c.s0066",
+        "SY0103c.s0067",
+        "SY0103c.s0068",
+        "SY0103c.s0069",
+        "SY0103c.s0070",
+        "SY0103c.s0071"
+      ],
+      "note": "An eleven-segment chat about the broken office coffee machine; the project manager then steers back to the agenda."
+    },
+    {
+      "scenario_id": "F1_SELF_CORRECTION",
+      "segments": [
+        "SY0103c.s0027",
+        "SY0103c.s0028"
+      ],
+      "note": "The industrial designer gives the total cost as 11.40 euros, then corrects it to 10.40 because the adapter costs 1.50 rather than 2.50."
+    }
+  ],
+  "provenance": {
+    "generator": "liveminutes-synthetic",
+    "cache_key": "6268c2df09318cb9c315bced378e9508d9b413671b5882962671185344b67231",
+    "attempt": 0,
+    "model": "claude-opus-5-5",
+    "prompt_version": "v1",
+    "scenario_spec_version": 1,
+    "feature": "F1",
+    "product": "a voice-controlled kitchen timer",
+    "planned_scenarios": [
+      "F1_OFF_TOPIC_TANGENT",
+      "F1_SELF_CORRECTION"
+    ]
+  }
+}

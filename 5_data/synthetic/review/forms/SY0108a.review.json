@@ -1,0 +1,1087 @@
+{
+  "meeting_id": "SY0108a",
+  "raw_sha256": "ab233740d949ce2259fae92179a5a1ef4761cc31d2c1e6363a748caf0f48a6d3",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the kickoff meeting, and the team members introduced themselves in their roles as project manager, industrial designer, marketing expert and user interface designer.",
+        "The project manager introduced the project, a hands-free voice-controlled kitchen timer with a target selling price of around 20 euros and a production cost under 10 euros per unit, and explained the four-meeting structure.",
+        "The team discussed initial requirements: an alarm loud enough to hear over an extractor fan, a microphone that can pick up the user over kitchen noise, and voice commands to set, cancel and query the timer.",
+        "The industrial designer said voice recognition is feasible within budget if a cheap offline chip recognising a small fixed set of commands is used, and the team agreed the timer should be voice-first with a physical backup button.",
+        "The team practised with the whiteboard drawing tool, assigned individual tasks, and scheduled the functional design meeting for Friday at 10:00, revised from an earlier plan of Thursday at 14:00 because the industrial designer has a supplier visit on Thursday afternoon."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will research components (voice recognition chip, microphone, speaker, battery) and their approximate costs, including the cheapest adequate recognition module.",
+        "The industrial designer will investigate battery versus mains power, given the drain of an always-listening microphone.",
+        "The user interface designer will draft a voice command list and define what the timer displays or says back.",
+        "The marketing expert will research user requirements for kitchen timers and review competing products on the market.",
+        "The marketing expert will run a quick survey of around ten people who cook a lot, with early responses by the next meeting.",
+        "The project manager will write up and circulate the minutes along with a new invitation for the Friday 10:00 meeting."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The next meeting (functional design) will be held on Friday at 10:00; this replaces the earlier agreed Thursday 14:00 slot.",
+        "The timer will be primarily voice-controlled but will include at least one physical backup button.",
+        "Voice recognition will be kept simple, using a low-cost offline chip that recognises a small fixed set of commands."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "Whether the timer should support multiple simultaneous timers was parked for the functional design meeting, as it complicates the command set.",
+        "Whether a wake word is needed was raised but not settled.",
+        "Battery versus mains power is undecided and affects the display design.",
+        "Meeting the under-10-euro production cost with voice recognition, a loud alarm and a noise-robust microphone remains to be confirmed."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108a.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108a.ai1",
+        "description": "Research components (voice recognition chip, microphone, speaker, battery) and approximate costs, including the cheapest adequate recognition module.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0108a.s0080",
+            "event": "assigned",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0108a.s0081",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108a.s0080",
+          "SY0108a.s0081",
+          "SY0108a.s0082"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108a.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108a.ai2",
+        "description": "Investigate battery versus mains power given the drain of an always-listening microphone.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0108a.s0109",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0108a.s0110",
+            "event": "accepted",
+            "by": "A",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108a.s0107",
+          "SY0108a.s0108",
+          "SY0108a.s0109",
+          "SY0108a.s0110"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108a.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108a.ai3",
+        "description": "Draft a voice command list and define what the timer displays or says back.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0108a.s0083",
+            "event": "assigned",
+            "by": "A",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0108a.s0084",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108a.s0083",
+          "SY0108a.s0084"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108a.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108a.ai4",
+        "description": "Research user requirements for kitchen timers and review competing products.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0108a.s0085",
+            "event": "assigned",
+            "by": "A",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0108a.s0086",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108a.s0085",
+          "SY0108a.s0086"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108a.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108a.ai5",
+        "description": "Run a quick survey of about ten people who cook a lot, with early responses by the Friday meeting.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0108a.s0087",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0108a.s0088",
+            "event": "accepted",
+            "by": "A",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0108a.s0105",
+            "event": "restated",
+            "by": "A",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108a.s0087",
+          "SY0108a.s0088",
+          "SY0108a.s0104",
+          "SY0108a.s0105"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108a.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108a.ai6",
+        "description": "Write up and circulate the minutes with a new invitation for the Friday 10:00 meeting.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0108a.s0089",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0108a.s0102",
+            "event": "restated",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108a.s0089",
+          "SY0108a.s0102"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108a.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108a.f1",
+        "type": "decision",
+        "fact": "The functional design meeting will be held on Friday at 10:00.",
+        "agreed": true,
+        "related_action_item": "SY0108a.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108a.s0094",
+          "SY0108a.s0095",
+          "SY0108a.s0096",
+          "SY0108a.s0097",
+          "SY0108a.s0098",
+          "SY0108a.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108a.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108a.f2",
+        "type": "plan_change",
+        "fact": "The next meeting was first agreed for Thursday at 14:00, then moved to Friday at 10:00 because the industrial designer is visiting a supplier on Thursday afternoon.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108a.s0029",
+          "SY0108a.s0030",
+          "SY0108a.s0031",
+          "SY0108a.s0032",
+          "SY0108a.s0033",
+          "SY0108a.s0091",
+          "SY0108a.s0092",
+          "SY0108a.s0098"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108a.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108a.f3",
+        "type": "decision",
+        "fact": "The timer will be voice-first with at least one physical backup button.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108a.s0057",
+          "SY0108a.s0058",
+          "SY0108a.s0059",
+          "SY0108a.s0060",
+          "SY0108a.s0061",
+          "SY0108a.s0062"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108a.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108a.f4",
+        "type": "decision",
+        "fact": "Voice recognition will use a simple, low-cost offline chip recognising a small fixed set of commands.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108a.s0048",
+          "SY0108a.s0049",
+          "SY0108a.s0050",
+          "SY0108a.s0051",
+          "SY0108a.s0052",
+          "SY0108a.s0053"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108a.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108a.f5",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer proposed supporting multiple simultaneous timers; it was parked for the functional design meeting.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108a.s0063",
+          "SY0108a.s0064",
+          "SY0108a.s0065",
+          "SY0108a.s0066"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108a.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108a.f6",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert raised using a wake word such as \"hey timer\"; the industrial designer said it is probably needed, but it was not decided.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108a.s0054",
+          "SY0108a.s0055"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108a.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108a.f7",
+        "type": "other",
+        "fact": "The target selling price is around 20 euros and the production cost must stay under 10 euros per unit, including the voice components.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108a.s0020",
+          "SY0108a.s0021",
+          "SY0108a.s0022",
+          "SY0108a.s0023"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108a.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108a.f8",
+        "type": "other",
+        "fact": "Identified requirements include an alarm loud enough to hear over an extractor fan and a microphone that can hear the user over kitchen noise.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108a.s0038",
+          "SY0108a.s0039",
+          "SY0108a.s0040",
+          "SY0108a.s0041"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108a.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108a.f9",
+        "type": "other",
+        "fact": "Battery versus mains power was left open until the next meeting.",
+        "agreed": null,
+        "related_action_item": "SY0108a.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108a.s0107",
+          "SY0108a.s0108",
+          "SY0108a.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108a.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108a.f10",
+        "type": "action_item",
+        "fact": "The industrial designer will research components and their costs.",
+        "agreed": null,
+        "related_action_item": "SY0108a.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108a.s0080",
+          "SY0108a.s0081",
+          "SY0108a.s0082"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108a.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108a.f11",
+        "type": "action_item",
+        "fact": "The industrial designer will investigate battery versus mains power.",
+        "agreed": null,
+        "related_action_item": "SY0108a.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108a.s0109",
+          "SY0108a.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108a.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108a.f12",
+        "type": "action_item",
+        "fact": "The user interface designer will draft a voice command list and define the timer's feedback.",
+        "agreed": null,
+        "related_action_item": "SY0108a.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108a.s0083",
+          "SY0108a.s0084"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108a.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108a.f13",
+        "type": "action_item",
+        "fact": "The marketing expert will research user requirements and competing products.",
+        "agreed": null,
+        "related_action_item": "SY0108a.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108a.s0085",
+          "SY0108a.s0086"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108a.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108a.f14",
+        "type": "action_item",
+        "fact": "The marketing expert will run a quick survey of about ten frequent cooks.",
+        "agreed": null,
+        "related_action_item": "SY0108a.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108a.s0087",
+          "SY0108a.s0088",
+          "SY0108a.s0104",
+          "SY0108a.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108a.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108a.f15",
+        "type": "action_item",
+        "fact": "The project manager will circulate the minutes and a new invitation for Friday at 10:00.",
+        "agreed": null,
+        "related_action_item": "SY0108a.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108a.s0089",
+          "SY0108a.s0102"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_PLAN_CHANGE",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_PLAN_CHANGE",
+        "segments": [
+          "SY0108a.s0029",
+          "SY0108a.s0030",
+          "SY0108a.s0031",
+          "SY0108a.s0032",
+          "SY0108a.s0033",
+          "SY0108a.s0090",
+          "SY0108a.s0091",
+          "SY0108a.s0092",
+          "SY0108a.s0093",
+          "SY0108a.s0094",
+          "SY0108a.s0095",
+          "SY0108a.s0096",
+          "SY0108a.s0097",
+          "SY0108a.s0098",
+          "SY0108a.s0102",
+          "SY0108a.s0114"
+        ],
+        "note": "The next meeting is agreed for Thursday at 14:00, then moved to Friday at 10:00 after the industrial designer remembers a supplier visit."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_SARCASM_AS_FACT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_SARCASM_AS_FACT",
+        "segments": [
+          "SY0108a.s0042",
+          "SY0108a.s0043",
+          "SY0108a.s0044",
+          "SY0108a.s0045",
+          "SY0108a.s0046"
+        ],
+        "note": "The industrial designer sarcastically says they are building a full smart speaker for ten euros; the project manager explicitly rejects it and nobody adopts it."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,1376 @@
+{
+  "meeting_id": "SY0105b",
+  "raw_sha256": "f2b56377abc5dcdf2951b44172279b5fcb2d64ada8075b154040500681ceb2f1",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the functional design meeting and noted that the industrial designer was absent because of a training course, so his comparison of dock identification technologies was not yet available. The project manager confirmed that the minutes had been sent and reported that CityCycle has no dock hardware budget this year, treats stickers or tags on docks as maintenance, and does not want dock screens for now. The marketing expert presented the survey, which received 1,040 responses. The biggest complaint was typing the dock code, followed by full stations and broken bikes, and trip data showed an average of about forty seconds from arriving at a dock to unlocking. The user interface designer presented a two-tap unlock flow and a review of four other bike-share apps. The team agreed the version one functions, chose a guest mode in the app for tourists instead of a web page, and agreed what to pass on to the absent industrial designer."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The project manager will email the industrial designer this afternoon with the meeting's decisions and ask for the NFC and QR comparison by Monday.",
+        "The industrial designer is to deliver the NFC and QR comparison by Monday, taking into account guest users and older phones.",
+        "The marketing expert will send the phone model survey results to the industrial designer and the team tomorrow.",
+        "The user interface designer will make wireframes of the core screens (map, unlock, return, report fault, guest mode) for the conceptual design meeting.",
+        "The marketing expert will split the survey results into commuters and weekend riders.",
+        "The project manager will get written confirmation from CityCycle that dock stickers or tags are covered by its maintenance budget."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The unlock flow will be designed to work with either NFC or QR, and the technology will be chosen at the next meeting once the industrial designer's comparison is available.",
+        "Version one will include unlocking, a station map showing bikes and free docks, return confirmation, fault reporting, and accounts and payment.",
+        "Trip history is moved to a second version.",
+        "Tourists will use a guest mode in the app and pay for a single ride with Apple Pay or Google Pay without an account. The QR-linked web page will not be built.",
+        "The next meeting is the conceptual design meeting, at the same time next week."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The dock identification technology is still not chosen, pending the industrial designer's comparison.",
+        "It is uncertain whether tourists will download an app for a single ride, and few tourists answered the survey.",
+        "Some users have older phones that may not support NFC.",
+        "CityCycle's coverage of dock stickers or tags under maintenance still needs written confirmation."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0105b.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0105b.ai1",
+        "description": "Email the absent industrial designer with the meeting's decisions and ask for the NFC and QR comparison by Monday.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0105b.s0105",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0105b.s0100",
+          "SY0105b.s0105",
+          "SY0105b.s0107"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0105b.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0105b.ai2",
+        "description": "Deliver the comparison of NFC and QR codes for dock identification by Monday, taking into account guest users and older phones (carried over from SY0105a.ai4).",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0105b.s0105",
+            "event": "restated",
+            "by": "B",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0105b.s0010",
+          "SY0105b.s0059",
+          "SY0105b.s0063",
+          "SY0105b.s0101",
+          "SY0105b.s0102",
+          "SY0105b.s0105",
+          "SY0105b.s0109"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0105b.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0105b.ai3",
+        "description": "Send the phone model survey results to the industrial designer and the team tomorrow.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0105b.s0103",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0105b.s0110",
+            "event": "restated",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0105b.s0102",
+          "SY0105b.s0103",
+          "SY0105b.s0104",
+          "SY0105b.s0110"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0105b.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0105b.ai4",
+        "description": "Make wireframes of the core screens (map, unlock, return, report fault, guest mode) for the conceptual design meeting.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0105b.s0113",
+            "event": "assigned",
+            "by": "B",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0105b.s0114",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0105b.s0113",
+          "SY0105b.s0114"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0105b.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0105b.ai5",
+        "description": "Split the survey results into commuters and weekend riders.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0105b.s0115",
+            "event": "assigned",
+            "by": "B",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0105b.s0116",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0105b.s0115",
+          "SY0105b.s0116",
+          "SY0105b.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0105b.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0105b.ai6",
+        "description": "Get written confirmation from CityCycle that dock stickers or tags are covered by its maintenance budget.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0105b.s0118",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0105b.s0021",
+          "SY0105b.s0118",
+          "SY0105b.s0119"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f1",
+        "type": "absence",
+        "fact": "The industrial designer (Marcus) was absent because he was on a training course all day.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105b.s0005",
+          "SY0105b.s0007",
+          "SY0105b.s0008",
+          "SY0105b.s0109"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f2",
+        "type": "other",
+        "fact": "The industrial designer's NFC and QR comparison was not available at this meeting.",
+        "agreed": null,
+        "related_action_item": "SY0105b.ai2",
+        "refers_to_meeting": "SY0105a",
+        "evidence_segments": [
+          "SY0105b.s0009",
+          "SY0105b.s0010"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recapped the kickoff decisions: commuters as the primary target, tourists as secondary, and a phone-first design with no dock screens.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0105a",
+        "evidence_segments": [
+          "SY0105b.s0016"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f4",
+        "type": "other",
+        "fact": "The project manager had sent round the minutes of the kickoff meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0105a",
+        "evidence_segments": [
+          "SY0105b.s0013",
+          "SY0105b.s0014",
+          "SY0105b.s0015"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f5",
+        "type": "other",
+        "fact": "CityCycle has no budget for dock hardware this year, treats stickers or tags on docks as maintenance, and does not want dock screens for now.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0105a",
+        "evidence_segments": [
+          "SY0105b.s0018",
+          "SY0105b.s0020",
+          "SY0105b.s0021",
+          "SY0105b.s0022"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f6",
+        "type": "other",
+        "fact": "The online survey received 1,040 responses. The marketing expert first said about fourteen hundred, then corrected it.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105b.s0027",
+          "SY0105b.s0028"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f7",
+        "type": "other",
+        "fact": "The user interface designer's questions about the current app were included in the survey.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0105a",
+        "evidence_segments": [
+          "SY0105b.s0032",
+          "SY0105b.s0033"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f8",
+        "type": "other",
+        "fact": "The biggest survey complaint was typing the dock code (about half of respondents), followed by full stations with no free dock and then broken bikes.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105b.s0034",
+          "SY0105b.s0035",
+          "SY0105b.s0037",
+          "SY0105b.s0039",
+          "SY0105b.s0072"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f9",
+        "type": "other",
+        "fact": "Trip data showed an average of about forty seconds from arriving at a dock to the bike being unlocked, and most weekend tourists pay for single rides without an account.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105b.s0041",
+          "SY0105b.s0044"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f10",
+        "type": "other",
+        "fact": "The user interface designer's flow needs about two taps for a logged-in user. Of four other bike-share apps reviewed, most use in-app QR scanning and one uses Bluetooth.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105b.s0049",
+          "SY0105b.s0050",
+          "SY0105b.s0051",
+          "SY0105b.s0052",
+          "SY0105b.s0054",
+          "SY0105b.s0056",
+          "SY0105b.s0057"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f11",
+        "type": "decision",
+        "fact": "The unlock flow will work with either NFC or QR, and the technology will be chosen at the next meeting after the industrial designer's comparison.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105b.s0063",
+          "SY0105b.s0064",
+          "SY0105b.s0065",
+          "SY0105b.s0066"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f12",
+        "type": "decision",
+        "fact": "Version one includes unlocking, a station map with bikes and free docks, return confirmation, fault reporting, and accounts and payment.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105b.s0068",
+          "SY0105b.s0069",
+          "SY0105b.s0073",
+          "SY0105b.s0076",
+          "SY0105b.s0085",
+          "SY0105b.s0086",
+          "SY0105b.s0087"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f13",
+        "type": "decision",
+        "fact": "Trip history is deferred to a second version.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105b.s0077",
+          "SY0105b.s0078",
+          "SY0105b.s0079",
+          "SY0105b.s0080"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f14",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert proposed a rewards scheme with points for daily commuters. It was parked as extra work that does not serve commuters' need for speed.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105b.s0081",
+          "SY0105b.s0082",
+          "SY0105b.s0083",
+          "SY0105b.s0084",
+          "SY0105b.s0085"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f15",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager referred back to the user interface designer's kickoff idea of a QR-linked web page with mobile payment for tourists.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0105a",
+        "evidence_segments": [
+          "SY0105b.s0045",
+          "SY0105b.s0088",
+          "SY0105b.s0089"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f16",
+        "type": "decision",
+        "fact": "Tourists will use a guest mode in the app and pay for a single ride with Apple Pay or Google Pay without an account. The web page will not be built.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0105a",
+        "evidence_segments": [
+          "SY0105b.s0090",
+          "SY0105b.s0091",
+          "SY0105b.s0093",
+          "SY0105b.s0094",
+          "SY0105b.s0095",
+          "SY0105b.s0096",
+          "SY0105b.s0097",
+          "SY0105b.s0098"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f17",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert speculated that the industrial designer might lean towards NFC, citing the kickoff concern about QR codes in the dark. The user interface designer noted that his view is not known.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0105a",
+        "evidence_segments": [
+          "SY0105b.s0061",
+          "SY0105b.s0062"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f18",
+        "type": "action_item",
+        "fact": "The project manager will email the absent industrial designer with the decisions and ask for the comparison by Monday.",
+        "agreed": null,
+        "related_action_item": "SY0105b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105b.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f19",
+        "type": "action_item",
+        "fact": "The industrial designer is to deliver the NFC and QR comparison by Monday, considering guest users and older phones.",
+        "agreed": null,
+        "related_action_item": "SY0105b.ai2",
+        "refers_to_meeting": "SY0105a",
+        "evidence_segments": [
+          "SY0105b.s0101",
+          "SY0105b.s0102",
+          "SY0105b.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f20",
+        "type": "action_item",
+        "fact": "The marketing expert will send the phone model survey results to the industrial designer and the team tomorrow.",
+        "agreed": null,
+        "related_action_item": "SY0105b.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105b.s0103",
+          "SY0105b.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f21",
+        "type": "action_item",
+        "fact": "The user interface designer will make wireframes of the core screens for the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": "SY0105b.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105b.s0113",
+          "SY0105b.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f22",
+        "type": "action_item",
+        "fact": "The marketing expert will split the survey results into commuters and weekend riders.",
+        "agreed": null,
+        "related_action_item": "SY0105b.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105b.s0115",
+          "SY0105b.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f23",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f23",
+        "type": "action_item",
+        "fact": "The project manager will get written confirmation from CityCycle that dock stickers or tags are covered by maintenance.",
+        "agreed": null,
+        "related_action_item": "SY0105b.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105b.s0118"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105b.f24",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105b.f24",
+        "type": "decision",
+        "fact": "The next meeting is the conceptual design meeting, at the same time next week.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105b.s0120",
+          "SY0105b.s0121",
+          "SY0105b.s0122"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_SELF_CORRECTION",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_SELF_CORRECTION",
+        "segments": [
+          "SY0105b.s0027",
+          "SY0105b.s0028"
+        ],
+        "note": "The marketing expert says about fourteen hundred survey responses, then corrects it to 1,040. The summary uses 1,040."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_ABSENT_DISCUSSED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_ABSENT_DISCUSSED",
+        "segments": [
+          "SY0105b.s0005",
+          "SY0105b.s0006",
+          "SY0105b.s0007",
+          "SY0105b.s0008",
+          "SY0105b.s0009",
+          "SY0105b.s0010",
+          "SY0105b.s0011",
+          "SY0105b.s0059",
+          "SY0105b.s0061",
+          "SY0105b.s0062",
+          "SY0105b.s0099",
+          "SY0105b.s0100",
+          "SY0105b.s0101",
+          "SY0105b.s0102",
+          "SY0105b.s0103",
+          "SY0105b.s0105",
+          "SY0105b.s0107",
+          "SY0105b.s0108",
+          "SY0105b.s0109",
+          "SY0105b.s0110"
+        ],
+        "note": "The industrial designer is away on a training course. The others discuss his missing comparison, guess at his view and agree what to email him. He never speaks and nothing is attributed to him."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

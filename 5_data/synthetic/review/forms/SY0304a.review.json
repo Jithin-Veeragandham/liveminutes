@@ -1,0 +1,945 @@
+{
+  "meeting_id": "SY0304a",
+  "raw_sha256": "b3a7b323daa5ccc5e4c95ca0e7d79c96c97a658b099c06eb94c13a4ef9d91ce1",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the kickoff meeting, noted that the industrial designer was absent at a supplier visit, and had the team introduce themselves.",
+        "She presented the brief from the university estates office: a parking availability display at each car park entrance showing free spaces, with an optional central sign near the main gate, a budget of about four hundred pounds per unit, and installation by the start of next term.",
+        "The marketing expert described the main user problem as drivers circling for spaces, and the team agreed that the target users are staff, students and visitors, and that the display should show the number of free spaces with a colour-coded background.",
+        "The marketing expert stated that the signs would be solar powered, but nobody agreed and the point was left unresolved.",
+        "The project manager assigned the absent industrial designer to research sensing options and outdoor casing, and the team agreed to limit the scope to physical signs for now, with an app flagged as a possible later idea."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer (absent) is to compare barrier counters and per-bay sensors with rough per-unit costs, and to look at whether the casing can survive outdoors. The project manager assigned this.",
+        "The project manager will email the industrial designer about his task and send the minutes and the brief to the team.",
+        "The marketing expert will survey about twenty to thirty campus users, students and staff, and try to include a few visitors.",
+        "The user interface designer will sketch several screen layouts showing the number with a colour background, in a couple of screen sizes."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The target users are staff, students and visitors.",
+        "The display will show the number of free spaces with a green, amber or red colour behind it.",
+        "The scope is limited to physical signs for now. An app is flagged as a possible later idea."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The power source is unresolved. Solar power was put forward as settled, but nobody agreed, and the user interface designer started to raise a concern about the underground car parks under the library.",
+        "The sensing method is undecided: barrier counters are cheaper but may drift when cars tailgate. This is waiting on the industrial designer's research.",
+        "Screen size is unknown and depends on the industrial designer.",
+        "The budget of four hundred pounds per unit is tight for an outdoor screen.",
+        "It is undecided whether the central sign near the main gate will be included."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304a.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304a.ai1",
+        "description": "Research sensing options (barrier counters vs per-bay sensors) with rough per-unit costs, and check whether the casing can survive outdoor conditions, for the next meeting",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304a.s0072",
+            "event": "assigned",
+            "by": "C",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0304a.s0077",
+            "event": "restated",
+            "by": "C",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304a.s0070",
+          "SY0304a.s0072",
+          "SY0304a.s0073",
+          "SY0304a.s0074",
+          "SY0304a.s0075",
+          "SY0304a.s0077",
+          "SY0304a.s0105"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304a.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304a.ai2",
+        "description": "Email the industrial designer about his assigned task and send the minutes and brief to the team",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304a.s0075",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0304a.s0105",
+            "event": "restated",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304a.s0074",
+          "SY0304a.s0075",
+          "SY0304a.s0105"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304a.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304a.ai3",
+        "description": "Survey about twenty to thirty campus users (students and staff, plus a few visitors) on what they want from the sign",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304a.s0080",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0304a.s0081",
+            "event": "accepted",
+            "by": "C",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0304a.s0084",
+            "event": "restated",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304a.s0080",
+          "SY0304a.s0081",
+          "SY0304a.s0082",
+          "SY0304a.s0083",
+          "SY0304a.s0084"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304a.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304a.ai4",
+        "description": "Sketch several screen layouts combining the free-space number with a colour background, in a couple of screen sizes",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304a.s0086",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0304a.s0087",
+            "event": "accepted",
+            "by": "C",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0304a.s0090",
+            "event": "restated",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304a.s0086",
+          "SY0304a.s0087",
+          "SY0304a.s0088",
+          "SY0304a.s0089",
+          "SY0304a.s0090"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304a.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304a.f1",
+        "type": "absence",
+        "fact": "Marcus, the industrial designer (D), was absent from the kickoff meeting because he was at a supplier visit for another project.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304a.s0005",
+          "SY0304a.s0007"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304a.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304a.f2",
+        "type": "action_item",
+        "fact": "While absent, the industrial designer (D) was assigned by the project manager (C) to research barrier counters versus per-bay sensors with rough per-unit costs, and to check outdoor weatherproofing of the casing.",
+        "agreed": null,
+        "related_action_item": "SY0304a.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304a.s0072",
+          "SY0304a.s0073",
+          "SY0304a.s0077"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304a.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304a.f3",
+        "type": "other",
+        "fact": "At the time of the meeting the industrial designer did not yet know about his task. The project manager said she would email him that afternoon and copy him in with the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0304a.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304a.s0074",
+          "SY0304a.s0075",
+          "SY0304a.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304a.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304a.f4",
+        "type": "action_item",
+        "fact": "The project manager (C) will email the industrial designer and send the minutes and brief to the team.",
+        "agreed": null,
+        "related_action_item": "SY0304a.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304a.s0075",
+          "SY0304a.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304a.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304a.f5",
+        "type": "action_item",
+        "fact": "The marketing expert (A) offered to survey about twenty to thirty campus users, including a few visitors if possible.",
+        "agreed": null,
+        "related_action_item": "SY0304a.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304a.s0080",
+          "SY0304a.s0082",
+          "SY0304a.s0083",
+          "SY0304a.s0084"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304a.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304a.f6",
+        "type": "action_item",
+        "fact": "The user interface designer (B) offered to sketch screen layouts with the number and colour idea, in a couple of sizes.",
+        "agreed": null,
+        "related_action_item": "SY0304a.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304a.s0086",
+          "SY0304a.s0090"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304a.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304a.f7",
+        "type": "decision",
+        "fact": "The team agreed that the target users are staff, students and visitors.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304a.s0054",
+          "SY0304a.s0055",
+          "SY0304a.s0056",
+          "SY0304a.s0057"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304a.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304a.f8",
+        "type": "decision",
+        "fact": "The team agreed the display should show the number of free spaces with a colour (green, amber, red) behind it.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304a.s0046",
+          "SY0304a.s0047",
+          "SY0304a.s0048"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304a.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304a.f9",
+        "type": "decision",
+        "fact": "The team agreed to limit scope to physical signs for now and flag an app as a possible later idea.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304a.s0097",
+          "SY0304a.s0098",
+          "SY0304a.s0099"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304a.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304a.f10",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert stated that the signs would be solar powered and called it decided, but nobody agreed. The user interface designer began to raise a concern about the car parks under the library, and the project manager moved on without settling it.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304a.s0059",
+          "SY0304a.s0060",
+          "SY0304a.s0061",
+          "SY0304a.s0062",
+          "SY0304a.s0063",
+          "SY0304a.s0064"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304a.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304a.f11",
+        "type": "other",
+        "fact": "The manufacturing budget is around four hundred pounds per unit.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304a.s0025",
+          "SY0304a.s0026",
+          "SY0304a.s0027"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304a.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304a.f12",
+        "type": "other",
+        "fact": "The client wants the first signs installed for the start of next term.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304a.s0029"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304a.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304a.f13",
+        "type": "other",
+        "fact": "The brief requires signs at least at each car park entrance. A central sign near the main gate is a nice-to-have.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304a.s0019",
+          "SY0304a.s0021",
+          "SY0304a.s0023"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304a.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304a.f14",
+        "type": "other",
+        "fact": "The next meeting is scheduled for the same time next week.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304a.s0102",
+          "SY0304a.s0103"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_UNAGREED_DECISION",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_UNAGREED_DECISION",
+        "segments": [
+          "SY0304a.s0059",
+          "SY0304a.s0060",
+          "SY0304a.s0061",
+          "SY0304a.s0062",
+          "SY0304a.s0063",
+          "SY0304a.s0064"
+        ],
+        "note": "The marketing expert declares 'we're going solar powered, that's decided'. The others only hesitate, the user interface designer's objection is cut off, and the project manager moves on to sensors without settling it."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_TASK_TO_ABSENT",
+        "segments": [
+          "SY0304a.s0005",
+          "SY0304a.s0070",
+          "SY0304a.s0072",
+          "SY0304a.s0073",
+          "SY0304a.s0074",
+          "SY0304a.s0075",
+          "SY0304a.s0077",
+          "SY0304a.s0105"
+        ],
+        "note": "The project manager assigns the absent industrial designer, Marcus, to research sensing options and outdoor casing, and says she will email him since he does not yet know."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,1733 @@
+{
+  "schema_version": "1.0",
+  "source": "synthetic",
+  "meeting_id": "SY0206c",
+  "series_id": "SY0206",
+  "meeting_letter": "c",
+  "scenario_type": "scenario",
+  "stage": "conceptual design",
+  "duration_sec": 572.57,
+  "participants": [
+    {
+      "label": "A",
+      "role": "UI",
+      "name": "Priya",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "B",
+      "role": "ME",
+      "name": "Tom",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "C",
+      "role": "ID",
+      "name": "Marta",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "D",
+      "role": "PM",
+      "name": "Daniel",
+      "global_id": null,
+      "status": "present"
+    }
+  ],
+  "segments": [
+    {
+      "id": "SY0206c.s0001",
+      "speaker": "D",
+      "start": 5.0,
+      "end": 8.08,
+      "text": "Okay, um, so I think we're all here.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0206c.s0002",
+      "speaker": "D",
+      "start": 9.08,
+      "end": 12.54,
+      "text": "This is the third meeting, the conceptual design one.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0003",
+      "speaker": "A",
+      "start": 12.96,
+      "end": 13.36,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0004",
+      "speaker": "D",
+      "start": 14.21,
+      "end": 16.9,
+      "text": "Uh, good to have you back, Tom.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0005",
+      "speaker": "B",
+      "start": 17.23,
+      "end": 19.54,
+      "text": "Yeah, thanks, I'm feeling much better.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0006",
+      "speaker": "B",
+      "start": 19.93,
+      "end": 22.24,
+      "text": "Sorry I missed the last one.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0007",
+      "speaker": "D",
+      "start": 23.07,
+      "end": 32.3,
+      "text": "No worries. So the plan is, first we go through what was left open last time, then Tom's survey, Priya's mockups, Marta's NFC stuff,",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0008",
+      "speaker": "D",
+      "start": 32.66,
+      "end": 36.51,
+      "text": "and then we try to pin down the actual concept.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0009",
+      "speaker": "C",
+      "start": 37.18,
+      "end": 37.58,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0010",
+      "speaker": "D",
+      "start": 38.3,
+      "end": 44.07,
+      "text": "So, first from my side. I did send round the minutes, hopefully everyone got them.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0011",
+      "speaker": "A",
+      "start": 44.71,
+      "end": 45.11,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0012",
+      "speaker": "D",
+      "start": 45.87,
+      "end": 49.33,
+      "text": "And Marta, I forwarded you the Velodock spec sheet.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0013",
+      "speaker": "C",
+      "start": 50.03,
+      "end": 53.11,
+      "text": "Yeah, got it, thanks. It was useful actually.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0014",
+      "speaker": "D",
+      "start": 53.74,
+      "end": 59.12,
+      "text": "And I asked Velodock about the screen. Um, it can show a QR code.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0015",
+      "speaker": "D",
+      "start": 59.86,
+      "end": 65.63,
+      "text": "It's a small monochrome screen, but they said a static QR image is no problem.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0016",
+      "speaker": "C",
+      "start": 66.44,
+      "end": 68.36,
+      "text": "Oh good, that's good news.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0206c.s0017",
+      "speaker": "A",
+      "start": 69.34,
+      "end": 73.19,
+      "text": "So the fallback we talked about last time actually works.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0206c.s0018",
+      "speaker": "D",
+      "start": 73.9,
+      "end": 81.59,
+      "text": "Yeah, exactly. So NFC first, and if your phone doesn't do NFC you scan the code on the dock screen.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0019",
+      "speaker": "C",
+      "start": 82.51,
+      "end": 85.59,
+      "text": "Which covers those cheap phones without NFC, right.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0206c.s0020",
+      "speaker": "D",
+      "start": 86.56,
+      "end": 86.96,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0021",
+      "speaker": "D",
+      "start": 87.42,
+      "end": 88.96,
+      "text": "Okay, Tom, the survey.",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0206c.s0022",
+      "speaker": "B",
+      "start": 89.25,
+      "end": 94.63,
+      "text": "Yeah, so, um, I closed it last Friday. We ended up with sixty-three responses.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0023",
+      "speaker": "A",
+      "start": 95.46,
+      "end": 98.15,
+      "text": "Oh nice, that's way more than twenty.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0206c.s0024",
+      "speaker": "B",
+      "start": 98.61,
+      "end": 103.23,
+      "text": "Yeah, it picked up once we put the link on the docks.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0025",
+      "speaker": "B",
+      "start": 104.2,
+      "end": 111.12,
+      "text": "So the top thing, by far, is still seeing which docks have bikes. Like, before they walk there.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0026",
+      "speaker": "B",
+      "start": 111.38,
+      "end": 116.38,
+      "text": "Second is unlocking fast. People really hate standing at the dock fiddling around.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0027",
+      "speaker": "B",
+      "start": 117.11,
+      "end": 122.11,
+      "text": "And third, which I didn't expect, is knowing what the ride will cost.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0028",
+      "speaker": "D",
+      "start": 122.67,
+      "end": 125.36,
+      "text": "Before they take the bike, you mean?",
+      "da_type": "el.und"
+    },
+    {
+      "id": "SY0206c.s0029",
+      "speaker": "B",
+      "start": 126.21,
+      "end": 133.52,
+      "text": "Before, yeah, and also during. A lot of comments like, I never know what I'm paying until the end.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0030",
+      "speaker": "C",
+      "start": 134.19,
+      "end": 134.59,
+      "text": "Hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0031",
+      "speaker": "B",
+      "start": 135.0,
+      "end": 141.15,
+      "text": "Oh, and Daniel, I got your message about the old cards, so I added that question.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0032",
+      "speaker": "D",
+      "start": 141.4,
+      "end": 142.94,
+      "text": "Great. What came out?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0206c.s0033",
+      "speaker": "B",
+      "start": 143.63,
+      "end": 152.09,
+      "text": "So overall most people don't care, but among the over-sixties, um, about a third said they'd still want to use a card.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0034",
+      "speaker": "A",
+      "start": 152.65,
+      "end": 155.34,
+      "text": "A third, okay, that's quite a lot.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0206c.s0035",
+      "speaker": "B",
+      "start": 156.04,
+      "end": 157.58,
+      "text": "Yeah, it's not nothing.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0206c.s0036",
+      "speaker": "D",
+      "start": 158.29,
+      "end": 163.29,
+      "text": "And we still don't actually know if the cards keep working after launch.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0037",
+      "speaker": "D",
+      "start": 163.89,
+      "end": 171.58,
+      "text": "Tom, could you get in touch with the city transport office and ask them whether the old cards stay valid?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0206c.s0038",
+      "speaker": "B",
+      "start": 172.49,
+      "end": 174.8,
+      "text": "Yeah, sure, I can do that.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0206c.s0039",
+      "speaker": "D",
+      "start": 175.12,
+      "end": 175.52,
+      "text": "Great.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0040",
+      "speaker": "B",
+      "start": 176.11,
+      "end": 179.57,
+      "text": "So yeah, that's the main stuff from the survey.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0041",
+      "speaker": "D",
+      "start": 180.33,
+      "end": 181.48,
+      "text": "Okay. Priya, mockups?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0206c.s0042",
+      "speaker": "A",
+      "start": 182.47,
+      "end": 187.09,
+      "text": "Yeah. So, um, I did rough versions of find, unlock and pay.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0043",
+      "speaker": "A",
+      "start": 188.04,
+      "end": 194.58,
+      "text": "And sorry, the competitor screenshots are in the shared folder now too, I forgot that last week.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0044",
+      "speaker": "D",
+      "start": 194.73,
+      "end": 195.5,
+      "text": "Okay, cool.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0045",
+      "speaker": "A",
+      "start": 196.0,
+      "end": 200.62,
+      "text": "So the first screen is the map, like we decided last time.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0046",
+      "speaker": "A",
+      "start": 201.49,
+      "end": 207.64,
+      "text": "Each dock is a pin, and the pin has the number of free bikes on it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0047",
+      "speaker": "C",
+      "start": 207.99,
+      "end": 211.45,
+      "text": "Just a number, or is it coloured as well?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0206c.s0048",
+      "speaker": "A",
+      "start": 211.72,
+      "end": 213.64,
+      "text": "Right now just a number.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0049",
+      "speaker": "C",
+      "start": 214.31,
+      "end": 221.23,
+      "text": "Maybe colour them? Like green if there's plenty, amber if it's only one or two, red if empty.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0206c.s0050",
+      "speaker": "A",
+      "start": 221.8,
+      "end": 225.26,
+      "text": "Yeah, that's — that'd be quicker to read actually.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0206c.s0051",
+      "speaker": "B",
+      "start": 225.46,
+      "end": 228.54,
+      "text": "Yeah, half the competitors do that I think.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0206c.s0052",
+      "speaker": "A",
+      "start": 228.81,
+      "end": 230.73,
+      "text": "Two of the four, yeah.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0053",
+      "speaker": "D",
+      "start": 231.39,
+      "end": 233.7,
+      "text": "Everyone okay with colour-coded pins then?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0206c.s0054",
+      "speaker": "B",
+      "start": 234.56,
+      "end": 234.96,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0055",
+      "speaker": "C",
+      "start": 235.81,
+      "end": 236.21,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0056",
+      "speaker": "A",
+      "start": 236.96,
+      "end": 245.42,
+      "text": "Okay. Then you tap a dock and a little panel slides up with the address and the bikes and the free slots.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0057",
+      "speaker": "A",
+      "start": 245.81,
+      "end": 248.89,
+      "text": "And there's a big button, unlock a bike.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0058",
+      "speaker": "A",
+      "start": 249.19,
+      "end": 255.73,
+      "text": "Which takes you to the unlock screen, which basically just says hold your phone against the dock.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0059",
+      "speaker": "A",
+      "start": 256.31,
+      "end": 260.54,
+      "text": "With a link underneath, uh, can't tap? Scan the code instead.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0060",
+      "speaker": "D",
+      "start": 261.49,
+      "end": 262.64,
+      "text": "Nice, that's simple.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0206c.s0061",
+      "speaker": "A",
+      "start": 262.96,
+      "end": 269.11,
+      "text": "And then pay is, well, it's mostly the provider's screen, we just hand over to them.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0062",
+      "speaker": "B",
+      "start": 269.84,
+      "end": 272.53,
+      "text": "But where does the price show up?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0206c.s0063",
+      "speaker": "A",
+      "start": 272.81,
+      "end": 275.89,
+      "text": "Um. Yeah, it doesn't really, at the moment.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0206c.s0064",
+      "speaker": "B",
+      "start": 276.55,
+      "end": 282.32,
+      "text": "Because from the survey, I'd want the price on the unlock screen, before they tap.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0206c.s0065",
+      "speaker": "D",
+      "start": 283.05,
+      "end": 285.36,
+      "text": "Yeah, I think that makes sense.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0206c.s0066",
+      "speaker": "A",
+      "start": 286.34,
+      "end": 290.19,
+      "text": "And maybe during the ride, a screen with a timer?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0206c.s0067",
+      "speaker": "B",
+      "start": 290.71,
+      "end": 293.4,
+      "text": "With the running cost next to it.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0206c.s0068",
+      "speaker": "A",
+      "start": 294.2,
+      "end": 296.89,
+      "text": "Yeah, timer and cost, that's easy enough.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0206c.s0069",
+      "speaker": "C",
+      "start": 297.15,
+      "end": 303.3,
+      "text": "Does the app know when the ride ends though? I mean we said no return button.",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0206c.s0070",
+      "speaker": "D",
+      "start": 303.5,
+      "end": 313.5,
+      "text": "Yeah, the dock tells the app when the bike goes back, that was in the spec. So the ride screen just closes and shows the total.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0071",
+      "speaker": "C",
+      "start": 313.74,
+      "end": 314.51,
+      "text": "Okay, right.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0072",
+      "speaker": "D",
+      "start": 315.37,
+      "end": 320.75,
+      "text": "So, price before unlock, and a ride screen with timer and running cost. Agreed?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0206c.s0073",
+      "speaker": "A",
+      "start": 321.08,
+      "end": 321.48,
+      "text": "Yes.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0074",
+      "speaker": "B",
+      "start": 322.47,
+      "end": 322.87,
+      "text": "Definitely.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0206c.s0075",
+      "speaker": "C",
+      "start": 323.77,
+      "end": 324.17,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0076",
+      "speaker": "D",
+      "start": 325.14,
+      "end": 327.06,
+      "text": "Okay. Marta, the NFC side.",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0206c.s0077",
+      "speaker": "C",
+      "start": 327.32,
+      "end": 333.47,
+      "text": "Yeah, so I went through the spec sheet. The reader is a standard thirteen-point-five-six megahertz one.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0078",
+      "speaker": "C",
+      "start": 333.68,
+      "end": 337.14,
+      "text": "So basically any NFC phone can talk to it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0079",
+      "speaker": "C",
+      "start": 337.98,
+      "end": 343.75,
+      "text": "The thing is, on Android it works even if the app is in the background,",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0080",
+      "speaker": "C",
+      "start": 344.67,
+      "end": 351.59,
+      "text": "but on iPhone the app has to be open and you hit a button to start the scan.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0081",
+      "speaker": "A",
+      "start": 351.99,
+      "end": 355.07,
+      "text": "Oh, so on iPhone there's an extra step.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0206c.s0082",
+      "speaker": "C",
+      "start": 355.44,
+      "end": 360.82,
+      "text": "Yeah, one tap. Not a big deal but your screen has to show it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0083",
+      "speaker": "A",
+      "start": 361.3,
+      "end": 367.84,
+      "text": "Okay, I can put a, like, start scan button on the iPhone version of the unlock screen.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0206c.s0084",
+      "speaker": "C",
+      "start": 368.74,
+      "end": 377.97,
+      "text": "And the range is short, like two, three centimetres. So the sticker that says tap here needs to be really obvious on the dock.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0085",
+      "speaker": "D",
+      "start": 378.17,
+      "end": 381.25,
+      "text": "Have you actually tried it with the reader?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0206c.s0086",
+      "speaker": "C",
+      "start": 381.4,
+      "end": 384.86,
+      "text": "No, only on paper. I'd need a sample unit.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0087",
+      "speaker": "D",
+      "start": 385.67,
+      "end": 389.9,
+      "text": "I can ask Velodock for one, they did offer demo kits.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0206c.s0088",
+      "speaker": "C",
+      "start": 390.26,
+      "end": 391.41,
+      "text": "That'd be great.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0206c.s0089",
+      "speaker": "C",
+      "start": 392.07,
+      "end": 396.69,
+      "text": "Then I'd test it with a few phones, especially some older Androids.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0206c.s0090",
+      "speaker": "D",
+      "start": 397.5,
+      "end": 397.9,
+      "text": "Perfect.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0091",
+      "speaker": "B",
+      "start": 398.29,
+      "end": 402.91,
+      "text": "Um, can I bring up the cost thing again? The provider fees.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0092",
+      "speaker": "B",
+      "start": 403.52,
+      "end": 411.98,
+      "text": "Because if people are seeing the running cost, and most rides are like ten minutes, the fee per transaction matters a lot.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0093",
+      "speaker": "D",
+      "start": 412.44,
+      "end": 415.9,
+      "text": "Yeah, that one never got an owner last time.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0094",
+      "speaker": "C",
+      "start": 416.79,
+      "end": 421.02,
+      "text": "I could look into that, I've got some time this week.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0206c.s0095",
+      "speaker": "D",
+      "start": 421.67,
+      "end": 428.21,
+      "text": "Actually, I'll take it. It's under the existing contract, and I'm the one with the contact there.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0206c.s0096",
+      "speaker": "D",
+      "start": 428.61,
+      "end": 432.07,
+      "text": "They'll probably only give the numbers to me anyway.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0097",
+      "speaker": "C",
+      "start": 432.29,
+      "end": 433.44,
+      "text": "Fair enough, yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0098",
+      "speaker": "B",
+      "start": 433.65,
+      "end": 435.96,
+      "text": "Same story as the Velodock specs.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0206c.s0099",
+      "speaker": "D",
+      "start": 436.21,
+      "end": 437.36,
+      "text": "Ha, yeah, exactly.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0100",
+      "speaker": "B",
+      "start": 438.34,
+      "end": 446.03,
+      "text": "And, um, while we're on money — the reward thing from the kickoff, free minutes for returning to empty docks.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0206c.s0101",
+      "speaker": "B",
+      "start": 446.55,
+      "end": 451.93,
+      "text": "If the running cost is on screen anyway, we could show a discount there.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0206c.s0102",
+      "speaker": "D",
+      "start": 452.91,
+      "end": 458.68,
+      "text": "I like it, but it's still a budget thing. I'd keep it parked for spring.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0206c.s0103",
+      "speaker": "A",
+      "start": 458.92,
+      "end": 461.61,
+      "text": "Yeah, let's get the basics working first.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0206c.s0104",
+      "speaker": "B",
+      "start": 461.83,
+      "end": 462.6,
+      "text": "Okay, fair.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0105",
+      "speaker": "A",
+      "start": 463.42,
+      "end": 468.8,
+      "text": "One thing for the older riders, maybe a bigger text mode in the app?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0206c.s0106",
+      "speaker": "C",
+      "start": 469.32,
+      "end": 472.78,
+      "text": "Hmm, phones already have that in the settings though.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0206c.s0107",
+      "speaker": "D",
+      "start": 473.38,
+      "end": 479.15,
+      "text": "Let's see what Tom finds out about the cards first, then come back to it.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0206c.s0108",
+      "speaker": "A",
+      "start": 479.59,
+      "end": 479.99,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0109",
+      "speaker": "D",
+      "start": 480.42,
+      "end": 487.73,
+      "text": "Oh — actually, wait. On the cards. I'm meeting the transport office on Thursday anyway about the launch date.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0110",
+      "speaker": "D",
+      "start": 488.62,
+      "end": 494.0,
+      "text": "So Tom, I'll just ask them myself, no point both of us contacting them.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0206c.s0111",
+      "speaker": "B",
+      "start": 494.47,
+      "end": 496.01,
+      "text": "Sure, that's even better.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0206c.s0112",
+      "speaker": "D",
+      "start": 496.55,
+      "end": 496.95,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0113",
+      "speaker": "D",
+      "start": 497.3,
+      "end": 500.38,
+      "text": "So, um, let me sum up the concept.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0206c.s0114",
+      "speaker": "D",
+      "start": 501.1,
+      "end": 503.79,
+      "text": "Map first, colour-coded pins by free bikes.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0115",
+      "speaker": "D",
+      "start": 504.61,
+      "end": 510.76,
+      "text": "Unlock by NFC, QR on the dock screen as fallback, and on iPhone a start-scan button.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0116",
+      "speaker": "D",
+      "start": 511.56,
+      "end": 518.48,
+      "text": "Price shown before unlock, ride screen with timer and running cost, closes when the dock confirms the return.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0117",
+      "speaker": "C",
+      "start": 518.87,
+      "end": 519.27,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0118",
+      "speaker": "D",
+      "start": 520.12,
+      "end": 526.66,
+      "text": "For next time, Priya, can you turn the mockups into proper detailed designs, including the ride screen?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0206c.s0119",
+      "speaker": "A",
+      "start": 527.43,
+      "end": 528.58,
+      "text": "Yep, will do.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0206c.s0120",
+      "speaker": "D",
+      "start": 528.92,
+      "end": 532.38,
+      "text": "Marta, the tap test once the sample unit arrives.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0206c.s0121",
+      "speaker": "C",
+      "start": 532.65,
+      "end": 533.05,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0122",
+      "speaker": "D",
+      "start": 533.52,
+      "end": 539.29,
+      "text": "I'll request the sample, check the provider fees, ask the transport office about the cards.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0123",
+      "speaker": "B",
+      "start": 539.86,
+      "end": 542.55,
+      "text": "And what do you want from me?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0206c.s0124",
+      "speaker": "D",
+      "start": 543.5,
+      "end": 550.42,
+      "text": "Could you draft the wording for the price on the unlock screen? Like, what exactly we tell people.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0206c.s0125",
+      "speaker": "B",
+      "start": 550.94,
+      "end": 554.4,
+      "text": "Yeah, I can do that. I'll keep it short.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0206c.s0126",
+      "speaker": "A",
+      "start": 554.93,
+      "end": 559.16,
+      "text": "Send it to me, then I'll drop it into the mockup.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0206c.s0127",
+      "speaker": "B",
+      "start": 560.01,
+      "end": 560.78,
+      "text": "Will do.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0128",
+      "speaker": "D",
+      "start": 561.37,
+      "end": 564.45,
+      "text": "And I'll send round the minutes as usual.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0129",
+      "speaker": "D",
+      "start": 565.08,
+      "end": 567.77,
+      "text": "Okay, I think that's it. Thanks everyone.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0206c.s0130",
+      "speaker": "A",
+      "start": 568.5,
+      "end": 568.9,
+      "text": "Thanks.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0206c.s0131",
+      "speaker": "C",
+      "start": 569.17,
+      "end": 569.57,
+      "text": "Cheers.",
+      "da_type": "bck"
+    }
+  ],
+  "summary": {
+    "abstract": [
+      "The project manager opened the conceptual design meeting and welcomed back the marketing expert, who had missed the previous meeting. He reported that the minutes had been sent, that the Velodock spec sheet had been forwarded to the industrial designer, and that the dock screen can display a static QR code, so the QR fallback for unlocking is possible.",
+      "The marketing expert presented the finished rider survey of sixty-three responses. Riders' top needs were seeing dock availability, unlocking quickly and knowing what a ride will cost. About a third of riders over sixty still want to use the old cards.",
+      "The user interface designer presented rough mockups of the find, unlock and pay screens, and the team agreed on colour-coded map pins, showing the price before unlocking, and a ride screen with a timer and running cost.",
+      "The industrial designer reported that the dock's NFC reader works with any NFC phone, but iPhones need the app open and a start-scan step, and the tap range is only two to three centimetres.",
+      "The task of checking the payment provider's fees, offered by the industrial designer, was taken by the project manager. The project manager also took over asking the city transport office about the old cards from the marketing expert."
+    ],
+    "actions": [
+      "The project manager will ask the city transport office on Thursday whether the old cards stay valid. This task was first given to the marketing expert.",
+      "The project manager will check the payment provider's per-transaction fees. The industrial designer had offered to do this.",
+      "The project manager will ask Velodock for a sample dock unit for testing.",
+      "The industrial designer will test the NFC tap on the sample unit with several phones, especially older Android phones.",
+      "The user interface designer will turn the mockups into detailed designs, including the ride screen and the iPhone start-scan button.",
+      "The marketing expert will draft the price wording for the unlock screen and send it to the user interface designer.",
+      "The project manager will send round the minutes."
+    ],
+    "decisions": [
+      "Unlocking will use NFC, with a QR code shown on the dock screen as the fallback, now confirmed as possible by Velodock.",
+      "Dock pins on the map will be colour-coded by the number of free bikes: green for plenty, amber for one or two, red for empty.",
+      "The price will be shown on the unlock screen before the rider unlocks a bike.",
+      "During the ride, the app will show a ride screen with a timer and the running cost. The screen closes and shows the total when the dock confirms the return.",
+      "The iPhone version of the unlock screen will have a start-scan button, because iPhones require the app to be open for NFC."
+    ],
+    "problems": [
+      "It is still unknown whether the old cards will keep working after launch, which matters to about a third of riders over sixty.",
+      "The payment provider's per-transaction fees are still unknown, and they matter for short rides of around ten minutes.",
+      "The NFC tap has not yet been tested with the actual reader. The short range of two to three centimetres means the tap point on the dock must be clearly marked.",
+      "Whether to offer a larger text mode for older riders was left open until the old-card question is answered.",
+      "The reward scheme for returning bikes to emptier docks remains parked for budget reasons."
+    ]
+  },
+  "action_items": [
+    {
+      "id": "SY0206c.ai1",
+      "description": "Ask the city transport office whether the old cards stay valid after launch",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "reassigned",
+      "previous_owners": [
+        "B"
+      ],
+      "history": [
+        {
+          "segment": "SY0206c.s0037",
+          "event": "assigned",
+          "by": "D",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0206c.s0038",
+          "event": "accepted",
+          "by": "B",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0206c.s0110",
+          "event": "reassigned",
+          "by": "D",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0206c.s0111",
+          "event": "accepted",
+          "by": "B",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0206c.s0122",
+          "event": "restated",
+          "by": "D",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0206c.s0036",
+        "SY0206c.s0037",
+        "SY0206c.s0038",
+        "SY0206c.s0109",
+        "SY0206c.s0110",
+        "SY0206c.s0111",
+        "SY0206c.s0122"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0206c.ai2",
+      "description": "Check the payment provider's per-transaction fees (unowned task from SY0206b)",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0206c.s0094",
+          "event": "offered",
+          "by": "C",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0206c.s0095",
+          "event": "accepted",
+          "by": "D",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0206c.s0122",
+          "event": "restated",
+          "by": "D",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0206c.s0091",
+        "SY0206c.s0092",
+        "SY0206c.s0093",
+        "SY0206c.s0094",
+        "SY0206c.s0095",
+        "SY0206c.s0096",
+        "SY0206c.s0097",
+        "SY0206c.s0122"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0206c.ai3",
+      "description": "Ask Velodock for a sample dock unit for NFC testing",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0206c.s0087",
+          "event": "offered",
+          "by": "D",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0206c.s0122",
+          "event": "restated",
+          "by": "D",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0206c.s0086",
+        "SY0206c.s0087",
+        "SY0206c.s0088",
+        "SY0206c.s0122"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0206c.ai4",
+      "description": "Test the NFC tap on the sample unit with several phones, especially older Android phones",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0206c.s0089",
+          "event": "offered",
+          "by": "C",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0206c.s0120",
+          "event": "assigned",
+          "by": "D",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0206c.s0121",
+          "event": "accepted",
+          "by": "C",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0206c.s0086",
+        "SY0206c.s0089",
+        "SY0206c.s0120",
+        "SY0206c.s0121"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0206c.ai5",
+      "description": "Turn the mockups into detailed designs, including the ride screen and the iPhone start-scan button",
+      "owner": "A",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0206c.s0083",
+          "event": "offered",
+          "by": "A",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0206c.s0118",
+          "event": "assigned",
+          "by": "D",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0206c.s0119",
+          "event": "accepted",
+          "by": "A",
+          "owner": "A"
+        }
+      ],
+      "evidence_segments": [
+        "SY0206c.s0083",
+        "SY0206c.s0118",
+        "SY0206c.s0119"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0206c.ai6",
+      "description": "Draft the price wording for the unlock screen and send it to the user interface designer",
+      "owner": "B",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0206c.s0124",
+          "event": "assigned",
+          "by": "D",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0206c.s0125",
+          "event": "accepted",
+          "by": "B",
+          "owner": "B"
+        }
+      ],
+      "evidence_segments": [
+        "SY0206c.s0123",
+        "SY0206c.s0124",
+        "SY0206c.s0125",
+        "SY0206c.s0126",
+        "SY0206c.s0127"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0206c.ai7",
+      "description": "Send round the meeting minutes",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0206c.s0128",
+          "event": "offered",
+          "by": "D",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0206c.s0128"
+      ],
+      "owner_source": "gold"
+    }
+  ],
+  "qa_facts": [
+    {
+      "id": "SY0206c.f1",
+      "type": "decision",
+      "fact": "Unlocking will use NFC, with a QR code on the dock screen as fallback, since Velodock confirmed the screen can display a static QR code.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0206c.s0014",
+        "SY0206c.s0015",
+        "SY0206c.s0016",
+        "SY0206c.s0017",
+        "SY0206c.s0018",
+        "SY0206c.s0019"
+      ]
+    },
+    {
+      "id": "SY0206c.f2",
+      "type": "decision",
+      "fact": "Dock pins on the map will be colour-coded by free bikes: green for plenty, amber for one or two, red for empty.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0206c.s0049",
+        "SY0206c.s0050",
+        "SY0206c.s0051",
+        "SY0206c.s0053",
+        "SY0206c.s0054",
+        "SY0206c.s0055"
+      ]
+    },
+    {
+      "id": "SY0206c.f3",
+      "type": "decision",
+      "fact": "The price will be shown on the unlock screen before the rider unlocks.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0206c.s0064",
+        "SY0206c.s0065",
+        "SY0206c.s0072",
+        "SY0206c.s0073",
+        "SY0206c.s0074",
+        "SY0206c.s0075"
+      ]
+    },
+    {
+      "id": "SY0206c.f4",
+      "type": "decision",
+      "fact": "The app will show a ride screen with a timer and running cost during the ride.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0206c.s0066",
+        "SY0206c.s0067",
+        "SY0206c.s0068",
+        "SY0206c.s0072",
+        "SY0206c.s0073",
+        "SY0206c.s0074",
+        "SY0206c.s0075"
+      ]
+    },
+    {
+      "id": "SY0206c.f5",
+      "type": "decision",
+      "fact": "The ride screen closes and shows the total when the dock confirms the bike's return.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0206c.s0069",
+        "SY0206c.s0070",
+        "SY0206c.s0071",
+        "SY0206c.s0116"
+      ]
+    },
+    {
+      "id": "SY0206c.f6",
+      "type": "decision",
+      "fact": "The iPhone unlock screen will have a start-scan button, because iPhones need the app open for NFC.",
+      "agreed": true,
+      "related_action_item": "SY0206c.ai5",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0206c.s0080",
+        "SY0206c.s0081",
+        "SY0206c.s0082",
+        "SY0206c.s0083",
+        "SY0206c.s0115"
+      ]
+    },
+    {
+      "id": "SY0206c.f7",
+      "type": "unagreed_proposal",
+      "fact": "The marketing expert again proposed the reward scheme of free minutes for returning bikes to emptier docks, shown as a discount on the running cost. The project manager kept it parked for budget reasons.",
+      "agreed": false,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0206a",
+      "evidence_segments": [
+        "SY0206c.s0100",
+        "SY0206c.s0101",
+        "SY0206c.s0102",
+        "SY0206c.s0103",
+        "SY0206c.s0104"
+      ]
+    },
+    {
+      "id": "SY0206c.f8",
+      "type": "unagreed_proposal",
+      "fact": "The user interface designer proposed a bigger text mode for older riders. The industrial designer noted phones already have this, and it was deferred until the old-card question is answered.",
+      "agreed": false,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0206c.s0105",
+        "SY0206c.s0106",
+        "SY0206c.s0107",
+        "SY0206c.s0108"
+      ]
+    },
+    {
+      "id": "SY0206c.f9",
+      "type": "action_item",
+      "fact": "The project manager will ask the city transport office whether the old cards stay valid. This was first assigned to the marketing expert.",
+      "agreed": null,
+      "related_action_item": "SY0206c.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0206c.s0037",
+        "SY0206c.s0038",
+        "SY0206c.s0109",
+        "SY0206c.s0110",
+        "SY0206c.s0111",
+        "SY0206c.s0122"
+      ]
+    },
+    {
+      "id": "SY0206c.f10",
+      "type": "plan_change",
+      "fact": "The old-card enquiry was reassigned from the marketing expert to the project manager, because the project manager is meeting the transport office on Thursday anyway.",
+      "agreed": null,
+      "related_action_item": "SY0206c.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0206c.s0109",
+        "SY0206c.s0110",
+        "SY0206c.s0111"
+      ]
+    },
+    {
+      "id": "SY0206c.f11",
+      "type": "action_item",
+      "fact": "The project manager will check the payment provider's per-transaction fees. The industrial designer offered first, but the project manager took it because he holds the contract contact.",
+      "agreed": null,
+      "related_action_item": "SY0206c.ai2",
+      "refers_to_meeting": "SY0206b",
+      "evidence_segments": [
+        "SY0206c.s0093",
+        "SY0206c.s0094",
+        "SY0206c.s0095",
+        "SY0206c.s0096",
+        "SY0206c.s0097",
+        "SY0206c.s0122"
+      ]
+    },
+    {
+      "id": "SY0206c.f12",
+      "type": "action_item",
+      "fact": "The project manager will ask Velodock for a sample dock unit.",
+      "agreed": null,
+      "related_action_item": "SY0206c.ai3",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0206c.s0086",
+        "SY0206c.s0087",
+        "SY0206c.s0088",
+        "SY0206c.s0122"
+      ]
+    },
+    {
+      "id": "SY0206c.f13",
+      "type": "action_item",
+      "fact": "The industrial designer will test the NFC tap on the sample unit with several phones, especially older Android phones.",
+      "agreed": null,
+      "related_action_item": "SY0206c.ai4",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0206c.s0089",
+        "SY0206c.s0120",
+        "SY0206c.s0121"
+      ]
+    },
+    {
+      "id": "SY0206c.f14",
+      "type": "action_item",
+      "fact": "The user interface designer will turn the mockups into detailed designs, including the ride screen.",
+      "agreed": null,
+      "related_action_item": "SY0206c.ai5",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0206c.s0118",
+        "SY0206c.s0119"
+      ]
+    },
+    {
+      "id": "SY0206c.f15",
+      "type": "action_item",
+      "fact": "The marketing expert will draft the price wording for the unlock screen and send it to the user interface designer.",
+      "agreed": null,
+      "related_action_item": "SY0206c.ai6",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0206c.s0124",
+        "SY0206c.s0125",
+        "SY0206c.s0126",
+        "SY0206c.s0127"
+      ]
+    },
+    {
+      "id": "SY0206c.f16",
+      "type": "action_item",
+      "fact": "The project manager will send round the minutes.",
+      "agreed": null,
+      "related_action_item": "SY0206c.ai7",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0206c.s0128"
+      ]
+    },
+    {
+      "id": "SY0206c.f17",
+      "type": "other",
+      "fact": "The rider survey closed with sixty-three responses. Top needs were seeing dock availability, fast unlocking and knowing the ride cost.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0206c.s0022",
+        "SY0206c.s0024",
+        "SY0206c.s0025",
+        "SY0206c.s0026",
+        "SY0206c.s0027",
+        "SY0206c.s0029"
+      ]
+    },
+    {
+      "id": "SY0206c.f18",
+      "type": "other",
+      "fact": "About a third of survey respondents over sixty still want to use the old cards.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0206c.s0031",
+        "SY0206c.s0033",
+        "SY0206c.s0034",
+        "SY0206c.s0035"
+      ]
+    },
+    {
+      "id": "SY0206c.f19",
+      "type": "other",
+      "fact": "The dock's NFC reader is a standard 13.56 MHz reader that works with any NFC phone. Android works in the background, iPhone needs the app open, and the range is two to three centimetres.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0206c.s0077",
+        "SY0206c.s0078",
+        "SY0206c.s0079",
+        "SY0206c.s0080",
+        "SY0206c.s0084"
+      ]
+    },
+    {
+      "id": "SY0206c.f20",
+      "type": "reference_to_prior_meeting",
+      "fact": "The marketing expert was welcomed back after missing the functional design meeting.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0206b",
+      "evidence_segments": [
+        "SY0206c.s0004",
+        "SY0206c.s0005",
+        "SY0206c.s0006"
+      ]
+    },
+    {
+      "id": "SY0206c.f21",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager reported completing his earlier tasks: minutes sent, spec sheet forwarded, and Velodock asked about the QR display.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0206b",
+      "evidence_segments": [
+        "SY0206c.s0010",
+        "SY0206c.s0012",
+        "SY0206c.s0013",
+        "SY0206c.s0014"
+      ]
+    },
+    {
+      "id": "SY0206c.f22",
+      "type": "reference_to_prior_meeting",
+      "fact": "The user interface designer said the map is the first screen, as decided in the previous meeting, and that the competitor screenshots are now in the shared folder.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0206b",
+      "evidence_segments": [
+        "SY0206c.s0043",
+        "SY0206c.s0045"
+      ]
+    },
+    {
+      "id": "SY0206c.f23",
+      "type": "reference_to_prior_meeting",
+      "fact": "The marketing expert compared the provider-fee situation to the Velodock specs, which only the project lead could obtain.",
+      "agreed": null,
+      "related_action_item": "SY0206c.ai2",
+      "refers_to_meeting": "SY0206a",
+      "evidence_segments": [
+        "SY0206c.s0095",
+        "SY0206c.s0096",
+        "SY0206c.s0098",
+        "SY0206c.s0099"
+      ]
+    }
+  ],
+  "edge_cases": [
+    {
+      "scenario_id": "F2_OFFERED_TAKEN_BY_OTHER",
+      "segments": [
+        "SY0206c.s0093",
+        "SY0206c.s0094",
+        "SY0206c.s0095",
+        "SY0206c.s0096",
+        "SY0206c.s0097"
+      ],
+      "note": "The industrial designer offers to check the provider fees, but the project manager takes it because he holds the contract contact."
+    },
+    {
+      "scenario_id": "F2_REASSIGNED_OR_DROPPED",
+      "segments": [
+        "SY0206c.s0037",
+        "SY0206c.s0038",
+        "SY0206c.s0109",
+        "SY0206c.s0110",
+        "SY0206c.s0111"
+      ],
+      "note": "The old-card enquiry is assigned early to the marketing expert and later reassigned to the project manager, who is meeting the transport office on Thursday."
+    }
+  ],
+  "provenance": {
+    "generator": "liveminutes-synthetic",
+    "cache_key": "a53756afc4afa3af73cbd918ae75ce1566e79b480885b9f42c6d1833df2a91d3",
+    "attempt": 0,
+    "model": "claude-opus-5-5",
+    "prompt_version": "v1",
+    "scenario_spec_version": 1,
+    "feature": "F2",
+    "product": "a bike-share docking station app",
+    "planned_scenarios": [
+      "F2_OFFERED_TAKEN_BY_OTHER",
+      "F2_REASSIGNED_OR_DROPPED"
+    ]
+  }
+}
