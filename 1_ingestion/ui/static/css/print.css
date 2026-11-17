@@ -1,0 +1,26 @@
+/* Print / Save as PDF: only the meeting minutes, laid out like a document. Loaded with media="print". */
+@page { size: A4; margin: 18mm 17mm 20mm; }
+html, body { background: #fff !important; color: #111 !important; height: auto !important; }
+.app, .toasts, #sr-live, .skip-link, .backdrop, .drawer, .drawer-backdrop, .popover, .tooltip, .tabbar, .center-screen, .home { display: none !important; }
+.print-minutes { display: block !important; font: 10.5pt/1.55 "Inter", system-ui, sans-serif; color: #111; }
+.print-minutes * { color: #111; }
+.pm-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 12mm; padding-bottom: 5mm; border-bottom: 1.5pt solid #111; }
+.pm-kicker { font-size: 8pt; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #555 !important; }
+.pm-title { font-size: 20pt; font-weight: 650; letter-spacing: -0.02em; line-height: 1.2; margin-top: 2mm; }
+.pm-brand { font-size: 8.5pt; color: #555 !important; text-align: right; white-space: nowrap; }
+.pm-meta { display: grid; grid-template-columns: 28mm 1fr; gap: 1.5mm 4mm; margin: 5mm 0 6mm; font-size: 9.5pt; }
+.pm-meta dt { color: #555 !important; font-weight: 600; }
+.pm-meta dd { margin: 0; }
+.pm-note { border: 0.75pt solid #bbb; border-radius: 2mm; padding: 2.5mm 3.5mm; font-size: 9pt; margin-bottom: 6mm; background: #f6f6f6; }
+.pm-section { break-inside: avoid-page; margin-bottom: 6mm; }
+.pm-section h2 { font-size: 11.5pt; font-weight: 650; margin: 0 0 2.5mm; padding-bottom: 1.5mm; border-bottom: 0.75pt solid #ccc; }
+.pm-section ul { margin: 0; padding-left: 5mm; }
+.pm-section li { margin: 0 0 1.6mm; break-inside: avoid; }
+.pm-src { color: #666 !important; font-size: 8.5pt; }
+.pm-table { width: 100%; border-collapse: collapse; font-size: 9.5pt; }
+.pm-table th { text-align: left; font-size: 8pt; text-transform: uppercase; letter-spacing: 0.06em; color: #555 !important; border-bottom: 0.75pt solid #999; padding: 1.5mm 2mm 1.5mm 0; }
+.pm-table td { border-bottom: 0.5pt solid #ddd; padding: 2mm 2mm 2mm 0; vertical-align: top; }
+.pm-table tr { break-inside: avoid; }
+.pm-foot { margin-top: 8mm; padding-top: 3mm; border-top: 0.75pt solid #ccc; font-size: 8.5pt; color: #555 !important; display: flex; justify-content: space-between; gap: 8mm; }
+.pm-approved { display: inline-block; padding: 0.6mm 2.4mm; border: 0.75pt solid #1a7f4b; border-radius: 10mm; color: #1a7f4b !important; font-weight: 600; font-size: 8.5pt; }
+.pm-draft { display: inline-block; padding: 0.6mm 2.4mm; border: 0.75pt solid #999; border-radius: 10mm; color: #555 !important; font-weight: 600; font-size: 8.5pt; }
