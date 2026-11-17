@@ -36,6 +36,7 @@ import settings
 from audio import Speaker, wav_bytes
 from chat import CONSENT_PROMPT, consent_message, parse_reply, parse_vouch
 from session import Person, Session, mmss, now_ms
+import ui  # the participants' live view, editing and Demo mode (ui/, docs/UI.md)
 
 MIXED = "mixed"  # stream id for the Teams mixed audio
 log = logging.getLogger("bridge")
@@ -78,6 +79,8 @@ class Bridge:
     async def attendee(self, s, action, payload=None):
         """POST /api/v1/bots/<bot_id>/<action>: pause_recording, resume_recording,
         send_chat_message, leave, delete_data. Returns the HTTP status (0 = no answer)."""
+        if s.demo:  # Demo mode (ui/demo.py): there is no real bot to call
+            return 200
         url = f"{settings.ATTENDEE_URL}/api/v1/bots/{s.bot_id}/{action}"
         headers = {"Authorization": f"Token {settings.ATTENDEE_API_KEY}"}
         try:
@@ -161,6 +164,7 @@ class Bridge:
             # One line of plain text, so it is safe on Teams (typed key by key) and Meet alike.
             await self.say(s, f"Live transcript (organizer's computer only): {self.live_url}/live/{s.bot_id}")
         if new == "ended":
+            ui.meeting_ended(s)  # the access code expires VIEW_ACCESS_DAYS from now
             if s.declined:
                 status = await self.attendee(s, "delete_data")
                 s.consent_log("attendee_data_deleted", http_status=status)
@@ -227,6 +231,9 @@ class Bridge:
                 s.consent_log("resumed", people=[p.name for p in present])
                 await self.attendee(s, "resume_recording")
                 await self.say(s, f"Thanks, everyone agreed. Recording {'resumed' if s.t0_ms else 'started'}.")
+                message = ui.share_message(s) if self.live_url else None  # once: participants' link + code
+                if message:
+                    await self.say(s, message)
         elif s.recording:
             await self.close_gate(s, f"waiting for {', '.join(waiting)}" if waiting else "nobody left in the meeting")
             if waiting:
@@ -506,6 +513,7 @@ async def main():
         app.router.add_post("/webhook", bridge.webhook)
         app.router.add_get("/health", lambda request: web.Response(text="ok"))  # Docker health check
         live_view.add_routes(app, bridge)
+        ui.setup(app, bridge)  # /m/<id> for participants, the new organizer pages, Demo mode
 
         # One app on two ports: audio needs TLS (wss://), webhooks and the live view use plain http.
         runner = web.AppRunner(app, access_log=None)
