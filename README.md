@@ -178,7 +178,31 @@ dc ps                                      # 6 services Up; liveminutes-bridge (
 curl http://127.0.0.1:8776/health          # -> ok
 ```
 
-**Demo:** open http://localhost:8776/live, go to **Send bot**, paste a Google Meet link and press **Send bot**. Admit "LiveMinutes" from the lobby (it takes 20 to 60 s), and everyone types `yes` in the chat. The transcript then appears live. **Stop:** `dc down` (keeps the database and transcripts). **Start again later:** `dc up -d`.
+**Demo:** open http://localhost:8776/live, press **Send bot to a meeting**, paste a Google Meet link and press **Send bot**. Admit "LiveMinutes" from the lobby (it takes 20 to 60 s), and everyone types `yes` in the chat. The transcript then appears live. **Stop:** `dc down` (keeps the database and transcripts). **Start again later:** `dc up -d`.
+
+**Participants' live view.** Once everyone has said yes, the bot posts one chat message with a link and a 6-character access code.
+- **Joining:** participants open the link, type the code and pick their name. That's name selection, not a login.
+- **What they can do:** follow the live transcript, summary and action items; edit and approve them (every change goes into an append-only edit log); approve and export the minutes.
+- **Organizer:** your own view of a meeting is on http://localhost:8776/live (click the meeting). The old pages are still there: add `?classic=1`.
+
+**Share outside this computer** with a free Cloudflare quick tunnel (no account). Without it, links point to localhost and only open on this computer; the organizer view says so. Through the tunnel, only the participant pages answer.
+
+```bash
+brew install cloudflared      # macOS; other systems: docs/UI.md
+bash tunnel.sh                # starts `cloudflared tunnel --url http://localhost:8776` and gives its address to the bridge
+```
+
+Or put `PUBLIC_BASE_URL=https://...` in `../.env` and run `dc up -d`.
+
+**Demo mode** needs no meeting and no Groq. It plays a scripted, invented 5-minute product meeting through the real consent flow, with a late joiner, a plan change, summary updates and two action items. Start it with **Start demo meeting** on http://localhost:8776/live, or:
+
+```bash
+curl -s -X POST "http://localhost:8776/live/api/demo?wait=1"    # prints the organizer link, the participant link and the code
+```
+
+Add `&speed=5` to run 5× faster. Demo meetings are folders named `sessions/demo_*`; delete them any time.
+
+The full guide (features, keyboard shortcuts, tests, security, limits) is in [docs/UI.md](docs/UI.md).
 
 Notes:
 - **Windows:** run this whole section in **Git Bash** (installed with Git for Windows), not PowerShell: the commands then work exactly as written, including `dc up -d`, the `curl` checks and `dc restart attendee-app-local`. In PowerShell, `bash` starts WSL instead of Git Bash, and `>` writes files in UTF-16, which breaks `attendee/.env`. Start Docker Desktop first.

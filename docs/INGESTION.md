@@ -29,7 +29,9 @@ All in `1_ingestion/`. The bridge's Python files, in the order audio flows throu
 | `chat.py` | Reading consent replies (`yes`, `no`, `Room 4B yes`) and writing the bot's consent message |
 | `audio.py` | Cutting each audio stream into 2–10 s pieces at pauses |
 | `session.py` | One meeting: who is in it, consent state, Teams speaker labels, the transcript and its files |
-| `live_view.py` + `home.html` + `live.html` | The live view at http://localhost:8776/live: Sessions and Send bot tabs (`home.html`), and each meeting's transcript + bot activity (`live.html`) |
+| `live_view.py` + `home.html` + `live.html` | The classic live view (now at `/live?classic=1`): Sessions and Send bot tabs (`home.html`), and each meeting's transcript + bot activity (`live.html`) |
+| `ui/` | The participants' shared live view (`/m/<id>`, link + access code), the redesigned organizer pages (`/live`), editing with an append-only edit log, and Demo mode. See [UI.md](UI.md) |
+| `tunnel.sh` | Shares the participant pages through a free Cloudflare quick tunnel and gives its address to the running bridge ([UI.md](UI.md#2-sharing-outside-this-computer)) |
 
 Everything else:
 
@@ -43,6 +45,7 @@ Everything else:
 | `../.env.example`, `../requirements.txt` | At the repo root, shared by all components: the API key template (see [1.5](#15-configuration)) and Python packages |
 | `tests/test_consent.py` | Offline unit tests for consent replies, vouching and chat formatting (Attendee mocked, no Groq) |
 | `tests/test_live.py` | Offline unit tests for the live view: page data, Send bot (link checks, request body, cross-site refusal) and the merged bot logs |
+| `tests/test_ui.py`, `tests/e2e/` | Tests for `ui/`: API tests (pytest) and browser tests with Playwright + axe-core ([UI.md](UI.md#9-tests)) |
 | `tests/consent_sim.py` | Offline: mock Attendee API + fake webhooks/audio. Scenarios `yes_late`, `no`, `timeout`, `teams` |
 | `tests/replay_to_bridge.py` | Offline: replays a WAV as two fake Meet participants |
 | `tools/receiver/` | Raw per-speaker WAV recorder + offline faster-whisper. **No consent step.** |
