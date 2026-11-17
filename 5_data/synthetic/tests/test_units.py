@@ -11,7 +11,9 @@ from synthetic.splits import assign
 from synthetic.util import ROOT, load_config, load_scenarios, read_json, write_json
 from synthetic.validate import validate_meeting
 
-AMI = ROOT.parent / "ami_annotations" / "ami_public_manual_1.6.2"
+# The full AMI manual annotations, unzipped from 5_data/raw/ami/ami_public_manual_1.6.2.zip (see README,
+# "AMI converter"). fetch_data.py's own extract lacks ontologies/ and extractive/, so the test skips on it.
+AMI = ROOT.parent / "raw" / "ami" / "ami_public_manual_1.6.2"
 
 
 def test_plan_is_deterministic_and_stable_when_counts_change():
@@ -105,7 +107,7 @@ def test_review_roundtrip(tmp_cfg, monkeypatch):
         review.apply(raw, rd, Path(tmp_cfg["paths"]["reviewed_dir"]), "v1")
 
 
-@pytest.mark.skipif(not AMI.exists(), reason="AMI manual annotations not available")
+@pytest.mark.skipif(not (AMI / "ontologies").exists(), reason="full AMI manual annotations not unzipped (see README)")
 def test_ami_converter_es2002a():
     (m,) = list(convert_all(AMI, ["ES2002a"]))
     assert validate_meeting(m) == []

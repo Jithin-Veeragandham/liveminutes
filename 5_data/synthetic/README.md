@@ -10,7 +10,7 @@ same downstream code reads both.
 ## Layout
 
 ```
-synthetic/
+5_data/synthetic/
   config/          generation.yaml (full run), dryrun.yaml (1 series x 2 meetings)
   scenarios/       scenarios.yaml (the only source of edge-case specs)
   prompts/v1/      system.txt, user.txt, repair.txt (versioned templates)
@@ -33,7 +33,7 @@ and `config/dryrun.yaml` writes the dry run into `samples/` with the same model 
 Requires Python 3.11+ and Claude Code (`claude`) signed in with the org account.
 
 ```bash
-cd synthetic
+cd 5_data/synthetic                # its own venv: it needs PyYAML + jsonschema, not the repo's requirements.txt
 python -m venv .venv
 .venv/Scripts/activate            # Windows (Git Bash). macOS/Linux: source .venv/bin/activate
 pip install -e ".[dev]"           # pinned: PyYAML 6.0.3, jsonschema 4.23.0, pytest 8.3.4
@@ -147,7 +147,9 @@ Edited meetings are re-validated before they are written.
 ## AMI converter
 
 ```bash
-python -m synthetic ami-convert --ami-dir ../ami_annotations/ami_public_manual_1.6.2 --out data/ami
+# needs the FULL manual annotations (ontologies/, extractive/), not fetch_data.py's smaller extract:
+python -c "import zipfile; zipfile.ZipFile('../raw/ami/ami_public_manual_1.6.2.zip').extractall('../raw/ami/ami_public_manual_1.6.2')"
+python -m synthetic ami-convert --ami-dir ../raw/ami/ami_public_manual_1.6.2 --out data/ami
 ```
 
 Converts the 138 scenario meetings (ES/IS/TS) in `meetings.xml` to the same schema: participants
