@@ -107,9 +107,16 @@ People's edits never go back into the adapters. They're written to the meeting's
 
 ## Live updates (for reference)
 
+The page first renders from `GET /m/<id>/api/snapshot` (participants) or `/live/<id>/api/snapshot` (organizer), so it works even if live updates never connect.
+
 The page gets everything from one Server-Sent Events stream: `GET /m/<id>/api/stream` (participants) or `/live/<id>/api/stream` (organizer).
 - **First event:** `snapshot`, the whole page.
 - **Then:** `session`, `people`, `lines` (`{"upsert": [...], "remove": [...]}`), `summary`, `actions`, `presence`, `me`, `log`, and for the organizer `activity`.
 - **Ending:** `revoked` when access ends (code expired, someone said no).
 
-Any change to what an adapter returns reaches open pages on the next stream wake-up: a transcript line, a chat message, an edit, or the 15-second heartbeat. To push your own update right away, call `ui.hub.touch(meeting_id)`.
+Where the stream doesn't get through (Cloudflare quick tunnels don't support Server-Sent Events), the page falls back to `GET .../api/poll`:
+- `?v=<token>&after=<last line id>` waits up to 20 s for a change;
+- the answer is `{"v": <next token>, "events": [[name, data], ...]}`, with the same event names as the stream;
+- without `v`, or with an unknown line id, it answers at once with a `snapshot`.
+
+Any change to what an adapter returns reaches open pages on the next stream or poll wake-up: a transcript line, a chat message, an edit, or the 15-second heartbeat. To push your own update right away, call `ui.hub.touch(meeting_id)`.

@@ -185,7 +185,7 @@ curl http://127.0.0.1:8776/health          # -> ok
 - **What they can do:** follow the live transcript, summary and action items; edit and approve them (every change goes into an append-only edit log); approve and export the minutes.
 - **Organizer:** your own view of a meeting is on http://localhost:8776/live (click the meeting). The old pages are still there: add `?classic=1`.
 
-**Share outside this computer** with a free Cloudflare quick tunnel (no account). Without it, links point to localhost and only open on this computer; the organizer view says so. Through the tunnel, only the participant pages answer.
+**Share outside this computer** with a free Cloudflare quick tunnel (no account). Without it, links point to localhost and only open on this computer; the organizer view says so. Through the tunnel, only the participant pages answer. Quick tunnels don't pass the live stream on, so pages opened through one update by polling ("Live · polling" in the header).
 
 ```bash
 brew install cloudflared      # macOS; other systems: docs/UI.md

@@ -41,7 +41,13 @@ cd 1_ingestion && bash tunnel.sh
 What `tunnel.sh` does:
 1. Runs `cloudflared tunnel --url http://localhost:8776`.
 2. Reads the `https://<random>.trycloudflare.com` address.
-3. Gives it to the running bridge, so the next link and code the bot posts use it (no restart).
+3. Gives it to the running bridge (`POST /live/api/public-url`), with no rebuild or restart. The bridge uses it straight away for:
+   - the link and code the bot posts;
+   - the share dialog;
+   - its Origin check on writes (a participant's save must come from that address).
+
+   It's kept in `sessions/.ui_public_url`, so it survives a bridge restart.
+4. Waits until the new address answers (a few seconds), then prints it.
 
 Ctrl+C stops the tunnel, and links go back to localhost.
 
@@ -49,15 +55,23 @@ Other options:
 - Paste a tunnel address into **Share → Public address** in the organizer view.
 - Set `PUBLIC_BASE_URL=https://…` in the repo's `.env` (see `.env.example`) and run `dc up -d`.
 
-Quick tunnels get a new address every time, which is why there's a runtime setting.
+Quick tunnels get a new address every time, which is why there's a runtime setting. The value set while running wins over `PUBLIC_BASE_URL` in `.env`. Clearing it (`tunnel.sh` does on exit) falls back to `.env`.
+
+**Quick tunnels don't pass the live stream on.** Cloudflare: "Quick Tunnels do not support Server-Sent Events (SSE)." So pages opened through one show the meeting from a normal request first, then switch to a long poll after 4 seconds without stream events. A long poll is a request that waits up to 20 s for news, then ends, so any proxy passes it. The header then says **Live · polling**, and updates still arrive within about a second. On localhost, or a named tunnel, the stream is used.
+
+**The bare tunnel address** (`https://<random>.trycloudflare.com/`) shows a short page: "Open the link from your meeting chat".
 
 **Without a public address**, links point to `http://localhost:8776` and only open on the organizer's computer. The organizer view shows a yellow banner about it.
 
-**What the tunnel exposes:** only `/m/<meeting>/…` (the participant page and its API) and `/static/…`. Anything else asked for through a tunnel gets 404:
-- the organizer pages;
+**What the tunnel exposes:** only `/m/<meeting>/…` (the participant page and its API), `/static/…` and that short page at `/`. Everything else asked for through a tunnel gets 404:
+- the organizer pages and every organizer API (sessions, meetings, demo start, public URL, a meeting's snapshot, edit log, rotate code, edits);
 - Send bot;
+- bot logs and data;
 - the webhook;
+- the audio websocket;
 - `/health`.
+
+A test (`test_every_route_but_the_participant_ones_is_blocked_through_a_tunnel`) tries every registered route through a tunnel. The real-tunnel browser test also checks the organizer pages from outside.
 
 A request counts as "through a tunnel" when it carries proxy headers (`Cf-Connecting-Ip`, `X-Forwarded-For`, …) or uses a host name that isn't this computer.
 
@@ -190,7 +204,7 @@ From the repo root (packages: `requirements.txt` section 4):
 - **Sample data until teammates connect their code.** Summary and action items in real meetings are sample data until `summary_source()` / `actions_source()` are replaced; Ask is sample data until `ask_source()` is.
 - **Rate limits, codes in memory and presence are per bridge process.** A bridge restart forgets them: the code still works (its hash is on disk), but the share dialog can't show it until the organizer makes a new one.
 - **The organizer view is "whoever can open localhost:8776"** on the organizer's computer. That's the same trust model as the old live view.
-- **The tunnel was tested with a stand-in for `cloudflared`** (it prints the same address line). The real tunnel, and SSE through Cloudflare, weren't tried on the development machine.
+- **Through a quick tunnel, updates come by long poll, not the stream** (Cloudflare doesn't pass Server-Sent Events on quick tunnels). That's about one request per change per viewer: fine for a meeting, but quick tunnels also cap 200 requests in flight, so a large audience needs a named Cloudflare tunnel or a real server.
 - **Demo transcript lines are scripted.** The audio, cutting and Groq parts of the pipeline aren't exercised by Demo mode.
 - **The meeting title is "Untitled meeting"** until someone renames it (the bot doesn't know the calendar title).
 - **The bot still posts its older organizer-only link at join** (existing behavior, covered by an existing test), before the new link-and-code message.
