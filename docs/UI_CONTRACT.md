@@ -10,6 +10,8 @@ The UI gets the last three from three small **adapter functions** in [`1_ingesti
 
 To plug in the real summarizer and action-item extraction (Jithin) or the knowledge base (Ashmit), **replace the body of the matching function**. Keep the shapes below; nothing else in the UI changes.
 
+**Step by step, with timing rules, hooks and merge notes:** [INTEGRATION.md](INTEGRATION.md). **Check your code against this contract:** `.venv/bin/python -m pytest 1_ingestion/tests/test_contract.py -v`.
+
 ## Transcript line
 
 Built by the UI from the bridge's own transcript (`Session.lines`, or `pieces.jsonl` after a restart). Teammates read these; they don't produce them.
@@ -71,6 +73,17 @@ The UI also adds `multi` (bool) and `unknown` (bool). Inside the adapters, `meet
 | `due` | `YYYY-MM-DD`, or `""` |
 | `status` | `"pending"`, `"approved"` or `"done"`. New items should be `"pending"`. |
 
+## `ask_info()`
+
+`{"sample": true, "note": "...", "suggestions": ["What did we decide about …?"]}`: what the Ask panel shows before a question. While `sample` is true it's labelled "Preview · sample data".
+
+## Knowledge-base hooks
+
+- `minutes_approved(meeting_id, record)` is called after "Approve minutes", with the whole approved record (meeting, attendees, approved summary and action items, transcript).
+- `minutes_unapproved(meeting_id)` is called after an undo, or when the meeting is deleted.
+- Both run in the background. The knowledge base indexes **only** these records.
+- Record format and rules: [INTEGRATION.md section 4](INTEGRATION.md#4-approved-records-only-for-the-knowledge-base).
+
 ## `ask_source(question, meeting)`
 
 ```json
@@ -101,9 +114,9 @@ People's edits never go back into the adapters. They're written to the meeting's
 - One line per changed field. One save touching 2 fields gives 2 lines with the same `change`.
 - `op` is one of `create`, `update`, `delete`, `undo` (with `undo_of`) or `approve`.
 - Items of kind `meeting` (the title) and `minutes` (the approval) live in the same log.
-- **Precedence:** a field someone has edited keeps the edited value, even if the summarizer later rewrites that item. Fields nobody edited follow the adapter.
+- **Precedence:** once a person has changed a generated item (edit, approve, done, delete), the item is frozen. The first log line stores the item as generated (`"base"`), and from then on the page is built from that plus the log. **Nothing the adapter later returns for that id is used.** Items nobody touched follow the adapter. While the minutes are approved, untouched items show as approved (the approval line stores the record). Details: [INTEGRATION.md section 3](INTEGRATION.md#3-rules-that-protect-edits).
 - **Conflicts:** an item's `version` is its last log line's `version` (or the adapter's, if nobody has edited it). A save names the version it started from; if someone saved in between, it gets HTTP 409 and the page shows both versions.
-- **Removal:** an item the adapter stops returning disappears from the page, but its log lines stay. So don't drop items people may have edited; mark them in the text instead.
+- **Removal:** an item nobody touched disappears when the adapter stops returning it. An item someone edited stays, as they left it. New items need new ids; never reuse an id for a different point.
 
 ## Live updates (for reference)
 

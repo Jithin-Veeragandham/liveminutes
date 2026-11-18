@@ -202,7 +202,7 @@ curl -s -X POST "http://localhost:8776/live/api/demo?wait=1"    # prints the org
 
 Add `&speed=5` to run 5× faster. Demo meetings are folders named `sessions/demo_*`; delete them any time.
 
-The full guide (features, keyboard shortcuts, tests, security, limits) is in [docs/UI.md](docs/UI.md).
+The full guide (features, keyboard shortcuts, tests, security, limits) is in [docs/UI.md](docs/UI.md). Plugging the LLM summary and the knowledge base into it: [docs/INTEGRATION.md](docs/INTEGRATION.md).
 
 Notes:
 - **Windows:** run this whole section in **Git Bash** (installed with Git for Windows), not PowerShell: the commands then work exactly as written, including `dc up -d`, the `curl` checks and `dc restart attendee-app-local`. In PowerShell, `bash` starts WSL instead of Git Bash, and `>` writes files in UTF-16, which breaks `attendee/.env`. Start Docker Desktop first.

@@ -1,6 +1,6 @@
 # LiveMinutes UI: shared live view, editing and Demo mode
 
-The meeting page that everyone in the call can open, plus the organizer pages, all served by the bridge on port 8776. Code: [`1_ingestion/ui/`](../1_ingestion/ui/). Data contract for teammates: [UI_CONTRACT.md](UI_CONTRACT.md).
+The meeting page that everyone in the call can open, plus the organizer pages, all served by the bridge on port 8776. Code: [`1_ingestion/ui/`](../1_ingestion/ui/). Data contract for teammates: [UI_CONTRACT.md](UI_CONTRACT.md). Merging the LLM summary and knowledge base into it: [INTEGRATION.md](INTEGRATION.md).
 
 ![Participant view, light](ui/participant-light.png)
 ![Participant view, dark](ui/participant-dark.png)
@@ -188,6 +188,8 @@ From the repo root (packages: `requirements.txt` section 4):
 .venv/bin/python -m pytest 1_ingestion/tests -m e2e            # browser tests: Demo, two participants, conflict, undo, approve, export, print, axe
 .venv/bin/python 1_ingestion/tests/e2e/screenshots.py OUT_DIR  # every screen, light + dark, 1440/1024/768/390 px
 ```
+
+**Contract test** (`tests/test_contract.py`): checks whatever is in `ui/adapters.py` against [UI_CONTRACT.md](UI_CONTRACT.md). Run it after plugging in real code (see [INTEGRATION.md](INTEGRATION.md)).
 
 **Unit and API tests** (`tests/test_ui.py`) cover:
 - access codes (right, wrong, rate limit, expiry, consent withdrawn, new code);
