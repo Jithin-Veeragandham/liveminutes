@@ -10,6 +10,7 @@ import argparse
 import hashlib
 import json
 import os
+import shutil
 import sys
 import time
 import urllib.request
@@ -24,6 +25,9 @@ USED_PARTS = ("words/", "dialogueActs/", "abstractive/", "corpusResources/meetin
 # The AMI server sometimes refuses or drops a download (HTTP 403, connection reset); it usually works on a
 # later try. Wait 2 s after the first failure, then 4, 6, ... (at most 30 s), up to DOWNLOAD_TRIES tries.
 DOWNLOAD_TRIES = 10
+# It can also accept the connection and then send nothing. Without a timeout that hangs forever (it once did,
+# for over 10 minutes); with it, a connect or read that waits this long fails the try, and the next one starts.
+DOWNLOAD_TIMEOUT_S = 60
 
 
 # Return the SHA-256 hex digest of one file.
@@ -67,10 +71,14 @@ def download(url, path):
     part = path + ".part"
     for attempt in range(1, DOWNLOAD_TRIES + 1):
         try:
-            urllib.request.urlretrieve(url, part)
+            with urllib.request.urlopen(url, timeout=DOWNLOAD_TIMEOUT_S) as r, open(part, "wb") as f:
+                shutil.copyfileobj(r, f, 1 << 20)
+                expected = r.headers.get("Content-Length")
+            if expected is not None and os.path.getsize(part) != int(expected):  # the check urlretrieve did
+                raise OSError(f"download ended early ({os.path.getsize(part)} of {expected} bytes)")
             os.replace(part, path)
             return
-        except OSError as e:   # HTTP errors (403, 503), connection resets, timeouts
+        except OSError as e:   # HTTP errors (403, 503), connection resets, timeouts (TimeoutError is an OSError)
             if os.path.exists(part):
                 os.remove(part)
             if attempt == DOWNLOAD_TRIES:
