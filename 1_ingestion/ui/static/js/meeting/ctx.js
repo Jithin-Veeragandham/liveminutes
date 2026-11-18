@@ -75,7 +75,7 @@ export function applyEvent(ctx, name, data) {
     ctx.serverOffset = data.session.server_ms - Date.now();
     ctx.lines = [...data.lines];
     ctx.lineIndex = new Map(ctx.lines.map((l) => [l.id, l]));
-    if (data.activity) ctx.activity = [...data.activity.items];
+    if (data.activity) { ctx.activity = [...data.activity.items]; ctx.activityNext = data.activity.next; }
     return ["all"];
   }
   if (!ctx.snap) return [];
@@ -91,6 +91,7 @@ export function applyEvent(ctx, name, data) {
     return [{ part: "lines", added, upsert: data.upsert || [], remove: data.remove || [] }];
   }
   if (name === "activity") {
+    ctx.activityNext = data.next;
     ctx.activity.push(...data.items);
     if (ctx.activity.length > 600) ctx.activity.splice(0, ctx.activity.length - 600);
     return [{ part: "activity", added: data.items }];

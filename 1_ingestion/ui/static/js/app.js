@@ -3,7 +3,7 @@
 import { h, clear, $, displayName, firstName, mmss, isTyping, modKey, ago } from "./util.js";
 import { icon } from "./icons.js";
 import * as theme from "./theme.js";
-import { ApiError, Stream } from "./api.js";
+import { ApiError, Live } from "./api.js";
 import { avatar, toast, tooltip, menu, dialog, palette, kbd, iconButton, dialogOpen, closePopover } from "./ui.js";
 import { codeScreen, nameScreen, errorScreen } from "./join.js";
 import { createCtx, applyEvent } from "./meeting/ctx.js";
@@ -222,7 +222,7 @@ function start(ctx) {
     clear(platformEl).appendChild(icon(s.platform === "teams" ? "users" : "video", { size: 15 }));
     demoChip.hidden = !s.demo;
     subEl.textContent = s.started_ms ? new Date(s.started_ms).toLocaleString(undefined, { weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }) : "";
-    const live = s.status === "recording" && ctx.conn === "live";
+    const live = s.status === "recording" && (ctx.conn === "live" || ctx.conn === "polling");
     livePill.hidden = !live;
     stateChip.hidden = live;
     const st = {
@@ -292,7 +292,7 @@ function start(ctx) {
     if (!s || !s.started_ms) { elapsed.textContent = ""; return; }
     const end = s.status === "ended" || s.status === "declined" ? (s.ended_ms || s.started_ms) : ctx.now();
     elapsed.textContent = mmss((end - s.started_ms) / 1000);
-    const word = { recording: "● Live", paused: "Paused", joining: "Joining", ended: "Ended", declined: "Stopped" }[s.status] || "";
+    const word = { recording: ctx.conn === "polling" ? "● Live · polling" : "● Live", paused: "Paused", joining: "Joining", ended: "Ended", declined: "Stopped" }[s.status] || "";
     phoneSub.textContent = `${s.demo ? "Demo · " : ""}${word} · ${elapsed.textContent}`;
     phoneSub.dataset.status = s.status;
   }
@@ -369,7 +369,7 @@ function start(ctx) {
   }
 
   async function switchName() {
-    stream.close();
+    live.close();
     clearInterval(ticker);
     try {
       const r = await ctx.api.post("/forget-name", {});
@@ -506,27 +506,48 @@ function start(ctx) {
     }
   }
 
-  const stream = new Stream(`${cfg.api}/stream`, {
-    onEvent: handle,
-    onState: (s) => {
-      ctx.conn = s;
-      conn.hidden = s === "live" || s === "connecting";
-      clear(conn).append(icon(s === "offline" ? "wifi-off" : "loader-circle", { size: 13, cls: s === "reconnecting" ? "spin" : "" }), h("span", { class: "hide-phone", text: s === "offline" ? "Offline" : "Reconnecting…" }));
-      conn.dataset.state = s;
-      if (ctx.snap) { renderHeader(); }
-      if (s === "live") { if (wasDown) toast("Back online", { kind: "success", timeout: 2600 }); wasDown = false; }
-      else if (s === "reconnecting" || s === "offline") wasDown = true;
-    },
-    onRevoked: (d) => {
-      clearInterval(ticker);
-      if (isOrg) { toast(d.error || "This meeting is no longer available", { kind: "error", timeout: 0 }); return; }
-      if (d.state === "need_code") route(ctx, { state: "need_code" });
-      else errorScreen(d.state, d.error);
-    },
-  });
+  const CONN = {
+    polling: ["radio", "Live · polling", "This network doesn't pass the live stream (Cloudflare quick tunnels don't), so the page asks for news instead. Updates still arrive within a second or two."],
+    reconnecting: ["loader-circle", "Reconnecting…", "Lost the connection. Trying again…"],
+    offline: ["wifi-off", "Offline", "You're offline. The page catches up when you're back."],
+  };
+  function showConn(s) {
+    ctx.conn = s;
+    const c = CONN[s];
+    conn.hidden = !c;
+    conn.dataset.state = s;
+    clear(conn);
+    if (c) {
+      conn.append(icon(c[0], { size: 13, cls: s === "reconnecting" ? "spin" : "" }), h("span", { class: "hide-phone", text: c[1] }));
+      conn.title = c[2];
+      conn.setAttribute("aria-label", c[1]);
+    }
+    if (ctx.snap) renderHeader();
+    const up = s === "live" || s === "polling";
+    if (up) { if (wasDown) toast("Back online", { kind: "success", timeout: 2600 }); wasDown = false; }
+    else if (s === "reconnecting" || s === "offline") wasDown = true;
+  }
+  function revoked(d) {
+    clearInterval(ticker);
+    live.close();
+    if (isOrg) { toast(d.error || "This meeting is no longer available", { kind: "error", timeout: 0 }); return; }
+    if (d.state === "need_code") route(ctx, { state: "need_code" });
+    else errorScreen(d.state || "error", d.error);
+  }
   let wasDown = false;
-  stream.open();
-  window.addEventListener("beforeunload", () => stream.close());
+  const live = new Live(ctx.api, {
+    onEvent: handle,
+    onState: showConn,
+    onRevoked: revoked,
+    // what the page already has, so a long poll only sends what's new
+    cursor: () => ({ after: ctx.lines.length ? ctx.lines[ctx.lines.length - 1].id : "", act: isOrg ? (ctx.activityNext || 0) : null }),
+  });
+  // Render the current state from a plain GET first: the page works even if live updates never connect.
+  ctx.api.get("/snapshot")
+    .then((snap) => { if (!ctx.snap) handle("snapshot", snap); })
+    .catch((err) => { if ([401, 403, 404, 410].includes(err.status)) revoked(err.data || {}); });
+  live.start();
+  window.addEventListener("beforeunload", () => live.close());
 }
 
 boot().catch((err) => {

@@ -5,11 +5,13 @@ import asyncio
 import time
 
 PRESENCE_TTL_S = 15   # an "is editing" hint disappears this long after the last ping
+POLL_ONLINE_S = 45    # someone on the long poll counts as "viewing now" this long after their last poll
 
 _versions = {}        # meeting id -> int
 _events = {}          # meeting id -> asyncio.Event, replaced on every touch
 _editing = {}         # meeting id -> {name: (item_id, monotonic time)}
 _online = {}          # meeting id -> {name: open streams}
+_polled = {}          # meeting id -> {name: monotonic time of their last poll}
 
 
 def version(sid):
@@ -68,14 +70,26 @@ def leave(sid, name):
         touch(sid)
 
 
+def seen(sid, name):
+    """Someone viewing through the long poll (no open stream). Wakes others only when they newly appear."""
+    if not name:
+        return
+    people = _polled.setdefault(sid, {})
+    fresh = name not in people or time.monotonic() - people[name] > POLL_ONLINE_S
+    people[name] = time.monotonic()
+    if fresh and name not in _online.get(sid, {}):
+        touch(sid)
+
+
 def presence(sid):
     now = time.monotonic()
     editing = {name: item for name, (item, at) in _editing.get(sid, {}).items() if now - at < PRESENCE_TTL_S}
-    return {"online": sorted(_online.get(sid, {})), "editing": editing}
+    polled = {name for name, at in _polled.get(sid, {}).items() if now - at < POLL_ONLINE_S}
+    return {"online": sorted(set(_online.get(sid, {})) | polled), "editing": editing}
 
 
 def forget(sid):
-    for table in (_versions, _editing, _online):
+    for table in (_versions, _editing, _online, _polled):
         table.pop(sid, None)
     event = _events.pop(sid, None)
     if event is not None:

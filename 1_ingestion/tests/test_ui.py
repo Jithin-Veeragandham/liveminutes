@@ -551,3 +551,119 @@ def test_real_bridge_never_calls_attendee_for_demo_sessions():
         assert asyncio.run(real.attendee(s, "send_chat_message", {"message": "hi"})) == 200
     finally:
         s.close()
+
+
+# ================= live updates through proxies, and what a tunnel can reach =================
+# Cloudflare quick tunnels don't pass Server-Sent Events on, so the page renders from GET /snapshot
+# and falls back to the long poll (/poll). These check the pieces of that.
+
+async def test_poll_answers_at_once_then_waits_and_sends_only_new_lines(env):
+    b, client, s, code = env
+    csrf = await join(client, code, "Ann Lee")
+    first = await (await client.get(f"/m/{SID}/api/poll")).json()
+    assert [e[0] for e in first["events"]] == ["snapshot"] and first["v"]
+    last_id = first["events"][0][1]["lines"][-1]["id"]
+    waiting = asyncio.ensure_future(client.get(f"/m/{SID}/api/poll?v={first['v']}&after={last_id}"))
+    await asyncio.sleep(0.4)
+    assert not waiting.done()                                      # nothing new: the request is held
+    t0 = time.monotonic()
+    s.lines.append((s.t0_ms + 30_000, s.t0_ms + 32_000, "Bob Stone", "A brand new line"))
+    s.touch()
+    d = await (await waiting).json()
+    assert time.monotonic() - t0 < 2 and d["v"] != first["v"]
+    lines = dict(d["events"])["lines"]["upsert"]
+    assert [l["text"] for l in lines] == ["Hi Ann", "A brand new line"]  # the last line again (it may grow) + the new one
+    assert {"session", "people", "summary", "actions", "presence", "me"} <= dict(d["events"]).keys()
+    # an edit wakes a waiting poll too
+    waiting = asyncio.ensure_future(client.get(f"/m/{SID}/api/poll?v={d['v']}&after={lines[-1]['id']}"))
+    await asyncio.sleep(0.3)
+    await edit(client, csrf, "s1", 1, text="Edited while someone polls")
+    d2 = dict((await (await waiting).json())["events"])
+    assert d2["summary"]["items"][0]["text"] == "Edited while someone polls"
+
+
+async def test_poll_resyncs_and_stops_when_access_ends(env):
+    b, client, s, code = env
+    await join(client, code, "Ann Lee")
+    first = await (await client.get(f"/m/{SID}/api/poll")).json()
+    d = await (await client.get(f"/m/{SID}/api/poll?v=stale&after=t_unknown")).json()
+    assert [e[0] for e in d["events"]] == ["snapshot"]            # an unknown line id: full snapshot
+    await b.on_chat(s, {"text": "no", "sender_uuid": "u2", "sender_name": "Bob Stone"})
+    r = await client.get(f"/m/{SID}/api/poll?v={first['v']}")
+    assert r.status == 410 and (await r.json())["state"] == "declined"
+    assert (await client.get("/m/bot_nope/api/poll")).status == 404
+
+
+async def test_pollers_count_as_viewing(env):
+    _, client, _, code = env
+    await join(client, code, "Bob Stone")
+    await client.get(f"/m/{SID}/api/poll")
+    snap = await (await client.get(f"/live/{SID}/api/snapshot")).json()
+    assert "Bob Stone" in snap["presence"]["online"]
+
+
+async def test_stream_is_proxy_friendly_and_pings(env, monkeypatch):
+    from ui import routes
+    monkeypatch.setattr(routes, "STREAM_HEARTBEAT_S", 0.3)
+    _, client, _, code = env
+    await join(client, code, "Ann Lee")
+    r = await client.get(f"/m/{SID}/api/stream")
+    assert r.headers["Cache-Control"] == "no-cache, no-transform" and r.headers["X-Accel-Buffering"] == "no"
+    assert r.headers["Content-Encoding"] == "identity" and r.headers["Content-Type"].startswith("text/event-stream")
+    seen = b""
+    async def read():
+        nonlocal seen
+        async for chunk in r.content.iter_any():
+            seen += chunk
+            if b"event: ping" in seen:
+                return
+    await asyncio.wait_for(read(), 5)
+    assert seen.startswith(b":" + b" " * 2048) and b"event: snapshot" in seen
+    r.close()
+
+
+async def test_bare_tunnel_address_shows_a_friendly_page(env):
+    _, client, _, _ = env
+    tunnel = {"Cf-Connecting-Ip": "203.0.113.9", "Host": "abc.trycloudflare.com"}
+    r = await client.get("/", headers=tunnel)
+    text = await r.text()
+    assert r.status == 200 and "Open the link from your meeting chat" in text and "Content-Security-Policy" in r.headers
+    local = await client.get("/", allow_redirects=False)
+    assert local.status == 302 and local.headers["Location"] == "/live"  # on this computer: the organizer home
+
+
+async def test_every_route_but_the_participant_ones_is_blocked_through_a_tunnel(aiohttp_client):
+    """Builds the app like bridge.main() and tries EVERY registered route through a tunnel."""
+    b = Bridge()
+    app = web.Application()
+
+    async def ok(request):
+        return web.Response(text="ok")
+    app.router.add_get("/attendee-websocket", ok)   # bridge.main(): the audio websocket
+    app.router.add_post("/webhook", ok)
+    app.router.add_get("/health", ok)
+    live_view.add_routes(app, b)
+    ui.setup(app, b)
+    client = await aiohttp_client(app)
+    s, code = await consented_meeting(b)
+    tunnel = {"Cf-Connecting-Ip": "203.0.113.9", "Host": "abc.trycloudflare.com"}
+    reached, blocked = [], []
+    for route in app.router.routes():
+        info = route.resource.get_info() if route.resource else {}
+        path = info.get("path") or info.get("formatter")
+        if path is None:                       # the static files
+            path = info.get("prefix", "/static") + "/css/app.css"
+        path = path.replace("{sid}", SID).replace("{bot_id}", SID)
+        if route.method not in ("GET", "POST") or path in ("/", ):
+            continue
+        r = await client.request(route.method, path, headers=tunnel, json={} if route.method == "POST" else None)
+        (blocked if r.status == 404 else reached).append(f"{route.method} {path}")
+    assert reached and blocked
+    for r in reached:
+        assert r.split(" ", 1)[1].startswith(("/m/", "/static/", "/favicon.ico")), f"reachable through a tunnel: {r}"
+    for must in ("GET /live", "GET /live/api/sessions", "POST /live/api/send", "GET /live/api/meetings",
+                 "POST /live/api/demo", "POST /live/api/public-url", f"GET /live/{SID}/logs", f"GET /live/{SID}/data",
+                 f"GET /live/{SID}/api/editlog", f"GET /live/{SID}/api/snapshot", f"POST /live/{SID}/api/edit",
+                 f"POST /live/{SID}/api/rotate-code", "POST /webhook", "GET /health", "GET /attendee-websocket"):
+        assert must in blocked, must
+    s.close()

@@ -5,6 +5,7 @@
 # It starts `cloudflared tunnel --url http://localhost:8776`, reads its https://<random>.trycloudflare.com
 # address and tells the running bridge to use it in the links it posts (no restart needed).
 # Only the participant pages (/m/...) answer through the tunnel; the organizer pages stay on this computer.
+# The bridge picks the address up while it runs, for the links it posts and for its Origin check on writes.
 # Ctrl+C stops the tunnel, and links go back to localhost.
 set -euo pipefail
 BRIDGE="${BRIDGE_URL:-http://localhost:8776}"
@@ -25,7 +26,11 @@ for _ in $(seq 1 60); do
   sleep 1
 done
 if [ -z "$url" ]; then echo "No tunnel address after 60 s. cloudflared said:"; tail -20 "$log"; exit 1; fi
-set_url "$url"
+set_url "$url"   # the running bridge uses it at once (and keeps it in sessions/.ui_public_url): no restart
+# A new quick tunnel takes a few seconds before it answers; wait so the first link posted works.
+for _ in $(seq 1 30); do curl -fsS -o /dev/null "$url/" 2>/dev/null && break; sleep 1; done
 echo "Participants' links now use: $url"
+echo "Opening $url/ shows a short note; meeting links look like $url/m/<meeting>."
+echo "Quick tunnels don't pass the live stream on, so pages use polling there (shown as \"Live · polling\")."
 echo "Keep this window open during the meeting. Ctrl+C stops the tunnel."
 wait $pid

@@ -279,3 +279,31 @@ def test_accessibility_axe(browser, server, watch, theme_name):
     watch.closing = True
     assert not problems, "\n".join(problems)
     watch.check()
+
+
+def test_page_renders_and_falls_back_to_polling_when_the_stream_never_arrives(browser, server, watch):
+    """Like a Cloudflare quick tunnel: the event stream never delivers. The page must still show the
+    meeting (from GET /snapshot), switch to the long poll, stay live, and say so."""
+    demo = server.demo(speed=8)
+    ctx = browser.new_context(viewport=WIDE)
+    page = watch.attach(ctx.new_page(), "blocked")
+    page.route("**/api/stream", lambda route: None)  # never answered
+    page.goto(server.base + f"/m/{demo['id']}")
+    expect(page.get_by_role("textbox", name="Character 1 of 6")).to_be_focused()
+    page.keyboard.type(demo["code"].replace("-", ""))
+    page.get_by_role("listitem").filter(has_text="Priya Raman").click()
+    expect(page.locator(".meeting-title")).to_have_text("Orbit 2.0 launch sync", timeout=3000)  # from the GET
+    expect(page.locator(".conn")).to_contain_text("Live · polling", timeout=8000)
+    before = page.locator(".line").count()
+    expect(page.locator(".line").nth(before)).to_be_visible(timeout=10_000)   # new lines keep arriving
+    octx, org = organizer(browser, server, watch, demo)
+    expect(org.locator(".panel--summary .item").first).to_be_visible(timeout=20_000)
+    org.locator(".panel--summary .item").first.click()
+    org.keyboard.press("e")
+    org.locator(".panel--summary textarea").fill("Edited by the organizer while Priya polls")
+    org.keyboard.press("Meta+Enter" if org.evaluate("navigator.platform").startswith("Mac") else "Control+Enter")
+    expect(page.locator(".panel--summary")).to_contain_text("Edited by the organizer while Priya polls", timeout=5000)
+    octx.close()
+    ctx.close()
+    watch.closing = True
+    watch.check()

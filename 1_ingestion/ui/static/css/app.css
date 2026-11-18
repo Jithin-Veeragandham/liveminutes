@@ -183,6 +183,7 @@ button.chip:disabled { cursor: default; opacity: 0.65; }
 .conn { font-size: var(--fs-xs); color: var(--text-3); }
 .conn[data-state="reconnecting"] { color: var(--warning); }
 .conn[data-state="offline"] { color: var(--danger); }
+.conn[data-state="polling"] { color: var(--text-3); font-size: var(--fs-2xs); gap: 4px; }
 .spin { animation: spin 0.9s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
@@ -803,3 +804,5 @@ mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 1
 
 /* print-only minutes: shown by print.css */
 .print-minutes { display: none; }
+
+.pm-gap { margin-top: 16px; }

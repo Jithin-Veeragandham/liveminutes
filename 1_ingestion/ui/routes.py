@@ -4,8 +4,10 @@ Pages
   /m/<id>                participant view: access code, then pick your name, then the meeting page
   /live, /live/<id>      organizer home and meeting page (new design; old pages: add ?classic=1)
 API (same handlers; participant = cookie + CSRF token, organizer = this computer + organizer token)
-  /m/<id>/api/<action>   me, code, name, forget-name, snapshot, stream (SSE), edit, create, delete, undo,
-  /live/<id>/api/<action>  approve, presence, ask, history, export.md; organizer only: editlog, rotate-code
+  /m/<id>/api/<action>   me, code, name, forget-name, snapshot, stream (SSE), poll (long poll), edit, create,
+  /live/<id>/api/<action>  delete, undo, approve, presence, ask, history, export.md; organizer only: editlog, rotate-code
+Live updates: the page renders from a plain GET (snapshot), then listens on the event stream. Where the stream
+doesn't get through (Cloudflare quick tunnels don't support Server-Sent Events), it falls back to the long poll.
   /live/api/demo  /live/api/meetings  /live/api/public-url  /live/api/ui-config   (organizer only)
 Guard (middleware)
   Requests through a tunnel or by a foreign host name may only reach /m/... and /static/... (404 otherwise).
@@ -30,7 +32,10 @@ STATIC, TEMPLATES = HERE / "static", HERE / "templates"
 PUBLIC_PATHS = re.compile(r"^/(m/[A-Za-z0-9_-]{1,64}(/[A-Za-z0-9._-]*)*|static/[A-Za-z0-9._/-]+|favicon\.ico)$")
 ORGANIZER_PAGE = re.compile(r"^/live/([A-Za-z0-9_-]{1,64})$")
 WRITES = {"POST", "PUT", "PATCH", "DELETE"}
-STREAM_HEARTBEAT_S = 15
+STREAM_HEARTBEAT_S = 15   # a "ping" event at least this often, so the page can tell a silent stream from a live one
+POLL_WAIT_S = 20          # a long poll waits this long for a change (Cloudflare closes requests after 100 s)
+STREAM_HEADERS = {"Content-Type": "text/event-stream; charset=utf-8", "Cache-Control": "no-cache, no-transform",
+                  "X-Accel-Buffering": "no", "Content-Encoding": "identity"}
 SECURITY_HEADERS = {"X-Content-Type-Options": "nosniff", "Referrer-Policy": "same-origin",
                     "X-Frame-Options": "DENY", "Permissions-Policy": "camera=(), microphone=(), geolocation=()"}
 
@@ -269,18 +274,21 @@ def setup(app, bridge):
     async def stream(request):
         m = meeting(request)
         v = viewer_for(request, m)
-        resp = web.StreamResponse(headers={"Content-Type": "text/event-stream; charset=utf-8",
-                                           "Cache-Control": "no-cache, no-transform", "X-Accel-Buffering": "no"})
+        resp = web.StreamResponse(headers=STREAM_HEADERS)
         await resp.prepare(request)
 
         async def send(event, data):
             await resp.write(f"event: {event}\ndata: {json.dumps(data, separators=(',', ':'))}\n\n".encode())
 
         snap = snapshot(m, v)
-        await resp.write(b"retry: 2000\n\n")
+        # 2 KB of padding first: some proxies only start passing a stream on after a first chunk this size
+        await resp.write(b":" + b" " * 2048 + b"\n\nretry: 2000\n\n")
         await send("snapshot", snap)
         parts = ("session", "people", "summary", "actions", "presence", "me", "log")
-        last = {p: json.dumps(snap[p], sort_keys=True) for p in parts}
+
+        def fingerprint(p, value):  # the server clock in "session" changes every time: not a change to send
+            return json.dumps({k: x for k, x in value.items() if k != "server_ms"} if p == "session" else value, sort_keys=True)
+        last = {p: fingerprint(p, snap[p]) for p in parts}
         last_lines = {l["id"]: json.dumps(l, sort_keys=True) for l in snap["lines"]}
         next_activity = snap.get("activity", {}).get("next", 0)
         hub.join(m.sid, v.name)
@@ -302,7 +310,7 @@ def setup(app, bridge):
                 snap = snapshot(m, v)
                 sent = False
                 for p in parts:
-                    text = json.dumps(snap[p], sort_keys=True)
+                    text = fingerprint(p, snap[p])
                     if text != last[p]:
                         last[p] = text
                         await send(p, snap[p])
@@ -320,12 +328,50 @@ def setup(app, bridge):
                         await send("activity", {"items": activity, "next": next_activity})
                         sent = True
                 if not sent:
-                    await resp.write(b": ping\n\n")
+                    await send("ping", {"t": access.now_ms()})  # a real event: the page's watchdog sees it
         except (ConnectionError, asyncio.CancelledError, RuntimeError):
             pass
         finally:
             hub.leave(m.sid, v.name)
         return resp
+
+    def poll_token(sid):
+        s = sessions.get(sid)
+        return f"{hub.version(sid)}.{s.version if s else 0}"
+
+    async def poll(request):
+        """Long poll: the same events as the stream, for networks where the stream doesn't get through.
+        Without ?v= it answers at once with a snapshot. With ?v=<token from the last answer> it waits up to
+        POLL_WAIT_S for something to change. ?after=<last line id the page has> asks for new lines only
+        (and that last line again, in case it grew); an unknown id gets a full snapshot."""
+        m = meeting(request)
+        v = viewer_for(request, m)
+        seen = request.query.get("v", "")
+        hub.seen(m.sid, v.name)
+        if seen and seen == poll_token(m.sid):
+            s = sessions.get(m.sid)
+            await hub.wait(m.sid, hub.version(m.sid), s, s.version if s else None, POLL_WAIT_S)
+            await asyncio.sleep(0.05)  # let a burst of changes land
+            m = Meeting(bridge, m.sid)
+            v = viewer_for(request, m)  # access may have ended while we waited
+        token = poll_token(m.sid)       # taken before the snapshot: a change after this shows up next time
+        snap = snapshot(m, v)
+        after = request.query.get("after", "")[:40]
+        ids = [l["id"] for l in snap["lines"]]
+        if not seen or (after and after not in ids):
+            return web.json_response({"v": token, "events": [["snapshot", snap]]})
+        events = [[p, snap[p]] for p in ("session", "people", "summary", "actions", "presence", "me", "log")]
+        start = ids.index(after) if after else 0
+        events.append(["lines", {"upsert": snap["lines"][start:], "remove": []}])
+        if v.role == "organizer":
+            try:
+                have = max(0, int(request.query.get("act", 0)))
+            except ValueError:
+                have = 0
+            activity = m.activity(have)
+            if activity:
+                events.append(["activity", {"items": activity, "next": have + len(activity)}])
+        return web.json_response({"v": token, "events": events})
 
     async def history(request):
         m = meeting(request)
@@ -506,6 +552,15 @@ def setup(app, bridge):
         return page("app.html", "LiveMinutes", "home", {"role": "organizer", "csrf": access.ORGANIZER_TOKEN},
                     "is-home")
 
+    def public_home():
+        """The bare tunnel address: a short note instead of a raw 404 (the organizer pages aren't reachable here)."""
+        nonce = secrets.token_urlsafe(16)
+        html = (TEMPLATES / "public-home.html").read_text().replace("{{NONCE}}", nonce)
+        csp = (f"default-src 'self'; script-src 'nonce-{nonce}'; style-src 'self'; img-src 'self'; font-src 'self'; "
+               "object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'")
+        return web.Response(text=html, content_type="text/html",
+                            headers={"Content-Security-Policy": csp, "Cache-Control": "no-store", **SECURITY_HEADERS})
+
     async def favicon(request):
         return web.FileResponse(STATIC / "img" / "logo.svg", headers={"Content-Type": "image/svg+xml"})
 
@@ -514,6 +569,8 @@ def setup(app, bridge):
     async def guard(request, handler):
         path = request.path
         if access.is_public(request) and not PUBLIC_PATHS.match(path):
+            if request.method == "GET" and path in ("/", "/m", "/m/"):
+                return public_home()
             raise web.HTTPNotFound()
         if request.method in WRITES and not access.same_origin(request):
             return web.json_response({"state": "csrf", "error": "Cross-site request refused."}, status=403)
@@ -540,6 +597,7 @@ def setup(app, bridge):
     for prefix in ("/m/{sid}/api", "/live/{sid}/api"):
         r.add_get(prefix + "/snapshot", get_snapshot)
         r.add_get(prefix + "/stream", stream)
+        r.add_get(prefix + "/poll", poll)
         r.add_get(prefix + "/history", history)
         r.add_get(prefix + "/export.md", export_md)
         r.add_post(prefix + "/edit", edit)
