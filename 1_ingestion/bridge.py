@@ -259,6 +259,7 @@ class Bridge:
             await self.attendee(s, "pause_recording")
         await self.attendee(s, "leave")
         s.wipe()
+        ui.meeting_deleted(s)  # the knowledge base forgets it too (ui/adapters.py: minutes_unapproved)
         s.consent_log("session_deleted", note="bridge files deleted; Attendee data is deleted once the bot has ended")
 
     def drop_audio(self, s):

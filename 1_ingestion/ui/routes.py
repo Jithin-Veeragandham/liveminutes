@@ -16,6 +16,7 @@ Guard (middleware)
 
 import asyncio
 import json
+import logging
 import re
 import secrets
 from pathlib import Path
@@ -26,6 +27,40 @@ import settings
 from live_view import BOT_ID
 from ui import access, adapters, demo, editlog, export, hub, view_url
 from ui.meeting import Meeting
+
+log = logging.getLogger("ui")
+BACKGROUND = web.AppKey("ui_background", asyncio.Task)
+_hook_tasks = set()  # running hook calls (kept so they aren't garbage-collected half-way)
+
+
+async def call_hook(name, *args):
+    """Call an optional adapter hook (sync functions run in a thread, async ones are awaited).
+    A failing hook is logged and never breaks the page."""
+    fn = getattr(adapters, name, None)
+    if fn is None:
+        return None
+    try:
+        if asyncio.iscoroutinefunction(fn):
+            return await fn(*args)
+        return await asyncio.get_running_loop().run_in_executor(None, fn, *args)
+    except Exception:
+        log.exception("adapter hook %s failed", name)
+        return None
+
+
+def fire_hook(name, *args):
+    if getattr(adapters, name, None) is None:
+        return None
+    task = asyncio.get_running_loop().create_task(call_hook(name, *args))
+    _hook_tasks.add(task)
+    task.add_done_callback(_hook_tasks.discard)
+    return task
+
+
+def minutes_changed(sid):
+    """After an approval, an undo of one, or the meeting being deleted: tell the knowledge base."""
+    record = editlog.get(sid).approved_record() if (settings.SESSIONS_DIR / sid).is_dir() else None
+    return fire_hook("minutes_approved", sid, record) if record else fire_hook("minutes_unapproved", sid)
 
 HERE = Path(__file__).parent
 STATIC, TEMPLATES = HERE / "static", HERE / "templates"
@@ -177,7 +212,7 @@ def setup(app, bridge):
             "presence": hub.presence(m.sid),
             "me": v.info(),
             "log": {"changes": len({e["change"] for e in log.entries}), "people": log.people()},
-            "ask": {"suggestions": adapters.ask_suggestions(), "note": adapters.SAMPLE_ASK_NOTE},
+            "ask": adapters.ask_info(),
         }
         if v.role == "organizer":
             activity = m.activity()
@@ -431,6 +466,8 @@ def setup(app, bridge):
         body = await body_of(request)
         rows = await guarded(editlog.get(m.sid).undo(lambda: state_of(m)[2], v.name, v.role,
                                                      str(body.get("item", ""))[:40], str(body.get("change", ""))[:40]))
+        if rows and rows[0]["item"] == "minutes":
+            minutes_changed(m.sid)
         return edited(m, v, rows)
 
     async def approve(request):
@@ -438,8 +475,15 @@ def setup(app, bridge):
         v = viewer_for(request, m)
         editable(m, v, request)
         body = await body_of(request)
+        snap = snapshot(m, v)
+        record = {"meeting_id": m.sid, "title": snap["session"]["title"], "platform": m.platform, "demo": m.demo,
+                  "sample": bool(snap["summary"]["sample"] or snap["actions"]["sample"]),
+                  "started_ms": snap["session"]["started_ms"], "ended_ms": snap["session"]["ended_ms"],
+                  "attendees": m.consented(),
+                  "transcript": [{k: l[k] for k in ("id", "speaker", "start", "end", "text")} for l in snap["lines"]]}
         rows = await guarded(editlog.get(m.sid).approve_minutes(lambda: state_of(m)[2], v.name, v.role,
-                                                                body.get("base_version")))
+                                                                body.get("base_version"), record))
+        minutes_changed(m.sid)  # the knowledge base indexes approved minutes only (adapters.minutes_approved)
         return edited(m, v, rows)
 
     async def presence(request):
@@ -464,7 +508,11 @@ def setup(app, bridge):
         question = " ".join(str((await body_of(request, 4000)).get("question", "")).split())[:300]
         if not question:
             raise fail(400, "invalid", "Type a question.")
-        return web.json_response(adapters.ask_source(question, m))
+        if asyncio.iscoroutinefunction(adapters.ask_source):
+            answer = await adapters.ask_source(question, m)
+        else:  # a sync ask_source (an LLM call, say) runs in a thread, so the bridge keeps serving meanwhile
+            answer = await asyncio.get_running_loop().run_in_executor(None, adapters.ask_source, question, m)
+        return web.json_response(answer)
 
     # ---------- organizer only ----------
     def organizer_write(request):
@@ -588,6 +636,20 @@ def setup(app, bridge):
                 response.headers["Cache-Control"] = "no-cache"
         return response
 
+    # adapters.background(bridge), if defined: started with the bridge, e.g. a summarizer that runs every
+    # few seconds during meetings (docs/INTEGRATION.md). Cancelled when the bridge stops.
+    async def start_background(app):
+        fn = getattr(adapters, "background", None)
+        if fn is not None:
+            app[BACKGROUND] = asyncio.get_running_loop().create_task(fn(bridge))
+
+    async def stop_background(app):
+        task = app.get(BACKGROUND)
+        if task is not None:
+            task.cancel()
+
+    app.on_startup.append(start_background)
+    app.on_cleanup.append(stop_background)
     app.middlewares.append(guard)
     r = app.router
     r.add_get("/favicon.ico", favicon)

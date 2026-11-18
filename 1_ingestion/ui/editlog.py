@@ -9,6 +9,15 @@ items (ui/adapters.py) with the log replayed on top. Every item has a version: a
 version it started from (base_version); if someone saved in between, it is refused with Conflict, and
 the page shows both versions instead of silently overwriting. Undo writes new lines that put the old
 values back (it never deletes a line), and only for an item's latest change.
+
+Protecting people's work from later LLM runs (docs/INTEGRATION.md, "Rules that protect edits"):
+  - The first log line for a generated item carries "base": the whole item as generated at that moment.
+    From then on the item is rebuilt from that base plus the log, never from the adapter again: a later
+    LLM run can't change any field of an item a person edited, approved or deleted, and the item stays
+    even if the adapter stops returning it.
+  - "Approve minutes" stores the whole approved record in its log line ("record"). While that approval
+    stands, generated items nobody touched are shown as approved, not as the adapter returns them now;
+    anything that differs afterwards (a person's edit, a new LLM item) marks the minutes "changed_since".
 """
 
 import asyncio
@@ -25,6 +34,14 @@ STATUSES = {"summary": ("draft", "approved"), "action": ("pending", "approved", 
 EDITABLE = {"summary": ("text", "status"), "action": ("text", "owner", "due", "status"), "meeting": ("title",)}
 TEXT_LIMIT = {"summary": 600, "action": 300}
 OWNER_LIMIT, TITLE_LIMIT = 80, 120
+# The fields of an item that belong to the record (what the adapters return, plus status). Used for the
+# frozen "base" of an edited item and for the approved record.
+ITEM_FIELDS = {"summary": ("id", "text", "type", "status", "source_line_ids", "version"),
+               "action": ("id", "text", "owner", "due", "status", "source_line_ids", "version")}
+
+
+def item_record(item):
+    return {k: item.get(k) for k in ITEM_FIELDS.get(item.get("kind"), ()) if k in item}
 
 
 class Invalid(Exception):
@@ -134,7 +151,21 @@ class EditLog:
                             "edited_by": None, "edited_ms": None, "last_change": None}
 
         last_item_edit_ms = 0
+        touched = set()      # generated items a person changed: frozen to their logged base
+        records = {}         # approval ms -> the approved record stored with it
         for e in self.entries:
+            if e.get("base") and e.get("kind") in ITEM_FIELDS:
+                base = {**e["base"], "id": e["item"]}
+                if e["item"] in by_id:
+                    it = by_id[e["item"]]
+                    for k in ITEM_FIELDS[e["kind"]]:
+                        if k in base:
+                            it[k] = base[k]
+                else:  # the adapter no longer returns it: it stays, as the person left it
+                    add(base, e["kind"], "generated")
+                touched.add(e["item"])
+            if e.get("op") == "approve" and e.get("kind") == "minutes" and e.get("record"):
+                records[int((e.get("after") or {}).get("ms") or 0)] = e["record"]
             if e.get("op") == "create":
                 if e["item"] not in by_id:
                     add({**(e.get("after") or {}), "id": e["item"]}, e["kind"], "added")
@@ -158,7 +189,25 @@ class EditLog:
 
         minutes = by_id["minutes"]
         approved = minutes.get("approved")
-        minutes["changed_since"] = bool(approved and last_item_edit_ms > int(approved.get("ms") or 0))
+        record = records.get(int(approved.get("ms") or 0)) if approved else None
+        new_since = False
+        if record:
+            # while the approval stands, untouched generated items show as approved, not as the adapter has them now
+            in_record = {}
+            for kind, key in (("summary", "summary"), ("action", "actions")):
+                for rec in record.get(key, []):
+                    in_record[rec["id"]] = (kind, rec)
+            for item_id, (kind, rec) in in_record.items():
+                it = by_id.get(item_id)
+                if it is None:
+                    add(rec, kind, "generated")
+                elif it.get("origin") == "generated" and item_id not in touched:
+                    for k in ITEM_FIELDS[kind]:
+                        if k in rec:
+                            it[k] = rec[k]
+            new_since = any(i not in in_record for i in order
+                            if by_id[i].get("kind") in ITEM_FIELDS and not by_id[i]["deleted"])
+        minutes["changed_since"] = bool(approved and (last_item_edit_ms > int(approved.get("ms") or 0) or new_since))
         live = [by_id[i] for i in order if not by_id[i]["deleted"]]
         return {"summary": [i for i in live if i["kind"] == "summary"],
                 "actions": [i for i in live if i["kind"] == "action"],
@@ -193,6 +242,12 @@ class EditLog:
             rows.append(row)
         return rows
 
+    def _with_base(self, rows, it):
+        """The first log line for a generated item carries the whole item as generated (see the module doc)."""
+        if rows and it.get("origin") == "generated" and not any(e.get("item") == it["id"] for e in self.entries):
+            rows[0]["base"] = item_record(it)
+        return rows
+
     def _last_change(self, item_id):
         rows = [e for e in self.entries if e.get("item") == item_id]
         if not rows:
@@ -219,7 +274,8 @@ class EditLog:
             if not fields:
                 return []
             op = "approve" if clean.get("status") == "approved" and len(fields) == 1 else "update"
-            return self._append(self._rows(who, role, op, it["kind"], item_id, fields, it["version"] + 1))
+            rows = self._rows(who, role, op, it["kind"], item_id, fields, it["version"] + 1)
+            return self._append(self._with_base(rows, it))
 
     async def create(self, get_state, who, role, kind, fields):
         if kind != "action":
@@ -235,8 +291,8 @@ class EditLog:
             it = self._current(get_state, item_id, base_version)
             if it["kind"] not in ("summary", "action") or it.get("deleted"):
                 raise Invalid("This item can't be deleted.")
-            return self._append(self._rows(who, role, "delete", it["kind"], item_id, [("deleted", False, True)],
-                                           it["version"] + 1))
+            rows = self._rows(who, role, "delete", it["kind"], item_id, [("deleted", False, True)], it["version"] + 1)
+            return self._append(self._with_base(rows, it))
 
     async def undo(self, get_state, who, role, item_id, change):
         async with self._lock():
@@ -253,12 +309,29 @@ class EditLog:
             return self._append(self._rows(who, role, "undo", it["kind"], item_id, fields, it["version"] + 1,
                                            undo_of=change))
 
-    async def approve_minutes(self, get_state, who, role, base_version):
+    async def approve_minutes(self, get_state, who, role, base_version, record=None):
+        """Mark the minutes approved by `who`, now. `record` (meeting details, attendees, transcript) is
+        stored in the log line, completed with the approved items and who/when: see approved_record()."""
         async with self._lock():
             it = self._current(get_state, "minutes", base_version)
             after = {"by": who, "ms": now_ms()}
-            return self._append(self._rows(who, role, "approve", "minutes", "minutes",
-                                           [("approved", it.get("approved"), after)], it["version"] + 1))
+            st = get_state()
+            full = {**(record or {}), "approved_by": who, "approved_ms": after["ms"], "minutes_version": it["version"] + 1,
+                    "summary": [item_record(i) for i in st["summary"]], "actions": [item_record(i) for i in st["actions"]]}
+            rows = self._rows(who, role, "approve", "minutes", "minutes", [("approved", it.get("approved"), after)],
+                              it["version"] + 1)
+            rows[0]["record"] = full
+            return self._append(rows)
+
+    def approved_record(self):
+        """The approved minutes record in effect now (after any undo of an approval), or None."""
+        approved, records = None, {}
+        for e in self.entries:
+            if e.get("kind") == "minutes" and e.get("field") == "approved":
+                approved = e.get("after")
+                if e.get("record"):
+                    records[int((approved or {}).get("ms") or 0)] = e["record"]
+        return records.get(int(approved.get("ms") or 0)) if approved else None
 
     # ---------- reading ----------
     def changes(self, item_id=None, who=None):

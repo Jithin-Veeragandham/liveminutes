@@ -18,17 +18,20 @@ export function askView(ctx) {
   input.addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); ask(input.value); } });
   input.addEventListener("input", () => { input.style.height = "auto"; input.style.height = `${Math.min(120, input.scrollHeight + 2)}px`; });
   const body = h("div", { class: "panel-body" }, thread);
+  const sampleChip = h("span", { class: "chip chip--warning", text: "Preview · sample data" });
   const panel = h("section", { class: "panel panel--ask", attrs: { "aria-labelledby": "h-ask" }, dataset: { panel: "ask" } },
     h("div", { class: "panel-head" }, icon("sparkles", { size: 16, cls: "head-icon" }), h("h2", { id: "h-ask", text: "Ask past meetings" }), h("span", { class: "spacer" }),
-      h("span", { class: "chip chip--warning", text: "Preview · sample data" })),
+      sampleChip),
     body, h("div", { class: "panel-foot" }, form));
 
   function render() {
     clear(thread);
     const st = ctx.ask;
+    const info = (ctx.snap && ctx.snap.ask) || { sample: true };
+    sampleChip.hidden = !info.sample;
     if (!st.thread.length) {
-      thread.appendChild(h("div", { class: "callout callout--warning" }, icon("info", { size: 15 }),
-        h("span", { text: (ctx.snap && ctx.snap.ask.note) || "Preview with sample data." })));
+      if (info.sample || info.note) thread.appendChild(h("div", { class: `callout ${info.sample ? "callout--warning" : ""}` }, icon("info", { size: 15 }),
+        h("span", { text: info.note || "Preview with sample data." })));
       const sug = (ctx.snap && ctx.snap.ask.suggestions) || [];
       thread.appendChild(h("div", { class: "empty", style: { minHeight: "0", padding: "20px 4px 8px" } },
         h("div", { class: "empty-art empty-art--accent" }, icon("message-square", { size: 22 })),
@@ -43,7 +46,7 @@ export function askView(ctx) {
       else thread.appendChild(h("div", { class: "bubble bubble--a" }, h("div", { text: m.answer }),
         m.source_meetings.length ? h("div", { class: "sources", attrs: { "aria-label": "From these meetings" } }, m.source_meetings.map((s) =>
           h("div", { class: "source-card" }, h("strong", { text: s.title }), h("span", { text: `${new Date(s.date + "T12:00").toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" })}${s.snippet ? " · “" + s.snippet + "”" : ""}` })))) : null,
-        h("div", { class: "fine", style: { marginTop: "8px" }, text: "Sample data · not from your meetings yet" })));
+        m.sample ? h("div", { class: "fine", style: { marginTop: "8px" }, text: "Sample data · not from your meetings yet" }) : null));
     }
     body.scrollTop = body.scrollHeight;
   }

@@ -667,3 +667,122 @@ async def test_every_route_but_the_participant_ones_is_blocked_through_a_tunnel(
                  f"POST /live/{SID}/api/rotate-code", "POST /webhook", "GET /health", "GET /attendee-websocket"):
         assert must in blocked, must
     s.close()
+
+
+# ================= edits are protected from later LLM runs; approval hooks for the knowledge base =================
+
+def fake_summary(monkeypatch, items):
+    """Make summary_source return `items` (a list the test changes, like a summarizer rerunning)."""
+    monkeypatch.setattr(adapters, "summary_source",
+                        lambda m: {"items": [dict(i) for i in items], "sample": False, "label": None, "note": ""})
+
+
+async def snapshot_items(client):
+    return {i["id"]: i for i in (await (await client.get(f"/live/{SID}/api/snapshot")).json())["summary"]["items"]}
+
+
+async def test_an_llm_rerun_never_overwrites_what_a_person_edited_or_approved(env, monkeypatch):
+    _, client, _, code = env
+    gen = [{"id": "s1", "text": "Ship Friday", "type": "point", "source_line_ids": [], "version": 1},
+           {"id": "s2", "text": "Budget is tight", "type": "point", "source_line_ids": [], "version": 1},
+           {"id": "s3", "text": "Nobody touches this", "type": "point", "source_line_ids": [], "version": 1}]
+    fake_summary(monkeypatch, gen)
+    csrf = await join(client, code, "Ann Lee")
+    assert (await edit(client, csrf, "s1", 1, status="approved")).status == 200      # approved, text untouched
+    assert (await edit(client, csrf, "s2", 1, text="Budget is fine after all")).status == 200
+    # the summarizer runs again: rewrites every item, changes s2's type, then drops s2 altogether
+    gen[0].update(text="Ship Monday", version=2)
+    gen[1].update(text="LLM rewrite", type="decision", version=2)
+    gen[2].update(text="Summarizer's newer wording", version=2)
+    items = await snapshot_items(client)
+    assert items["s1"]["text"] == "Ship Friday" and items["s1"]["status"] == "approved"   # approved: frozen whole
+    assert items["s2"]["text"] == "Budget is fine after all" and items["s2"]["type"] == "point"
+    assert items["s3"]["text"] == "Summarizer's newer wording"                      # untouched: follows the LLM
+    del gen[1]
+    items = await snapshot_items(client)
+    assert items["s2"]["text"] == "Budget is fine after all"                         # still there
+    rows = [json.loads(x) for x in (settings.SESSIONS_DIR / SID / "edits.jsonl").read_text().splitlines()]
+    assert rows[0]["base"] == {"id": "s1", "text": "Ship Friday", "type": "point", "status": "draft",
+                               "source_line_ids": [], "version": 1}               # what the freeze is based on
+
+
+async def test_approving_freezes_the_record_until_undone(env, monkeypatch):
+    _, client, _, code = env
+    gen = [{"id": "s1", "text": "Approved wording", "type": "point", "source_line_ids": [], "version": 1}]
+    fake_summary(monkeypatch, gen)
+    csrf = await join(client, code, "Ann Lee")
+    r = await client.post(f"/m/{SID}/api/approve", json={"base_version": 1}, headers={"X-CSRF-Token": csrf})
+    change = (await r.json())["change"]
+    gen[0].update(text="Later LLM wording", version=2)
+    snap = await (await client.get(f"/live/{SID}/api/snapshot")).json()
+    assert snap["summary"]["items"][0]["text"] == "Approved wording" and not snap["session"]["minutes"]["changed_since"]
+    gen.append({"id": "s9", "text": "A point the LLM added after approval", "type": "point", "source_line_ids": [], "version": 1})
+    snap = await (await client.get(f"/live/{SID}/api/snapshot")).json()
+    assert len(snap["summary"]["items"]) == 2 and snap["session"]["minutes"]["changed_since"]  # shown, and flagged
+    await client.post(f"/m/{SID}/api/undo", json={"item": "minutes", "change": change}, headers={"X-CSRF-Token": csrf})
+    items = await snapshot_items(client)
+    assert items["s1"]["text"] == "Later LLM wording"                                # no approval: live again
+
+
+async def test_approval_hook_gets_the_record_and_undo_or_deletion_unapproves(env, monkeypatch):
+    b, client, s, code = env
+    calls = []
+    monkeypatch.setattr(adapters, "minutes_approved", lambda sid, record: calls.append(("approved", sid, record)))
+    monkeypatch.setattr(adapters, "minutes_unapproved", lambda sid: calls.append(("unapproved", sid)))
+    csrf = await join(client, code, "Ann Lee")
+    await edit(client, csrf, "a1", 1, owner="Bob Stone")
+    r = await client.post(f"/m/{SID}/api/approve", json={"base_version": 1}, headers={"X-CSRF-Token": csrf})
+    change = (await r.json())["change"]
+    await asyncio.sleep(0.3)
+    kind, sid, record = calls[-1]
+    assert (kind, sid) == ("approved", SID)
+    assert {"meeting_id", "title", "platform", "demo", "sample", "started_ms", "ended_ms", "attendees", "transcript",
+            "summary", "actions", "approved_by", "approved_ms", "minutes_version"} <= set(record)
+    assert record["approved_by"] == "Ann Lee" and record["attendees"] == ["Ann Lee", "Bob Stone"]
+    assert record["actions"][0]["owner"] == "Bob Stone" and record["transcript"][0]["text"] == "Hello everyone"
+    assert ui.approved_minutes(SID)["approved_ms"] == record["approved_ms"]
+    assert [r["meeting_id"] for r in ui.all_approved_minutes()] == [SID]
+    await client.post(f"/m/{SID}/api/undo", json={"item": "minutes", "change": change}, headers={"X-CSRF-Token": csrf})
+    await asyncio.sleep(0.3)
+    assert calls[-1] == ("unapproved", SID) and ui.approved_minutes(SID) is None
+    await client.post(f"/m/{SID}/api/approve", json={"base_version": 3}, headers={"X-CSRF-Token": csrf})
+    await asyncio.sleep(0.3)
+    assert calls[-1][0] == "approved"
+    await b.on_chat(s, {"text": "no", "sender_uuid": "u2", "sender_name": "Bob Stone"})  # deleted: forget it
+    await asyncio.sleep(0.3)
+    assert calls[-1] == ("unapproved", SID) and ui.approved_minutes(SID) is None
+
+
+async def test_a_slow_or_async_ask_source_does_not_block_the_bridge(env, monkeypatch):
+    _, client, _, code = env
+    csrf = await join(client, code, "Ann Lee")
+
+    def slow(question, meeting):  # e.g. an LLM call
+        time.sleep(0.8)
+        return {"question": question, "answer": "slow", "source_meetings": [], "sample": False}
+    monkeypatch.setattr(adapters, "ask_source", slow)
+    asking = asyncio.ensure_future(client.post(f"/m/{SID}/api/ask", json={"question": "hi"}, headers={"X-CSRF-Token": csrf}))
+    await asyncio.sleep(0.1)
+    t0 = time.monotonic()
+    assert (await client.get(f"/m/{SID}/api/snapshot")).status == 200
+    assert time.monotonic() - t0 < 0.4                                   # the page still answers meanwhile
+    assert (await (await asking).json())["answer"] == "slow"
+
+    async def fast(question, meeting):
+        return {"question": question, "answer": "async", "source_meetings": [], "sample": False}
+    monkeypatch.setattr(adapters, "ask_source", fast)
+    r = await client.post(f"/m/{SID}/api/ask", json={"question": "hi"}, headers={"X-CSRF-Token": csrf})
+    assert (await r.json())["answer"] == "async"
+
+
+async def test_background_adapter_starts_with_the_bridge(aiohttp_client, monkeypatch):
+    started = asyncio.Event()
+
+    async def background(bridge):
+        started.set()
+        await asyncio.sleep(3600)
+    monkeypatch.setattr(adapters, "background", background, raising=False)
+    app = web.Application()
+    ui.setup(app, Bridge())
+    await aiohttp_client(app)
+    await asyncio.wait_for(started.wait(), 2)

@@ -1,9 +1,19 @@
 """Where the meeting page's summary, action items and answers come from: the only place teammates
-need to change to plug in their real code. Shapes: docs/UI_CONTRACT.md.
+need to change to plug in their real code. Shapes: docs/UI_CONTRACT.md. How: docs/INTEGRATION.md.
+Check your code against the contract:  .venv/bin/python -m pytest 1_ingestion/tests/test_contract.py
 
   summary_source(meeting)          -> {"items": [summary item], "sample": bool, "label": str|None, "note": str}
   actions_source(meeting)          -> {"items": [action item],  "sample": bool, "label": str|None, "note": str}
+      SYNC and FAST (well under 50 ms): called every time a meeting page is built, which is on page load and
+      on every live update for every viewer (several times a second in a busy meeting). Never call an LLM
+      here: run it in background() and return your cached result.
   ask_source(question, meeting)    -> {"question", "answer", "source_meetings": [...], "sample": bool}
+      Called once per question. Sync (runs in a thread) or async; may be slow (an LLM call is fine).
+  ask_info()                       -> {"sample": bool, "note": str, "suggestions": [str]}: the Ask panel's label
+  minutes_approved(meeting_id, record) / minutes_unapproved(meeting_id)
+      Hooks for the knowledge base: index ONLY approved minutes. Called in the background (sync ones in a
+      thread), after "Approve minutes", after undoing an approval, and when a meeting is deleted.
+  background(bridge)               optional: async, started once with the bridge (e.g. a summarizer loop)
 
 Today they return sample data (ui/fixtures/), labelled in the page. Demo meetings get the summary and
 action items from their script (labelled Demo). `meeting` is a ui.meeting.Meeting: .sid, .lines(),
@@ -79,5 +89,19 @@ def ask_source(question, meeting=None):
             "sample": True, "note": SAMPLE_ASK_NOTE}
 
 
-def ask_suggestions():
-    return list(fixture("sample_answers.json").get("suggestions", []))
+def ask_info():
+    """What the Ask panel shows before any question: {"sample": bool, "note": str, "suggestions": [str]}.
+    "sample": true shows the "Preview · sample data" label and the note. Set it to false with the real knowledge base."""
+    return {"sample": True, "note": SAMPLE_ASK_NOTE, "suggestions": list(fixture("sample_answers.json").get("suggestions", []))}
+
+
+def minutes_approved(meeting_id, record):
+    """A meeting's minutes were approved (or approved again after changes): index `record`, replacing any
+    earlier version of this meeting. `record` is described in docs/INTEGRATION.md ("Approved records only").
+    Skip it if record["demo"] or record["sample"] is true. Today: nothing (no knowledge base yet)."""
+    return None
+
+
+def minutes_unapproved(meeting_id):
+    """The approval was undone, or the meeting was deleted (someone said no): remove it from the index."""
+    return None
