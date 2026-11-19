@@ -281,9 +281,22 @@ function start(ctx) {
     else if (s.status === "ended" && s.expires_ms) add("info", "circle-check", `This meeting has ended. The notes stay open for editing until ${new Date(s.expires_ms).toLocaleDateString(undefined, { month: "short", day: "numeric" })}.`);
     if (!isOrg && !ctx.me().name && s.status !== "declined")
       add("info", "eye", "You're viewing only. Pick your name to edit the summary and action items.", h("button", { class: "btn btn--sm", type: "button", text: "Pick my name", on: { click: switchName } }));
-    if (isOrg && s.shared && !s.share.public)
-      add("warning", "globe", "Participants can't open the live notes yet: the link points to localhost.",
-        h("button", { class: "btn btn--sm", type: "button", text: "Set up sharing", on: { click: () => shareDialog(ctx) } }));
+    if (isOrg && !s.demo && s.status !== "declined") {
+      const live = s.status !== "ended", share = s.share || {}, tunnel = "bash 1_ingestion/tunnel.sh";
+      const button = (text) => h("button", { class: "btn btn--sm", type: "button", text, on: { click: () => shareDialog(ctx) } });
+      if (live && share.chat === "failed")
+        add("warning", "globe", "The participants' link and code couldn't be posted in the chat (Attendee refused the message). Post them again: Share, then Make a new code.", button("Share"));
+      else if (live && share.chat === "no_public_url")
+        add("warning", "globe", share.public
+          ? "The participants' link and code weren't posted in the chat: there was no public address when recording started. The tunnel is on now. Post them: Share, then Make a new code."
+          : `The participants' link and code weren't posted in the chat: there's no public address. Start the tunnel (${tunnel}), then Share, then Make a new code.`,
+          button("Share"));
+      else if (live && !share.public && share.chat !== "posted")
+        add("warning", "globe", `No public address: when everyone agrees, the participants' link won't be posted in the chat. Start the tunnel first: ${tunnel}`,
+          button("Set up sharing"));
+      else if (s.shared && !share.public)
+        add("warning", "globe", "Participants can't open the live notes now: the link points to localhost.", button("Set up sharing"));
+    }
   }
 
   let ticker = null;

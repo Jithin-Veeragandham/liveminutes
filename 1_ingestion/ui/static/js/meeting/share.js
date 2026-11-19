@@ -84,7 +84,10 @@ function organizerShare(ctx, rerender) {
     try {
       const r = await ctx.api.post("/rotate-code", { post: post.checked });
       ctx.snap.session.share = { ...ctx.snap.session.share, code: r.code, url: r.url, public: r.public };
-      toast(r.posted ? "New code posted in the meeting chat" : "New code made. Old links ask for it.", { kind: "success" });
+      if (r.not_posted === "chat_failed") toast("New code made, but the bot couldn't post it in the chat. Try again, or share it yourself.", { kind: "warning" });
+      else if (r.not_posted === "no_public_url") toast("New code made, but not posted: there's no public address. Start the tunnel first (bash 1_ingestion/tunnel.sh).", { kind: "warning" });
+      else toast(r.posted ? "New code posted in the meeting chat" : "New code made. Old links ask for it.", { kind: "success" });
+      if (r.posted) ctx.snap.session.share.chat = "posted";
       rerender();
     } catch (err) { toast(err.message, { kind: "error" }); }
   };

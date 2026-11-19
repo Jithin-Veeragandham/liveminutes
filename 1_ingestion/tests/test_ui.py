@@ -95,17 +95,20 @@ def test_code_alphabet_and_format():
     assert access.normalize_code(" k7q-m4x ") == "K7QM4X"
 
 
-async def test_share_message_once_after_consent_and_code_stored_hashed(env):
-    b, client, s, code = env
+async def test_share_message_once_after_consent_and_code_stored_hashed(monkeypatch):
+    monkeypatch.setattr(settings, "PUBLIC_BASE_URL", "https://notes.example.org")
+    b = Bridge()
+    s, code = await consented_meeting(b)
     shares = [m for m in b.chat if "/m/bot_ui_test" in m]
     assert len(shares) == 1 and access.pretty(code) in shares[0] and "\n" not in shares[0]
-    assert b.chat.index(shares[0]) > b.chat.index("Thanks, everyone agreed. Recording started.")
+    assert shares[0].startswith("Thanks, everyone agreed. Recording started. Live notes for everyone: https://notes.example.org/m/")
     stored = (settings.SESSIONS_DIR / SID / "access.json").read_text()
     assert code not in stored and access.pretty(code) not in stored
     # a late joiner pauses and resumes recording, but no second link is posted
     await b.on_join_leave(s, {"participant_uuid": "u3", "participant_name": "Cy", "event_type": "join"})
     await b.on_chat(s, {"text": "yes", "sender_uuid": "u3", "sender_name": "Cy"})
     assert len([m for m in b.chat if "/m/bot_ui_test" in m]) == 1
+    s.close()
 
 
 async def test_not_shared_before_consent(aiohttp_client):
@@ -526,7 +529,8 @@ async def test_demo_runs_the_real_consent_flow(aiohttp_client):
     await asyncio.wait_for(run.task, 15)
     s = b.sessions[sid]
     assert "In this meeting:\n• Maya Chen\n• Daniel Okafor\n• Priya Raman" in b.chat[0]
-    assert any(m.startswith("Live notes for everyone:") and d["code"] in m for m in b.chat)
+    shares = [m for m in b.chat if "Live notes for everyone:" in m]
+    assert len(shares) == 1 and d["code"] in shares[0] and shares[0].startswith("Thanks, everyone agreed. Recording started.")
     assert "Paused: waiting for Leo Martins to reply yes." in b.chat
     assert "Thanks, everyone agreed. Recording resumed." in b.chat
     assert run.dropped == 1                                   # said while Leo hadn't answered yet: not kept

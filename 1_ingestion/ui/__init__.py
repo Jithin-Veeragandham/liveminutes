@@ -1,9 +1,10 @@
 """The participants' shared live view (/m/<id>), editing with an append-only edit log, the redesigned
 organizer pages, and Demo mode. See docs/UI.md and docs/UI_CONTRACT.md.
 
-bridge.py calls only these four:
+bridge.py calls only these:
   setup(app, bridge)   add the routes and the request guard
-  share_message(s)     once per meeting, after everyone said yes: the chat line with the link + access code
+  recording_allowed(s) each time everyone said yes: (first time?, the chat line with the link + access code)
+  link_not_posted(s)   Attendee refused that chat message
   meeting_ended(s)     the bot left: the access code expires VIEW_ACCESS_DAYS from now
   meeting_deleted(s)   someone said no and the session was wiped: the knowledge base must forget it
 
@@ -14,7 +15,7 @@ For teammates' code (docs/INTEGRATION.md):
 
 import settings
 from ui import access
-from ui.meeting import write_meta
+from ui.meeting import read_meta, write_meta
 
 
 def notify(meeting_id):
@@ -66,16 +67,41 @@ def view_url(sid):
     return f"{(base or settings.LIVE_VIEW_URL or 'http://localhost:8776').rstrip('/')}/m/{sid}", bool(base)
 
 
-def share_message(s):
-    """The one chat message with the link and a new access code. None if it was posted before."""
-    if s.declined or access.read_record(s.bot_id) is not None:
-        return None
-    code = access.create_code(s.bot_id)
-    write_meta(s.bot_id, platform="teams" if s.is_teams() else "meet")
-    url, _ = view_url(s.bot_id)
-    days = settings.VIEW_ACCESS_DAYS
+def link_text(url, code):
+    """The chat text with the participants' link and access code. One line: Teams types it key by key."""
     return (f"Live notes for everyone: {url} (access code {access.pretty(code)}). "
-            f"Open it, enter the code and pick your name. It stops working {days:g} days after the meeting.")
+            f"Open it, enter the code and pick your name. It stops working {settings.VIEW_ACCESS_DAYS:g} days "
+            "after the meeting.")
+
+
+def recording_allowed(s, share=True):
+    """bridge.evaluate() calls this every time everyone present has said yes and recording opens.
+    Returns (first, link):
+      first  True only the first time in this meeting. Kept in meta.json, so a bridge restart doesn't repeat it.
+      link   the chat text with the participants' link and access code, or None. Given once, the first time,
+             and only with a public address (tunnel.sh): a localhost link is no use to participants. Without
+             one, nothing is posted, the organizer view shows a warning, and Share > "Make a new code" posts
+             the link once the tunnel runs. Demo meetings post the local link: they run on this computer.
+      share  False when the bridge has no live view (LIVE_VIEW_URL=""): only `first` is wanted."""
+    if s.declined or getattr(s, "ui_allowed_ms", None) or read_meta(s.bot_id).get("allowed_ms"):
+        return False, None
+    s.ui_allowed_ms = access.now_ms()
+    if not share:
+        write_meta(s.bot_id, allowed_ms=s.ui_allowed_ms)
+        return True, None
+    url, public = view_url(s.bot_id)
+    # Reuse a code the organizer already made (Share > Make a new code before everyone agreed), else make one.
+    code = access.CODES.get(s.bot_id) if access.read_record(s.bot_id) else None
+    code = code or access.create_code(s.bot_id)
+    post = public or s.demo
+    write_meta(s.bot_id, allowed_ms=s.ui_allowed_ms, platform="teams" if s.is_teams() else "meet",
+               chat_link="posted" if post else "no_public_url")
+    return True, (link_text(url, code) if post else None)
+
+
+def link_not_posted(s):
+    """Attendee refused the chat message with the link: the organizer view says so (Share > Make a new code)."""
+    write_meta(s.bot_id, chat_link="failed")
 
 
 def meeting_ended(s):

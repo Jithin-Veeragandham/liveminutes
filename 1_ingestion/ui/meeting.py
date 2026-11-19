@@ -24,6 +24,10 @@ def read_json(path, default=None):
         return default
 
 
+def read_meta(sid):
+    return read_json(settings.SESSIONS_DIR / sid / "meta.json", {}) or {}
+
+
 def write_meta(sid, **fields):
     """sessions/<id>/meta.json: what the UI needs after a restart (first-audio time, title, platform)."""
     folder = settings.SESSIONS_DIR / sid

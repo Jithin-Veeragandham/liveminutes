@@ -57,11 +57,16 @@ def spoken_text(groq_json):
 
 
 class Bridge:
+    # Pause between two chat messages from the bot: 1 s + 10 ms per character, at most 3 s
+    # (well under the 10 s Attendee waits for a webhook answer).
+    CHAT_GAP_S, CHAT_GAP_PER_CHAR_S, CHAT_GAP_MAX_S = 1.0, 0.01, 3.0
+
     def __init__(self, http, consent_required):
         self.http = http                      # aiohttp client, for Attendee and Groq
         self.consent_required = consent_required
         self.sessions = {}                    # bot_id -> Session
         self.live_url = settings.LIVE_VIEW_URL
+        self.chat_locks, self.chat_free_at = {}, {}  # bot_id -> lock / when the next chat message may go
         # upload queue
         self.queue = []                       # (session, piece) waiting for upload
         self.wake = asyncio.Event()           # set when something is queued
@@ -110,10 +115,19 @@ class Bridge:
             return 0, str(e) or type(e).__name__
 
     async def say(self, s, text):
-        """Post in the meeting chat."""
+        """Post in the meeting chat, one message at a time per meeting. Teams types each message key by
+        key: one sent while the last is still being typed is lost or merged into it, so wait between them."""
         s.sent_texts.add(text.strip())  # so we ignore it when it comes back through the chat webhook
-        s.consent_log("bot_chat", text=text)
-        await self.attendee(s, "send_chat_message", {"message": text, "to": "everyone"})
+        lock = self.chat_locks.setdefault(s.bot_id, asyncio.Lock())
+        async with lock:
+            wait = self.chat_free_at.get(s.bot_id, 0) - time.monotonic()
+            if wait > 0 and not s.demo:
+                await asyncio.sleep(wait)
+            s.consent_log("bot_chat", text=text)
+            status = await self.attendee(s, "send_chat_message", {"message": text, "to": "everyone"})
+            self.chat_free_at[s.bot_id] = time.monotonic() + min(
+                self.CHAT_GAP_MAX_S, self.CHAT_GAP_S + self.CHAT_GAP_PER_CHAR_S * len(text))
+        return status
 
     # ================= Webhooks from Attendee =================
 
@@ -198,7 +212,7 @@ class Bridge:
         decision = parse_reply(text)  # "yes" / "no" / None
         target = sender               # whose answer this is
         if decision is None and sender is not None:  # maybe "<name> yes", for a room, phone line or bot
-            vouch = parse_vouch(text, [p.name for p in s.present()])
+            vouch = parse_vouch(text, [p.name for p in s.present()], own_name=s.bot_name)
             if vouch:
                 name, decision = vouch
                 target = next(p for p in s.present() if p.name == name)
@@ -228,12 +242,15 @@ class Bridge:
         if present and not waiting:
             if not s.recording:
                 s.recording = True
+                # Decided before any await: audio can arrive during resume_recording and set t0_ms.
+                first, link = ui.recording_allowed(s, share=bool(self.live_url))  # link: first time, public address
                 s.consent_log("resumed", people=[p.name for p in present])
                 await self.attendee(s, "resume_recording")
-                await self.say(s, f"Thanks, everyone agreed. Recording {'resumed' if s.t0_ms else 'started'}.")
-                message = ui.share_message(s) if self.live_url else None  # once: participants' link + code
-                if message:
-                    await self.say(s, message)
+                thanks = f"Thanks, everyone agreed. Recording {'started' if first else 'resumed'}."
+                # One message: two sent back to back on Teams lose or merge the second one.
+                status = await self.say(s, f"{thanks} {link}" if link else thanks)
+                if link and isinstance(status, int) and not 200 <= status < 300:
+                    ui.link_not_posted(s)
         elif s.recording:
             await self.close_gate(s, f"waiting for {', '.join(waiting)}" if waiting else "nobody left in the meeting")
             if waiting:

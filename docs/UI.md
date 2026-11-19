@@ -8,7 +8,10 @@ The meeting page that everyone in the call can open, plus the organizer pages, a
 ## 1. How people get in
 
 1. The bot joins, and everyone says yes in the meeting chat (the consent flow in [INGESTION.md](INGESTION.md)).
-2. The bot posts one message: `Live notes for everyone: https://…/m/<meeting> (access code K7Q-M4X). …`
+2. The first time everyone has said yes, the bot posts one message: `Thanks, everyone agreed. Recording started. Live notes for everyone: https://…/m/<meeting> (access code K7Q-M4X). …`
+   - Once per meeting, whether that moment says "started" or "resumed". Later pauses and resumes don't post it again; only **Share → Make a new code** (with "Post in chat" ticked) does.
+   - Only with a public address (section 2). Without one the bot posts nothing (a localhost link is no use to others) and the organizer view shows a warning. Start the tunnel, then **Share → Make a new code**.
+   - The bot sends its chat messages one at a time, 1 to 3 s apart: Teams types each message key by key, and one sent while the last is still being typed gets lost or merged into it.
 3. A participant opens the link and types the 6-character code.
    - The code has no 0/O, 1/I or L.
    - Paste works, and the QR code in the share dialog fills it in.
@@ -49,7 +52,7 @@ What `tunnel.sh` does:
    It's kept in `sessions/.ui_public_url`, so it survives a bridge restart.
 4. Waits until the new address answers (a few seconds), then prints it.
 
-Ctrl+C stops the tunnel, and links go back to localhost.
+Ctrl+C stops the tunnel, and links go back to localhost. It clears the address only if it is still its own, so an older `tunnel.sh` stopping late doesn't wipe a newer tunnel's address. **Start `tunnel.sh` before sending the bot**, and keep one running.
 
 Other options:
 - Paste a tunnel address into **Share → Public address** in the organizer view.
@@ -61,7 +64,7 @@ Quick tunnels get a new address every time, which is why there's a runtime setti
 
 **The bare tunnel address** (`https://<random>.trycloudflare.com/`) shows a short page: "Open the link from your meeting chat".
 
-**Without a public address**, links point to `http://localhost:8776` and only open on the organizer's computer. The organizer view shows a yellow banner about it.
+**Without a public address**, links point to `http://localhost:8776` and only open on the organizer's computer. The organizer view shows a yellow banner about it, before everyone agrees ("the link won't be posted") and after ("weren't posted"), and the bot doesn't post the link.
 
 **What the tunnel exposes:** only `/m/<meeting>/…` (the participant page and its API), `/static/…` and that short page at `/`. Everything else asked for through a tunnel gets 404:
 - the organizer pages and every organizer API (sessions, meetings, demo start, public URL, a meeting's snapshot, edit log, rotate code, edits);

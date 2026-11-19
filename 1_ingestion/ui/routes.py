@@ -25,8 +25,8 @@ from aiohttp import web
 
 import settings
 from live_view import BOT_ID
-from ui import access, adapters, demo, editlog, export, hub, view_url
-from ui.meeting import Meeting
+from ui import access, adapters, demo, editlog, export, hub, link_text, view_url
+from ui.meeting import Meeting, read_meta, write_meta
 
 log = logging.getLogger("ui")
 BACKGROUND = web.AppKey("ui_background", asyncio.Task)
@@ -200,7 +200,10 @@ def setup(app, bridge):
                 "started_ms": m.started_ms(), "ended_ms": m.ended_ms(), "server_ms": access.now_ms(),
                 "expires_ms": access.expires_ms(m.sid, m.live) if record else None,
                 "shared": record is not None, "minutes": st["minutes"],
-                "share": {"url": url, "public": public, "code": access.pretty(code) if code else None},
+                "share": {"url": url, "public": public, "code": access.pretty(code) if code else None,
+                          # posted | no_public_url (recording started without a tunnel: nothing posted)
+                          # | failed (Attendee refused the message) | None (not yet)
+                          "chat": read_meta(m.sid).get("chat_link")},
                 "dropped_lines": run.dropped if run else 0,
             },
             "people": m.people(),
@@ -528,13 +531,24 @@ def setup(app, bridge):
         body = await body_of(request, 1000) if request.can_read_body else {}
         code = access.create_code(m.sid)
         url, public = view_url(m.sid)
-        posted = False
+        posted, why = False, None
         s = sessions.get(m.sid)
-        if body.get("post") and s is not None and m.live:
-            await bridge.say(s, f"New access code for the live notes: {url} (code {access.pretty(code)}).")
-            posted = True
+        if body.get("post"):
+            if s is None or not m.live:
+                why = "ended"
+            elif not (public or m.demo):
+                why = "no_public_url"  # a localhost link is no use to participants: post nothing
+            else:
+                # The only way the link is posted again after the first time (ui.recording_allowed).
+                status = await bridge.say(s, f"New access code. {link_text(url, code)}")
+                if isinstance(status, int) and not 200 <= status < 300:
+                    why = "chat_failed"  # Attendee refused it
+                else:
+                    write_meta(m.sid, chat_link="posted")
+                    posted = True
         hub.touch(m.sid)
-        return web.json_response({"code": access.pretty(code), "url": url, "public": public, "posted": posted})
+        return web.json_response({"code": access.pretty(code), "url": url, "public": public, "posted": posted,
+                                  "not_posted": why})
 
     async def start_demo(request):
         organizer_write(request)
@@ -576,12 +590,19 @@ def setup(app, bridge):
                                   "view_access_days": settings.VIEW_ACCESS_DAYS})
 
     async def public_url(request):
+        """Set or clear the participants' address. {"url": "", "only_if": <address>} clears it only if it is
+        still that address: tunnel.sh stopping must not wipe the address of a tunnel started after it."""
         organizer_write(request)
+        body = await body_of(request, 2000)
+        if "only_if" in body and access.public_base_url() != str(body["only_if"] or "").strip().rstrip("/"):
+            return web.json_response({"public_base_url": access.public_base_url(), "changed": False})
         try:
-            url = access.set_public_base_url((await body_of(request, 2000)).get("url"))
+            url = access.set_public_base_url(body.get("url"))
         except ValueError as e:
             raise fail(400, "invalid", str(e)) from None
-        return web.json_response({"public_base_url": url})
+        for sid in list(sessions):
+            hub.touch(sid)  # open organizer pages update their sharing warning
+        return web.json_response({"public_base_url": url, "changed": True})
 
     # ---------- pages ----------
     async def participant_page(request):
