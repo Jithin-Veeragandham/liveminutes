@@ -13,7 +13,7 @@ Attendee  (localhost:8000)
 bridge.py  (liveminutes-bridge container)
    1. consent: pause the bot, ask in chat, keep nothing until everyone says yes
    2. cut audio at pauses (2–10 s pieces)
-   3. upload each piece to Groq (max 12 uploads/min, fits the free tier)
+   3. upload each piece to Groq (max 19/min and 7,000 billed s/hour, fits the free tier)
    ▼
 "[mm:ss] Name: text" printed live + sessions/<bot_id>/transcript.txt
 ```
@@ -59,9 +59,10 @@ Everything else:
   - Late joiner → everyone paused until they (or someone for them) say yes.
   - Anyone says no, for themselves or as `<name> no` → "Recording stopped.", the bot leaves, and the session is deleted here and in Attendee (only `consent.jsonl` is kept).
   - No answer → reminder after 2 min, leave after 2 more.
-- **Groq pacing:** pieces end at a 0.7 s pause or at 10 s (the billing minimum). Pieces with < 0.3 s of speech are skipped. At most 12 uploads/min, with backlog merged and 429s retried.
+- **Groq pacing:** pieces end at a 0.7 s pause or at 10 s (the billing minimum). Pieces with < 0.3 s of speech are skipped. Uploads stay inside both of Groq's free-tier limits: at most 19 per rolling minute (Groq: 20) and 7,000 billed audio-seconds per rolling hour (Groq: 7,200; every upload counts as at least 10 s). The old flat 12/min queued lines for up to 50 s in 3–5 person meetings, which needed up to 16 uploads/min. Backlog is still merged and 429s retried. Groq also allows 2,000 uploads a day; a 30 min meeting uses ~320 (`left_req_day` in `pieces.jsonl` shows what's left).
 - **Context:** each speaker's last 40 words go in as the Whisper `prompt`.
 - **Merging:** back-to-back pieces from the same speaker with ≤ 3 s pause become one transcript line (`MERGE_GAP_MS` in `settings.py`).
+- **Live notes:** every 30 s (`NOTES_INTERVAL_S`) the bridge sends the transcript lines that came in since the last update, plus the notes so far, to the LLM summarizer (`notes.py` → `2_summarization/llm_summarizer.py`; provider, model and key from `.env`, default Gemini `gemini-3.5-flash-lite`). `/live/<bot_id>` shows a **Live summary** and **Action items** (task, owner, due), a countdown bar to the next update, the LLM rate-limit use (calls this minute / today, capped by `NOTES_RPM_LIMIT`), and **Sent to the LLM**: one entry per call with the transcript range, line and word counts, time taken, tokens, and the exact text sent. Saved in `sessions/<bot_id>/notes.json`; one last update runs when the meeting ends. No key → the bridge runs as before and the page says why. Demo without a meeting: `python tests/replay_transcript.py sessions/<bot_id>/transcript.txt`, then open http://localhost:8777/live/bot_replayDemo.
 - **Live view:** http://localhost:8776/live has two tabs. **Sessions** lists sessions. **Send bot** takes a Meet or Teams link and a bot name, sends the bot (the same request as `send_bot.sh`), then shows its logs, updating every 2 s: Attendee's own record of the bot (joining, waiting room, fatal errors and why), what the bridge saw (webhooks, people, consent, chat) and every Groq upload, with filters per source. Any session's logs open from its **logs** link. Only the page itself can send bots: the endpoint takes JSON only, from `localhost` (or `LIVE_VIEW_URL`), so another website can't use your Attendee key. `/live/<bot_id>` shows the transcript, who has consented and the bot's activity (state changes, its chat messages, replies, Groq errors). It long-polls: the bridge answers the page the moment a line or event comes in, instead of the page asking once a second. The bot posts this link in the meeting chat after the consent message. It's `localhost`, so it opens only on the computer running the bridge. Finished sessions are read back from `sessions/`.
 
 ## 1.3 Output (what downstream components read)

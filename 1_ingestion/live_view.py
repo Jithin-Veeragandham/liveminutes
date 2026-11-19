@@ -1,7 +1,8 @@
 """The live view in the browser: http://localhost:8776/live
 
   /live                    home.html, two tabs: Sessions, and Send bot (send a bot + watch its logs)
-  /live/<bot_id>           the page (live.html): transcript, who said yes, bot activity
+  /live/<bot_id>           the page (live.html): transcript, live summary + action items (notes.py), who said
+                           yes, bot activity, and what was sent to the LLM
   /live/<bot_id>/data      JSON for the page (?after=N: only activity lines from N on; ?v=V: wait until
                            something changes after version V, a long poll, so new lines show at once)
   /live/<bot_id>/logs      JSON the Send bot tab polls: Attendee's record of the bot + bridge activity + Groq uploads
@@ -11,6 +12,7 @@
 
 import json
 import re
+import time
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -19,6 +21,10 @@ from aiohttp import web
 
 import settings
 from chat import plain
+
+
+def now_ms():
+    return int(time.time() * 1000)
 
 BOT_ID = re.compile(r"^[A-Za-z0-9_-]{1,64}$")         # also stops "../" tricks in file paths
 TRANSCRIPT_LINE = re.compile(r"^\[(\d\d:\d\d)\] ([^:]+): (.*)$")
@@ -57,9 +63,46 @@ def activity_line(event, f):
     return "consent", event.replace("_", " ")
 
 
-def live_data(s, after):
+def notes_view(ln, s):
+    """The notes panel for a running session: summary, action items, when the next update runs, rate-limit use,
+    and the log of what was sent to the LLM. ln: the bridge's notes.LiveNotes."""
+    now = now_ms()
+    view = {"enabled": ln.enabled, "reason": ln.reason, "interval_s": settings.NOTES_INTERVAL_S, "now_ms": now,
+            "rate": {"minute": ln.calls_since(now - 60_000), "minute_limit": settings.NOTES_RPM_LIMIT,
+                     "day": ln.calls_since(now - 86_400_000), "day_limit": settings.NOTES_RPD_LIMIT},
+            "tokens": dict(ln.tokens)}
+    if not ln.enabled:
+        return view
+    view["model"] = ln.model
+    st = s.notes
+    if st is None or s.declined:
+        return {**view, "waiting": "declined" if s.declined else "first audio"}
+    view.update(summary=st.notes.summary if st.notes else "",
+                action_items=[vars(a) for a in st.notes.action_items] if st.notes else [],
+                updates=st.part, next_due_ms=st.next_due_ms, busy=st.busy, error=st.error,
+                updated_ms=st.updated_ms, history=st.history[-50:])
+    return view
+
+
+def saved_notes(bot_id):
+    """The notes panel for a session that is only on disk (notes.json)."""
+    path = settings.SESSIONS_DIR / bot_id / "notes.json"
+    if not path.exists():
+        return {"enabled": False, "reason": "no notes saved for this session"}
+    try:
+        d = json.loads(path.read_text())
+    except ValueError:
+        return {"enabled": False, "reason": "notes.json is unreadable"}
+    return {"enabled": True, "saved": True, "model": d.get("model"), "interval_s": d.get("interval_s"),
+            "summary": d.get("summary", ""), "action_items": d.get("action_items", []),
+            "updated_ms": d.get("updated_ms"), "history": d.get("history", [])[-50:],
+            "updates": sum(1 for h in d.get("history", []) if h.get("status") == "ok")}
+
+
+def live_data(s, after, ln=None):
     """Page data for a session the bridge is running now."""
     return {
+        "notes": notes_view(ln, s) if ln else None,
         "bot_id": s.bot_id, "bot_name": s.bot_name, "state": s.state, "live": True,
         "recording": s.recording, "declined": s.declined, "consent": s.consent_required,
         "people": [{"name": p.name, "present": p.present, "decision": p.decision, "vouched_by": p.vouched_by}
@@ -100,7 +143,8 @@ def saved_data(bot_id, after):
             if m:
                 transcript.append({"t": m[1], "who": m[2], "text": m[3]})
     activity = saved_activity(bot_id)
-    return {"bot_id": bot_id, "bot_name": None, "state": "saved" if folder.exists() else "not found",
+    return {"notes": saved_notes(bot_id),
+            "bot_id": bot_id, "bot_name": None, "state": "saved" if folder.exists() else "not found",
             "live": False, "recording": False, "declined": False, "consent": True, "people": [],
             "transcript": transcript, "activity": activity[after:], "next": len(activity)}
 
@@ -268,7 +312,7 @@ def add_routes(app, bridge):
         s = sessions.get(bot_id)
         if s and version is not None:
             await s.wait_for_change(version, LONG_POLL_S)
-        return web.json_response(live_data(s, after) if s else saved_data(bot_id, after))
+        return web.json_response(live_data(s, after, bridge.notes) if s else saved_data(bot_id, after))
 
     async def logs(request):
         bot_id = checked_bot_id(request)
