@@ -60,3 +60,10 @@ CONSENT_REQUIRED = "--no-consent" not in sys.argv  # bridge.py --no-consent reco
 # Environment variables only so tests/consent_sim.py can use short timers.
 REMIND_AFTER_S = int(os.environ.get("CONSENT_REMIND_S", 120))  # remind people who haven't answered
 LEAVE_AFTER_S = int(os.environ.get("CONSENT_LEAVE_S", 240))    # then the bot leaves
+
+# ---- Shared live view for participants (ui/, see docs/UI.md) ----
+# Where participants open the meeting page, e.g. a Cloudflare quick tunnel: https://<random>.trycloudflare.com
+# "" = localhost only (the organizer view says so). tunnel.sh can also set it while the bridge runs.
+PUBLIC_BASE_URL = os.environ.get("PUBLIC_BASE_URL", "").strip().rstrip("/")
+VIEW_ACCESS_DAYS = float(os.environ.get("VIEW_ACCESS_DAYS", 7))  # the access code stops working this long after the meeting
+UI_SECRET = os.environ.get("UI_SECRET", "")  # signs viewer cookies; "" = a random key kept in sessions/.ui_secret

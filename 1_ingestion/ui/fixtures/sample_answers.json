@@ -1,0 +1,27 @@
+{
+  "_about": "Sample answers for the Ask panel until the knowledge base over past meetings is connected (Ashmit). Invented meetings.",
+  "fallback": {
+    "answer": "I couldn't find that in the sample meetings. When the knowledge base is connected, this searches every past meeting's transcript and minutes.",
+    "source_meetings": []
+  },
+  "answers": [
+    {"match": ["launch", "date", "release", "ship", "december"],
+     "answer": "The launch was planned for December 2. In the Nov 10 launch sync the team kept that date but flagged App Store review time as the main risk.",
+     "source_meetings": [{"id": "sample-1110", "title": "Launch sync", "date": "2026-11-10", "snippet": "We keep December 2, but review time is the risk."}]},
+    {"match": ["sync", "bug", "offline", "duplicate", "crash"],
+     "answer": "Offline sync came up twice: on Nov 3 the team agreed to rebuild the reconnect logic, and on Nov 10 Daniel reported it was in beta behind a flag.",
+     "source_meetings": [{"id": "sample-1103", "title": "Engineering weekly", "date": "2026-11-03", "snippet": "Rebuild reconnect so edits can't replay."},
+                         {"id": "sample-1110", "title": "Launch sync", "date": "2026-11-10", "snippet": "The new reconnect is in beta behind a flag."}]},
+    {"match": ["onboarding", "design", "mockup", "screens", "icon"],
+     "answer": "Design reviewed onboarding on Nov 6 and cut it from five screens to three. The sync status icon was parked for later.",
+     "source_meetings": [{"id": "sample-1106", "title": "Design review", "date": "2026-11-06", "snippet": "Five onboarding screens down to three."}]},
+    {"match": ["campaign", "marketing", "email", "blog", "announcement"],
+     "answer": "Marketing planned an email and a blog post for launch day, both scheduled on a Tuesday (the best day for email opens).",
+     "source_meetings": [{"id": "sample-1104", "title": "Marketing plan", "date": "2026-11-04", "snippet": "Email and blog on launch Tuesday."}]},
+    {"match": ["owner", "who", "action", "follow", "todo", "task"],
+     "answer": "Open follow-ups from past meetings: Daniel owns the reconnect rewrite, Priya owns the onboarding screens, Leo owns the launch email.",
+     "source_meetings": [{"id": "sample-1103", "title": "Engineering weekly", "date": "2026-11-03", "snippet": "Daniel takes the reconnect rewrite."},
+                         {"id": "sample-1106", "title": "Design review", "date": "2026-11-06", "snippet": "Priya owns onboarding."}]}
+  ],
+  "suggestions": ["What did we decide about the launch date?", "What's the history of the sync bug?", "Who owns the open follow-ups?"]
+}

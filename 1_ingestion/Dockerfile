@@ -12,6 +12,7 @@ COPY requirements.txt .
 RUN sed -n '/^# ---- 1\. Ingestion/,/^# ---- 2\./p' requirements.txt > ingestion.txt \
  && pip install --no-cache-dir -r ingestion.txt && rm ingestion.txt
 COPY 1_ingestion/*.py 1_ingestion/*.html ./
+COPY 1_ingestion/ui ./ui
 
 # Run as a normal user, not root. certs/ and sessions/ are mounted in by compose.
 RUN useradd --uid 10001 bridge && mkdir sessions && chown bridge sessions
