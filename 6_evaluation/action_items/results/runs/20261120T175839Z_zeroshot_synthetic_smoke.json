@@ -1,0 +1,268 @@
+{
+ "run_id": "20261120T175839Z_zeroshot_synthetic_smoke",
+ "commit": "e293eea46b23f60dd2c26b72110d7b8f0d8c5055",
+ "uncommitted_changes": [],
+ "system": "zeroshot",
+ "data": "synthetic",
+ "split": "smoke",
+ "meetings": [
+  "SY0201a"
+ ],
+ "meetings_hash": "7226b663059b",
+ "data_hashes": {
+  "data_hash": "05c3edc4c51d15656838019bed847033038c535b352a07dcf4af25f1c694ebbc",
+  "commit": "d0cbb4b3670d12611553648b2b571cc0f4efc914",
+  "files": 2
+ },
+ "config": {
+  "baseline": "zeroshot",
+  "zeroshot": {
+   "model": "facebook/bart-large-mnli",
+   "revision": "d7645e127eaf1aefc7862fd59a17a5aa8558b8ce",
+   "hypothesis_template": "{}",
+   "mode": "entailment",
+   "hypothesis": "In this text, someone commits to doing a task or is asked to do one.",
+   "context": "none",
+   "threshold": 0.9994,
+   "min_words": 3,
+   "min_content_words": 2,
+   "batch_size": 32,
+   "device": "auto"
+  },
+  "rules": {
+   "lookahead_lines": 3,
+   "merge_jaccard": 0.4,
+   "merge_window_lines": 1,
+   "min_text_words": 3,
+   "text_until": "sentence"
+  },
+  "seed": 42,
+  "pythonhashseed": 42,
+  "matching": {
+   "embedder": "BAAI/bge-small-en-v1.5",
+   "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+   "pooling": "cls",
+   "threshold": 0.7,
+   "bootstrap": {
+    "B": 2000,
+    "rng": "numpy.random.default_rng(0)",
+    "level": 0.95,
+    "unit": "meeting"
+   }
+  }
+ },
+ "config_hash": "3c3facb92bd8",
+ "model_versions": {
+  "classifier": "facebook/bart-large-mnli@d7645e127eaf1aefc7862fd59a17a5aa8558b8ce",
+  "embedder": "BAAI/bge-small-en-v1.5@5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+ },
+ "metrics": {
+  "n": 1,
+  "pred": 5,
+  "gold": 6,
+  "matched": 2,
+  "owner_n": 2,
+  "due_n": 1,
+  "pred_with_due": 1,
+  "precision": 0.4,
+  "recall": 0.3333,
+  "f1": 0.3636,
+  "owner_acc": 0.5,
+  "due_acc": 0.0,
+  "precision_ci": [
+   0.4,
+   0.4
+  ],
+  "recall_ci": [
+   0.3333,
+   0.3333
+  ],
+  "f1_ci": [
+   0.3636,
+   0.3636
+  ],
+  "owner_acc_ci": [
+   0.5,
+   0.5
+  ],
+  "due_acc_ci": [
+   0.0,
+   0.0
+  ]
+ },
+ "breakdowns": {
+  "feature": {
+   "F2": {
+    "n": 1,
+    "pred": 5,
+    "gold": 6,
+    "matched": 2,
+    "owner_n": 2,
+    "due_n": 1,
+    "pred_with_due": 1,
+    "precision": 0.4,
+    "recall": 0.3333,
+    "f1": 0.3636,
+    "owner_acc": 0.5,
+    "due_acc": 0.0,
+    "precision_ci": [
+     0.4,
+     0.4
+    ],
+    "recall_ci": [
+     0.3333,
+     0.3333
+    ],
+    "f1_ci": [
+     0.3636,
+     0.3636
+    ],
+    "owner_acc_ci": [
+     0.5,
+     0.5
+    ],
+    "due_acc_ci": [
+     0.0,
+     0.0
+    ],
+    "too_small": true
+   }
+  },
+  "edge_case": {
+   "F2_OFFERED_TAKEN_BY_OTHER": {
+    "n": 1,
+    "pred": 0,
+    "gold": 1,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F2_VAGUE_NO_OWNER": {
+    "n": 1,
+    "pred": 0,
+    "gold": 1,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": true
+   }
+  }
+ },
+ "timing": {
+  "total_s": 0.14,
+  "build_s": 0.13,
+  "seconds_per_meeting": 0.004,
+  "per_meeting_s": {
+   "SY0201a": 0.004
+  },
+  "lines_scored": 0,
+  "lines_from_cache": 84,
+  "model_s": 0.0,
+  "lines_per_s": null
+ },
+ "predictions_file": "6_evaluation/action_items/results/predictions/20261120T175839Z_zeroshot_synthetic_smoke.json",
+ "predictions_sha256": "4beaa50b2ec6f5276c04130fa2366f92670f9e659199909f047a9bd2c76e50b0",
+ "python": "3.12.14",
+ "packages": {
+  "numpy": "2.5.4",
+  "torch": "2.14.1",
+  "transformers": "5.20.2",
+  "tokenizers": "0.23.3",
+  "huggingface-hub": "2.2.0",
+  "safetensors": "0.8.0"
+ },
+ "hardware": {
+  "machine": "arm64",
+  "system": "macOS-27.0-arm64-arm-64bit",
+  "cpus": 10,
+  "device": "mps",
+  "chip": "Apple M5"
+ },
+ "per_meeting": {
+  "SY0201a": {
+   "pred": 5,
+   "gold": 6,
+   "matched": 2,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 1,
+   "groups": {
+    "feature": "F2"
+   },
+   "pairs": [
+    {
+     "pred": "Write up the minutes from today and send them round",
+     "pred_owner": "Helen",
+     "gold": "Write up the minutes of the kickoff meeting and send them to the team.",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.7815,
+     "owner_ok": true
+    },
+    {
+     "pred": "Should we each prepare a presentation?",
+     "pred_owner": "",
+     "gold": "Prepare the user requirements and present them at the next meeting.",
+     "gold_owners": [
+      "B"
+     ],
+     "similarity": 0.7654,
+     "owner_ok": false
+    }
+   ],
+   "unmatched_pred": [
+    "I'm Helen, I'll be project manager on this one.",
+    "So shall we go round? Tom, do you want to start?",
+    "They want us each to draw our favourite animal, just to get used to the pen."
+   ],
+   "unmatched_gold": [
+    "Research competitor step counters currently on the market for seniors, including their screens.",
+    "Check the cost of soft hypoallergenic silicone wrist straps.",
+    "Prepare the working design (internal workings and components), including battery life and rechargeable versus replaceable battery options, and present it at the next meeting.",
+    "Prepare the technical functions design (what the device has to do for the user) and present it at the next meeting."
+   ]
+  }
+ }
+}

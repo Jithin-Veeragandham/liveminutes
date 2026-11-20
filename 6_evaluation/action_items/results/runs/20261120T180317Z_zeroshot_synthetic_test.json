@@ -1,0 +1,1527 @@
+{
+ "run_id": "20261120T180317Z_zeroshot_synthetic_test",
+ "commit": "e293eea46b23f60dd2c26b72110d7b8f0d8c5055",
+ "uncommitted_changes": [],
+ "system": "zeroshot",
+ "data": "synthetic",
+ "split": "test",
+ "meetings": [
+  "SY0103a",
+  "SY0103b",
+  "SY0103c",
+  "SY0103d",
+  "SY0110a",
+  "SY0110b",
+  "SY0110c",
+  "SY0110d",
+  "SY0202a",
+  "SY0202b",
+  "SY0202c",
+  "SY0202d",
+  "SY0209a",
+  "SY0209b",
+  "SY0209c",
+  "SY0209d",
+  "SY0304a",
+  "SY0304b",
+  "SY0304c",
+  "SY0304d"
+ ],
+ "meetings_hash": "b421b56079cc",
+ "data_hashes": {
+  "data_hash": "abebde87d11184b7f18315c98a27340aa51ea4944d174dba76cde94865cb7069",
+  "commit": "d0cbb4b3670d12611553648b2b571cc0f4efc914",
+  "files": 21
+ },
+ "config": {
+  "baseline": "zeroshot",
+  "zeroshot": {
+   "model": "facebook/bart-large-mnli",
+   "revision": "d7645e127eaf1aefc7862fd59a17a5aa8558b8ce",
+   "hypothesis_template": "{}",
+   "mode": "entailment",
+   "hypothesis": "In this text, someone commits to doing a task or is asked to do one.",
+   "context": "none",
+   "threshold": 0.9994,
+   "min_words": 3,
+   "min_content_words": 2,
+   "batch_size": 32,
+   "device": "auto"
+  },
+  "rules": {
+   "lookahead_lines": 3,
+   "merge_jaccard": 0.4,
+   "merge_window_lines": 1,
+   "min_text_words": 3,
+   "text_until": "sentence"
+  },
+  "seed": 42,
+  "pythonhashseed": 42,
+  "matching": {
+   "embedder": "BAAI/bge-small-en-v1.5",
+   "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+   "pooling": "cls",
+   "threshold": 0.7,
+   "bootstrap": {
+    "B": 2000,
+    "rng": "numpy.random.default_rng(0)",
+    "level": 0.95,
+    "unit": "meeting"
+   }
+  }
+ },
+ "config_hash": "3c3facb92bd8",
+ "model_versions": {
+  "classifier": "facebook/bart-large-mnli@d7645e127eaf1aefc7862fd59a17a5aa8558b8ce",
+  "embedder": "BAAI/bge-small-en-v1.5@5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+ },
+ "metrics": {
+  "n": 20,
+  "pred": 90,
+  "gold": 112,
+  "matched": 40,
+  "owner_n": 40,
+  "due_n": 6,
+  "pred_with_due": 22,
+  "precision": 0.4444,
+  "recall": 0.3571,
+  "f1": 0.396,
+  "owner_acc": 0.95,
+  "due_acc": 0.8333,
+  "precision_ci": [
+   0.3513,
+   0.5334
+  ],
+  "recall_ci": [
+   0.2703,
+   0.4375
+  ],
+  "f1_ci": [
+   0.3093,
+   0.4675
+  ],
+  "owner_acc_ci": [
+   0.878,
+   1.0
+  ],
+  "due_acc_ci": [
+   0.0,
+   1.0
+  ]
+ },
+ "breakdowns": {
+  "feature": {
+   "F1": {
+    "n": 8,
+    "pred": 38,
+    "gold": 43,
+    "matched": 16,
+    "owner_n": 16,
+    "due_n": 1,
+    "pred_with_due": 8,
+    "precision": 0.4211,
+    "recall": 0.3721,
+    "f1": 0.3951,
+    "owner_acc": 0.9375,
+    "due_acc": 0.0,
+    "precision_ci": [
+     0.2954,
+     0.5714
+    ],
+    "recall_ci": [
+     0.2326,
+     0.5122
+    ],
+    "f1_ci": [
+     0.2703,
+     0.5122
+    ],
+    "owner_acc_ci": [
+     0.7895,
+     1.0
+    ],
+    "due_acc_ci": [
+     0.0,
+     0.0
+    ],
+    "too_small": false
+   },
+   "F2": {
+    "n": 8,
+    "pred": 26,
+    "gold": 46,
+    "matched": 13,
+    "owner_n": 13,
+    "due_n": 1,
+    "pred_with_due": 5,
+    "precision": 0.5,
+    "recall": 0.2826,
+    "f1": 0.3611,
+    "owner_acc": 1.0,
+    "due_acc": 1.0,
+    "precision_ci": [
+     0.4074,
+     0.6
+    ],
+    "recall_ci": [
+     0.2083,
+     0.3721
+    ],
+    "f1_ci": [
+     0.2778,
+     0.4474
+    ],
+    "owner_acc_ci": [
+     1.0,
+     1.0
+    ],
+    "due_acc_ci": [
+     1.0,
+     1.0
+    ],
+    "too_small": false
+   },
+   "F3": {
+    "n": 4,
+    "pred": 26,
+    "gold": 23,
+    "matched": 11,
+    "owner_n": 11,
+    "due_n": 4,
+    "pred_with_due": 9,
+    "precision": 0.4231,
+    "recall": 0.4783,
+    "f1": 0.449,
+    "owner_acc": 0.9091,
+    "due_acc": 1.0,
+    "precision_ci": [
+     0.1304,
+     0.6
+    ],
+    "recall_ci": [
+     0.1765,
+     0.6154
+    ],
+    "f1_ci": [
+     0.15,
+     0.5833
+    ],
+    "owner_acc_ci": [
+     0.6667,
+     1.0
+    ],
+    "due_acc_ci": [
+     1.0,
+     1.0
+    ],
+    "too_small": true
+   }
+  },
+  "edge_case": {
+   "F1_ABSENT_DISCUSSED": {
+    "n": 3,
+    "pred": 3,
+    "gold": 7,
+    "matched": 3,
+    "owner_n": 3,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 1.0,
+    "recall": 0.4286,
+    "f1": 0.6,
+    "owner_acc": 0.6667,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     1.0
+    ],
+    "recall_ci": [
+     0.0,
+     1.0
+    ],
+    "f1_ci": [
+     0.0,
+     1.0
+    ],
+    "owner_acc_ci": [
+     0.5,
+     1.0
+    ],
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F1_INTERLEAVED_TOPICS": {
+    "n": 3,
+    "pred": 1,
+    "gold": 2,
+    "matched": 1,
+    "owner_n": 1,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.5,
+    "f1": 0.0,
+    "owner_acc": 1.0,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.5
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": [
+     1.0,
+     1.0
+    ],
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F1_OFF_TOPIC_TANGENT": {
+    "n": 2,
+    "pred": 0,
+    "gold": 0,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F1_PLAN_CHANGE": {
+    "n": 2,
+    "pred": 2,
+    "gold": 1,
+    "matched": 1,
+    "owner_n": 1,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6667,
+    "owner_acc": 1.0,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.5
+    ],
+    "recall_ci": [
+     0.0,
+     1.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.6667
+    ],
+    "owner_acc_ci": [
+     1.0,
+     1.0
+    ],
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F1_SARCASM_AS_FACT": {
+    "n": 3,
+    "pred": 1,
+    "gold": 0,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F1_SELF_CORRECTION": {
+    "n": 3,
+    "pred": 0,
+    "gold": 0,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F2_OFFERED_TAKEN_BY_OTHER": {
+    "n": 4,
+    "pred": 1,
+    "gold": 4,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F2_REASSIGNED_OR_DROPPED": {
+    "n": 4,
+    "pred": 3,
+    "gold": 5,
+    "matched": 1,
+    "owner_n": 1,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.3333,
+    "recall": 0.2,
+    "f1": 0.25,
+    "owner_acc": 1.0,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     1.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.4286
+    ],
+    "f1_ci": [
+     0.0,
+     0.5455
+    ],
+    "owner_acc_ci": [
+     1.0,
+     1.0
+    ],
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F2_TASK_TO_ABSENT": {
+    "n": 4,
+    "pred": 4,
+    "gold": 9,
+    "matched": 2,
+    "owner_n": 2,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.5,
+    "recall": 0.2222,
+    "f1": 0.3077,
+    "owner_acc": 1.0,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     1.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.4286
+    ],
+    "f1_ci": [
+     0.0,
+     0.5
+    ],
+    "owner_acc_ci": [
+     1.0,
+     1.0
+    ],
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F2_VAGUE_NO_OWNER": {
+    "n": 4,
+    "pred": 0,
+    "gold": 4,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F3_ACTION_REMOVED": {
+    "n": 2,
+    "pred": 0,
+    "gold": 0,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F3_TASK_TO_ABSENT": {
+    "n": 3,
+    "pred": 5,
+    "gold": 6,
+    "matched": 3,
+    "owner_n": 3,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.6,
+    "recall": 0.5,
+    "f1": 0.5455,
+    "owner_acc": 1.0,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     1.0
+    ],
+    "recall_ci": [
+     0.0,
+     1.0
+    ],
+    "f1_ci": [
+     0.0,
+     1.0
+    ],
+    "owner_acc_ci": [
+     1.0,
+     1.0
+    ],
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F3_UNAGREED_DECISION": {
+    "n": 3,
+    "pred": 1,
+    "gold": 0,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": true
+   }
+  }
+ },
+ "timing": {
+  "total_s": 49.02,
+  "build_s": 0.14,
+  "seconds_per_meeting": 2.444,
+  "per_meeting_s": {
+   "SY0103a": 3.504,
+   "SY0103b": 2.262,
+   "SY0103c": 2.785,
+   "SY0103d": 2.866,
+   "SY0110a": 2.219,
+   "SY0110b": 2.487,
+   "SY0110c": 2.409,
+   "SY0110d": 2.391,
+   "SY0202a": 2.012,
+   "SY0202b": 2.365,
+   "SY0202c": 2.424,
+   "SY0202d": 2.3,
+   "SY0209a": 2.197,
+   "SY0209b": 2.716,
+   "SY0209c": 2.362,
+   "SY0209d": 2.575,
+   "SY0304a": 1.824,
+   "SY0304b": 2.138,
+   "SY0304c": 2.351,
+   "SY0304d": 2.696
+  },
+  "lines_scored": 1818,
+  "lines_from_cache": 10,
+  "model_s": 48.8,
+  "lines_per_s": 37.3
+ },
+ "predictions_file": "6_evaluation/action_items/results/predictions/20261120T180317Z_zeroshot_synthetic_test.json",
+ "predictions_sha256": "dc803c4241b907e7a7d26fbdbb7949fc6854f56183858eb633ecdc979c47aea7",
+ "python": "3.12.14",
+ "packages": {
+  "numpy": "2.5.4",
+  "torch": "2.14.1",
+  "transformers": "5.20.2",
+  "tokenizers": "0.23.3",
+  "huggingface-hub": "2.2.0",
+  "safetensors": "0.8.0"
+ },
+ "hardware": {
+  "machine": "arm64",
+  "system": "macOS-27.0-arm64-arm-64bit",
+  "cpus": 10,
+  "device": "mps",
+  "chip": "Apple M5"
+ },
+ "per_meeting": {
+  "SY0103a": {
+   "pred": 1,
+   "gold": 5,
+   "matched": 1,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F1"
+   },
+   "pairs": [
+    {
+     "pred": "Write up the minutes and send them round",
+     "pred_owner": "Laura",
+     "gold": "Write up the meeting minutes and send them to the team",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.8643,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [],
+   "unmatched_gold": [
+    "Research components (speech chip, microphone, speaker) and power options, and produce a rough cost breakdown against the 12.50 euro limit",
+    "Work out the voice interaction: wake word, command list, spoken feedback and multiple timers",
+    "Research user needs and complaints about kitchen timers and whether customers will pay 25 euros",
+    "Come up with candidate names for the wake word"
+   ]
+  },
+  "SY0103b": {
+   "pred": 1,
+   "gold": 6,
+   "matched": 1,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F1"
+   },
+   "pairs": [
+    {
+     "pred": "Tell him we switched to two numbered timers, and ask him to check the chip can handle the commands",
+     "pred_owner": "Laura",
+     "gold": "Email the industrial designer: tell him about the switch to two numbered timers and ask him to check the speech chip can handle the commands",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.8868,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [],
+   "unmatched_gold": [
+    "Check that the speech chip can handle the two-timer command set, and complete the cost breakdown and the power question for the next meeting",
+    "Write up the full command list and confirmation phrases for two timers",
+    "Test the wake word Kiko against kitchen phrases for false triggers",
+    "Research existing voice-controlled timers and their prices",
+    "Send the minutes of this meeting to the team"
+   ]
+  },
+  "SY0103c": {
+   "pred": 5,
+   "gold": 6,
+   "matched": 1,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F1"
+   },
+   "pairs": [
+    {
+     "pred": "Send you the display size I want",
+     "pred_owner": "Priya",
+     "gold": "Work out what the display shows with two timers and how the button behaves, and send the display size to the industrial designer",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.7419,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Yep, I've done that, I'll come to it.",
+    "So are we agreed? Mains power through USB-C, adapter in the box?",
+    "And could we do a magnet on the back? So it sticks to the fridge.",
+    "Actually, I've got the foam and the modelling stuff at my desk. I'll do it."
+   ],
+   "unmatched_gold": [
+    "Ask the chip supplier to tune the Kiko wake word model against 'cocoa' and similar words",
+    "Build a rough model (mock-up) of the timer for the next meeting",
+    "Send the completed command list to the team",
+    "Bring three or four colour options to the next meeting",
+    "Write up the minutes of this meeting"
+   ]
+  },
+  "SY0103d": {
+   "pred": 6,
+   "gold": 5,
+   "matched": 1,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F1"
+   },
+   "pairs": [
+    {
+     "pred": "Do the minutes and the final report for management",
+     "pred_owner": "Laura",
+     "gold": "Write the minutes and the final report for management",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.9747,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Can you do that, Tomasz, once you've got a board?",
+    "Yeah, I'll do it, the dev board should come next week.",
+    "Priya, you want to go through the display and the button?",
+    "Okay, so let's go back to the button a sec, Priya, then we'll pick colours.",
+    "Yeah, I'll do that, one side, with the phrases."
+   ],
+   "unmatched_gold": [
+    "Test the tuned Kiko wake word model on the real development board and microphone",
+    "Get rubber colour samples of the chosen colourways from the moulding supplier",
+    "Write a one-sided quick-start card with the commands, phrases and button behaviour",
+    "Draft the box text and launch material around offline use, the gift angle and the two colourways"
+   ]
+  },
+  "SY0110a": {
+   "pred": 5,
+   "gold": 4,
+   "matched": 2,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F1"
+   },
+   "pairs": [
+    {
+     "pred": "Ask her to talk to cafe owners at the fair, see if they'd join a deposit system and what they'd want from it",
+     "pred_owner": "Priya",
+     "gold": "Talk to cafe owners at the trade fair about whether they would join a deposit system and what they would want from it.",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.9072,
+     "owner_ok": false
+    },
+    {
+     "pred": "Send them to her with the task",
+     "pred_owner": "Priya",
+     "gold": "Send the meeting minutes and her task to the absent marketing expert.",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.7211,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "I think we can start, yeah?",
+    "Design it, don't worry",
+    "Bring some options next time"
+   ],
+   "unmatched_gold": [
+    "Research durable, dishwasher-safe materials that keep production cost under three euros per cup and bring options to the next meeting.",
+    "Investigate the cup return process and how existing deposit systems let customers get their deposit back."
+   ]
+  },
+  "SY0110b": {
+   "pred": 7,
+   "gold": 5,
+   "matched": 3,
+   "owner_ok": 3,
+   "due_ok": 0,
+   "due_n": 1,
+   "groups": {
+    "feature": "F1"
+   },
+   "pairs": [
+    {
+     "pred": "Write up your notes from the fair, so we've got them in one place",
+     "pred_owner": "Marta",
+     "gold": "Write up the notes from the trade fair and send them round to the team.",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.8185,
+     "owner_ok": true
+    },
+    {
+     "pred": "Do the minutes again",
+     "pred_owner": "Priya",
+     "gold": "Write the meeting minutes.",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.7694,
+     "owner_ok": true
+    },
+    {
+     "pred": "Get some samples and run them through the dishwasher in the office kitchen",
+     "pred_owner": "Tom",
+     "gold": "Prepare polypropylene cup samples and run a week-long dishwasher durability test at Caf\u00e9 Lindner (originally planned for the office dishwasher on Thursday).",
+     "gold_owners": [
+      "D"
+     ],
+     "similarity": 0.7564,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Tom's going to go through materials, Jonas has the return process, and Marta, you've got the cafe owner stuff from Cologne.",
+    "Okay, good, let's do that. Thursday, office dishwasher.",
+    "Email her this week",
+    "Send those round tomorrow"
+   ],
+   "unmatched_gold": [
+    "Contact the owner of Caf\u00e9 Lindner to arrange the dishwasher test.",
+    "Sketch the counter return flow and the partner badge for the next meeting."
+   ]
+  },
+  "SY0110c": {
+   "pred": 7,
+   "gold": 6,
+   "matched": 3,
+   "owner_ok": 3,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F1"
+   },
+   "pairs": [
+    {
+     "pred": "Check the slate grey with Mr Lindner too while I'm at it",
+     "pred_owner": "Marta",
+     "gold": "Check the slate grey colour with the owner of Caf\u00e9 Lindner.",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.8148,
+     "owner_ok": true
+    },
+    {
+     "pred": "Ask the moulding company for a quote on the three hundred mil cup with both",
+     "pred_owner": "Tom",
+     "gold": "Get a quote from the moulding company for the 300 ml polypropylene cup with in-mould labelling and the ribbed grip band.",
+     "gold_owners": [
+      "D"
+     ],
+     "similarity": 0.81,
+     "owner_ok": true
+    },
+    {
+     "pred": "Do the minutes, as usual, and the management question",
+     "pred_owner": "Priya",
+     "gold": "Write the meeting minutes.",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.7802,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Okay, slate grey, one colour for every cafe.",
+    "Okay, Jonas, your sketches.",
+    "Yeah, sure, solid gold cups next.",
+    "Right, so for the next meeting, that's the detailed design."
+   ],
+   "unmatched_gold": [
+    "Make the logo bigger on the partner badge design so it is visible from the street.",
+    "Write a one-page guide for cafe staff on how the refund and swap work, and run it past the owner of Caf\u00e9 Lindner.",
+    "Raise with management whether the company would absorb the cost of unreturned cups."
+   ]
+  },
+  "SY0110d": {
+   "pred": 6,
+   "gold": 6,
+   "matched": 4,
+   "owner_ok": 4,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F1"
+   },
+   "pairs": [
+    {
+     "pred": "Write the final report for management, and the minutes",
+     "pred_owner": "Priya",
+     "gold": "Write the final report for management and the meeting minutes.",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.9695,
+     "owner_ok": true
+    },
+    {
+     "pred": "Confirm the ten thousand and ask for a couple of pre-production samples with the embossing",
+     "pred_owner": "Tom",
+     "gold": "Confirm the order of 10,000 cups with the moulding company and request a couple of pre-production samples with the embossing.",
+     "gold_owners": [
+      "D"
+     ],
+     "similarity": 0.8383,
+     "owner_ok": true
+    },
+    {
+     "pred": "Get the guides laminated",
+     "pred_owner": "Marta",
+     "gold": "Get the staff guides laminated, one per cafe.",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.7739,
+     "owner_ok": true
+    },
+    {
+     "pred": "Email them with the guide and the fee",
+     "pred_owner": "Marta",
+     "gold": "Email the cafe owners from the trade fair list with the staff guide and partner fee to recruit partner cafes.",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.7185,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Sort that, Marta",
+    "Confirm the order with the moulders"
+   ],
+   "unmatched_gold": [
+    "Prepare the print file for the partner badge once recovered.",
+    "Send the minutes to the absent user interface designer, ask him to do the badge print file and tell him there is no rush."
+   ]
+  },
+  "SY0202a": {
+   "pred": 3,
+   "gold": 6,
+   "matched": 1,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F2"
+   },
+   "pairs": [
+    {
+     "pred": "Do the checkout and renewal flow",
+     "pred_owner": "Hannah",
+     "gold": "Prepare the technical functions design: step-by-step checkout and renewal flow and screens",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.7805,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "I'm Marcus, I'll be project manager on this one.",
+    "So I'll be doing the physical side, the casing, the components, that kind of thing."
+   ],
+   "unmatched_gold": [
+    "Prepare the working design: internal components and a rough layout of the kiosk",
+    "Prepare user requirements from libraries and borrowers",
+    "Gather accessibility requirements (wheelchair height, screen readers) from library services and share them with the UI designer",
+    "Check what RFID readers cost",
+    "Send round the project brief and the meeting notes"
+   ]
+  },
+  "SY0202b": {
+   "pred": 3,
+   "gold": 5,
+   "matched": 1,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F2"
+   },
+   "pairs": [
+    {
+     "pred": "Do some sketches, with the new heights",
+     "pred_owner": "Tomas",
+     "gold": "Prepare sketches of the casing look and materials (wood panelling), using the new accessible heights",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.8097,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Do the look of the casing? Materials, the wood panelling, that kind of thing",
+    "Write up the notes and send them round, and I'll fill Hannah in on the button"
+   ],
+   "unmatched_gold": [
+    "Check the cost of RFID readers and tags, using library services' existing supplier price list. This follows up the unowned SY0202a.ai5.",
+    "Update the checkout and renewal flow for the hardware help button, audio mode and optional print, and send round the draft screens before the next meeting",
+    "Email the accessibility requirements from library services to the user interface designer. This carries over SY0202a.ai4.",
+    "Write up and circulate the meeting notes and brief the user interface designer on the hardware button decision"
+   ]
+  },
+  "SY0202c": {
+   "pred": 4,
+   "gold": 7,
+   "matched": 2,
+   "owner_ok": 2,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F2"
+   },
+   "pairs": [
+    {
+     "pred": "Update the cost breakdown with the RFID and the veneer and circulate it with the notes",
+     "pred_owner": "Marcus",
+     "gold": "Update the cost breakdown with the RFID pad and veneer casing and circulate it with the meeting notes",
+     "gold_owners": [
+      "D"
+     ],
+     "similarity": 0.9555,
+     "owner_ok": true
+    },
+    {
+     "pred": "Do a mock-up of the desk version, with the real heights",
+     "pred_owner": "Tomas",
+     "gold": "Build a foam-board mock-up of the desk-shaped kiosk at the real heights",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.8424,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Priya, you want to start?",
+    "Yeah, in foam board, I can do that."
+   ],
+   "unmatched_gold": [
+    "Research text-to-speech engine options for the audio mode, together with the embedded PC board choice",
+    "Check what it would cost to RFID-tag the stock in the four barcode-only branches",
+    "Send the industrial designer the list of items the audio mode must read out",
+    "Finalise the screens, including the barcode fallback and the audio script",
+    "Prepare evaluation criteria based on the library services user requirements"
+   ]
+  },
+  "SY0202d": {
+   "pred": 5,
+   "gold": 5,
+   "matched": 3,
+   "owner_ok": 3,
+   "due_ok": 1,
+   "due_n": 1,
+   "groups": {
+    "feature": "F2"
+   },
+   "pairs": [
+    {
+     "pred": "Write up the component spec, the board, the engine, the screen, for the final report",
+     "pred_owner": "Tomas",
+     "gold": "Write up the component specification (board, text-to-speech engine, screen) for the final report by Friday",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.8873,
+     "owner_ok": true
+    },
+    {
+     "pred": "Write the final report with the cost breakdown and send it round, and brief Hannah on Monday",
+     "pred_owner": "Marcus",
+     "gold": "Write the final report with the cost breakdown and circulate it",
+     "gold_owners": [
+      "D"
+     ],
+     "similarity": 0.8702,
+     "owner_ok": true
+    },
+    {
+     "pred": "Hannah, the seventeen-inch layouts and send the final screens to library services.",
+     "pred_owner": "Hannah",
+     "gold": "Rework the screen layouts for the seventeen-inch screen and send the final screens to library services for sign-off",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.8136,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Ring round the branch managers this week",
+    "I'll give that to her, she can rework the layouts and send the final set to library services for sign-off."
+   ],
+   "unmatched_gold": [
+    "Find out what it would cost to RFID-tag the stock in the four barcode-only branches, using library services' tagging contractor rates, by the end of next week (follows up SY0202c.ai2)",
+    "Brief the user interface designer on Monday about the seventeen-inch screen decision"
+   ]
+  },
+  "SY0209a": {
+   "pred": 3,
+   "gold": 6,
+   "matched": 1,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F2"
+   },
+   "pairs": [
+    {
+     "pred": "Make sure the buttons and the charging port are still reachable",
+     "pred_owner": "Priya",
+     "gold": "Work out the functional side of the case: how children use it, the handle, and access to the buttons and charging port",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.7196,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Find out what the standards are",
+    "Do a bit of user research, maybe a short survey"
+   ],
+   "unmatched_gold": [
+    "Research what parents and teachers want from a children's tablet case, possibly via a short survey",
+    "Look into drop tests: the heights competing cases are rated for and the relevant impact standards",
+    "Investigate materials (rubber, foam, plastics) that fit the production budget",
+    "Write up the meeting minutes and send them to the team",
+    "Check the retail prices of existing children's tablet cases"
+   ]
+  },
+  "SY0209b": {
+   "pred": 3,
+   "gold": 6,
+   "matched": 2,
+   "owner_ok": 2,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F2"
+   },
+   "pairs": [
+    {
+     "pred": "Sketch the fixed handle and where the cut-outs go",
+     "pred_owner": "Priya",
+     "gold": "Sketch the fixed handle and the positions of the button, port and camera cut-outs",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.9032,
+     "owner_ok": true
+    },
+    {
+     "pred": "Tell him when I email him",
+     "pred_owner": "Laura",
+     "gold": "Email the marketing expert about his assigned tasks and the decision against the fold-out stand",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.7305,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Okay, I think we can start."
+   ],
+   "unmatched_gold": [
+    "Check the retail prices of existing children's tablet cases in the main shops",
+    "Send the full parent and teacher survey results to the team before the next meeting",
+    "Get a supplier quote for the whole EVA foam case, including the handle and the raised lip",
+    "Write up the meeting minutes and send them round"
+   ]
+  },
+  "SY0209c": {
+   "pred": 1,
+   "gold": 5,
+   "matched": 1,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F2"
+   },
+   "pairs": [
+    {
+     "pred": "Update the sketches with the wedge and the name window",
+     "pred_owner": "Priya",
+     "gold": "Update the sketches to show the wedge back and the name tag window",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.9569,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [],
+   "unmatched_gold": [
+    "Find out the cost of the name tag window (clear insert or moulded foam pocket with clear film) and get a revised supplier quote including the wedge back and the second colour",
+    "Check whether the case counts as a toy under children's product safety rules",
+    "Put together criteria, based on the survey, for evaluating the final design",
+    "Write up the meeting minutes"
+   ]
+  },
+  "SY0209d": {
+   "pred": 4,
+   "gold": 6,
+   "matched": 2,
+   "owner_ok": 2,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F2"
+   },
+   "pairs": [
+    {
+     "pred": "Put together the final report and the minutes",
+     "pred_owner": "Laura",
+     "gold": "Put together the final report and the meeting minutes",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.9696,
+     "owner_ok": true
+    },
+    {
+     "pred": "Do final drawings with the pocket dimensions for the supplier",
+     "pred_owner": "Priya",
+     "gold": "Produce final drawings with the name tag pocket dimensions for the supplier",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.9358,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Okay, foam pocket with clear film it is.",
+    "Take that off Priya and give the toy safety check to Ben"
+   ],
+   "unmatched_gold": [
+    "Check whether the case counts as a toy under children's product safety rules, using the supplier's test certificates",
+    "Get physical samples from the supplier, two in blue and two in lime green, for testing",
+    "Email the industrial designer about his assigned tasks (toy safety check and samples)",
+    "Write up the evaluation scores as a section for the final report"
+   ]
+  },
+  "SY0304a": {
+   "pred": 6,
+   "gold": 4,
+   "matched": 0,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F3"
+   },
+   "pairs": [],
+   "unmatched_pred": [
+    "So I think we can get started.",
+    "I'm Hannah, I'll be project manager on this one.",
+    "Okay, good, that's agreed then.",
+    "Add that for him",
+    "Do a couple of sizes",
+    "Send round the minutes and the brief today, and I'll copy Marcus in with his bit"
+   ],
+   "unmatched_gold": [
+    "Research sensing options (barrier counters vs per-bay sensors) with rough per-unit costs, and check whether the casing can survive outdoor conditions, for the next meeting",
+    "Email the industrial designer about his assigned task and send the minutes and brief to the team",
+    "Survey about twenty to thirty campus users (students and staff, plus a few visitors) on what they want from the sign",
+    "Sketch several screen layouts combining the free-space number with a colour background, in a couple of screen sizes"
+   ]
+  },
+  "SY0304b": {
+   "pred": 5,
+   "gold": 5,
+   "matched": 3,
+   "owner_ok": 3,
+   "due_ok": 1,
+   "due_n": 1,
+   "groups": {
+    "feature": "F3"
+   },
+   "pairs": [
+    {
+     "pred": "Check the mains connection at each barrier with estates, and spec the casing properly",
+     "pred_owner": "Marcus",
+     "gold": "Check the mains connection at each barrier with the estates office and specify the outdoor casing properly",
+     "gold_owners": [
+      "D"
+     ],
+     "similarity": 0.9191,
+     "owner_ok": true
+    },
+    {
+     "pred": "Yeah, there's an open day next week, I'll stand by the main gate.",
+     "pred_owner": "Priya",
+     "gold": "Survey more visitors by standing at the main gate during next week's open day",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.8403,
+     "owner_ok": true
+    },
+    {
+     "pred": "Send the minutes round, and chase estates on the central sign",
+     "pred_owner": "Hannah",
+     "gold": "Send the minutes round to the team",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.7737,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Right, so we're doing it flashing when it drops under ten as well, that's settled, I've put it in the sketches.",
+    "Okay, so mains from the barrier supply, that's agreed."
+   ],
+   "unmatched_gold": [
+    "Produce the final layout at sixty centimetres, LED, with the car park name on top and the agreed colour thresholds",
+    "Ask the estates office whether they want the central sign near the main gate and whether there is separate budget for it"
+   ]
+  },
+  "SY0304c": {
+   "pred": 5,
+   "gold": 6,
+   "matched": 3,
+   "owner_ok": 2,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F3"
+   },
+   "pairs": [
+    {
+     "pred": "Write up the open day results and send them round",
+     "pred_owner": "Priya",
+     "gold": "Write up the open day survey results and send them round",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.9437,
+     "owner_ok": true
+    },
+    {
+     "pred": "Email him about",
+     "pred_owner": "Hannah",
+     "gold": "Email the industrial designer to tell him about the electrician quote and mounting task",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.7487,
+     "owner_ok": true
+    },
+    {
+     "pred": "Send them tomorrow",
+     "pred_owner": "Priya",
+     "gold": "Send the minutes round to the team",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.7479,
+     "owner_ok": false
+    }
+   ],
+   "unmatched_pred": [
+    "Do the estates office thing first, then Tom's layout, then Priya the open day, and then Marcus's stuff, which he sent me in an email",
+    "Okay, navy casing then."
+   ],
+   "unmatched_gold": [
+    "Get an electrician's quote for running a new mains supply at the library car park, and specify the mounting (post or wall bracket), checking the wall mounting with estates",
+    "Ask the estates office whether they could pay for the library car park electrics separately",
+    "Produce the final layout with the P symbol, the navy strip and no flashing, shown on the navy casing"
+   ]
+  },
+  "SY0304d": {
+   "pred": 10,
+   "gold": 8,
+   "matched": 5,
+   "owner_ok": 5,
+   "due_ok": 3,
+   "due_n": 3,
+   "groups": {
+    "feature": "F3"
+   },
+   "pairs": [
+    {
+     "pred": "Write up the minutes and the final design report and send it to the estates office",
+     "pred_owner": "Hannah",
+     "gold": "Write up the minutes and the final design report and send them to the estates office",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.998,
+     "owner_ok": true
+    },
+    {
+     "pred": "Marcus, you're sending the final spec to the supplier, casing, posts, bracket, and the LED panels.",
+     "pred_owner": "Marcus",
+     "gold": "Send the final specification (casing, posts, bracket, LED panels) to the supplier on Monday",
+     "gold_owners": [
+      "D"
+     ],
+     "similarity": 0.8266,
+     "owner_ok": true
+    },
+    {
+     "pred": "Put Tom down for the five print-ready files for the name strips, to the supplier's spec, by end of next week",
+     "pred_owner": "Tom",
+     "gold": "Produce five print-ready vector files for the car park name strips, to the supplier's specification, by the end of next week",
+     "gold_owners": [
+      "B"
+     ],
+     "similarity": 0.8022,
+     "owner_ok": true
+    },
+    {
+     "pred": "Book it with estates, they want it done before term anyway",
+     "pred_owner": "Marcus",
+     "gold": "Book the electrician for the library car park mains supply with the estates office before term",
+     "gold_owners": [
+      "D"
+     ],
+     "similarity": 0.7529,
+     "owner_ok": true
+    },
+    {
+     "pred": "Email him tonight",
+     "pred_owner": "Hannah",
+     "gold": "Email the user interface designer about the print files tonight, copying in the industrial designer with the specification",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.7126,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "I got the estates electrician down there on Tuesday.",
+    "Okay, so that's decided then, post for the four outside ones, wall bracket in the library.",
+    "Do the sums in a minute",
+    "What I'd suggest is we do a spot check in the first couple of weeks, count the cars by hand and compare.",
+    "Yep, I'll do that Monday."
+   ],
+   "unmatched_gold": [
+    "Forward the supplier's print template to the project manager",
+    "Do hand spot counts on a couple of afternoons in the first fortnight after installation to check barrier counter drift",
+    "Draft a campus newsletter piece explaining what the sign colours mean"
+   ]
+  }
+ }
+}

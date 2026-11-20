@@ -1,0 +1,368 @@
+{
+ "run_id": "20261120T175837Z_zeroshot_ami_smoke",
+ "commit": "e293eea46b23f60dd2c26b72110d7b8f0d8c5055",
+ "uncommitted_changes": [],
+ "system": "zeroshot",
+ "data": "ami",
+ "split": "smoke",
+ "meetings": [
+  "ES2003a",
+  "IS1008a"
+ ],
+ "meetings_hash": "576bf8d258e0",
+ "data_hashes": {
+  "data_hash": "1ce0450de10c44aa3d794865f7b53f50eab8a94b0027899c51d5dd2e6797c048",
+  "zip_sha256": "b56e5babb2496b8795deeeda7e71178d7fbc9963f94276cf2a3f4b56ebbc9f9d",
+  "evidence_hash": "9bf8681b1c7824d4df5bb94cac4d2f02e3324589c792841fb18b8656ce0c0797",
+  "evidence_files": 2
+ },
+ "config": {
+  "baseline": "zeroshot",
+  "zeroshot": {
+   "model": "facebook/bart-large-mnli",
+   "revision": "d7645e127eaf1aefc7862fd59a17a5aa8558b8ce",
+   "hypothesis_template": "{}",
+   "mode": "entailment",
+   "hypothesis": "In this text, someone commits to doing a task or is asked to do one.",
+   "context": "none",
+   "threshold": 0.9994,
+   "min_words": 3,
+   "min_content_words": 2,
+   "batch_size": 32,
+   "device": "auto"
+  },
+  "rules": {
+   "lookahead_lines": 3,
+   "merge_jaccard": 0.4,
+   "merge_window_lines": 1,
+   "min_text_words": 3,
+   "text_until": "sentence"
+  },
+  "seed": 42,
+  "pythonhashseed": 42,
+  "matching": {
+   "embedder": "BAAI/bge-small-en-v1.5",
+   "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+   "pooling": "cls",
+   "threshold": 0.7,
+   "bootstrap": {
+    "B": 2000,
+    "rng": "numpy.random.default_rng(0)",
+    "level": 0.95,
+    "unit": "meeting"
+   }
+  }
+ },
+ "config_hash": "3c3facb92bd8",
+ "model_versions": {
+  "classifier": "facebook/bart-large-mnli@d7645e127eaf1aefc7862fd59a17a5aa8558b8ce",
+  "embedder": "BAAI/bge-small-en-v1.5@5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+ },
+ "metrics": {
+  "n": 2,
+  "pred": 15,
+  "gold": 5,
+  "matched": 3,
+  "owner_n": 3,
+  "due_n": 0,
+  "pred_with_due": 2,
+  "precision": 0.2,
+  "recall": 0.6,
+  "f1": 0.3,
+  "owner_acc": 0.3333,
+  "due_acc": null,
+  "precision_ci": [
+   0.0,
+   0.2143
+  ],
+  "recall_ci": [
+   0.0,
+   0.75
+  ],
+  "f1_ci": [
+   0.0,
+   0.3333
+  ],
+  "owner_acc_ci": [
+   0.3333,
+   0.3333
+  ],
+  "due_acc_ci": null
+ },
+ "breakdowns": {
+  "speakers": {
+   "all native": {
+    "n": 1,
+    "pred": 1,
+    "gold": 1,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "mixed": {
+    "n": 1,
+    "pred": 14,
+    "gold": 4,
+    "matched": 3,
+    "owner_n": 3,
+    "due_n": 0,
+    "pred_with_due": 2,
+    "precision": 0.2143,
+    "recall": 0.75,
+    "f1": 0.3333,
+    "owner_acc": 0.3333,
+    "due_acc": null,
+    "precision_ci": [
+     0.2143,
+     0.2143
+    ],
+    "recall_ci": [
+     0.75,
+     0.75
+    ],
+    "f1_ci": [
+     0.3333,
+     0.3333
+    ],
+    "owner_acc_ci": [
+     0.3333,
+     0.3333
+    ],
+    "due_acc_ci": null,
+    "too_small": true
+   }
+  },
+  "gender": {
+   "all male": {
+    "n": 1,
+    "pred": 1,
+    "gold": 1,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "mixed": {
+    "n": 1,
+    "pred": 14,
+    "gold": 4,
+    "matched": 3,
+    "owner_n": 3,
+    "due_n": 0,
+    "pred_with_due": 2,
+    "precision": 0.2143,
+    "recall": 0.75,
+    "f1": 0.3333,
+    "owner_acc": 0.3333,
+    "due_acc": null,
+    "precision_ci": [
+     0.2143,
+     0.2143
+    ],
+    "recall_ci": [
+     0.75,
+     0.75
+    ],
+    "f1_ci": [
+     0.3333,
+     0.3333
+    ],
+    "owner_acc_ci": [
+     0.3333,
+     0.3333
+    ],
+    "due_acc_ci": null,
+    "too_small": true
+   }
+  },
+  "type": {
+   "a (kickoff)": {
+    "n": 2,
+    "pred": 15,
+    "gold": 5,
+    "matched": 3,
+    "owner_n": 3,
+    "due_n": 0,
+    "pred_with_due": 2,
+    "precision": 0.2,
+    "recall": 0.6,
+    "f1": 0.3,
+    "owner_acc": 0.3333,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.2143
+    ],
+    "recall_ci": [
+     0.0,
+     0.75
+    ],
+    "f1_ci": [
+     0.0,
+     0.3333
+    ],
+    "owner_acc_ci": [
+     0.3333,
+     0.3333
+    ],
+    "due_acc_ci": null,
+    "too_small": true
+   }
+  }
+ },
+ "timing": {
+  "total_s": 0.15,
+  "build_s": 0.14,
+  "seconds_per_meeting": 0.007,
+  "per_meeting_s": {
+   "ES2003a": 0.006,
+   "IS1008a": 0.008
+  },
+  "lines_scored": 0,
+  "lines_from_cache": 273,
+  "model_s": 0.0,
+  "lines_per_s": null
+ },
+ "predictions_file": "6_evaluation/action_items/results/predictions/20261120T175837Z_zeroshot_ami_smoke.json",
+ "predictions_sha256": "a05b44e84202e3f7bad071f2072da76d7bc77f2c1162e6dd55ef5ba45ed7d257",
+ "python": "3.12.14",
+ "packages": {
+  "numpy": "2.5.4",
+  "torch": "2.14.1",
+  "transformers": "5.20.2",
+  "tokenizers": "0.23.3",
+  "huggingface-hub": "2.2.0",
+  "safetensors": "0.8.0"
+ },
+ "hardware": {
+  "machine": "arm64",
+  "system": "macOS-27.0-arm64-arm-64bit",
+  "cpus": 10,
+  "device": "mps",
+  "chip": "Apple M5"
+ },
+ "per_meeting": {
+  "ES2003a": {
+   "pred": 1,
+   "gold": 1,
+   "matched": 0,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "all native",
+    "gender": "all male",
+    "type": "a (kickoff)"
+   },
+   "pairs": [],
+   "unmatched_pred": [
+    "Ebenezer, you wanna have a you wanna draw your favourite animal?"
+   ],
+   "unmatched_gold": [
+    "The team will decide how the user interface will work"
+   ]
+  },
+  "IS1008a": {
+   "pred": 14,
+   "gold": 4,
+   "matched": 3,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "mixed",
+    "gender": "mixed",
+    "type": "a (kickoff)"
+   },
+   "pairs": [
+    {
+     "pred": "Come up with some kind of plan, okay, how we are going to do the your sales plan",
+     "pred_owner": "Marketing Expert",
+     "gold": "The Marketing Expert will prepare a sales plan for the product and discuss the project budget and the sales strategy.",
+     "gold_owners": [
+      "ME"
+     ],
+     "similarity": 0.7874,
+     "owner_ok": true
+    },
+    {
+     "pred": "But when you think you can give me like a kind of design on the functional design or the technical design?",
+     "pred_owner": "Project Manager",
+     "gold": "The Industrial Designer will prepare an initial functional design.",
+     "gold_owners": [
+      "ID"
+     ],
+     "similarity": 0.7414,
+     "owner_ok": false
+    },
+    {
+     "pred": "To come up with the functional design and to discuss with Ed, okay, and how it's going to be work,",
+     "pred_owner": "",
+     "gold": "The User Interface Designer will contribute studies on user requirements to the functional design.",
+     "gold_owners": [
+      "UI"
+     ],
+     "similarity": 0.7279,
+     "owner_ok": false
+    }
+   ],
+   "unmatched_pred": [
+    "So by when you think you can give me some kind of project plan, okay,",
+    "By next meeting, okay that will be great.",
+    "Christine, what about your the industrial design plan?",
+    "So like what's your functional design, what's your technical design, and how many people you need for this project, and what's the time frame you're looking, okay, and what is the budget, maybe initial budget you're looking, okay, and how is going to the market, okay,",
+    "So you've had to meet with the marketing team and how they're going to market and what are the marketing strategic plan, okay,",
+    "Yes I think that would be good,",
+    "Because I need to go to the management and tell them what we are going to do, and what cost is, okay, and what's the time frame and what's the project plan,",
+    "So because you need to sell and you're the responsible for the all the money, the finance, okay, tomorrow.",
+    "Then we have to design, okay, how long it will take the whole project, okay, how much is going to cost us, and how much we are going to benefit for the company.",
+    "Okay, and if you need any coordination in between compared to the maybe the some technical vendors or commercial vendors, okay, depends if you want to have some marketing plan or technical plan, okay, so you let me know.",
+    "Submit to the management"
+   ],
+   "unmatched_gold": [
+    "The Project Manager will post his presentation to be available for all participants."
+   ]
+  }
+ }
+}
