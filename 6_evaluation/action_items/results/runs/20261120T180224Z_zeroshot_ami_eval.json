@@ -1,0 +1,959 @@
+{
+ "run_id": "20261120T180224Z_zeroshot_ami_eval",
+ "commit": "e293eea46b23f60dd2c26b72110d7b8f0d8c5055",
+ "uncommitted_changes": [],
+ "system": "zeroshot",
+ "data": "ami",
+ "split": "eval",
+ "meetings": [
+  "ES2004a",
+  "ES2004b",
+  "ES2004c",
+  "ES2004d",
+  "ES2014a",
+  "ES2014b",
+  "ES2014c",
+  "ES2014d",
+  "IS1009a",
+  "IS1009b",
+  "IS1009c",
+  "IS1009d",
+  "TS3003a",
+  "TS3003b",
+  "TS3003c",
+  "TS3003d",
+  "TS3007a",
+  "TS3007b",
+  "TS3007c",
+  "TS3007d"
+ ],
+ "meetings_hash": "cc86e00bd353",
+ "data_hashes": {
+  "data_hash": "1ce0450de10c44aa3d794865f7b53f50eab8a94b0027899c51d5dd2e6797c048",
+  "zip_sha256": "b56e5babb2496b8795deeeda7e71178d7fbc9963f94276cf2a3f4b56ebbc9f9d",
+  "evidence_hash": "0ea9d387198a64cb9918a3d07d5b05c5a7f59e536a60a2b6d89f61a964744b39",
+  "evidence_files": 20
+ },
+ "config": {
+  "baseline": "zeroshot",
+  "zeroshot": {
+   "model": "facebook/bart-large-mnli",
+   "revision": "d7645e127eaf1aefc7862fd59a17a5aa8558b8ce",
+   "hypothesis_template": "{}",
+   "mode": "entailment",
+   "hypothesis": "In this text, someone commits to doing a task or is asked to do one.",
+   "context": "none",
+   "threshold": 0.9994,
+   "min_words": 3,
+   "min_content_words": 2,
+   "batch_size": 32,
+   "device": "auto"
+  },
+  "rules": {
+   "lookahead_lines": 3,
+   "merge_jaccard": 0.4,
+   "merge_window_lines": 1,
+   "min_text_words": 3,
+   "text_until": "sentence"
+  },
+  "seed": 42,
+  "pythonhashseed": 42,
+  "matching": {
+   "embedder": "BAAI/bge-small-en-v1.5",
+   "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+   "pooling": "cls",
+   "threshold": 0.7,
+   "bootstrap": {
+    "B": 2000,
+    "rng": "numpy.random.default_rng(0)",
+    "level": 0.95,
+    "unit": "meeting"
+   }
+  }
+ },
+ "config_hash": "3c3facb92bd8",
+ "model_versions": {
+  "classifier": "facebook/bart-large-mnli@d7645e127eaf1aefc7862fd59a17a5aa8558b8ce",
+  "embedder": "BAAI/bge-small-en-v1.5@5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+ },
+ "metrics": {
+  "n": 20,
+  "pred": 81,
+  "gold": 30,
+  "matched": 5,
+  "owner_n": 5,
+  "due_n": 0,
+  "pred_with_due": 1,
+  "precision": 0.0617,
+  "recall": 0.1667,
+  "f1": 0.0901,
+  "owner_acc": 0.4,
+  "due_acc": null,
+  "precision_ci": [
+   0.02,
+   0.1023
+  ],
+  "recall_ci": [
+   0.05,
+   0.3126
+  ],
+  "f1_ci": [
+   0.0298,
+   0.1493
+  ],
+  "owner_acc_ci": [
+   0.0,
+   1.0
+  ],
+  "due_acc_ci": null
+ },
+ "breakdowns": {
+  "speakers": {
+   "all native": {
+    "n": 4,
+    "pred": 19,
+    "gold": 6,
+    "matched": 2,
+    "owner_n": 2,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.1053,
+    "recall": 0.3333,
+    "f1": 0.16,
+    "owner_acc": 0.5,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.1579
+    ],
+    "recall_ci": [
+     0.0,
+     0.75
+    ],
+    "f1_ci": [
+     0.0,
+     0.2581
+    ],
+    "owner_acc_ci": [
+     0.0,
+     1.0
+    ],
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "all non-native": {
+    "n": 8,
+    "pred": 46,
+    "gold": 13,
+    "matched": 3,
+    "owner_n": 3,
+    "due_n": 0,
+    "pred_with_due": 1,
+    "precision": 0.0652,
+    "recall": 0.2308,
+    "f1": 0.1017,
+    "owner_acc": 0.3333,
+    "due_acc": null,
+    "precision_ci": [
+     0.0175,
+     0.125
+    ],
+    "recall_ci": [
+     0.0625,
+     0.5
+    ],
+    "f1_ci": [
+     0.0294,
+     0.1887
+    ],
+    "owner_acc_ci": [
+     0.0,
+     1.0
+    ],
+    "due_acc_ci": null,
+    "too_small": false
+   },
+   "mixed": {
+    "n": 8,
+    "pred": 16,
+    "gold": 11,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": false
+   }
+  },
+  "gender": {
+   "all female": {
+    "n": 4,
+    "pred": 6,
+    "gold": 7,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "all male": {
+    "n": 8,
+    "pred": 46,
+    "gold": 13,
+    "matched": 3,
+    "owner_n": 3,
+    "due_n": 0,
+    "pred_with_due": 1,
+    "precision": 0.0652,
+    "recall": 0.2308,
+    "f1": 0.1017,
+    "owner_acc": 0.3333,
+    "due_acc": null,
+    "precision_ci": [
+     0.0175,
+     0.125
+    ],
+    "recall_ci": [
+     0.0625,
+     0.5
+    ],
+    "f1_ci": [
+     0.0294,
+     0.1887
+    ],
+    "owner_acc_ci": [
+     0.0,
+     1.0
+    ],
+    "due_acc_ci": null,
+    "too_small": false
+   },
+   "mixed": {
+    "n": 8,
+    "pred": 29,
+    "gold": 10,
+    "matched": 2,
+    "owner_n": 2,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.069,
+    "recall": 0.2,
+    "f1": 0.1026,
+    "owner_acc": 0.5,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.1212
+    ],
+    "recall_ci": [
+     0.0,
+     0.429
+    ],
+    "f1_ci": [
+     0.0,
+     0.1852
+    ],
+    "owner_acc_ci": [
+     0.0,
+     1.0
+    ],
+    "due_acc_ci": null,
+    "too_small": false
+   }
+  },
+  "type": {
+   "a (kickoff)": {
+    "n": 5,
+    "pred": 24,
+    "gold": 10,
+    "matched": 1,
+    "owner_n": 1,
+    "due_n": 0,
+    "pred_with_due": 1,
+    "precision": 0.0417,
+    "recall": 0.1,
+    "f1": 0.0588,
+    "owner_acc": 0.0,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.1071
+    ],
+    "recall_ci": [
+     0.0,
+     0.25
+    ],
+    "f1_ci": [
+     0.0,
+     0.1429
+    ],
+    "owner_acc_ci": [
+     0.0,
+     0.0
+    ],
+    "due_acc_ci": null,
+    "too_small": false
+   },
+   "b+c (middle)": {
+    "n": 10,
+    "pred": 29,
+    "gold": 15,
+    "matched": 2,
+    "owner_n": 2,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.069,
+    "recall": 0.1333,
+    "f1": 0.0909,
+    "owner_acc": 0.0,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.129
+    ],
+    "recall_ci": [
+     0.0,
+     0.3571
+    ],
+    "f1_ci": [
+     0.0,
+     0.1778
+    ],
+    "owner_acc_ci": [
+     0.0,
+     0.0
+    ],
+    "due_acc_ci": null,
+    "too_small": false
+   },
+   "d (final)": {
+    "n": 5,
+    "pred": 28,
+    "gold": 5,
+    "matched": 2,
+    "owner_n": 2,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0714,
+    "recall": 0.4,
+    "f1": 0.1212,
+    "owner_acc": 1.0,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.1364
+    ],
+    "recall_ci": [
+     0.0,
+     1.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.2353
+    ],
+    "owner_acc_ci": [
+     1.0,
+     1.0
+    ],
+    "due_acc_ci": null,
+    "too_small": false
+   }
+  }
+ },
+ "timing": {
+  "total_s": 205.11,
+  "build_s": 0.14,
+  "seconds_per_meeting": 10.249,
+  "per_meeting_s": {
+   "ES2004a": 6.769,
+   "ES2004b": 14.304,
+   "ES2004c": 13.731,
+   "ES2004d": 13.365,
+   "ES2014a": 4.092,
+   "ES2014b": 12.834,
+   "ES2014c": 11.96,
+   "ES2014d": 13.54,
+   "IS1009a": 4.631,
+   "IS1009b": 11.55,
+   "IS1009c": 9.005,
+   "IS1009d": 9.485,
+   "TS3003a": 5.543,
+   "TS3003b": 10.028,
+   "TS3003c": 9.817,
+   "TS3003d": 10.013,
+   "TS3007a": 5.694,
+   "TS3007b": 13.013,
+   "TS3007c": 12.609,
+   "TS3007d": 12.992
+  },
+  "lines_scored": 6742,
+  "lines_from_cache": 41,
+  "model_s": 204.8,
+  "lines_per_s": 32.9
+ },
+ "predictions_file": "6_evaluation/action_items/results/predictions/20261120T180224Z_zeroshot_ami_eval.json",
+ "predictions_sha256": "2a104c58a78e62d9430d0b0b24b11bbdf96eafbafc396d33f204a1b0e4794f72",
+ "python": "3.12.14",
+ "packages": {
+  "numpy": "2.5.4",
+  "torch": "2.14.1",
+  "transformers": "5.20.2",
+  "tokenizers": "0.23.3",
+  "huggingface-hub": "2.2.0",
+  "safetensors": "0.8.0"
+ },
+ "hardware": {
+  "machine": "arm64",
+  "system": "macOS-27.0-arm64-arm-64bit",
+  "cpus": 10,
+  "device": "mps",
+  "chip": "Apple M5"
+ },
+ "per_meeting": {
+  "ES2004a": {
+   "pred": 3,
+   "gold": 1,
+   "matched": 0,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "mixed",
+    "gender": "mixed",
+    "type": "a (kickoff)"
+   },
+   "pairs": [],
+   "unmatched_pred": [
+    "Then we'll go do tool training,",
+    "We're gonna practice with the pens",
+    "And draw our favourite animal on the white board,"
+   ],
+   "unmatched_gold": [
+    "The group will prepare for the functional design meeting to discuss the components and functions of the product."
+   ]
+  },
+  "ES2004b": {
+   "pred": 1,
+   "gold": 1,
+   "matched": 0,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "mixed",
+    "gender": "mixed",
+    "type": "b+c (middle)"
+   },
+   "pairs": [],
+   "unmatched_pred": [
+    "I think we have to design one product"
+   ],
+   "unmatched_gold": [
+    "The Marketing Expert will research consumers' opinions on instruction manuals."
+   ]
+  },
+  "ES2004c": {
+   "pred": 4,
+   "gold": 0,
+   "matched": 0,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "mixed",
+    "gender": "mixed",
+    "type": "b+c (middle)"
+   },
+   "pairs": [],
+   "unmatched_pred": [
+    "Put it on in that way.",
+    "You were going to look into the rechargeable batteries",
+    "And we were gonna think about the port and an alarm for getting it lost,",
+    "Okay, can we add in an attachment to closing feature?"
+   ],
+   "unmatched_gold": []
+  },
+  "ES2004d": {
+   "pred": 2,
+   "gold": 2,
+   "matched": 0,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "mixed",
+    "gender": "mixed",
+    "type": "d (final)"
+   },
+   "pairs": [],
+   "unmatched_pred": [
+    "I'd give it a one.",
+    "Okay, we'll just put it in as we'll put in as half."
+   ],
+   "unmatched_gold": [
+    "The group will suggest to the management that speech recognition remain in the product design.",
+    "All members will fill out a final evaluation questionnaire."
+   ]
+  },
+  "ES2014a": {
+   "pred": 7,
+   "gold": 3,
+   "matched": 1,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "all native",
+    "gender": "mixed",
+    "type": "a (kickoff)"
+   },
+   "pairs": [
+    {
+     "pred": "And you'll be doing various designs throughout the day to meet this end.",
+     "pred_owner": "Marketing Expert",
+     "gold": "The Industrial Deigner will prepare the working design.",
+     "gold_owners": [],
+     "similarity": 0.7131,
+     "owner_ok": false
+    }
+   ],
+   "unmatched_pred": [
+    "Right so everyone's to supposedly draw their favourite animal over on the white board over there.",
+    "I guess this is make sure the whiteboard works.",
+    "I'll try the red pen.",
+    "We'll g then we'll go for a s small bear.",
+    "And change the water every couple of months,",
+    "And buy in a few plants, so."
+   ],
+   "unmatched_gold": [
+    "The User Interface Designer will research technical functions.",
+    "The Marketing Expert will prepare the user requirement specification."
+   ]
+  },
+  "ES2014b": {
+   "pred": 5,
+   "gold": 1,
+   "matched": 0,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "all native",
+    "gender": "mixed",
+    "type": "b+c (middle)"
+   },
+   "pairs": [],
+   "unmatched_pred": [
+    "So do we want to do the presentation first,",
+    "I guess if we go ahead with the with the three presentations.",
+    "I'll just I'll grab the wire out the back of this one.",
+    "I so we'll know how long we've got to complete that task.",
+    "You're also gonna have the channel tuner, as it were."
+   ],
+   "unmatched_gold": [
+    "All participants will continue working on the remote functions."
+   ]
+  },
+  "ES2014c": {
+   "pred": 1,
+   "gold": 1,
+   "matched": 0,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "all native",
+    "gender": "mixed",
+    "type": "b+c (middle)"
+   },
+   "pairs": [],
+   "unmatched_pred": [
+    "Alright, so we're just gonna have the rubber buttons,"
+   ],
+   "unmatched_gold": [
+    "The User Interface Designer and the Industrial Designer will construct the prototype."
+   ]
+  },
+  "ES2014d": {
+   "pred": 6,
+   "gold": 1,
+   "matched": 1,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "all native",
+    "gender": "mixed",
+    "type": "d (final)"
+   },
+   "pairs": [
+    {
+     "pred": "Don't forget to complete final questionnaire and meeting summary.",
+     "pred_owner": "",
+     "gold": "The team have two questionnaires and a report on the last meeting to complete before they finish.",
+     "gold_owners": [],
+     "similarity": 0.7896,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "You were saying that it would be that one, that you would put in one there.",
+    "And I have to go up onto the whiteboard and do this apparently,",
+    "Okay, well I put it back on.",
+    "Finish that page",
+    "Either at the library, or come back, or go and see Joe Bloggs, or whatever."
+   ],
+   "unmatched_gold": []
+  },
+  "IS1009a": {
+   "pred": 1,
+   "gold": 3,
+   "matched": 0,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "mixed",
+    "gender": "all female",
+    "type": "a (kickoff)"
+   },
+   "pairs": [],
+   "unmatched_pred": [
+    "Because they put a newspaper or they put it behind a plant or, we you know, whatever."
+   ],
+   "unmatched_gold": [
+    "The industrial designer will work on the working design and technical function.",
+    "The interface specialist will do the working design and functional design.",
+    "The marketing manager will look for user requirement specifications such as friendliness"
+   ]
+  },
+  "IS1009b": {
+   "pred": 2,
+   "gold": 0,
+   "matched": 0,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "mixed",
+    "gender": "all female",
+    "type": "b+c (middle)"
+   },
+   "pairs": [],
+   "unmatched_pred": [
+    "You want me to get your slide show up?",
+    "Can you go to the next sli slide please?"
+   ],
+   "unmatched_gold": []
+  },
+  "IS1009c": {
+   "pred": 1,
+   "gold": 4,
+   "matched": 0,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "mixed",
+    "gender": "all female",
+    "type": "b+c (middle)"
+   },
+   "pairs": [],
+   "unmatched_pred": [
+    "And we come back in thirty minutes, according to our timetable here."
+   ],
+   "unmatched_gold": [
+    "The marketing expert will do the product evaluation.",
+    "The industrial designer and interface specialist will work together on a prototype using modeling clay.",
+    "The industrial designer will come up with a user interface design.",
+    "Their coaches will send specific instructions and answer questions."
+   ]
+  },
+  "IS1009d": {
+   "pred": 2,
+   "gold": 0,
+   "matched": 0,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "mixed",
+    "gender": "all female",
+    "type": "d (final)"
+   },
+   "pairs": [],
+   "unmatched_pred": [
+    "I'm supposed to make a little presentation, aren't I?",
+    "Eight twenty, yes."
+   ],
+   "unmatched_gold": []
+  },
+  "TS3003a": {
+   "pred": 7,
+   "gold": 1,
+   "matched": 0,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "all non-native",
+    "gender": "all male",
+    "type": "a (kickoff)"
+   },
+   "pairs": [],
+   "unmatched_pred": [
+    "So that's a bit what you're going to do.",
+    "Select a pen,",
+    "And then we're going to try out the white board.",
+    "As you can see we g all going to draw a animal. Just to just to get a bit familiar with it.",
+    "I'm gonna sit down, I think.",
+    "So you have to got the little device inside your room,",
+    "And we can maybe see if we can do something with the infra-red."
+   ],
+   "unmatched_gold": [
+    "The team members will work on their individual projects"
+   ]
+  },
+  "TS3003b": {
+   "pred": 1,
+   "gold": 2,
+   "matched": 0,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "all non-native",
+    "gender": "all male",
+    "type": "b+c (middle)"
+   },
+   "pairs": [],
+   "unmatched_pred": [
+    "This time I will take the minutes."
+   ],
+   "unmatched_gold": [
+    "The industrial designer will work on the components concept.",
+    "The user interface designer will work on the user interface concept and trend-watching"
+   ]
+  },
+  "TS3003c": {
+   "pred": 5,
+   "gold": 3,
+   "matched": 1,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "all non-native",
+    "gender": "all male",
+    "type": "b+c (middle)"
+   },
+   "pairs": [
+    {
+     "pred": "And then we're going to try to finish our project,",
+     "pred_owner": "",
+     "gold": "The user interface designer will continue with what he has been working on.",
+     "gold_owners": [
+      "UI"
+     ],
+     "similarity": 0.7015,
+     "owner_ok": false
+    }
+   ],
+   "unmatched_pred": [
+    "I suggest let's get started with the presentations.",
+    "Maybe you can make a little drawing of it on the",
+    "Just I will put these minutes on the in the folder.",
+    "And make a good design for all the grandfathers and grandmothers, I think."
+   ],
+   "unmatched_gold": [
+    "The team members will look at the corporate website.",
+    "The industrial designer and user interface designer will work together"
+   ]
+  },
+  "TS3003d": {
+   "pred": 10,
+   "gold": 1,
+   "matched": 0,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "all non-native",
+    "gender": "all male",
+    "type": "d (final)"
+   },
+   "pairs": [],
+   "unmatched_pred": [
+    "And we will do the product evaluation.",
+    "Then we will do the project evaluation,",
+    "But first we will do the this is prototype presentation.",
+    "Get the twelve and a half Euros at the end",
+    "It's gotta scroll and push.",
+    "Then, yeah. We've got the scroll-wheel.",
+    "So we make one for the volume, one for the channel. Plus scroll.",
+    "Yeah, pen is here on the table.",
+    "I think we will. If we gonna export this product.",
+    "Meet you in I think about ten minutes"
+   ],
+   "unmatched_gold": [
+    "The project manager will prepare the final presentation, while the rest of the group will fill in a questionnaire."
+   ]
+  },
+  "TS3007a": {
+   "pred": 6,
+   "gold": 2,
+   "matched": 0,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "all non-native",
+    "gender": "all male",
+    "type": "a (kickoff)"
+   },
+   "pairs": [],
+   "unmatched_pred": [
+    "Drawing goes with this thing.",
+    "You must p push a little Good.",
+    "I'm gonna paint in the red.",
+    "I'm gonna join you at the table.",
+    "A little plan on what we're going to do.",
+    "And then we're going to fit all the pieces together the next meeting."
+   ],
+   "unmatched_gold": [
+    "The Industrial Designer will work on the working design.",
+    "The User Interface Designer will research the technical functions."
+   ]
+  },
+  "TS3007b": {
+   "pred": 3,
+   "gold": 2,
+   "matched": 0,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "all non-native",
+    "gender": "all male",
+    "type": "b+c (middle)"
+   },
+   "pairs": [],
+   "unmatched_pred": [
+    "Tim, can you start?",
+    "Make let's say fifteen buttons on it",
+    "I'd do it after lunch I think."
+   ],
+   "unmatched_gold": [
+    "They will receive specific instructions for the next meeting by email.",
+    "They will fill out the questionaire"
+   ]
+  },
+  "TS3007c": {
+   "pred": 6,
+   "gold": 1,
+   "matched": 1,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "all non-native",
+    "gender": "all male",
+    "type": "b+c (middle)"
+   },
+   "pairs": [
+    {
+     "pred": "And will drawing it on the SMARTboard.",
+     "pred_owner": "",
+     "gold": "The industrial designer and user interface designer will work together on a prototype, using the SMARTboard.  The marketing expert will work on the product evaluation.",
+     "gold_owners": [
+      "ID",
+      "ME",
+      "UI"
+     ],
+     "similarity": 0.7556,
+     "owner_ok": false
+    }
+   ],
+   "unmatched_pred": [
+    "Well, we have decided to do a do the with a touch-screen",
+    "I will take notes",
+    "And at the end of the minutes will be at the shared folder.",
+    "I think we have we have decided okay.",
+    "So we're going to work together right now?"
+   ],
+   "unmatched_gold": []
+  },
+  "TS3007d": {
+   "pred": 8,
+   "gold": 1,
+   "matched": 1,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "speakers": "all non-native",
+    "gender": "all male",
+    "type": "d (final)"
+   },
+   "pairs": [
+    {
+     "pred": "Finish my end report",
+     "pred_owner": "Project Manager",
+     "gold": "The project manager will finish the final report.",
+     "gold_owners": [
+      "PM"
+     ],
+     "similarity": 0.9138,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Well, we p we can do it glow in the dark.",
+    "We also have to do the evaluation, the production costs and stuff.",
+    "We have to fil want to do it in and see if we stay under the twelve and a half Euro.",
+    "Okay, solar cells, zero.",
+    "Two minutes of drawing, yeah.",
+    "Put it on a story-board",
+    "Well I gonna redesign something now."
+   ],
+   "unmatched_gold": []
+  }
+ }
+}

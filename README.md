@@ -1,12 +1,13 @@
 # LiveMinutes
 
-CS6170 AI Capstone, Northeastern. This README covers the **summarization baseline**, from a fresh clone to the logged number. Details are in [`docs/`](docs/): [SUMMARIZATION.md](docs/SUMMARIZATION.md), [INGESTION.md](docs/INGESTION.md) (the meeting bot) and [PROJECT.md](docs/PROJECT.md) (layout, plans for Features 2 and 3).
+CS6170 AI Capstone, Northeastern. This README covers the **summarization baseline**, from a fresh clone to the logged number, and the **action-item baselines** ([section 8](#8-action-items-feature-2-baselines)). Details are in [`docs/`](docs/): [SUMMARIZATION.md](docs/SUMMARIZATION.md), [ACTION_ITEMS.md](docs/ACTION_ITEMS.md), [INGESTION.md](docs/INGESTION.md) (the meeting bot) and [PROJECT.md](docs/PROJECT.md) (layout, plans for Features 2 and 3).
 
 ## 1. What LiveMinutes is
 
 - **Meeting bot** ([`1_ingestion/`](1_ingestion/)): the open-source [Attendee](https://github.com/attendee-labs/attendee) bot joins the call. Our `bridge.py` keeps no audio until everyone has said yes in chat, then transcribes with Groq Whisper.
 - **Summarization** ([`2_summarization/`](2_summarization/)): turns a meeting transcript into a short summary. We measure it on the AMI meeting corpus against human-written summaries.
-- **Not built yet:** action items (`3_action_items/`), Q&A over past meetings (`4_qa/`), AWS deployment (`7_infra/`).
+- **Action items** ([`3_action_items/`](3_action_items/)): finds each task, its owner and its due date in a transcript. Two baselines so far (rules, and a zero-shot classifier), scored on AMI and on the synthetic meetings ([section 8](#8-action-items-feature-2-baselines)).
+- **Not built yet:** Q&A over past meetings (`4_qa/`), AWS deployment (`7_infra/`).
 
 ## 2. Data
 
@@ -190,3 +191,59 @@ Notes:
 - Attendee's database volume is shared by every clone on a computer. If you set Attendee up before in another clone, copy that clone's `attendee/.env` here instead of running `init_env.py`.
 
 Full guide (consent rules, settings, troubleshooting): [docs/INGESTION.md](docs/INGESTION.md). Code comments that say "README section 1.x" mean section 1.x of that file.
+
+## 8. Action items (Feature 2): baselines
+
+From a transcript, find each action item: **task, owner, due date**, and the lines it came from. Output is the UI contract's action-item format (`text`, `owner`, `due`, `source_line_ids`), so the baselines plug into the meeting page and every system, including the LLM, is scored the same way. Full details: [docs/ACTION_ITEMS.md](docs/ACTION_ITEMS.md). Errors read by hand: [ERRORS.md](6_evaluation/action_items/ERRORS.md).
+
+| | What | Why |
+|---|---|---|
+| **Rules** ([`rules.py`](3_action_items/rules.py), no model) | Finds commitment and request phrases ("I'll", "can you", "Priya, could you", "let's", "we need to", "someone should") followed by a verb of work. Owner: the speaker for "I"; the person named or who answers for a request; nobody for "we". Due dates: today, tomorrow, end of day, next week, the next meeting, weekdays, real dates, "by 3 pm". Merges repeats, drops "forget that". | Readable, fast, no training. The floor any model must beat. |
+| **Zero-shot** ([`zeroshot.py`](3_action_items/zeroshot.py), `facebook/bart-large-mnli`, pinned revision) | Asks an NLI model, line by line, whether "someone commits to doing a task or is asked to do one". Wording, context and threshold chosen on dev. Owner and due date from the rules. MPS or CPU; scores cached. | A learned model with no training data of ours. |
+| **Ground truth** | AMI: the actions section of the human summaries (role owners mapped to speakers). Synthetic: its gold action items (`synthetic-data` branch at `d0cbb4b`, read only), its own split. | AMI is the public benchmark; the synthetic meetings test edge cases (offered and taken by someone else, reassigned, absent owner, vague). |
+| **Metric** | Predicted and gold items matched one to one by meaning (`bge-small-en-v1.5` embeddings, pinned; threshold 0.70 chosen on dev). Item precision / recall / F1, owner accuracy and due accuracy on matched items. 95% bootstrap intervals over meetings. | Predicted tasks are worded differently from the gold ones, so exact text matching would score almost nothing. |
+
+**Result** (final splits, logged at commit `e293eea`):
+
+| System | Data | Meetings | Gold | Predicted | Matched | Precision | Recall | F1 | Owner acc. (n) | Due acc. (n) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| rules | ami eval | 20 | 30 | 91 | 5 | 0.05 [0.01, 0.09] | 0.17 [0.04, 0.33] | **0.08 [0.02, 0.14]** | 0.40 [0.00, 1.00] (5) | n/a (0) |
+| zeroshot | ami eval | 20 | 30 | 81 | 5 | 0.06 [0.02, 0.10] | 0.17 [0.05, 0.31] | **0.09 [0.03, 0.15]** | 0.40 [0.00, 1.00] (5) | n/a (0) |
+| rules | synthetic test | 20 | 112 | 146 | 85 | 0.58 [0.53, 0.64] | 0.76 [0.71, 0.81] | **0.66 [0.61, 0.71]** | 0.88 [0.82, 0.94] (85) | 0.80 [0.50, 1.00] (10) |
+| zeroshot | synthetic test | 20 | 112 | 90 | 40 | 0.44 [0.35, 0.53] | 0.36 [0.27, 0.44] | **0.40 [0.31, 0.47]** | 0.95 [0.88, 1.00] (40) | 0.83 [0.00, 1.00] (6) |
+
+Rules are clearly better on synthetic. On AMI both are near zero: AMI's actions are summary sentences about whole discussions, said indirectly in the meeting. Breakdowns (all groups small): [docs/ACTION_ITEMS.md](docs/ACTION_ITEMS.md#breakdowns).
+
+**Setup:** the quick start (section 4), plus the synthetic data's commit: `git fetch origin synthetic-data`. Both models download on the first run (about 1.7 GB).
+
+**The one command** (smoke test: both baselines on 2 AMI dev meetings and 1 synthetic dev meeting, scored, under 2 minutes; 20 s on an Apple M5 after the download, 9 s cached):
+
+```bash
+.venv/bin/python 3_action_items/run.py --smoke
+```
+
+**Full runs** (Apple M5, MPS; first time / cached):
+
+| Stage | Command | Time |
+|---|---|---|
+| Final numbers: both baselines, AMI eval + synthetic test | `.venv/bin/python 3_action_items/run.py --split final` | 4.5 min / 12 s |
+| One baseline, one split | `.venv/bin/python 3_action_items/run.py --baseline rules --data ami --split eval` | rules about 1 s; zero-shot 205 s (AMI eval), 49 s (synthetic test) |
+| Dev runs | `.venv/bin/python 3_action_items/run.py --split dev` | about 4 min / 11 s |
+| Tuning (dev only) | `.venv/bin/python 3_action_items/tune.py rules` and `... tune.py zeroshot` | 45 s; zero-shot 85 min / 51 s |
+| Match threshold (dev only) | `.venv/bin/python 6_evaluation/action_items/calibrate.py` | about 5 s |
+| Tables from the log | `.venv/bin/python 6_evaluation/action_items/report.py` | instant |
+| Tests | `.venv/bin/python -m pytest 3_action_items 6_evaluation/action_items` (run apart from `1_ingestion/tests`: both folders have a `settings.py`) | about 11 s with caches (includes the timed smoke test) |
+
+Add `--no-log` to keep a run out of the log. Every run logs commit, data hashes, config and config hash, model revisions, hardware, Python and package versions, and the metrics with breakdowns: [`6_evaluation/action_items/results/results_log.jsonl`](6_evaluation/action_items/results/results_log.jsonl). Per-meeting matches are in `results/runs/`, and the predicted items are in `results/predictions/`.
+
+**Scoring Jithin's LLM output the same way:**
+1. Export the exact transcripts the baselines read, with the same line ids:
+   `.venv/bin/python 6_evaluation/action_items/export_meetings.py --data ami --split eval --out 5_data/processed/ami_eval.json`
+2. Run the LLM on each meeting. Write `{"meetings": {"<meeting id>": {"items": [{"text": ..., "owner": ..., "due": ...}]}}}`. `task` works in place of `text`, so the summarizer's `ActionItem` fields can be used as they are.
+3. Score it:
+   `.venv/bin/python 6_evaluation/action_items/score.py --data ami --split eval --predictions llm_ami_eval.json --name llm`
+   Do the same for `--data synthetic --split test`. Then `report.py` adds the LLM's rows to the table.
+4. Tune the prompt on `--split dev` only.
+
+Details: [docs/ACTION_ITEMS.md section 5](docs/ACTION_ITEMS.md#5-scoring-another-system-eg-the-llm).
+

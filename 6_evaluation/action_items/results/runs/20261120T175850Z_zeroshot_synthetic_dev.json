@@ -1,0 +1,1500 @@
+{
+ "run_id": "20261120T175850Z_zeroshot_synthetic_dev",
+ "commit": "e293eea46b23f60dd2c26b72110d7b8f0d8c5055",
+ "uncommitted_changes": [],
+ "system": "zeroshot",
+ "data": "synthetic",
+ "split": "dev",
+ "meetings": [
+  "SY0106a",
+  "SY0106b",
+  "SY0106c",
+  "SY0106d",
+  "SY0107a",
+  "SY0107b",
+  "SY0107c",
+  "SY0107d",
+  "SY0201a",
+  "SY0201b",
+  "SY0201c",
+  "SY0201d",
+  "SY0208a",
+  "SY0208b",
+  "SY0208c",
+  "SY0208d",
+  "SY0302a",
+  "SY0302b",
+  "SY0302c",
+  "SY0302d"
+ ],
+ "meetings_hash": "148e24e2da8a",
+ "data_hashes": {
+  "data_hash": "a215c4b6220930d262ec308dad41f6f079b56fa9fc9eb8dff10860bd8ebef259",
+  "commit": "d0cbb4b3670d12611553648b2b571cc0f4efc914",
+  "files": 21
+ },
+ "config": {
+  "baseline": "zeroshot",
+  "zeroshot": {
+   "model": "facebook/bart-large-mnli",
+   "revision": "d7645e127eaf1aefc7862fd59a17a5aa8558b8ce",
+   "hypothesis_template": "{}",
+   "mode": "entailment",
+   "hypothesis": "In this text, someone commits to doing a task or is asked to do one.",
+   "context": "none",
+   "threshold": 0.9994,
+   "min_words": 3,
+   "min_content_words": 2,
+   "batch_size": 32,
+   "device": "auto"
+  },
+  "rules": {
+   "lookahead_lines": 3,
+   "merge_jaccard": 0.4,
+   "merge_window_lines": 1,
+   "min_text_words": 3,
+   "text_until": "sentence"
+  },
+  "seed": 42,
+  "pythonhashseed": 42,
+  "matching": {
+   "embedder": "BAAI/bge-small-en-v1.5",
+   "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+   "pooling": "cls",
+   "threshold": 0.7,
+   "bootstrap": {
+    "B": 2000,
+    "rng": "numpy.random.default_rng(0)",
+    "level": 0.95,
+    "unit": "meeting"
+   }
+  }
+ },
+ "config_hash": "3c3facb92bd8",
+ "model_versions": {
+  "classifier": "facebook/bart-large-mnli@d7645e127eaf1aefc7862fd59a17a5aa8558b8ce",
+  "embedder": "BAAI/bge-small-en-v1.5@5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+ },
+ "metrics": {
+  "n": 20,
+  "pred": 70,
+  "gold": 117,
+  "matched": 39,
+  "owner_n": 39,
+  "due_n": 5,
+  "pred_with_due": 11,
+  "precision": 0.5571,
+  "recall": 0.3333,
+  "f1": 0.4171,
+  "owner_acc": 0.8718,
+  "due_acc": 0.6,
+  "precision_ci": [
+   0.4583,
+   0.6571
+  ],
+  "recall_ci": [
+   0.2645,
+   0.4062
+  ],
+  "f1_ci": [
+   0.3468,
+   0.4889
+  ],
+  "owner_acc_ci": [
+   0.7674,
+   0.9722
+  ],
+  "due_acc_ci": [
+   0.0,
+   1.0
+  ]
+ },
+ "breakdowns": {
+  "feature": {
+   "F1": {
+    "n": 8,
+    "pred": 25,
+    "gold": 45,
+    "matched": 14,
+    "owner_n": 14,
+    "due_n": 0,
+    "pred_with_due": 4,
+    "precision": 0.56,
+    "recall": 0.3111,
+    "f1": 0.4,
+    "owner_acc": 1.0,
+    "due_acc": null,
+    "precision_ci": [
+     0.4074,
+     0.7143
+    ],
+    "recall_ci": [
+     0.2143,
+     0.3878
+    ],
+    "f1_ci": [
+     0.2903,
+     0.4935
+    ],
+    "owner_acc_ci": [
+     1.0,
+     1.0
+    ],
+    "due_acc_ci": null,
+    "too_small": false
+   },
+   "F2": {
+    "n": 8,
+    "pred": 31,
+    "gold": 54,
+    "matched": 18,
+    "owner_n": 18,
+    "due_n": 4,
+    "pred_with_due": 6,
+    "precision": 0.5806,
+    "recall": 0.3333,
+    "f1": 0.4235,
+    "owner_acc": 0.8333,
+    "due_acc": 0.75,
+    "precision_ci": [
+     0.4412,
+     0.72
+    ],
+    "recall_ci": [
+     0.2115,
+     0.4561
+    ],
+    "f1_ci": [
+     0.2973,
+     0.5263
+    ],
+    "owner_acc_ci": [
+     0.6818,
+     1.0
+    ],
+    "due_acc_ci": [
+     0.25,
+     1.0
+    ],
+    "too_small": false
+   },
+   "F3": {
+    "n": 4,
+    "pred": 14,
+    "gold": 18,
+    "matched": 7,
+    "owner_n": 7,
+    "due_n": 1,
+    "pred_with_due": 1,
+    "precision": 0.5,
+    "recall": 0.3889,
+    "f1": 0.4375,
+    "owner_acc": 0.7143,
+    "due_acc": 0.0,
+    "precision_ci": [
+     0.2778,
+     0.8
+    ],
+    "recall_ci": [
+     0.3,
+     0.5
+    ],
+    "f1_ci": [
+     0.2857,
+     0.5926
+    ],
+    "owner_acc_ci": [
+     0.5,
+     1.0
+    ],
+    "due_acc_ci": [
+     0.0,
+     0.0
+    ],
+    "too_small": true
+   }
+  },
+  "edge_case": {
+   "F1_ABSENT_DISCUSSED": {
+    "n": 3,
+    "pred": 1,
+    "gold": 9,
+    "matched": 2,
+    "owner_n": 2,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 1.0,
+    "recall": 0.2222,
+    "f1": 0.3636,
+    "owner_acc": 1.0,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     1.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.5
+    ],
+    "f1_ci": [
+     0.0,
+     0.6667
+    ],
+    "owner_acc_ci": [
+     1.0,
+     1.0
+    ],
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F1_INTERLEAVED_TOPICS": {
+    "n": 3,
+    "pred": 0,
+    "gold": 2,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F1_OFF_TOPIC_TANGENT": {
+    "n": 2,
+    "pred": 0,
+    "gold": 0,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F1_PLAN_CHANGE": {
+    "n": 2,
+    "pred": 0,
+    "gold": 1,
+    "matched": 1,
+    "owner_n": 1,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 1.0,
+    "f1": 0.0,
+    "owner_acc": 1.0,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     1.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": [
+     1.0,
+     1.0
+    ],
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F1_SARCASM_AS_FACT": {
+    "n": 3,
+    "pred": 0,
+    "gold": 0,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F1_SELF_CORRECTION": {
+    "n": 3,
+    "pred": 0,
+    "gold": 0,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F2_OFFERED_TAKEN_BY_OTHER": {
+    "n": 4,
+    "pred": 3,
+    "gold": 4,
+    "matched": 2,
+    "owner_n": 2,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.6667,
+    "recall": 0.5,
+    "f1": 0.5714,
+    "owner_acc": 0.5,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     1.0
+    ],
+    "recall_ci": [
+     0.0,
+     1.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.8571
+    ],
+    "owner_acc_ci": [
+     0.0,
+     1.0
+    ],
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F2_REASSIGNED_OR_DROPPED": {
+    "n": 4,
+    "pred": 2,
+    "gold": 5,
+    "matched": 1,
+    "owner_n": 1,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.5,
+    "recall": 0.2,
+    "f1": 0.2857,
+    "owner_acc": 1.0,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     1.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.75
+    ],
+    "f1_ci": [
+     0.0,
+     0.75
+    ],
+    "owner_acc_ci": [
+     1.0,
+     1.0
+    ],
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F2_TASK_TO_ABSENT": {
+    "n": 4,
+    "pred": 2,
+    "gold": 11,
+    "matched": 2,
+    "owner_n": 2,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 1.0,
+    "recall": 0.1818,
+    "f1": 0.3077,
+    "owner_acc": 1.0,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     1.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.5455
+    ],
+    "f1_ci": [
+     0.0,
+     0.7059
+    ],
+    "owner_acc_ci": [
+     1.0,
+     1.0
+    ],
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F2_VAGUE_NO_OWNER": {
+    "n": 4,
+    "pred": 0,
+    "gold": 4,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F3_ACTION_REMOVED": {
+    "n": 3,
+    "pred": 2,
+    "gold": 0,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F3_TASK_TO_ABSENT": {
+    "n": 3,
+    "pred": 2,
+    "gold": 6,
+    "matched": 3,
+    "owner_n": 3,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6667,
+    "owner_acc": 0.3333,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     1.0
+    ],
+    "recall_ci": [
+     0.5,
+     0.5
+    ],
+    "f1_ci": [
+     0.0,
+     0.6667
+    ],
+    "owner_acc_ci": [
+     0.0,
+     1.0
+    ],
+    "due_acc_ci": null,
+    "too_small": true
+   },
+   "F3_UNAGREED_DECISION": {
+    "n": 2,
+    "pred": 0,
+    "gold": 0,
+    "matched": 0,
+    "owner_n": 0,
+    "due_n": 0,
+    "pred_with_due": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "owner_acc": null,
+    "due_acc": null,
+    "precision_ci": [
+     0.0,
+     0.0
+    ],
+    "recall_ci": [
+     0.0,
+     0.0
+    ],
+    "f1_ci": [
+     0.0,
+     0.0
+    ],
+    "owner_acc_ci": null,
+    "due_acc_ci": null,
+    "too_small": true
+   }
+  }
+ },
+ "timing": {
+  "total_s": 0.19,
+  "build_s": 0.14,
+  "seconds_per_meeting": 0.003,
+  "per_meeting_s": {
+   "SY0106a": 0.003,
+   "SY0106b": 0.003,
+   "SY0106c": 0.003,
+   "SY0106d": 0.003,
+   "SY0107a": 0.002,
+   "SY0107b": 0.003,
+   "SY0107c": 0.003,
+   "SY0107d": 0.002,
+   "SY0201a": 0.003,
+   "SY0201b": 0.002,
+   "SY0201c": 0.004,
+   "SY0201d": 0.002,
+   "SY0208a": 0.002,
+   "SY0208b": 0.002,
+   "SY0208c": 0.003,
+   "SY0208d": 0.004,
+   "SY0302a": 0.003,
+   "SY0302b": 0.002,
+   "SY0302c": 0.003,
+   "SY0302d": 0.003
+  },
+  "lines_scored": 0,
+  "lines_from_cache": 1757,
+  "model_s": 0.0,
+  "lines_per_s": null
+ },
+ "predictions_file": "6_evaluation/action_items/results/predictions/20261120T175850Z_zeroshot_synthetic_dev.json",
+ "predictions_sha256": "c54317f4e2bf6184fa96e2bbfbd4cdc4faa330974c4a42bbe80e951a71868e43",
+ "python": "3.12.14",
+ "packages": {
+  "numpy": "2.5.4",
+  "torch": "2.14.1",
+  "transformers": "5.20.2",
+  "tokenizers": "0.23.3",
+  "huggingface-hub": "2.2.0",
+  "safetensors": "0.8.0"
+ },
+ "hardware": {
+  "machine": "arm64",
+  "system": "macOS-27.0-arm64-arm-64bit",
+  "cpus": 10,
+  "device": "mps",
+  "chip": "Apple M5"
+ },
+ "per_meeting": {
+  "SY0106a": {
+   "pred": 4,
+   "gold": 7,
+   "matched": 3,
+   "owner_ok": 3,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F1"
+   },
+   "pairs": [
+    {
+     "pred": "Look at components? RFID pad, barcode scanner, printer, rough costs against the eighteen hundred",
+     "pred_owner": "Tomasz",
+     "gold": "Research components (RFID pad, barcode scanner, printer) and estimate rough costs against the 1,800 euro production budget.",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.7728,
+     "owner_ok": true
+    },
+    {
+     "pred": "Do a first sketch of the housing",
+     "pred_owner": "Tomasz",
+     "gold": "Produce a first sketch of the kiosk housing, kept flexible to accommodate the eventual screen and pad height.",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.7287,
+     "owner_ok": true
+    },
+    {
+     "pred": "Send her the minutes tonight with the brief and the height question",
+     "pred_owner": "Marcus",
+     "gold": "Send the minutes to the absent user interface designer with the brief, the screen and pad height question, and the fines payment idea.",
+     "gold_owners": [
+      "D"
+     ],
+     "similarity": 0.7099,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "I'm Marcus, I'll be project manager on this one."
+   ],
+   "unmatched_gold": [
+    "Investigate user requirements for patrons and staff and review what competitors are doing.",
+    "Visit the central library and talk to staff about how they use their current self-checkout machines.",
+    "Produce the functional design of the interface: the screens and the flow from card scan to receipt.",
+    "Find out whether library catalogue systems have a standard interface the kiosk can use to check cards and mark books as out."
+   ]
+  },
+  "SY0106b": {
+   "pred": 5,
+   "gold": 6,
+   "matched": 2,
+   "owner_ok": 2,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F1"
+   },
+   "pairs": [
+    {
+     "pred": "Write up the minutes and send them round",
+     "pred_owner": "Marcus",
+     "gold": "Write up the minutes and send them to the team.",
+     "gold_owners": [
+      "D"
+     ],
+     "similarity": 0.8746,
+     "owner_ok": true
+    },
+    {
+     "pred": "Do a housing concept with the heights we just agreed, and a firmer cost breakdown",
+     "pred_owner": "Tomasz",
+     "gold": "Produce a housing concept using the agreed screen and pad heights, with a firmer cost breakdown, and look for cheaper sheet metal to reduce cost.",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.7668,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Then you put the books on the pad, or scan the barcode if it's not tagged.",
+    "Okay, so show the fines, no payment at the kiosk. Agreed?",
+    "Look for that cheaper sheet metal like I said"
+   ],
+   "unmatched_gold": [
+    "Produce screen mock-ups for the checkout flow and the staff maintenance mode.",
+    "Confirm whether the major library catalogue vendors support the SIP2 standard for checking cards and marking books out, and whether patron email addresses come through.",
+    "Research look and feel for the conceptual design: what library networks prefer in colours, materials and trends.",
+    "Find out which languages libraries need for the language button."
+   ]
+  },
+  "SY0106c": {
+   "pred": 3,
+   "gold": 6,
+   "matched": 2,
+   "owner_ok": 2,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F1"
+   },
+   "pairs": [
+    {
+     "pred": "Put together colour options for the powder coat and the veneer",
+     "pred_owner": "Helen",
+     "gold": "Put together colour options and samples for the powder coat and the veneer.",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.9538,
+     "owner_ok": true
+    },
+    {
+     "pred": "Do the final housing in steel and veneer with a full cost breakdown, and some kind of model we can look at",
+     "pred_owner": "Tomasz",
+     "gold": "Produce the final housing design in powder-coated steel with a birch veneer front panel, with a full cost breakdown and a foam model, for the detailed design meeting.",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.8056,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Chase them this week"
+   ],
+   "unmatched_gold": [
+    "Price the audio guidance option (headphone jack and audio board).",
+    "Produce final screen mock-ups including the library logo bar and the language screen with six languages.",
+    "Chase the fourth catalogue vendor for written confirmation that SIP2 works through an adapter.",
+    "Write up and send the minutes."
+   ]
+  },
+  "SY0106d": {
+   "pred": 3,
+   "gold": 7,
+   "matched": 2,
+   "owner_ok": 2,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F1"
+   },
+   "pairs": [
+    {
+     "pred": "Do the minutes and send them round, and the separate note to Priya",
+     "pred_owner": "Marcus",
+     "gold": "Write up and send the minutes, plus a separate note to the user interface designer on the audio decision, the colour choice and the vendor handover.",
+     "gold_owners": [
+      "D"
+     ],
+     "similarity": 0.7704,
+     "owner_ok": true
+    },
+    {
+     "pred": "Update the drawings with the jack and the final cost sheet",
+     "pred_owner": "Tomasz",
+     "gold": "Update the production drawings with the headphone jack (under the screen on the right, with a raised tactile ring) and update the final cost sheet to 1,784 euros.",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.7601,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Take some this afternoon"
+   ],
+   "unmatched_gold": [
+    "Finish the final screen mock-ups with the library logo bar and the six-language screen, and add audio guidance: voice prompts for each screen and the headphone jack location.",
+    "Chase the fourth catalogue vendor for written confirmation that SIP2 works through an adapter.",
+    "Arrange for a wheelchair user to try the foam model before production.",
+    "Write a one-page product sheet for library networks covering accessibility, on-screen branding and the six languages.",
+    "Take photos of the foam model and send them to the marketing expert for the product sheet."
+   ]
+  },
+  "SY0107a": {
+   "pred": 1,
+   "gold": 4,
+   "matched": 0,
+   "owner_ok": 0,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F1"
+   },
+   "pairs": [],
+   "unmatched_pred": [
+    "I'll go first, fine."
+   ],
+   "unmatched_gold": [
+    "Work on the working design (components), including researching affordable microphones",
+    "Work on the technical functions design, including how people talk to the timer",
+    "Work on user requirements, including research on what home cooks want from a kitchen timer",
+    "Write up the meeting minutes and send them to the team"
+   ]
+  },
+  "SY0107b": {
+   "pred": 4,
+   "gold": 5,
+   "matched": 1,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F1"
+   },
+   "pairs": [
+    {
+     "pred": "Write out the commands and sketch the display",
+     "pred_owner": "Tomasz",
+     "gold": "Write out the voice command list and sketch the display and coloured lights",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.8432,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "So I think we can start.",
+    "Basically you say the wake word, then 'set timer one for ten minutes', or 'set pasta for ten minutes'.",
+    "Do the interface design then, the command list and the lights"
+   ],
+   "unmatched_gold": [
+    "Finish the microphone research, check whether an affordable microphone can cope with extractor-fan noise, check speaker volume, and account for the stop button and three coloured lights",
+    "Email the industrial designer the decisions of this meeting and his tasks, and check the stop button with him",
+    "Research kitchen design trends (colours, materials) for the conceptual design meeting",
+    "Write up and distribute the meeting minutes"
+   ]
+  },
+  "SY0107c": {
+   "pred": 4,
+   "gold": 6,
+   "matched": 3,
+   "owner_ok": 3,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F1"
+   },
+   "pairs": [
+    {
+     "pred": "Finish the display for the tilted front and the final command list",
+     "pred_owner": "Tomasz",
+     "gold": "Finish the display design for the tilted front and finalise the voice command list",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.8889,
+     "owner_ok": true
+    },
+    {
+     "pred": "Come up with a wake word, and the criteria we'll evaluate the design against",
+     "pred_owner": "Nadia",
+     "gold": "Propose a wake word",
+     "gold_owners": [
+      "B"
+     ],
+     "similarity": 0.8328,
+     "owner_ok": true
+    },
+    {
+     "pred": "Do the full cost breakdown and a model of the stand",
+     "pred_owner": "Rafael",
+     "gold": "Produce a full cost breakdown for the detailed design meeting",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.8196,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Write up the minutes. So, recap: counter stand, not the fridge, two mics, matte off-white with a wood-effect top, batteries"
+   ],
+   "unmatched_gold": [
+    "Build a model of the countertop stand",
+    "Prepare the criteria for evaluating the design",
+    "Write up and distribute the meeting minutes"
+   ]
+  },
+  "SY0107d": {
+   "pred": 1,
+   "gold": 4,
+   "matched": 1,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F1"
+   },
+   "pairs": [
+    {
+     "pred": "Write up the minutes and the final report for management",
+     "pred_owner": "Helen",
+     "gold": "Write up the minutes and the final report for management",
+     "gold_owners": [
+      "D"
+     ],
+     "similarity": 1.0,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [],
+   "unmatched_gold": [
+    "Write box/packaging text telling users to place the timer near where they cook",
+    "Make a quick start card with the voice command list to go in the box",
+    "Send the project manager the corrected cost sheet (10.40 euros)"
+   ]
+  },
+  "SY0201a": {
+   "pred": 5,
+   "gold": 6,
+   "matched": 2,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 1,
+   "groups": {
+    "feature": "F2"
+   },
+   "pairs": [
+    {
+     "pred": "Write up the minutes from today and send them round",
+     "pred_owner": "Helen",
+     "gold": "Write up the minutes of the kickoff meeting and send them to the team.",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.7815,
+     "owner_ok": true
+    },
+    {
+     "pred": "Should we each prepare a presentation?",
+     "pred_owner": "",
+     "gold": "Prepare the user requirements and present them at the next meeting.",
+     "gold_owners": [
+      "B"
+     ],
+     "similarity": 0.7654,
+     "owner_ok": false
+    }
+   ],
+   "unmatched_pred": [
+    "I'm Helen, I'll be project manager on this one.",
+    "So shall we go round? Tom, do you want to start?",
+    "They want us each to draw our favourite animal, just to get used to the pen."
+   ],
+   "unmatched_gold": [
+    "Research competitor step counters currently on the market for seniors, including their screens.",
+    "Check the cost of soft hypoallergenic silicone wrist straps.",
+    "Prepare the working design (internal workings and components), including battery life and rechargeable versus replaceable battery options, and present it at the next meeting.",
+    "Prepare the technical functions design (what the device has to do for the user) and present it at the next meeting."
+   ]
+  },
+  "SY0201b": {
+   "pred": 4,
+   "gold": 7,
+   "matched": 1,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F2"
+   },
+   "pairs": [
+    {
+     "pred": "Do some mock-ups",
+     "pred_owner": "Priya",
+     "gold": "Prepare interface mock-ups showing the display layout and what the button does, for the conceptual design meeting.",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.7131,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "I'm fine with wristband.",
+    "Okay, so that's decided, wristband.",
+    "Okay, so the straps go to Marcus then."
+   ],
+   "unmatched_gold": [
+    "Check the cost per unit of soft hypoallergenic silicone wrist straps.",
+    "Price the components, especially the display and the case.",
+    "Email the absent marketing expert today with the meeting's decisions and his tasks.",
+    "Finish the competitor research on step counters for seniors, including their screens, and send it round before the next meeting.",
+    "Send the user requirements to the team before the next meeting.",
+    "Ask management whether there is branding guidance, such as a logo or colours that must be used."
+   ]
+  },
+  "SY0201c": {
+   "pred": 7,
+   "gold": 8,
+   "matched": 5,
+   "owner_ok": 3,
+   "due_ok": 1,
+   "due_n": 1,
+   "groups": {
+    "feature": "F2"
+   },
+   "pairs": [
+    {
+     "pred": "Write up the minutes and send them round",
+     "pred_owner": "Helen",
+     "gold": "Write up the minutes of the meeting and send them round.",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.9289,
+     "owner_ok": true
+    },
+    {
+     "pred": "Run a test of Priya's mock-ups with the walking group before the next meeting",
+     "pred_owner": "Priya",
+     "gold": "Test the interface mock-ups with seniors (a seniors' walking group) before the next meeting.",
+     "gold_owners": [
+      "B"
+     ],
+     "similarity": 0.8439,
+     "owner_ok": false
+    },
+    {
+     "pred": "Make a rough model, clay or foam, with the pebble case and the strap",
+     "pred_owner": "Marcus",
+     "gold": "Make a rough clay or foam model of the device for the detailed design meeting.",
+     "gold_owners": [
+      "D"
+     ],
+     "similarity": 0.8,
+     "owner_ok": true
+    },
+    {
+     "pred": "Send the logo file today",
+     "pred_owner": "Tom",
+     "gold": "Send the company logo file to the industrial designer.",
+     "gold_owners": [
+      "B"
+     ],
+     "similarity": 0.7911,
+     "owner_ok": true
+    },
+    {
+     "pred": "Okay, goal bar's in.",
+     "pred_owner": "",
+     "gold": "Finalise the screens, including the goal bar and the setup sequence.",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.7402,
+     "owner_ok": false
+    }
+   ],
+   "unmatched_pred": [
+    "Okay, pin and loop clasp.",
+    "Do a model of it"
+   ],
+   "unmatched_gold": [
+    "Check the cost of packaging and the instruction leaflet.",
+    "Send the marketing expert full-size printouts of the mock-up screens for the user test.",
+    "Price straps in a couple of extra colours for the next meeting."
+   ]
+  },
+  "SY0201d": {
+   "pred": 1,
+   "gold": 7,
+   "matched": 1,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F2"
+   },
+   "pairs": [
+    {
+     "pred": "Write up the minutes and the final report for management",
+     "pred_owner": "Helen",
+     "gold": "Write up the minutes and the final report for management, including a note on fall detection for a later model.",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.8404,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [],
+   "unmatched_gold": [
+    "Get a per-unit quote for the packaging (box) and the instruction leaflet, by Friday.",
+    "Write the instruction leaflet text and the box wording.",
+    "Email the absent marketing expert tonight about his leaflet and box text task.",
+    "Send the marketing expert the screen descriptions so he can write the leaflet.",
+    "Send the final screen specification to the industrial designer for the display supplier.",
+    "Photograph the foam model for the final report."
+   ]
+  },
+  "SY0208a": {
+   "pred": 2,
+   "gold": 7,
+   "matched": 2,
+   "owner_ok": 2,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F2"
+   },
+   "pairs": [
+    {
+     "pred": "Put that on Tomasz. He can look at RFID pads versus barcode scanners, and whether we can fit both in the budget",
+     "pred_owner": "Tomasz",
+     "gold": "Research RFID pads versus barcode scanners and whether supporting both fits the budget",
+     "gold_owners": [
+      "B"
+     ],
+     "similarity": 0.7899,
+     "owner_ok": true
+    },
+    {
+     "pred": "He should probably also check, the receipt printer, whether we even need one.",
+     "pred_owner": "Tomasz",
+     "gold": "Check whether the kiosk needs a receipt printer",
+     "gold_owners": [
+      "B"
+     ],
+     "similarity": 0.7706,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [],
+   "unmatched_gold": [
+    "Obtain library usage numbers: checkouts per day and peak times (circulation data)",
+    "Research existing self-checkout kiosks on the market, their costs and common complaints",
+    "Draft a rough user flow (card, books, confirm, receipt)",
+    "Email the industrial designer about his assigned tasks",
+    "Send meeting minutes to everyone today"
+   ]
+  },
+  "SY0208b": {
+   "pred": 2,
+   "gold": 6,
+   "matched": 1,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F2"
+   },
+   "pairs": [
+    {
+     "pred": "Tomasz, can you firm up the costing and start on the casing?",
+     "pred_owner": "Tomasz",
+     "gold": "Firm up the component costing and start on the casing design",
+     "gold_owners": [
+      "B"
+     ],
+     "similarity": 0.8584,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Borrow, you scan your card, put the books down, you get the running list, confirm, receipt."
+   ],
+   "unmatched_gold": [
+    "Look into security tag deactivation for RFID and barcode items so gate alarms are not triggered",
+    "Check which catalogue systems the libraries run and whether there is a standard connection for the kiosk to record loans",
+    "Turn the user flow into rough screen sketches for borrowing and returns",
+    "Research accessibility guidelines such as screen height for wheelchair users and children",
+    "Send the meeting minutes out tonight"
+   ]
+  },
+  "SY0208c": {
+   "pred": 3,
+   "gold": 6,
+   "matched": 2,
+   "owner_ok": 2,
+   "due_ok": 1,
+   "due_n": 1,
+   "groups": {
+    "feature": "F2"
+   },
+   "pairs": [
+    {
+     "pred": "Send the minutes out tonight, and I'll email Marcus",
+     "pred_owner": "Priya",
+     "gold": "Send the meeting minutes out tonight",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.8444,
+     "owner_ok": true
+    },
+    {
+     "pred": "Check which systems they run and whether SIP2 covers all of them",
+     "pred_owner": "Tomasz",
+     "gold": "Check which catalogue systems the libraries run and whether there is a standard connection (SIP2) for the kiosk to record loans",
+     "gold_owners": [
+      "B"
+     ],
+     "similarity": 0.7691,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Yeah, I'll knock something up in foam."
+   ],
+   "unmatched_gold": [
+    "Redo the screen sketches for the landscape screen and add a count-check screen for missed items",
+    "Email the user interface designer about his assigned task",
+    "Check with a couple of libraries whether they would use the swappable front panel and which colours they want",
+    "Make a rough foam mock-up of the casing for the next meeting"
+   ]
+  },
+  "SY0208d": {
+   "pred": 7,
+   "gold": 7,
+   "matched": 4,
+   "owner_ok": 4,
+   "due_ok": 1,
+   "due_n": 1,
+   "groups": {
+    "feature": "F2"
+   },
+   "pairs": [
+    {
+     "pred": "Write up the final report and send the minutes tonight",
+     "pred_owner": "Priya",
+     "gold": "Write the final report and send the minutes tonight",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.9967,
+     "owner_ok": true
+    },
+    {
+     "pred": "Put together the pitch for the library authorities, with the panel colours in",
+     "pred_owner": "Helen",
+     "gold": "Prepare the pitch for the library authorities, including the panel colours",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.9575,
+     "owner_ok": true
+    },
+    {
+     "pred": "Email the vendor about the third library",
+     "pred_owner": "Tomasz",
+     "gold": "Email the third library's catalogue system vendor about whether a SIP2 bridge exists",
+     "gold_owners": [
+      "B"
+     ],
+     "similarity": 0.8844,
+     "owner_ok": true
+    },
+    {
+     "pred": "Do the user test with older borrowers",
+     "pred_owner": "Marcus",
+     "gold": "Run a user test of the screens with older borrowers and time borrowing against the one-minute target",
+     "gold_owners": [
+      "D"
+     ],
+     "similarity": 0.853,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "Could we drop the fan if we, I dunno, put vents in the casing?",
+    "Email them this week",
+    "Yeah, I'll do it. Under a minute per borrow, that's what I'll time."
+   ],
+   "unmatched_gold": [
+    "Give the user interface designer a contact at the central library for the user test",
+    "Look at the kiosk's running costs, such as paper rolls and servicing",
+    "Bring the foam mock-up to the pitch"
+   ]
+  },
+  "SY0302a": {
+   "pred": 5,
+   "gold": 4,
+   "matched": 1,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F3"
+   },
+   "pairs": [
+    {
+     "pred": "Give him the market research",
+     "pred_owner": "Rachel",
+     "gold": "Email Gareth (marketing expert) the brief and his assigned task",
+     "gold_owners": [
+      "B"
+     ],
+     "similarity": 0.7099,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [
+    "I think we can get started.",
+    "So everyone draw a kitchen utensil or something.",
+    "Okay, Tomas, cardboard mock-up for next meeting.",
+    "I'll look at what we can get inside twelve fifty."
+   ],
+   "unmatched_gold": [
+    "Research components: voice recognition chip, microphone, and whether it works with kitchen background noise, within the 12.50 Euro cost limit",
+    "Write up the voice command set and how the timer responds, plus a rough display sketch (commands are the priority)",
+    "Market research: what people currently use for kitchen timing, what they would want from a voice-controlled timer, and whether a wake word name helps"
+   ]
+  },
+  "SY0302b": {
+   "pred": 2,
+   "gold": 4,
+   "matched": 2,
+   "owner_ok": 2,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F3"
+   },
+   "pairs": [
+    {
+     "pred": "Write up the minutes and send them round",
+     "pred_owner": "Rachel",
+     "gold": "Write up the minutes and send them round",
+     "gold_owners": [
+      "B"
+     ],
+     "similarity": 1.0,
+     "owner_ok": true
+    },
+    {
+     "pred": "Take the command list and do the full flow with the three timers and the display",
+     "pred_owner": "Priya",
+     "gold": "Turn the command list into a full interaction flow with three timers and the display",
+     "gold_owners": [
+      "C"
+     ],
+     "similarity": 0.9433,
+     "owner_ok": true
+    }
+   ],
+   "unmatched_pred": [],
+   "unmatched_gold": [
+    "Prepare cost breakdown (chip, two microphones, display) and check whether the larger-vocabulary chip is needed",
+    "Test two or three two-syllable wake word names with research participants"
+   ]
+  },
+  "SY0302c": {
+   "pred": 3,
+   "gold": 6,
+   "matched": 2,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 1,
+   "groups": {
+    "feature": "F3"
+   },
+   "pairs": [
+    {
+     "pred": "Do a foam model, the rounded shape, with the button in the right place",
+     "pred_owner": "Tomas",
+     "gold": "Build a non-working foam model of the timer (rounded shape, stop button in place) for the next meeting",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.8308,
+     "owner_ok": true
+    },
+    {
+     "pred": "Does the evaluation criteria, Priya does the updated flow and the display, and I'll email her",
+     "pred_owner": "Gareth",
+     "gold": "Email Priya (user interface designer) her assigned task, since she was absent",
+     "gold_owners": [
+      "B"
+     ],
+     "similarity": 0.7568,
+     "owner_ok": false
+    }
+   ],
+   "unmatched_pred": [
+    "And the bigger chip, we're agreed on that too?"
+   ],
+   "unmatched_gold": [
+    "Update the interaction flow so commands start with the wake word 'Tico', design the display layout for three named timers, and add the spoken confirmations, checking they fit the two-hundred-word vocabulary",
+    "Send Priya the vocabulary limits from the chip data sheet",
+    "Draw up evaluation criteria for the final design, based on the market research",
+    "Write up the minutes"
+   ]
+  },
+  "SY0302d": {
+   "pred": 4,
+   "gold": 4,
+   "matched": 2,
+   "owner_ok": 1,
+   "due_ok": 0,
+   "due_n": 0,
+   "groups": {
+    "feature": "F3"
+   },
+   "pairs": [
+    {
+     "pred": "Write up the final report and the minutes",
+     "pred_owner": "Rachel",
+     "gold": "Write up the final report and minutes",
+     "gold_owners": [
+      "B"
+     ],
+     "similarity": 0.9972,
+     "owner_ok": true
+    },
+    {
+     "pred": "So I'll give Tomas that, he needs to get the supplier to confirm the two-colour casing, and send the final cost so we know it's still under twelve fifty.",
+     "pred_owner": "Rachel",
+     "gold": "Get the casing supplier to confirm the two-colour casing (white body, orange stop button) and send the final cost to confirm it stays under 12.50 Euro",
+     "gold_owners": [
+      "A"
+     ],
+     "similarity": 0.7808,
+     "owner_ok": false
+    }
+   ],
+   "unmatched_pred": [
+    "And he sent me his final cost sheet by email, so I'll go through that for him.",
+    "I just checked the brief, management wants the design signed off at the end of this meeting."
+   ],
+   "unmatched_gold": [
+    "Email Tomas (industrial designer) his assigned task, since he was absent",
+    "Make a quick-start card for the box listing the main voice commands"
+   ]
+  }
+ }
+}
