@@ -44,7 +44,10 @@ class NotesState:
         self.summarizer = summarizer     # llm_summarizer.LLMSummarizer
         self.notes = None                # llm_summarizer.Notes, None until the first update
         self.part = 0                    # updates done
-        self.sent_until_ms = 0           # transcript lines starting at or before this were sent already
+        self.sent_until_ms = 0           # the latest start of a line sent so far
+        self.sent = set()                # (start ms, speaker, text) of every line sent. A line transcribed late
+                                         # (Groq backlog, retries) that starts before sent_until_ms is still sent
+                                         # next time; with only a time watermark it was skipped for good.
         self.next_due_ms = None          # when the next update runs
         self.busy = False                # a call is running now
         self.busy_since_ms = None        # when it started (the page says "delayed" if it runs long)
@@ -115,7 +118,7 @@ class LiveNotes:
             return
         # Lines still being transcribed can land slightly out of order, so leave the last few seconds for next time.
         settle = 0 if final else settings.NOTES_SETTLE_MS
-        new = sorted(l for l in s.lines if st.sent_until_ms < l[0] <= now - settle)
+        new = sorted(l for l in s.lines if (l[0], l[2], l[3]) not in st.sent and l[0] <= now - settle)
         st.next_due_ms = now + settings.NOTES_INTERVAL_S * 1000
         if not new:
             if not final:
@@ -150,7 +153,8 @@ class LiveNotes:
         else:
             st.notes, st.error, st.updated_ms = notes, None, now_ms()
             st.part += 1
-            st.sent_until_ms = new[-1][0]
+            st.sent.update((l[0], l[2], l[3]) for l in new)
+            st.sent_until_ms = max(st.sent_until_ms, new[-1][0])
             st.context = chunk[-self.cfg.get("context_lines", 0):] if self.cfg.get("context_lines") else []
             entry.update(status="ok", summary_words=len(notes.summary.split()), action_items=len(notes.action_items))
         finally:

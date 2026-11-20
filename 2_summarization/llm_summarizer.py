@@ -86,8 +86,10 @@ speaker giving the instruction unless they take it on themselves. Use the partic
 write it. Use "" when nobody was given the task or it is unclear.
 - due: the deadline as it was said ("by Friday", "tonight", "before the call with the instructor"), or "" if none.
 
-<earlier_lines>, when present, are the last lines of the previous part. They are already in the minutes: use them \
-only to understand the new part (who "you" is, what an "okay, I'll do it" agrees to), and don't add them twice.
+<earlier_lines>, when present, are the last lines of the previous part, sent again for context. Use them to \
+understand the new part (who "you" is, what an "okay, I'll do it" agrees to), and don't add twice what the minutes \
+already have from them. A task can be split across the two parts: asked for or offered in <earlier_lines>, and only \
+accepted, given an owner or given a deadline in the new part. If the minutes don't have that task yet, add it now.
 
 Use only what the transcript says: do not invent people, dates or tasks."""
 
