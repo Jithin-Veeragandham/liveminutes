@@ -80,7 +80,7 @@ FIRST_SEED = 42   # seeds are 42, 43, ..., 61
 | `6_evaluation/summarization/results/results_log.jsonl` | One line per run: scores + everything needed to repeat it. |
 | `6_evaluation/summarization/results/runs/<run_id>.json` | Same, plus every summary the model wrote, per seed and meeting. |
 
-**Environment files are at the repo root:** one `requirements.txt` (section 1 ingestion, section 2 summarization baseline, section 3 BART + BERTScore, section 4 the Anthropic SDK for the LLM; every summarization package pinned) and `.python-version` (3.12). The ingestion Docker image installs only section 1, so torch (~2 GB) stays out of it.
+**Environment files are at the repo root:** one `requirements.txt` (section 1 ingestion, section 2 summarization baseline, section 3 BART + BERTScore, section 4 tests, section 5 the Anthropic SDK for the LLM; every summarization package pinned) and `.python-version` (3.12). The ingestion Docker image installs only section 1, so torch (~2 GB) stays out of it.
 
 ## 2.5 Libraries we used
 

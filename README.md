@@ -184,7 +184,22 @@ curl http://127.0.0.1:8776/health          # -> ok
 **Participants' live view.** Once everyone has said yes, the bot posts one chat message with a link and a 6-character access code.
 - **Joining:** participants open the link, type the code and pick their name. That's name selection, not a login.
 - **What they can do:** follow the live transcript, summary and action items; edit and approve them (every change goes into an append-only edit log); approve and export the minutes.
-- **Organizer:** your own view of a meeting is on http://localhost:8776/live (click the meeting). The old pages are still there: add `?classic=1`.
+- **Organizer:** your own view of a meeting is on http://localhost:8776/live (click the meeting). It's the only UI: the old pages are gone.
+
+**Live summary and action items (LLM).** With a free Gemini key, the summary and action items are written by the LLM during the meeting (Jithin's live notes). Add three lines to `../.env`, then run `dc up -d` (it restarts the bridge with them):
+
+```bash
+GEMINI_API_KEY=...                         # https://aistudio.google.com/apikey -> Create API key
+LIVEMINUTES_LLM_PROVIDER=gemini
+LIVEMINUTES_LLM_MODEL=gemini-3.5-flash-lite
+```
+
+- **How often:** every 30 s, the bridge sends Gemini the lines said since the last update plus the notes so far, and gets the updated notes back. The first update comes about 30 s after people start talking. Lines from the last 5 s wait for the next update, and there is one last update when the meeting ends. At most 10 calls a minute.
+- **The countdown:** under **Summary** and **Action items**, "Updated 20 s ago · next in 10 s". The thin bar fills up until the next update. While Gemini answers it says "Updating the summary…".
+- **When it's slow or fails:** "Summary update delayed" shows when an update takes over 20 s, fails (a rate limit, a network error) or is held back by the 10-a-minute cap. The page keeps the last notes and tries again at the next update, with the same lines. In the organizer view, the **Activity** tab lists every update with how long it took, its tokens, and the exact text sent.
+- **Edits are safe:** once someone edits, approves or deletes an item, later updates don't change it. Approved minutes stay as approved.
+- **Labels:** with real notes, there's no "Sample data" label. Ask stays sample data until the knowledge base is connected.
+- **No key:** the page shows sample data, labelled, as before. The organizer sees "Live summary is off" and why.
 
 **Share outside this computer** with a free Cloudflare quick tunnel (no account). Without it, links point to localhost and only open on this computer; the organizer view says so. Through the tunnel, only the participant pages answer. Quick tunnels don't pass the live stream on, so pages opened through one update by polling ("Live · polling" in the header).
 

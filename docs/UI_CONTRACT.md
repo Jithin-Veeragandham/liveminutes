@@ -6,9 +6,9 @@ The meeting page (`/m/<id>` for participants, `/live/<id>` for the organizer) sh
 - action items;
 - answers about past meetings.
 
-The UI gets the last three from three small **adapter functions** in [`1_ingestion/ui/adapters.py`](../1_ingestion/ui/adapters.py). Today they return sample data from [`1_ingestion/ui/fixtures/`](../1_ingestion/ui/fixtures/), shown with a visible "Sample data" label. Demo meetings get theirs from the demo script, labelled "Demo".
+The UI gets the last three from three small **adapter functions** in [`1_ingestion/ui/adapters.py`](../1_ingestion/ui/adapters.py). Summary and action items now come from the LLM's live notes (Jithin's `notes.py` + `llm_summarizer.py`, turned into these shapes by [`ui/live_notes.py`](../1_ingestion/ui/live_notes.py); [UI.md section 3.1](UI.md#31-live-notes-from-the-llm)) when the bridge has a Gemini key, with no label. Without a key they are sample data from [`1_ingestion/ui/fixtures/`](../1_ingestion/ui/fixtures/), shown with a visible "Sample data" label. Ask is still sample data. Demo meetings get theirs from the demo script, labelled "Demo".
 
-To plug in the real summarizer and action-item extraction (Jithin) or the knowledge base (Ashmit), **replace the body of the matching function**. Keep the shapes below; nothing else in the UI changes.
+To plug in the knowledge base (Ashmit), **replace the body of the matching function** (the summarizer and action items are already plugged in). Keep the shapes below; nothing else in the UI changes.
 
 **Step by step, with timing rules, hooks and merge notes:** [INTEGRATION.md](INTEGRATION.md). **Check your code against this contract:** `.venv/bin/python -m pytest 1_ingestion/tests/test_contract.py -v`.
 

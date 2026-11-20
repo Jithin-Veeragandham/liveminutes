@@ -7,6 +7,13 @@ For whoever merges the three parts of LiveMinutes:
 
 It assumes no other context. The JSON shapes are also in [UI_CONTRACT.md](UI_CONTRACT.md); the UI itself is described in [UI.md](UI.md).
 
+**Status:**
+- **Done:** the LLM summary and action items are plugged in (branch `integrate-llm-into-ui`, which merges PR #9 and PR #11).
+  - Jithin's `notes.py` runs every 30 s, as he wrote it. `summary_source` / `actions_source` read its notes through [`ui/live_notes.py`](../1_ingestion/ui/live_notes.py) (stable ids, owners, dates, source lines). `background(bridge)` only keeps a reference to the bridge. Details: [UI.md section 3.1](UI.md#31-live-notes-from-the-llm).
+  - It follows section 3: ids stay stable, edits and approvals are frozen. The contract test includes a meeting with LLM notes.
+  - Packages: `requirements.txt` section 4 is the tests, section 5 the Anthropic SDK (offline runs only; the bridge image uses Gemini, which needs no package).
+- **Left:** the knowledge base (Ashmit): `ask_source`, `ask_info`, `minutes_approved`, `minutes_unapproved`, and start-up work in `background()` (sections 2.6 and 4).
+
 **The short version:** you only replace functions in [`1_ingestion/ui/adapters.py`](../1_ingestion/ui/adapters.py), and add your own modules. Then you run one command that tells you whether your code fits:
 
 ```bash

@@ -30,7 +30,7 @@ The meeting page that everyone in the call can open, plus the organizer pages, a
 - **Start demo meeting** and **Send bot to a meeting**;
 - the same meeting page for each meeting, plus three organizer-only tabs: **Edit log**, **Activity** (the bot's chat and consent events) and **Bot logs**.
 
-The old pages are still there at `?classic=1`.
+This is the only UI. The old pages (`home.html`, `live.html`) are gone; their useful parts (the LLM countdown, the latency of each update) are in these pages now.
 
 ## 2. Sharing outside this computer
 
@@ -84,17 +84,50 @@ A request counts as "through a tunnel" when it carries proxy headers (`Cf-Connec
 |---|---|
 | **Header** | Meeting title (click to rename; logged), platform, Demo badge, a pulsing **Live** indicator or the recording state (Paused · waiting for Leo, Ended, Stopped), elapsed time. Participant avatars with a consent ring and "viewing now" dot (hover for details), **Share** (link, code, QR), ⌘K, theme, and who you are. |
 | **Transcript** | Speaker names in a consistent color per person, timestamps, and new lines that slide in. Auto-scroll pauses when you scroll up, and a **Jump to live** pill counts new lines. Search with highlights (`/`), filter by speaker, styled "Multiple speakers" lines (Teams), and click to select a line. A small ✦ count marks lines cited by the summary. |
-| **Summary** | Bullets and decisions. Source chips (`00:42`) scroll to and flash the transcript lines they came from. Edit inline, approve, view history, delete. |
-| **Action items** | Cards with the task, owner (avatar), due date (overdue in red), status (Pending, Approved, Done; tick to finish) and source chips. Filters: All, Mine, Pending. **Add** a missing one. |
+| **Summary** | Bullets and decisions. Source chips (`00:42`) scroll to and flash the transcript lines they came from. Edit inline, approve, view history, delete. Under the heading, the **live notes status**: when the LLM last updated the notes and a countdown to the next update (section 3.1). |
+| **Action items** | Cards with the task, owner (avatar), due date (overdue in red; a due date said without a day, like "next meeting", shows as said), status (Pending, Approved, Done; tick to finish) and source chips. Filters: All, Mine, Pending. **Add** a missing one. |
 | **Minutes bar** | **Approve minutes** marks the record approved by name and time. If anything changes afterwards it shows "edited since". **Export** downloads Markdown. **Print or save as PDF** lays out real minutes (title, date, attendees, summary, decisions, action items with owners, edit-history note). |
 | **Ask** | A chat-style box for questions about past meetings. Answers say which meetings they came from. It's labelled **Preview · sample data** until Ashmit's knowledge base replaces `ask_source()`. |
 | **People** | Everyone, with consent state (said yes, via someone else, waiting, said no), "viewing now" and "editing". Participants can switch their name here. |
 
-**Sample and Demo labels.** Until the summarizer is connected, real meetings show sample summary and action items, clearly labelled "Sample data" with a banner. Demo meetings are labelled "Demo" everywhere: badge, panels, export, print.
+**Sample and Demo labels.** With the LLM on (a Gemini key, section 3.1), real meetings show its notes with no label; until its first update, the panels are empty. Without a key, real meetings show sample summary and action items, clearly labelled "Sample data" with a banner. Demo meetings are labelled "Demo" everywhere: badge, panels, export, print. Ask is "Preview · sample data" until the knowledge base is connected.
 
 **States:** skeletons while loading; empty states for each panel and each meeting state; toasts (saved, undone, link copied, back online); and error screens for a wrong code, too many tries, expired, stopped (someone said no), not shared yet, not found, and connection lost (banner, then automatic reconnect).
 
 ![Organizer view with the edit log](ui/organizer-editlog.png)
+
+### 3.1 Live notes from the LLM
+
+The summary and action items of a real meeting come from Jithin's live notes: `1_ingestion/notes.py` runs `2_summarization/llm_summarizer.py` with Gemini. Setup: `GEMINI_API_KEY`, `LIVEMINUTES_LLM_PROVIDER=gemini` and `LIVEMINUTES_LLM_MODEL=gemini-3.5-flash-lite` in the repo's `.env` (see `.env.example`), then `dc up -d`.
+
+**How often** (settings in `1_ingestion/settings.py`):
+- **Every 30 s** (`NOTES_INTERVAL_S`), one call: the lines said since the last update, the last 6 lines before them for context, and the notes so far. The reply is the updated notes for the whole meeting.
+- The first update is 30 s after the first audio. Lines from the last 5 s wait for the next update (`NOTES_SETTLE_MS`); a line transcribed late is sent with the next update.
+- One call at a time for the whole bridge, at most 10 a minute (`NOTES_RPM_LIMIT`), and one last update when the meeting ends.
+- Saved in `sessions/<meeting>/notes.json` (the notes and a log of every call) and `llm_items.json` (the item ids).
+
+**The status line** under Summary (and under Action items on phones):
+
+| It says | Meaning |
+|---|---|
+| Updated 20 s ago · next in 10 s | The last update and the countdown to the next one. The thin bar under it fills up as the next update gets closer. |
+| First summary in 25 s | The LLM hasn't run yet for this meeting |
+| Updating the summary… | A call is running (the bar slides) |
+| Summary update delayed · waiting for the LLM (35 s) | A call has run longer than 20 s (Gemini is slow or retrying a rate limit) |
+| Summary update delayed · trying again in 12 s | The last call failed. The page keeps the last notes; the same lines go out again at the next update. The organizer also sees the error. |
+| Summary update delayed · it runs as soon as the LLM is free | The update is over 15 s late, e.g. the 10-a-minute cap was reached |
+| Live summary is off (organizer only) | No key, or the key was rejected; the reason is shown. The page shows sample data. |
+| Final notes · last updated 3:42 PM | The meeting ended |
+
+**For the organizer**, the **Activity** tab starts with **Live notes**: every update with its time, the part of the meeting it covered, the number of lines, **how long it took**, tokens in and out, and the exact text sent; and the median and last latency and the calls this minute.
+
+**From notes to items** (`1_ingestion/ui/live_notes.py`, once per update, not per page load):
+- **Summary:** the LLM writes prose; each sentence becomes one point. A sentence that says decided, agreed, chose, settled or approved is a **decision**.
+- **Action items:** task → text, owner → one of the people who said yes ("Jithin Veeragandham" is "Veeragandham, Jithin"; a first name counts if only one person has it, else unassigned, and the text ends with "(owner said: …)"). "by Friday", "tomorrow", "tonight", "November 21" become dates counted from the meeting's day; "next meeting" stays as said.
+- **Stable ids:** each new point or item is matched to the last update's (best first, by text similarity). A match keeps its id (`llm-s3`, `llm-a2`) and its version goes up if the wording changed; anything else gets a new id. So an item someone edited, approved or deleted stays frozen by the edit log (section 4) whatever the LLM writes next, and approved minutes stay as approved.
+- **Source lines:** the LLM gives none. A new action item points to the 1–2 lines of the update it first appeared in that share the most words with it; a summary point to the 1–3 best-matching lines of the meeting so far. They follow the transcript when lines merge.
+
+**Failures:** a slow or failing call never blocks the page. Gemini rate limits and server errors are retried inside the call (`llm_providers.py`); after that the call counts as failed, the last notes stay, and the next update resends the same lines. A missing or rejected key turns the notes off (the page falls back to sample data and says why); the rest of the bridge keeps running.
 
 ## 4. Editing and the edit log
 
@@ -186,13 +219,15 @@ Everything is reachable by keyboard: visible focus rings, focus kept inside dial
 From the repo root (packages: `requirements.txt` section 4):
 
 ```bash
-.venv/bin/python -m pytest 1_ingestion/tests                   # unit + API tests (and the older unittest files)
+.venv/bin/python -m pytest 1_ingestion/tests                   # unit + API + contract tests, live notes (scripted LLM)
 .venv/bin/python -m playwright install chromium                # once, for the browser tests
 .venv/bin/python -m pytest 1_ingestion/tests -m e2e            # browser tests: Demo, two participants, conflict, undo, approve, export, print, axe
 .venv/bin/python 1_ingestion/tests/e2e/screenshots.py OUT_DIR  # every screen, light + dark, 1440/1024/768/390 px
 ```
 
-**Contract test** (`tests/test_contract.py`): checks whatever is in `ui/adapters.py` against [UI_CONTRACT.md](UI_CONTRACT.md). Run it after plugging in real code (see [INTEGRATION.md](INTEGRATION.md)).
+**Contract test** (`tests/test_contract.py`): checks whatever is in `ui/adapters.py` against [UI_CONTRACT.md](UI_CONTRACT.md), including a meeting with the LLM's live notes. Run it after plugging in real code (see [INTEGRATION.md](INTEGRATION.md)).
+
+**Live notes tests:** `tests/test_llm_ui.py` (items, stable ids, edits and approvals that later LLM runs can't change, status, failures, Demo untouched), `tests/test_notes_split.py` (a task said across two updates), `tests/e2e/test_llm_e2e.py` (the page with a scripted LLM, both themes, phone, axe). With a real Gemini key: `.venv/bin/python 1_ingestion/tests/llm_live_check.py` runs the demo transcript through Gemini and checks the same things for real, with each update's latency.
 
 **Unit and API tests** (`tests/test_ui.py`) cover:
 - access codes (right, wrong, rate limit, expiry, consent withdrawn, new code);
@@ -206,7 +241,8 @@ From the repo root (packages: `requirements.txt` section 4):
 ## 10. Known limitations
 
 - **Names aren't logins.** Anyone with the code can pick any consented name. Real sign-in (e.g. the meeting platform's own identity) is future work.
-- **Sample data until teammates connect their code.** Summary and action items in real meetings are sample data until `summary_source()` / `actions_source()` are replaced; Ask is sample data until `ask_source()` is.
+- **Ask is sample data** until the knowledge base replaces `ask_source()`.
+- **Live notes:** the LLM writes the summary as prose, so points are its sentences; a sentence it rewrites heavily can get a new id (if someone had edited the old one, both show). Owners must be people who said yes, so a task for someone who never joined is unassigned (with "owner said: …" in the text). Without a key, real meetings show sample data.
 - **Rate limits, codes in memory and presence are per bridge process.** A bridge restart forgets them: the code still works (its hash is on disk), but the share dialog can't show it until the organizer makes a new one.
 - **The organizer view is "whoever can open localhost:8776"** on the organizer's computer. That's the same trust model as the old live view.
 - **Through a quick tunnel, updates come by long poll, not the stream** (Cloudflare doesn't pass Server-Sent Events on quick tunnels). That's about one request per change per viewer: fine for a meeting, but quick tunnels also cap 200 requests in flight, so a large audience needs a named Cloudflare tunnel or a real server.
