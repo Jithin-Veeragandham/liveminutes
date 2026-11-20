@@ -11,7 +11,7 @@ COPY requirements.txt .
 # Install only section 1 (ingestion) of the shared file; the summarization sections (torch, ~2 GB) stay out.
 RUN sed -n '/^# ---- 1\. Ingestion/,/^# ---- 2\./p' requirements.txt > ingestion.txt \
  && pip install --no-cache-dir -r ingestion.txt && rm ingestion.txt
-COPY 1_ingestion/*.py 1_ingestion/*.html ./
+COPY 1_ingestion/*.py ./
 COPY 1_ingestion/ui ./ui
 # Live notes (notes.py) use the LLM summarizer. The Gemini provider needs only the standard library;
 # the Anthropic one would also need `anthropic` (requirements section 5), which this image doesn't install.

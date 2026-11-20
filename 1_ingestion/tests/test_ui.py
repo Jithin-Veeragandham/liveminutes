@@ -477,15 +477,16 @@ def test_meeting_read_back_from_disk_after_a_restart(tmp_path):
 
 # ================= organizer pages and Demo mode =================
 
-async def test_new_organizer_pages_and_classic_ones(env):
+async def test_organizer_pages_are_the_only_ui(env):
     _, client, _, _ = env
     home = await (await client.get("/live")).text()
     assert 'id="root"' in home and "home.js" in home
-    assert "Send bot" in await (await client.get("/live?classic=1")).text()
     page = await (await client.get(f"/live/{SID}")).text()
     assert '"role": "organizer"' in page
-    assert "LiveMinutes live" in await (await client.get(f"/live/{SID}?classic=1")).text()
-    assert (await client.get(f"/live/{SID}/data")).status == 200  # the old endpoints still answer
+    # the old pages (home.html, live.html) are gone: ?classic=1 gets the same new page
+    assert 'id="root"' in await (await client.get(f"/live/{SID}?classic=1")).text()
+    assert (await client.get(f"/live/{SID}/data")).status == 200  # the JSON endpoints still answer
+    assert isinstance(await (await client.get("/live/api/sessions")).json(), list)
 
 
 async def test_sse_stream_sends_snapshot_then_changes(env):

@@ -316,7 +316,6 @@ class SendBotHttpTest(AioHTTPTestCase):
         self.assertEqual(d["attendee"]["state"], "joining")
         self.assertEqual(d["log"][0]["source"], "attendee")
         self.assertEqual((await self.client.get("/live/..%2Fetc/logs")).status, 404)
-        self.assertIn("Send bot", await (await self.client.get("/live")).text())
         self.assertIsInstance(await (await self.client.get("/live/api/sessions")).json(), list)
 
 

@@ -1,8 +1,7 @@
 """The live view in the browser: http://localhost:8776/live
 
-  /live                    home.html, two tabs: Sessions, and Send bot (send a bot + watch its logs)
-  /live/<bot_id>           the page (live.html): transcript, live summary + action items (notes.py), who said
-                           yes, bot activity, and what was sent to the LLM
+  (/live and /live/<bot_id> are the meeting pages of ui/, which replaced this file's old home.html and live.html;
+   the JSON endpoints below stay: the UI's Send bot and Bot logs use them.)
   /live/<bot_id>/data      JSON for the page (?after=N: only activity lines from N on; ?v=V: wait until
                            something changes after version V, a long poll, so new lines show at once)
   /live/<bot_id>/logs      JSON the Send bot tab polls: Attendee's record of the bot + bridge activity + Groq uploads
@@ -260,10 +259,6 @@ def checked_bot_id(request):
 def add_routes(app, bridge):
     """bridge: the running Bridge. bridge.sessions is {bot_id: Session} for the meetings running now."""
     sessions = bridge.sessions
-    here = Path(__file__).parent
-
-    async def home(request):
-        return web.FileResponse(here / "home.html")
 
     async def session_list(request):
         folders = sorted((d for d in settings.SESSIONS_DIR.glob("*") if d.is_dir()), key=lambda d: -d.stat().st_mtime)
@@ -295,10 +290,6 @@ def add_routes(app, bridge):
             return web.json_response({"error": f"Attendee {why}.", "detail": out}, status=502)
         return web.json_response({"bot_id": out["id"], "state": out.get("state"), "name": name, "link": link})
 
-    async def page(request):
-        checked_bot_id(request)
-        return web.FileResponse(here / "live.html")
-
     async def data(request):
         """With ?v=<version from the last answer>, this is a long poll: it answers as soon as
         something changes (a transcript line, consent, chat...) or after LONG_POLL_S, so a new
@@ -323,9 +314,7 @@ def add_routes(app, bridge):
         raise web.HTTPFound("/live")
 
     app.router.add_get("/", root)
-    app.router.add_get("/live", home)
     app.router.add_get("/live/api/sessions", session_list)
     app.router.add_post("/live/api/send", send)
-    app.router.add_get("/live/{bot_id}", page)
     app.router.add_get("/live/{bot_id}/data", data)
     app.router.add_get("/live/{bot_id}/logs", logs)

@@ -2,7 +2,7 @@
 
 Pages
   /m/<id>                participant view: access code, then pick your name, then the meeting page
-  /live, /live/<id>      organizer home and meeting page (new design; old pages: add ?classic=1)
+  /live, /live/<id>      organizer home and meeting page (the only UI: the old live.html / home.html are gone)
 API (same handlers; participant = cookie + CSRF token, organizer = this computer + organizer token)
   /m/<id>/api/<action>   me, code, name, forget-name, snapshot, stream (SSE), poll (long poll), edit, create,
   /live/<id>/api/<action>  delete, undo, approve, presence, ask, history, export.md; organizer only: editlog, rotate-code
@@ -645,7 +645,7 @@ def setup(app, bridge):
             raise web.HTTPNotFound()
         if request.method in WRITES and not access.same_origin(request):
             return web.json_response({"state": "csrf", "error": "Cross-site request refused."}, status=403)
-        if request.method == "GET" and "classic" not in request.query and not access.is_public(request):
+        if request.method == "GET" and not access.is_public(request):
             if path == "/live":
                 return home_page()
             match = ORGANIZER_PAGE.match(path)
@@ -679,6 +679,14 @@ def setup(app, bridge):
     r.add_static("/static/", STATIC, append_version=False)
     r.add_get("/m/{sid}", participant_page)
     r.add_get("/m/{sid}/", participant_page)
+    # the organizer's pages (the guard above answers them first; these make them real routes, organizer only)
+    async def organizer_home(request):
+        return home_page()
+
+    async def organizer_meeting(request):
+        return organizer_page(request.match_info["sid"])
+    r.add_get("/live", organizer_home)
+    r.add_get(r"/live/{sid:[A-Za-z0-9_-]{1,64}}", organizer_meeting)
     for prefix in ("/m/{sid}/api", "/live/{sid}/api"):
         r.add_get(prefix + "/snapshot", get_snapshot)
         r.add_get(prefix + "/stream", stream)

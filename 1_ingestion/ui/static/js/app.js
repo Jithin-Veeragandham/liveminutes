@@ -363,7 +363,6 @@ function start(ctx) {
         { label: "Organizer", checked: me.name === "Organizer", run: () => ctx.setOrgName("Organizer") },
         ...ctx.consented().map((n) => ({ label: displayName(n), checked: me.name === n, run: () => ctx.setOrgName(n) })),
         "sep",
-        { label: "Classic view", icon: "external-link", run: () => { location.href = `/live/${encodeURIComponent(cfg.sid)}?classic=1`; } },
         { label: theme.current() === "dark" ? "Light theme" : "Dark theme", icon: theme.current() === "dark" ? "sun" : "moon", run: () => theme.toggle() },
       ], { label: "Organizer" });
       return;
@@ -489,6 +488,7 @@ function start(ctx) {
         renderHeader();
         I.renderMinutes();
         T.render({});
+        ctx.emit("llm");
       } else if (c === "people") {
         renderHeader();
         P.render();

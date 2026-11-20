@@ -52,7 +52,6 @@ function start() {
       h("a", { class: "brand", href: "/live" }, h("img", { class: "logo", src: "/static/img/logo.svg", alt: "" }), h("span", { text: "LiveMinutes" })),
       h("span", { class: "chip", text: "Organizer" }),
       h("div", { class: "header-end" },
-        h("a", { class: "btn btn--ghost btn--sm hide-phone", href: "/live?classic=1" }, "Classic view"),
         themeButton())),
     h("main", { class: "home-main", id: "main" },
       h("div", { class: "home-hero" },
