@@ -56,7 +56,10 @@ def breakdown_tables(runs, source):
             cells = []
             for s in systems:
                 g = runs[(s, source)]["breakdowns"][group][value]
-                cells += [cell(g, "f1"), cell(g, "owner_acc")]
+                if g["gold"] == 0:   # nothing to find here: what counts is how many items were (wrongly) predicted
+                    cells += [f"no gold; {g['pred']} predicted", "n/a"]
+                else:
+                    cells += [cell(g, "f1"), cell(g, "owner_acc")]
             out.append(f"| {value}{small} | {s0['n']} | {s0['gold']} | " + " | ".join(cells) + " |")
         out.append("")
     return "\n".join(out)
