@@ -34,7 +34,7 @@ def pairs(meetings, embed):
         lines = [l for l in m.lines if len(l["text"].split()) >= 3]
         if not m.gold or not lines:
             continue
-        sim = metrics.similarity(embed, [rules.clean(l["text"]) for l in lines], [g.text for g in m.gold])
+        sim = metrics.similarity(embed, [rules.clean(l["text"]) for l in lines], [g.match_text for g in m.gold])
         for j, g in enumerate(m.gold):
             for i, line in enumerate(lines):
                 (pos if line["id"] in g.evidence else neg).append(sim[i, j])

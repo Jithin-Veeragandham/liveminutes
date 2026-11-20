@@ -136,7 +136,7 @@ def pred_due_key(item):
 def score_meeting(meeting, preds, embed, threshold):
     """Counts for one meeting, plus per-pair details (for error reading)."""
     gold = meeting.gold
-    sim = similarity(embed, [p["text"] for p in preds], [g.text for g in gold])
+    sim = similarity(embed, [p["text"] for p in preds], [g.match_text for g in gold])
     pairs = match(sim, threshold)
     c = Counts(pred=len(preds), gold=len(gold), tp=len(pairs), pairs=pairs,
                pred_due=sum(1 for p in preds if pred_due_key(p)))
