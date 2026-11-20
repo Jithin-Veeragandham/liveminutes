@@ -40,11 +40,11 @@ PATTERNS = [
     (r"\b(?:by|before|until|till)\s+(\d{1,2}):(\d{2})\b", lambda m: clock(m)),
     (r"\b(?:by|before|until|till|at)\s+(noon|midday|lunch(?:time)?)\b", "time:12:00"),
     (r"\b(today|tonight|this (?:afternoon|morning|evening)|end of (?:the |today|business )?day|eod|close of business)\b", "today"),
-    (r"\b(tomorrow)\b", "tomorrow"),
-    (r"\b(end of (?:the |this )?week|this week|by the weekend|before the weekend)\b", "end_of_week"),
-    (r"\b(next week)\b", "next_week"),
-    (r"\b((?:the )?(?:next|following) (?:meeting|session)|next time we meet|next time|before we meet again|"
-     r"by the time we meet)\b", "next_meeting"),
+    (rf"\b{LEAD}(tomorrow)\b", "tomorrow"),
+    (rf"\b{LEAD}(end of (?:the |this )?week|this week|the weekend)\b", "end_of_week"),
+    (rf"\b{LEAD}(next week)\b", "next_week"),
+    (rf"\b{LEAD}((?:the )?(?:next|following) (?:meeting|session)|next time we meet|next time|before we meet again|"
+     r"the time we meet)\b", "next_meeting"),
     (rf"\b(?:(?:by|before|on|for|until|till|this|next|coming)\s+)?({'|'.join(WEEKDAYS)})\b",
      lambda m: f"weekday:{m[1].lower()}"),
 ]
