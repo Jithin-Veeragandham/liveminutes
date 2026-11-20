@@ -1,0 +1,1377 @@
+{
+  "meeting_id": "SY0303d",
+  "raw_sha256": "492812e1c847595a556736dc8bb2c0cdb76f1b7c61e5ba65f1b32497093ab273",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting, noted that the marketing expert was absent because she was meeting a retail buyer, and said she had emailed her colour options. He recapped the conceptual design meeting: closed-cell EVA foam, the two-position stand and the embossed logo had been agreed, while the colour had been parked.",
+        "The industrial designer reported that the supplier's foam prototype had arrived, that the two-position hinge does not change the handle cost, and that a two-colour moulding run adds 0.90 euros per case. The user interface designer reported that his six-year-old niece managed the upright watching position easily but found the low drawing position too stiff. The angles were fine. The industrial designer offered to have the drawing notch made shallower.",
+        "The industrial designer declared that an anti-bite coating would be added to the handle and edges, but the user interface designer raised safety and grip concerns and the project manager set it aside without a decision. The user interface designer presented the final button layout, which was signed off.",
+        "The estimated production cost came to 10.20 euros: 8.20 euros base, 1.10 euros tooling share and 0.90 euros for the two-colour run. This is against the 12.50 euro limit and a 25 euro selling price. The team then chose a yellow body with a teal handle and edges. The packaging copy was assigned to the absent marketing expert, and the product was evaluated against the kickoff goals."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will ask the supplier to make the drawing-position notch shallower so that it needs less force.",
+        "The user interface designer will test the revised handle with his niece when it arrives.",
+        "The marketing expert, who was absent, will write the packaging copy and selling points (drop protection, wipe-clean, handle-stand, ages four to eight). The project manager assigned this task.",
+        "The project manager will email the marketing expert her packaging task tonight.",
+        "The industrial designer will send photos of the prototype to the marketing expert for the packaging.",
+        "The industrial designer will ask the supplier for a safety data sheet on the anti-bite coating.",
+        "The project manager will send the minutes and the final report to management."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The case will be two-colour, with a yellow body and a teal handle and edges, at an extra 0.90 euros per case.",
+        "The drawing-position notch of the handle will be made shallower to reduce the push force.",
+        "The final button layout was signed off: one moulded soft membrane over the volume buttons on the left edge, a power button on top recessed about two millimetres, and a fully open charging port on the bottom."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "Whether to add the anti-bite coating (about 0.60 euros per case) is unresolved. Its safety for chewing children and its effect on grip are in question.",
+        "The foam dents when children chew it.",
+        "The push force of the revised drawing notch is untested until the new part arrives."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303d.ai1",
+        "description": "Ask the supplier to make the drawing-position notch on the handle shallower so it needs less force.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303d.s0037",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0303d.s0038",
+            "event": "accepted",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0303d.s0116",
+            "event": "restated",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303d.s0029",
+          "SY0303d.s0030",
+          "SY0303d.s0036",
+          "SY0303d.s0037",
+          "SY0303d.s0038",
+          "SY0303d.s0041",
+          "SY0303d.s0116",
+          "SY0303d.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303d.ai2",
+        "description": "Retest the revised handle with his niece once the new part arrives.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303d.s0039",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0303d.s0040",
+            "event": "accepted",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0303d.s0118",
+            "event": "restated",
+            "by": "D",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303d.s0039",
+          "SY0303d.s0040",
+          "SY0303d.s0118",
+          "SY0303d.s0119"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303d.ai3",
+        "description": "Write the packaging copy and selling points (drop protection, wipe-clean, handle-stand, ages four to eight).",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303d.s0093",
+            "event": "proposed",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0303d.s0095",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0303d.s0120",
+            "event": "restated",
+            "by": "D",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303d.s0092",
+          "SY0303d.s0093",
+          "SY0303d.s0094",
+          "SY0303d.s0095",
+          "SY0303d.s0120"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303d.ai4",
+        "description": "Email the absent marketing expert her packaging copy task tonight.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303d.s0096",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0303d.s0120",
+            "event": "restated",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303d.s0096",
+          "SY0303d.s0120"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303d.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303d.ai5",
+        "description": "Send photos of the prototype to the marketing expert for the packaging.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303d.s0098",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0303d.s0099",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0303d.s0116",
+            "event": "restated",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303d.s0097",
+          "SY0303d.s0098",
+          "SY0303d.s0099",
+          "SY0303d.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303d.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303d.ai6",
+        "description": "Ask the supplier for a safety data sheet on the anti-bite coating.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303d.s0113",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0303d.s0114",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0303d.s0116",
+            "event": "restated",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303d.s0113",
+          "SY0303d.s0114",
+          "SY0303d.s0116",
+          "SY0303d.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303d.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303d.ai7",
+        "description": "Send the minutes and the final report to management.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303d.s0121",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303d.s0121"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f1",
+        "type": "absence",
+        "fact": "Priya (A), the marketing expert, was absent from the detailed design meeting because she was in a meeting with a retail buyer.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303d.s0003"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f2",
+        "type": "other",
+        "fact": "Priya (A) sent her colour options by email before the meeting: first option yellow with teal, second option all yellow. Marcus (D) relayed them.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0303c",
+        "evidence_segments": [
+          "SY0303d.s0005",
+          "SY0303d.s0082",
+          "SY0303d.s0083"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "Marcus (D) recapped the conceptual design meeting: closed-cell EVA foam, the two-position stand and the embossed logo had been agreed, and the colour had been parked pending the two-colour price.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0303c",
+        "evidence_segments": [
+          "SY0303d.s0008",
+          "SY0303d.s0009"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f4",
+        "type": "other",
+        "fact": "Lena (C) reported that the supplier's foam prototype with the real hinge arrived on Tuesday.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0303c",
+        "evidence_segments": [
+          "SY0303d.s0011",
+          "SY0303d.s0012"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f5",
+        "type": "other",
+        "fact": "Lena (C) confirmed with the supplier that the two click positions do not change the handle cost.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0303c",
+        "evidence_segments": [
+          "SY0303d.s0014",
+          "SY0303d.s0015"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f6",
+        "type": "other",
+        "fact": "A two-colour moulding run adds about 0.90 euros per case.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303d.s0018",
+          "SY0303d.s0019",
+          "SY0303d.s0021"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f7",
+        "type": "other",
+        "fact": "Tom's (B) six-year-old niece reached the upright watching position easily but found the low drawing position too stiff. The stand angles were good.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0303c",
+        "evidence_segments": [
+          "SY0303d.s0026",
+          "SY0303d.s0027",
+          "SY0303d.s0028",
+          "SY0303d.s0029",
+          "SY0303d.s0030",
+          "SY0303d.s0034",
+          "SY0303d.s0035"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f8",
+        "type": "decision",
+        "fact": "The drawing-position notch will be made shallower to reduce the push force, with no change in price.",
+        "agreed": true,
+        "related_action_item": "SY0303d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303d.s0036",
+          "SY0303d.s0037",
+          "SY0303d.s0038",
+          "SY0303d.s0041"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f9",
+        "type": "action_item",
+        "fact": "Lena (C) will ask the supplier to make the drawing notch shallower.",
+        "agreed": null,
+        "related_action_item": "SY0303d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303d.s0037",
+          "SY0303d.s0038",
+          "SY0303d.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f10",
+        "type": "action_item",
+        "fact": "Tom (B) will retest the revised handle with his niece.",
+        "agreed": null,
+        "related_action_item": "SY0303d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303d.s0039",
+          "SY0303d.s0118",
+          "SY0303d.s0119"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f11",
+        "type": "unagreed_proposal",
+        "fact": "Lena (C) declared that an anti-bite coating (about 0.60 euros per case) would be added to the handle and edges and called it decided. Tom (B) raised safety and grip concerns, and Marcus (D) set the question aside without a decision.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303d.s0048",
+          "SY0303d.s0049",
+          "SY0303d.s0050",
+          "SY0303d.s0051",
+          "SY0303d.s0052",
+          "SY0303d.s0053",
+          "SY0303d.s0054",
+          "SY0303d.s0056",
+          "SY0303d.s0057",
+          "SY0303d.s0088",
+          "SY0303d.s0089"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f12",
+        "type": "decision",
+        "fact": "The final button layout was signed off: one moulded soft membrane over the volume buttons on the left edge, a power button on top recessed about two millimetres, and an open charging port on the bottom.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303d.s0060",
+          "SY0303d.s0061",
+          "SY0303d.s0062",
+          "SY0303d.s0063",
+          "SY0303d.s0065",
+          "SY0303d.s0066",
+          "SY0303d.s0069",
+          "SY0303d.s0070",
+          "SY0303d.s0071"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f13",
+        "type": "other",
+        "fact": "The estimated production cost is 10.20 euros per case: 8.20 euros base, 1.10 euros tooling share and 0.90 euros for the two-colour run. This is against the 12.50 euro limit.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303d.s0073",
+          "SY0303d.s0074",
+          "SY0303d.s0075",
+          "SY0303d.s0076",
+          "SY0303d.s0077",
+          "SY0303d.s0078",
+          "SY0303d.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f14",
+        "type": "decision",
+        "fact": "The case will have a yellow body with a teal handle and edges, made in a two-colour moulding run.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303d.s0079",
+          "SY0303d.s0080",
+          "SY0303d.s0081",
+          "SY0303d.s0084",
+          "SY0303d.s0085",
+          "SY0303d.s0086",
+          "SY0303d.s0087"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f15",
+        "type": "plan_change",
+        "fact": "The colour question, parked in the conceptual design meeting, was settled once the two-colour run was priced. The team chose yellow and teal.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0303c",
+        "evidence_segments": [
+          "SY0303d.s0009",
+          "SY0303d.s0022",
+          "SY0303d.s0024",
+          "SY0303d.s0084",
+          "SY0303d.s0087"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f16",
+        "type": "action_item",
+        "fact": "While Priya (A) was absent, Marcus (D) assigned her the packaging copy and selling points.",
+        "agreed": null,
+        "related_action_item": "SY0303d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303d.s0093",
+          "SY0303d.s0095",
+          "SY0303d.s0120"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f17",
+        "type": "action_item",
+        "fact": "Marcus (D) will email Priya (A) her packaging task tonight.",
+        "agreed": null,
+        "related_action_item": "SY0303d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303d.s0096",
+          "SY0303d.s0120"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f18",
+        "type": "action_item",
+        "fact": "Lena (C) will send prototype photos to Priya (A) for the packaging.",
+        "agreed": null,
+        "related_action_item": "SY0303d.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303d.s0097",
+          "SY0303d.s0098",
+          "SY0303d.s0099"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f19",
+        "type": "action_item",
+        "fact": "Lena (C) will ask the supplier for a safety data sheet on the anti-bite coating.",
+        "agreed": null,
+        "related_action_item": "SY0303d.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303d.s0113",
+          "SY0303d.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f20",
+        "type": "action_item",
+        "fact": "Marcus (D) will send the minutes and the final report to management.",
+        "agreed": null,
+        "related_action_item": "SY0303d.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303d.s0121"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303d.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303d.f21",
+        "type": "reference_to_prior_meeting",
+        "fact": "Marcus (D) evaluated the product against the kickoff goals of drop survival and a handle that folds into a stand.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0303a",
+        "evidence_segments": [
+          "SY0303d.s0102",
+          "SY0303d.s0103",
+          "SY0303d.s0104"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_TASK_TO_ABSENT",
+        "segments": [
+          "SY0303d.s0003",
+          "SY0303d.s0092",
+          "SY0303d.s0093",
+          "SY0303d.s0094",
+          "SY0303d.s0095",
+          "SY0303d.s0096",
+          "SY0303d.s0120"
+        ],
+        "note": "The PM assigns the packaging copy to the absent marketing expert Priya (A) and says he will email her."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_UNAGREED_DECISION",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_UNAGREED_DECISION",
+        "segments": [
+          "SY0303d.s0048",
+          "SY0303d.s0049",
+          "SY0303d.s0050",
+          "SY0303d.s0051",
+          "SY0303d.s0052",
+          "SY0303d.s0053",
+          "SY0303d.s0054",
+          "SY0303d.s0055",
+          "SY0303d.s0056",
+          "SY0303d.s0057",
+          "SY0303d.s0088",
+          "SY0303d.s0089"
+        ],
+        "note": "The ID declares the anti-bite coating decided, the UI objects on safety and grip, and the PM sets it aside without settling it."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

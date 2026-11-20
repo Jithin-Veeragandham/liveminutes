@@ -1,0 +1,1252 @@
+{
+  "meeting_id": "SY0207c",
+  "raw_sha256": "aac3b5a3fbd84ae5c1750b108026edf827bc62de7bda298e0aa9340d72eacacf",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the conceptual design meeting, noted that the user interface designer was absent through illness but had sent her full command list, confirmed the previous minutes had been sent, and recapped the functional design decisions.",
+        "The industrial designer reported that a full speech recognition chip costs about 7 euros while a fixed vocabulary chip costs about 2.80 euros, and that an always-listening microphone would drain two AA batteries in five or six weeks, but a low-power wake-word circuit would extend this to about four months for around 30 cents more.",
+        "She proposed a palm-sized, splash-proof plastic puck with a magnet on the back, a central stop button and a side-facing speaker, and suggested a ring of four LEDs instead of a screen; the marketing expert accepted this after first arguing again for a small display.",
+        "The marketing expert identified the UK, Germany and France as the key markets and the team agreed to launch in English, German and French; his proposal to offer three pastel colours was left open pending cost.",
+        "The industrial designer's rough cost estimate came to about 11.30 euros per unit, under the 12.50 euro limit but before any voice recording costs."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The user interface designer, who was absent, will adapt the command list and spoken responses for German and French and check that the wake word works in all three languages; the project manager will email her the details.",
+        "The industrial designer will prepare a detailed cost breakdown and a clay mock-up of the case for the next meeting.",
+        "The marketing expert will check the concept against the survey requirements.",
+        "The project manager will send round the minutes.",
+        "Checking the cost of having the voice responses recorded by native speakers was mentioned, but nobody took it on."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The timer will use a fixed vocabulary voice recognition chip.",
+        "The timer will use a low-power wake-word circuit and run on two AA batteries.",
+        "The case will be a round, splash-proof plastic puck with a magnet on the back, a central stop button and a side-facing speaker.",
+        "There will be no screen; a ring of four LEDs, one per timer, will show running and finished timers.",
+        "The timer will launch in English, German and French."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The cost of recording the spoken responses with native speakers in three languages is unknown and no one is responsible for checking it.",
+        "The marketing expert's proposal to offer the timer in three colours was not decided because of extra tooling costs.",
+        "The estimated cost of 11.30 euros leaves little margin for colours or recording costs.",
+        "The wake word may not work well in all three languages and needs checking."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0207c.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0207c.ai1",
+        "description": "Adapt the voice command list and spoken responses for German and French, and check that the wake word works in all three languages.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0207c.s0088",
+            "event": "assigned",
+            "by": "B",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0207c.s0093",
+            "event": "restated",
+            "by": "C",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0207c.s0094",
+            "event": "restated",
+            "by": "B",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0207c.s0087",
+          "SY0207c.s0088",
+          "SY0207c.s0089",
+          "SY0207c.s0090",
+          "SY0207c.s0091",
+          "SY0207c.s0093",
+          "SY0207c.s0094"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0207c.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0207c.ai2",
+        "description": "Check the cost of having the spoken responses recorded by native speakers in each language.",
+        "owner": null,
+        "owner_unclear": true,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0207c.s0097",
+            "event": "proposed",
+            "by": "D",
+            "owner": null
+          }
+        ],
+        "evidence_segments": [
+          "SY0207c.s0095",
+          "SY0207c.s0096",
+          "SY0207c.s0097",
+          "SY0207c.s0098",
+          "SY0207c.s0099",
+          "SY0207c.s0100",
+          "SY0207c.s0110"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0207c.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0207c.ai3",
+        "description": "Prepare a detailed cost breakdown and a clay mock-up of the case for the next meeting.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0207c.s0112",
+            "event": "assigned",
+            "by": "B",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0207c.s0113",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0207c.s0112",
+          "SY0207c.s0113"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0207c.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0207c.ai4",
+        "description": "Check the concept against the survey requirements to see if anything is missing.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0207c.s0114",
+            "event": "assigned",
+            "by": "B",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0207c.s0115",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0207c.s0114",
+          "SY0207c.s0115"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0207c.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0207c.ai5",
+        "description": "Send round the meeting minutes.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0207c.s0116",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0207c.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0207c.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0207c.ai6",
+        "description": "Email the user interface designer about her translation and wake-word task.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0207c.s0091",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0207c.s0116",
+            "event": "restated",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0207c.s0091",
+          "SY0207c.s0094",
+          "SY0207c.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f1",
+        "type": "absence",
+        "fact": "Priya, the user interface designer (A), was absent from the conceptual design meeting because she was ill.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207c.s0005"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recapped the functional design meeting's decisions: battery power, up to four named timers, the fixed command set, named alarms and dropping the app, with the screen and languages left open.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0207b",
+        "evidence_segments": [
+          "SY0207c.s0012",
+          "SY0207c.s0013",
+          "SY0207c.s0014",
+          "SY0207c.s0015"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer referred back to her earlier warning that the always-listening wake word could drain the AA batteries in a couple of months.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0207b",
+        "evidence_segments": [
+          "SY0207c.s0032",
+          "SY0207c.s0033"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f4",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer sent her full command list and responses ahead of the meeting, and the project manager confirmed the previous minutes had been sent.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0207b",
+        "evidence_segments": [
+          "SY0207c.s0007",
+          "SY0207c.s0009",
+          "SY0207c.s0010"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f5",
+        "type": "other",
+        "fact": "A full speech recognition chip costs about 7 euros per unit; a fixed vocabulary chip costs about 2.80 euros and holds about sixty words per language.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207c.s0020",
+          "SY0207c.s0022",
+          "SY0207c.s0024",
+          "SY0207c.s0028"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f6",
+        "type": "decision",
+        "fact": "The team agreed to use a fixed vocabulary voice recognition chip.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207c.s0026",
+          "SY0207c.s0029",
+          "SY0207c.s0030",
+          "SY0207c.s0031"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f7",
+        "type": "decision",
+        "fact": "The team agreed on a low-power wake-word circuit with two AA batteries, giving an estimated four months of battery life for about 30 cents extra.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207c.s0035",
+          "SY0207c.s0036",
+          "SY0207c.s0038",
+          "SY0207c.s0041",
+          "SY0207c.s0042",
+          "SY0207c.s0043",
+          "SY0207c.s0044"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f8",
+        "type": "decision",
+        "fact": "The case will be a palm-sized, splash-proof plastic puck with a magnet on the back, a central stop button and a side-facing speaker.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207c.s0045",
+          "SY0207c.s0046",
+          "SY0207c.s0048",
+          "SY0207c.s0050",
+          "SY0207c.s0051",
+          "SY0207c.s0053"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f9",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert proposed a small display showing the four timers and minutes left; it was not adopted because of cost and battery use.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207c.s0055",
+          "SY0207c.s0056",
+          "SY0207c.s0057"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f10",
+        "type": "decision",
+        "fact": "The team agreed on no screen, with a ring of four LEDs round the stop button, one per timer.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207c.s0058",
+          "SY0207c.s0059",
+          "SY0207c.s0064",
+          "SY0207c.s0065",
+          "SY0207c.s0066",
+          "SY0207c.s0067",
+          "SY0207c.s0068"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f11",
+        "type": "plan_change",
+        "fact": "The screen question left open at the functional design meeting was settled by replacing a screen with a four-LED ring.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0207b",
+        "evidence_segments": [
+          "SY0207c.s0015",
+          "SY0207c.s0054",
+          "SY0207c.s0058",
+          "SY0207c.s0068"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f12",
+        "type": "decision",
+        "fact": "The timer will launch in English, German and French, based on the UK, Germany and France being the key markets.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207c.s0071",
+          "SY0207c.s0073",
+          "SY0207c.s0075",
+          "SY0207c.s0078",
+          "SY0207c.s0079",
+          "SY0207c.s0080"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f13",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert proposed offering the timer in three pastel colours (white, sage green and coral); it was left undecided pending cost.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207c.s0082",
+          "SY0207c.s0083",
+          "SY0207c.s0084",
+          "SY0207c.s0085"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f14",
+        "type": "other",
+        "fact": "The industrial designer's rough production cost estimate was about 11.30 euros per unit, under the 12.50 euro target.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207c.s0102",
+          "SY0207c.s0103",
+          "SY0207c.s0104",
+          "SY0207c.s0105",
+          "SY0207c.s0107",
+          "SY0207c.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f15",
+        "type": "action_item",
+        "fact": "The absent user interface designer was assigned to adapt the command list and responses for German and French and check the wake word in all three languages.",
+        "agreed": null,
+        "related_action_item": "SY0207c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207c.s0088",
+          "SY0207c.s0089",
+          "SY0207c.s0093",
+          "SY0207c.s0094"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f16",
+        "type": "action_item",
+        "fact": "Checking the cost of recording the voice responses with native speakers was suggested but nobody took it on.",
+        "agreed": null,
+        "related_action_item": "SY0207c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207c.s0097",
+          "SY0207c.s0098",
+          "SY0207c.s0099",
+          "SY0207c.s0100"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f17",
+        "type": "action_item",
+        "fact": "The industrial designer will prepare a detailed cost breakdown and a clay mock-up of the case.",
+        "agreed": null,
+        "related_action_item": "SY0207c.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207c.s0112",
+          "SY0207c.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f18",
+        "type": "action_item",
+        "fact": "The marketing expert will check the concept against the survey requirements.",
+        "agreed": null,
+        "related_action_item": "SY0207c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207c.s0114",
+          "SY0207c.s0115"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f19",
+        "type": "action_item",
+        "fact": "The project manager will send round the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0207c.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207c.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207c.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207c.f20",
+        "type": "action_item",
+        "fact": "The project manager will email the user interface designer about her task.",
+        "agreed": null,
+        "related_action_item": "SY0207c.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207c.s0091",
+          "SY0207c.s0094",
+          "SY0207c.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_VAGUE_NO_OWNER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_VAGUE_NO_OWNER",
+        "segments": [
+          "SY0207c.s0095",
+          "SY0207c.s0096",
+          "SY0207c.s0097",
+          "SY0207c.s0098",
+          "SY0207c.s0099",
+          "SY0207c.s0100"
+        ],
+        "note": "The marketing expert says someone should probably check what native-speaker voice recordings cost; nobody takes it and the project manager moves on to the total cost."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_TASK_TO_ABSENT",
+        "segments": [
+          "SY0207c.s0087",
+          "SY0207c.s0088",
+          "SY0207c.s0089",
+          "SY0207c.s0090",
+          "SY0207c.s0091",
+          "SY0207c.s0093",
+          "SY0207c.s0094"
+        ],
+        "note": "The project manager assigns the absent user interface designer to adapt her command list for German and French and check the wake word, and says he will email her."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

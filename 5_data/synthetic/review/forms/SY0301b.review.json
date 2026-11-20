@@ -1,0 +1,1163 @@
+{
+  "meeting_id": "SY0301b",
+  "raw_sha256": "91bdbc298b812101420aab517a0b1f0b5a05040d0ed946fdc6d685b60862af5a",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the functional design meeting, noted that the user interface designer was absent through illness, and confirmed she had circulated the brief, survey file and minutes from the kickoff.",
+        "The marketing expert presented the survey results. Borrowers mainly want speed, independence from staff and readable screens. About sixty percent prefer emailed receipts, but most respondents over sixty-five want a printed slip. Staff comments show RFID tagging is patchy across branches, and the survey has no clear list of tagged branches.",
+        "The industrial designer presented component costs, about 2,100 euros per unit with everything included. She withdrew her earlier RFID-only position, and the team agreed the kiosk will read both RFID tags and barcodes. The team also agreed that users choose email, print or both on the final screen.",
+        "The marketing expert's suggestion of fine payment at the kiosk was set aside as out of scope. The project manager assigned the absent user interface designer the scanning and receipt screen flow and the wheelchair height and tilt work."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The user interface designer, who was absent, was given a task by the project manager. He will work out the screen flow for the scanning screen and the receipt choice so that it supports both RFID and barcode within three screens. He will also define the screen height and tilt range for wheelchair users.",
+        "The marketing expert will contact the consortium for a list of which branches have RFID-tagged collections.",
+        "The industrial designer will prepare a detailed cost breakdown with both scanners and the printer, including a closer look at the casing, for the conceptual design meeting.",
+        "The project manager will email the user interface designer the minutes and his task."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The kiosk will read both RFID tags and barcodes.",
+        "Receipts will be offered by email, print or both, chosen on the final screen, and a thermal printer will be included."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "It is still unknown which branches have fully RFID-tagged collections.",
+        "The estimated cost of about 2,100 euros per unit leaves little margin under the 2,500 euro limit, and the casing cost is uncertain."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301b.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301b.ai1",
+        "description": "Work out the screen flow for the scanning screen and receipt choice so it supports both RFID and barcode within three screens, and define the screen height and tilt range for wheelchair users",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301b.s0098",
+            "event": "assigned",
+            "by": "B",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0301b.s0102",
+            "event": "restated",
+            "by": "B",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0301b.s0116",
+            "event": "restated",
+            "by": "B",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301b.s0097",
+          "SY0301b.s0098",
+          "SY0301b.s0099",
+          "SY0301b.s0100",
+          "SY0301b.s0101",
+          "SY0301b.s0102",
+          "SY0301b.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301b.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301b.ai2",
+        "description": "Price up an RFID-only version of the kiosk for comparison",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "dropped",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301b.s0069",
+            "event": "proposed",
+            "by": "B",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0301b.s0070",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0301b.s0081",
+            "event": "dropped",
+            "by": "B",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301b.s0069",
+          "SY0301b.s0070",
+          "SY0301b.s0071",
+          "SY0301b.s0072",
+          "SY0301b.s0073",
+          "SY0301b.s0074",
+          "SY0301b.s0081",
+          "SY0301b.s0082"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301b.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301b.ai3",
+        "description": "Contact the consortium to get a list of which branches have RFID-tagged collections",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301b.s0093",
+            "event": "assigned",
+            "by": "B",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0301b.s0094",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0301b.s0116",
+            "event": "restated",
+            "by": "B",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301b.s0092",
+          "SY0301b.s0093",
+          "SY0301b.s0094",
+          "SY0301b.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301b.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301b.ai4",
+        "description": "Prepare a detailed cost breakdown with both scanners and the printer, including the casing, for the conceptual design meeting",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301b.s0107",
+            "event": "assigned",
+            "by": "B",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0301b.s0108",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0301b.s0116",
+            "event": "restated",
+            "by": "B",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301b.s0106",
+          "SY0301b.s0107",
+          "SY0301b.s0108",
+          "SY0301b.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0301b.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0301b.ai5",
+        "description": "Email the absent user interface designer the minutes and his task",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0301b.s0104",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0301b.s0116",
+            "event": "restated",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0301b.s0103",
+          "SY0301b.s0104",
+          "SY0301b.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301b.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301b.f1",
+        "type": "absence",
+        "fact": "The user interface designer (Tomas, A) was absent from this meeting because he was off sick.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301b.s0003",
+          "SY0301b.s0006"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301b.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301b.f2",
+        "type": "action_item",
+        "fact": "While absent, the user interface designer (A) was given the screen flow task for the scanning and receipt choice screens, plus the wheelchair height and tilt range. The project manager (B) assigned it.",
+        "agreed": null,
+        "related_action_item": "SY0301b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301b.s0097",
+          "SY0301b.s0098",
+          "SY0301b.s0099",
+          "SY0301b.s0102",
+          "SY0301b.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301b.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301b.f3",
+        "type": "other",
+        "fact": "The industrial designer suggested adding the wheelchair screen height and tilt range to the absent user interface designer's task, and the project manager added it.",
+        "agreed": null,
+        "related_action_item": "SY0301b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301b.s0100",
+          "SY0301b.s0101",
+          "SY0301b.s0102"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301b.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301b.f4",
+        "type": "action_item",
+        "fact": "The project manager will email the absent user interface designer the minutes and his task.",
+        "agreed": null,
+        "related_action_item": "SY0301b.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301b.s0103",
+          "SY0301b.s0104"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301b.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301b.f5",
+        "type": "action_item",
+        "fact": "The project manager asked the industrial designer to price an RFID-only version for comparison, and she agreed.",
+        "agreed": null,
+        "related_action_item": "SY0301b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301b.s0069",
+          "SY0301b.s0070"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301b.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301b.f6",
+        "type": "action_item_removed",
+        "fact": "The project manager cancelled the RFID-only costing. The only difference was the 120 euro barcode scanner, and the team then decided to include both scanners.",
+        "agreed": null,
+        "related_action_item": "SY0301b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301b.s0072",
+          "SY0301b.s0073",
+          "SY0301b.s0074",
+          "SY0301b.s0081",
+          "SY0301b.s0082"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301b.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301b.f7",
+        "type": "decision",
+        "fact": "The kiosk will read both RFID tags and barcodes.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301b.s0075",
+          "SY0301b.s0076",
+          "SY0301b.s0077",
+          "SY0301b.s0078",
+          "SY0301b.s0079",
+          "SY0301b.s0080"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301b.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301b.f8",
+        "type": "decision",
+        "fact": "Receipts will be offered by email, print or both, chosen on the final screen, and a thermal printer will be included.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301b.s0087",
+          "SY0301b.s0088",
+          "SY0301b.s0089",
+          "SY0301b.s0090"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301b.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301b.f9",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested the kiosk could take fine payments. The project manager set it aside as beyond the brief.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301b.s0042",
+          "SY0301b.s0043",
+          "SY0301b.s0044",
+          "SY0301b.s0046",
+          "SY0301b.s0047",
+          "SY0301b.s0111",
+          "SY0301b.s0112"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301b.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301b.f10",
+        "type": "plan_change",
+        "fact": "The industrial designer dropped her earlier RFID-only position because of patchy tagging, and supported using both RFID and barcode.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0301a",
+        "evidence_segments": [
+          "SY0301b.s0066",
+          "SY0301b.s0067",
+          "SY0301b.s0076"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301b.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301b.f11",
+        "type": "action_item",
+        "fact": "The marketing expert will contact the consortium for a list of which branches have RFID-tagged collections.",
+        "agreed": null,
+        "related_action_item": "SY0301b.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301b.s0093",
+          "SY0301b.s0094"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301b.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301b.f12",
+        "type": "action_item",
+        "fact": "The industrial designer will prepare a detailed cost breakdown with both scanners and the printer, including the casing, for the next meeting.",
+        "agreed": null,
+        "related_action_item": "SY0301b.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301b.s0107",
+          "SY0301b.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301b.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301b.f13",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager reported that she had circulated the brief, the survey file and the minutes, as agreed at the kickoff.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0301a",
+        "evidence_segments": [
+          "SY0301b.s0007",
+          "SY0301b.s0008",
+          "SY0301b.s0009",
+          "SY0301b.s0010"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301b.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301b.f14",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recalled that the kickoff decided the kiosk is checkout only, and that the scanner question was left open.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0301a",
+        "evidence_segments": [
+          "SY0301b.s0011",
+          "SY0301b.s0013"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301b.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301b.f15",
+        "type": "reference_to_prior_meeting",
+        "fact": "The team recalled the three-screen limit from the kickoff when designing the receipt choice.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0301a",
+        "evidence_segments": [
+          "SY0301b.s0085",
+          "SY0301b.s0086",
+          "SY0301b.s0087"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301b.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301b.f16",
+        "type": "other",
+        "fact": "The survey showed that about sixty percent of borrowers prefer emailed receipts, while most respondents over sixty-five want a printed slip.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301b.s0026",
+          "SY0301b.s0027",
+          "SY0301b.s0028"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301b.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301b.f17",
+        "type": "other",
+        "fact": "According to staff survey comments, RFID tagging is patchy across branches, and the survey does not list which branches are fully tagged.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301b.s0036",
+          "SY0301b.s0037",
+          "SY0301b.s0038",
+          "SY0301b.s0040"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0301b.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0301b.f18",
+        "type": "other",
+        "fact": "The estimated per-unit cost with all components, including both scanners, the printer and a library card reader, is about 2,100 euros.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0301b.s0051",
+          "SY0301b.s0052",
+          "SY0301b.s0053",
+          "SY0301b.s0055",
+          "SY0301b.s0056",
+          "SY0301b.s0059",
+          "SY0301b.s0061",
+          "SY0301b.s0062",
+          "SY0301b.s0063"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_TASK_TO_ABSENT",
+        "segments": [
+          "SY0301b.s0003",
+          "SY0301b.s0097",
+          "SY0301b.s0098",
+          "SY0301b.s0099",
+          "SY0301b.s0100",
+          "SY0301b.s0101",
+          "SY0301b.s0102",
+          "SY0301b.s0104",
+          "SY0301b.s0116"
+        ],
+        "note": "The PM assigns the absent UI designer the scanning and receipt screen flow and the wheelchair height and tilt work, and will email it to him."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_ACTION_REMOVED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_ACTION_REMOVED",
+        "segments": [
+          "SY0301b.s0069",
+          "SY0301b.s0070",
+          "SY0301b.s0071",
+          "SY0301b.s0072",
+          "SY0301b.s0073",
+          "SY0301b.s0074",
+          "SY0301b.s0081",
+          "SY0301b.s0082"
+        ],
+        "note": "The PM asks the ID to price an RFID-only variant, then cancels it once the difference proves to be only the barcode scanner and both scanners are chosen."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

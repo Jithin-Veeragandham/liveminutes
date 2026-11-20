@@ -1,0 +1,66 @@
+# Generation config for the full synthetic run.
+# Everything that affects model output is part of the cache key (see src/synthetic/cache.py).
+
+model:
+  provider: anthropic
+  # Backend that sends the request. "claude_cli" runs Claude Code headless
+  # (`claude -p`) and authenticates with the logged-in Claude org account,
+  # so no API key is needed. Our own system prompt replaces Claude Code's,
+  # and all tools, MCP servers, settings and session persistence are off.
+  backend: claude_cli
+  name: claude-opus-5-5          # pinned model ID passed to --model
+  version: claude-opus-5-5       # expected canonical model ID; generate refuses responses from any other model
+  cli:
+    executable: claude
+    effort: high                 # --effort; pinned because it changes output
+    timeout_sec: 1200
+  # Sampling parameters. The claude_cli backend cannot set these. They are kept
+  # here (and in the cache key) so that a future SDK backend uses the same values,
+  # and `generate` fails if one is non-null on a backend that cannot apply it.
+  sampling:
+    temperature: null
+    top_p: null
+    max_tokens: null
+    seed: null                   # the Anthropic API has no sampling seed
+
+generation:
+  seed: 6170                     # drives the meeting plan (scenario placement, roles, absences, product) and cache keys
+  prompt_version: v1             # prompts/<prompt_version>/
+  scenarios_file: scenarios/scenarios.yaml
+  # Number of series per target feature. Series IDs come in fixed blocks per
+  # feature (F1 -> SY01xx, F2 -> SY02xx, F3 -> SY03xx), so changing one count
+  # never renumbers another feature's series or invalidates its cache.
+  # At least 3 per feature puts every feature into train, dev and test.
+  # 10/10/5 gives an exact 60/20/20 split per feature (6/2/2 and 3/1/1 series).
+  series_per_feature:
+    F1: 10
+    F2: 10
+    F3: 5                        # max 5
+  max_series_per_feature:
+    F3: 5
+  meetings_per_series: 4         # a..d, like AMI
+  scenarios_per_meeting: 2       # edge cases combined in one meeting (same feature)
+  target_segments: [90, 140]     # dialogue-act-like units per meeting
+  max_attempts: 3                # bounded retries on validation failure
+  # Product briefs; one is picked per series by the seeded planner.
+  products:
+    - a smart thermostat for student apartments
+    - a bike-share docking station app
+    - a voice-controlled kitchen timer
+    - a library self-checkout kiosk
+    - a wearable step counter for seniors
+    - a campus parking availability display
+    - a reusable coffee cup with a deposit system
+    - a children's educational tablet case
+
+paths:
+  cache_dir: cache
+  raw_dir: data/raw
+  reviewed_dir: data/reviewed
+  splits_dir: data/splits
+  review_dir: review
+
+splits:
+  seed: 6170
+  ratios: {train: 0.6, dev: 0.2, test: 0.2}
+  stratify_by: feature

@@ -1,0 +1,14 @@
+# Dry run: one series, two meetings. Output is committed under samples/.
+# Same model and prompt settings as generation.yaml. Only the size and paths differ.
+extends: generation.yaml
+
+generation:
+  series_per_feature: {F1: 0, F2: 1, F3: 0}
+  meetings_per_series: 2
+
+paths:
+  cache_dir: samples/cache
+  raw_dir: samples/raw
+  reviewed_dir: samples/reviewed
+  splits_dir: samples/splits
+  review_dir: samples/review

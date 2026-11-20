@@ -1,0 +1,1539 @@
+{
+  "schema_version": "1.0",
+  "source": "synthetic",
+  "meeting_id": "SY0305b",
+  "series_id": "SY0305",
+  "meeting_letter": "b",
+  "scenario_type": "scenario",
+  "stage": "functional design",
+  "duration_sec": 539.44,
+  "participants": [
+    {
+      "label": "A",
+      "role": "ID",
+      "name": "Priya",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "B",
+      "role": "ME",
+      "name": "Tomasz",
+      "global_id": null,
+      "status": "absent"
+    },
+    {
+      "label": "C",
+      "role": "PM",
+      "name": "Helen",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "D",
+      "role": "UI",
+      "name": "Kofi",
+      "global_id": null,
+      "status": "present"
+    }
+  ],
+  "segments": [
+    {
+      "id": "SY0305b.s0001",
+      "speaker": "C",
+      "start": 5.0,
+      "end": 7.31,
+      "text": "Okay, um, shall we get started?",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0305b.s0002",
+      "speaker": "D",
+      "start": 8.18,
+      "end": 8.58,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0305b.s0003",
+      "speaker": "A",
+      "start": 9.12,
+      "end": 9.52,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0305b.s0004",
+      "speaker": "C",
+      "start": 10.19,
+      "end": 12.88,
+      "text": "So this is the functional design meeting.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0005",
+      "speaker": "C",
+      "start": 13.37,
+      "end": 19.91,
+      "text": "Tomasz can't make it today, he's at the Wilson Street branch doing his interviews with the staff.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0006",
+      "speaker": "C",
+      "start": 20.56,
+      "end": 26.71,
+      "text": "He sent me some notes this morning though, so I'll go through those in a bit.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0007",
+      "speaker": "C",
+      "start": 27.68,
+      "end": 29.99,
+      "text": "And Priya, welcome, properly this time.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0008",
+      "speaker": "A",
+      "start": 30.15,
+      "end": 35.15,
+      "text": "Yeah, thanks. Sorry about last time, the Eindhoven visit was booked ages ago.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0009",
+      "speaker": "C",
+      "start": 35.75,
+      "end": 37.29,
+      "text": "No, no, that's fine.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0305b.s0010",
+      "speaker": "C",
+      "start": 38.07,
+      "end": 42.3,
+      "text": "Did you get my email with the notes and your bit?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0305b.s0011",
+      "speaker": "A",
+      "start": 43.2,
+      "end": 46.28,
+      "text": "I did, yeah. Working design, so the hardware.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0012",
+      "speaker": "C",
+      "start": 46.71,
+      "end": 47.11,
+      "text": "Great.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0305b.s0013",
+      "speaker": "C",
+      "start": 47.67,
+      "end": 57.29,
+      "text": "So, agenda. Priya on hardware, then Kofi on the functions and the flows, then Tomasz's notes, and then we decide what's in and what's out.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0014",
+      "speaker": "D",
+      "start": 58.26,
+      "end": 58.66,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0305b.s0015",
+      "speaker": "C",
+      "start": 59.15,
+      "end": 61.84,
+      "text": "Priya, do you want to go first?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0305b.s0016",
+      "speaker": "A",
+      "start": 62.31,
+      "end": 63.08,
+      "text": "Sure, um.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0305b.s0017",
+      "speaker": "A",
+      "start": 63.62,
+      "end": 70.54,
+      "text": "So I looked at the main components and got rough prices from the suppliers I've been talking to.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0018",
+      "speaker": "A",
+      "start": 71.32,
+      "end": 78.63,
+      "text": "The RFID pad, the kind you can put a whole stack on, is about a hundred and eighty euros.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0019",
+      "speaker": "D",
+      "start": 78.85,
+      "end": 79.25,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0305b.s0020",
+      "speaker": "A",
+      "start": 79.87,
+      "end": 83.33,
+      "text": "A fifteen inch touchscreen, industrial grade, around two fifty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0021",
+      "speaker": "A",
+      "start": 83.57,
+      "end": 88.95,
+      "text": "Then the little PC board inside, about two hundred, and a receipt printer, ninety.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0022",
+      "speaker": "A",
+      "start": 89.92,
+      "end": 93.77,
+      "text": "And the casing, steel with a powder coat, three hundred.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0023",
+      "speaker": "C",
+      "start": 94.04,
+      "end": 98.27,
+      "text": "And does that include the front panel thing? The removable one?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0305b.s0024",
+      "speaker": "A",
+      "start": 98.96,
+      "end": 103.96,
+      "text": "No, that's... sorry, that's on top. The printable panel is maybe another eighty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0025",
+      "speaker": "A",
+      "start": 104.71,
+      "end": 109.71,
+      "text": "So the casing's really more like three eighty if we do the panel.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0026",
+      "speaker": "C",
+      "start": 110.0,
+      "end": 110.4,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0305b.s0027",
+      "speaker": "D",
+      "start": 110.68,
+      "end": 113.37,
+      "text": "What does that come to, all in?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0305b.s0028",
+      "speaker": "A",
+      "start": 113.82,
+      "end": 116.9,
+      "text": "Without a barcode scanner, um, about eleven hundred.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0029",
+      "speaker": "C",
+      "start": 117.67,
+      "end": 119.98,
+      "text": "Oh, that's better than I expected.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0305b.s0030",
+      "speaker": "A",
+      "start": 120.56,
+      "end": 124.79,
+      "text": "Yeah, there's some room. But the barcode question eats into it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0031",
+      "speaker": "C",
+      "start": 125.06,
+      "end": 131.21,
+      "text": "Right, that was the big open one from the kickoff. RFID only, or barcodes as well.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0032",
+      "speaker": "A",
+      "start": 131.93,
+      "end": 137.31,
+      "text": "A decent scanner is about sixty euros, so the part itself isn't the problem.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0033",
+      "speaker": "A",
+      "start": 138.15,
+      "end": 147.77,
+      "text": "It's more that it needs its own spot on the casing, and with barcodes you can't do a stack, it's one book at a time.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0034",
+      "speaker": "D",
+      "start": 148.08,
+      "end": 151.93,
+      "text": "Yeah, and we said the stack thing was a must.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0035",
+      "speaker": "C",
+      "start": 152.44,
+      "end": 155.52,
+      "text": "We did, yeah, that was agreed last time.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0305b.s0036",
+      "speaker": "A",
+      "start": 155.69,
+      "end": 164.54,
+      "text": "So my suggestion would be RFID as the main thing, and a small scanner on the side for libraries that haven't switched over.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0305b.s0037",
+      "speaker": "D",
+      "start": 164.79,
+      "end": 168.25,
+      "text": "But then the barcode libraries get a slower kiosk?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0305b.s0038",
+      "speaker": "A",
+      "start": 168.64,
+      "end": 175.18,
+      "text": "They get the same kiosk, they just scan one by one. Still beats queuing at the desk.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0039",
+      "speaker": "D",
+      "start": 175.62,
+      "end": 177.16,
+      "text": "Hmm. Yeah, I suppose.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0305b.s0040",
+      "speaker": "C",
+      "start": 177.59,
+      "end": 184.13,
+      "text": "I think that's sensible. It's sixty euros and we don't shut out the libraries still on barcodes.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0305b.s0041",
+      "speaker": "C",
+      "start": 184.49,
+      "end": 188.34,
+      "text": "Are we okay going with both, RFID plus a scanner?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0305b.s0042",
+      "speaker": "D",
+      "start": 188.66,
+      "end": 190.2,
+      "text": "Yeah, fine by me.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0305b.s0043",
+      "speaker": "A",
+      "start": 190.89,
+      "end": 191.29,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0305b.s0044",
+      "speaker": "C",
+      "start": 191.96,
+      "end": 193.88,
+      "text": "Okay, so both. That's decided.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0045",
+      "speaker": "A",
+      "start": 194.57,
+      "end": 198.03,
+      "text": "So with the scanner we're at about eleven sixty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0046",
+      "speaker": "C",
+      "start": 198.58,
+      "end": 202.81,
+      "text": "Okay. Kofi, do you want to take us through the functions?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0305b.s0047",
+      "speaker": "D",
+      "start": 203.49,
+      "end": 203.89,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0305b.s0048",
+      "speaker": "D",
+      "start": 204.38,
+      "end": 210.15,
+      "text": "So I split it into borrowing, returning, and then a bit for, like, account stuff.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0049",
+      "speaker": "D",
+      "start": 210.74,
+      "end": 217.28,
+      "text": "Borrowing: you scan your library card, the screen asks you to put your books on the pad.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0050",
+      "speaker": "D",
+      "start": 218.0,
+      "end": 226.08,
+      "text": "It reads them, shows you a list, you check it's right, and then you get a receipt, printed or by email.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0051",
+      "speaker": "A",
+      "start": 226.39,
+      "end": 231.39,
+      "text": "And the card, does that go on the RFID pad or the scanner?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0305b.s0052",
+      "speaker": "D",
+      "start": 231.62,
+      "end": 235.47,
+      "text": "Either. Most cards have a barcode on the back anyway.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0053",
+      "speaker": "A",
+      "start": 235.82,
+      "end": 236.22,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0305b.s0054",
+      "speaker": "D",
+      "start": 236.99,
+      "end": 243.14,
+      "text": "Returning is basically the same but backwards. Put the books down, it checks them in, done.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0055",
+      "speaker": "C",
+      "start": 243.7,
+      "end": 246.78,
+      "text": "And where do the books go after that?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0305b.s0056",
+      "speaker": "D",
+      "start": 247.6,
+      "end": 253.75,
+      "text": "Um, that's... I hadn't really thought about that. I sort of assumed staff pick them up.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0057",
+      "speaker": "A",
+      "start": 254.29,
+      "end": 260.06,
+      "text": "Because a proper return bin with a sorter is a whole other machine, that's thousands.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0058",
+      "speaker": "C",
+      "start": 261.01,
+      "end": 266.01,
+      "text": "Yeah, let's not go there today. Let's keep that as an open point.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0305b.s0059",
+      "speaker": "D",
+      "start": 266.23,
+      "end": 266.63,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0305b.s0060",
+      "speaker": "D",
+      "start": 267.29,
+      "end": 272.29,
+      "text": "And then account: see what you've got out, when it's due, renew stuff.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0061",
+      "speaker": "D",
+      "start": 273.13,
+      "end": 278.51,
+      "text": "And I thought, um, paying fines. People hate going to the desk for that.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0305b.s0062",
+      "speaker": "C",
+      "start": 279.39,
+      "end": 281.7,
+      "text": "Hmm, that's a good point actually.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0305b.s0063",
+      "speaker": "D",
+      "start": 282.54,
+      "end": 287.54,
+      "text": "I can mock up a payment screen for next time, if you want.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0305b.s0064",
+      "speaker": "C",
+      "start": 288.52,
+      "end": 290.44,
+      "text": "Yeah, go on, do that.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0305b.s0065",
+      "speaker": "A",
+      "start": 291.36,
+      "end": 294.44,
+      "text": "Wait, paying how though? With a bank card?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0305b.s0066",
+      "speaker": "D",
+      "start": 295.3,
+      "end": 296.07,
+      "text": "Yeah, contactless.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0067",
+      "speaker": "A",
+      "start": 296.55,
+      "end": 303.09,
+      "text": "So that's a payment terminal, and those aren't cheap. Certified ones, you're looking at three, four hundred.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0068",
+      "speaker": "C",
+      "start": 304.0,
+      "end": 306.31,
+      "text": "On top of the eleven sixty?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0305b.s0069",
+      "speaker": "A",
+      "start": 306.63,
+      "end": 311.63,
+      "text": "On top, yeah. And then there's transaction fees and who handles the money.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0070",
+      "speaker": "C",
+      "start": 312.35,
+      "end": 316.2,
+      "text": "That's too much. That puts us over the fourteen hundred.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0305b.s0071",
+      "speaker": "D",
+      "start": 316.62,
+      "end": 317.77,
+      "text": "Yeah, okay, fair.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0305b.s0072",
+      "speaker": "C",
+      "start": 318.13,
+      "end": 326.59,
+      "text": "So no fine payment on the kiosk, not in this version. People can see their fines, they just pay at the desk.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0073",
+      "speaker": "D",
+      "start": 326.97,
+      "end": 327.37,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0305b.s0074",
+      "speaker": "C",
+      "start": 327.54,
+      "end": 332.16,
+      "text": "And Kofi, scrap the payment screen then, no point mocking it up.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0075",
+      "speaker": "D",
+      "start": 332.51,
+      "end": 334.43,
+      "text": "Yeah, okay, I'll drop it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0076",
+      "speaker": "C",
+      "start": 335.23,
+      "end": 338.31,
+      "text": "Right, which brings us to the touchscreen thing.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0077",
+      "speaker": "C",
+      "start": 338.54,
+      "end": 344.69,
+      "text": "At the kickoff, Kofi, you said touchscreen only, no buttons, and we parked it till today.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0078",
+      "speaker": "D",
+      "start": 345.41,
+      "end": 351.95,
+      "text": "I still think that's the way to go. It looks cleaner, and it's what people expect now.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0079",
+      "speaker": "A",
+      "start": 352.55,
+      "end": 356.78,
+      "text": "But what about PINs? Do people have to type a PIN?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0305b.s0080",
+      "speaker": "C",
+      "start": 357.31,
+      "end": 361.93,
+      "text": "Some libraries do it. That's what Tomasz asked about last time actually.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0081",
+      "speaker": "A",
+      "start": 362.6,
+      "end": 371.45,
+      "text": "Because on the hardware side a little steel keypad is like twenty-five euros. And it's much easier for, um, people with poor eyesight.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0082",
+      "speaker": "D",
+      "start": 372.39,
+      "end": 378.16,
+      "text": "You can do a PIN on a screen though, everyone does it on their phone.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0305b.s0083",
+      "speaker": "C",
+      "start": 378.62,
+      "end": 381.31,
+      "text": "Okay, so, Tomasz's notes, this is relevant.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0084",
+      "speaker": "C",
+      "start": 382.24,
+      "end": 392.62,
+      "text": "He says the Wilson Street staff told him a lot of their older users struggle with the touchscreens they've got, and end up asking at the desk.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0085",
+      "speaker": "C",
+      "start": 393.26,
+      "end": 402.88,
+      "text": "And he found the competitor kiosks go for between four and six thousand euros, so at three and a half we're on the cheap side.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0086",
+      "speaker": "D",
+      "start": 403.36,
+      "end": 403.76,
+      "text": "Huh.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0305b.s0087",
+      "speaker": "A",
+      "start": 404.16,
+      "end": 408.78,
+      "text": "So there's room for us to look nicer than them, at least.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0305b.s0088",
+      "speaker": "C",
+      "start": 409.35,
+      "end": 415.12,
+      "text": "Yeah. And since we said accessibility is a requirement, I'd lean towards having the keypad.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0305b.s0089",
+      "speaker": "D",
+      "start": 416.11,
+      "end": 416.51,
+      "text": "Um.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0305b.s0090",
+      "speaker": "D",
+      "start": 416.78,
+      "end": 421.78,
+      "text": "Could it be touchscreen for everything, and the keypad just for the PIN?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0305b.s0091",
+      "speaker": "A",
+      "start": 422.62,
+      "end": 425.31,
+      "text": "Yeah, that works, that's what I'd picture.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0305b.s0092",
+      "speaker": "C",
+      "start": 425.59,
+      "end": 427.51,
+      "text": "Yeah, I'm happy with that.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0305b.s0093",
+      "speaker": "D",
+      "start": 428.09,
+      "end": 430.78,
+      "text": "Okay. Fine. Touchscreen plus a PIN keypad.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0305b.s0094",
+      "speaker": "C",
+      "start": 431.01,
+      "end": 432.55,
+      "text": "Great, so that's decided.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0095",
+      "speaker": "A",
+      "start": 433.2,
+      "end": 437.82,
+      "text": "So with the scanner and the keypad, we're at about eleven eighty-five.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0096",
+      "speaker": "C",
+      "start": 438.35,
+      "end": 440.27,
+      "text": "Still under fourteen hundred. Good.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0305b.s0097",
+      "speaker": "D",
+      "start": 441.05,
+      "end": 447.2,
+      "text": "And I'm doing a large text mode on the screens anyway, that was in my notes.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0098",
+      "speaker": "C",
+      "start": 447.87,
+      "end": 448.27,
+      "text": "Good.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0305b.s0099",
+      "speaker": "C",
+      "start": 448.93,
+      "end": 454.31,
+      "text": "One thing we still don't know is how many libraries are still on barcodes.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0100",
+      "speaker": "A",
+      "start": 454.88,
+      "end": 457.57,
+      "text": "Does that matter now we're doing both?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0305b.s0101",
+      "speaker": "C",
+      "start": 458.26,
+      "end": 463.64,
+      "text": "It matters for how we pitch it. And whether libraries use PINs at all.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0102",
+      "speaker": "C",
+      "start": 464.28,
+      "end": 470.43,
+      "text": "So I'm going to give that one to Tomasz, since he's out talking to libraries anyway.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0103",
+      "speaker": "C",
+      "start": 470.69,
+      "end": 478.77,
+      "text": "Tomasz is to find out roughly what share of libraries still use barcodes, and whether they make patrons use a PIN.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0104",
+      "speaker": "D",
+      "start": 479.45,
+      "end": 480.22,
+      "text": "Makes sense.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0305b.s0105",
+      "speaker": "C",
+      "start": 480.46,
+      "end": 484.31,
+      "text": "I'll email him after this so he knows it's his.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0106",
+      "speaker": "A",
+      "start": 484.47,
+      "end": 487.16,
+      "text": "Will he have that by next meeting?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0305b.s0107",
+      "speaker": "C",
+      "start": 488.16,
+      "end": 492.39,
+      "text": "He should, he's got two more branches lined up this week.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0108",
+      "speaker": "C",
+      "start": 492.66,
+      "end": 494.97,
+      "text": "Okay, so, actions for next time.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0305b.s0109",
+      "speaker": "C",
+      "start": 495.32,
+      "end": 501.09,
+      "text": "Priya, can you get firm quotes on everything, with the scanner and the keypad in?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0305b.s0110",
+      "speaker": "A",
+      "start": 501.39,
+      "end": 507.16,
+      "text": "Yeah. And I'll check the front panel with the printing supplier, whether the eighty holds.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0305b.s0111",
+      "speaker": "C",
+      "start": 507.93,
+      "end": 508.33,
+      "text": "Great.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0305b.s0112",
+      "speaker": "C",
+      "start": 508.96,
+      "end": 513.96,
+      "text": "Kofi, mockups of the borrow and return screens, with the large text mode.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0305b.s0113",
+      "speaker": "D",
+      "start": 514.91,
+      "end": 516.83,
+      "text": "Yep. Card, stack, list, receipt.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0114",
+      "speaker": "D",
+      "start": 517.44,
+      "end": 518.98,
+      "text": "Not the payment one.",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0305b.s0115",
+      "speaker": "C",
+      "start": 519.4,
+      "end": 521.32,
+      "text": "Not the payment one, no.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0116",
+      "speaker": "A",
+      "start": 521.66,
+      "end": 522.43,
+      "text": "Ha, okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0305b.s0117",
+      "speaker": "C",
+      "start": 523.03,
+      "end": 527.26,
+      "text": "And I'll send out the minutes and email Tomasz his bit.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0118",
+      "speaker": "C",
+      "start": 528.1,
+      "end": 531.18,
+      "text": "The return bin we'll leave open for now.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0119",
+      "speaker": "C",
+      "start": 531.73,
+      "end": 532.5,
+      "text": "Anything else?",
+      "da_type": "el.und"
+    },
+    {
+      "id": "SY0305b.s0120",
+      "speaker": "A",
+      "start": 533.17,
+      "end": 534.32,
+      "text": "No, I'm good.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0121",
+      "speaker": "D",
+      "start": 534.47,
+      "end": 534.87,
+      "text": "Nope.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0305b.s0122",
+      "speaker": "C",
+      "start": 535.29,
+      "end": 536.44,
+      "text": "Okay, thanks everyone.",
+      "da_type": "inf"
+    }
+  ],
+  "summary": {
+    "abstract": [
+      "The project manager opened the functional design meeting, noted that the marketing expert was absent because he was interviewing staff at the Wilson Street branch, and confirmed that the industrial designer had received her assignment by email.",
+      "The industrial designer presented a rough component costing: RFID pad, touchscreen, PC board, receipt printer and a casing with a removable printable front panel came to about 1,100 euros, rising to about 1,185 euros once a barcode scanner and a PIN keypad were added, which is within the 1,400 euro limit.",
+      "The team agreed to combine RFID stack processing with a small barcode scanner for libraries that have not switched to RFID.",
+      "The user interface designer presented the borrow, return and account functions. A fine payment feature was proposed but rejected because a card payment terminal would push the cost over the limit.",
+      "The touchscreen-only question deferred from the kickoff was settled. The project manager relayed the marketing expert's notes that older users struggle with touchscreens and that competitor kiosks sell for 4,000 to 6,000 euros, and the team agreed on a touchscreen with a physical keypad for PIN entry only.",
+      "The project manager assigned the absent marketing expert a research task and closed the meeting with actions for next time."
+    ],
+    "actions": [
+      "The industrial designer will get firm supplier quotes for all components, including the barcode scanner and PIN keypad, and will check the front panel price with the printing supplier.",
+      "The user interface designer will produce mockups of the borrow and return screens, including a large text mode.",
+      "The marketing expert (absent) is to find out roughly what share of libraries still use barcodes and whether libraries require patrons to use a PIN. The project manager assigned this task.",
+      "The project manager will email the marketing expert his task and will send out the minutes."
+    ],
+    "decisions": [
+      "The kiosk will use an RFID pad for stack processing plus a small barcode scanner for libraries still on barcodes.",
+      "Fine payment will not be included on the kiosk in this version. Users can view fines but must pay at the desk.",
+      "The kiosk will use a touchscreen for all interaction plus a physical keypad for PIN entry only."
+    ],
+    "problems": [
+      "Where returned books go after check-in is unresolved, because a return bin with a sorter would be a separate, expensive machine.",
+      "Barcode-only libraries will have to scan books one at a time rather than processing a stack.",
+      "The share of libraries still using barcodes and whether libraries use patron PINs are unknown until the marketing expert reports back.",
+      "The cost figures are rough estimates pending firm supplier quotes, including the front panel price."
+    ]
+  },
+  "action_items": [
+    {
+      "id": "SY0305b.ai1",
+      "description": "Get firm supplier quotes for all hardware components including the barcode scanner and PIN keypad, and check the removable front panel price with the printing supplier",
+      "owner": "A",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0305b.s0109",
+          "event": "assigned",
+          "by": "C",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0305b.s0110",
+          "event": "accepted",
+          "by": "A",
+          "owner": "A"
+        }
+      ],
+      "evidence_segments": [
+        "SY0305b.s0095",
+        "SY0305b.s0109",
+        "SY0305b.s0110"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0305b.ai2",
+      "description": "Produce mockups of the borrow and return screens, including a large text mode",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0305b.s0097",
+          "event": "offered",
+          "by": "D",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0305b.s0112",
+          "event": "assigned",
+          "by": "C",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0305b.s0113",
+          "event": "accepted",
+          "by": "D",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0305b.s0097",
+        "SY0305b.s0112",
+        "SY0305b.s0113",
+        "SY0305b.s0114",
+        "SY0305b.s0115"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0305b.ai3",
+      "description": "Mock up a fine payment screen for the kiosk",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "dropped",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0305b.s0063",
+          "event": "offered",
+          "by": "D",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0305b.s0064",
+          "event": "accepted",
+          "by": "C",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0305b.s0074",
+          "event": "dropped",
+          "by": "C",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0305b.s0061",
+        "SY0305b.s0063",
+        "SY0305b.s0064",
+        "SY0305b.s0070",
+        "SY0305b.s0072",
+        "SY0305b.s0074",
+        "SY0305b.s0075",
+        "SY0305b.s0114",
+        "SY0305b.s0115"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0305b.ai4",
+      "description": "Find out roughly what share of libraries still use barcodes and whether libraries require patrons to use a PIN",
+      "owner": "B",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0305b.s0102",
+          "event": "assigned",
+          "by": "C",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0305b.s0103",
+          "event": "restated",
+          "by": "C",
+          "owner": "B"
+        }
+      ],
+      "evidence_segments": [
+        "SY0305b.s0099",
+        "SY0305b.s0101",
+        "SY0305b.s0102",
+        "SY0305b.s0103",
+        "SY0305b.s0105",
+        "SY0305b.s0107"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0305b.ai5",
+      "description": "Email the absent marketing expert to tell him about his new task",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0305b.s0105",
+          "event": "offered",
+          "by": "C",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0305b.s0117",
+          "event": "restated",
+          "by": "C",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0305b.s0105",
+        "SY0305b.s0117"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0305b.ai6",
+      "description": "Send out the meeting minutes",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0305b.s0117",
+          "event": "offered",
+          "by": "C",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0305b.s0117"
+      ],
+      "owner_source": "gold"
+    }
+  ],
+  "qa_facts": [
+    {
+      "id": "SY0305b.f1",
+      "type": "absence",
+      "fact": "Tomasz (B), the marketing expert, was absent from the functional design meeting because he was at the Wilson Street branch interviewing staff.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0305b.s0005",
+        "SY0305b.s0006"
+      ]
+    },
+    {
+      "id": "SY0305b.f2",
+      "type": "action_item",
+      "fact": "While he was absent, Tomasz (B) was given the task of finding out roughly what share of libraries still use barcodes and whether libraries require patrons to use a PIN.",
+      "agreed": null,
+      "related_action_item": "SY0305b.ai4",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0305b.s0102",
+        "SY0305b.s0103"
+      ]
+    },
+    {
+      "id": "SY0305b.f3",
+      "type": "other",
+      "fact": "Helen (C), the project manager, assigned the barcode and PIN research task to the absent Tomasz and said she would email him about it.",
+      "agreed": null,
+      "related_action_item": "SY0305b.ai4",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0305b.s0102",
+        "SY0305b.s0103",
+        "SY0305b.s0105",
+        "SY0305b.s0117"
+      ]
+    },
+    {
+      "id": "SY0305b.f4",
+      "type": "action_item",
+      "fact": "Helen (C) will email Tomasz (B) to tell him about his new task.",
+      "agreed": null,
+      "related_action_item": "SY0305b.ai5",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0305b.s0105",
+        "SY0305b.s0117"
+      ]
+    },
+    {
+      "id": "SY0305b.f5",
+      "type": "action_item_removed",
+      "fact": "Kofi (D) offered to mock up a fine payment screen and Helen (C) accepted, but later in the meeting Helen cancelled the task after fine payment was ruled out.",
+      "agreed": null,
+      "related_action_item": "SY0305b.ai3",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0305b.s0063",
+        "SY0305b.s0064",
+        "SY0305b.s0074",
+        "SY0305b.s0075"
+      ]
+    },
+    {
+      "id": "SY0305b.f6",
+      "type": "decision",
+      "fact": "The team agreed the kiosk will have an RFID pad for stack processing plus a small barcode scanner for libraries still using barcodes.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0305b.s0036",
+        "SY0305b.s0040",
+        "SY0305b.s0041",
+        "SY0305b.s0042",
+        "SY0305b.s0043",
+        "SY0305b.s0044"
+      ]
+    },
+    {
+      "id": "SY0305b.f7",
+      "type": "decision",
+      "fact": "The team agreed there will be no fine payment on the kiosk in this version because a card payment terminal would push the cost over 1,400 euros. Users can view fines but pay at the desk.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0305b.s0067",
+        "SY0305b.s0070",
+        "SY0305b.s0071",
+        "SY0305b.s0072"
+      ]
+    },
+    {
+      "id": "SY0305b.f8",
+      "type": "decision",
+      "fact": "The team agreed the kiosk will use a touchscreen for everything plus a physical keypad for PIN entry only.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0305b.s0088",
+        "SY0305b.s0090",
+        "SY0305b.s0091",
+        "SY0305b.s0092",
+        "SY0305b.s0093",
+        "SY0305b.s0094"
+      ]
+    },
+    {
+      "id": "SY0305b.f9",
+      "type": "unagreed_proposal",
+      "fact": "Kofi (D) again argued for a touchscreen-only kiosk with no buttons, but the team instead chose a touchscreen with a PIN keypad.",
+      "agreed": false,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0305a",
+      "evidence_segments": [
+        "SY0305b.s0078",
+        "SY0305b.s0082"
+      ]
+    },
+    {
+      "id": "SY0305b.f10",
+      "type": "plan_change",
+      "fact": "The touchscreen-only question deferred at the kickoff was resolved in favour of a touchscreen plus a physical PIN keypad, for accessibility.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0305a",
+      "evidence_segments": [
+        "SY0305b.s0077",
+        "SY0305b.s0088",
+        "SY0305b.s0093",
+        "SY0305b.s0094"
+      ]
+    },
+    {
+      "id": "SY0305b.f11",
+      "type": "reference_to_prior_meeting",
+      "fact": "Helen (C) recalled that at the kickoff Kofi had proposed touchscreen only with no buttons and the question was parked until this meeting. She also noted that Tomasz had raised PINs then.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0305a",
+      "evidence_segments": [
+        "SY0305b.s0077",
+        "SY0305b.s0080"
+      ]
+    },
+    {
+      "id": "SY0305b.f12",
+      "type": "reference_to_prior_meeting",
+      "fact": "The team recalled that processing a stack of books at once was agreed as a must at the kickoff, and that RFID versus barcode had been left open there.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0305a",
+      "evidence_segments": [
+        "SY0305b.s0031",
+        "SY0305b.s0034",
+        "SY0305b.s0035"
+      ]
+    },
+    {
+      "id": "SY0305b.f13",
+      "type": "reference_to_prior_meeting",
+      "fact": "Priya (A) confirmed she had received Helen's email with the kickoff notes and her working design assignment.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0305a",
+      "evidence_segments": [
+        "SY0305b.s0008",
+        "SY0305b.s0010",
+        "SY0305b.s0011"
+      ]
+    },
+    {
+      "id": "SY0305b.f14",
+      "type": "other",
+      "fact": "Priya estimated about 1,100 euros for RFID pad, touchscreen, PC board, receipt printer and casing with front panel, about 1,160 with the barcode scanner and about 1,185 with the PIN keypad.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0305b.s0018",
+        "SY0305b.s0020",
+        "SY0305b.s0021",
+        "SY0305b.s0022",
+        "SY0305b.s0024",
+        "SY0305b.s0025",
+        "SY0305b.s0028",
+        "SY0305b.s0032",
+        "SY0305b.s0045",
+        "SY0305b.s0081",
+        "SY0305b.s0095",
+        "SY0305b.s0096"
+      ]
+    },
+    {
+      "id": "SY0305b.f15",
+      "type": "other",
+      "fact": "Tomasz's notes reported that older users at Wilson Street struggle with touchscreens and that competitor kiosks sell for 4,000 to 6,000 euros.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0305b.s0084",
+        "SY0305b.s0085"
+      ]
+    },
+    {
+      "id": "SY0305b.f16",
+      "type": "other",
+      "fact": "Where returned books go after check-in was left open, since a return bin with a sorter would be a separate expensive machine.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0305b.s0055",
+        "SY0305b.s0056",
+        "SY0305b.s0057",
+        "SY0305b.s0058",
+        "SY0305b.s0118"
+      ]
+    },
+    {
+      "id": "SY0305b.f17",
+      "type": "action_item",
+      "fact": "Priya (A) will get firm quotes on all components, including the scanner and keypad, and check the front panel price.",
+      "agreed": null,
+      "related_action_item": "SY0305b.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0305b.s0109",
+        "SY0305b.s0110"
+      ]
+    },
+    {
+      "id": "SY0305b.f18",
+      "type": "action_item",
+      "fact": "Kofi (D) will mock up the borrow and return screens with a large text mode.",
+      "agreed": null,
+      "related_action_item": "SY0305b.ai2",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0305b.s0097",
+        "SY0305b.s0112",
+        "SY0305b.s0113"
+      ]
+    },
+    {
+      "id": "SY0305b.f19",
+      "type": "action_item",
+      "fact": "Helen (C) will send out the minutes.",
+      "agreed": null,
+      "related_action_item": "SY0305b.ai6",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0305b.s0117"
+      ]
+    }
+  ],
+  "edge_cases": [
+    {
+      "scenario_id": "F3_ACTION_REMOVED",
+      "segments": [
+        "SY0305b.s0061",
+        "SY0305b.s0062",
+        "SY0305b.s0063",
+        "SY0305b.s0064",
+        "SY0305b.s0065",
+        "SY0305b.s0066",
+        "SY0305b.s0067",
+        "SY0305b.s0068",
+        "SY0305b.s0069",
+        "SY0305b.s0070",
+        "SY0305b.s0071",
+        "SY0305b.s0072",
+        "SY0305b.s0074",
+        "SY0305b.s0075"
+      ],
+      "note": "Kofi offers to mock up a fine payment screen and Helen accepts. After the payment terminal cost is raised, fine payment is ruled out and Helen explicitly scraps the task."
+    },
+    {
+      "scenario_id": "F3_TASK_TO_ABSENT",
+      "segments": [
+        "SY0305b.s0005",
+        "SY0305b.s0099",
+        "SY0305b.s0101",
+        "SY0305b.s0102",
+        "SY0305b.s0103",
+        "SY0305b.s0105",
+        "SY0305b.s0117"
+      ],
+      "note": "Helen assigns the absent Tomasz, who is at Wilson Street, the research task on barcode share and PIN use, and says she will email him."
+    }
+  ],
+  "provenance": {
+    "generator": "liveminutes-synthetic",
+    "cache_key": "b393628542d2feb0e4e645f8cb3113c144ea2c6c647b86cadd975ba19c071898",
+    "attempt": 0,
+    "model": "claude-opus-5-5",
+    "prompt_version": "v1",
+    "scenario_spec_version": 1,
+    "feature": "F3",
+    "product": "a library self-checkout kiosk",
+    "planned_scenarios": [
+      "F3_ACTION_REMOVED",
+      "F3_TASK_TO_ABSENT"
+    ]
+  }
+}

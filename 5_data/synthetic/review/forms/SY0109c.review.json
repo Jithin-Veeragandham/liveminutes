@@ -1,0 +1,1561 @@
+{
+  "meeting_id": "SY0109c",
+  "raw_sha256": "738c5fe44e1037fdd62a7caf0dc2edf015623c15e25542cb2faa6899ebe573ed",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the conceptual design meeting and explained that the user interface designer was absent all week on an accessibility training course. He confirmed that the minutes and invite had been sent, and the marketing expert confirmed that the survey results and competitor notes were in the shared folder. The industrial designer reported that a dock normally reports a return within ten seconds, but this can take up to about two minutes when mobile signal is poor, notably at the two docks in the underground station car park. To handle this, the team designed a two-stage return confirmation: the phone shows 'bike locked' at once via the dock's Bluetooth lock status, the cost follows when the system confirms, a receipt notification is sent if confirmation is slow, and billing stops at the lock time. On look and feel, the team chose the council's teal as the brand colour, with green and red reserved for status, and a night mode that follows the phone's dark mode setting with an in-app toggle. The marketing expert took over the outdoor readability check from the absent user interface designer, and the next meeting was set for Monday at eleven."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will confirm with the dock supplier that the dock sends its lock status to the phone over Bluetooth.",
+        "The industrial designer will ask the supplier whether the mobile signal at the underground car park docks can be boosted.",
+        "The user interface designer (absent) will add the 'bike locked, confirming' state and the receipt notification to the wireframes.",
+        "The marketing expert will do the outdoor readability check (contrast, text size), taking it over from the user interface designer.",
+        "The marketing expert will chase the council for the final brand guidelines (colours and logo).",
+        "The project manager will send out the minutes, brief the user interface designer on the decisions and ask for her view on the teal shades.",
+        "The project manager will send an invite for the next meeting on Monday at eleven."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The return confirmation has two stages: 'bike locked' is shown immediately based on the dock's Bluetooth lock status, and the cost is shown once the system confirms the return.",
+        "If the system has not confirmed after about thirty seconds, the app tells the rider a receipt will follow and sends a notification when it arrives.",
+        "Rides are billed up to the moment the bike locks, not when the dock's message reaches the system.",
+        "Teal from the council's brand guidelines is the app's brand colour for buttons and headers, and green and red are used only for status. The exact shades are pending the user interface designer's review.",
+        "The high-contrast night mode follows the phone's own dark mode setting, with a manual toggle in the app.",
+        "No sponsor logo will appear on the confirmation screen for the pilot.",
+        "The outdoor readability check is reassigned from the user interface designer to the marketing expert.",
+        "The next meeting (detailed design) will be on Monday at eleven. This replaces the project manager's initial suggestion of Friday at two."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "It is not yet confirmed that the dock sends its lock status to the phone over Bluetooth. The two-stage return confirmation depends on this.",
+        "The mobile signal at the two underground car park docks is poor, so returns there may take up to about two minutes to register.",
+        "The accent colour for the night mode main button (yellow or bright teal on black) is unresolved until the readability check is done.",
+        "The council's brand guidelines are only a draft, and the exact teal shades still need the user interface designer's contrast review."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0109c.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0109c.ai1",
+        "description": "Confirm with the dock supplier that the dock sends its lock status (with lock timestamp) to the phone over Bluetooth",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0109c.s0062",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0109c.s0063",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0109c.s0110",
+            "event": "restated",
+            "by": "D",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0109c.s0027",
+          "SY0109c.s0061",
+          "SY0109c.s0062",
+          "SY0109c.s0063",
+          "SY0109c.s0110"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0109c.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0109c.ai2",
+        "description": "Ask the dock supplier whether the mobile signal at the underground car park docks can be boosted",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0109c.s0063",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0109c.s0110",
+            "event": "restated",
+            "by": "D",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0109c.s0018",
+          "SY0109c.s0063",
+          "SY0109c.s0110"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0109c.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0109c.ai3",
+        "description": "Add the 'bike locked, confirming' pending state and the receipt notification to the wireframes",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0109c.s0070",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0109c.s0112",
+            "event": "restated",
+            "by": "D",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0109c.s0065",
+          "SY0109c.s0069",
+          "SY0109c.s0070",
+          "SY0109c.s0072",
+          "SY0109c.s0112"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0109c.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0109c.ai4",
+        "description": "Check guidance on outdoor readability (contrast, text size) for the colour scheme and high-contrast mode",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "reassigned",
+        "previous_owners": [
+          "B"
+        ],
+        "history": [
+          {
+            "segment": "SY0109c.s0086",
+            "event": "restated",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0109c.s0087",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0109c.s0090",
+            "event": "reassigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0109c.s0111",
+            "event": "restated",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0109c.s0085",
+          "SY0109c.s0086",
+          "SY0109c.s0087",
+          "SY0109c.s0088",
+          "SY0109c.s0090",
+          "SY0109c.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0109c.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0109c.ai5",
+        "description": "Chase the council for the final brand guidelines (colours and logo)",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0109c.s0100",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0109c.s0101",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0109c.s0111",
+            "event": "restated",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0109c.s0099",
+          "SY0109c.s0100",
+          "SY0109c.s0101",
+          "SY0109c.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0109c.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0109c.ai6",
+        "description": "Send out the minutes, brief the absent user interface designer on the decisions and ask for her view on the teal shades",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0109c.s0112",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0109c.s0113",
+            "event": "restated",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0109c.s0009",
+          "SY0109c.s0112",
+          "SY0109c.s0113",
+          "SY0109c.s0114",
+          "SY0109c.s0115"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0109c.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0109c.ai7",
+        "description": "Send an invite for the next meeting (detailed design) on Monday at eleven",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0109c.s0123",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0109c.s0123"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f1",
+        "type": "absence",
+        "fact": "The user interface designer (Priya) was absent all week because she was on an accessibility training course.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109c.s0005",
+          "SY0109c.s0006",
+          "SY0109c.s0007"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recalled that the previous meeting had agreed the return flow ends with a confirmation screen showing that the bike is locked, the ride has ended and what was paid.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0109b",
+        "evidence_segments": [
+          "SY0109c.s0022"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer reported back on his action from the functional design meeting: he had asked the dock supplier how long a dock takes to report a return.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0109b",
+        "evidence_segments": [
+          "SY0109c.s0013",
+          "SY0109c.s0014",
+          "SY0109c.s0015",
+          "SY0109c.s0016"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f4",
+        "type": "reference_to_prior_meeting",
+        "fact": "The team recalled the earlier conclusion that riders won't read the dock's LED colours, so the phone must carry all feedback.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0109b",
+        "evidence_segments": [
+          "SY0109c.s0104",
+          "SY0109c.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f5",
+        "type": "other",
+        "fact": "The project manager confirmed he had sent the minutes and the invite from the previous meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0109b",
+        "evidence_segments": [
+          "SY0109c.s0010"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f6",
+        "type": "other",
+        "fact": "The marketing expert had uploaded the survey results and competitor notes to the shared folder, under research.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0109b",
+        "evidence_segments": [
+          "SY0109c.s0011"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f7",
+        "type": "other",
+        "fact": "The updated wireframes (free slots, price before unlock, QR screen) had been put in the shared folder on Saturday.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0109b",
+        "evidence_segments": [
+          "SY0109c.s0066",
+          "SY0109c.s0067"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f8",
+        "type": "other",
+        "fact": "A dock normally reports a return in under ten seconds, but this can take up to about two minutes when mobile signal is poor.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109c.s0015",
+          "SY0109c.s0016"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f9",
+        "type": "other",
+        "fact": "Two of the fourteen pilot docks are in the underground station car park, where the mobile signal is poor.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109c.s0018"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f10",
+        "type": "decision",
+        "fact": "The return confirmation shows 'bike locked' immediately from the dock's Bluetooth lock status, and the cost once the system confirms.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109c.s0024",
+          "SY0109c.s0025",
+          "SY0109c.s0029",
+          "SY0109c.s0030",
+          "SY0109c.s0059",
+          "SY0109c.s0107"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f11",
+        "type": "decision",
+        "fact": "If the return is not confirmed within about thirty seconds, the app tells the rider a receipt will follow and sends a notification with it.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109c.s0056",
+          "SY0109c.s0057",
+          "SY0109c.s0059",
+          "SY0109c.s0107"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f12",
+        "type": "decision",
+        "fact": "Rides are billed up to the moment the bike locks, not when the system receives the dock's message.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109c.s0048",
+          "SY0109c.s0050",
+          "SY0109c.s0060",
+          "SY0109c.s0107"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f13",
+        "type": "decision",
+        "fact": "Teal is the brand colour for the app's buttons and headers, with green and red used only for status. The exact shades are pending the user interface designer's view.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109c.s0040",
+          "SY0109c.s0041",
+          "SY0109c.s0042",
+          "SY0109c.s0045",
+          "SY0109c.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f14",
+        "type": "decision",
+        "fact": "The night mode follows the phone's dark mode setting, with a manual toggle in the app.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109c.s0079",
+          "SY0109c.s0080",
+          "SY0109c.s0081",
+          "SY0109c.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f15",
+        "type": "unagreed_proposal",
+        "fact": "The industrial designer proposed using the phone's light sensor to switch to high-contrast mode automatically. The project manager found it too fiddly, and the team followed the phone's own setting instead.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109c.s0075",
+          "SY0109c.s0076",
+          "SY0109c.s0077",
+          "SY0109c.s0078",
+          "SY0109c.s0115"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f16",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert proposed a sponsor logo on the confirmation screen. It was parked as not for the pilot.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109c.s0094",
+          "SY0109c.s0095",
+          "SY0109c.s0096",
+          "SY0109c.s0097"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f17",
+        "type": "decision",
+        "fact": "No sponsor logo will appear on the confirmation screen for the pilot.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109c.s0096",
+          "SY0109c.s0109"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f18",
+        "type": "decision",
+        "fact": "The next meeting (detailed design) will be on Monday at eleven.",
+        "agreed": true,
+        "related_action_item": "SY0109c.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109c.s0119",
+          "SY0109c.s0120",
+          "SY0109c.s0121",
+          "SY0109c.s0122",
+          "SY0109c.s0123"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f19",
+        "type": "plan_change",
+        "fact": "The project manager first suggested Friday at two for the next meeting. It was moved to Monday at eleven because the user interface designer's course runs until Friday.",
+        "agreed": null,
+        "related_action_item": "SY0109c.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109c.s0116",
+          "SY0109c.s0117",
+          "SY0109c.s0118",
+          "SY0109c.s0119",
+          "SY0109c.s0120",
+          "SY0109c.s0123"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f20",
+        "type": "action_item",
+        "fact": "The industrial designer will confirm with the supplier that the dock sends its lock status to the phone over Bluetooth.",
+        "agreed": null,
+        "related_action_item": "SY0109c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109c.s0062",
+          "SY0109c.s0063",
+          "SY0109c.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f21",
+        "type": "action_item",
+        "fact": "The industrial designer will ask the supplier whether the signal at the underground car park docks can be boosted.",
+        "agreed": null,
+        "related_action_item": "SY0109c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109c.s0063",
+          "SY0109c.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f22",
+        "type": "action_item",
+        "fact": "The absent user interface designer was given the task of adding the pending 'bike locked, confirming' state and the receipt notification to the wireframes.",
+        "agreed": null,
+        "related_action_item": "SY0109c.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109c.s0070",
+          "SY0109c.s0112"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f23",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f23",
+        "type": "action_item",
+        "fact": "The marketing expert took over the outdoor readability check from the absent user interface designer.",
+        "agreed": null,
+        "related_action_item": "SY0109c.ai4",
+        "refers_to_meeting": "SY0109b",
+        "evidence_segments": [
+          "SY0109c.s0086",
+          "SY0109c.s0087",
+          "SY0109c.s0088",
+          "SY0109c.s0090",
+          "SY0109c.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f24",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f24",
+        "type": "action_item",
+        "fact": "The marketing expert will chase the council for the final brand guidelines.",
+        "agreed": null,
+        "related_action_item": "SY0109c.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109c.s0100",
+          "SY0109c.s0101",
+          "SY0109c.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f25",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f25",
+        "type": "action_item",
+        "fact": "The project manager will send the minutes and brief the user interface designer on the decisions, asking her view on the teal shades.",
+        "agreed": null,
+        "related_action_item": "SY0109c.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109c.s0112",
+          "SY0109c.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109c.f26",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109c.f26",
+        "type": "action_item",
+        "fact": "The project manager will send an invite for Monday at eleven.",
+        "agreed": null,
+        "related_action_item": "SY0109c.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109c.s0123"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_ABSENT_DISCUSSED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_ABSENT_DISCUSSED",
+        "segments": [
+          "SY0109c.s0005",
+          "SY0109c.s0006",
+          "SY0109c.s0007",
+          "SY0109c.s0008",
+          "SY0109c.s0009",
+          "SY0109c.s0043",
+          "SY0109c.s0044",
+          "SY0109c.s0045",
+          "SY0109c.s0065",
+          "SY0109c.s0066",
+          "SY0109c.s0067",
+          "SY0109c.s0069",
+          "SY0109c.s0070",
+          "SY0109c.s0071",
+          "SY0109c.s0072",
+          "SY0109c.s0086",
+          "SY0109c.s0090",
+          "SY0109c.s0091",
+          "SY0109c.s0092",
+          "SY0109c.s0112",
+          "SY0109c.s0113",
+          "SY0109c.s0114",
+          "SY0109c.s0115",
+          "SY0109c.s0117"
+        ],
+        "note": "The others discuss Priya's absence (training course), what she would think about the shades and the wireframes, reassign her readability task and agree on what to tell her. She never speaks."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_INTERLEAVED_TOPICS",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_INTERLEAVED_TOPICS",
+        "segments": [
+          "SY0109c.s0014",
+          "SY0109c.s0022",
+          "SY0109c.s0023",
+          "SY0109c.s0029",
+          "SY0109c.s0030",
+          "SY0109c.s0032",
+          "SY0109c.s0033",
+          "SY0109c.s0034",
+          "SY0109c.s0040",
+          "SY0109c.s0045",
+          "SY0109c.s0046",
+          "SY0109c.s0047",
+          "SY0109c.s0059",
+          "SY0109c.s0060",
+          "SY0109c.s0073",
+          "SY0109c.s0075",
+          "SY0109c.s0079",
+          "SY0109c.s0082",
+          "SY0109c.s0094",
+          "SY0109c.s0102",
+          "SY0109c.s0103",
+          "SY0109c.s0104"
+        ],
+        "note": "Return confirmation timing (14-31, 46-72, 102-105) is interleaved with look and feel and colours (32-45, 73-97)."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,1403 @@
+{
+  "meeting_id": "SY0102b",
+  "raw_sha256": "0f7be4f336c2b0ca3f0eb47ae929f8b177fbcc6e75a1bdaf3f768c02f7cfe58c",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the functional design meeting, welcomed back the industrial designer, and reported on her actions from the kickoff: she had emailed him the slides and action list, and the client had said that unreturned cups are a problem because it wants to present the cups as a sustainability measure; she had not yet put the corporate colours in the shared folder.",
+        "The industrial designer presented his materials research, ruling out stainless steel on cost and melamine-bound bamboo fibre on health and heat grounds, and proposed polypropylene for cup and lid at about one euro eighty per cup including the lid, lasting about five hundred uses and withstanding the cafés' dishwasher temperatures of about sixty degrees wash and eighty-five degrees rinse.",
+        "On the deposit, the marketing expert reported that the largest German scheme charges one euro per cup, that schemes at fifty cents see return rates of about sixty percent and schemes at one euro or more about eighty-five percent, and that returning at any shop helps; the team settled on a deposit of one euro.",
+        "On returns, the user interface designer compared a QR code with an app, a physical token, and using the cup itself as proof of deposit; given the marketing expert's evidence that apps lower uptake and tokens get lost, the team chose to return the cup itself at the counter of any of the forty shops.",
+        "The meeting closed with tasks for the conceptual design meeting, including a sample cup, cup markings, a counter sign, competitor research and a comparison of lid types."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The project manager will put the client's corporate colours in the shared folder today.",
+        "The project manager will check with the client whether it accepts losing about eighty cents on each cup that is not returned at a one-euro deposit.",
+        "The industrial designer will ask the Rotterdam plant for a sample cup and a quote for a matte finish.",
+        "The industrial designer will compare a sip lid and a flip lid, including their costs, for the next meeting.",
+        "The user interface designer will work out the markings on the cup, including logo placement and how users know the cup can be returned.",
+        "The user interface designer will design the counter sign explaining the deposit and return; this was first given to the marketing expert and then moved to the user interface designer.",
+        "The marketing expert will research what competitors' reusable cups look like, including trending colours and shapes."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The cup and lid will both be made of polypropylene.",
+        "The deposit will be one euro per cup, with the project manager checking with the client about the loss on unreturned cups.",
+        "Customers return the cup itself at the counter of any of the client's shops to get the deposit back; there will be no app and no token.",
+        "The counter sign task was moved from the marketing expert to the user interface designer."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "Each unreturned cup costs the client about eighty cents more than the one-euro deposit, and it is not yet known whether the client accepts this.",
+        "Whether to print a QR code on the bottom of the cup so the client can track cups in circulation is left open.",
+        "There is a concern that a polypropylene cup could look cheap; a matte finish is being considered.",
+        "The lid type, sip lid or flip lid, has not been chosen."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0102b.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0102b.ai1",
+        "description": "Put the client's corporate colours in the shared folder (carried over from the kickoff)",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0102b.s0023",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0102b.s0113",
+            "event": "restated",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0102b.s0022",
+          "SY0102b.s0023",
+          "SY0102b.s0104",
+          "SY0102b.s0105",
+          "SY0102b.s0113"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0102b.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0102b.ai2",
+        "description": "Check with the client whether it accepts losing about eighty cents per unreturned cup at a one-euro deposit",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0102b.s0081",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0102b.s0113",
+            "event": "restated",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0102b.s0076",
+          "SY0102b.s0081",
+          "SY0102b.s0113"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0102b.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0102b.ai3",
+        "description": "Get a sample cup from the Rotterdam plant and a quote for a matte finish",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0102b.s0101",
+            "event": "assigned",
+            "by": "C",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0102b.s0102",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0102b.s0048",
+          "SY0102b.s0101",
+          "SY0102b.s0102"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0102b.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0102b.ai4",
+        "description": "Work out the markings on the cup: logo placement and how users know they can return it",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0102b.s0103",
+            "event": "assigned",
+            "by": "C",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0102b.s0104",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0102b.s0103",
+          "SY0102b.s0104"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0102b.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0102b.ai5",
+        "description": "Design the counter sign explaining the deposit and the return",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "reassigned",
+        "previous_owners": [
+          "A"
+        ],
+        "history": [
+          {
+            "segment": "SY0102b.s0107",
+            "event": "assigned",
+            "by": "C",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0102b.s0109",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0102b.s0110",
+            "event": "reassigned",
+            "by": "C",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0102b.s0107",
+          "SY0102b.s0108",
+          "SY0102b.s0109",
+          "SY0102b.s0110"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0102b.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0102b.ai6",
+        "description": "Research what competitors' reusable cups look like, including trending colours and shapes",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0102b.s0111",
+            "event": "proposed",
+            "by": "C",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0102b.s0112",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0102b.s0111",
+          "SY0102b.s0112"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0102b.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0102b.ai7",
+        "description": "Compare a sip lid and a flip lid, including cost, and bring it to the next meeting",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0102b.s0115",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0102b.s0116",
+            "event": "accepted",
+            "by": "C",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0102b.s0115",
+          "SY0102b.s0116",
+          "SY0102b.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f1",
+        "type": "decision",
+        "fact": "The team agreed to make both the cup and the lid of polypropylene.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102b.s0035",
+          "SY0102b.s0038",
+          "SY0102b.s0046",
+          "SY0102b.s0047",
+          "SY0102b.s0049"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f2",
+        "type": "decision",
+        "fact": "The team agreed on a deposit of one euro per cup.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102b.s0074",
+          "SY0102b.s0075",
+          "SY0102b.s0079",
+          "SY0102b.s0080"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f3",
+        "type": "decision",
+        "fact": "Customers return the cup itself at the counter of any of the client's forty shops to get the deposit back, with no app and no token.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102b.s0066",
+          "SY0102b.s0087",
+          "SY0102b.s0089",
+          "SY0102b.s0096",
+          "SY0102b.s0097",
+          "SY0102b.s0098"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f4",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer suggested printing a QR code on the bottom of the cup so the client can count cups in circulation; the project manager and marketing expert were unconvinced and it was left open.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102b.s0091",
+          "SY0102b.s0092",
+          "SY0102b.s0093",
+          "SY0102b.s0094",
+          "SY0102b.s0095",
+          "SY0102b.s0099"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f5",
+        "type": "unagreed_proposal",
+        "fact": "Using a QR code on the cup with an app for returns was presented as an option but not adopted, because the marketing expert's research showed apps lower uptake.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102b.s0064",
+          "SY0102b.s0084",
+          "SY0102b.s0085",
+          "SY0102b.s0087",
+          "SY0102b.s0096"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f6",
+        "type": "unagreed_proposal",
+        "fact": "A physical token such as a plastic coin as proof of deposit was presented as an option but not adopted, because customers lose the tokens.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102b.s0065",
+          "SY0102b.s0067",
+          "SY0102b.s0068",
+          "SY0102b.s0096"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f7",
+        "type": "other",
+        "fact": "Stainless steel was ruled out because it costs well over three euros with a lid, and bamboo fibre was ruled out because it is usually bound with melamine, which can break down with heat.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102b.s0028",
+          "SY0102b.s0030",
+          "SY0102b.s0031",
+          "SY0102b.s0033"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f8",
+        "type": "other",
+        "fact": "The Rotterdam plant quoted about one euro eighty per polypropylene cup including the lid, and the cup lasts about five hundred uses.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102b.s0036",
+          "SY0102b.s0039",
+          "SY0102b.s0041"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f9",
+        "type": "other",
+        "fact": "The client's cafés wash at about sixty degrees and rinse at about eighty-five degrees; polypropylene withstands up to about a hundred degrees.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102b.s0043",
+          "SY0102b.s0044"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f10",
+        "type": "other",
+        "fact": "The largest German deposit scheme charges one euro per cup (the marketing expert first said two euros and corrected herself; the lid is an extra euro).",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102b.s0053",
+          "SY0102b.s0054",
+          "SY0102b.s0055"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f11",
+        "type": "other",
+        "fact": "Schemes with a fifty-cent deposit had return rates of about sixty percent, while schemes at one euro or more had about eighty-five percent; returning at any shop improves returns.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102b.s0057",
+          "SY0102b.s0058",
+          "SY0102b.s0060"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f12",
+        "type": "other",
+        "fact": "At a one-euro deposit, the client loses about eighty cents on each cup that is not returned, since the cup costs about one euro eighty.",
+        "agreed": null,
+        "related_action_item": "SY0102b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102b.s0076",
+          "SY0102b.s0081"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f13",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager reported that the client does mind unreturned cups because it wants to present the scheme as a sustainability measure, answering her action from the kickoff and undercutting the marketing expert's earlier suggestion that unreturned cups were acceptable.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0102a",
+        "evidence_segments": [
+          "SY0102b.s0014",
+          "SY0102b.s0016",
+          "SY0102b.s0017",
+          "SY0102b.s0019",
+          "SY0102b.s0020"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f14",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager confirmed that she emailed the industrial designer the slides and action list after the kickoff, which he had missed because of his Rotterdam supplier visit.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0102a",
+        "evidence_segments": [
+          "SY0102b.s0004",
+          "SY0102b.s0005",
+          "SY0102b.s0012",
+          "SY0102b.s0013"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f15",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert repeated her concern from the kickoff that commuters do not want another app.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0102a",
+        "evidence_segments": [
+          "SY0102b.s0064",
+          "SY0102b.s0084"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f16",
+        "type": "action_item",
+        "fact": "The project manager will put the corporate colours in the shared folder today; this was not done after the kickoff.",
+        "agreed": null,
+        "related_action_item": "SY0102b.ai1",
+        "refers_to_meeting": "SY0102a",
+        "evidence_segments": [
+          "SY0102b.s0022",
+          "SY0102b.s0023",
+          "SY0102b.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f17",
+        "type": "action_item",
+        "fact": "The project manager will check with the client about the loss on unreturned cups at a one-euro deposit.",
+        "agreed": null,
+        "related_action_item": "SY0102b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102b.s0081",
+          "SY0102b.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f18",
+        "type": "action_item",
+        "fact": "The industrial designer will get a sample cup and a matte-finish quote from the Rotterdam plant.",
+        "agreed": null,
+        "related_action_item": "SY0102b.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102b.s0101",
+          "SY0102b.s0102"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f19",
+        "type": "action_item",
+        "fact": "The user interface designer will work out the cup markings, including logo placement and return information.",
+        "agreed": null,
+        "related_action_item": "SY0102b.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102b.s0103",
+          "SY0102b.s0104"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f20",
+        "type": "action_item",
+        "fact": "The user interface designer will design the counter sign explaining the deposit and return.",
+        "agreed": null,
+        "related_action_item": "SY0102b.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102b.s0109",
+          "SY0102b.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f21",
+        "type": "plan_change",
+        "fact": "The counter sign task was first given to the marketing expert and then moved to the user interface designer because it is an interface task.",
+        "agreed": null,
+        "related_action_item": "SY0102b.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102b.s0107",
+          "SY0102b.s0108",
+          "SY0102b.s0109",
+          "SY0102b.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f22",
+        "type": "action_item",
+        "fact": "The marketing expert will research competitors' reusable cup designs, colours and shapes.",
+        "agreed": null,
+        "related_action_item": "SY0102b.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102b.s0111",
+          "SY0102b.s0112"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102b.f23",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102b.f23",
+        "type": "action_item",
+        "fact": "The industrial designer will compare sip and flip lids, including cost, for the next meeting.",
+        "agreed": null,
+        "related_action_item": "SY0102b.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102b.s0115",
+          "SY0102b.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_INTERLEAVED_TOPICS",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_INTERLEAVED_TOPICS",
+        "segments": [
+          "SY0102b.s0052",
+          "SY0102b.s0063",
+          "SY0102b.s0074",
+          "SY0102b.s0087"
+        ],
+        "note": "Deposit amount (52-60) and return mechanism (61-71) alternate: the project manager switches back to the deposit (72-82) and then back to returns (83-99)."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_SELF_CORRECTION",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_SELF_CORRECTION",
+        "segments": [
+          "SY0102b.s0053",
+          "SY0102b.s0054"
+        ],
+        "note": "The marketing expert says the German scheme charges two euros, then corrects herself to one euro per cup in her next turn; the summary uses one euro."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,1517 @@
+{
+  "schema_version": "1.0",
+  "source": "synthetic",
+  "meeting_id": "SY0304b",
+  "series_id": "SY0304",
+  "meeting_letter": "b",
+  "scenario_type": "scenario",
+  "stage": "functional design",
+  "duration_sec": 510.91,
+  "participants": [
+    {
+      "label": "A",
+      "role": "ME",
+      "name": "Priya",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "B",
+      "role": "UI",
+      "name": "Tom",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "C",
+      "role": "PM",
+      "name": "Hannah",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "D",
+      "role": "ID",
+      "name": "Marcus",
+      "global_id": null,
+      "status": "present"
+    }
+  ],
+  "segments": [
+    {
+      "id": "SY0304b.s0001",
+      "speaker": "C",
+      "start": 5.0,
+      "end": 7.69,
+      "text": "Okay, um, so everyone's here this time.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0304b.s0002",
+      "speaker": "C",
+      "start": 8.64,
+      "end": 11.33,
+      "text": "Marcus, welcome, you missed the first one.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0003",
+      "speaker": "D",
+      "start": 12.06,
+      "end": 17.44,
+      "text": "Yeah, sorry about that, I was at the supplier thing for the other project.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0004",
+      "speaker": "C",
+      "start": 18.09,
+      "end": 18.86,
+      "text": "No worries.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0304b.s0005",
+      "speaker": "C",
+      "start": 19.15,
+      "end": 24.53,
+      "text": "So I did email you the brief and the minutes, hopefully you got those.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0006",
+      "speaker": "D",
+      "start": 25.14,
+      "end": 28.99,
+      "text": "Yeah, got them, and your note about the sensing stuff.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0007",
+      "speaker": "C",
+      "start": 29.82,
+      "end": 32.9,
+      "text": "Great. So this is the functional design meeting.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0008",
+      "speaker": "C",
+      "start": 33.26,
+      "end": 41.72,
+      "text": "Plan is, uh, each of you presents what you looked at, then we try and pin down what the thing actually does.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0009",
+      "speaker": "C",
+      "start": 42.66,
+      "end": 44.58,
+      "text": "Who wants to go first?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0304b.s0010",
+      "speaker": "A",
+      "start": 45.19,
+      "end": 47.11,
+      "text": "I can go, mine's quick-ish.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0304b.s0011",
+      "speaker": "C",
+      "start": 47.78,
+      "end": 48.93,
+      "text": "Go for it.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0304b.s0012",
+      "speaker": "A",
+      "start": 49.2,
+      "end": 54.2,
+      "text": "So I did the survey, um, I got twenty-four people in the end.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0013",
+      "speaker": "A",
+      "start": 55.02,
+      "end": 58.87,
+      "text": "Fourteen students, eight staff, and only two visitors, which, yeah.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0014",
+      "speaker": "B",
+      "start": 59.38,
+      "end": 60.15,
+      "text": "Only two?",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0304b.s0015",
+      "speaker": "A",
+      "start": 60.67,
+      "end": 66.05,
+      "text": "It's hard to find visitors, they don't hang about, they just park and go.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0016",
+      "speaker": "A",
+      "start": 66.67,
+      "end": 73.21,
+      "text": "But the main thing people said was they want to see the number before they turn in.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0017",
+      "speaker": "A",
+      "start": 73.6,
+      "end": 78.6,
+      "text": "Like from the road, so it has to be readable from a distance.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0018",
+      "speaker": "C",
+      "start": 78.84,
+      "end": 79.24,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0304b.s0019",
+      "speaker": "A",
+      "start": 79.74,
+      "end": 85.12,
+      "text": "And loads of people, like more than half, asked if there'd be an app.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0020",
+      "speaker": "C",
+      "start": 85.43,
+      "end": 90.43,
+      "text": "Right, we said last time the app's a later thing, physical signs first.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0021",
+      "speaker": "A",
+      "start": 90.93,
+      "end": 95.16,
+      "text": "Yeah, I know, I'm just saying it came up a lot.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0304b.s0022",
+      "speaker": "A",
+      "start": 95.98,
+      "end": 100.98,
+      "text": "Oh, and the colour thing went down well, people liked green amber red.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0023",
+      "speaker": "B",
+      "start": 101.33,
+      "end": 101.73,
+      "text": "Nice.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0304b.s0024",
+      "speaker": "C",
+      "start": 102.55,
+      "end": 104.86,
+      "text": "Anything on what people didn't want?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0304b.s0025",
+      "speaker": "A",
+      "start": 105.34,
+      "end": 110.34,
+      "text": "Um, a couple of staff said no adverts, don't stick adverts on it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0026",
+      "speaker": "C",
+      "start": 110.53,
+      "end": 111.3,
+      "text": "Okay, fair.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0304b.s0027",
+      "speaker": "C",
+      "start": 111.73,
+      "end": 117.11,
+      "text": "Marcus, do you want to do sensing next, because a lot hangs on it.",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0304b.s0028",
+      "speaker": "D",
+      "start": 117.41,
+      "end": 118.18,
+      "text": "Yeah, sure.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0304b.s0029",
+      "speaker": "D",
+      "start": 118.35,
+      "end": 121.43,
+      "text": "So there's basically two options, like you said.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0030",
+      "speaker": "D",
+      "start": 121.83,
+      "end": 129.14,
+      "text": "Barrier counters, which is a loop in the road at the entrance and exit, counts cars in and out.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0031",
+      "speaker": "D",
+      "start": 129.9,
+      "end": 132.98,
+      "text": "That's about seventy quid per entrance, so cheap.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0032",
+      "speaker": "D",
+      "start": 133.44,
+      "end": 139.98,
+      "text": "But yeah, the drift thing is real, if someone tailgates through the barrier it misses a car.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0033",
+      "speaker": "B",
+      "start": 140.45,
+      "end": 142.76,
+      "text": "How bad is the drift though?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0304b.s0034",
+      "speaker": "D",
+      "start": 143.74,
+      "end": 151.05,
+      "text": "Supplier reckoned a few cars a day, so over a week it could be off by twenty or thirty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0035",
+      "speaker": "B",
+      "start": 151.39,
+      "end": 153.31,
+      "text": "Oh, that's quite a lot.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0304b.s0036",
+      "speaker": "D",
+      "start": 153.78,
+      "end": 158.4,
+      "text": "Unless you reset it, like overnight when the car park's basically empty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0037",
+      "speaker": "D",
+      "start": 158.72,
+      "end": 163.72,
+      "text": "Then per-bay sensors, one in every bay, those are about thirty pounds each.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0038",
+      "speaker": "C",
+      "start": 164.01,
+      "end": 164.78,
+      "text": "Each bay?",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0304b.s0039",
+      "speaker": "D",
+      "start": 165.51,
+      "end": 172.43,
+      "text": "Each bay, yeah, so the library car park is a hundred and eighty bays, that's over five grand.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0040",
+      "speaker": "A",
+      "start": 173.17,
+      "end": 174.71,
+      "text": "Oh, that's way over.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0304b.s0041",
+      "speaker": "C",
+      "start": 175.36,
+      "end": 178.82,
+      "text": "Yeah, that blows the four hundred out the water.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0304b.s0042",
+      "speaker": "C",
+      "start": 179.71,
+      "end": 182.02,
+      "text": "Um, okay, so, before we decide—",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0304b.s0043",
+      "speaker": "C",
+      "start": 182.18,
+      "end": 191.03,
+      "text": "Marcus, could you get a proper quote on the per-bay ones for just the library car park, so we've got an actual number?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0304b.s0044",
+      "speaker": "D",
+      "start": 191.27,
+      "end": 195.89,
+      "text": "Yeah, I can ask the supplier, they owe me an email anyway.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0304b.s0045",
+      "speaker": "C",
+      "start": 196.37,
+      "end": 196.77,
+      "text": "Cool.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0304b.s0046",
+      "speaker": "D",
+      "start": 197.0,
+      "end": 202.77,
+      "text": "On casing, the outdoor stuff, you want something rated IP sixty-five, that's dust and rain.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0047",
+      "speaker": "D",
+      "start": 203.74,
+      "end": 208.36,
+      "text": "Those are maybe eighty quid for a box the size we'd need.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0048",
+      "speaker": "B",
+      "start": 209.3,
+      "end": 211.22,
+      "text": "What size were you thinking?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0304b.s0049",
+      "speaker": "D",
+      "start": 211.39,
+      "end": 217.54,
+      "text": "Well, that's kind of your bit, but anything up to about sixty centimetres wide is fine.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0050",
+      "speaker": "B",
+      "start": 217.98,
+      "end": 218.38,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0304b.s0051",
+      "speaker": "C",
+      "start": 218.75,
+      "end": 222.21,
+      "text": "Tom, do you want to show the layouts then?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0304b.s0052",
+      "speaker": "B",
+      "start": 222.64,
+      "end": 227.64,
+      "text": "Yeah, so I did three layouts, in a small and a big size.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0053",
+      "speaker": "B",
+      "start": 228.32,
+      "end": 232.94,
+      "text": "The small one's like thirty centimetres across, the big one's about sixty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0054",
+      "speaker": "B",
+      "start": 233.55,
+      "end": 240.09,
+      "text": "And all three have the number in the middle with the colour behind it, like we said.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0055",
+      "speaker": "B",
+      "start": 240.87,
+      "end": 247.41,
+      "text": "One has the car park name on top, one has an arrow, one is just the number.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0056",
+      "speaker": "A",
+      "start": 248.17,
+      "end": 253.17,
+      "text": "I like the one with the name, because some entrances are close together.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0304b.s0057",
+      "speaker": "D",
+      "start": 253.83,
+      "end": 258.45,
+      "text": "From the road I reckon the thirty centimetre one is too small.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0304b.s0058",
+      "speaker": "B",
+      "start": 259.36,
+      "end": 264.74,
+      "text": "Yeah, honestly, I think it is, you can't read it past about twenty metres.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0304b.s0059",
+      "speaker": "D",
+      "start": 265.48,
+      "end": 272.4,
+      "text": "And I'd say do it as an LED number, not a proper screen, LCDs are awful in sunlight.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0304b.s0060",
+      "speaker": "B",
+      "start": 273.19,
+      "end": 276.65,
+      "text": "Oh, yeah, that'd look like the petrol station signs.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0304b.s0061",
+      "speaker": "D",
+      "start": 277.21,
+      "end": 281.83,
+      "text": "Exactly, and they're cheaper, the LED panel's about a hundred and fifty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0062",
+      "speaker": "C",
+      "start": 282.78,
+      "end": 287.01,
+      "text": "So, big size, LED, name on top, everyone happy with that?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0304b.s0063",
+      "speaker": "A",
+      "start": 287.24,
+      "end": 287.64,
+      "text": "Yeah.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0304b.s0064",
+      "speaker": "B",
+      "start": 288.15,
+      "end": 288.55,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0304b.s0065",
+      "speaker": "D",
+      "start": 288.98,
+      "end": 290.13,
+      "text": "Fine by me.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0304b.s0066",
+      "speaker": "C",
+      "start": 290.98,
+      "end": 292.52,
+      "text": "Okay, so that's decided.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0067",
+      "speaker": "B",
+      "start": 293.14,
+      "end": 300.06,
+      "text": "And then the colours, I've put green above twenty free, amber twenty or under, red five or under.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0068",
+      "speaker": "C",
+      "start": 300.23,
+      "end": 302.15,
+      "text": "Does that work for everyone?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0304b.s0069",
+      "speaker": "A",
+      "start": 302.53,
+      "end": 307.15,
+      "text": "Yeah, five feels right for red, you'd not bother at that point.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0304b.s0070",
+      "speaker": "D",
+      "start": 307.51,
+      "end": 308.28,
+      "text": "Yeah, fine.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0304b.s0071",
+      "speaker": "C",
+      "start": 308.9,
+      "end": 310.44,
+      "text": "Great, thresholds agreed then.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0072",
+      "speaker": "B",
+      "start": 311.24,
+      "end": 319.32,
+      "text": "Right, so we're doing it flashing when it drops under ten as well, that's settled, I've put it in the sketches.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0073",
+      "speaker": "D",
+      "start": 319.5,
+      "end": 321.81,
+      "text": "I'm not sure the council would—",
+      "da_type": "fra"
+    },
+    {
+      "id": "SY0304b.s0074",
+      "speaker": "C",
+      "start": 322.73,
+      "end": 323.88,
+      "text": "Um, let's, uh—",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0304b.s0075",
+      "speaker": "C",
+      "start": 324.52,
+      "end": 328.75,
+      "text": "Let's do power, actually, because that was left hanging last time.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0304b.s0076",
+      "speaker": "C",
+      "start": 329.47,
+      "end": 334.47,
+      "text": "Priya, you said solar in the first meeting but we never agreed it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0077",
+      "speaker": "A",
+      "start": 334.63,
+      "end": 338.48,
+      "text": "Yeah, I still think solar's the obvious one for outdoor.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0078",
+      "speaker": "B",
+      "start": 339.46,
+      "end": 345.61,
+      "text": "Right, but this is what I was trying to say, the library car parks are underground.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0079",
+      "speaker": "B",
+      "start": 346.53,
+      "end": 349.22,
+      "text": "There's no sun down there at all.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0080",
+      "speaker": "A",
+      "start": 349.53,
+      "end": 351.07,
+      "text": "Oh. Yeah, okay, fair.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0304b.s0081",
+      "speaker": "D",
+      "start": 351.95,
+      "end": 357.33,
+      "text": "And actually the barriers already have mains power, they need it for the arm.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0082",
+      "speaker": "D",
+      "start": 358.24,
+      "end": 363.24,
+      "text": "So we just take power off the barrier supply, no batteries, no panels.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0304b.s0083",
+      "speaker": "C",
+      "start": 363.79,
+      "end": 366.1,
+      "text": "Priya, are you okay with that?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0304b.s0084",
+      "speaker": "A",
+      "start": 366.38,
+      "end": 369.84,
+      "text": "Yeah, no, that makes sense, if it's already there.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0304b.s0085",
+      "speaker": "B",
+      "start": 370.11,
+      "end": 370.88,
+      "text": "Much simpler.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0304b.s0086",
+      "speaker": "C",
+      "start": 371.06,
+      "end": 374.52,
+      "text": "Okay, so mains from the barrier supply, that's agreed.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0087",
+      "speaker": "C",
+      "start": 375.46,
+      "end": 382.0,
+      "text": "And then that ties in with sensing really, because the counter loop sits right at the barrier.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0088",
+      "speaker": "D",
+      "start": 382.6,
+      "end": 386.83,
+      "text": "Yeah, honestly I'd go barrier counters with a reset every night.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0304b.s0089",
+      "speaker": "D",
+      "start": 387.64,
+      "end": 392.64,
+      "text": "Like at three a.m. it zeroes against the car park being basically empty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0090",
+      "speaker": "A",
+      "start": 393.12,
+      "end": 396.2,
+      "text": "What about the staff who park overnight though?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0304b.s0091",
+      "speaker": "D",
+      "start": 396.48,
+      "end": 401.48,
+      "text": "The attendant can enter a correction, it's just a button on the controller.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0092",
+      "speaker": "C",
+      "start": 402.21,
+      "end": 406.06,
+      "text": "Everyone okay going with barrier counters and the nightly reset?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0304b.s0093",
+      "speaker": "B",
+      "start": 406.21,
+      "end": 406.61,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0304b.s0094",
+      "speaker": "A",
+      "start": 407.19,
+      "end": 407.59,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0304b.s0095",
+      "speaker": "C",
+      "start": 408.25,
+      "end": 410.56,
+      "text": "Great, so barrier counters it is.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0096",
+      "speaker": "C",
+      "start": 411.36,
+      "end": 415.59,
+      "text": "Which means, Marcus, forget that per-bay quote, there's no point now.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0097",
+      "speaker": "D",
+      "start": 416.0,
+      "end": 417.92,
+      "text": "Yeah, I'll not bother then.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0304b.s0098",
+      "speaker": "C",
+      "start": 418.92,
+      "end": 420.84,
+      "text": "Yeah, cross that one off.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0099",
+      "speaker": "A",
+      "start": 421.26,
+      "end": 424.72,
+      "text": "So what does that come to per sign, roughly?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0304b.s0100",
+      "speaker": "D",
+      "start": 424.93,
+      "end": 429.93,
+      "text": "LED panel one fifty, casing eighty, counter seventy, controller about fifty, so three-fifty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0101",
+      "speaker": "D",
+      "start": 430.22,
+      "end": 435.22,
+      "text": "Plus mounting, maybe another fifty or so, so we're right around four hundred.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0102",
+      "speaker": "C",
+      "start": 435.65,
+      "end": 436.8,
+      "text": "Tight, but okay.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0304b.s0103",
+      "speaker": "C",
+      "start": 437.47,
+      "end": 440.16,
+      "text": "Um, central sign by the main gate.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0304b.s0104",
+      "speaker": "C",
+      "start": 440.42,
+      "end": 442.73,
+      "text": "Do we want it or not?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0304b.s0105",
+      "speaker": "A",
+      "start": 443.09,
+      "end": 448.86,
+      "text": "I think visitors would like it, they don't know which car park to go to.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0304b.s0106",
+      "speaker": "D",
+      "start": 449.68,
+      "end": 455.83,
+      "text": "But it'd need data from every car park, so cabling or some kind of wireless link.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0304b.s0107",
+      "speaker": "B",
+      "start": 456.3,
+      "end": 458.61,
+      "text": "That's a whole different thing really.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0304b.s0108",
+      "speaker": "C",
+      "start": 459.11,
+      "end": 464.88,
+      "text": "I'll ask the estates office whether they actually want it and if there's separate budget.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0304b.s0109",
+      "speaker": "A",
+      "start": 465.29,
+      "end": 465.69,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0304b.s0110",
+      "speaker": "C",
+      "start": 466.53,
+      "end": 467.68,
+      "text": "Right, actions then.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0304b.s0111",
+      "speaker": "C",
+      "start": 468.23,
+      "end": 474.77,
+      "text": "Marcus, can you check the mains connection at each barrier with estates, and spec the casing properly?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0304b.s0112",
+      "speaker": "D",
+      "start": 475.46,
+      "end": 477.0,
+      "text": "Yeah, I'll do that.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0304b.s0113",
+      "speaker": "C",
+      "start": 477.88,
+      "end": 483.26,
+      "text": "Tom, final layout at sixty centimetres, LED, name on top, with the colour thresholds.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0304b.s0114",
+      "speaker": "B",
+      "start": 483.86,
+      "end": 485.01,
+      "text": "Yep, will do.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0304b.s0115",
+      "speaker": "C",
+      "start": 486.0,
+      "end": 491.38,
+      "text": "Priya, could you try and get a few more visitors? Two's not really enough.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0304b.s0116",
+      "speaker": "A",
+      "start": 491.83,
+      "end": 496.83,
+      "text": "Yeah, there's an open day next week, I'll stand by the main gate.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0304b.s0117",
+      "speaker": "C",
+      "start": 497.28,
+      "end": 497.68,
+      "text": "Perfect.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0304b.s0118",
+      "speaker": "C",
+      "start": 498.64,
+      "end": 503.64,
+      "text": "And I'll send the minutes round, and chase estates on the central sign.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0119",
+      "speaker": "C",
+      "start": 504.52,
+      "end": 507.21,
+      "text": "Okay, I think that's it, thanks everyone.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0304b.s0120",
+      "speaker": "D",
+      "start": 507.51,
+      "end": 507.91,
+      "text": "Cheers.",
+      "da_type": "bck"
+    }
+  ],
+  "summary": {
+    "abstract": [
+      "The project manager opened the functional design meeting with all four members present. She welcomed the industrial designer, who had missed the kickoff, and confirmed she had emailed him the brief and minutes.",
+      "The marketing expert reported survey results from twenty-four people (fourteen students, eight staff, two visitors). Users want to read the number from the road before turning in, liked the colour coding, did not want adverts, and often asked for an app, which remains a later idea.",
+      "The industrial designer compared barrier counters (about seventy pounds per entrance, but prone to drift from tailgating) with per-bay sensors (about thirty pounds per bay, over five thousand pounds for the library car park). He also recommended an IP65 outdoor casing and an LED number panel instead of an LCD screen.",
+      "The user interface designer presented three layouts in two sizes. The team chose the larger sixty-centimetre LED display with the car park name on top and agreed the colour thresholds. They settled power on mains from the barrier supply, because the underground library car parks get no sun, and chose barrier counters with a nightly reset. This made the per-bay sensor quote the project manager had requested earlier in the meeting unnecessary, so it was cancelled.",
+      "The estimated cost per sign is around four hundred pounds. The central sign near the main gate is still undecided pending input from the estates office."
+    ],
+    "actions": [
+      "The industrial designer will check the mains connection at each barrier with the estates office and specify the casing properly.",
+      "The user interface designer will produce the final layout at sixty centimetres, LED, with the car park name on top and the agreed colour thresholds.",
+      "The marketing expert will survey more visitors at the main gate during next week's open day.",
+      "The project manager will ask the estates office whether they want the central sign near the main gate and whether there is separate budget for it.",
+      "The project manager will send the minutes round."
+    ],
+    "decisions": [
+      "The display will be the larger size, about sixty centimetres wide.",
+      "The number will be shown on an LED number panel rather than an LCD screen.",
+      "The car park name will appear on top of the number.",
+      "Colour thresholds: green above twenty free spaces, amber at twenty or fewer, red at five or fewer.",
+      "The signs will run on mains power taken from the existing barrier supply, not solar.",
+      "Sensing will use barrier counters with a nightly reset, and the attendant can enter a correction."
+    ],
+    "problems": [
+      "Making the number flash below ten free spaces was stated as settled by the user interface designer, but nobody agreed and the point was left unresolved.",
+      "The estimated cost of about four hundred pounds per sign leaves no margin in the budget.",
+      "Barrier counters can still drift during the day because of tailgating, which the nightly reset only partly addresses.",
+      "It is undecided whether the central sign near the main gate will be included. It would need data from every car park via cabling or a wireless link.",
+      "Visitors are under-represented in the survey, with only two respondents.",
+      "Many users asked for an app, which remains out of scope for now."
+    ]
+  },
+  "action_items": [
+    {
+      "id": "SY0304b.ai1",
+      "description": "Get a proper quote from the supplier for per-bay sensors for the library car park",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "dropped",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0304b.s0043",
+          "event": "assigned",
+          "by": "C",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0304b.s0044",
+          "event": "accepted",
+          "by": "D",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0304b.s0096",
+          "event": "dropped",
+          "by": "C",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0304b.s0043",
+        "SY0304b.s0044",
+        "SY0304b.s0096",
+        "SY0304b.s0097",
+        "SY0304b.s0098"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0304b.ai2",
+      "description": "Check the mains connection at each barrier with the estates office and specify the outdoor casing properly",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0304b.s0111",
+          "event": "assigned",
+          "by": "C",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0304b.s0112",
+          "event": "accepted",
+          "by": "D",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0304b.s0111",
+        "SY0304b.s0112"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0304b.ai3",
+      "description": "Produce the final layout at sixty centimetres, LED, with the car park name on top and the agreed colour thresholds",
+      "owner": "B",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0304b.s0113",
+          "event": "assigned",
+          "by": "C",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0304b.s0114",
+          "event": "accepted",
+          "by": "B",
+          "owner": "B"
+        }
+      ],
+      "evidence_segments": [
+        "SY0304b.s0113",
+        "SY0304b.s0114"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0304b.ai4",
+      "description": "Survey more visitors by standing at the main gate during next week's open day",
+      "owner": "A",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0304b.s0115",
+          "event": "assigned",
+          "by": "C",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0304b.s0116",
+          "event": "accepted",
+          "by": "A",
+          "owner": "A"
+        }
+      ],
+      "evidence_segments": [
+        "SY0304b.s0115",
+        "SY0304b.s0116"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0304b.ai5",
+      "description": "Ask the estates office whether they want the central sign near the main gate and whether there is separate budget for it",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0304b.s0108",
+          "event": "offered",
+          "by": "C",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0304b.s0118",
+          "event": "restated",
+          "by": "C",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0304b.s0108",
+        "SY0304b.s0118"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0304b.ai6",
+      "description": "Send the minutes round to the team",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0304b.s0118",
+          "event": "offered",
+          "by": "C",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0304b.s0118"
+      ],
+      "owner_source": "gold"
+    }
+  ],
+  "qa_facts": [
+    {
+      "id": "SY0304b.f1",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager noted that the industrial designer had missed the first meeting, and he explained he had been at a supplier visit for another project.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0304a",
+      "evidence_segments": [
+        "SY0304b.s0002",
+        "SY0304b.s0003"
+      ]
+    },
+    {
+      "id": "SY0304b.f2",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager confirmed she had emailed the industrial designer the brief and minutes, following up her action from the kickoff, and he confirmed receiving them.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0304a",
+      "evidence_segments": [
+        "SY0304b.s0005",
+        "SY0304b.s0006"
+      ]
+    },
+    {
+      "id": "SY0304b.f3",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager recalled that the team had agreed in the kickoff that an app is a later idea and physical signs come first.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0304a",
+      "evidence_segments": [
+        "SY0304b.s0019",
+        "SY0304b.s0020",
+        "SY0304b.s0021"
+      ]
+    },
+    {
+      "id": "SY0304b.f4",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager reopened the power question, noting the marketing expert had proposed solar in the first meeting but it was never agreed.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0304a",
+      "evidence_segments": [
+        "SY0304b.s0075",
+        "SY0304b.s0076",
+        "SY0304b.s0077"
+      ]
+    },
+    {
+      "id": "SY0304b.f5",
+      "type": "other",
+      "fact": "The marketing expert surveyed twenty-four people: fourteen students, eight staff and two visitors. They wanted the number readable from the road, liked the colour coding, did not want adverts, and often asked for an app.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0304b.s0012",
+        "SY0304b.s0013",
+        "SY0304b.s0016",
+        "SY0304b.s0017",
+        "SY0304b.s0019",
+        "SY0304b.s0022",
+        "SY0304b.s0025"
+      ]
+    },
+    {
+      "id": "SY0304b.f6",
+      "type": "other",
+      "fact": "Barrier counters cost about seventy pounds per entrance but drift with tailgating. Per-bay sensors cost about thirty pounds per bay, over five thousand pounds for the hundred-and-eighty-bay library car park.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0304b.s0030",
+        "SY0304b.s0031",
+        "SY0304b.s0032",
+        "SY0304b.s0034",
+        "SY0304b.s0037",
+        "SY0304b.s0039"
+      ]
+    },
+    {
+      "id": "SY0304b.f7",
+      "type": "decision",
+      "fact": "The team agreed on the larger sixty-centimetre display using an LED number panel, with the car park name on top.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0304b.s0057",
+        "SY0304b.s0058",
+        "SY0304b.s0059",
+        "SY0304b.s0062",
+        "SY0304b.s0063",
+        "SY0304b.s0064",
+        "SY0304b.s0065",
+        "SY0304b.s0066"
+      ]
+    },
+    {
+      "id": "SY0304b.f8",
+      "type": "decision",
+      "fact": "The team agreed the colour thresholds: green above twenty free spaces, amber at twenty or fewer, red at five or fewer.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0304b.s0067",
+        "SY0304b.s0068",
+        "SY0304b.s0069",
+        "SY0304b.s0070",
+        "SY0304b.s0071"
+      ]
+    },
+    {
+      "id": "SY0304b.f9",
+      "type": "unagreed_proposal",
+      "fact": "The user interface designer stated that the number would flash below ten free spaces and called it settled, but nobody agreed. The industrial designer began to object and the project manager moved on to power.",
+      "agreed": false,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0304b.s0072",
+        "SY0304b.s0073",
+        "SY0304b.s0074",
+        "SY0304b.s0075"
+      ]
+    },
+    {
+      "id": "SY0304b.f10",
+      "type": "decision",
+      "fact": "The team agreed the signs will be powered from the mains supply already at the barriers rather than by solar, because the underground library car parks get no sun.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0304b.s0078",
+        "SY0304b.s0079",
+        "SY0304b.s0081",
+        "SY0304b.s0082",
+        "SY0304b.s0083",
+        "SY0304b.s0084",
+        "SY0304b.s0085",
+        "SY0304b.s0086"
+      ]
+    },
+    {
+      "id": "SY0304b.f11",
+      "type": "decision",
+      "fact": "The team agreed to use barrier counters with a nightly reset at three a.m., and the attendant can enter a correction.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0304b.s0088",
+        "SY0304b.s0089",
+        "SY0304b.s0091",
+        "SY0304b.s0092",
+        "SY0304b.s0093",
+        "SY0304b.s0094",
+        "SY0304b.s0095"
+      ]
+    },
+    {
+      "id": "SY0304b.f12",
+      "type": "action_item",
+      "fact": "The project manager asked the industrial designer to get a quote for per-bay sensors for the library car park, and he agreed.",
+      "agreed": null,
+      "related_action_item": "SY0304b.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0304b.s0043",
+        "SY0304b.s0044"
+      ]
+    },
+    {
+      "id": "SY0304b.f13",
+      "type": "action_item_removed",
+      "fact": "The per-bay sensor quote was cancelled by the project manager after the team chose barrier counters.",
+      "agreed": null,
+      "related_action_item": "SY0304b.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0304b.s0096",
+        "SY0304b.s0097",
+        "SY0304b.s0098"
+      ]
+    },
+    {
+      "id": "SY0304b.f14",
+      "type": "other",
+      "fact": "The industrial designer estimated about four hundred pounds per sign: LED panel one hundred and fifty, casing eighty, counter seventy, controller fifty, and about fifty for mounting.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0304b.s0100",
+        "SY0304b.s0101",
+        "SY0304b.s0102"
+      ]
+    },
+    {
+      "id": "SY0304b.f15",
+      "type": "other",
+      "fact": "Whether to include the central sign near the main gate was left undecided pending the estates office.",
+      "agreed": null,
+      "related_action_item": "SY0304b.ai5",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0304b.s0103",
+        "SY0304b.s0104",
+        "SY0304b.s0105",
+        "SY0304b.s0106",
+        "SY0304b.s0107",
+        "SY0304b.s0108"
+      ]
+    },
+    {
+      "id": "SY0304b.f16",
+      "type": "action_item",
+      "fact": "The industrial designer will check the mains connection at each barrier with the estates office and specify the casing.",
+      "agreed": null,
+      "related_action_item": "SY0304b.ai2",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0304b.s0111",
+        "SY0304b.s0112"
+      ]
+    },
+    {
+      "id": "SY0304b.f17",
+      "type": "action_item",
+      "fact": "The user interface designer will produce the final sixty-centimetre LED layout with the name on top and the colour thresholds.",
+      "agreed": null,
+      "related_action_item": "SY0304b.ai3",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0304b.s0113",
+        "SY0304b.s0114"
+      ]
+    },
+    {
+      "id": "SY0304b.f18",
+      "type": "action_item",
+      "fact": "The marketing expert will survey more visitors at the main gate during next week's open day.",
+      "agreed": null,
+      "related_action_item": "SY0304b.ai4",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0304b.s0115",
+        "SY0304b.s0116"
+      ]
+    },
+    {
+      "id": "SY0304b.f19",
+      "type": "action_item",
+      "fact": "The project manager will ask the estates office about the central sign and its budget.",
+      "agreed": null,
+      "related_action_item": "SY0304b.ai5",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0304b.s0108",
+        "SY0304b.s0118"
+      ]
+    },
+    {
+      "id": "SY0304b.f20",
+      "type": "action_item",
+      "fact": "The project manager will send the minutes round.",
+      "agreed": null,
+      "related_action_item": "SY0304b.ai6",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0304b.s0118"
+      ]
+    }
+  ],
+  "edge_cases": [
+    {
+      "scenario_id": "F3_ACTION_REMOVED",
+      "segments": [
+        "SY0304b.s0043",
+        "SY0304b.s0044",
+        "SY0304b.s0096",
+        "SY0304b.s0097",
+        "SY0304b.s0098"
+      ],
+      "note": "The project manager assigns the industrial designer a per-bay sensor quote, then cancels it once the team chooses barrier counters."
+    },
+    {
+      "scenario_id": "F3_UNAGREED_DECISION",
+      "segments": [
+        "SY0304b.s0072",
+        "SY0304b.s0073",
+        "SY0304b.s0074",
+        "SY0304b.s0075"
+      ],
+      "note": "The user interface designer declares flashing below ten spaces settled. The industrial designer starts to object, nobody agrees, and the project manager moves on to power."
+    }
+  ],
+  "provenance": {
+    "generator": "liveminutes-synthetic",
+    "cache_key": "1d3a911d7bd8bc33c62e2a0f4a5a7884cf6d88ae6b0c5088d6aca59bfefdfa36",
+    "attempt": 0,
+    "model": "claude-opus-5-5",
+    "prompt_version": "v1",
+    "scenario_spec_version": 1,
+    "feature": "F3",
+    "product": "a campus parking availability display",
+    "planned_scenarios": [
+      "F3_ACTION_REMOVED",
+      "F3_UNAGREED_DECISION"
+    ]
+  }
+}

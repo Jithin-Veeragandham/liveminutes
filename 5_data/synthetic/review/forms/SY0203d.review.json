@@ -1,0 +1,1151 @@
+{
+  "meeting_id": "SY0203d",
+  "raw_sha256": "fc800b2ea3ac4f6ca3dae36cf0f3c82a0d0897916f8220c6e76d61953891d014",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting, noted that the user interface designer was absent on a training course, and recapped the conceptual design meeting: an EVA foam body, a one-piece moulded handle with no stand, raised bumper corners and a bright two-tone design, with the logo question left for this meeting.",
+        "The industrial designer presented a mock-up built from the supplier's foam offcuts using the user interface designer's updated layout with bumper corners. It was light, survived informal drop tests, and had a handle sized for a child's hand, but the camera cutout was about two millimetres too tight.",
+        "The marketing expert presented three colour combinations, and the team chose a blue body with an orange handle and corners. The team agreed on a small logo embossed into the foam on the back, with nothing printed or stuck on.",
+        "The industrial designer presented the final cost breakdown, corrected from 12.50 to 11.50 euros per unit excluding packaging, which is well under the 15 euro limit. A rough packaging estimate of 1 to 1.50 euros would bring the total to around 13 euros.",
+        "The team evaluated the design against the brief and judged it original, reasonably trendy and user-friendly, and free of loose parts, though it still needs formal EN71 testing."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will get a packaging quote from the supplier at his meeting on Thursday. The marketing expert first offered to look into packaging.",
+        "The user interface designer, who was absent, will widen the camera cutout and produce the final drawing for the production spec, including the logo position.",
+        "The marketing expert will find out which test labs carry out EN71 testing and what it costs.",
+        "The project manager will send round the meeting notes and email the user interface designer his task."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The case will have a blue body with an orange handle and corners.",
+        "The logo will be small and embossed into the foam on the back bottom corner as part of the mould. Nothing will be printed or stuck on."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The packaging cost is still only a rough estimate until the supplier's quote arrives.",
+        "The camera cutout is about two millimetres too tight and must be fixed in the final drawing by the absent user interface designer.",
+        "The case still needs formal EN71 safety testing, and the cost of that testing is unknown.",
+        "A second colour version in purple and lime was suggested but not adopted for launch."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0203d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0203d.ai1",
+        "description": "Get a packaging quote from the supplier to add to the production cost",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0203d.s0097",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0203d.s0099",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0203d.s0101",
+            "event": "assigned",
+            "by": "A",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0203d.s0102",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0203d.s0124",
+            "event": "restated",
+            "by": "A",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0203d.s0094",
+          "SY0203d.s0096",
+          "SY0203d.s0097",
+          "SY0203d.s0098",
+          "SY0203d.s0099",
+          "SY0203d.s0100",
+          "SY0203d.s0101",
+          "SY0203d.s0102",
+          "SY0203d.s0103",
+          "SY0203d.s0124"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0203d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0203d.ai2",
+        "description": "Widen the camera cutout and produce the final drawing for the production spec, including the logo position",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0203d.s0041",
+            "event": "assigned",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0203d.s0042",
+            "event": "restated",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0203d.s0043",
+            "event": "proposed",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0203d.s0044",
+            "event": "accepted",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0203d.s0126",
+            "event": "restated",
+            "by": "A",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0203d.s0034",
+          "SY0203d.s0035",
+          "SY0203d.s0039",
+          "SY0203d.s0041",
+          "SY0203d.s0042",
+          "SY0203d.s0043",
+          "SY0203d.s0044",
+          "SY0203d.s0126"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0203d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0203d.ai3",
+        "description": "Find out which test labs do EN71 testing and what it costs",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0203d.s0118",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0203d.s0119",
+            "event": "accepted",
+            "by": "A",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0203d.s0125",
+            "event": "restated",
+            "by": "A",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0203d.s0117",
+          "SY0203d.s0118",
+          "SY0203d.s0119",
+          "SY0203d.s0120",
+          "SY0203d.s0121",
+          "SY0203d.s0125"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0203d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0203d.ai4",
+        "description": "Send round the meeting notes and email the absent user interface designer his task",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0203d.s0045",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0203d.s0127",
+            "event": "restated",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0203d.s0045",
+          "SY0203d.s0127"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203d.f1",
+        "type": "absence",
+        "fact": "The user interface designer (Tom) was absent from the detailed design meeting because he was on a training course.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203d.s0004",
+          "SY0203d.s0006"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203d.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recapped the conceptual design meeting: EVA foam body, one-piece moulded handle with no hinge or stand, raised bumper corners, two-tone colours, and the logo deferred to this meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0203c",
+        "evidence_segments": [
+          "SY0203d.s0010",
+          "SY0203d.s0011",
+          "SY0203d.s0012",
+          "SY0203d.s0013"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203d.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager said she had sent round the notes from the previous meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0203c",
+        "evidence_segments": [
+          "SY0203d.s0007",
+          "SY0203d.s0008",
+          "SY0203d.s0009"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203d.f4",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer built the mock-up from the supplier's foam offcuts, as agreed at the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0203c",
+        "evidence_segments": [
+          "SY0203d.s0019",
+          "SY0203d.s0020"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203d.f5",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer had sent the industrial designer his updated layout with bumper corners, and the mock-up cutouts were based on it.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0203c",
+        "evidence_segments": [
+          "SY0203d.s0022"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203d.f6",
+        "type": "other",
+        "fact": "On the mock-up, the camera cutout was about two millimetres too tight, so the foam edge shows in photos. This is a drawing issue.",
+        "agreed": null,
+        "related_action_item": "SY0203d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203d.s0034",
+          "SY0203d.s0035",
+          "SY0203d.s0036",
+          "SY0203d.s0037",
+          "SY0203d.s0038",
+          "SY0203d.s0039"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203d.f7",
+        "type": "decision",
+        "fact": "The case will have a blue body with an orange handle and corners.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203d.s0059",
+          "SY0203d.s0060",
+          "SY0203d.s0061",
+          "SY0203d.s0062",
+          "SY0203d.s0063",
+          "SY0203d.s0064"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203d.f8",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert proposed a second colour version in purple and lime as a later edition. The project manager preferred one colour scheme for launch, and it was not adopted.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203d.s0065",
+          "SY0203d.s0066",
+          "SY0203d.s0067",
+          "SY0203d.s0068"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203d.f9",
+        "type": "decision",
+        "fact": "The logo will be small and embossed into the foam on the back bottom corner as part of the mould, with nothing printed or stuck on.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203d.s0071",
+          "SY0203d.s0072",
+          "SY0203d.s0073",
+          "SY0203d.s0074",
+          "SY0203d.s0075",
+          "SY0203d.s0076",
+          "SY0203d.s0077",
+          "SY0203d.s0078",
+          "SY0203d.s0079",
+          "SY0203d.s0080"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203d.f10",
+        "type": "plan_change",
+        "fact": "The logo question, deferred at the conceptual design meeting, was settled in this meeting with an embossed logo.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0203c",
+        "evidence_segments": [
+          "SY0203d.s0013",
+          "SY0203d.s0070",
+          "SY0203d.s0078"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203d.f11",
+        "type": "other",
+        "fact": "The final production cost is 11.50 euros per unit excluding packaging. The industrial designer first said 12.50 but corrected it after counting the corners twice.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203d.s0083",
+          "SY0203d.s0084",
+          "SY0203d.s0085",
+          "SY0203d.s0086",
+          "SY0203d.s0087",
+          "SY0203d.s0088",
+          "SY0203d.s0089",
+          "SY0203d.s0090",
+          "SY0203d.s0091",
+          "SY0203d.s0092",
+          "SY0203d.s0093"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203d.f12",
+        "type": "plan_change",
+        "fact": "The packaging cost check, which had no owner after the conceptual design meeting, is now owned by the industrial designer.",
+        "agreed": null,
+        "related_action_item": "SY0203d.ai1",
+        "refers_to_meeting": "SY0203c",
+        "evidence_segments": [
+          "SY0203d.s0096",
+          "SY0203d.s0097",
+          "SY0203d.s0099",
+          "SY0203d.s0101",
+          "SY0203d.s0102"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203d.f13",
+        "type": "action_item",
+        "fact": "The industrial designer will get a packaging quote from the supplier. The marketing expert offered first, but the industrial designer took it because he is seeing the supplier on Thursday.",
+        "agreed": null,
+        "related_action_item": "SY0203d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203d.s0097",
+          "SY0203d.s0098",
+          "SY0203d.s0099",
+          "SY0203d.s0100",
+          "SY0203d.s0101",
+          "SY0203d.s0102",
+          "SY0203d.s0124"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203d.f14",
+        "type": "other",
+        "fact": "The supplier's rough packaging estimate is 1 to 1.50 euros for a simple card box, putting the total at around 13 euros.",
+        "agreed": null,
+        "related_action_item": "SY0203d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203d.s0104",
+          "SY0203d.s0105",
+          "SY0203d.s0106"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203d.f15",
+        "type": "action_item",
+        "fact": "The absent user interface designer will widen the camera cutout and produce the final production drawing including the logo position.",
+        "agreed": null,
+        "related_action_item": "SY0203d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203d.s0041",
+          "SY0203d.s0042",
+          "SY0203d.s0043",
+          "SY0203d.s0044",
+          "SY0203d.s0126"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203d.f16",
+        "type": "action_item",
+        "fact": "The marketing expert will find out which test labs do EN71 testing and what it costs.",
+        "agreed": null,
+        "related_action_item": "SY0203d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203d.s0117",
+          "SY0203d.s0118",
+          "SY0203d.s0119",
+          "SY0203d.s0125"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203d.f17",
+        "type": "action_item",
+        "fact": "The project manager will send round the meeting notes and email the user interface designer his task.",
+        "agreed": null,
+        "related_action_item": "SY0203d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203d.s0045",
+          "SY0203d.s0127"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0203d.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0203d.f18",
+        "type": "other",
+        "fact": "The team evaluated the design as original, reasonably trendy and user-friendly, with no loose parts, apart from the camera cutout issue.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0203d.s0107",
+          "SY0203d.s0108",
+          "SY0203d.s0109",
+          "SY0203d.s0110",
+          "SY0203d.s0111",
+          "SY0203d.s0112",
+          "SY0203d.s0113",
+          "SY0203d.s0115",
+          "SY0203d.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_OFFERED_TAKEN_BY_OTHER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_OFFERED_TAKEN_BY_OTHER",
+        "segments": [
+          "SY0203d.s0097",
+          "SY0203d.s0098",
+          "SY0203d.s0099",
+          "SY0203d.s0100",
+          "SY0203d.s0101",
+          "SY0203d.s0102"
+        ],
+        "note": "The marketing expert offers to look into packaging costs, but the industrial designer takes the packaging quote because he is seeing the supplier, and the PM confirms him as owner."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_TASK_TO_ABSENT",
+        "segments": [
+          "SY0203d.s0041",
+          "SY0203d.s0042",
+          "SY0203d.s0043",
+          "SY0203d.s0044",
+          "SY0203d.s0045",
+          "SY0203d.s0126"
+        ],
+        "note": "The PM assigns the absent user interface designer the task of widening the camera cutout and producing the final drawing with the logo position."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

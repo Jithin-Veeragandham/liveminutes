@@ -1,0 +1,1637 @@
+{
+  "schema_version": "1.0",
+  "source": "synthetic",
+  "meeting_id": "SY0204b",
+  "series_id": "SY0204",
+  "meeting_letter": "b",
+  "scenario_type": "scenario",
+  "stage": "functional design",
+  "duration_sec": 488.31,
+  "participants": [
+    {
+      "label": "A",
+      "role": "ME",
+      "name": "Priya",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "B",
+      "role": "ID",
+      "name": "Tomasz",
+      "global_id": null,
+      "status": "absent"
+    },
+    {
+      "label": "C",
+      "role": "UI",
+      "name": "Grace",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "D",
+      "role": "PM",
+      "name": "Martin",
+      "global_id": null,
+      "status": "present"
+    }
+  ],
+  "segments": [
+    {
+      "id": "SY0204b.s0001",
+      "speaker": "D",
+      "start": 5.0,
+      "end": 7.31,
+      "text": "Okay, um, shall we get started?",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0204b.s0002",
+      "speaker": "A",
+      "start": 8.3,
+      "end": 8.7,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0204b.s0003",
+      "speaker": "C",
+      "start": 9.04,
+      "end": 9.44,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0204b.s0004",
+      "speaker": "D",
+      "start": 9.9,
+      "end": 12.59,
+      "text": "So this is the functional design meeting.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0005",
+      "speaker": "D",
+      "start": 13.08,
+      "end": 18.85,
+      "text": "Uh, Tomasz isn't here today, he sent me a message this morning, he's off sick.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0006",
+      "speaker": "C",
+      "start": 19.06,
+      "end": 19.83,
+      "text": "Oh, okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0204b.s0007",
+      "speaker": "D",
+      "start": 20.06,
+      "end": 22.75,
+      "text": "So it's just the three of us.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0008",
+      "speaker": "D",
+      "start": 23.37,
+      "end": 28.37,
+      "text": "Um, I sent round the minutes from the kickoff, hopefully you got them.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0009",
+      "speaker": "A",
+      "start": 29.17,
+      "end": 30.32,
+      "text": "Yeah, got them.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0204b.s0010",
+      "speaker": "D",
+      "start": 30.91,
+      "end": 37.45,
+      "text": "So just to recap, last time we agreed the thing has to have a big, high-contrast display.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0011",
+      "speaker": "D",
+      "start": 38.39,
+      "end": 45.31,
+      "text": "And we left a whole bunch open, the wearing position, the battery, fall detection, the number of buttons.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0012",
+      "speaker": "D",
+      "start": 45.73,
+      "end": 51.11,
+      "text": "So I'd like to get through as many of those as we can today.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0204b.s0013",
+      "speaker": "D",
+      "start": 51.83,
+      "end": 57.6,
+      "text": "Priya, you took over the readability research from Grace, um, do you want to start?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0204b.s0014",
+      "speaker": "A",
+      "start": 58.09,
+      "end": 58.86,
+      "text": "Sure, yeah.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0015",
+      "speaker": "A",
+      "start": 59.65,
+      "end": 65.8,
+      "text": "So I ran it past our user panel, we had about, uh, twenty-two people over sixty-five.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0016",
+      "speaker": "A",
+      "start": 66.08,
+      "end": 70.7,
+      "text": "And the clear message was the numbers have to be really big.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0017",
+      "speaker": "A",
+      "start": 71.66,
+      "end": 75.89,
+      "text": "Like the digits want to be at least two centimetres tall.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0018",
+      "speaker": "A",
+      "start": 76.65,
+      "end": 83.96,
+      "text": "No, sorry, one and a half, one and a half centimetres. Two was what a couple of them wanted.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0019",
+      "speaker": "C",
+      "start": 84.16,
+      "end": 87.24,
+      "text": "One and a half for the main number?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0204b.s0020",
+      "speaker": "A",
+      "start": 87.71,
+      "end": 89.63,
+      "text": "For the step count, yeah.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0021",
+      "speaker": "A",
+      "start": 90.56,
+      "end": 96.33,
+      "text": "And black on white was the clear favourite, way above any of the coloured screens.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0022",
+      "speaker": "C",
+      "start": 96.67,
+      "end": 97.07,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0204b.s0023",
+      "speaker": "A",
+      "start": 97.35,
+      "end": 105.43,
+      "text": "Some of them said the colour screens look nice in the shop but they can't read them outside in the sun.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0024",
+      "speaker": "D",
+      "start": 106.41,
+      "end": 108.33,
+      "text": "That's useful, that's really useful.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0204b.s0025",
+      "speaker": "A",
+      "start": 108.82,
+      "end": 118.05,
+      "text": "The other thing that came up, and this is about wearing position actually, is a lot of them don't want something on the wrist.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0026",
+      "speaker": "A",
+      "start": 119.03,
+      "end": 125.18,
+      "text": "Because they already wear a watch, or they've got, um, sensitive skin, that kind of thing.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0027",
+      "speaker": "D",
+      "start": 126.15,
+      "end": 128.07,
+      "text": "So what did they want?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0204b.s0028",
+      "speaker": "A",
+      "start": 128.72,
+      "end": 133.72,
+      "text": "Most of them said a clip, on the belt or in a pocket.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0029",
+      "speaker": "A",
+      "start": 134.36,
+      "end": 138.98,
+      "text": "A few liked the pendant idea but, uh, it was a minority.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0030",
+      "speaker": "C",
+      "start": 139.57,
+      "end": 143.8,
+      "text": "That fits with what I was thinking for the screen, actually.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0204b.s0031",
+      "speaker": "C",
+      "start": 144.32,
+      "end": 153.55,
+      "text": "Because if it's on a clip you can just tilt it up and look at it, you don't have to twist your arm round.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0032",
+      "speaker": "D",
+      "start": 153.9,
+      "end": 157.75,
+      "text": "Okay, so are we happy to go with a clip?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0204b.s0033",
+      "speaker": "A",
+      "start": 158.29,
+      "end": 160.21,
+      "text": "Yeah, I'd go with that.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0204b.s0034",
+      "speaker": "C",
+      "start": 161.16,
+      "end": 161.93,
+      "text": "Yeah, clip.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0204b.s0035",
+      "speaker": "D",
+      "start": 162.78,
+      "end": 168.16,
+      "text": "Right, well Tomasz was supposed to compare the attachment options for cost and sturdiness.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0036",
+      "speaker": "D",
+      "start": 168.54,
+      "end": 175.85,
+      "text": "So I'll say clip, but he still needs to check the clip is actually sturdy enough and in budget.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0037",
+      "speaker": "C",
+      "start": 176.12,
+      "end": 176.89,
+      "text": "Yeah, fair.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0204b.s0038",
+      "speaker": "D",
+      "start": 177.06,
+      "end": 182.83,
+      "text": "Okay, so clip it is. And black on white, one and a half centimetre digits.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0039",
+      "speaker": "A",
+      "start": 183.75,
+      "end": 184.15,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0204b.s0040",
+      "speaker": "D",
+      "start": 184.47,
+      "end": 187.16,
+      "text": "Grace, you were on the interface functions.",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0204b.s0041",
+      "speaker": "C",
+      "start": 188.15,
+      "end": 193.15,
+      "text": "Yeah, so I looked at the buttons and what goes on the display.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0042",
+      "speaker": "C",
+      "start": 193.32,
+      "end": 196.78,
+      "text": "Um, last time, Martin, you said maximum two buttons.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0043",
+      "speaker": "D",
+      "start": 197.59,
+      "end": 197.99,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0204b.s0044",
+      "speaker": "C",
+      "start": 198.94,
+      "end": 202.4,
+      "text": "I actually think we should go down to one.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0204b.s0045",
+      "speaker": "C",
+      "start": 203.17,
+      "end": 208.94,
+      "text": "One big button on the front that you press to change what the screen shows.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0046",
+      "speaker": "A",
+      "start": 209.82,
+      "end": 212.13,
+      "text": "So what does it change between?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0204b.s0047",
+      "speaker": "C",
+      "start": 212.39,
+      "end": 216.62,
+      "text": "Steps today, and then the time, and then, um, yesterday's steps.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0048",
+      "speaker": "C",
+      "start": 217.2,
+      "end": 222.2,
+      "text": "And the count resets itself at midnight, so nobody has to reset anything.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0049",
+      "speaker": "A",
+      "start": 223.2,
+      "end": 230.51,
+      "text": "Oh, I like that, the resetting came up with the panel, people found it fiddly on their old pedometers.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0204b.s0050",
+      "speaker": "D",
+      "start": 231.46,
+      "end": 234.54,
+      "text": "Is one button going to be enough though?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0204b.s0051",
+      "speaker": "D",
+      "start": 235.34,
+      "end": 237.65,
+      "text": "What about, like, setting the time?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0204b.s0052",
+      "speaker": "C",
+      "start": 238.05,
+      "end": 243.05,
+      "text": "You'd hold it down for a few seconds to get into setting mode.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0053",
+      "speaker": "C",
+      "start": 243.96,
+      "end": 248.96,
+      "text": "And honestly most people would set it once and never touch it again.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0054",
+      "speaker": "D",
+      "start": 249.2,
+      "end": 249.97,
+      "text": "Yeah, okay.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0204b.s0055",
+      "speaker": "D",
+      "start": 250.82,
+      "end": 254.28,
+      "text": "And one button is cheaper than two, I guess.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0204b.s0056",
+      "speaker": "C",
+      "start": 254.85,
+      "end": 256.0,
+      "text": "Exactly, fewer parts.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0204b.s0057",
+      "speaker": "D",
+      "start": 256.98,
+      "end": 258.9,
+      "text": "Priya, you happy with one?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0204b.s0058",
+      "speaker": "A",
+      "start": 259.47,
+      "end": 261.39,
+      "text": "Yeah, one big one, definitely.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0204b.s0059",
+      "speaker": "D",
+      "start": 261.63,
+      "end": 268.17,
+      "text": "Okay, so one button then, and it resets at midnight. Screens are steps today, time, yesterday's steps.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0060",
+      "speaker": "C",
+      "start": 268.78,
+      "end": 269.18,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0204b.s0061",
+      "speaker": "C",
+      "start": 269.82,
+      "end": 276.36,
+      "text": "The other thing I wanted to suggest was a little vibration when you hit your daily goal.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0204b.s0062",
+      "speaker": "C",
+      "start": 276.52,
+      "end": 279.6,
+      "text": "Like a buzz, so you know without looking.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0063",
+      "speaker": "A",
+      "start": 279.97,
+      "end": 281.89,
+      "text": "Ooh, that's quite nice actually.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0204b.s0064",
+      "speaker": "D",
+      "start": 282.69,
+      "end": 286.15,
+      "text": "Hmm, I'm a bit worried that's another component though.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0204b.s0065",
+      "speaker": "D",
+      "start": 287.01,
+      "end": 290.47,
+      "text": "A vibration motor, that's money, and it eats battery.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0066",
+      "speaker": "C",
+      "start": 291.04,
+      "end": 292.19,
+      "text": "Yeah, that's true.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0204b.s0067",
+      "speaker": "A",
+      "start": 292.79,
+      "end": 297.79,
+      "text": "I could put it to the panel, see if they'd actually want it.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0204b.s0068",
+      "speaker": "D",
+      "start": 298.51,
+      "end": 303.13,
+      "text": "Yeah, do that, and we'll decide once we know what it costs.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0204b.s0069",
+      "speaker": "A",
+      "start": 303.77,
+      "end": 304.17,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0204b.s0070",
+      "speaker": "D",
+      "start": 304.78,
+      "end": 307.09,
+      "text": "Which brings us to fall detection.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0071",
+      "speaker": "D",
+      "start": 307.54,
+      "end": 312.92,
+      "text": "Tomasz suggested it last time, and he's not here to argue for it, unfortunately.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0072",
+      "speaker": "A",
+      "start": 313.36,
+      "end": 314.13,
+      "text": "Poor Tomasz.",
+      "da_type": "oth"
+    },
+    {
+      "id": "SY0204b.s0073",
+      "speaker": "D",
+      "start": 314.57,
+      "end": 318.8,
+      "text": "But my feeling is it's just too much for twelve fifty.",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0204b.s0074",
+      "speaker": "C",
+      "start": 319.2,
+      "end": 320.35,
+      "text": "Yeah, I agree.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0204b.s0075",
+      "speaker": "C",
+      "start": 321.24,
+      "end": 327.78,
+      "text": "And if it goes off by mistake, that's a whole other problem, like who does it call.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0076",
+      "speaker": "A",
+      "start": 328.57,
+      "end": 333.57,
+      "text": "And then you're into the app again, which we said we didn't want.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0204b.s0077",
+      "speaker": "A",
+      "start": 334.07,
+      "end": 337.53,
+      "text": "Although I'd still say a family app would sell.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0204b.s0078",
+      "speaker": "D",
+      "start": 338.46,
+      "end": 340.77,
+      "text": "Not for this version, I think.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0204b.s0079",
+      "speaker": "C",
+      "start": 341.06,
+      "end": 342.6,
+      "text": "Yeah, keep it simple.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0204b.s0080",
+      "speaker": "D",
+      "start": 342.84,
+      "end": 347.46,
+      "text": "Okay, so no fall detection. We'll leave it out of this product.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0081",
+      "speaker": "A",
+      "start": 348.05,
+      "end": 348.45,
+      "text": "Fine.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0204b.s0082",
+      "speaker": "D",
+      "start": 348.89,
+      "end": 349.29,
+      "text": "Battery.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0083",
+      "speaker": "A",
+      "start": 350.09,
+      "end": 356.24,
+      "text": "I still think coin cell. The panel didn't like the idea of charging yet another thing.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0204b.s0084",
+      "speaker": "C",
+      "start": 357.09,
+      "end": 361.71,
+      "text": "But coin cells are hard to change if your fingers aren't great.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0085",
+      "speaker": "A",
+      "start": 362.32,
+      "end": 363.86,
+      "text": "Hmm, yeah, that's fair.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0204b.s0086",
+      "speaker": "D",
+      "start": 364.61,
+      "end": 369.61,
+      "text": "I think that's really a Tomasz question, because it depends on the housing.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0087",
+      "speaker": "D",
+      "start": 369.92,
+      "end": 375.69,
+      "text": "Like whether a coin cell even fits in a clip, and how you'd open it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0088",
+      "speaker": "D",
+      "start": 375.99,
+      "end": 385.22,
+      "text": "So I'm gonna give that to Tomasz, he can compare coin cell and rechargeable for size, cost, and how easy it is to change.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0089",
+      "speaker": "C",
+      "start": 385.6,
+      "end": 386.37,
+      "text": "Makes sense.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0204b.s0090",
+      "speaker": "D",
+      "start": 387.1,
+      "end": 391.72,
+      "text": "I'll email him tonight with what we decided and his two bits.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0204b.s0091",
+      "speaker": "D",
+      "start": 392.05,
+      "end": 395.51,
+      "text": "Okay, the other thing from last time, component costs.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0092",
+      "speaker": "D",
+      "start": 395.85,
+      "end": 397.39,
+      "text": "Nobody picked that up.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0093",
+      "speaker": "C",
+      "start": 397.68,
+      "end": 398.45,
+      "text": "Uh, yeah.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0204b.s0094",
+      "speaker": "C",
+      "start": 398.9,
+      "end": 404.28,
+      "text": "I could look into it, I mean, I know roughly what screens go for.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0204b.s0095",
+      "speaker": "A",
+      "start": 404.53,
+      "end": 410.3,
+      "text": "Actually, um, I've got the supplier price lists in marketing already, from the competitor analysis.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0096",
+      "speaker": "A",
+      "start": 410.51,
+      "end": 413.97,
+      "text": "So it'd probably be quicker if I did it.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0204b.s0097",
+      "speaker": "C",
+      "start": 414.35,
+      "end": 418.2,
+      "text": "Oh, okay, yeah, that's better then, you go for it.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0204b.s0098",
+      "speaker": "D",
+      "start": 418.82,
+      "end": 422.28,
+      "text": "So Priya, you'll check the sensor and the screen?",
+      "da_type": "el.und"
+    },
+    {
+      "id": "SY0204b.s0099",
+      "speaker": "A",
+      "start": 422.56,
+      "end": 426.79,
+      "text": "Yeah, sensor, screen, and I'll add the button and the clip.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0100",
+      "speaker": "D",
+      "start": 427.7,
+      "end": 431.16,
+      "text": "And the vibration motor, if you can find it.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0204b.s0101",
+      "speaker": "A",
+      "start": 431.45,
+      "end": 432.22,
+      "text": "Yep, sure.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0204b.s0102",
+      "speaker": "D",
+      "start": 432.81,
+      "end": 434.35,
+      "text": "Great, so that's Priya.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0103",
+      "speaker": "C",
+      "start": 434.9,
+      "end": 441.44,
+      "text": "I'll still send you what I've got on screen sizes, so you know which one to price.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0204b.s0104",
+      "speaker": "A",
+      "start": 442.28,
+      "end": 443.43,
+      "text": "Oh, thanks, yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0204b.s0105",
+      "speaker": "D",
+      "start": 443.8,
+      "end": 447.26,
+      "text": "Grace, what are you working on for next time?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0204b.s0106",
+      "speaker": "C",
+      "start": 447.63,
+      "end": 453.4,
+      "text": "I'll do a mock-up of the three screens and the button, with the big digits.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0204b.s0107",
+      "speaker": "D",
+      "start": 454.37,
+      "end": 454.77,
+      "text": "Great.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0204b.s0108",
+      "speaker": "D",
+      "start": 455.0,
+      "end": 457.31,
+      "text": "Okay, so just to wrap up.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0109",
+      "speaker": "D",
+      "start": 457.48,
+      "end": 463.63,
+      "text": "We're going with a clip, one button, black on white, one and a half centimetre digits.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0110",
+      "speaker": "D",
+      "start": 464.07,
+      "end": 465.22,
+      "text": "No fall detection.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0111",
+      "speaker": "D",
+      "start": 465.72,
+      "end": 469.57,
+      "text": "The battery comparison and the clip sturdiness go to Tomasz.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0112",
+      "speaker": "D",
+      "start": 470.0,
+      "end": 474.62,
+      "text": "Priya does the component costs and asks the panel about the vibration.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0113",
+      "speaker": "D",
+      "start": 475.04,
+      "end": 477.35,
+      "text": "And Grace does the screen mock-ups.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0204b.s0114",
+      "speaker": "C",
+      "start": 477.76,
+      "end": 478.16,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0204b.s0115",
+      "speaker": "A",
+      "start": 478.34,
+      "end": 479.11,
+      "text": "Sounds good.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0204b.s0116",
+      "speaker": "D",
+      "start": 479.3,
+      "end": 482.76,
+      "text": "And I'll send round the minutes and email Tomasz.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0204b.s0117",
+      "speaker": "D",
+      "start": 483.46,
+      "end": 484.61,
+      "text": "Okay, thanks, everyone.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0204b.s0118",
+      "speaker": "C",
+      "start": 484.91,
+      "end": 485.31,
+      "text": "Thanks.",
+      "da_type": "bck"
+    }
+  ],
+  "summary": {
+    "abstract": [
+      "The project manager opened the functional design meeting, noted that the industrial designer was absent through illness, and recapped the kickoff decision on a big, high-contrast display.",
+      "The marketing expert presented the user panel's readability findings: digits at least 1.5 centimetres tall, black on white preferred, and most seniors preferring a belt or pocket clip to a wrist strap.",
+      "The user interface designer proposed a single large button that cycles between steps today, the time and yesterday's steps, with an automatic reset at midnight. The team accepted this.",
+      "Fall detection was dropped for cost and complexity reasons. A vibration goal alert was proposed and left pending panel feedback and costs. The battery question was handed to the absent industrial designer.",
+      "The open task of checking component costs was offered by the user interface designer but taken by the marketing expert, who already has supplier price lists."
+    ],
+    "actions": [
+      "The marketing expert will check component costs: sensor, screen, button, clip and, if possible, a vibration motor.",
+      "The marketing expert will ask the user panel whether seniors want a vibration alert when the daily goal is reached.",
+      "The industrial designer (absent) will compare coin-cell and rechargeable batteries for size, cost and ease of changing within the clip housing.",
+      "The industrial designer (absent) will check that the clip attachment is sturdy enough and within budget.",
+      "The user interface designer will make a mock-up of the three screens and the single button with the large digits.",
+      "The user interface designer will send the marketing expert information on screen sizes for pricing.",
+      "The project manager will email the industrial designer with the decisions and his tasks, and will send round the minutes."
+    ],
+    "decisions": [
+      "The device will be worn on a clip (belt or pocket), pending the industrial designer's sturdiness and cost check.",
+      "The display will be black on white, with step-count digits at least 1.5 centimetres tall.",
+      "The device will have one large button that cycles between steps today, the time and yesterday's steps. Holding it down enters time-setting mode.",
+      "The step count will reset automatically at midnight.",
+      "Fall detection will not be included in this product."
+    ],
+    "problems": [
+      "Battery type (coin cell or rechargeable) is still undecided. Coin cells are disliked for being hard to change, and recharging is disliked by the panel.",
+      "The vibration goal alert is undecided because of component cost and battery drain.",
+      "Component costs are still unknown.",
+      "The marketing expert still sees sales potential in a family app, but it was rejected for this version."
+    ]
+  },
+  "action_items": [
+    {
+      "id": "SY0204b.ai1",
+      "description": "Check what the components cost (sensor, screen, button, clip and, if possible, vibration motor) using marketing's supplier price lists",
+      "owner": "A",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0204b.s0094",
+          "event": "offered",
+          "by": "C",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0204b.s0096",
+          "event": "offered",
+          "by": "A",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0204b.s0097",
+          "event": "accepted",
+          "by": "C",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0204b.s0098",
+          "event": "assigned",
+          "by": "D",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0204b.s0099",
+          "event": "accepted",
+          "by": "A",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0204b.s0112",
+          "event": "restated",
+          "by": "D",
+          "owner": "A"
+        }
+      ],
+      "evidence_segments": [
+        "SY0204b.s0091",
+        "SY0204b.s0092",
+        "SY0204b.s0094",
+        "SY0204b.s0095",
+        "SY0204b.s0096",
+        "SY0204b.s0097",
+        "SY0204b.s0098",
+        "SY0204b.s0099",
+        "SY0204b.s0100",
+        "SY0204b.s0101",
+        "SY0204b.s0102",
+        "SY0204b.s0112"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0204b.ai2",
+      "description": "Compare coin-cell and rechargeable batteries for size, cost and ease of changing in the clip housing",
+      "owner": "B",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0204b.s0088",
+          "event": "assigned",
+          "by": "D",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0204b.s0111",
+          "event": "restated",
+          "by": "D",
+          "owner": "B"
+        }
+      ],
+      "evidence_segments": [
+        "SY0204b.s0083",
+        "SY0204b.s0084",
+        "SY0204b.s0086",
+        "SY0204b.s0087",
+        "SY0204b.s0088",
+        "SY0204b.s0111"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0204b.ai3",
+      "description": "Check that the clip attachment is sturdy enough and within budget (continuing the attachment comparison from the kickoff)",
+      "owner": "B",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0204b.s0036",
+          "event": "restated",
+          "by": "D",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0204b.s0111",
+          "event": "restated",
+          "by": "D",
+          "owner": "B"
+        }
+      ],
+      "evidence_segments": [
+        "SY0204b.s0035",
+        "SY0204b.s0036",
+        "SY0204b.s0111"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0204b.ai4",
+      "description": "Ask the user panel whether seniors would want a vibration alert when the daily goal is reached",
+      "owner": "A",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0204b.s0067",
+          "event": "offered",
+          "by": "A",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0204b.s0068",
+          "event": "accepted",
+          "by": "D",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0204b.s0112",
+          "event": "restated",
+          "by": "D",
+          "owner": "A"
+        }
+      ],
+      "evidence_segments": [
+        "SY0204b.s0061",
+        "SY0204b.s0067",
+        "SY0204b.s0068",
+        "SY0204b.s0069",
+        "SY0204b.s0112"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0204b.ai5",
+      "description": "Make a mock-up of the three screens and the single button with the large digits",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0204b.s0106",
+          "event": "offered",
+          "by": "C",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0204b.s0113",
+          "event": "restated",
+          "by": "D",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0204b.s0105",
+        "SY0204b.s0106",
+        "SY0204b.s0107",
+        "SY0204b.s0113"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0204b.ai6",
+      "description": "Send the marketing expert information on screen sizes so she knows which screen to price",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0204b.s0103",
+          "event": "offered",
+          "by": "C",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0204b.s0103",
+        "SY0204b.s0104"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0204b.ai7",
+      "description": "Email the industrial designer with the meeting's decisions and his tasks",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0204b.s0090",
+          "event": "offered",
+          "by": "D",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0204b.s0116",
+          "event": "restated",
+          "by": "D",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0204b.s0090",
+        "SY0204b.s0116"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0204b.ai8",
+      "description": "Send round the minutes of the meeting",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0204b.s0116",
+          "event": "offered",
+          "by": "D",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0204b.s0116"
+      ],
+      "owner_source": "gold"
+    }
+  ],
+  "qa_facts": [
+    {
+      "id": "SY0204b.f1",
+      "type": "absence",
+      "fact": "The industrial designer (Tomasz) was absent from the meeting because he was off sick.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0204b.s0005",
+        "SY0204b.s0007"
+      ]
+    },
+    {
+      "id": "SY0204b.f2",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager recalled that the kickoff meeting agreed on a big, high-contrast display and left the wearing position, battery, fall detection and number of buttons open.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0204a",
+      "evidence_segments": [
+        "SY0204b.s0010",
+        "SY0204b.s0011"
+      ]
+    },
+    {
+      "id": "SY0204b.f3",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager said he had sent round the minutes from the kickoff meeting.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0204a",
+      "evidence_segments": [
+        "SY0204b.s0008",
+        "SY0204b.s0009"
+      ]
+    },
+    {
+      "id": "SY0204b.f4",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager noted that the marketing expert had taken over the readability research from the user interface designer at the kickoff.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0204a",
+      "evidence_segments": [
+        "SY0204b.s0013"
+      ]
+    },
+    {
+      "id": "SY0204b.f5",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager noted that checking component costs had been raised at the kickoff but nobody had picked it up.",
+      "agreed": null,
+      "related_action_item": "SY0204b.ai1",
+      "refers_to_meeting": "SY0204a",
+      "evidence_segments": [
+        "SY0204b.s0091",
+        "SY0204b.s0092"
+      ]
+    },
+    {
+      "id": "SY0204b.f6",
+      "type": "other",
+      "fact": "The marketing expert's user panel of about twenty-two people over sixty-five wanted large digits, preferred black on white, and mostly did not want a wrist-worn device.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0204b.s0015",
+        "SY0204b.s0016",
+        "SY0204b.s0021",
+        "SY0204b.s0023",
+        "SY0204b.s0025",
+        "SY0204b.s0026",
+        "SY0204b.s0028",
+        "SY0204b.s0029"
+      ]
+    },
+    {
+      "id": "SY0204b.f7",
+      "type": "other",
+      "fact": "The marketing expert first said the digits should be at least two centimetres tall, then corrected it to one and a half centimetres.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0204b.s0017",
+        "SY0204b.s0018"
+      ]
+    },
+    {
+      "id": "SY0204b.f8",
+      "type": "decision",
+      "fact": "The team agreed the device will be worn on a belt or pocket clip, pending the industrial designer's sturdiness and cost check.",
+      "agreed": true,
+      "related_action_item": "SY0204b.ai3",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0204b.s0028",
+        "SY0204b.s0032",
+        "SY0204b.s0033",
+        "SY0204b.s0034",
+        "SY0204b.s0036",
+        "SY0204b.s0038"
+      ]
+    },
+    {
+      "id": "SY0204b.f9",
+      "type": "decision",
+      "fact": "The team agreed on a black-on-white display with step-count digits at least 1.5 centimetres tall.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0204b.s0018",
+        "SY0204b.s0021",
+        "SY0204b.s0038",
+        "SY0204b.s0039"
+      ]
+    },
+    {
+      "id": "SY0204b.f10",
+      "type": "decision",
+      "fact": "The team agreed on a single large button that cycles between steps today, the time and yesterday's steps. Holding the button enters time-setting mode.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0204b.s0044",
+        "SY0204b.s0045",
+        "SY0204b.s0047",
+        "SY0204b.s0052",
+        "SY0204b.s0057",
+        "SY0204b.s0058",
+        "SY0204b.s0059"
+      ]
+    },
+    {
+      "id": "SY0204b.f11",
+      "type": "decision",
+      "fact": "The team agreed the step count will reset automatically at midnight.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0204b.s0048",
+        "SY0204b.s0049",
+        "SY0204b.s0059"
+      ]
+    },
+    {
+      "id": "SY0204b.f12",
+      "type": "decision",
+      "fact": "The team agreed not to include fall detection in this product.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0204b.s0073",
+        "SY0204b.s0074",
+        "SY0204b.s0075",
+        "SY0204b.s0080",
+        "SY0204b.s0081"
+      ]
+    },
+    {
+      "id": "SY0204b.f13",
+      "type": "plan_change",
+      "fact": "The project manager's kickoff suggestion of a maximum of two buttons was replaced by a decision to have only one button.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0204a",
+      "evidence_segments": [
+        "SY0204b.s0042",
+        "SY0204b.s0044",
+        "SY0204b.s0059"
+      ]
+    },
+    {
+      "id": "SY0204b.f14",
+      "type": "unagreed_proposal",
+      "fact": "The user interface designer proposed a vibration alert when the daily goal is reached. The project manager raised cost and battery concerns, and it was left pending panel feedback and costs.",
+      "agreed": false,
+      "related_action_item": "SY0204b.ai4",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0204b.s0061",
+        "SY0204b.s0062",
+        "SY0204b.s0063",
+        "SY0204b.s0064",
+        "SY0204b.s0065",
+        "SY0204b.s0068"
+      ]
+    },
+    {
+      "id": "SY0204b.f15",
+      "type": "unagreed_proposal",
+      "fact": "The marketing expert again suggested a family app would sell. The project manager and user interface designer rejected it for this version.",
+      "agreed": false,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0204b.s0077",
+        "SY0204b.s0078",
+        "SY0204b.s0079"
+      ]
+    },
+    {
+      "id": "SY0204b.f16",
+      "type": "unagreed_proposal",
+      "fact": "The marketing expert again proposed a coin-cell battery. The user interface designer objected that coin cells are hard to change, and the question was handed to the industrial designer.",
+      "agreed": false,
+      "related_action_item": "SY0204b.ai2",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0204b.s0083",
+        "SY0204b.s0084",
+        "SY0204b.s0085",
+        "SY0204b.s0086",
+        "SY0204b.s0088"
+      ]
+    },
+    {
+      "id": "SY0204b.f17",
+      "type": "action_item",
+      "fact": "The marketing expert will check component costs (sensor, screen, button, clip, vibration motor). The user interface designer offered first, but the marketing expert took the task.",
+      "agreed": null,
+      "related_action_item": "SY0204b.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0204b.s0094",
+        "SY0204b.s0096",
+        "SY0204b.s0097",
+        "SY0204b.s0098",
+        "SY0204b.s0099",
+        "SY0204b.s0100"
+      ]
+    },
+    {
+      "id": "SY0204b.f18",
+      "type": "action_item",
+      "fact": "The absent industrial designer was assigned to compare coin-cell and rechargeable batteries for size, cost and ease of changing.",
+      "agreed": null,
+      "related_action_item": "SY0204b.ai2",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0204b.s0088",
+        "SY0204b.s0111"
+      ]
+    },
+    {
+      "id": "SY0204b.f19",
+      "type": "action_item",
+      "fact": "The absent industrial designer still has to check that the clip is sturdy enough and within budget.",
+      "agreed": null,
+      "related_action_item": "SY0204b.ai3",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0204b.s0036",
+        "SY0204b.s0111"
+      ]
+    },
+    {
+      "id": "SY0204b.f20",
+      "type": "action_item",
+      "fact": "The marketing expert will ask the user panel about the vibration goal alert.",
+      "agreed": null,
+      "related_action_item": "SY0204b.ai4",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0204b.s0067",
+        "SY0204b.s0068",
+        "SY0204b.s0112"
+      ]
+    },
+    {
+      "id": "SY0204b.f21",
+      "type": "action_item",
+      "fact": "The user interface designer will make a mock-up of the three screens and the button.",
+      "agreed": null,
+      "related_action_item": "SY0204b.ai5",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0204b.s0106",
+        "SY0204b.s0113"
+      ]
+    },
+    {
+      "id": "SY0204b.f22",
+      "type": "action_item",
+      "fact": "The user interface designer will send the marketing expert information on screen sizes.",
+      "agreed": null,
+      "related_action_item": "SY0204b.ai6",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0204b.s0103",
+        "SY0204b.s0104"
+      ]
+    },
+    {
+      "id": "SY0204b.f23",
+      "type": "action_item",
+      "fact": "The project manager will email the industrial designer with the decisions and his tasks.",
+      "agreed": null,
+      "related_action_item": "SY0204b.ai7",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0204b.s0090",
+        "SY0204b.s0116"
+      ]
+    },
+    {
+      "id": "SY0204b.f24",
+      "type": "action_item",
+      "fact": "The project manager will send round the minutes.",
+      "agreed": null,
+      "related_action_item": "SY0204b.ai8",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0204b.s0116"
+      ]
+    }
+  ],
+  "edge_cases": [
+    {
+      "scenario_id": "F2_OFFERED_TAKEN_BY_OTHER",
+      "segments": [
+        "SY0204b.s0094",
+        "SY0204b.s0095",
+        "SY0204b.s0096",
+        "SY0204b.s0097",
+        "SY0204b.s0098",
+        "SY0204b.s0099",
+        "SY0204b.s0102"
+      ],
+      "note": "The user interface designer offers to check component costs, but the marketing expert takes the task because she already has supplier price lists. The user interface designer agrees and the project manager confirms the marketing expert as owner."
+    },
+    {
+      "scenario_id": "F2_TASK_TO_ABSENT",
+      "segments": [
+        "SY0204b.s0005",
+        "SY0204b.s0036",
+        "SY0204b.s0086",
+        "SY0204b.s0087",
+        "SY0204b.s0088",
+        "SY0204b.s0090",
+        "SY0204b.s0111"
+      ],
+      "note": "The industrial designer is off sick, and the project manager assigns him the battery comparison and the clip sturdiness check, which he will pass on by email."
+    }
+  ],
+  "provenance": {
+    "generator": "liveminutes-synthetic",
+    "cache_key": "1bf0ff3d504babd3089d09d255c927f6617d198e40aa2e204a43f81c17ffaada",
+    "attempt": 0,
+    "model": "claude-opus-5-5",
+    "prompt_version": "v1",
+    "scenario_spec_version": 1,
+    "feature": "F2",
+    "product": "a wearable step counter for seniors",
+    "planned_scenarios": [
+      "F2_OFFERED_TAKEN_BY_OTHER",
+      "F2_TASK_TO_ABSENT"
+    ]
+  }
+}

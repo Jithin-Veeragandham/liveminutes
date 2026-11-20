@@ -1,0 +1,1212 @@
+{
+  "meeting_id": "SY0209a",
+  "raw_sha256": "66e1190ce880fffa719f64127bf529c7fd34933ac09f09e3608501c1132618fc",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the kickoff meeting, the team introduced themselves, and she presented the project: a case for the company's existing Learnly seven-inch children's educational tablet.",
+        "She gave the financial targets of a selling price of 25 Euros and a maximum production cost of 12.50 Euros per case, excluding packaging.",
+        "The team agreed to keep the target age group of four to eight, and confirmed that the case only needs to fit the Learnly seven-inch tablet.",
+        "In brainstorming, the industrial designer stressed drop protection using rubber or foam with thick corners. The team discussed a carrying handle, a handle that folds into a stand, bright colours that still appeal to parents, swappable covers, a screen flap versus a raised lip, easy cleaning, and a name tag window.",
+        "The project manager then assigned the preparation tasks for the functional design meeting."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The marketing expert will research what parents and teachers want from the case, possibly with a short survey.",
+        "The user interface designer will look at the functional side of the case, including the handle and access to the buttons and charging port.",
+        "The industrial designer will research drop test standards and impact ratings. The user interface designer offered to do this first, but the industrial designer took it.",
+        "The industrial designer will look into materials (rubber, foam, plastics) that fit the budget.",
+        "The project manager will write up the minutes and send them round.",
+        "Someone should check the retail prices of existing children's tablet cases. Nobody took this task."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The target group is children aged four to eight.",
+        "The case only has to fit the company's Learnly seven-inch tablet; there is no universal fit.",
+        "The case should be made of an easy-to-clean, wipeable material."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "It is unclear whether the 25 Euro price is competitive, because no one knows what competing cases cost, and no one was assigned to find out.",
+        "The 12.50 Euro cost limit may rule out features that add parts, such as swappable covers.",
+        "Whether the handle should double as a stand is open. The user interface designer worried that a foldable stand could pinch children's fingers.",
+        "The name tag window idea was parked without a decision.",
+        "The wide four-to-eight age range covers users with quite different needs."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0209a.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0209a.ai1",
+        "description": "Research what parents and teachers want from a children's tablet case, possibly via a short survey",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0209a.s0090",
+            "event": "assigned",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0209a.s0091",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0209a.s0090",
+          "SY0209a.s0091"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0209a.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0209a.ai2",
+        "description": "Work out the functional side of the case: how children use it, the handle, and access to the buttons and charging port",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0209a.s0092",
+            "event": "assigned",
+            "by": "A",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0209a.s0094",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0209a.s0092",
+          "SY0209a.s0093",
+          "SY0209a.s0094"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0209a.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0209a.ai3",
+        "description": "Look into drop tests: the heights competing cases are rated for and the relevant impact standards",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0209a.s0083",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0209a.s0084",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0209a.s0086",
+            "event": "assigned",
+            "by": "A",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0209a.s0087",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0209a.s0082",
+          "SY0209a.s0083",
+          "SY0209a.s0084",
+          "SY0209a.s0085",
+          "SY0209a.s0086",
+          "SY0209a.s0087"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0209a.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0209a.ai4",
+        "description": "Investigate materials (rubber, foam, plastics) that fit the production budget",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0209a.s0095",
+            "event": "assigned",
+            "by": "A",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0209a.s0096",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0209a.s0095",
+          "SY0209a.s0096"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0209a.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0209a.ai5",
+        "description": "Write up the meeting minutes and send them to the team",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0209a.s0097",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0209a.s0097"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0209a.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0209a.ai6",
+        "description": "Check the retail prices of existing children's tablet cases",
+        "owner": null,
+        "owner_unclear": true,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0209a.s0078",
+            "event": "proposed",
+            "by": "A",
+            "owner": null
+          }
+        ],
+        "evidence_segments": [
+          "SY0209a.s0076",
+          "SY0209a.s0077",
+          "SY0209a.s0078",
+          "SY0209a.s0079",
+          "SY0209a.s0080",
+          "SY0209a.s0081"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209a.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209a.f1",
+        "type": "other",
+        "fact": "The project is a case for the company's existing Learnly seven-inch children's educational tablet.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209a.s0011",
+          "SY0209a.s0012",
+          "SY0209a.s0013",
+          "SY0209a.s0014"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209a.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209a.f2",
+        "type": "other",
+        "fact": "The selling price of the case is 25 Euros.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209a.s0023"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209a.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209a.f3",
+        "type": "other",
+        "fact": "The production cost limit is 12.50 Euros per case, excluding packaging.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209a.s0024",
+          "SY0209a.s0025",
+          "SY0209a.s0027"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209a.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209a.f4",
+        "type": "decision",
+        "fact": "The team agreed to keep the target age group of four to eight.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209a.s0033",
+          "SY0209a.s0034",
+          "SY0209a.s0035",
+          "SY0209a.s0036",
+          "SY0209a.s0037",
+          "SY0209a.s0038"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209a.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209a.f5",
+        "type": "decision",
+        "fact": "The case only has to fit the Learnly seven-inch tablet, not other tablets.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209a.s0039",
+          "SY0209a.s0040",
+          "SY0209a.s0041",
+          "SY0209a.s0042"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209a.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209a.f6",
+        "type": "decision",
+        "fact": "The case should be easy to clean and made of a wipeable material.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209a.s0072",
+          "SY0209a.s0073",
+          "SY0209a.s0074"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209a.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209a.f7",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer suggested a carrying handle; it was not decided.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209a.s0050",
+          "SY0209a.s0051",
+          "SY0209a.s0052"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209a.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209a.f8",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested that the handle fold out into a stand; it was kept as an idea only, because of a finger-pinching concern.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209a.s0053",
+          "SY0209a.s0054",
+          "SY0209a.s0055",
+          "SY0209a.s0056",
+          "SY0209a.s0057",
+          "SY0209a.s0058"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209a.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209a.f9",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer suggested swappable colour covers; the industrial designer objected on cost.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209a.s0062",
+          "SY0209a.s0063",
+          "SY0209a.s0064",
+          "SY0209a.s0065"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209a.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209a.f10",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested a screen flap; the user interface designer doubted it would survive young children, and the discussion moved to a raised lip around the screen.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209a.s0066",
+          "SY0209a.s0067",
+          "SY0209a.s0068",
+          "SY0209a.s0069",
+          "SY0209a.s0070"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209a.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209a.f11",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer suggested a name tag window; it was parked without agreement.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209a.s0106",
+          "SY0209a.s0107",
+          "SY0209a.s0108",
+          "SY0209a.s0109"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209a.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209a.f12",
+        "type": "action_item",
+        "fact": "The marketing expert was asked to research what parents and teachers want from the case.",
+        "agreed": null,
+        "related_action_item": "SY0209a.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209a.s0090",
+          "SY0209a.s0091"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209a.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209a.f13",
+        "type": "action_item",
+        "fact": "The user interface designer was asked to work on the functional side, including the handle and access to buttons and ports.",
+        "agreed": null,
+        "related_action_item": "SY0209a.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209a.s0092",
+          "SY0209a.s0094"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209a.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209a.f14",
+        "type": "action_item",
+        "fact": "The industrial designer took the drop test research after the user interface designer had offered to do it.",
+        "agreed": null,
+        "related_action_item": "SY0209a.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209a.s0083",
+          "SY0209a.s0084",
+          "SY0209a.s0085",
+          "SY0209a.s0086",
+          "SY0209a.s0087"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209a.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209a.f15",
+        "type": "action_item",
+        "fact": "The industrial designer was asked to investigate materials that fit the budget.",
+        "agreed": null,
+        "related_action_item": "SY0209a.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209a.s0095",
+          "SY0209a.s0096"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209a.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209a.f16",
+        "type": "action_item",
+        "fact": "The project manager will write up and send round the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0209a.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209a.s0097"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209a.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209a.f17",
+        "type": "action_item",
+        "fact": "Checking the retail prices of competing children's cases was mentioned, but nobody took the task.",
+        "agreed": null,
+        "related_action_item": "SY0209a.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209a.s0076",
+          "SY0209a.s0077",
+          "SY0209a.s0078",
+          "SY0209a.s0079",
+          "SY0209a.s0080",
+          "SY0209a.s0081"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209a.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209a.f18",
+        "type": "other",
+        "fact": "All four team members attended the kickoff meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209a.s0005",
+          "SY0209a.s0007",
+          "SY0209a.s0008",
+          "SY0209a.s0009"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209a.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209a.f19",
+        "type": "other",
+        "fact": "The next meeting is the functional design meeting, in about half an hour.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209a.s0098",
+          "SY0209a.s0099"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_OFFERED_TAKEN_BY_OTHER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_OFFERED_TAKEN_BY_OTHER",
+        "segments": [
+          "SY0209a.s0083",
+          "SY0209a.s0084",
+          "SY0209a.s0085",
+          "SY0209a.s0086",
+          "SY0209a.s0087"
+        ],
+        "note": "The user interface designer offers to research drop tests, but the industrial designer claims the task as his area. The project manager assigns it to him and he accepts."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_VAGUE_NO_OWNER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_VAGUE_NO_OWNER",
+        "segments": [
+          "SY0209a.s0076",
+          "SY0209a.s0077",
+          "SY0209a.s0078",
+          "SY0209a.s0079",
+          "SY0209a.s0080",
+          "SY0209a.s0081"
+        ],
+        "note": "The project manager says someone should check competitors' retail prices. Others agree, but nobody takes it, and the meeting moves on."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

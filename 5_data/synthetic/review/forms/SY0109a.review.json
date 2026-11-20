@@ -1,0 +1,1008 @@
+{
+  "meeting_id": "SY0109a",
+  "raw_sha256": "014b1fc1a92cc3c96ff43db11b1ca3795535de7adf575af0d5dbf67372d02b62",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the kickoff meeting and the team introduced themselves. He presented the project: a rider-facing app for a city bike-share scheme's docking stations. The pilot covers fourteen docking stations in the city centre. The app has three core functions: find a bike, unlock it at the dock, and return it and pay. It must run on both iOS and Android.",
+        "After a short whiteboard exercise, the team discussed first ideas. These covered how the phone connects to the dock (QR code, Bluetooth or NFC), use outdoors in all weather and at night, one-tap unlocking, and moving payment setup to sign-up. A leaderboard idea from the industrial designer was parked as out of scope for the pilot.",
+        "The next meeting was first set for Wednesday at nine. It was later moved to Friday at ten so that the marketing expert's rider survey results would be available."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will ask the dock supplier how the phone connects to the dock and whether the dock has a screen.",
+        "The user interface designer will produce rough wireframes of the main flows: find, unlock and return.",
+        "The marketing expert will send a quick survey to the pilot waiting list, including one question on the leaderboard idea.",
+        "The marketing expert will review competitor bike-share apps and their user reviews.",
+        "The project manager will send out the minutes, the project brief and the shared folder link."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The next meeting (functional design) will be on Friday at ten. This replaces the earlier plan of Wednesday at nine.",
+        "Payment setup will happen at sign-up, so that at the dock the rider only needs to unlock.",
+        "Unlocking should be possible in about one tap after opening the app."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The dock hardware is still unknown, including the connection method (QR, Bluetooth or NFC) and whether the dock has a screen. This must be confirmed with the supplier.",
+        "QR-based unlocking may fail in rain, and the screens must be readable outdoors and at night.",
+        "It is unclear whether riders want a leaderboard feature. It was parked pending survey feedback."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0109a.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0109a.ai1",
+        "description": "Contact the dock supplier to find out how the phone connects to the dock (QR, Bluetooth, NFC) and whether the dock has a screen",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0109a.s0076",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0109a.s0079",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0109a.s0080",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0109a.s0050",
+          "SY0109a.s0075",
+          "SY0109a.s0076",
+          "SY0109a.s0077",
+          "SY0109a.s0079",
+          "SY0109a.s0080"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0109a.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0109a.ai2",
+        "description": "Sketch rough wireframes of the main user flows: find, unlock, return",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0109a.s0081",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0109a.s0082",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0109a.s0081",
+          "SY0109a.s0082",
+          "SY0109a.s0083"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0109a.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0109a.ai3",
+        "description": "Send a quick rider survey to the pilot waiting list, including one question on the leaderboard idea",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0109a.s0085",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0109a.s0086",
+            "event": "accepted",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0109a.s0109",
+            "event": "restated",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0109a.s0084",
+          "SY0109a.s0085",
+          "SY0109a.s0086",
+          "SY0109a.s0089",
+          "SY0109a.s0108",
+          "SY0109a.s0109",
+          "SY0109a.s0110"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0109a.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0109a.ai4",
+        "description": "Review competitor bike-share apps and their user reviews",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0109a.s0087",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0109a.s0088",
+            "event": "accepted",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0109a.s0059",
+          "SY0109a.s0087",
+          "SY0109a.s0088"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0109a.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0109a.ai5",
+        "description": "Send out the meeting minutes, the project brief and the shared folder link",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0109a.s0027",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0109a.s0104",
+            "event": "restated",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0109a.s0027",
+          "SY0109a.s0037",
+          "SY0109a.s0104",
+          "SY0109a.s0105"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109a.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109a.f1",
+        "type": "decision",
+        "fact": "The next meeting (functional design) is on Friday at ten.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109a.s0093",
+          "SY0109a.s0094",
+          "SY0109a.s0096",
+          "SY0109a.s0097",
+          "SY0109a.s0098",
+          "SY0109a.s0099"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109a.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109a.f2",
+        "type": "plan_change",
+        "fact": "The next meeting was first agreed for Wednesday at nine. It was moved to Friday at ten because the survey results would not be back until Thursday.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109a.s0030",
+          "SY0109a.s0031",
+          "SY0109a.s0032",
+          "SY0109a.s0033",
+          "SY0109a.s0034",
+          "SY0109a.s0089",
+          "SY0109a.s0090",
+          "SY0109a.s0092",
+          "SY0109a.s0093",
+          "SY0109a.s0094",
+          "SY0109a.s0096",
+          "SY0109a.s0099"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109a.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109a.f3",
+        "type": "other",
+        "fact": "The pilot phase covers fourteen docking stations in the city centre (the project manager first said forty, then corrected himself).",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109a.s0019",
+          "SY0109a.s0020",
+          "SY0109a.s0021",
+          "SY0109a.s0022"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109a.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109a.f4",
+        "type": "other",
+        "fact": "The app is for riders only. The operator side is a separate contract.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109a.s0016",
+          "SY0109a.s0017"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109a.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109a.f5",
+        "type": "other",
+        "fact": "The app's three core functions are finding a bike, unlocking it at the dock, and returning it and paying.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109a.s0024",
+          "SY0109a.s0025"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109a.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109a.f6",
+        "type": "other",
+        "fact": "The app must support both iOS and Android, per the brief.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109a.s0071",
+          "SY0109a.s0072",
+          "SY0109a.s0073"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109a.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109a.f7",
+        "type": "decision",
+        "fact": "Payment setup will happen at sign-up, so that at the dock the rider only unlocks.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109a.s0060",
+          "SY0109a.s0061",
+          "SY0109a.s0062",
+          "SY0109a.s0063"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109a.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109a.f8",
+        "type": "decision",
+        "fact": "Unlocking should take about one tap after opening the app, with no menus.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109a.s0056",
+          "SY0109a.s0057"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109a.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109a.f9",
+        "type": "unagreed_proposal",
+        "fact": "The industrial designer proposed a leaderboard of kilometres ridden. The project manager parked it as out of scope for the pilot.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109a.s0064",
+          "SY0109a.s0065",
+          "SY0109a.s0066",
+          "SY0109a.s0067",
+          "SY0109a.s0068",
+          "SY0109a.s0069"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109a.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109a.f10",
+        "type": "action_item",
+        "fact": "The industrial designer will ask the dock supplier about the phone-to-dock connection method and whether the dock has a screen.",
+        "agreed": null,
+        "related_action_item": "SY0109a.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109a.s0076",
+          "SY0109a.s0079",
+          "SY0109a.s0080"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109a.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109a.f11",
+        "type": "action_item",
+        "fact": "The user interface designer will sketch rough wireframes of the find, unlock and return flows.",
+        "agreed": null,
+        "related_action_item": "SY0109a.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109a.s0081",
+          "SY0109a.s0082"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109a.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109a.f12",
+        "type": "action_item",
+        "fact": "The marketing expert will send a survey to the pilot waiting list, including one leaderboard question.",
+        "agreed": null,
+        "related_action_item": "SY0109a.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109a.s0085",
+          "SY0109a.s0086",
+          "SY0109a.s0108",
+          "SY0109a.s0109"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109a.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109a.f13",
+        "type": "action_item",
+        "fact": "The marketing expert will review competitor apps and their reviews.",
+        "agreed": null,
+        "related_action_item": "SY0109a.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109a.s0087",
+          "SY0109a.s0088"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109a.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109a.f14",
+        "type": "action_item",
+        "fact": "The project manager will send the minutes, the brief and the shared folder link.",
+        "agreed": null,
+        "related_action_item": "SY0109a.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109a.s0027",
+          "SY0109a.s0037",
+          "SY0109a.s0104"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_SELF_CORRECTION",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_SELF_CORRECTION",
+        "segments": [
+          "SY0109a.s0019",
+          "SY0109a.s0020"
+        ],
+        "note": "The project manager says the pilot covers forty docking stations, then immediately corrects himself to fourteen."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_PLAN_CHANGE",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_PLAN_CHANGE",
+        "segments": [
+          "SY0109a.s0030",
+          "SY0109a.s0031",
+          "SY0109a.s0032",
+          "SY0109a.s0033",
+          "SY0109a.s0034",
+          "SY0109a.s0089",
+          "SY0109a.s0090",
+          "SY0109a.s0092",
+          "SY0109a.s0093",
+          "SY0109a.s0094",
+          "SY0109a.s0096",
+          "SY0109a.s0097",
+          "SY0109a.s0098",
+          "SY0109a.s0099"
+        ],
+        "note": "The team agrees to meet Wednesday at nine, then later moves the meeting to Friday at ten so the survey results will be in."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,1586 @@
+{
+  "meeting_id": "SY0108c",
+  "raw_sha256": "b48de78549edb90bd4ad7c9b7a00097ad50224f0f975fec02ed0682594f51591",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the conceptual design meeting and welcomed back the marketing expert, who confirmed she had received the minutes of the functional design meeting.",
+        "The marketing expert presented her survey: eight of ten frequent cooks replied. Their main complaint is touching buttons with dirty hands, five had missed timers because of extractor fans or radios, they want a timer that is easy to wipe clean and can stick to the fridge, and two timers is enough. Competing basic timers cost 8 to 15 euros and smart speakers over 50 euros, so the 20-euro price fits in between.",
+        "The industrial designer reported that the sample speaker is audible from two metres on low and middle extractor settings but borderline on the highest, and the team decided to keep the speaker and use a higher-pitched pulsing alarm.",
+        "The team discussed the casing and the wake word. The casing will be plain injection-moulded plastic at about 1.20 euros, with a 0.15-euro magnet on the back, in a rounded puck shape, white with one accent colour, bringing the estimated cost to 8.35 euros. The survey participants preferred the single word 'timer', but the team chose 'hey timer' because a single word would cause false triggers.",
+        "The user interface designer presented the updated command list, eighteen phrases plus the wake word, and a two-line display sketch with a flashing line for a ringing timer and a microphone icon; a battery icon was added. The detailed design meeting was moved from Monday at 14:00 to Tuesday at 10:00."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The user interface designer will design a higher-pitched pulsing alarm beep pattern (first asked of the industrial designer, then taken over by the user interface designer).",
+        "The industrial designer will build a foam or clay mock-up of the puck-shaped casing for the detailed design meeting.",
+        "The industrial designer will get a firm supplier quote for the casing including the magnet.",
+        "The user interface designer will finish the display layout, including the battery and microphone icons.",
+        "The marketing expert will show two or three accent colour options to the survey participants and pick one.",
+        "The marketing expert will write up the competitor prices for the final report.",
+        "The project manager will write the minutes and send a new invitation for Tuesday at 10:00."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The sample speaker will be kept; the alarm will use a higher-pitched pulsing beep pattern instead of a bigger speaker.",
+        "The wake word will be 'hey timer'.",
+        "The casing will be plain injection-moulded plastic without a rubber edge, so it is easy to wipe clean.",
+        "A small magnet will be fitted to the back of the casing so the timer can stick to a fridge.",
+        "The casing will be a rounded puck shape.",
+        "The casing will be white with one accent colour; a range of colours is left for later.",
+        "The display will show two lines, one per timer, with the ringing timer's line flashing, a microphone icon when listening and a battery icon.",
+        "The current two-line LCD will be kept and checked on the mock-up.",
+        "The detailed design meeting will be held on Tuesday at 10:00 instead of Monday at 14:00."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The alarm is only borderline audible on the highest extractor fan setting; whether the pulsing pattern solves this is untested.",
+        "The casing cost of about 1.20 euros and the total of about 8.35 euros are estimates until the supplier gives a firm quote.",
+        "The accent colour has not been chosen, and a wider colour range was postponed because each colour adds tooling cost.",
+        "Readability of the LCD from across the kitchen is uncertain; a larger display was not adopted because of cost and fit."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108c.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108c.ai1",
+        "description": "Design a higher-pitched pulsing alarm beep pattern.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "reassigned",
+        "previous_owners": [
+          "B"
+        ],
+        "history": [
+          {
+            "segment": "SY0108c.s0038",
+            "event": "assigned",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0108c.s0040",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0108c.s0042",
+            "event": "reassigned",
+            "by": "A",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0108c.s0113",
+            "event": "restated",
+            "by": "A",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108c.s0038",
+          "SY0108c.s0039",
+          "SY0108c.s0040",
+          "SY0108c.s0041",
+          "SY0108c.s0042",
+          "SY0108c.s0113",
+          "SY0108c.s0114"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108c.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108c.ai2",
+        "description": "Build a foam or clay mock-up of the puck-shaped casing for the detailed design meeting.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0108c.s0110",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0108c.s0111",
+            "event": "accepted",
+            "by": "A",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108c.s0109",
+          "SY0108c.s0110",
+          "SY0108c.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108c.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108c.ai3",
+        "description": "Get a firm supplier quote for the casing including the magnet.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0108c.s0111",
+            "event": "assigned",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0108c.s0112",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108c.s0111",
+          "SY0108c.s0112"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108c.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108c.ai4",
+        "description": "Finish the display layout, including the battery and microphone icons.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0108c.s0113",
+            "event": "assigned",
+            "by": "A",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0108c.s0114",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108c.s0113",
+          "SY0108c.s0114"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108c.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108c.ai5",
+        "description": "Show two or three accent colour options to the survey participants and pick the accent colour.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0108c.s0116",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0108c.s0117",
+            "event": "accepted",
+            "by": "A",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108c.s0115",
+          "SY0108c.s0116",
+          "SY0108c.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108c.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108c.ai6",
+        "description": "Write up the competitor prices for the final report.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0108c.s0118",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108c.s0118"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0108c.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0108c.ai7",
+        "description": "Write the minutes and send a new invitation for the Tuesday 10:00 meeting.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0108c.s0119",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0108c.s0125",
+            "event": "restated",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0108c.s0119",
+          "SY0108c.s0125"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f1",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager asked whether the marketing expert got the minutes from the functional design meeting; she confirmed and noted the decisions on battery power and the single button.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0108b",
+        "evidence_segments": [
+          "SY0108c.s0006",
+          "SY0108c.s0007"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert said she sent the survey to ten people as agreed at the kickoff meeting, and eight replied.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0108a",
+        "evidence_segments": [
+          "SY0108c.s0011"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer noted that the survey supports the two-timer limit decided at the previous meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0108b",
+        "evidence_segments": [
+          "SY0108c.s0022",
+          "SY0108c.s0023",
+          "SY0108c.s0024"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f4",
+        "type": "other",
+        "fact": "The marketing expert emailed the survey summary the evening before the meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0012"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f5",
+        "type": "other",
+        "fact": "Survey finding: the biggest complaint was touching buttons with dirty hands; five of eight had missed a timer because of an extractor fan or radio.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0014",
+          "SY0108c.s0017"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f6",
+        "type": "other",
+        "fact": "Competing basic digital timers cost 8 to 15 euros and smart speakers cost over 50 euros and need wifi; the team judged the 20-euro price fine.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0025",
+          "SY0108c.s0026",
+          "SY0108c.s0027"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f7",
+        "type": "other",
+        "fact": "The industrial designer tested the sample speaker by his cooker hood: fine from two metres on low and middle settings, borderline on the highest.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0029",
+          "SY0108c.s0030",
+          "SY0108c.s0031",
+          "SY0108c.s0033"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f8",
+        "type": "decision",
+        "fact": "The team will keep the sample speaker and use a higher-pitched pulsing alarm pattern.",
+        "agreed": true,
+        "related_action_item": "SY0108c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0034",
+          "SY0108c.s0035",
+          "SY0108c.s0036",
+          "SY0108c.s0037",
+          "SY0108c.s0038"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f9",
+        "type": "action_item",
+        "fact": "The user interface designer took over designing the pulsing beep pattern after it was first asked of the industrial designer.",
+        "agreed": null,
+        "related_action_item": "SY0108c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0038",
+          "SY0108c.s0040",
+          "SY0108c.s0042"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f10",
+        "type": "other",
+        "fact": "Plain injection-moulded plastic casing costs about 1.20 euros per unit, bringing the total to about 8.20 euros, or 8.35 with the magnet.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0044",
+          "SY0108c.s0045",
+          "SY0108c.s0061",
+          "SY0108c.s0064"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f11",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert proposed a soft rubber edge; it was not adopted because it adds 0.40 euros and is harder to wipe clean.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0047",
+          "SY0108c.s0048",
+          "SY0108c.s0049"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f12",
+        "type": "decision",
+        "fact": "A small magnet, about 0.15 euros, will be fitted to the back of the casing.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0060",
+          "SY0108c.s0061",
+          "SY0108c.s0063",
+          "SY0108c.s0064",
+          "SY0108c.s0065"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f13",
+        "type": "other",
+        "fact": "In the wake word test five of eight survey participants preferred 'timer', two 'hey timer' and one 'okay timer'.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0052",
+          "SY0108c.s0053",
+          "SY0108c.s0067"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f14",
+        "type": "decision",
+        "fact": "The wake word will be 'hey timer'; the single word 'timer' was rejected because it would cause false triggers.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0054",
+          "SY0108c.s0055",
+          "SY0108c.s0058",
+          "SY0108c.s0069",
+          "SY0108c.s0070",
+          "SY0108c.s0071",
+          "SY0108c.s0072",
+          "SY0108c.s0073"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f15",
+        "type": "decision",
+        "fact": "The casing will be a rounded puck shape in plain white plastic with a magnet and no rubber edge.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0075",
+          "SY0108c.s0080",
+          "SY0108c.s0081"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f16",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert proposed a range of bright colours; it was replaced by white with one accent colour because each colour adds tooling cost.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0076",
+          "SY0108c.s0077",
+          "SY0108c.s0078",
+          "SY0108c.s0079"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f17",
+        "type": "decision",
+        "fact": "The casing will be white with one accent colour.",
+        "agreed": true,
+        "related_action_item": "SY0108c.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0078",
+          "SY0108c.s0079"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f18",
+        "type": "other",
+        "fact": "The updated command list has eighteen phrases plus the wake word, leaving two spare.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0093",
+          "SY0108c.s0094",
+          "SY0108c.s0095"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f19",
+        "type": "decision",
+        "fact": "The display will show two lines, one per timer, with the ringing line flashing, a microphone icon when listening, and a battery icon.",
+        "agreed": true,
+        "related_action_item": "SY0108c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0097",
+          "SY0108c.s0098",
+          "SY0108c.s0100",
+          "SY0108c.s0101",
+          "SY0108c.s0102"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f20",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer proposed a larger display; it was not adopted because it costs about 0.50 euros more and fits the puck less easily.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0105",
+          "SY0108c.s0106",
+          "SY0108c.s0107",
+          "SY0108c.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f21",
+        "type": "decision",
+        "fact": "The current two-line LCD will be kept and checked on the mock-up.",
+        "agreed": true,
+        "related_action_item": "SY0108c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0104",
+          "SY0108c.s0107",
+          "SY0108c.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f22",
+        "type": "action_item",
+        "fact": "The industrial designer will build a foam or clay mock-up of the puck.",
+        "agreed": null,
+        "related_action_item": "SY0108c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0110",
+          "SY0108c.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f23",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f23",
+        "type": "action_item",
+        "fact": "The industrial designer will get a firm casing quote including the magnet.",
+        "agreed": null,
+        "related_action_item": "SY0108c.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0111",
+          "SY0108c.s0112"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f24",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f24",
+        "type": "action_item",
+        "fact": "The user interface designer will finish the display layout with battery and microphone icons.",
+        "agreed": null,
+        "related_action_item": "SY0108c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0113",
+          "SY0108c.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f25",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f25",
+        "type": "action_item",
+        "fact": "The marketing expert will show accent colour options to the survey participants.",
+        "agreed": null,
+        "related_action_item": "SY0108c.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0116",
+          "SY0108c.s0117"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f26",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f26",
+        "type": "action_item",
+        "fact": "The marketing expert will write up competitor prices for the final report.",
+        "agreed": null,
+        "related_action_item": "SY0108c.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0118"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f27",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f27",
+        "type": "action_item",
+        "fact": "The project manager will write the minutes and send a new invitation.",
+        "agreed": null,
+        "related_action_item": "SY0108c.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0119",
+          "SY0108c.s0125"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0108c.f28",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0108c.f28",
+        "type": "plan_change",
+        "fact": "The detailed design meeting was first planned for Monday at 14:00 and moved to Tuesday at 10:00 because the marketing expert has a dentist appointment on Monday afternoon.",
+        "agreed": null,
+        "related_action_item": "SY0108c.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0108c.s0120",
+          "SY0108c.s0121",
+          "SY0108c.s0122",
+          "SY0108c.s0123",
+          "SY0108c.s0124",
+          "SY0108c.s0125"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_OFF_TOPIC_TANGENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_OFF_TOPIC_TANGENT",
+        "segments": [
+          "SY0108c.s0082",
+          "SY0108c.s0083",
+          "SY0108c.s0084",
+          "SY0108c.s0085",
+          "SY0108c.s0086",
+          "SY0108c.s0087",
+          "SY0108c.s0088",
+          "SY0108c.s0089",
+          "SY0108c.s0090",
+          "SY0108c.s0091"
+        ],
+        "note": "Ten-segment tangent about the broken office coffee machine and café prices before the display presentation."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_INTERLEAVED_TOPICS",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_INTERLEAVED_TOPICS",
+        "segments": [
+          "SY0108c.s0044",
+          "SY0108c.s0050",
+          "SY0108c.s0060",
+          "SY0108c.s0066",
+          "SY0108c.s0074"
+        ],
+        "note": "Discussion switches casing (44) to wake word (50), back to casing magnet (60), back to wake word decision (66), and back to casing shape and colour (74)."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

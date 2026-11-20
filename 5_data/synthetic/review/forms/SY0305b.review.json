@@ -1,0 +1,1234 @@
+{
+  "meeting_id": "SY0305b",
+  "raw_sha256": "c35fa1c6e887cc064a1d764eff9a6bc411f7d472c4047f584efd8a6708ac56d9",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the functional design meeting, noted that the marketing expert was absent because he was interviewing staff at the Wilson Street branch, and confirmed that the industrial designer had received her assignment by email.",
+        "The industrial designer presented a rough component costing: RFID pad, touchscreen, PC board, receipt printer and a casing with a removable printable front panel came to about 1,100 euros, rising to about 1,185 euros once a barcode scanner and a PIN keypad were added, which is within the 1,400 euro limit.",
+        "The team agreed to combine RFID stack processing with a small barcode scanner for libraries that have not switched to RFID.",
+        "The user interface designer presented the borrow, return and account functions. A fine payment feature was proposed but rejected because a card payment terminal would push the cost over the limit.",
+        "The touchscreen-only question deferred from the kickoff was settled. The project manager relayed the marketing expert's notes that older users struggle with touchscreens and that competitor kiosks sell for 4,000 to 6,000 euros, and the team agreed on a touchscreen with a physical keypad for PIN entry only.",
+        "The project manager assigned the absent marketing expert a research task and closed the meeting with actions for next time."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will get firm supplier quotes for all components, including the barcode scanner and PIN keypad, and will check the front panel price with the printing supplier.",
+        "The user interface designer will produce mockups of the borrow and return screens, including a large text mode.",
+        "The marketing expert (absent) is to find out roughly what share of libraries still use barcodes and whether libraries require patrons to use a PIN. The project manager assigned this task.",
+        "The project manager will email the marketing expert his task and will send out the minutes."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The kiosk will use an RFID pad for stack processing plus a small barcode scanner for libraries still on barcodes.",
+        "Fine payment will not be included on the kiosk in this version. Users can view fines but must pay at the desk.",
+        "The kiosk will use a touchscreen for all interaction plus a physical keypad for PIN entry only."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "Where returned books go after check-in is unresolved, because a return bin with a sorter would be a separate, expensive machine.",
+        "Barcode-only libraries will have to scan books one at a time rather than processing a stack.",
+        "The share of libraries still using barcodes and whether libraries use patron PINs are unknown until the marketing expert reports back.",
+        "The cost figures are rough estimates pending firm supplier quotes, including the front panel price."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0305b.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0305b.ai1",
+        "description": "Get firm supplier quotes for all hardware components including the barcode scanner and PIN keypad, and check the removable front panel price with the printing supplier",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0305b.s0109",
+            "event": "assigned",
+            "by": "C",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0305b.s0110",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0305b.s0095",
+          "SY0305b.s0109",
+          "SY0305b.s0110"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0305b.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0305b.ai2",
+        "description": "Produce mockups of the borrow and return screens, including a large text mode",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0305b.s0097",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0305b.s0112",
+            "event": "assigned",
+            "by": "C",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0305b.s0113",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0305b.s0097",
+          "SY0305b.s0112",
+          "SY0305b.s0113",
+          "SY0305b.s0114",
+          "SY0305b.s0115"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0305b.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0305b.ai3",
+        "description": "Mock up a fine payment screen for the kiosk",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "dropped",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0305b.s0063",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0305b.s0064",
+            "event": "accepted",
+            "by": "C",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0305b.s0074",
+            "event": "dropped",
+            "by": "C",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0305b.s0061",
+          "SY0305b.s0063",
+          "SY0305b.s0064",
+          "SY0305b.s0070",
+          "SY0305b.s0072",
+          "SY0305b.s0074",
+          "SY0305b.s0075",
+          "SY0305b.s0114",
+          "SY0305b.s0115"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0305b.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0305b.ai4",
+        "description": "Find out roughly what share of libraries still use barcodes and whether libraries require patrons to use a PIN",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0305b.s0102",
+            "event": "assigned",
+            "by": "C",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0305b.s0103",
+            "event": "restated",
+            "by": "C",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0305b.s0099",
+          "SY0305b.s0101",
+          "SY0305b.s0102",
+          "SY0305b.s0103",
+          "SY0305b.s0105",
+          "SY0305b.s0107"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0305b.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0305b.ai5",
+        "description": "Email the absent marketing expert to tell him about his new task",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0305b.s0105",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0305b.s0117",
+            "event": "restated",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0305b.s0105",
+          "SY0305b.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0305b.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0305b.ai6",
+        "description": "Send out the meeting minutes",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0305b.s0117",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0305b.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305b.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305b.f1",
+        "type": "absence",
+        "fact": "Tomasz (B), the marketing expert, was absent from the functional design meeting because he was at the Wilson Street branch interviewing staff.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305b.s0005",
+          "SY0305b.s0006"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305b.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305b.f2",
+        "type": "action_item",
+        "fact": "While he was absent, Tomasz (B) was given the task of finding out roughly what share of libraries still use barcodes and whether libraries require patrons to use a PIN.",
+        "agreed": null,
+        "related_action_item": "SY0305b.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305b.s0102",
+          "SY0305b.s0103"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305b.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305b.f3",
+        "type": "other",
+        "fact": "Helen (C), the project manager, assigned the barcode and PIN research task to the absent Tomasz and said she would email him about it.",
+        "agreed": null,
+        "related_action_item": "SY0305b.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305b.s0102",
+          "SY0305b.s0103",
+          "SY0305b.s0105",
+          "SY0305b.s0117"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305b.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305b.f4",
+        "type": "action_item",
+        "fact": "Helen (C) will email Tomasz (B) to tell him about his new task.",
+        "agreed": null,
+        "related_action_item": "SY0305b.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305b.s0105",
+          "SY0305b.s0117"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305b.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305b.f5",
+        "type": "action_item_removed",
+        "fact": "Kofi (D) offered to mock up a fine payment screen and Helen (C) accepted, but later in the meeting Helen cancelled the task after fine payment was ruled out.",
+        "agreed": null,
+        "related_action_item": "SY0305b.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305b.s0063",
+          "SY0305b.s0064",
+          "SY0305b.s0074",
+          "SY0305b.s0075"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305b.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305b.f6",
+        "type": "decision",
+        "fact": "The team agreed the kiosk will have an RFID pad for stack processing plus a small barcode scanner for libraries still using barcodes.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305b.s0036",
+          "SY0305b.s0040",
+          "SY0305b.s0041",
+          "SY0305b.s0042",
+          "SY0305b.s0043",
+          "SY0305b.s0044"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305b.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305b.f7",
+        "type": "decision",
+        "fact": "The team agreed there will be no fine payment on the kiosk in this version because a card payment terminal would push the cost over 1,400 euros. Users can view fines but pay at the desk.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305b.s0067",
+          "SY0305b.s0070",
+          "SY0305b.s0071",
+          "SY0305b.s0072"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305b.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305b.f8",
+        "type": "decision",
+        "fact": "The team agreed the kiosk will use a touchscreen for everything plus a physical keypad for PIN entry only.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305b.s0088",
+          "SY0305b.s0090",
+          "SY0305b.s0091",
+          "SY0305b.s0092",
+          "SY0305b.s0093",
+          "SY0305b.s0094"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305b.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305b.f9",
+        "type": "unagreed_proposal",
+        "fact": "Kofi (D) again argued for a touchscreen-only kiosk with no buttons, but the team instead chose a touchscreen with a PIN keypad.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0305a",
+        "evidence_segments": [
+          "SY0305b.s0078",
+          "SY0305b.s0082"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305b.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305b.f10",
+        "type": "plan_change",
+        "fact": "The touchscreen-only question deferred at the kickoff was resolved in favour of a touchscreen plus a physical PIN keypad, for accessibility.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0305a",
+        "evidence_segments": [
+          "SY0305b.s0077",
+          "SY0305b.s0088",
+          "SY0305b.s0093",
+          "SY0305b.s0094"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305b.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305b.f11",
+        "type": "reference_to_prior_meeting",
+        "fact": "Helen (C) recalled that at the kickoff Kofi had proposed touchscreen only with no buttons and the question was parked until this meeting. She also noted that Tomasz had raised PINs then.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0305a",
+        "evidence_segments": [
+          "SY0305b.s0077",
+          "SY0305b.s0080"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305b.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305b.f12",
+        "type": "reference_to_prior_meeting",
+        "fact": "The team recalled that processing a stack of books at once was agreed as a must at the kickoff, and that RFID versus barcode had been left open there.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0305a",
+        "evidence_segments": [
+          "SY0305b.s0031",
+          "SY0305b.s0034",
+          "SY0305b.s0035"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305b.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305b.f13",
+        "type": "reference_to_prior_meeting",
+        "fact": "Priya (A) confirmed she had received Helen's email with the kickoff notes and her working design assignment.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0305a",
+        "evidence_segments": [
+          "SY0305b.s0008",
+          "SY0305b.s0010",
+          "SY0305b.s0011"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305b.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305b.f14",
+        "type": "other",
+        "fact": "Priya estimated about 1,100 euros for RFID pad, touchscreen, PC board, receipt printer and casing with front panel, about 1,160 with the barcode scanner and about 1,185 with the PIN keypad.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305b.s0018",
+          "SY0305b.s0020",
+          "SY0305b.s0021",
+          "SY0305b.s0022",
+          "SY0305b.s0024",
+          "SY0305b.s0025",
+          "SY0305b.s0028",
+          "SY0305b.s0032",
+          "SY0305b.s0045",
+          "SY0305b.s0081",
+          "SY0305b.s0095",
+          "SY0305b.s0096"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305b.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305b.f15",
+        "type": "other",
+        "fact": "Tomasz's notes reported that older users at Wilson Street struggle with touchscreens and that competitor kiosks sell for 4,000 to 6,000 euros.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305b.s0084",
+          "SY0305b.s0085"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305b.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305b.f16",
+        "type": "other",
+        "fact": "Where returned books go after check-in was left open, since a return bin with a sorter would be a separate expensive machine.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305b.s0055",
+          "SY0305b.s0056",
+          "SY0305b.s0057",
+          "SY0305b.s0058",
+          "SY0305b.s0118"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305b.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305b.f17",
+        "type": "action_item",
+        "fact": "Priya (A) will get firm quotes on all components, including the scanner and keypad, and check the front panel price.",
+        "agreed": null,
+        "related_action_item": "SY0305b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305b.s0109",
+          "SY0305b.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305b.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305b.f18",
+        "type": "action_item",
+        "fact": "Kofi (D) will mock up the borrow and return screens with a large text mode.",
+        "agreed": null,
+        "related_action_item": "SY0305b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305b.s0097",
+          "SY0305b.s0112",
+          "SY0305b.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305b.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305b.f19",
+        "type": "action_item",
+        "fact": "Helen (C) will send out the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0305b.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305b.s0117"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_ACTION_REMOVED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_ACTION_REMOVED",
+        "segments": [
+          "SY0305b.s0061",
+          "SY0305b.s0062",
+          "SY0305b.s0063",
+          "SY0305b.s0064",
+          "SY0305b.s0065",
+          "SY0305b.s0066",
+          "SY0305b.s0067",
+          "SY0305b.s0068",
+          "SY0305b.s0069",
+          "SY0305b.s0070",
+          "SY0305b.s0071",
+          "SY0305b.s0072",
+          "SY0305b.s0074",
+          "SY0305b.s0075"
+        ],
+        "note": "Kofi offers to mock up a fine payment screen and Helen accepts. After the payment terminal cost is raised, fine payment is ruled out and Helen explicitly scraps the task."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_TASK_TO_ABSENT",
+        "segments": [
+          "SY0305b.s0005",
+          "SY0305b.s0099",
+          "SY0305b.s0101",
+          "SY0305b.s0102",
+          "SY0305b.s0103",
+          "SY0305b.s0105",
+          "SY0305b.s0117"
+        ],
+        "note": "Helen assigns the absent Tomasz, who is at Wilson Street, the research task on barcode share and PIN use, and says she will email him."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

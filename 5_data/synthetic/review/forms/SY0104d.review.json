@@ -1,0 +1,1762 @@
+{
+  "meeting_id": "SY0104d",
+  "raw_sha256": "4f3a78aecb7a635aa7f3a14ba7609e34faf4770ccbdba3b01ff4f77ad13d3ef3",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting, explained that the marketing expert was absent because she was presenting the scheme at a café chain's regional managers' day in Utrecht, and confirmed he had sent the previous minutes.",
+        "The industrial designer presented printed mock-ups of the 250 ml and 350 ml cups with the shared lid. A stacking test showed that the 250 ml cups jam because their ridge is too shallow, so the team agreed to deepen it to two millimetres. The push-fit lid seals well but is hard to remove, so the team agreed to add a small tab opposite the sip hole. The industrial designer also reported a quote of forty cents per spare lid.",
+        "The user interface designer presented the cup markings and the return flow. The data matrix code sits in the flat centre of the base, and the logo and embossed return line go on the side. The manual fallback code has eight characters with look-alike characters removed. The human-readable code was first drafted for the side of the cup and was moved to the base, next to the data matrix, so all codes are etched in one step. A 'no lid' button on the till screen will log lidless returns without changing the refund.",
+        "The team discussed what to pass on to the absent marketing expert: the price cafés should pay for spare lids, which scanners the chains use, the charcoal colour check, and photos of the mock-ups. The team signed off the design, pending her findings on colour and scanners. Costs remain at 1.65 and 1.80 euros per cup and lid, well under the three-euro target."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will update the mould specification, with a two-millimetre ridge on the 250 ml cup and a tab on the lid, and send it to the supplier.",
+        "The industrial designer will photograph the mock-ups and send the photos to the project manager to pass on to the marketing expert.",
+        "The user interface designer will finish the marking artwork, with both codes on the base, by Friday.",
+        "The user interface designer will finish the return flow, including manual entry and the 'no lid' button, by Friday.",
+        "The marketing expert (absent) is to decide what cafés pay for spare lids. This task was first given to the industrial designer.",
+        "The marketing expert (absent) still has to find out which scanners the chains use and check the charcoal colour with them.",
+        "The project manager will brief the marketing expert tomorrow and chase her on these points.",
+        "The project manager will monitor the lid-loss numbers from the 'no lid' log once the pilot starts.",
+        "The project manager will write up the minutes and the final report.",
+        "Nobody took on the barista instruction card."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The ridge on the 250 ml cup will be deepened from about one to two millimetres so the small cups stop jamming, at no extra cost.",
+        "The lid gets a small tab opposite the sip hole for removal; a textured grip band was not adopted.",
+        "The data matrix code, about ten millimetres square, goes in the flat centre of the base inside the ridge.",
+        "The human-readable fallback code goes on the base around the data matrix, not on the side. The side carries only the logo and the embossed 'return to any café' line.",
+        "The manual code has eight characters and excludes look-alike characters such as O/0 and I/1.",
+        "A 'no lid' button after the scan logs lidless returns; the full refund is unchanged.",
+        "There will be no second round of mock-ups; the supplier's pre-production samples will be used to check stacking.",
+        "Charcoal stays the scheme colour unless the chains raise a real problem.",
+        "The design is signed off, pending the marketing expert's findings on colour and scanners."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "It is still unknown whether every café chain has 2D scanners. With older line scanners, baristas would have to type in every code.",
+        "The charcoal colour has not yet been checked with the café chains.",
+        "The price cafés should pay for spare lids, which cost forty cents each from the supplier, is still open.",
+        "Nobody was assigned to make a barista instruction card.",
+        "The two-millimetre printed code has only been tested for readability on paper."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0104d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0104d.ai1",
+        "description": "Update the mould specification (250 ml ridge to two millimetres, tab on the lid) and send it to the supplier.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0104d.s0024",
+            "event": "proposed",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0104d.s0083",
+            "event": "assigned",
+            "by": "B",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0104d.s0084",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0104d.s0023",
+          "SY0104d.s0024",
+          "SY0104d.s0047",
+          "SY0104d.s0051",
+          "SY0104d.s0081",
+          "SY0104d.s0083",
+          "SY0104d.s0084"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0104d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0104d.ai2",
+        "description": "Build a second round of mock-ups with the deeper ridge and the lid tab.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "dropped",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0104d.s0079",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0104d.s0080",
+            "event": "dropped",
+            "by": "B",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0104d.s0079",
+          "SY0104d.s0080",
+          "SY0104d.s0081",
+          "SY0104d.s0082"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0104d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0104d.ai3",
+        "description": "Decide what cafés should be charged for spare lids.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "reassigned",
+        "previous_owners": [
+          "C"
+        ],
+        "history": [
+          {
+            "segment": "SY0104d.s0057",
+            "event": "assigned",
+            "by": "B",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0104d.s0060",
+            "event": "reassigned",
+            "by": "B",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0104d.s0110",
+            "event": "restated",
+            "by": "B",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0104d.s0057",
+          "SY0104d.s0058",
+          "SY0104d.s0059",
+          "SY0104d.s0060",
+          "SY0104d.s0062",
+          "SY0104d.s0110"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0104d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0104d.ai4",
+        "description": "Finish the marking artwork with the data matrix and the human-readable code both on the base.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0104d.s0092",
+            "event": "assigned",
+            "by": "B",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0104d.s0093",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0104d.s0075",
+          "SY0104d.s0092",
+          "SY0104d.s0093"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0104d.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0104d.ai5",
+        "description": "Finish the return flow with manual code entry and the 'no lid' button.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0104d.s0092",
+            "event": "assigned",
+            "by": "B",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0104d.s0093",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0104d.s0064",
+          "SY0104d.s0086",
+          "SY0104d.s0087",
+          "SY0104d.s0092",
+          "SY0104d.s0093"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0104d.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0104d.ai6",
+        "description": "Monitor the number of lids lost under the full-refund policy, using the 'no lid' log once the pilot starts.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0104d.s0090",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0104d.s0088",
+          "SY0104d.s0089",
+          "SY0104d.s0090"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0104d.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0104d.ai7",
+        "description": "Brief the absent marketing expert tomorrow on spare lid pricing, scanners and the colour check, and chase her on these.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0104d.s0099",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0104d.s0109",
+            "event": "restated",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0104d.s0099",
+          "SY0104d.s0109",
+          "SY0104d.s0110",
+          "SY0104d.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0104d.ai8",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0104d.ai8",
+        "description": "Find out which scanners the café chains use at their tills (carried over).",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0104d.s0099",
+            "event": "restated",
+            "by": "B",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0104d.s0095",
+          "SY0104d.s0096",
+          "SY0104d.s0099",
+          "SY0104d.s0110"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0104d.ai9",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0104d.ai9",
+        "description": "Check the charcoal scheme colour with the café chains (carried over).",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0104d.s0100",
+            "event": "restated",
+            "by": "B",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0104d.s0100",
+          "SY0104d.s0103",
+          "SY0104d.s0110"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0104d.ai10",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0104d.ai10",
+        "description": "Photograph the mock-ups and send the photos to the project manager to pass on to the marketing expert.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0104d.s0112",
+            "event": "proposed",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0104d.s0114",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0104d.s0112",
+          "SY0104d.s0113",
+          "SY0104d.s0114",
+          "SY0104d.s0115"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0104d.ai11",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0104d.ai11",
+        "description": "Make an instruction card for baristas covering the scan and the 'no lid' button.",
+        "owner": null,
+        "owner_unclear": true,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0104d.s0105",
+            "event": "proposed",
+            "by": "D",
+            "owner": null
+          }
+        ],
+        "evidence_segments": [
+          "SY0104d.s0105",
+          "SY0104d.s0106",
+          "SY0104d.s0107",
+          "SY0104d.s0108"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0104d.ai12",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0104d.ai12",
+        "description": "Write up the minutes and the final report.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0104d.s0122",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0104d.s0122"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f1",
+        "type": "absence",
+        "fact": "The marketing expert (Priya) was absent because she was presenting the scheme at a café chain's regional managers' day in Utrecht.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0005",
+          "SY0104d.s0006",
+          "SY0104d.s0007"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager confirmed he had sent round the minutes of the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0104c",
+        "evidence_segments": [
+          "SY0104d.s0009",
+          "SY0104d.s0010"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer recalled that a mock-up had been judged too early at the kickoff meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0104a",
+        "evidence_segments": [
+          "SY0104d.s0016"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f4",
+        "type": "reference_to_prior_meeting",
+        "fact": "The lid was built as agreed in the conceptual design meeting: push-fit, with a sip hole and no closure.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0104c",
+        "evidence_segments": [
+          "SY0104d.s0042"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f5",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer noted that lid-loss monitoring had been left without an owner in the previous meeting.",
+        "agreed": null,
+        "related_action_item": "SY0104d.ai6",
+        "refers_to_meeting": "SY0104c",
+        "evidence_segments": [
+          "SY0104d.s0089",
+          "SY0104d.s0090"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f6",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer recalled the chain-branding proposal from the previous meeting when the open colour check came up.",
+        "agreed": null,
+        "related_action_item": "SY0104d.ai9",
+        "refers_to_meeting": "SY0104c",
+        "evidence_segments": [
+          "SY0104d.s0101",
+          "SY0104d.s0102",
+          "SY0104d.s0103"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f7",
+        "type": "decision",
+        "fact": "The ridge on the 250 ml cup will be deepened from about one to two millimetres so the small cups do not jam, at no extra cost.",
+        "agreed": true,
+        "related_action_item": "SY0104d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0022",
+          "SY0104d.s0023",
+          "SY0104d.s0024",
+          "SY0104d.s0025",
+          "SY0104d.s0026",
+          "SY0104d.s0027",
+          "SY0104d.s0083"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f8",
+        "type": "decision",
+        "fact": "A small tab is added to the lid edge, opposite the sip hole, to make the lid easier to remove.",
+        "agreed": true,
+        "related_action_item": "SY0104d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0043",
+          "SY0104d.s0045",
+          "SY0104d.s0047",
+          "SY0104d.s0050",
+          "SY0104d.s0051",
+          "SY0104d.s0053"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f9",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer suggested a textured grip band around the lid. The industrial designer objected because of mould work and dishwasher dirt, and the tab was chosen instead.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0048",
+          "SY0104d.s0049",
+          "SY0104d.s0050",
+          "SY0104d.s0051",
+          "SY0104d.s0052"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f10",
+        "type": "decision",
+        "fact": "The data matrix code, about ten millimetres square, sits in the flat centre of the base inside the stacking ridge.",
+        "agreed": true,
+        "related_action_item": "SY0104d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0030",
+          "SY0104d.s0031",
+          "SY0104d.s0032",
+          "SY0104d.s0033",
+          "SY0104d.s0034"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f11",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer proposed putting the human-readable code on the side of the cup near the bottom. The industrial designer raised concerns because the side is moulded, and the idea was not adopted.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0036",
+          "SY0104d.s0037",
+          "SY0104d.s0038",
+          "SY0104d.s0039",
+          "SY0104d.s0040"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f12",
+        "type": "plan_change",
+        "fact": "The human-readable code moved from the side of the cup, as first drafted, to the base around the data matrix, so all codes are etched in one step.",
+        "agreed": null,
+        "related_action_item": "SY0104d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0036",
+          "SY0104d.s0071",
+          "SY0104d.s0072",
+          "SY0104d.s0075",
+          "SY0104d.s0078"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f13",
+        "type": "decision",
+        "fact": "The cup side carries only the scheme logo and the embossed 'return to any café' line.",
+        "agreed": true,
+        "related_action_item": "SY0104d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0035",
+          "SY0104d.s0075"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f14",
+        "type": "decision",
+        "fact": "The manual fallback code has eight characters and excludes look-alike characters such as O/0 and I/1.",
+        "agreed": true,
+        "related_action_item": "SY0104d.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0064",
+          "SY0104d.s0065",
+          "SY0104d.s0066",
+          "SY0104d.s0067",
+          "SY0104d.s0068",
+          "SY0104d.s0069"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f15",
+        "type": "decision",
+        "fact": "A 'no lid' button after the scan logs lidless returns without changing the full refund.",
+        "agreed": true,
+        "related_action_item": "SY0104d.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0085",
+          "SY0104d.s0086",
+          "SY0104d.s0087",
+          "SY0104d.s0088"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f16",
+        "type": "other",
+        "fact": "The supplier quoted forty cents per spare lid for cafés ordering boxes of a hundred.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0054",
+          "SY0104d.s0055",
+          "SY0104d.s0056"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f17",
+        "type": "plan_change",
+        "fact": "Deciding the price cafés pay for spare lids was first given to the industrial designer and then moved to the absent marketing expert.",
+        "agreed": null,
+        "related_action_item": "SY0104d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0057",
+          "SY0104d.s0058",
+          "SY0104d.s0059",
+          "SY0104d.s0060"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f18",
+        "type": "action_item_removed",
+        "fact": "The industrial designer's offer to build a second round of mock-ups was dropped by the project manager in favour of supplier pre-production samples.",
+        "agreed": null,
+        "related_action_item": "SY0104d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0079",
+          "SY0104d.s0080",
+          "SY0104d.s0081",
+          "SY0104d.s0082"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f19",
+        "type": "action_item",
+        "fact": "The project manager took on monitoring lid losses using the 'no lid' log once the pilot starts.",
+        "agreed": null,
+        "related_action_item": "SY0104d.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0088",
+          "SY0104d.s0089",
+          "SY0104d.s0090"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f20",
+        "type": "action_item",
+        "fact": "The user interface designer will finish the marking artwork and the return flow by Friday.",
+        "agreed": null,
+        "related_action_item": "SY0104d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0092",
+          "SY0104d.s0093"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f21",
+        "type": "action_item",
+        "fact": "The project manager will brief the marketing expert tomorrow on spare lid pricing, scanners and the colour check.",
+        "agreed": null,
+        "related_action_item": "SY0104d.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0109",
+          "SY0104d.s0110",
+          "SY0104d.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f22",
+        "type": "action_item",
+        "fact": "The industrial designer will photograph the mock-ups and send the photos to the project manager to pass on to the marketing expert.",
+        "agreed": null,
+        "related_action_item": "SY0104d.ai10",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0112",
+          "SY0104d.s0113",
+          "SY0104d.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f23",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f23",
+        "type": "action_item",
+        "fact": "A barista instruction card was suggested, but nobody was assigned to make it.",
+        "agreed": null,
+        "related_action_item": "SY0104d.ai11",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0105",
+          "SY0104d.s0106",
+          "SY0104d.s0107",
+          "SY0104d.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f24",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f24",
+        "type": "decision",
+        "fact": "Charcoal remains the scheme colour unless the chains raise a real problem, because cups circulate between cafés.",
+        "agreed": true,
+        "related_action_item": "SY0104d.ai9",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0103"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0104d.f25",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0104d.f25",
+        "type": "decision",
+        "fact": "The team signed off the design, pending the marketing expert's findings on colour and scanners. Costs stay at 1.65 and 1.80 euros per cup and lid.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0104d.s0116",
+          "SY0104d.s0117",
+          "SY0104d.s0118",
+          "SY0104d.s0119",
+          "SY0104d.s0120",
+          "SY0104d.s0121"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_ABSENT_DISCUSSED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_ABSENT_DISCUSSED",
+        "segments": [
+          "SY0104d.s0005",
+          "SY0104d.s0006",
+          "SY0104d.s0007",
+          "SY0104d.s0008",
+          "SY0104d.s0058",
+          "SY0104d.s0059",
+          "SY0104d.s0060",
+          "SY0104d.s0061",
+          "SY0104d.s0062",
+          "SY0104d.s0099",
+          "SY0104d.s0100",
+          "SY0104d.s0101",
+          "SY0104d.s0102",
+          "SY0104d.s0109",
+          "SY0104d.s0110",
+          "SY0104d.s0111",
+          "SY0104d.s0112",
+          "SY0104d.s0113",
+          "SY0104d.s0121"
+        ],
+        "note": "The others explain why Priya is away, speculate about what she would want on spare lid pricing and colour, and list what to tell her; she never speaks."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_INTERLEAVED_TOPICS",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_INTERLEAVED_TOPICS",
+        "segments": [
+          "SY0104d.s0014",
+          "SY0104d.s0018",
+          "SY0104d.s0022",
+          "SY0104d.s0023",
+          "SY0104d.s0024",
+          "SY0104d.s0028",
+          "SY0104d.s0030",
+          "SY0104d.s0036",
+          "SY0104d.s0037",
+          "SY0104d.s0041",
+          "SY0104d.s0043",
+          "SY0104d.s0047",
+          "SY0104d.s0051",
+          "SY0104d.s0063",
+          "SY0104d.s0064",
+          "SY0104d.s0065",
+          "SY0104d.s0071",
+          "SY0104d.s0075",
+          "SY0104d.s0079",
+          "SY0104d.s0081",
+          "SY0104d.s0083",
+          "SY0104d.s0085",
+          "SY0104d.s0086",
+          "SY0104d.s0088"
+        ],
+        "note": "The mock-up review (stacking ridge, lid tab, re-mock-up) alternates three times with the markings and return flow discussion (code position, manual entry, no-lid button)."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}
