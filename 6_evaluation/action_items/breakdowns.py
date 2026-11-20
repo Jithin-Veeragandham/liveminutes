@@ -5,10 +5,11 @@ AMI (one label per meeting; a team's 4 meetings share the speaker groups, since 
   speakers   all native English / mixed / all non-native
   gender     all male / mixed / all female
   type       a (kickoff) / b+c (middle) / d (final)       -- the series letter
-  Sex and native language come from the AMI participant id: <sex M/F><site E/I/T><language E = native English,
-  anything else = not>, e.g. MEO015 = male, Edinburgh, non-native. participants.xml has no entry for the TNO (TS)
-  speakers (ids like MTD013PM: D = Dutch), so the id is the one source that covers everyone; where
-  participants.xml has an entry, it agrees (tests check this).
+  Native language: participants.xml when it has an entry for the person; else the AMI participant id
+  <sex M/F><site E/I/T><language E = native English, anything else = not>. participants.xml has no entry for any
+  TNO (TS) speaker (ids like MTD013PM: D = Dutch). Where both exist they agree for 188 of 189 people; the one
+  exception (MEO022, "English" in participants.xml) is in a training meeting. Sex: the id's first letter (agrees
+  with participants.xml for everyone; tests check both).
   No earlier (Week 9) grouping exists in the repo, so these are new.
 
 Synthetic:
@@ -26,9 +27,11 @@ AMI_GROUPS = ["speakers", "gender", "type"]
 SYNTHETIC_GROUPS = ["feature"]
 
 
-def ami_groups(meeting, participants):
+def ami_groups(meeting, participants, native_language=None):
+    """participants: data.ami_participants(); native_language: {participant id: language} from participants.xml."""
     ids = [pid for _, _, pid in participants[meeting]]
-    native = sum(1 for p in ids if p[2:3] == "E")
+    known = native_language or {}
+    native = sum(1 for p in ids if (known[p] == "English" if p in known else p[2:3] == "E"))
     female = sum(1 for p in ids if p[0] == "F")
     letter = meeting[-1]
     return {

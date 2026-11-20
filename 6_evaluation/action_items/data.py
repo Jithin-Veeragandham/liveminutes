@@ -14,6 +14,7 @@ AMI (5_data/ami, read only):
   gold        the "actions" section of the human summary (abstractive/<meeting>.abssumm.xml). "*NA*" = none.
   owners      AMI actions name roles ("The Industrial Designer will ..."). The roles named before the verb become the
               owners (ami_owners below). No role, or "the team", "all participants": unassigned.
+  match text  the sentence without "The Industrial Designer will" (task_phrase below): predictions are task phrases.
   evidence    the transcript lines each action sentence was written from (extractive/<meeting>.summlink.xml, read
               from the downloaded zip; fetch_data.py doesn't extract that folder). Used to set the match threshold.
   speakers    shown by role (speaker "PM" -> "Project Manager"), as ami.py labels them.
@@ -64,6 +65,10 @@ class Gold:
     owners: frozenset     # person keys; empty = unassigned (the team, nobody)
     due: str              # due_key() of the gold text ("" = none said)
     evidence: frozenset   # line ids
+    match_text: str = ""  # the text compared with predictions (AMI: without "The X will"; see task_phrase)
+
+    def __post_init__(self):
+        self.match_text = self.match_text or self.text
 
 
 @dataclass
@@ -159,6 +164,21 @@ def ami_owners(sentence, previous=frozenset()):
     return frozenset(owners)
 
 
+# "The Marketing Expert will find out ..." -> "find out ...". The owner is scored on its own, and predictions (like
+# the UI contract's items) are task phrases without it, so the owner part is left out of the text matching.
+SUBJECT = re.compile(
+    r"^(?:.{0,90}?)\b(?:will|would|should|must|shall|has to|have to|had to|needs? to|is to|are to|is going to|"
+    r"are going to|(?:was|were) (?:instructed|asked|told|assigned) to|instructed .{0,80}? to|agreed to|decided to|"
+    r"(?:is|are) supposed to)\s+(?:also\s+|both\s+|each\s+|then\s+)?", re.IGNORECASE)
+
+
+def task_phrase(sentence):
+    """The task without its owner and modal, for matching. Unchanged if no owner-and-modal start is found."""
+    m = SUBJECT.match(sentence)
+    rest = sentence[m.end():].strip() if m else ""
+    return rest[:1].upper() + rest[1:] if len(rest.split()) >= 2 else sentence
+
+
 def ami_lines(meeting):
     """The transcript lines exactly as ami.read_lines builds them, plus each line's dialogue act id."""
     rows = []
@@ -213,6 +233,12 @@ def ami_evidence(zip_file, meeting):
     return links, sha256_bytes(data)
 
 
+def ami_native_languages():
+    """{participant id: native language} from participants.xml (no entries for the TNO speakers)."""
+    root = ET.parse(os.path.join(ami_settings.AMI_DIR, "corpusResources", "participants.xml")).getroot()
+    return {p.get(ami.NITE + "id"): p.get("native_language") for p in root.iter("participant")}
+
+
 def ami_participants():
     """{meeting: [(agent letter, role, participant id)]} from meetings.xml."""
     root = ET.parse(os.path.join(ami_settings.AMI_DIR, "corpusResources", "meetings.xml")).getroot()
@@ -234,7 +260,7 @@ def load_ami_meeting(meeting, zip_file, participants):
     for sid, text in ami_gold_sentences(meeting):
         previous = ami_owners(text, previous)
         gold.append(Gold(sid, text, previous, due_key(text),
-                         frozenset(by_dact[d] for d in links.get(sid, ()) if d in by_dact)))
+                         frozenset(by_dact[d] for d in links.get(sid, ()) if d in by_dact), task_phrase(text)))
     m = Meeting(meeting, "ami", lines, people, gold)
     return m, digest
 
@@ -255,8 +281,9 @@ def load_ami(ids):
             if digest:
                 evidence[f"extractive/{mid}.summlink.xml"] = digest
     from breakdowns import ami_groups
+    languages = ami_native_languages()
     for m in meetings:
-        m.groups = ami_groups(m.id, participants)
+        m.groups = ami_groups(m.id, participants, languages)
     return meetings, {"data_hash": data_hash, "zip_sha256": manifest["sha256"],
                       "evidence_hash": combined_hash(evidence), "evidence_files": len(evidence)}
 
