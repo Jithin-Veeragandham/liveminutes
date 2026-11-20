@@ -69,15 +69,28 @@ def tune_zeroshot(sets, embed):
     grid = settings.ZEROSHOT_GRID
     scorer = zeroshot.Scorer(settings.ZEROSHOT)
     rows, start = [], time.perf_counter()
+    memos = {m.id: {} for ms in sets.values() for m in ms}   # each line's rule result, computed once
     for mode, hyp, ctx in itertools.product(grid["mode"], grid["hypothesis"], grid["context"]):
         t = time.perf_counter()
         scores = {s: {m.id: zeroshot.scored_lines(m.lines, scorer, settings.ZEROSHOT, hyp, ctx, mode) for m in ms}
                   for s, ms in sets.items()}
         print(f"  scored {mode} '{hyp[:40]}...' / {ctx} in {time.perf_counter() - t:.0f} s "
               f"({scorer.computed} lines computed so far, {scorer.hits} from cache)", flush=True)
-        for th in grid["threshold"]:
-            res = {s: f1(ms, {m.id: zeroshot.items_from_scores(m.lines, m.people, scores[s][m.id], th, settings.RULES)
-                              for m in ms}, embed) for s, ms in sets.items()}
+        for th in sorted(grid["threshold"], reverse=True):
+            preds = {s: {m.id: zeroshot.items_from_scores(m.lines, m.people, scores[s][m.id], th, settings.RULES,
+                                                          memos[m.id]) for m in ms} for s, ms in sets.items()}
+            # Exact shortcut: with p predictions and g gold items, F1 <= 2q/(1+q), q = min(1, g/p). If even that
+            # can't beat the best so far, matching is skipped (the result is the same, the low thresholds are fast).
+            bound = 0.0
+            for s_, ms in sets.items():
+                n_pred, n_gold = sum(len(v) for v in preds[s_].values()), sum(len(m.gold) for m in ms)
+                q = min(1.0, n_gold / n_pred) if n_pred else 0.0
+                bound += (2 * q / (1 + q)) / len(sets)
+            if rows and bound < max(r["mean_f1"] for r in rows):
+                rows.append({"mode": mode, "hypothesis": hyp, "context": ctx, "threshold": th, "skipped": True,
+                             "mean_f1_upper_bound": round(bound, 4), "mean_f1": -1})
+                continue
+            res = {s_: f1(ms, preds[s_], embed) for s_, ms in sets.items()}
             rows.append({"mode": mode, "hypothesis": hyp, "context": ctx, "threshold": th,
                          "f1_ami": round(res["ami"]["f1"], 4), "f1_synthetic": round(res["synthetic"]["f1"], 4),
                          "p_ami": round(res["ami"]["precision"], 4), "r_ami": round(res["ami"]["recall"], 4),
@@ -85,10 +98,10 @@ def tune_zeroshot(sets, embed):
                          "r_synthetic": round(res["synthetic"]["recall"], 4),
                          "mean_f1": round((res["ami"]["f1"] + res["synthetic"]["f1"]) / 2, 4)})
         top = max((r for r in rows if (r["mode"], r["hypothesis"], r["context"]) == (mode, hyp, ctx)),
-                  key=lambda r: r["mean_f1"])
+                  key=lambda r: (r["mean_f1"], -r["threshold"]))
         print(f"    best threshold {top['threshold']}: AMI {top['f1_ami']:.3f}  synthetic {top['f1_synthetic']:.3f}  "
               f"mean {top['mean_f1']:.3f}", flush=True)
-    best = max(rows, key=lambda r: r["mean_f1"])
+    best = max(rows, key=lambda r: r["mean_f1"])   # first of equal values: grid order, thresholds high to low
     print(f"chosen: {best['mode']} / '{best['hypothesis']}' / context {best['context']} / threshold {best['threshold']} "
           f"(mean F1 {best['mean_f1']})")
     save("zeroshot", {"objective": "mean F1 (AMI dev, synthetic dev)", "grid": grid, "rows": rows, "chosen": best,

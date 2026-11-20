@@ -31,7 +31,7 @@ How a line becomes an action item (each step is one function below):
   7. drop      "forget that", "no need to", "scratch that" about an earlier task removes it.
 """
 import re
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 
 from due import find_due, resolve
 
@@ -369,21 +369,36 @@ def meant_person(lines, i, people, speaker, back=6):
     return absent[0].name if len(absent) == 1 else None
 
 
-def item_for_line(lines, i, people, cfg, items, require_trigger=True):
+def item_for_line(lines, i, people, cfg, items, require_trigger=True, memo=None):
     """The action item said in line i, or None. require_trigger=False (zero-shot): the line was already chosen as a
-    task, so if no rule fires, the whole line is the task and fallback_owner() names the owner."""
+    task, so if no rule fires, the whole line is the task and fallback_owner() names the owner.
+    items: the items so far (an "I'll take that" right after one is not a new task). memo: a dict kept by the caller
+    for one meeting, so each line's rules run once however many thresholds are tried (tune.py)."""
+    if memo is None:
+        base, anaphoric = line_item(lines, i, people, cfg, require_trigger)
+    else:
+        if (i, require_trigger) not in memo:
+            memo[(i, require_trigger)] = line_item(lines, i, people, cfg, require_trigger)
+        base, anaphoric = memo[(i, require_trigger)]
+    if base is None or (anaphoric and items and i - items[-1].index <= cfg["lookahead_lines"]):
+        return None   # "I'll take that" / "I can do that": the task before it changes owner, no new task
+    return replace(base, lines=list(base.lines), words=set(base.words))
+
+
+def line_item(lines, i, people, cfg, require_trigger):
+    """(the item line i says, or None; whether its task is only "that"/"it"), from line i and the lines after it."""
     line = lines[i]
+    anaphoric = False
     t, speaker = clean(line["text"]), line["speaker"]
     found = first_trigger(t, people, speaker)
     if not found:
         if require_trigger:
-            return None
+            return None, False
         kind, owner = fallback_owner(t, people, speaker)
         phrase = ""
     else:
         kind, owner, phrase = found
-        if ANAPHORIC.match(phrase) and items and i - items[-1].index <= cfg["lookahead_lines"]:
-            return None   # "I'll take that" / "I can do that": the task before it changes owner, no new task
+        anaphoric = bool(ANAPHORIC.match(phrase))
     fixed = True
     given = [p for _, p in mentioned(phrase, people) if p.name != speaker] if GIVE_TO.match(phrase) else []
     asked = ASK_TO.match(phrase)
@@ -426,7 +441,7 @@ def item_for_line(lines, i, people, cfg, items, require_trigger=True):
             item.owner, item.owner_fixed = other["speaker"], True
             item.lines.append(other["id"])
             break
-    return item
+    return item, anaphoric
 
 
 def candidates(lines, people, cfg):

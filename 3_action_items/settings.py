@@ -11,7 +11,7 @@ REPO = os.path.dirname(HERE)
 RESULTS_DIR = os.path.join(REPO, "6_evaluation", "action_items", "results")
 RESULTS_LOG = os.path.join(RESULTS_DIR, "results_log.jsonl")      # one line per run (committed)
 PREDICTIONS_DIR = os.path.join(RESULTS_DIR, "predictions")        # contract-format predictions per run (committed)
-CACHE_DIR = os.path.join(HERE, "cache")                           # zero-shot scores + embeddings (gitignored)
+CACHE_DIR = os.environ.get("LIVEMINUTES_ACTION_CACHE", os.path.join(HERE, "cache"))   # scores + embeddings (gitignored)
 
 SEED = 42   # both baselines are deterministic; the seed is set anyway and logged (like 2_summarization)
 
@@ -34,9 +34,10 @@ ZEROSHOT = {
     #      (the pipeline's multi_label=False); the score is the task label's share.
     "mode": "entailment",
     "hypothesis": "In this text, someone commits to doing a task or is asked to do one.",   # dev
-    "context": "previous_line",   # dev: "none" = the line alone, "previous_line" = the line before it, then the line
-    "threshold": 0.9,             # dev: keep lines whose entailment probability is at least this
+    "context": "none",            # dev: "none" = the line alone, "previous_line" = the line before it, then the line
+    "threshold": 0.9994,          # dev: keep lines whose score is at least this (see the grid note below)
     "min_words": 3,               # lines shorter than this are never tasks ("Okay.", "Yeah, sure.") and aren't scored
+    "min_content_words": 2,       # dev: nor lines with fewer content words ("Okay so this we had, this we had.")
     "batch_size": 32,
     "device": os.environ.get("LIVEMINUTES_DEVICE", "auto"),   # auto = Apple MPS if available, else CPU
 }

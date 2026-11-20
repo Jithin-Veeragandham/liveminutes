@@ -3,7 +3,7 @@
     b = ZeroShotBaseline()          # facebook/bart-large-mnli at a pinned revision (settings.ZEROSHOT)
     items = b.predict(meeting)      # meeting.lines (UI contract lines), meeting.people
 
-For every transcript line of min_words or more, the transformers zero-shot pipeline asks bart-large-mnli whether
+For every transcript line of min_words or more (and min_content_words content words), the transformers zero-shot pipeline asks bart-large-mnli whether
 the line (with the line before it, if context = "previous_line") entails the hypothesis, e.g. "In this text,
 someone commits to doing a task or is asked to do one." Two ways to score (mode):
   entailment    P(entailment) vs contradiction for this one hypothesis (multi_label=True)
@@ -83,18 +83,20 @@ class Scorer:
 
 def scored_lines(lines, scorer, cfg, hypothesis=None, context=None, mode=None):
     """[(line index, probability)] for every line with at least min_words words."""
-    idx = [i for i, l in enumerate(lines) if len(l["text"].split()) >= cfg["min_words"]]
+    idx = [i for i, l in enumerate(lines) if len(l["text"].split()) >= cfg["min_words"]
+           and len(rules.content(rules.clean(l["text"]))) >= cfg.get("min_content_words", 0)]
     texts = [premise(lines, i, context or cfg["context"]) for i in idx]
     return list(zip(idx, scorer(texts, hypothesis or cfg["hypothesis"], mode or cfg.get("mode", "entailment")))) if idx else []
 
 
-def items_from_scores(lines, people, scores, threshold, rule_cfg):
-    """Items for the lines at or above the threshold, with the rules' owner, due date and merging."""
+def items_from_scores(lines, people, scores, threshold, rule_cfg, memo=None):
+    """Items for the lines at or above the threshold, with the rules' owner, due date and merging.
+    memo: a dict per meeting, kept across thresholds (rules.item_for_line)."""
     people = rules.as_people(people)
     chosen = sorted(i for i, p in scores if p >= threshold)
     items = []
     for i in chosen:
-        item = rules.item_for_line(lines, i, people, rule_cfg, items, require_trigger=False)
+        item = rules.item_for_line(lines, i, people, rule_cfg, items, require_trigger=False, memo=memo)
         if item:
             item.kind = "zeroshot/" + item.kind
             items.append(item)
