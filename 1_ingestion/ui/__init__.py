@@ -47,8 +47,9 @@ def all_approved_minutes():
 def meeting_deleted(s):
     """Called by bridge.decline() after the session folder is wiped: tell the knowledge base to forget it."""
     import asyncio
-    from ui import editlog, routes
+    from ui import editlog, live_notes, routes
     editlog.forget(s.bot_id)
+    live_notes.forget(s.bot_id)   # the LLM items (their file went with the folder)
     try:
         asyncio.get_running_loop()
     except RuntimeError:

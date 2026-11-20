@@ -47,6 +47,7 @@ class NotesState:
         self.sent_until_ms = 0           # transcript lines starting at or before this were sent already
         self.next_due_ms = None          # when the next update runs
         self.busy = False                # a call is running now
+        self.busy_since_ms = None        # when it started (the page says "delayed" if it runs long)
         self.error = None                # the last call's error, cleared by the next good one
         self.updated_ms = None
         self.history = []                # one dict per call (or skipped update), newest last
@@ -99,7 +100,7 @@ class LiveNotes:
 
     async def maybe_update(self, s, final=False):
         """Send the new lines if an update is due. final=True (the meeting ended): send what's left now."""
-        if not self.enabled or s.declined or s.t0_ms is None:
+        if not self.enabled or s.declined or s.t0_ms is None or getattr(s, "demo", False):   # Demo: scripted notes
             return
         st = self.state(s)
         now = now_ms()
@@ -129,7 +130,7 @@ class LiveNotes:
         before = dict(self.provider.usage)
         entry = {"from": mmss(new[0][0] - s.t0_ms), "to": mmss(new[-1][0] - s.t0_ms), "lines": len(chunk),
                  "words": sum(len(l.text.split()) for l in chunk), "sent": st.summarizer.as_transcript(chunk)}
-        st.busy = True
+        st.busy, st.busy_since_ms = True, now_ms()
         s.touch()
         started = time.monotonic()
         try:
@@ -139,6 +140,10 @@ class LiveNotes:
                     self.calls.popleft()
                 notes = await asyncio.to_thread(st.summarizer.update, st.notes or self.mod.Notes(), chunk, st.part + 1,
                                                 None, st.context)
+        except SystemExit as e:          # no API key, or it was rejected: stop the notes (the page says why)
+            st.error = str(e)[:300]
+            entry.update(status="error", error=st.error)
+            self.enabled, self.reason = False, str(e)
         except Exception as e:           # LLMError, network, ...: keep the old notes, resend these lines next time
             st.error = str(e)[:300]
             entry.update(status="error", error=st.error)

@@ -25,7 +25,7 @@ from aiohttp import web
 
 import settings
 from live_view import BOT_ID
-from ui import access, adapters, demo, editlog, export, hub, link_text, view_url
+from ui import access, adapters, demo, editlog, export, hub, link_text, live_notes, view_url
 from ui.meeting import Meeting, read_meta, write_meta
 
 log = logging.getLogger("ui")
@@ -205,6 +205,8 @@ def setup(app, bridge):
                           # | failed (Attendee refused the message) | None (not yet)
                           "chat": read_meta(m.sid).get("chat_link")},
                 "dropped_lines": run.dropped if run else 0,
+                # the LLM's live notes: last/next update, running, delayed, errors (+ each update, organizer only)
+                "llm": live_notes.status(m, adapters.notes_job(), v.role == "organizer"),
             },
             "people": m.people(),
             "lines": m.lines(),

@@ -3,8 +3,9 @@
 Run this after plugging in your summarizer, action-item extraction or knowledge base:
   .venv/bin/python -m pytest 1_ingestion/tests/test_contract.py -v
 
-It calls YOUR summary_source / actions_source / ask_source on three meetings (a live one with a real-looking
-transcript, an empty one, and a finished Demo meeting) and checks:
+It calls YOUR summary_source / actions_source / ask_source on four meetings (a live one with a real-looking
+transcript, the same with the LLM's live notes on it (notes.py + ui/live_notes.py, a scripted LLM answer), an empty
+one, and a finished Demo meeting) and checks:
   - every field the page needs is there, with the right type and allowed values;
   - ids are unique, stable between calls, and don't collide with the ids people's items get;
   - source_line_ids point at lines that exist in that meeting; owners are people in the meeting;
@@ -42,12 +43,27 @@ class Bridge(FakeBridge):
         self.live_url = "http://localhost:8776"
 
 
+class ScriptedLLM:
+    """What Gemini answers for the demo meeting's first minutes, in the summarizer's JSON shape."""
+    name = "scripted"
+    usage = {"calls": 0, "input_tokens": 0, "output_tokens": 0, "served_by": []}
+
+    def generate_json(self, system, user, schema, max_tokens):
+        return {"summary": "Maya Chen opened the launch sync. Daniel Okafor reported a sync bug in the beta that needs "
+                           "about a week to fix. The team agreed to move the launch to Tuesday, December 9.",
+                "action_items": [{"task": "Fix the offline sync bug in the beta", "owner": "Daniel Okafor", "due": "next week"},
+                                 {"task": "Move the email campaign and the blog post to December 9", "owner": "Priya",
+                                  "due": "Friday"},
+                                 {"task": "Tell the support team about the new date", "owner": "", "due": ""},
+                                 {"task": "Ask legal about the store listing", "owner": "Leo Martins", "due": "tomorrow"}]}
+
+
 async def _build(tmp):
     settings.SESSIONS_DIR = tmp
     b = Bridge()
     people = SCRIPT["people"]
     meetings = {}
-    for sid, with_lines in (("bot_contract_live", True), ("bot_contract_empty", False)):
+    for sid, with_lines in (("bot_contract_live", True), ("bot_contract_llm", True), ("bot_contract_empty", False)):
         s = b.session(sid)
         for n, key in enumerate(("maya", "daniel", "priya"), 1):
             await b.on_join_leave(s, {"participant_uuid": f"u{n}", "participant_name": people[key], "event_type": "join"})
@@ -61,6 +77,13 @@ async def _build(tmp):
                 start = t0 + int(ev["t"] * 1000)
                 s.lines.append((start, start + int(ev["dur"] * 1000), people[ev["say"]], ev["text"]))
         meetings[sid] = sid
+    import notes
+    from session import now_ms
+    b.notes = notes.LiveNotes(provider=ScriptedLLM())   # the LLM's notes on one of the two transcripts
+    llm = b.sessions["bot_contract_llm"]
+    b.notes.state(llm).next_due_ms = now_ms() - 1
+    await b.notes.maybe_update(llm)
+    assert llm.notes.notes is not None, llm.notes.error
     run = demo.start(b, speed=60)
     await asyncio.wait_for(run.task, 30)
     meetings[run.sid] = run.sid
@@ -213,3 +236,16 @@ def test_hooks_have_the_right_shape():
     if bg is not None:
         assert inspect.iscoroutinefunction(bg), "adapters.background must be `async def background(bridge)`"
         inspect.signature(bg).bind(object())
+
+
+def test_the_llm_meeting_shows_real_items(world):
+    """The meeting with the LLM's notes: real items (no sample label), owners matched to the people who said yes."""
+    b, sids = world
+    m = Meeting(b, "bot_contract_llm")
+    summary, actions = adapters.summary_source(m), adapters.actions_source(m)
+    assert summary["sample"] is False and summary["label"] is None and len(summary["items"]) == 3
+    assert actions["sample"] is False and actions["label"] is None
+    owners = {a["text"]: a["owner"] for a in actions["items"]}
+    assert owners["Fix the offline sync bug in the beta"] == "Daniel Okafor"
+    assert owners["Move the email campaign and the blog post to December 9"] == "Priya Raman"
+    assert owners["Ask legal about the store listing (owner said: Leo Martins)"] == ""   # Leo never said yes here

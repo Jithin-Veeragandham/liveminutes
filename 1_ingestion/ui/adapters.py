@@ -15,8 +15,10 @@ Check your code against the contract:  .venv/bin/python -m pytest 1_ingestion/te
       thread), after "Approve minutes", after undoing an approval, and when a meeting is deleted.
   background(bridge)               optional: async, started once with the bridge (e.g. a summarizer loop)
 
-Today they return sample data (ui/fixtures/), labelled in the page. Demo meetings get the summary and
-action items from their script (labelled Demo). `meeting` is a ui.meeting.Meeting: .sid, .lines(),
+Summary and action items come from the LLM's live notes (Jithin's notes.py + 2_summarization/llm_summarizer.py,
+turned into items by ui/live_notes.py) when the bridge has an LLM key. Without one (or for a finished meeting
+that has no notes), they are sample data (ui/fixtures/), labelled "Sample data" in the page. Demo meetings get
+them from their script (labelled Demo). Ask is still sample data until the knowledge base is plugged in. `meeting` is a ui.meeting.Meeting: .sid, .lines(),
 .rows(), .people(), .consented(), .live, .demo, .line_id_for(start_ms).
 
 Edits are NOT the adapters' job: people's edits live in the edit log (ui/editlog.py) and are applied on
@@ -28,7 +30,7 @@ import json
 from functools import lru_cache
 from pathlib import Path
 
-from ui import demo
+from ui import demo, live_notes
 
 FIXTURES = Path(__file__).parent / "fixtures"
 SAMPLE_NOTE = ("Sample data: the live summarizer isn't connected yet, so these items are examples, "
@@ -54,12 +56,29 @@ def _resolve(meeting, keys, items):
     return out
 
 
+BRIDGE = None   # the running bridge, set by background(); its .notes is the LLM job (notes.LiveNotes)
+
+
+def notes_job():
+    return getattr(BRIDGE, "notes", None)
+
+
+def _llm_waiting(meeting):
+    """The LLM is on and this meeting is live, but it hasn't written notes yet: show nothing, not samples."""
+    job = notes_job()
+    s = getattr(meeting, "s", None)
+    return bool(job and job.enabled and s is not None and not s.declined)
+
+
 def summary_source(meeting):
     """Summary items: {"id", "text", "source_line_ids", "version", "type": "point" | "decision"}."""
     if meeting.demo:
         d = demo.state(meeting.sid)
         return {"items": _resolve(meeting, d.get("keys", {}), d.get("summary", [])), "sample": True, "label": "Demo",
                 "note": "Demo meeting: the summary is part of the script and updates as the meeting goes."}
+    book = live_notes.current(meeting)
+    if book is not None or _llm_waiting(meeting):
+        return {"items": live_notes.Book.public(book.summary) if book else [], "sample": False, "label": None, "note": ""}
     return {"items": [dict(i) for i in fixture("sample_summary.json")["items"]], "sample": True,
             "label": "Sample data", "note": SAMPLE_NOTE}
 
@@ -70,6 +89,9 @@ def actions_source(meeting):
         d = demo.state(meeting.sid)
         return {"items": _resolve(meeting, d.get("keys", {}), d.get("actions", [])), "sample": True, "label": "Demo",
                 "note": "Demo meeting: action items are part of the script."}
+    book = live_notes.current(meeting)
+    if book is not None or _llm_waiting(meeting):
+        return {"items": live_notes.Book.public(book.actions) if book else [], "sample": False, "label": None, "note": ""}
     return {"items": [dict(i) for i in fixture("sample_actions.json")["items"]], "sample": True,
             "label": "Sample data", "note": SAMPLE_NOTE}
 
@@ -105,3 +127,10 @@ def minutes_approved(meeting_id, record):
 def minutes_unapproved(meeting_id):
     """The approval was undone, or the meeting was deleted (someone said no): remove it from the index."""
     return None
+
+
+async def background(bridge):
+    """Started with the bridge. The LLM job itself (notes.LiveNotes.watch, every 30 s) is started by bridge.main();
+    here we only keep a reference so the adapters can see whether it is on. Ashmit's start-up work can go here too."""
+    global BRIDGE
+    BRIDGE = bridge
