@@ -25,6 +25,7 @@ CS6170 AI Capstone, Northeastern. This README covers the **summarization baselin
 |---|---|---|
 | **Baseline: TextRank** ([Mihalcea & Tarau 2004](https://aclanthology.org/W04-3252/); [`textrank_baseline.py`](2_summarization/textrank_baseline.py), `summa` 1.2.0) | Builds a graph of transcript lines linked by shared words, ranks them with PageRank, and keeps the top lines (in meeting order) up to 160 words. 160 = the average length of the **train** summaries. | No training (nothing can leak, no GPU). Fast. Only copies real lines, so it can't make things up. A standard published AMI baseline, so we can compare. |
 | **Deep model: BART** ([`bart_summarizer.py`](2_summarization/bart_summarizer.py), `philschmid/bart-large-cnn-samsum`, pinned revision) | Summarizes every 60 s of meeting, then summarizes those summaries. | Writes new sentences, like a person would. Trained on chat summaries (SAMSum), never on AMI. **Not logged yet.** |
+| **LLM: rolling notes** ([`llm_summarizer.py`](2_summarization/llm_summarizer.py), Claude `claude-sonnet-5-5` by default, provider-agnostic via [`llm_providers.py`](2_summarization/llm_providers.py)) | Sends the transcript ~30 s at a time (at most one call per 30 s), each time with the notes so far, and gets back updated notes as structured JSON: a summary plus action items (task, owner's name if said, due date). Run: `run.py --model llm` (AMI, scored) or `llm_summarizer.py <transcript.txt>` (a live meeting). Needs `ANTHROPIC_API_KEY` (Claude) or `GEMINI_API_KEY` (Gemini) in `.env`. | Shows what an LLM adds over TextRank and BART, and produces the action items. The rolling setup is how notes would update during a live meeting. Details: [docs/SUMMARIZATION.md 2.12](docs/SUMMARIZATION.md#212-llm-rolling-notes-summary--action-items). **Not logged yet.** |
 | **Metric: ROUGE-1 / 2 / L** (+ ROUGE-SU4) ([`metrics.py`](6_evaluation/summarization/metrics.py), Google `rouge-score` 0.1.2, stemming on) | Word overlap between our summary and AMI's human summary. F-measure, 0 to 1, averaged over meetings. | The standard metric in AMI summarization papers, so our numbers are comparable. Cheap and deterministic. |
 | **Metric: BERTScore** (`bert-score` 0.3.13, `roberta-large`, pinned revision) | Meaning overlap, using a language model's embeddings. | ROUGE gives no credit for paraphrases. BERTScore does, which is fair to BART. |
 
@@ -178,7 +179,46 @@ dc ps                                      # 6 services Up; liveminutes-bridge (
 curl http://127.0.0.1:8776/health          # -> ok
 ```
 
-**Demo:** open http://localhost:8776/live, go to **Send bot**, paste a Google Meet link and press **Send bot**. Admit "LiveMinutes" from the lobby (it takes 20 to 60 s), and everyone types `yes` in the chat. The transcript then appears live. **Stop:** `dc down` (keeps the database and transcripts). **Start again later:** `dc up -d`.
+**Demo:** open http://localhost:8776/live, press **Send bot to a meeting**, paste a Google Meet link and press **Send bot**. Admit "LiveMinutes" from the lobby (it takes 20 to 60 s), and everyone types `yes` in the chat. The transcript then appears live. **Stop:** `dc down` (keeps the database and transcripts). **Start again later:** `dc up -d`.
+
+**Participants' live view.** Once everyone has said yes, the bot posts one chat message with a link and a 6-character access code.
+- **Joining:** participants open the link, type the code and pick their name. That's name selection, not a login.
+- **What they can do:** follow the live transcript, summary and action items; edit and approve them (every change goes into an append-only edit log); approve and export the minutes.
+- **Organizer:** your own view of a meeting is on http://localhost:8776/live (click the meeting). It's the only UI: the old pages are gone.
+
+**Live summary and action items (LLM).** With a free Gemini key, the summary and action items are written by the LLM during the meeting (Jithin's live notes). Add three lines to `../.env`, then run `dc up -d` (it restarts the bridge with them):
+
+```bash
+GEMINI_API_KEY=...                         # https://aistudio.google.com/apikey -> Create API key
+LIVEMINUTES_LLM_PROVIDER=gemini
+LIVEMINUTES_LLM_MODEL=gemini-3.5-flash-lite
+```
+
+- **How often:** every 30 s, the bridge sends Gemini the lines said since the last update plus the notes so far, and gets the updated notes back. The first update comes about 30 s after people start talking. Lines from the last 5 s wait for the next update, and there is one last update when the meeting ends. At most 10 calls a minute.
+- **The countdown:** under **Summary** and **Action items**, "Updated 20 s ago · next in 10 s". The thin bar fills up until the next update. While Gemini answers it says "Updating the summary…".
+- **When it's slow or fails:** "Summary update delayed" shows when an update takes over 20 s, fails (a rate limit, a network error) or is held back by the 10-a-minute cap. The page keeps the last notes and tries again at the next update, with the same lines. In the organizer view, the **Activity** tab lists every update with how long it took, its tokens, and the exact text sent.
+- **Edits are safe:** once someone edits, approves or deletes an item, later updates don't change it. Approved minutes stay as approved.
+- **Labels:** with real notes, there's no "Sample data" label. Ask stays sample data until the knowledge base is connected.
+- **No key:** the page shows sample data, labelled, as before. The organizer sees "Live summary is off" and why.
+
+**Share outside this computer** with a free Cloudflare quick tunnel (no account). Without it, links point to localhost and only open on this computer; the organizer view says so. Through the tunnel, only the participant pages answer. Quick tunnels don't pass the live stream on, so pages opened through one update by polling ("Live · polling" in the header).
+
+```bash
+brew install cloudflared      # macOS; other systems: docs/UI.md
+bash tunnel.sh                # starts `cloudflared tunnel --url http://localhost:8776` and gives its address to the bridge
+```
+
+Or put `PUBLIC_BASE_URL=https://...` in `../.env` and run `dc up -d`.
+
+**Demo mode** needs no meeting and no Groq. It plays a scripted, invented 5-minute product meeting through the real consent flow, with a late joiner, a plan change, summary updates and two action items. Start it with **Start demo meeting** on http://localhost:8776/live, or:
+
+```bash
+curl -s -X POST "http://localhost:8776/live/api/demo?wait=1"    # prints the organizer link, the participant link and the code
+```
+
+Add `&speed=5` to run 5× faster. Demo meetings are folders named `sessions/demo_*`; delete them any time.
+
+The full guide (features, keyboard shortcuts, tests, security, limits) is in [docs/UI.md](docs/UI.md). Plugging the LLM summary and the knowledge base into it: [docs/INTEGRATION.md](docs/INTEGRATION.md).
 
 Notes:
 - **Windows:** run this whole section in **Git Bash** (installed with Git for Windows), not PowerShell: the commands then work exactly as written, including `dc up -d`, the `curl` checks and `dc restart attendee-app-local`. In PowerShell, `bash` starts WSL instead of Git Bash, and `>` writes files in UTF-16, which breaks `attendee/.env`. Start Docker Desktop first.

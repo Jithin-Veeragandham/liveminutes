@@ -34,8 +34,14 @@ BRIDGE_HOST = os.environ.get("BRIDGE_HOST", "liveminutes-bridge")
 # ---- Groq speech-to-text (free tier: 20 requests/min, 7,200 audio-seconds/hour, 10 s billed minimum) ----
 GROQ_URL = "https://api.groq.com/openai/v1/audio/transcriptions"
 GROQ_MODEL = "whisper-large-v3-turbo"
-RPM_LIMIT = 12       # uploads per minute across all speakers: 12 x 10 s = 7,200 s/hour
-MAX_IN_FLIGHT = 3    # uploads running at the same time
+# Groq's limits are 20/min AND 7,200 billed s/hour, so bursts above 12/min are fine as long as the
+# hour's audio budget holds. Meetings of 3-5 people needed up to 16 uploads/min (Nov 2026 logs):
+# with the old flat 12/min, lines queued for up to 50 s.
+RPM_LIMIT = 19             # uploads per rolling minute across all speakers (Groq: 20)
+AUDIO_S_PER_HOUR = 7000    # billed audio-seconds per rolling hour (Groq: 7,200; each upload >= 10 s)
+BILLED_MIN_S = 10          # Groq bills every upload as at least this long
+MAX_IN_FLIGHT = 3          # uploads running at the same time
+# Also: 2,000 uploads per day (x-ratelimit-remaining-requests in pieces.jsonl). A 30 min meeting used ~320.
 # Whisper invents these on near-silence; dropped when Groq also thinks it may not be speech.
 HALLUCINATIONS = {"thank you.", "thanks for watching!", "thank you for watching.", "you", "bye.", "."}
 
@@ -60,3 +66,24 @@ CONSENT_REQUIRED = "--no-consent" not in sys.argv  # bridge.py --no-consent reco
 # Environment variables only so tests/consent_sim.py can use short timers.
 REMIND_AFTER_S = int(os.environ.get("CONSENT_REMIND_S", 120))  # remind people who haven't answered
 LEAVE_AFTER_S = int(os.environ.get("CONSENT_LEAVE_S", 240))    # then the bot leaves
+
+# ---- Shared live view for participants (ui/, see docs/UI.md) ----
+# Where participants open the meeting page, e.g. a Cloudflare quick tunnel: https://<random>.trycloudflare.com
+# "" = localhost only (the organizer view says so). tunnel.sh can also set it while the bridge runs.
+PUBLIC_BASE_URL = os.environ.get("PUBLIC_BASE_URL", "").strip().rstrip("/")
+VIEW_ACCESS_DAYS = float(os.environ.get("VIEW_ACCESS_DAYS", 7))  # the access code stops working this long after the meeting
+UI_SECRET = os.environ.get("UI_SECRET", "")  # signs viewer cookies; "" = a random key kept in sessions/.ui_secret
+
+# ---- Live notes: summary + action items from the LLM during the meeting (notes.py) ----
+# Uses 2_summarization/llm_summarizer.py. Provider, model and key come from the repo's .env
+# (LIVEMINUTES_LLM_PROVIDER, LIVEMINUTES_LLM_MODEL, GEMINI_API_KEY or ANTHROPIC_API_KEY; see .env.example).
+NOTES_ENABLED = os.environ.get("LIVE_NOTES", "1") != "0"   # LIVE_NOTES=0 in .env turns them off
+NOTES_INTERVAL_S = 30      # one update per 30 s of meeting: the new lines + the notes so far
+NOTES_SETTLE_MS = 5000     # lines from the last 5 s wait for the next update (they can still arrive out of order)
+# Our own caps, shown as the rate-limit bars on the live page. At one call per 30 s a meeting uses ~2/min
+# and ~120/hour. Set these to your key's real free-tier limits (Google AI Studio > Usage) if they are lower.
+NOTES_RPM_LIMIT = 10       # calls per rolling minute, all meetings together (updates wait if reached)
+NOTES_RPD_LIMIT = 1000     # calls per rolling day, shown on the page only
+# Where llm_summarizer.py is: the repo's 2_summarization/ when run from the repo, ./summarization/ in Docker.
+SUMMARIZATION_DIR = (HERE.parent / "2_summarization" if (HERE.parent / "2_summarization").is_dir()
+                     else HERE / "summarization")

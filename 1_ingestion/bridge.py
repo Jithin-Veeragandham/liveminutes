@@ -11,7 +11,8 @@ What happens to them:
   2. Cutting (audio.py): each stream is cut into 2-10 s pieces at pauses.
   3. Teams only (session.py): each piece of the mixed stream is named from "who is speaking" events,
      while Groq transcribes it (those events arrive ~0.7 s late, about as long as Groq takes).
-  4. Upload (bridge.py): pieces go to Groq Whisper, at most 12 per minute (the free tier).
+  4. Upload (bridge.py): pieces go to Groq Whisper within the free tier: <= 19 per minute and
+     <= 7,000 billed audio-seconds per rolling hour (can_send).
   5. Output (session.py): sessions/<bot_id>/transcript.txt, plus the live view (live_view.py).
 
 Settings: settings.py.   Run:  .venv/bin/python bridge.py [--no-consent]
@@ -32,10 +33,12 @@ import aiohttp
 from aiohttp import WSCloseCode, WSMsgType, web
 
 import live_view
+import notes
 import settings
 from audio import Speaker, wav_bytes
 from chat import CONSENT_PROMPT, consent_message, parse_reply, parse_vouch
 from session import Person, Session, mmss, now_ms
+import ui  # the participants' live view, editing and Demo mode (ui/, docs/UI.md)
 
 MIXED = "mixed"  # stream id for the Teams mixed audio
 log = logging.getLogger("bridge")
@@ -56,17 +59,26 @@ def spoken_text(groq_json):
 
 
 class Bridge:
+    # Pause between two chat messages from the bot: 1 s + 10 ms per character, at most 3 s
+    # (well under the 10 s Attendee waits for a webhook answer).
+    CHAT_GAP_S, CHAT_GAP_PER_CHAR_S, CHAT_GAP_MAX_S = 1.0, 0.01, 3.0
+
     def __init__(self, http, consent_required):
         self.http = http                      # aiohttp client, for Attendee and Groq
         self.consent_required = consent_required
         self.sessions = {}                    # bot_id -> Session
         self.live_url = settings.LIVE_VIEW_URL
+        self.chat_locks, self.chat_free_at = {}, {}  # bot_id -> lock / when the next chat message may go
         # upload queue
         self.queue = []                       # (session, piece) waiting for upload
         self.wake = asyncio.Event()           # set when something is queued
         self.sent_at = deque()                # upload times in the last 60 s, for the rate limit
+        self.billed = deque()                 # (time, billed audio-seconds) in the last hour, for Groq's audio budget
         self.in_flight = set()                # uploads running now
         self.pause_until = 0.0                # Groq said "slow down": no uploads before this time
+        # live notes: summary + action items from the LLM every NOTES_INTERVAL_S (notes.py)
+        self.notes = notes.LiveNotes()
+        self.tasks = set()                    # one-off tasks (final notes update), kept so they aren't garbage-collected
 
     def session(self, bot_id):
         if bot_id not in self.sessions:
@@ -78,6 +90,8 @@ class Bridge:
     async def attendee(self, s, action, payload=None):
         """POST /api/v1/bots/<bot_id>/<action>: pause_recording, resume_recording,
         send_chat_message, leave, delete_data. Returns the HTTP status (0 = no answer)."""
+        if s.demo:  # Demo mode (ui/demo.py): there is no real bot to call
+            return 200
         url = f"{settings.ATTENDEE_URL}/api/v1/bots/{s.bot_id}/{action}"
         headers = {"Authorization": f"Token {settings.ATTENDEE_API_KEY}"}
         try:
@@ -107,10 +121,19 @@ class Bridge:
             return 0, str(e) or type(e).__name__
 
     async def say(self, s, text):
-        """Post in the meeting chat."""
+        """Post in the meeting chat, one message at a time per meeting. Teams types each message key by
+        key: one sent while the last is still being typed is lost or merged into it, so wait between them."""
         s.sent_texts.add(text.strip())  # so we ignore it when it comes back through the chat webhook
-        s.consent_log("bot_chat", text=text)
-        await self.attendee(s, "send_chat_message", {"message": text, "to": "everyone"})
+        lock = self.chat_locks.setdefault(s.bot_id, asyncio.Lock())
+        async with lock:
+            wait = self.chat_free_at.get(s.bot_id, 0) - time.monotonic()
+            if wait > 0 and not s.demo:
+                await asyncio.sleep(wait)
+            s.consent_log("bot_chat", text=text)
+            status = await self.attendee(s, "send_chat_message", {"message": text, "to": "everyone"})
+            self.chat_free_at[s.bot_id] = time.monotonic() + min(
+                self.CHAT_GAP_MAX_S, self.CHAT_GAP_S + self.CHAT_GAP_PER_CHAR_S * len(text))
+        return status
 
     # ================= Webhooks from Attendee =================
 
@@ -161,10 +184,14 @@ class Bridge:
             # One line of plain text, so it is safe on Teams (typed key by key) and Meet alike.
             await self.say(s, f"Live transcript (organizer's computer only): {self.live_url}/live/{s.bot_id}")
         if new == "ended":
+            ui.meeting_ended(s)  # the access code expires VIEW_ACCESS_DAYS from now
             if s.declined:
                 status = await self.attendee(s, "delete_data")
                 s.consent_log("attendee_data_deleted", http_status=status)
             s.close()
+            task = asyncio.create_task(self.notes.finish(s))   # last notes update with the final lines
+            self.tasks.add(task)
+            task.add_done_callback(self.tasks.discard)
 
     async def on_join_leave(self, s, data):
         uuid, name, kind = data.get("participant_uuid"), data.get("participant_name"), data.get("event_type")
@@ -194,7 +221,7 @@ class Bridge:
         decision = parse_reply(text)  # "yes" / "no" / None
         target = sender               # whose answer this is
         if decision is None and sender is not None:  # maybe "<name> yes", for a room, phone line or bot
-            vouch = parse_vouch(text, [p.name for p in s.present()])
+            vouch = parse_vouch(text, [p.name for p in s.present()], own_name=s.bot_name)
             if vouch:
                 name, decision = vouch
                 target = next(p for p in s.present() if p.name == name)
@@ -224,9 +251,15 @@ class Bridge:
         if present and not waiting:
             if not s.recording:
                 s.recording = True
+                # Decided before any await: audio can arrive during resume_recording and set t0_ms.
+                first, link = ui.recording_allowed(s, share=bool(self.live_url))  # link: first time, public address
                 s.consent_log("resumed", people=[p.name for p in present])
                 await self.attendee(s, "resume_recording")
-                await self.say(s, f"Thanks, everyone agreed. Recording {'resumed' if s.t0_ms else 'started'}.")
+                thanks = f"Thanks, everyone agreed. Recording {'started' if first else 'resumed'}."
+                # One message: two sent back to back on Teams lose or merge the second one.
+                status = await self.say(s, f"{thanks} {link}" if link else thanks)
+                if link and isinstance(status, int) and not 200 <= status < 300:
+                    ui.link_not_posted(s)
         elif s.recording:
             await self.close_gate(s, f"waiting for {', '.join(waiting)}" if waiting else "nobody left in the meeting")
             if waiting:
@@ -252,6 +285,7 @@ class Bridge:
             await self.attendee(s, "pause_recording")
         await self.attendee(s, "leave")
         s.wipe()
+        ui.meeting_deleted(s)  # the knowledge base forgets it too (ui/adapters.py: minutes_unapproved)
         s.consent_log("session_deleted", note="bridge files deleted; Attendee data is deleted once the bot has ended")
 
     def drop_audio(self, s):
@@ -367,17 +401,32 @@ class Bridge:
 
     # ================= Upload to Groq =================
 
+    def count_upload(self, seconds, now=None):
+        """Record one upload (or retry) against both of Groq's limits."""
+        now = now or time.time()
+        self.sent_at.append(now)
+        self.billed.append((now, max(settings.BILLED_MIN_S, seconds)))
+
+    def can_send(self, now):
+        """Room for one more upload now? <= RPM_LIMIT per rolling minute, and the rolling hour's
+        billed audio (each upload >= BILLED_MIN_S) stays within AUDIO_S_PER_HOUR."""
+        while self.sent_at and now - self.sent_at[0] > 60:
+            self.sent_at.popleft()
+        while self.billed and now - self.billed[0][0] > 3600:
+            self.billed.popleft()
+        hour_s = sum(s for _, s in self.billed)
+        return (len(self.sent_at) < settings.RPM_LIMIT
+                and hour_s + settings.BILLED_MIN_S <= settings.AUDIO_S_PER_HOUR
+                and len(self.in_flight) < settings.MAX_IN_FLIGHT and now >= self.pause_until)
+
     async def dispatcher(self):
-        """Send queued pieces to Groq, at most RPM_LIMIT per minute and MAX_IN_FLIGHT at once."""
+        """Send queued pieces to Groq within its limits (can_send), MAX_IN_FLIGHT at once.
+        When pieces pile up anyway, same-speaker ones go out as one upload."""
         while True:
             await self.wake.wait()
             self.wake.clear()
             while self.queue:
-                now = time.time()
-                while self.sent_at and now - self.sent_at[0] > 60:
-                    self.sent_at.popleft()
-                if len(self.sent_at) >= settings.RPM_LIMIT or len(self.in_flight) >= settings.MAX_IN_FLIGHT \
-                        or now < self.pause_until:
+                if not self.can_send(time.time()):
                     await asyncio.sleep(0.25)
                     continue
                 s, piece = self.queue.pop(0)
@@ -391,7 +440,7 @@ class Bridge:
                         break
                     piece.merge(item)
                     self.queue.remove(queued)
-                self.sent_at.append(time.time())
+                self.count_upload(piece.seconds)
                 task = asyncio.create_task(self.transcribe(s, piece))
                 self.in_flight.add(task)
                 task.add_done_callback(self.in_flight.discard)
@@ -435,7 +484,7 @@ class Bridge:
             self.pause_until = max(self.pause_until, time.time() + wait)  # holds back all uploads
             log.warning("Groq %s on piece %d, retrying in %.0fs", status or "network error", piece.n, wait)
             await asyncio.sleep(wait)
-            self.sent_at.append(time.time())  # a retry counts against the rate limit too
+            self.count_upload(piece.seconds)  # a retry counts against both limits too
         done_ms = now_ms()
 
         text, dropped = spoken_text(body) if status == 200 else ("", [])
@@ -506,6 +555,7 @@ async def main():
         app.router.add_post("/webhook", bridge.webhook)
         app.router.add_get("/health", lambda request: web.Response(text="ok"))  # Docker health check
         live_view.add_routes(app, bridge)
+        ui.setup(app, bridge)  # /m/<id> for participants, the new organizer pages, Demo mode
 
         # One app on two ports: audio needs TLS (wss://), webhooks and the live view use plain http.
         runner = web.AppRunner(app, access_log=None)
@@ -516,6 +566,9 @@ async def main():
                  settings.WS_PORT, settings.WEBHOOK_PORT, "ON" if bridge.consent_required else "OFF")
 
         background = [asyncio.create_task(job()) for job in (bridge.dispatcher, bridge.idle_flusher, bridge.consent_watch)]
+        background.append(asyncio.create_task(bridge.notes.watch(bridge.sessions)))
+        log.info("live notes: %s", f"{bridge.notes.model}, every {settings.NOTES_INTERVAL_S} s" if bridge.notes.enabled
+                 else f"off ({bridge.notes.reason})")
         stop = asyncio.Event()
         for sig in (signal.SIGINT, signal.SIGTERM):
             asyncio.get_running_loop().add_signal_handler(sig, stop.set)

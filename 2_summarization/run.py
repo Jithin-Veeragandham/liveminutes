@@ -5,6 +5,7 @@
     python 2_summarization/run.py --model textrank --split smoke --seeds 5   # 5 seeds
     python 2_summarization/run.py --model textrank --split smoke --seed 7    # one seed: 7
     python 2_summarization/run.py --model bart --split smoke --seeds 3       # deep model (BART packages are in requirements.txt)
+    python 2_summarization/run.py --model llm --split smoke                  # LLM rolling notes (needs ANTHROPIC_API_KEY; 1 seed by default)
 
 Steps (see main() at the bottom):
   1. check the data     2. load the split     3. build the model
@@ -48,10 +49,13 @@ from metrics import bertscore, rouge_all  # noqa: E402
 
 # ---------------------------------------------------------------- seeds
 
-# Which seeds to run: --seed S -> [S];  --seeds N -> N seeds;  nothing -> N_SEEDS seeds.
+# Which seeds to run: --seed S -> [S];  --seeds N -> N seeds;  nothing -> N_SEEDS seeds (1 for the LLM:
+# every seed repeats every API call, and costs money, so more seeds must be asked for with --seeds).
 def choose_seeds(args):
     if args.seed is not None:
         return [args.seed]
+    if args.seeds is None and args.model == "llm":
+        return [FIRST_SEED]
     n = N_SEEDS if args.seeds is None else args.seeds
     if n < 1:
         sys.exit("--seeds must be at least 1")
@@ -89,15 +93,26 @@ def load_meetings(the_split, split_name):
     return [m for m in meetings if m.reference]
 
 
+# Average length in words of the TRAINING split's human summaries (train only: no leakage).
+def train_summary_words(the_split):
+    lengths = [len(ami.read_reference(m).split()) for m in the_split["train"]]
+    return round(np.mean([n for n in lengths if n]))
+
+
 # Build the model and return it with the exact settings it uses (these go into the log).
-def make_model(model_name, the_split):
+def make_model(model_name, the_split, no_wait=False):
     if model_name == "textrank":
         from textrank_baseline import TextRankSummarizer
         cfg = dict(settings.TEXTRANK)
-        # Summary length = average length of the TRAINING split's human summaries (train only: no leakage).
-        lengths = [len(ami.read_reference(m).split()) for m in the_split["train"]]
-        cfg["words"] = cfg["words"] or round(np.mean([n for n in lengths if n]))
+        cfg["words"] = cfg["words"] or train_summary_words(the_split)
         return TextRankSummarizer(cfg["words"], cfg["min_line_words"]), cfg
+    if model_name == "llm":
+        from llm_summarizer import LLMSummarizer
+        cfg = dict(settings.LLM)
+        cfg["summary_words"] = cfg["summary_words"] or train_summary_words(the_split)
+        if no_wait:
+            cfg["min_seconds_between_calls"] = 0
+        return LLMSummarizer(cfg, speaker_names=ami.ROLE_NAMES), cfg
     from bart_summarizer import BartSummarizer
     return BartSummarizer(settings.BART), dict(settings.BART)
 
@@ -108,7 +123,11 @@ def make_model(model_name, the_split):
 def run_one_seed(seed, model, meetings, with_bertscore):
     set_seeds(seed)
     start = time.perf_counter()
-    predictions = {m.id: model.summarize(m.lines) for m in meetings}
+    predictions, action_items = {}, {}
+    for m in meetings:
+        predictions[m.id] = model.summarize(m.lines)
+        if getattr(model, "last_notes", None):   # the LLM also writes action items (logged, not scored yet)
+            action_items[m.id] = [vars(a) for a in model.last_notes.action_items]
     seconds = time.perf_counter() - start
 
     per_meeting = {m.id: rouge_all(m.reference, predictions[m.id]) for m in meetings}
@@ -117,7 +136,10 @@ def run_one_seed(seed, model, meetings, with_bertscore):
         f1 = bertscore([m.reference for m in meetings], [predictions[m.id] for m in meetings], settings.BERTSCORE)
         scores["bertscore_f1"] = np.mean(f1)
     scores = {name: round(float(v), 4) for name, v in scores.items()}
-    return {"scores": scores, "per_meeting": per_meeting, "predictions": predictions, "seconds": seconds}
+    out = {"scores": scores, "per_meeting": per_meeting, "predictions": predictions, "seconds": seconds}
+    if action_items:
+        out["action_items"] = action_items
+    return out
 
 
 # Mean and standard deviation of each score across seeds.
@@ -139,6 +161,9 @@ SEED_EFFECT = {
     "bart": "BART decodes with beam search (do_sample=False), so on the same hardware it is deterministic too. "
             "Differences between seeds can only come from nondeterministic float math (e.g. GPU kernels, "
             "thread scheduling), which can flip a beam choice and change a few words.",
+    "llm": "A hosted LLM cannot be seeded: our seeds only reach local random generators, and the provider's sampling "
+           "(temperature etc.) is fixed for this model. So every run can give different text, and the spread across "
+           "seeds measures the model's own run-to-run variation. Each seed repeats every API call.",
 }
 SEEDED = "Each seed sets Python random, NumPy and torch. PYTHONHASHSEED is fixed to the FIRST seed for the whole run."
 
@@ -214,7 +239,7 @@ def short_hash(value):
 # Versions of the packages that matter (packages not installed are left out).
 def package_versions():
     out = {}
-    for name in ["summa", "rouge-score", "numpy", "torch", "transformers", "bert-score"]:
+    for name in ["summa", "rouge-score", "numpy", "torch", "transformers", "bert-score", "anthropic"]:
         try:
             out[name] = importlib.metadata.version(name)
         except importlib.metadata.PackageNotFoundError:
@@ -236,13 +261,15 @@ def save(record, results):
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("--model", choices=["textrank", "bart"], default="textrank")
+    p.add_argument("--model", choices=["textrank", "bart", "llm"], default="textrank")
     p.add_argument("--split", choices=["smoke", "dev", "eval"], default="smoke")
     seed_options = p.add_mutually_exclusive_group()
     seed_options.add_argument("--seeds", type=int, help=f"number of seeds (default {N_SEEDS})")
     seed_options.add_argument("--seed", type=int, help="run exactly one seed, with this value")
     p.add_argument("--bertscore", action="store_true", help="also compute BERTScore (BART packages are in requirements.txt)")
     p.add_argument("--no-log", action="store_true", help="don't save the result")
+    p.add_argument("--no-wait", action="store_true",
+                   help="LLM: don't space API calls out (settings.LLM min_seconds_between_calls); may hit rate limits")
     args = p.parse_args()
 
     seeds = choose_seeds(args)
@@ -258,7 +285,11 @@ def main():
     print(f"seeds: {len(seeds)} ({seeds[0]}..{seeds[-1]})")
 
     # 3. Build the model.
-    model, model_cfg = make_model(args.model, the_split)
+    model, model_cfg = make_model(args.model, the_split, args.no_wait)
+    if model_cfg.get("min_seconds_between_calls"):
+        calls = sum(int(m.lines[-1].start // model_cfg["chunk_seconds"]) + 1 for m in meetings if m.lines) * len(seeds)
+        print(f"LLM pacing: ~{calls} calls, one per {model_cfg['min_seconds_between_calls']} s: about "
+              f"{calls * model_cfg['min_seconds_between_calls'] / 60:.0f} min (--no-wait to go as fast as the API allows)")
 
     # 4. Summarize and score every meeting, once per seed.
     results = []
@@ -291,6 +322,8 @@ def main():
         "python": platform.python_version(), "packages": package_versions(),
         "hardware": {"machine": platform.machine(), "system": platform.platform(), "cpus": os.cpu_count()},
     }
+    if hasattr(model, "provider"):   # LLM: API calls, tokens (what it cost) and which model actually answered
+        record["llm_usage"] = model.provider.usage
     if not args.no_log:
         save(record, results)
 

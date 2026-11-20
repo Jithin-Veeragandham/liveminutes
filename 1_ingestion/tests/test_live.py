@@ -217,6 +217,24 @@ class TeamsUploadFirstTest(unittest.TestCase):
             s.close()
 
 
+class GroqLimitsTest(unittest.TestCase):
+    def test_per_minute_and_per_hour_budgets(self):
+        b = FakeBridge()
+        t = 1_000_000.0
+        for i in range(settings.RPM_LIMIT):
+            self.assertTrue(b.can_send(t), i)
+            b.count_upload(2.0, t)  # short pieces are billed as 10 s
+        self.assertFalse(b.can_send(t + 1))  # 19 in this minute: wait
+        self.assertTrue(b.can_send(t + 61))  # next minute: fine again
+        # the hour budget: 7,000 s at >= 10 s each is 700 uploads, spread so the minute limit never bites
+        b = FakeBridge()
+        for i in range(settings.AUDIO_S_PER_HOUR // settings.BILLED_MIN_S):
+            b.count_upload(1.0, t + i * 4)
+        later = t + 700 * 4
+        self.assertFalse(b.can_send(later))           # hour used up
+        self.assertTrue(b.can_send(t + 3600 + 61))    # oldest uploads have left the window
+
+
 class LongPollTest(AioHTTPTestCase):
     async def get_application(self):
         self.bridge = FakeBridge()
@@ -298,7 +316,6 @@ class SendBotHttpTest(AioHTTPTestCase):
         self.assertEqual(d["attendee"]["state"], "joining")
         self.assertEqual(d["log"][0]["source"], "attendee")
         self.assertEqual((await self.client.get("/live/..%2Fetc/logs")).status, 404)
-        self.assertIn("Send bot", await (await self.client.get("/live")).text())
         self.assertIsInstance(await (await self.client.get("/live/api/sessions")).json(), list)
 
 
