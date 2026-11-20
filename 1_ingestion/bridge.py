@@ -36,6 +36,7 @@ import settings
 from audio import Speaker, wav_bytes
 from chat import CONSENT_PROMPT, consent_message, parse_reply, parse_vouch
 from session import Person, Session, mmss, now_ms
+import ui  # the participants' live view, editing and Demo mode (ui/, docs/UI.md)
 
 MIXED = "mixed"  # stream id for the Teams mixed audio
 log = logging.getLogger("bridge")
@@ -56,11 +57,16 @@ def spoken_text(groq_json):
 
 
 class Bridge:
+    # Pause between two chat messages from the bot: 1 s + 10 ms per character, at most 3 s
+    # (well under the 10 s Attendee waits for a webhook answer).
+    CHAT_GAP_S, CHAT_GAP_PER_CHAR_S, CHAT_GAP_MAX_S = 1.0, 0.01, 3.0
+
     def __init__(self, http, consent_required):
         self.http = http                      # aiohttp client, for Attendee and Groq
         self.consent_required = consent_required
         self.sessions = {}                    # bot_id -> Session
         self.live_url = settings.LIVE_VIEW_URL
+        self.chat_locks, self.chat_free_at = {}, {}  # bot_id -> lock / when the next chat message may go
         # upload queue
         self.queue = []                       # (session, piece) waiting for upload
         self.wake = asyncio.Event()           # set when something is queued
@@ -78,6 +84,8 @@ class Bridge:
     async def attendee(self, s, action, payload=None):
         """POST /api/v1/bots/<bot_id>/<action>: pause_recording, resume_recording,
         send_chat_message, leave, delete_data. Returns the HTTP status (0 = no answer)."""
+        if s.demo:  # Demo mode (ui/demo.py): there is no real bot to call
+            return 200
         url = f"{settings.ATTENDEE_URL}/api/v1/bots/{s.bot_id}/{action}"
         headers = {"Authorization": f"Token {settings.ATTENDEE_API_KEY}"}
         try:
@@ -107,10 +115,19 @@ class Bridge:
             return 0, str(e) or type(e).__name__
 
     async def say(self, s, text):
-        """Post in the meeting chat."""
+        """Post in the meeting chat, one message at a time per meeting. Teams types each message key by
+        key: one sent while the last is still being typed is lost or merged into it, so wait between them."""
         s.sent_texts.add(text.strip())  # so we ignore it when it comes back through the chat webhook
-        s.consent_log("bot_chat", text=text)
-        await self.attendee(s, "send_chat_message", {"message": text, "to": "everyone"})
+        lock = self.chat_locks.setdefault(s.bot_id, asyncio.Lock())
+        async with lock:
+            wait = self.chat_free_at.get(s.bot_id, 0) - time.monotonic()
+            if wait > 0 and not s.demo:
+                await asyncio.sleep(wait)
+            s.consent_log("bot_chat", text=text)
+            status = await self.attendee(s, "send_chat_message", {"message": text, "to": "everyone"})
+            self.chat_free_at[s.bot_id] = time.monotonic() + min(
+                self.CHAT_GAP_MAX_S, self.CHAT_GAP_S + self.CHAT_GAP_PER_CHAR_S * len(text))
+        return status
 
     # ================= Webhooks from Attendee =================
 
@@ -161,6 +178,7 @@ class Bridge:
             # One line of plain text, so it is safe on Teams (typed key by key) and Meet alike.
             await self.say(s, f"Live transcript (organizer's computer only): {self.live_url}/live/{s.bot_id}")
         if new == "ended":
+            ui.meeting_ended(s)  # the access code expires VIEW_ACCESS_DAYS from now
             if s.declined:
                 status = await self.attendee(s, "delete_data")
                 s.consent_log("attendee_data_deleted", http_status=status)
@@ -194,7 +212,7 @@ class Bridge:
         decision = parse_reply(text)  # "yes" / "no" / None
         target = sender               # whose answer this is
         if decision is None and sender is not None:  # maybe "<name> yes", for a room, phone line or bot
-            vouch = parse_vouch(text, [p.name for p in s.present()])
+            vouch = parse_vouch(text, [p.name for p in s.present()], own_name=s.bot_name)
             if vouch:
                 name, decision = vouch
                 target = next(p for p in s.present() if p.name == name)
@@ -224,9 +242,15 @@ class Bridge:
         if present and not waiting:
             if not s.recording:
                 s.recording = True
+                # Decided before any await: audio can arrive during resume_recording and set t0_ms.
+                first, link = ui.recording_allowed(s, share=bool(self.live_url))  # link: first time, public address
                 s.consent_log("resumed", people=[p.name for p in present])
                 await self.attendee(s, "resume_recording")
-                await self.say(s, f"Thanks, everyone agreed. Recording {'resumed' if s.t0_ms else 'started'}.")
+                thanks = f"Thanks, everyone agreed. Recording {'started' if first else 'resumed'}."
+                # One message: two sent back to back on Teams lose or merge the second one.
+                status = await self.say(s, f"{thanks} {link}" if link else thanks)
+                if link and isinstance(status, int) and not 200 <= status < 300:
+                    ui.link_not_posted(s)
         elif s.recording:
             await self.close_gate(s, f"waiting for {', '.join(waiting)}" if waiting else "nobody left in the meeting")
             if waiting:
@@ -252,6 +276,7 @@ class Bridge:
             await self.attendee(s, "pause_recording")
         await self.attendee(s, "leave")
         s.wipe()
+        ui.meeting_deleted(s)  # the knowledge base forgets it too (ui/adapters.py: minutes_unapproved)
         s.consent_log("session_deleted", note="bridge files deleted; Attendee data is deleted once the bot has ended")
 
     def drop_audio(self, s):
@@ -506,6 +531,7 @@ async def main():
         app.router.add_post("/webhook", bridge.webhook)
         app.router.add_get("/health", lambda request: web.Response(text="ok"))  # Docker health check
         live_view.add_routes(app, bridge)
+        ui.setup(app, bridge)  # /m/<id> for participants, the new organizer pages, Demo mode
 
         # One app on two ports: audio needs TLS (wss://), webhooks and the live view use plain http.
         runner = web.AppRunner(app, access_log=None)

@@ -29,7 +29,9 @@ All in `1_ingestion/`. The bridge's Python files, in the order audio flows throu
 | `chat.py` | Reading consent replies (`yes`, `no`, `Room 4B yes`) and writing the bot's consent message |
 | `audio.py` | Cutting each audio stream into 2–10 s pieces at pauses |
 | `session.py` | One meeting: who is in it, consent state, Teams speaker labels, the transcript and its files |
-| `live_view.py` + `home.html` + `live.html` | The live view at http://localhost:8776/live: Sessions and Send bot tabs (`home.html`), and each meeting's transcript + bot activity (`live.html`) |
+| `live_view.py` + `home.html` + `live.html` | The classic live view (now at `/live?classic=1`): Sessions and Send bot tabs (`home.html`), and each meeting's transcript + bot activity (`live.html`) |
+| `ui/` | The participants' shared live view (`/m/<id>`, link + access code), the redesigned organizer pages (`/live`), editing with an append-only edit log, and Demo mode. See [UI.md](UI.md) |
+| `tunnel.sh` | Shares the participant pages through a free Cloudflare quick tunnel and gives its address to the running bridge ([UI.md](UI.md#2-sharing-outside-this-computer)) |
 
 Everything else:
 
@@ -43,6 +45,7 @@ Everything else:
 | `../.env.example`, `../requirements.txt` | At the repo root, shared by all components: the API key template (see [1.5](#15-configuration)) and Python packages |
 | `tests/test_consent.py` | Offline unit tests for consent replies, vouching and chat formatting (Attendee mocked, no Groq) |
 | `tests/test_live.py` | Offline unit tests for the live view: page data, Send bot (link checks, request body, cross-site refusal) and the merged bot logs |
+| `tests/test_ui.py`, `tests/e2e/` | Tests for `ui/`: API tests (pytest) and browser tests with Playwright + axe-core ([UI.md](UI.md#9-tests)) |
 | `tests/consent_sim.py` | Offline: mock Attendee API + fake webhooks/audio. Scenarios `yes_late`, `no`, `timeout`, `teams` |
 | `tests/replay_to_bridge.py` | Offline: replays a WAV as two fake Meet participants |
 | `tools/receiver/` | Raw per-speaker WAV recorder + offline faster-whisper. **No consent step.** |
@@ -55,7 +58,7 @@ Everything else:
 - **Teams:** one mixed stream. A piece ends at a pause **or where a different person starts talking**: when a speech-start event arrives and the piece being built already holds someone else's speech, it is cut at that event's timestamp (`cut_at_speaker_change`). The event comes ~0.5 s late, but the piece is usually still being built then. Each piece is labelled from speech start/stop events: a name, `Multiple speakers (A, B)` (now mostly when two people talk at the same moment, which one mixed stream can't separate), or `Unknown speaker`. Those events arrive ~0.7 s after the audio, so a piece goes to Groq at once and is named when Groq answers (waiting out what's left of `LABEL_GRACE_MS`, 1.2 s after speech end, usually nothing). Before, it waited the full 1.2 s and only then uploaded.
 - **Consent** (on by default, `--no-consent` for tests):
   - Audio is dropped on arrival until **everyone present** has replied yes. The bot is also paused inside Attendee.
-  - The chat message lists everyone in the meeting, one per line. Meeting rooms, phone lines and other bots can't type, so someone present answers for them with the name and yes: `Conference Room 4B yes` (also `yes for Room 4B`, or part of a name if it fits only one participant). The bot confirms ("Noted: yes for …, from …") and `consent.jsonl` records who vouched.
+  - The chat message lists everyone in the meeting, one per line. Meeting rooms, phone lines and other bots can't type, so someone present answers for them with the name and yes: `Conference Room 4B yes` (also `yes for Room 4B`, or part of a name if it fits only one participant). One message counts for one participant: an exact name wins, and part of a name counts only if it fits nobody else, our own bot included. Our bot never needs a yes (Attendee leaves it out of the participant list), and a message naming it is ignored: with two LiveMinutes bots in a call, "LiveMinutes yes" counts for the bot called exactly "LiveMinutes" and never also for "LiveMinutes - Aatmaj". The bot confirms ("Noted: yes for …, from …") and `consent.jsonl` records who vouched.
   - Late joiner → everyone paused until they (or someone for them) say yes.
   - Anyone says no, for themselves or as `<name> no` → "Recording stopped.", the bot leaves, and the session is deleted here and in Attendee (only `consent.jsonl` is kept).
   - No answer → reminder after 2 min, leave after 2 more.

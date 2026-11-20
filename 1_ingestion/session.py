@@ -65,6 +65,7 @@ class Session:
         self.piece_log = open(self.dir / "pieces.jsonl", "a")
         self.bot_name = None
         self.state = "starting"  # Attendee's bot state, for the live view
+        self.demo = False        # Demo mode (ui/demo.py): a scripted meeting, no real bot behind it
 
         # audio and transcript
         self.names = {}       # participant uuid -> display name
