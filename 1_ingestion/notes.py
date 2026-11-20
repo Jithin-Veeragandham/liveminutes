@@ -80,6 +80,9 @@ class LiveNotes:
             self.enabled = True
         except SystemExit as e:          # e.g. no API key: the bridge still runs, the page says why
             self.reason = str(e)
+        except ModuleNotFoundError as e:  # e.g. the Anthropic provider in the bridge image, which has no SDK
+            self.reason = (f"{e}. The bridge image runs Gemini: set LIVEMINUTES_LLM_PROVIDER=gemini and "
+                           "GEMINI_API_KEY in the repo's .env, then dc up -d")
         except Exception as e:           # summarizer code missing or broken: same
             self.reason = f"{type(e).__name__}: {e}"
 
