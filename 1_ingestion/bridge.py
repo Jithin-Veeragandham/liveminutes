@@ -11,7 +11,8 @@ What happens to them:
   2. Cutting (audio.py): each stream is cut into 2-10 s pieces at pauses.
   3. Teams only (session.py): each piece of the mixed stream is named from "who is speaking" events,
      while Groq transcribes it (those events arrive ~0.7 s late, about as long as Groq takes).
-  4. Upload (bridge.py): pieces go to Groq Whisper, at most 12 per minute (the free tier).
+  4. Upload (bridge.py): pieces go to Groq Whisper within the free tier: <= 19 per minute and
+     <= 7,000 billed audio-seconds per rolling hour (can_send).
   5. Output (session.py): sessions/<bot_id>/transcript.txt, plus the live view (live_view.py).
 
 Settings: settings.py.   Run:  .venv/bin/python bridge.py [--no-consent]
@@ -32,6 +33,7 @@ import aiohttp
 from aiohttp import WSCloseCode, WSMsgType, web
 
 import live_view
+import notes
 import settings
 from audio import Speaker, wav_bytes
 from chat import CONSENT_PROMPT, consent_message, parse_reply, parse_vouch
@@ -71,8 +73,12 @@ class Bridge:
         self.queue = []                       # (session, piece) waiting for upload
         self.wake = asyncio.Event()           # set when something is queued
         self.sent_at = deque()                # upload times in the last 60 s, for the rate limit
+        self.billed = deque()                 # (time, billed audio-seconds) in the last hour, for Groq's audio budget
         self.in_flight = set()                # uploads running now
         self.pause_until = 0.0                # Groq said "slow down": no uploads before this time
+        # live notes: summary + action items from the LLM every NOTES_INTERVAL_S (notes.py)
+        self.notes = notes.LiveNotes()
+        self.tasks = set()                    # one-off tasks (final notes update), kept so they aren't garbage-collected
 
     def session(self, bot_id):
         if bot_id not in self.sessions:
@@ -183,6 +189,9 @@ class Bridge:
                 status = await self.attendee(s, "delete_data")
                 s.consent_log("attendee_data_deleted", http_status=status)
             s.close()
+            task = asyncio.create_task(self.notes.finish(s))   # last notes update with the final lines
+            self.tasks.add(task)
+            task.add_done_callback(self.tasks.discard)
 
     async def on_join_leave(self, s, data):
         uuid, name, kind = data.get("participant_uuid"), data.get("participant_name"), data.get("event_type")
@@ -392,17 +401,32 @@ class Bridge:
 
     # ================= Upload to Groq =================
 
+    def count_upload(self, seconds, now=None):
+        """Record one upload (or retry) against both of Groq's limits."""
+        now = now or time.time()
+        self.sent_at.append(now)
+        self.billed.append((now, max(settings.BILLED_MIN_S, seconds)))
+
+    def can_send(self, now):
+        """Room for one more upload now? <= RPM_LIMIT per rolling minute, and the rolling hour's
+        billed audio (each upload >= BILLED_MIN_S) stays within AUDIO_S_PER_HOUR."""
+        while self.sent_at and now - self.sent_at[0] > 60:
+            self.sent_at.popleft()
+        while self.billed and now - self.billed[0][0] > 3600:
+            self.billed.popleft()
+        hour_s = sum(s for _, s in self.billed)
+        return (len(self.sent_at) < settings.RPM_LIMIT
+                and hour_s + settings.BILLED_MIN_S <= settings.AUDIO_S_PER_HOUR
+                and len(self.in_flight) < settings.MAX_IN_FLIGHT and now >= self.pause_until)
+
     async def dispatcher(self):
-        """Send queued pieces to Groq, at most RPM_LIMIT per minute and MAX_IN_FLIGHT at once."""
+        """Send queued pieces to Groq within its limits (can_send), MAX_IN_FLIGHT at once.
+        When pieces pile up anyway, same-speaker ones go out as one upload."""
         while True:
             await self.wake.wait()
             self.wake.clear()
             while self.queue:
-                now = time.time()
-                while self.sent_at and now - self.sent_at[0] > 60:
-                    self.sent_at.popleft()
-                if len(self.sent_at) >= settings.RPM_LIMIT or len(self.in_flight) >= settings.MAX_IN_FLIGHT \
-                        or now < self.pause_until:
+                if not self.can_send(time.time()):
                     await asyncio.sleep(0.25)
                     continue
                 s, piece = self.queue.pop(0)
@@ -416,7 +440,7 @@ class Bridge:
                         break
                     piece.merge(item)
                     self.queue.remove(queued)
-                self.sent_at.append(time.time())
+                self.count_upload(piece.seconds)
                 task = asyncio.create_task(self.transcribe(s, piece))
                 self.in_flight.add(task)
                 task.add_done_callback(self.in_flight.discard)
@@ -460,7 +484,7 @@ class Bridge:
             self.pause_until = max(self.pause_until, time.time() + wait)  # holds back all uploads
             log.warning("Groq %s on piece %d, retrying in %.0fs", status or "network error", piece.n, wait)
             await asyncio.sleep(wait)
-            self.sent_at.append(time.time())  # a retry counts against the rate limit too
+            self.count_upload(piece.seconds)  # a retry counts against both limits too
         done_ms = now_ms()
 
         text, dropped = spoken_text(body) if status == 200 else ("", [])
@@ -542,6 +566,9 @@ async def main():
                  settings.WS_PORT, settings.WEBHOOK_PORT, "ON" if bridge.consent_required else "OFF")
 
         background = [asyncio.create_task(job()) for job in (bridge.dispatcher, bridge.idle_flusher, bridge.consent_watch)]
+        background.append(asyncio.create_task(bridge.notes.watch(bridge.sessions)))
+        log.info("live notes: %s", f"{bridge.notes.model}, every {settings.NOTES_INTERVAL_S} s" if bridge.notes.enabled
+                 else f"off ({bridge.notes.reason})")
         stop = asyncio.Event()
         for sig in (signal.SIGINT, signal.SIGTERM):
             asyncio.get_running_loop().add_signal_handler(sig, stop.set)

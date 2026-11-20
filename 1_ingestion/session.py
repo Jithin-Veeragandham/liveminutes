@@ -6,6 +6,7 @@ sessions/<bot_id>/
   consent.jsonl    every consent event (kept even when someone says no)
   events.jsonl     every webhook from Attendee, raw
   captions.txt     the platform's own captions, for comparison
+  notes.json       live notes from the LLM: summary, action items, a log of every call (notes.py)
   pieces/NNNN.wav  the audio that was uploaded
 """
 
@@ -84,6 +85,9 @@ class Session:
         self.declined = False   # someone said no
         self.leaving = False    # timed out waiting for answers
         self.sent_texts = set()  # our own chat messages, which come back through the chat webhook
+
+        # live notes (notes.py): summary + action items from the LLM, None until the first audio
+        self.notes = None
 
         # live view
         self.activity = []    # [{time, kind, text}], the "Bot activity" column
@@ -189,6 +193,7 @@ class Session:
         self.events.close()
         self.piece_log.close()
         self.lines.clear()
+        self.notes = None
         for path in self.dir.iterdir():
             if path.name != "consent.jsonl":
                 shutil.rmtree(path) if path.is_dir() else path.unlink()
