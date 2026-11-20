@@ -5,6 +5,7 @@
 import { h, clear, append, displayName, firstName, ago, clock, dueLabel, mmss, wordDiff, modKey } from "../util.js";
 import { icon } from "../icons.js";
 import { avatar, nameEl, empty, toast, menu, dialog, drawer, confirmDialog, tooltip, iconButton, skeletonLines } from "../ui.js";
+import { notesStatus } from "./notes.js";
 
 const FIELD_LABELS = { text: "Text", owner: "Owner", due: "Due", status: "Status", deleted: "Deleted", title: "Title", approved: "Minutes approval" };
 const STATUS_LABEL = { pending: "Pending", approved: "Approved", done: "Done", draft: "Draft" };
@@ -327,9 +328,10 @@ export function itemsView(ctx) {
     { label: "Export minutes (Markdown)", icon: "download", run: () => ctx.emit("export") },
     { label: "Print or save as PDF", icon: "printer", run: () => ctx.emit("print") },
   ], { label: "Summary options" }), { sm: true });
+  const sStatus = notesStatus(ctx);   // the LLM's live notes: last update, countdown, delays
   const summaryPanel = h("section", { class: "panel panel--summary", attrs: { "aria-labelledby": "h-summary" }, dataset: { panel: "summary" } },
     h("div", { class: "panel-head" }, icon("sparkles", { size: 16, cls: "head-icon" }), h("h2", { id: "h-summary", text: "Summary" }), sCount, sLabel, h("span", { class: "spacer" }), sUpdated, sMenu),
-    sBody);
+    sStatus.el, sBody);
 
   function summaryItem(item) {
     const editing = ctx.editing && ctx.editing.id === item.id;
@@ -357,6 +359,7 @@ export function itemsView(ctx) {
 
   function renderSummary() {
     if (!ctx.snap) return;
+    sStatus.render();
     const s = ctx.snap.summary;
     sBody.querySelectorAll(':scope > [aria-hidden="true"]').forEach((x) => x.remove());
     clear(sNote);
@@ -381,10 +384,13 @@ export function itemsView(ctx) {
   const addBtn = h("button", { class: "btn btn--sm", type: "button", on: { click: () => addNew() } }, icon("plus", { size: 14 }), "Add");
   const aList = h("div", { attrs: { role: "list", "aria-label": "Action items" } });
   const aBody = h("div", { class: "panel-body" }, skeletonLines(3), aList);
+  const aStatus = notesStatus(ctx, { compact: true });
   const actionsPanel = h("section", { class: "panel panel--actions", attrs: { "aria-labelledby": "h-actions" }, dataset: { panel: "actions" } },
     h("div", { class: "panel-head" }, icon("list-checks", { size: 16, cls: "head-icon" }), h("h2", { id: "h-actions", text: "Action items" }), aCount, aLabel, h("span", { class: "spacer" }), addBtn),
+    aStatus.el,
     h("div", { class: "panel-tools" }, filters),
     aBody);
+  ctx.on("llm", () => { sStatus.render(); aStatus.render(); });
 
   function addNew() {
     if (!ctx.canEdit()) { ctx.emit("need-name"); return; }
@@ -414,7 +420,8 @@ export function itemsView(ctx) {
       iconButton("more", "More", (e) => actionsMenu(e.currentTarget, item), { sm: true, size: 14 })),
     editing ? editForm(item, "action") : h("div", { class: "item-meta" },
       item.owner ? h("span", { class: "owner" }, avatar(item.owner, { size: "xs" }), displayName(item.owner)) : h("span", { class: "owner owner--none" }, icon("user", { size: 13 }), "Unassigned"),
-      item.due ? h("span", { class: `due ${due.overdue && !done ? "due--overdue" : ""}` }, icon("calendar", { size: 13 }), due.overdue && !done ? `Overdue · ${due.text}` : due.text) : null,
+      item.due ? h("span", { class: `due ${due.overdue && !done ? "due--overdue" : ""}` }, icon("calendar", { size: 13 }), due.overdue && !done ? `Overdue · ${due.text}` : due.text)
+        : item.due_text ? h("span", { class: "due", title: "Due, as it was said (no date)" }, icon("calendar", { size: 13 }), item.due_text[0].toUpperCase() + item.due_text.slice(1)) : null,
       h("span", { class: `chip ${item.status === "approved" ? "chip--success" : item.status === "done" ? "chip--accent" : ""}`, text: STATUS_LABEL[item.status] || item.status }),
       sourceChips(item), editedNote(item), editingHint(item)));
     if (!editing && item.id !== "__new") flashIfChanged(card, item);
@@ -423,6 +430,7 @@ export function itemsView(ctx) {
 
   function renderActions() {
     if (!ctx.snap) return;
+    aStatus.render();
     const a = ctx.snap.actions;
     aBody.querySelectorAll(':scope > [aria-hidden="true"]').forEach((x) => x.remove());
     aLabel.hidden = !a.label;

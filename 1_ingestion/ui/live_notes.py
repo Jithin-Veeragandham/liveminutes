@@ -231,7 +231,27 @@ def current(meeting):
         book.key, book.updated_ms = key, updated_ms
         if meeting.folder.is_dir():
             (meeting.folder / STATE_FILE).write_text(json.dumps(book.to_dict()))
+    remap(book, meeting)
     return book
+
+
+def remap(book, meeting):
+    """Keep source_line_ids pointing at lines that exist. A line's id is its first piece's start; when later pieces
+    merge lines (or a late piece starts one earlier), an id an item stored can stop being a line id. Map each stored
+    id (a piece start) to the line that holds that piece now. Only redone when the transcript changed."""
+    rows = meeting.rows()
+    if getattr(book, "_rows", None) == len(rows):
+        return
+    from ui.meeting import merge_rows
+    line_of = {start: f"t{line[0]}" for line in merge_rows(rows) for start in line[4]}
+    for item in book.summary + book.actions:
+        ids = []
+        for lid in item.get("source_line_ids", []):
+            new = line_of.get(int(lid[1:])) if lid[1:].isdigit() else None
+            if new and new not in ids:
+                ids.append(new)
+        item["source_line_ids"] = ids
+    book._rows = len(rows)
 
 
 def rebuild(book, meeting, notes, sent_until):

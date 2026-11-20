@@ -249,3 +249,17 @@ def test_owner_due_and_sentence_helpers():
         ["2026-11-18", "2026-11-20", "2026-11-19", "2026-11-21", "2026-12-01", "2026-11-20", "", ""]
     assert live_notes.sentences("We met. We agreed on 12.50 euros, e.g. for the case. Fine.") == \
         ["We met.", "We agreed on 12.50 euros, e.g. for the case. Fine."]
+
+
+async def test_source_lines_follow_the_transcript_when_lines_merge(llm_env):
+    b, client, s, _ = llm_env
+    await update(b, s)
+    decision = (await snap(client))["summary"]["items"][1]
+    assert decision["source_line_ids"] == [f"t{T0 + 40_000}"]
+    # a piece of the same speaker, said just before but transcribed late, now starts that line
+    s.lines.append((T0 + 38_500, T0 + 39_800, "Ann Lee", "Okay."))
+    s.touch()
+    d = await snap(client)
+    ids = {l["id"] for l in d["lines"]}
+    decision = d["summary"]["items"][1]
+    assert decision["source_line_ids"] == [f"t{T0 + 38_500}"] and set(decision["source_line_ids"]) <= ids

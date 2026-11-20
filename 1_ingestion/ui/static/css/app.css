@@ -389,6 +389,59 @@ input.meeting-title { border-color: var(--focus); box-shadow: 0 0 0 3px var(--ac
 .panel-note { margin: var(--s-3) var(--s-3) 0; padding: 8px 10px; font-size: var(--fs-xs); line-height: 1.45; }
 .panel-note > .icon { margin-top: 1px; }
 
+/* the LLM's live notes: status line under Summary / Action items (meeting/notes.js) */
+.llm-status {
+  flex: none; position: relative; display: flex; align-items: center; gap: var(--s-2);
+  padding: 7px var(--s-3) 9px var(--s-4); border-bottom: 1px solid var(--divider);
+  font-size: var(--fs-xs); line-height: 1.35; color: var(--text-2); background: var(--surface);
+}
+.llm-status[hidden] { display: none; }
+.llm-status--compact { display: none; padding-top: 6px; padding-bottom: 6px; }   /* phones: Summary is another tab */
+@media (max-width: 767px) { .llm-status--compact:not([hidden]) { display: flex; } }
+.llm-icon { flex: none; display: inline-flex; color: var(--accent-text); }
+.llm-lines { min-width: 0; display: flex; flex-wrap: wrap; column-gap: var(--s-2); row-gap: 1px; }
+.llm-text { font-variant-numeric: tabular-nums; }
+.llm-detail { color: var(--text-3); overflow: hidden; text-overflow: ellipsis; }
+.llm-detail[hidden] { display: none; }
+.llm-status--compact .llm-text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.llm-status--updating .llm-icon .icon { animation: llm-spin 1.2s linear infinite; }
+.llm-status--delayed { background: var(--warning-soft); color: var(--text); }
+.llm-status--delayed .llm-icon { color: var(--warning); }
+.llm-status--off .llm-icon, .llm-status--waiting .llm-icon { color: var(--text-3); }
+.llm-status--final .llm-icon { color: var(--success); }
+.llm-bar { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: transparent; overflow: hidden; }
+.llm-bar[hidden] { display: none; }
+.llm-bar > i { display: block; height: 100%; width: 0; background: var(--accent); opacity: .55; transition: width 1s linear; }
+.llm-bar.is-busy > i { width: 35% !important; opacity: .8; animation: llm-slide 1.2s ease-in-out infinite; }
+.llm-status--delayed .llm-bar > i { background: var(--warning); }
+@keyframes llm-spin { to { transform: rotate(360deg); } }
+@keyframes llm-slide { from { transform: translateX(-100%); } to { transform: translateX(290%); } }
+
+/* organizer: every LLM update (Activity tab) */
+.llm-box { margin: var(--s-3); border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface-2); }
+.llm-box[hidden] { display: none; }
+.llm-box > summary {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 2px var(--s-2); padding: 8px var(--s-3); cursor: pointer; list-style: none;
+  font-size: var(--fs-xs); font-weight: var(--fw-semibold); color: var(--text); white-space: nowrap;
+}
+.llm-box > summary::-webkit-details-marker { display: none; }
+.llm-box > summary .icon { color: var(--accent-text); }
+.llm-calls-head { flex-basis: 100%; padding-left: 22px; font-weight: var(--fw-regular); color: var(--text-3); font-variant-numeric: tabular-nums; white-space: normal; }
+.llm-calls { list-style: none; margin: 0; padding: 0 var(--s-3) var(--s-2); max-height: 320px; overflow: auto; }
+.llm-call {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 4px var(--s-2); padding: 7px 0;
+  border-top: 1px solid var(--divider); font-size: var(--fs-xs); color: var(--text-2);
+}
+.llm-call time { color: var(--text-3); font-variant-numeric: tabular-nums; }
+.llm-lat { font-weight: var(--fw-semibold); color: var(--text); font-variant-numeric: tabular-nums; }
+.llm-err { flex-basis: 100%; color: var(--danger); overflow-wrap: anywhere; }
+.llm-sent { flex-basis: 100%; }
+.llm-sent > summary { cursor: pointer; color: var(--accent-text); }
+.llm-sent pre {
+  margin: 6px 0 0; padding: 8px; max-height: 180px; overflow: auto; white-space: pre-wrap; border-radius: var(--r-sm);
+  background: var(--surface); border: 1px solid var(--divider); font: 11px/1.45 var(--font-mono); color: var(--text-2);
+}
+
 .tabs { display: flex; gap: 2px; padding: 3px; border-radius: var(--r-md); background: var(--surface-3); }
 .tab {
   display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px;

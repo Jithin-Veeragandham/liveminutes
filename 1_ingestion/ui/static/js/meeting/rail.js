@@ -5,6 +5,7 @@ import { h, clear, displayName, ago, clock, debounce } from "../util.js";
 import { icon } from "../icons.js";
 import { avatar, empty, toast, drawer, skeletonLines, iconButton, menu } from "../ui.js";
 import { diffRow, opVerb, fieldValue } from "./items.js";
+import { notesUpdates } from "./notes.js";
 
 const KIND_LABEL = { summary: "summary item", action: "action item", meeting: "meeting title", minutes: "minutes" };
 const withArticle = (w) => (w === "minutes" ? "the minutes" : w === "meeting title" ? "the meeting title" : `${/^[aeiou]/.test(w) ? "an" : "a"} ${w}`);
@@ -172,7 +173,9 @@ const ACT_ICON = { bot: "bot", chat: "message-square", people: "users", consent:
 
 export function activityView(ctx) {
   const list = h("ol", { class: "activity", attrs: { "aria-label": "Bot activity" } });
-  const body = h("div", { class: "panel-body" }, list);
+  const llm = notesUpdates(ctx);   // every LLM update with its latency (organizer only)
+  const body = h("div", { class: "panel-body" }, llm.el, list);
+  ctx.on("llm", () => llm.render());
   const logsBtn = h("button", { class: "btn btn--sm", type: "button", on: { click: () => botLogs(ctx) } }, icon("terminal", { size: 14 }), "Bot logs");
   const panel = h("section", { class: "panel panel--activity", attrs: { "aria-labelledby": "h-activity" }, dataset: { panel: "activity" } },
     h("div", { class: "panel-head" }, icon("activity", { size: 16, cls: "head-icon" }), h("h2", { id: "h-activity", text: "Activity" }), h("span", { class: "spacer" }), logsBtn),
@@ -182,6 +185,7 @@ export function activityView(ctx) {
   }
   function render(change) {
     if (!ctx.snap) return;
+    llm.render();
     logsBtn.hidden = !!ctx.snap.session.demo;
     if (change && change.added) {
       const near = body.scrollHeight - body.scrollTop - body.clientHeight < 60;
