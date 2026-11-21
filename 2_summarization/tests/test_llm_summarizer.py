@@ -171,3 +171,33 @@ class TestProviderFactory(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestResumeFromCache(unittest.TestCase):
+    """run.py saves every LLM call; a run stopped by an error resumes without asking again what it already has."""
+
+    def test_stopped_run_resumes(self):
+        import run
+
+        class StopsAfterTwo(FakeProvider):
+            model = "fake-1"
+
+            def generate_json(self, *a):
+                if len(self.calls) == 2:
+                    raise RuntimeError("quota")
+                return super().generate_json(*a)
+
+        lines = lines_every(60, 15)   # 3 chunks of 300 s
+        with tempfile.TemporaryDirectory() as tmp:
+            path = os.path.join(tmp, "llm_cache.jsonl")
+            first = LLMSummarizer(dict(CFG, min_seconds_between_calls=0), provider=StopsAfterTwo())
+            run.add_llm_cache(first, path)
+            with self.assertRaises(RuntimeError):
+                first.summarize(lines)
+            fresh = FakeProvider()
+            fresh.model = "fake-1"
+            second = LLMSummarizer(dict(CFG, min_seconds_between_calls=0), provider=fresh)
+            run.add_llm_cache(second, path)
+            second.summarize(lines)
+            self.assertEqual(len(fresh.calls), 1)               # only the third chunk was asked again
+            self.assertEqual(fresh.usage["cache_hits"], 2)

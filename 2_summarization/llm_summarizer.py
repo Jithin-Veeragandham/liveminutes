@@ -20,6 +20,7 @@ import time
 from collections import namedtuple
 from dataclasses import asdict, dataclass, field
 
+from chunks import make_chunks
 from llm_providers import LLMError, make_provider
 
 # The structured reply. Every field is required, so "nobody named" / "no deadline" are empty strings.
@@ -115,18 +116,6 @@ class Notes:
 
 # One transcript line, the same shape as ami.Line: who spoke, when (seconds from the start), what they said.
 Line = namedtuple("Line", "speaker start text")
-
-
-# Cut time-ordered lines into consecutive chunks of about `seconds` each (the last one can be shorter).
-def make_chunks(lines, seconds):
-    chunks, current, start = [], [], None
-    for line in lines:
-        start = line.start if start is None else start
-        if line.start - start >= seconds and current:
-            chunks.append(current)
-            current, start = [], line.start
-        current.append(line)
-    return chunks + ([current] if current else [])
 
 
 def mmss(seconds):

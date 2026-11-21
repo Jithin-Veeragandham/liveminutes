@@ -1,0 +1,836 @@
+{
+  "run_id": "20261120T124103Z_bart_tuned_synthetic_eval_full_1seeds",
+  "commit": "7cea72e708d1e24cc2cfda29055cb6507bbf3f94",
+  "uncommitted_changes": [
+    ".gitignore",
+    "1_ingestion/Dockerfile",
+    "1_ingestion/Dockerfile.dockerignore",
+    "2_summarization/bart_summarizer.py",
+    "2_summarization/llm_summarizer.py",
+    "2_summarization/run.py",
+    "2_summarization/settings.py",
+    "2_summarization/textrank_baseline.py",
+    "5_data/ami/ami.py",
+    "README.md",
+    "docs/SUMMARIZATION.md",
+    "2_summarization/chunks.py",
+    "2_summarization/datasets.py",
+    "2_summarization/hpo/",
+    "2_summarization/tests/test_evaluation.py",
+    "6_evaluation/summarization/disaggregate.py"
+  ],
+  "dataset": "synthetic",
+  "mode": "full",
+  "data_hash": "f2af2f66b099d7985070904f3ea9fcf1623134d4f41b25a0b6abdd91a01d0eae",
+  "split_file_sha256": "975f4160185cd1360c4cb4546e0fc717a10ccc1ccd9d6124bf99a85fef464cee",
+  "config": {
+    "model": {
+      "model": "philschmid/bart-large-cnn-samsum",
+      "revision": "e49b3d60d923f12db22bdd363356f1a4c68532ad",
+      "window_seconds": 60,
+      "num_beams": 4,
+      "device": "cpu",
+      "mode": "full",
+      "window_max_tokens": 100,
+      "final_max_tokens": 150,
+      "final_min_tokens": 120,
+      "length_penalty": 2.0
+    },
+    "mode": "full",
+    "seeds": [
+      42
+    ],
+    "pythonhashseed": 42,
+    "bertscore": {
+      "model": "FacebookAI/roberta-large",
+      "revision": "722cf37b1afa9454edce342e7895e588b6ff1d59",
+      "rescale_with_baseline": false
+    },
+    "params_file": "2_summarization/hpo/results/bart_best.json"
+  },
+  "config_hash": "54c2dc74cd7f",
+  "model": "bart",
+  "model_version": "philschmid/bart-large-cnn-samsum@e49b3d60d923",
+  "split": "eval",
+  "meetings": [
+    "SY0103a",
+    "SY0103b",
+    "SY0103c",
+    "SY0103d",
+    "SY0110a",
+    "SY0110b",
+    "SY0110c",
+    "SY0110d",
+    "SY0202a",
+    "SY0202b",
+    "SY0202c",
+    "SY0202d",
+    "SY0209a",
+    "SY0209b",
+    "SY0209c",
+    "SY0209d",
+    "SY0304a",
+    "SY0304b",
+    "SY0304c",
+    "SY0304d"
+  ],
+  "meeting_groups": {
+    "SY0103a": {
+      "feature": "F1",
+      "scenario": [
+        "F1_INTERLEAVED_TOPICS",
+        "F1_SARCASM_AS_FACT"
+      ],
+      "absent_participants": 0
+    },
+    "SY0103b": {
+      "feature": "F1",
+      "scenario": [
+        "F1_ABSENT_DISCUSSED",
+        "F1_PLAN_CHANGE"
+      ],
+      "absent_participants": 1
+    },
+    "SY0103c": {
+      "feature": "F1",
+      "scenario": [
+        "F1_OFF_TOPIC_TANGENT",
+        "F1_SELF_CORRECTION"
+      ],
+      "absent_participants": 0
+    },
+    "SY0103d": {
+      "feature": "F1",
+      "scenario": [
+        "F1_INTERLEAVED_TOPICS",
+        "F1_SARCASM_AS_FACT"
+      ],
+      "absent_participants": 0
+    },
+    "SY0110a": {
+      "feature": "F1",
+      "scenario": [
+        "F1_ABSENT_DISCUSSED",
+        "F1_SELF_CORRECTION"
+      ],
+      "absent_participants": 1
+    },
+    "SY0110b": {
+      "feature": "F1",
+      "scenario": [
+        "F1_INTERLEAVED_TOPICS",
+        "F1_PLAN_CHANGE"
+      ],
+      "absent_participants": 0
+    },
+    "SY0110c": {
+      "feature": "F1",
+      "scenario": [
+        "F1_OFF_TOPIC_TANGENT",
+        "F1_SARCASM_AS_FACT"
+      ],
+      "absent_participants": 0
+    },
+    "SY0110d": {
+      "feature": "F1",
+      "scenario": [
+        "F1_ABSENT_DISCUSSED",
+        "F1_SELF_CORRECTION"
+      ],
+      "absent_participants": 1
+    },
+    "SY0202a": {
+      "feature": "F2",
+      "scenario": [
+        "F2_OFFERED_TAKEN_BY_OTHER",
+        "F2_VAGUE_NO_OWNER"
+      ],
+      "absent_participants": 0
+    },
+    "SY0202b": {
+      "feature": "F2",
+      "scenario": [
+        "F2_REASSIGNED_OR_DROPPED",
+        "F2_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0202c": {
+      "feature": "F2",
+      "scenario": [
+        "F2_OFFERED_TAKEN_BY_OTHER",
+        "F2_VAGUE_NO_OWNER"
+      ],
+      "absent_participants": 0
+    },
+    "SY0202d": {
+      "feature": "F2",
+      "scenario": [
+        "F2_REASSIGNED_OR_DROPPED",
+        "F2_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0209a": {
+      "feature": "F2",
+      "scenario": [
+        "F2_OFFERED_TAKEN_BY_OTHER",
+        "F2_VAGUE_NO_OWNER"
+      ],
+      "absent_participants": 0
+    },
+    "SY0209b": {
+      "feature": "F2",
+      "scenario": [
+        "F2_REASSIGNED_OR_DROPPED",
+        "F2_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0209c": {
+      "feature": "F2",
+      "scenario": [
+        "F2_OFFERED_TAKEN_BY_OTHER",
+        "F2_VAGUE_NO_OWNER"
+      ],
+      "absent_participants": 0
+    },
+    "SY0209d": {
+      "feature": "F2",
+      "scenario": [
+        "F2_REASSIGNED_OR_DROPPED",
+        "F2_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0304a": {
+      "feature": "F3",
+      "scenario": [
+        "F3_TASK_TO_ABSENT",
+        "F3_UNAGREED_DECISION"
+      ],
+      "absent_participants": 1
+    },
+    "SY0304b": {
+      "feature": "F3",
+      "scenario": [
+        "F3_ACTION_REMOVED",
+        "F3_UNAGREED_DECISION"
+      ],
+      "absent_participants": 0
+    },
+    "SY0304c": {
+      "feature": "F3",
+      "scenario": [
+        "F3_ACTION_REMOVED",
+        "F3_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0304d": {
+      "feature": "F3",
+      "scenario": [
+        "F3_TASK_TO_ABSENT",
+        "F3_UNAGREED_DECISION"
+      ],
+      "absent_participants": 1
+    }
+  },
+  "metrics_by_group": {
+    "feature": {
+      "groups": {
+        "F1": {
+          "n": 8,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103a",
+            "SY0103b",
+            "SY0103c",
+            "SY0103d",
+            "SY0110a",
+            "SY0110b",
+            "SY0110c",
+            "SY0110d"
+          ],
+          "mean": {
+            "rouge1": 0.3829,
+            "rouge2": 0.1421,
+            "rougeL": 0.2344,
+            "rougeSU4": 0.1529,
+            "bertscore_f1": 0.8572
+          }
+        },
+        "F2": {
+          "n": 8,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202a",
+            "SY0202b",
+            "SY0202c",
+            "SY0202d",
+            "SY0209a",
+            "SY0209b",
+            "SY0209c",
+            "SY0209d"
+          ],
+          "mean": {
+            "rouge1": 0.3802,
+            "rouge2": 0.1303,
+            "rougeL": 0.2308,
+            "rougeSU4": 0.1426,
+            "bertscore_f1": 0.861
+          }
+        },
+        "F3": {
+          "n": 4,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "SY0304a",
+            "SY0304b",
+            "SY0304c",
+            "SY0304d"
+          ],
+          "mean": {
+            "rouge1": 0.4106,
+            "rouge2": 0.1512,
+            "rougeL": 0.2346,
+            "rougeSU4": 0.157,
+            "bertscore_f1": 0.8598
+          }
+        }
+      },
+      "gap": {
+        "rouge1": 0.0304,
+        "rouge2": 0.0209,
+        "rougeL": 0.0038,
+        "rougeSU4": 0.0144,
+        "bertscore_f1": 0.0038
+      },
+      "worst": {
+        "rouge1": "F2",
+        "rouge2": "F2",
+        "rougeL": "F2",
+        "rougeSU4": "F2",
+        "bertscore_f1": "F1"
+      }
+    },
+    "scenario": {
+      "groups": {
+        "F1_ABSENT_DISCUSSED": {
+          "n": 3,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103b",
+            "SY0110a",
+            "SY0110d"
+          ],
+          "mean": {
+            "rouge1": 0.4121,
+            "rouge2": 0.1706,
+            "rougeL": 0.264,
+            "rougeSU4": 0.1787,
+            "bertscore_f1": 0.8659
+          }
+        },
+        "F1_INTERLEAVED_TOPICS": {
+          "n": 3,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103a",
+            "SY0103d",
+            "SY0110b"
+          ],
+          "mean": {
+            "rouge1": 0.3538,
+            "rouge2": 0.1249,
+            "rougeL": 0.2107,
+            "rougeSU4": 0.1434,
+            "bertscore_f1": 0.8515
+          }
+        },
+        "F1_OFF_TOPIC_TANGENT": {
+          "n": 2,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103c",
+            "SY0110c"
+          ],
+          "mean": {
+            "rouge1": 0.3826,
+            "rouge2": 0.125,
+            "rougeL": 0.2256,
+            "rougeSU4": 0.1282,
+            "bertscore_f1": 0.8526
+          }
+        },
+        "F1_PLAN_CHANGE": {
+          "n": 2,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103b",
+            "SY0110b"
+          ],
+          "mean": {
+            "rouge1": 0.3118,
+            "rouge2": 0.096,
+            "rougeL": 0.1706,
+            "rougeSU4": 0.113,
+            "bertscore_f1": 0.8476
+          }
+        },
+        "F1_SARCASM_AS_FACT": {
+          "n": 3,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103a",
+            "SY0103d",
+            "SY0110c"
+          ],
+          "mean": {
+            "rouge1": 0.3772,
+            "rouge2": 0.1329,
+            "rougeL": 0.2291,
+            "rougeSU4": 0.1465,
+            "bertscore_f1": 0.8541
+          }
+        },
+        "F1_SELF_CORRECTION": {
+          "n": 3,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103c",
+            "SY0110a",
+            "SY0110d"
+          ],
+          "mean": {
+            "rouge1": 0.4359,
+            "rouge2": 0.182,
+            "rougeL": 0.2823,
+            "rougeSU4": 0.1858,
+            "bertscore_f1": 0.8666
+          }
+        },
+        "F2_OFFERED_TAKEN_BY_OTHER": {
+          "n": 4,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202a",
+            "SY0202c",
+            "SY0209a",
+            "SY0209c"
+          ],
+          "mean": {
+            "rouge1": 0.3906,
+            "rouge2": 0.1496,
+            "rougeL": 0.2499,
+            "rougeSU4": 0.1564,
+            "bertscore_f1": 0.8656
+          }
+        },
+        "F2_REASSIGNED_OR_DROPPED": {
+          "n": 4,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202b",
+            "SY0202d",
+            "SY0209b",
+            "SY0209d"
+          ],
+          "mean": {
+            "rouge1": 0.3699,
+            "rouge2": 0.111,
+            "rougeL": 0.2116,
+            "rougeSU4": 0.1287,
+            "bertscore_f1": 0.8564
+          }
+        },
+        "F2_TASK_TO_ABSENT": {
+          "n": 4,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202b",
+            "SY0202d",
+            "SY0209b",
+            "SY0209d"
+          ],
+          "mean": {
+            "rouge1": 0.3699,
+            "rouge2": 0.111,
+            "rougeL": 0.2116,
+            "rougeSU4": 0.1287,
+            "bertscore_f1": 0.8564
+          }
+        },
+        "F2_VAGUE_NO_OWNER": {
+          "n": 4,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202a",
+            "SY0202c",
+            "SY0209a",
+            "SY0209c"
+          ],
+          "mean": {
+            "rouge1": 0.3906,
+            "rouge2": 0.1496,
+            "rougeL": 0.2499,
+            "rougeSU4": 0.1564,
+            "bertscore_f1": 0.8656
+          }
+        },
+        "F3_ACTION_REMOVED": {
+          "n": 2,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "SY0304b",
+            "SY0304c"
+          ],
+          "mean": {
+            "rouge1": 0.4146,
+            "rouge2": 0.1454,
+            "rougeL": 0.2178,
+            "rougeSU4": 0.1542,
+            "bertscore_f1": 0.8615
+          }
+        },
+        "F3_TASK_TO_ABSENT": {
+          "n": 3,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "SY0304a",
+            "SY0304c",
+            "SY0304d"
+          ],
+          "mean": {
+            "rouge1": 0.4064,
+            "rouge2": 0.1627,
+            "rougeL": 0.2432,
+            "rougeSU4": 0.1564,
+            "bertscore_f1": 0.8576
+          }
+        },
+        "F3_UNAGREED_DECISION": {
+          "n": 3,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "SY0304a",
+            "SY0304b",
+            "SY0304d"
+          ],
+          "mean": {
+            "rouge1": 0.4121,
+            "rouge2": 0.1435,
+            "rougeL": 0.2371,
+            "rougeSU4": 0.1595,
+            "bertscore_f1": 0.8608
+          }
+        }
+      },
+      "gap": {
+        "rouge1": 0.1241,
+        "rouge2": 0.086,
+        "rougeL": 0.1117,
+        "rougeSU4": 0.0728,
+        "bertscore_f1": 0.019
+      },
+      "worst": {
+        "rouge1": "F1_PLAN_CHANGE",
+        "rouge2": "F1_PLAN_CHANGE",
+        "rougeL": "F1_PLAN_CHANGE",
+        "rougeSU4": "F1_PLAN_CHANGE",
+        "bertscore_f1": "F1_PLAN_CHANGE"
+      }
+    }
+  },
+  "meetings_hash": "b421b56079cc",
+  "n_seeds": 1,
+  "metrics_mean": {
+    "rouge1": 0.3873,
+    "rouge2": 0.1392,
+    "rougeL": 0.233,
+    "rougeSU4": 0.1496,
+    "bertscore_f1": 0.8592
+  },
+  "metrics_std": {
+    "rouge1": 0.0,
+    "rouge2": 0.0,
+    "rougeL": 0.0,
+    "rougeSU4": 0.0,
+    "bertscore_f1": 0.0
+  },
+  "metrics_per_seed": {
+    "42": {
+      "rouge1": 0.3873,
+      "rouge2": 0.1392,
+      "rougeL": 0.233,
+      "rougeSU4": 0.1496,
+      "bertscore_f1": 0.8592
+    }
+  },
+  "identical_across_seeds": true,
+  "seed_variation": {
+    "verdict": "Only one seed was run, so there is no seed variation to measure.",
+    "why": "BART decodes with beam search (do_sample=False), so on the same hardware it is deterministic too. Differences between seeds can only come from nondeterministic float math (e.g. GPU kernels, thread scheduling), which can flip a beam choice and change a few words. Each seed sets Python random, NumPy and torch. PYTHONHASHSEED is fixed to the FIRST seed for the whole run.",
+    "seeds": [
+      42
+    ],
+    "metrics": {
+      "rouge1": {
+        "mean": 0.3873,
+        "std": 0.0,
+        "min": 0.3873,
+        "min_seed": 42,
+        "max": 0.3873,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rouge2": {
+        "mean": 0.1392,
+        "std": 0.0,
+        "min": 0.1392,
+        "min_seed": 42,
+        "max": 0.1392,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rougeL": {
+        "mean": 0.233,
+        "std": 0.0,
+        "min": 0.233,
+        "min_seed": 42,
+        "max": 0.233,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rougeSU4": {
+        "mean": 0.1496,
+        "std": 0.0,
+        "min": 0.1496,
+        "min_seed": 42,
+        "max": 0.1496,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "bertscore_f1": {
+        "mean": 0.8592,
+        "std": 0.0,
+        "min": 0.8592,
+        "min_seed": 42,
+        "max": 0.8592,
+        "max_seed": 42,
+        "range": 0.0
+      }
+    },
+    "meetings_changed": 0,
+    "meetings_total": 20,
+    "per_meeting": {}
+  },
+  "seconds_per_meeting": 59.175,
+  "python": "3.12.10",
+  "packages": {
+    "summa": "1.2.0",
+    "rouge-score": "0.1.2",
+    "numpy": "2.5.4",
+    "torch": "2.14.1",
+    "transformers": "5.20.2",
+    "bert-score": "0.3.13",
+    "anthropic": "1.17.0"
+  },
+  "hardware": {
+    "machine": "AMD64",
+    "system": "Windows-11-10.0.26200-SP0",
+    "cpus": 16
+  },
+  "per_seed_runs": {
+    "42": {
+      "scores": {
+        "rouge1": 0.3873,
+        "rouge2": 0.1392,
+        "rougeL": 0.233,
+        "rougeSU4": 0.1496,
+        "bertscore_f1": 0.8592
+      },
+      "per_meeting": {
+        "SY0103a": {
+          "rouge1": 0.367601246105919,
+          "rouge2": 0.12539184952978058,
+          "rougeL": 0.2118380062305296,
+          "rougeSU4": 0.13185654008438819,
+          "bertscore_f1": 0.8546701073646545
+        },
+        "SY0103b": {
+          "rouge1": 0.3063063063063063,
+          "rouge2": 0.09063444108761327,
+          "rougeL": 0.16816816816816818,
+          "rougeSU4": 0.10264227642276423,
+          "bertscore_f1": 0.8482239842414856
+        },
+        "SY0103c": {
+          "rouge1": 0.37770897832817335,
+          "rouge2": 0.12461059190031153,
+          "rougeL": 0.22291021671826625,
+          "rougeSU4": 0.12368972746331235,
+          "bertscore_f1": 0.850542426109314
+        },
+        "SY0103d": {
+          "rouge1": 0.3764705882352941,
+          "rouge2": 0.14792899408284022,
+          "rougeL": 0.24705882352941175,
+          "rougeSU4": 0.17512437810945272,
+          "bertscore_f1": 0.8528305888175964
+        },
+        "SY0110a": {
+          "rouge1": 0.49826989619377166,
+          "rouge2": 0.24390243902439024,
+          "rougeL": 0.33217993079584773,
+          "rougeSU4": 0.23708920187793425,
+          "bertscore_f1": 0.8772737383842468
+        },
+        "SY0110b": {
+          "rouge1": 0.3173076923076923,
+          "rouge2": 0.10144927536231882,
+          "rougeL": 0.17307692307692307,
+          "rougeSU4": 0.12327656123276562,
+          "bertscore_f1": 0.8469033241271973
+        },
+        "SY0110c": {
+          "rouge1": 0.3875432525951557,
+          "rouge2": 0.1254355400696864,
+          "rougeL": 0.22837370242214533,
+          "rougeSU4": 0.13262910798122063,
+          "bertscore_f1": 0.8546926379203796
+        },
+        "SY0110d": {
+          "rouge1": 0.4316109422492401,
+          "rouge2": 0.17737003058103976,
+          "rougeL": 0.2917933130699088,
+          "rougeSU4": 0.19650205761316875,
+          "bertscore_f1": 0.8720971941947937
+        },
+        "SY0202a": {
+          "rouge1": 0.39534883720930236,
+          "rouge2": 0.15625,
+          "rougeL": 0.248062015503876,
+          "rougeSU4": 0.1370223978919631,
+          "bertscore_f1": 0.8658400774002075
+        },
+        "SY0202b": {
+          "rouge1": 0.28938906752411575,
+          "rouge2": 0.08414239482200646,
+          "rougeL": 0.17363344051446944,
+          "rougeSU4": 0.09041394335511982,
+          "bertscore_f1": 0.846985399723053
+        },
+        "SY0202c": {
+          "rouge1": 0.3843843843843844,
+          "rouge2": 0.14501510574018128,
+          "rougeL": 0.2522522522522523,
+          "rougeSU4": 0.17276422764227645,
+          "bertscore_f1": 0.865178108215332
+        },
+        "SY0202d": {
+          "rouge1": 0.44015444015444016,
+          "rouge2": 0.09338521400778209,
+          "rougeL": 0.23166023166023164,
+          "rougeSU4": 0.14435695538057744,
+          "bertscore_f1": 0.8565045595169067
+        },
+        "SY0209a": {
+          "rouge1": 0.4263565891472868,
+          "rouge2": 0.1484375,
+          "rougeL": 0.2635658914728682,
+          "rougeSU4": 0.152832674571805,
+          "bertscore_f1": 0.8716251850128174
+        },
+        "SY0209b": {
+          "rouge1": 0.3524904214559387,
+          "rouge2": 0.0694980694980695,
+          "rougeL": 0.17624521072796934,
+          "rougeSU4": 0.10286458333333334,
+          "bertscore_f1": 0.8537615537643433
+        },
+        "SY0209c": {
+          "rouge1": 0.3561643835616438,
+          "rouge2": 0.1487603305785124,
+          "rougeL": 0.2356164383561644,
+          "rougeSU4": 0.16296296296296295,
+          "bertscore_f1": 0.8596495985984802
+        },
+        "SY0209d": {
+          "rouge1": 0.39747634069400634,
+          "rouge2": 0.1968253968253968,
+          "rougeL": 0.2649842271293375,
+          "rougeSU4": 0.17735042735042733,
+          "bertscore_f1": 0.868216872215271
+        },
+        "SY0304a": {
+          "rouge1": 0.4199288256227758,
+          "rouge2": 0.16487455197132617,
+          "rougeL": 0.2633451957295373,
+          "rougeSU4": 0.17028985507246377,
+          "bertscore_f1": 0.8634109497070312
+        },
+        "SY0304b": {
+          "rouge1": 0.42318840579710143,
+          "rouge2": 0.11661807580174927,
+          "rougeL": 0.20869565217391303,
+          "rougeSU4": 0.15882352941176472,
+          "bertscore_f1": 0.866254985332489
+        },
+        "SY0304c": {
+          "rouge1": 0.40597014925373137,
+          "rouge2": 0.17417417417417416,
+          "rougeL": 0.22686567164179103,
+          "rougeSU4": 0.1494949494949495,
+          "bertscore_f1": 0.8567976951599121
+        },
+        "SY0304d": {
+          "rouge1": 0.3931623931623932,
+          "rouge2": 0.1489971346704871,
+          "rougeL": 0.23931623931623933,
+          "rougeSU4": 0.14932562620423892,
+          "bertscore_f1": 0.8526142835617065
+        }
+      },
+      "predictions": {
+        "SY0103a": "Project Manager, Laura, Tomasz, Priya, User Interface Designer, Ben and Marketing Expert are meeting for the kick-off meeting. The project is designing a kitchen timer with a voice-controlled function. The company wants to sell it for twenty-five euros per unit. The production cost per unit can't go over twelve fifty euros. Marketing Expert, Industrial Designer and Project Manager are going to buy a device with voice recognition technology for twelve fifty. The bigger cost question is power. Industrial Designer will get a rough cost breakdown against the cost of the device. Marketing expert will check if anyone actually pays twenty-25 for a timer.",
+        "SY0103b": "Tomasz is off sick, so he won't be able to give a cost breakdown today. Project Manager sent the minutes from the functional design meeting on Tuesday. User Interface Designer suggests three named timers to Project Manager and Marketing Expert. Marketing Expert recommends cooking timers from three to two. The alarm needs to be louder and the price should be reduced to 25 euros. The project manager will talk to Tomasz about switching to two numbered timers and checking if the chip can handle the commands. The Project Manager will send Tomasz the minutes, and the others wish Tomasz well.",
+        "SY0103c": "Project Manager, Industrial Designer and Tomasz are meeting for the conceptual design meeting. The meeting is about switching to the two numbered timers and checking the chip. Industrial Designer has designed an alarm that takes a custom wake word plus up to 20 commands. The chip costs 3.50 euros per unit. It has two microphones, a speaker, a little amplifier and a USB-C socket. The button costs 30 cents, the assembly 50 cents, and the plug adapter is one fifty cents. The Kiko test was mostly fine, but it did trigger on Cocoa a couple of times. Marketing Expert recommends Olli.",
+        "SY0103d": "Project Manager, Tomasz, Priya, User Interface Designer and Industrial Designer are meeting for the detailed design meeting. The supplier retrained the wake word model with cocoa and a few similar ones, like kiwi and cookie. The USB-C socket is at the back, low down, so the cable goes flat along the counter. It needs a rubber ring on the bottom, like little feet, so it grips. It will cost about ten cents. Marketing Expert suggests a brushed metal look on the body for the gift market. The metal costs a euro fifty more per unit. Two colourways are chosen: White with orange and charcoal with lime.",
+        "SY0110a": "Project Manager, Priya, Tom, industrial designer, Jonas, user interface designer and Marketing Expert Marta are going to start the meeting today. Project Manager is designing a reusable coffee cup with a deposit system. The deposit per cup is one euro. The production cost has to stay under three euros per cup. The target is for it to be in fifty partner cafes in the first year. The project has four meetings: the kickoff, functional design, conceptual design, and detailed design. The next functional design meeting is in half an hour. Project manager will ask Marta to talk to cafe owners at the fair about joining a deposits system.",
+        "SY0110b": "Project Manager, Tom, Jonas, Marta and Marketing Expert are meeting for the second functional design meeting. They are going to discuss the materials, the return process and the functional requirements. Marketing Expert wants to create an app to track the return of cups. Industrial Designer will get polypropylene lids and run them through the dishwasher in the office kitchen on Thursday. Tom will get the samples and they will run them at Caf\u00e9 Lindner for a week. Marketing expert will send his notes from the fair tomorrow and Jonas will send the return flow and the partner badge. The next conceptual design meeting is next week.",
+        "SY0110c": "Project Manager, Marketing Expert and User Interface Designer are meeting for the conceptual design meeting. The agenda is the dishwasher test, Jonas's sketches, and deciding the concept. Jonas ran a half marathon on Sunday. Industrial Designer and Project Manager decide to use polypropylene mould label for the logo, ribbed band and bigger logo on the badge. Marketing Expert will write a one-page guide for staff on how the refund and the swap work. Project Manager will see everyone next week and will raise it with management this week to see if they want to absorb it.",
+        "SY0110d": "Jonas won't come to the detailed design meeting today, because he has the flu. The badge with the bigger logo got finished before Jonas got ill, so it's in the shared folder. Tom will start with the quote. It's one euro fifty-four per cup with the in-mould label and the ribbed band. The minimum order is ten thousand units. The mould is separate and costs six thousand euros. Marketing Expert wants to put the website and a limited edition in a second colour for the launch, but the project manager decides to stick with slate grey. Industrial Designer will print the print file for the badge once Jonas is better.",
+        "SY0202a": "Project Manager Marcus is designing a self-checkout kiosk for public libraries. The production cost per unit should be under 4,000 euros. It should sell for 6,500 euros to the libraries. Marketing Expert is meeting the library services people this week for the user research. The next functional design meeting is in half an hour. Tomas will look at the working design. Hannah will work on the technical functions. Priya will focus on the user requirements. Industrial Designer will get the components when he has them. The project has been fixed and is ready to be implemented.",
+        "SY0202b": "This is the second functional design meeting of Project Manager, Industrial Designer and Hannah. Hannah can't make it today as she's off sick. Tomas will go first with the working design. It costs 2,000 9 hundred without RFID, PC 5 hundred, scanner 3 hundred, printer 2-fifty, and casing 12 hundred. Marketing Expert will do the look of the casing for the next meeting. Hannah needs to update the checkout and renewal flow for all this, the help button, audio mode, and the print option at the end. They will see each other next time.",
+        "SY0202c": "Project Manager, User Interface Designer and Marketing Expert are meeting for the third conceptual design meeting. They agreed on email receipts by default, one physical help button, a shelf of about 75-80 cm and a phone button on the phone. They also agreed to go with the RFID pad and a barcode scanner as a fallback for the kiosk. Industrial Designer has done three sketches for the new readers. The first is an upright lectern shape, the second is lower and wider, more like a desk and the third is a box with wood panels. The project manager wants to use veneer and aluminium edging instead.",
+        "SY0202d": "Project Manager, Tomas, Priya and Industrial Designer are meeting for the detailed design meeting. Hannah is at the library tech conference in Leeds. The tagging cost for the four barcode-only branches was not taken in the last meeting, so Project Manager is going to ring the branch managers this week. Industrial Designer will write up the component spec, the board, the engine and the screen for the final report by Friday. Project Manager will write the report with the cost breakdown and brief Hannah on Monday. Marketing Expert gives his opinion on the library's look, ease of use, print option, staff help and cost.",
+        "SY0209a": "Project Manager, Laura, Tomasz, Priya, Ben and Industrial Designer are meeting to discuss a new project. They are designing a case for a children's educational tablet. The project is aimed at early primary children aged 4 to 8. The selling price is going to be twenty-five Euros and the production cost can't be more than twelve fifty per case. Marketing Expert recommends a raised edge round the screen and a raised lip around the edge. Industrial Designer suggests wipeable material and easy to clean. Project Manager should check what the existing kids' cases cost in the shops. They will have a functional design meeting in about half an hour.",
+        "SY0209b": "This is the second functional design meeting of Project Manager, Industrial Designer and Tomasz. Priya will do the functional side, Ben will do drop tests and materials, and Industrial Designer will check what kids' tablet cases sell for. Tomasz's survey went out to parents' panel and a couple of primary schools. The main thing parents mentioned was dropping and sticky fingers. Ben will go first with the drop stuff. Industrial Designer is going to build a table. The standard for the table is one point two metres onto plywood. They will use silicone, EVA foam, hard plastic shells and polycarbonate.",
+        "SY0209c": "Project Manager and Marketing Expert are meeting today for a conceptual design meeting. Marketing Expert has received more responses from parents and teachers than the previous survey. Industrial Designer got a quote for the EVA case with the handle and the raised lip moulded in at 8.40 euros per case. User Interface Designer has already done the sketches of the handle. The stylus is not being sold as a toy, because there are extra safety rules for children's products. Project Manager, Tomasz, Marketing Expert and Industrial Designer are going to meet for the detailed design meeting at 10:30.",
+        "SY0209d": "Project Manager, Marketing Expert and Tomasz are meeting for the detailed design meeting. Ben can't be there as he's at the supplier's factory for their sample run. They discuss Ben's costs, Priya's updated sketches, Tomasz's evaluation criteria and then sort out what's left. The revised quote with the wedge back and the second colour is 9.40 euros, but the supplier added ten cents for the wedge mould. User Interface Designer has made a card holder for teachers. Project Manager wants Ben to get physical samples in blue and lime green so they can test them. Tomasz will write up the evaluation scores for the final report.",
+        "SY0304a": "Project Manager has been asked by the university estates office to design a parking availability display for the campus. The central one is nice to have, but it costs around four hundred pounds per unit for manufacturing. The first ones will be installed for the start of next term. Marketing Expert will do a survey on campus to find out what people want from the sign. User Interface Designer will sketch a few layouts for the screen. The next meeting is next week. Marcus is at the supplier visit for the other project. Project Manager will send Marcus the minutes and the brief today and copy Marcus in with his bit.",
+        "SY0304b": "Marcus missed the first functional design meeting because he was at the supplier thing for the other project. Marketing Expert did the survey and got 24 people, 14 students, 8 staff and 2 visitors. Some staff don't want adverts on the app. The entrance to the library car park costs about 70 quid per entrance. Per-bay sensors, one in every bay, cost about 30 pounds each. The barriers already have mains power, so they need it for the arm. Industrial Designer would like to go barrier counters with a reset every night. Project Manager and Marketing Expert agree to go with barrier counters and the nightly reset.",
+        "SY0304c": "Project Manager, User Interface Designer and Marketing Expert are meeting for the conceptual design meeting. Marcus is off sick. Project Manager will do the estates office thing first, then Tom's layout, Priya's open day, and Marcus's stuff. The app needs data from every car park, so cabling or wireless is not cheap. Marketing Expert stood at the main gate for two hours during the open day. He got 11 visitors, but they didn't know the car park names. The flashing is not allowed as some estates don't like it. Marcus will get a quote from an electrician for running the new supply at the library car park and the mounting.",
+        "SY0304d": "Project Manager, Marcus and Industrial Designer are going to the detailed design meeting today. Tom can't come as he's on a first aid training course all day. The agenda is Marcus with the electrics and the mounting, then Tom's layout, then costs, and then we evaluate it against what Priya found in the surveys. Industrial Designer got the final quote for the navy powder-coated aluminium, IP65. The project costs one thousand nine hundred and thirty-two pounds. Marketing Expert will do a spot check in the first couple of weeks, count the cars by hand and compare them to the open day write-up round and the first survey."
+      },
+      "seconds": 1183.4943950998131
+    }
+  }
+}

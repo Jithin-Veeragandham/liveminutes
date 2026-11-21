@@ -17,6 +17,8 @@ TEXTRANK = {
     "library": "summa",
     "words": None,            # None = average length of the TRAINING split's human summaries (set at run time)
     "min_line_words": 4,      # skip very short lines ("yeah.", "okay.") before ranking
+    "chunk_seconds": 30,      # recursive mode: re-rank after every ~30 s of meeting (like the LLM)
+    "buffer": 1.5,            # recursive mode: keep up to 1.5x the word budget between chunks, trim at the end
 }
 
 # Deep row: BART trained on chat summaries (SAMSum), never on AMI. Pinned to an exact model commit.
@@ -24,7 +26,7 @@ BART = {
     "model": "philschmid/bart-large-cnn-samsum",
     "revision": "e49b3d60d923f12db22bdd363356f1a4c68532ad",
     "window_seconds": 60,     # summarize about 60 s of meeting at a time (experiment card)
-    "num_beams": 4,
+    "num_beams": 4,           # recursive mode: one rolling summary update per window (see bart_summarizer.py)
     "device": os.environ.get("LIVEMINUTES_DEVICE", "cpu"),
 }
 
@@ -44,6 +46,13 @@ LLM = {
     "fallbacks": "default",   # if Claude's safety filter declines, the API retries on a fallback model; None = off
 }
 LLM_LIVE_SUMMARY_WORDS = 160  # summary length for live meetings (no training split there): the AMI train average
+
+# How every model is run (run.py --mode overrides it):
+#   recursive  the meeting arrives in chunks; after each, (summary so far + new chunk) -> new summary.
+#              This is what the live bot does, so it is the default.
+#   full       the whole transcript at once (TextRank: one ranking; BART: windows then summary of summaries;
+#              LLM: one call). An upper bound that needs the meeting to be over.
+MODE = "recursive"
 
 # BERTScore (optional, --bertscore): raw F1, not rescaled, with a pinned roberta-large.
 BERTSCORE = {"model": "FacebookAI/roberta-large", "revision": "722cf37b1afa9454edce342e7895e588b6ff1d59",

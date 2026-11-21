@@ -1,0 +1,656 @@
+{
+  "run_id": "20261121T154952Z_textrank_every60s_ami_eval_recursive_1seeds",
+  "commit": "7cea72e708d1e24cc2cfda29055cb6507bbf3f94",
+  "uncommitted_changes": [
+    ".gitignore",
+    "1_ingestion/Dockerfile",
+    "1_ingestion/Dockerfile.dockerignore",
+    "2_summarization/bart_summarizer.py",
+    "2_summarization/llm_summarizer.py",
+    "2_summarization/run.py",
+    "2_summarization/settings.py",
+    "2_summarization/tests/test_llm_summarizer.py",
+    "2_summarization/textrank_baseline.py",
+    "5_data/ami/ami.py",
+    "README.md",
+    "docs/SUMMARIZATION.md",
+    "2_summarization/chunks.py",
+    "2_summarization/datasets.py",
+    "2_summarization/hpo/",
+    "2_summarization/tests/test_evaluation.py",
+    "6_evaluation/summarization/disaggregate.py"
+  ],
+  "dataset": "ami",
+  "mode": "recursive",
+  "data_hash": "1ce0450de10c44aa3d794865f7b53f50eab8a94b0027899c51d5dd2e6797c048",
+  "split_file_sha256": "09e6d3ee32281507391f23bb3bda6d6d98bacac9979e68cbd173702d4e1068c0",
+  "config": {
+    "model": {
+      "library": "summa",
+      "words": 240,
+      "min_line_words": 16,
+      "chunk_seconds": 60,
+      "buffer": 3.0,
+      "mode": "recursive",
+      "words_scale": 1.5,
+      "clean": true,
+      "speaker_names": true
+    },
+    "mode": "recursive",
+    "seeds": [
+      42
+    ],
+    "pythonhashseed": 42,
+    "bertscore": {
+      "model": "FacebookAI/roberta-large",
+      "revision": "722cf37b1afa9454edce342e7895e588b6ff1d59",
+      "rescale_with_baseline": false
+    },
+    "params_file": "2_summarization/hpo/results/interval_params/textrank_60.json"
+  },
+  "config_hash": "21c5ba36b8f2",
+  "model": "textrank",
+  "model_version": "summa 1.2.0",
+  "split": "eval",
+  "meetings": [
+    "ES2004a",
+    "ES2004b",
+    "ES2004c",
+    "ES2004d",
+    "ES2014a",
+    "ES2014b",
+    "ES2014c",
+    "ES2014d",
+    "IS1009a",
+    "IS1009b",
+    "IS1009c",
+    "IS1009d",
+    "TS3003a",
+    "TS3003b",
+    "TS3003c",
+    "TS3003d",
+    "TS3007a",
+    "TS3007b",
+    "TS3007c",
+    "TS3007d"
+  ],
+  "meeting_groups": {
+    "ES2004a": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2004b": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2004c": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2004d": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2014a": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "ES2014b": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "ES2014c": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "ES2014d": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "IS1009a": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "IS1009b": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "IS1009c": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "IS1009d": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "TS3003a": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3003b": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3003c": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3003d": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007a": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007b": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007c": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007d": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    }
+  },
+  "metrics_by_group": {
+    "gender_mix": {
+      "groups": {
+        "all_female": {
+          "n": 4,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "IS1009a",
+            "IS1009b",
+            "IS1009c",
+            "IS1009d"
+          ],
+          "mean": {
+            "rouge1": 0.2934,
+            "rouge2": 0.0433,
+            "rougeL": 0.1458,
+            "rougeSU4": 0.0853,
+            "bertscore_f1": 0.8148
+          }
+        },
+        "all_male": {
+          "n": 8,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "TS3003a",
+            "TS3003b",
+            "TS3003c",
+            "TS3003d",
+            "TS3007a",
+            "TS3007b",
+            "TS3007c",
+            "TS3007d"
+          ],
+          "mean": {
+            "rouge1": 0.3056,
+            "rouge2": 0.0546,
+            "rougeL": 0.1654,
+            "rougeSU4": 0.0961,
+            "bertscore_f1": 0.8152
+          }
+        },
+        "mixed": {
+          "n": 8,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "ES2004a",
+            "ES2004b",
+            "ES2004c",
+            "ES2004d",
+            "ES2014a",
+            "ES2014b",
+            "ES2014c",
+            "ES2014d"
+          ],
+          "mean": {
+            "rouge1": 0.31,
+            "rouge2": 0.048,
+            "rougeL": 0.1614,
+            "rougeSU4": 0.0955,
+            "bertscore_f1": 0.8157
+          }
+        }
+      },
+      "gap": {
+        "rouge1": 0.0166,
+        "rouge2": 0.0113,
+        "rougeL": 0.0196,
+        "rougeSU4": 0.0108,
+        "bertscore_f1": 0.0009
+      },
+      "worst": {
+        "rouge1": "all_female",
+        "rouge2": "all_female",
+        "rougeL": "all_female",
+        "rougeSU4": "all_female",
+        "bertscore_f1": "all_female"
+      }
+    },
+    "non_native": {
+      "groups": {
+        "all_native": {
+          "n": 12,
+          "n_series": 3,
+          "small": false,
+          "meetings": [
+            "ES2014a",
+            "ES2014b",
+            "ES2014c",
+            "ES2014d",
+            "TS3003a",
+            "TS3003b",
+            "TS3003c",
+            "TS3003d",
+            "TS3007a",
+            "TS3007b",
+            "TS3007c",
+            "TS3007d"
+          ],
+          "mean": {
+            "rouge1": 0.3082,
+            "rouge2": 0.0535,
+            "rougeL": 0.1641,
+            "rougeSU4": 0.0978,
+            "bertscore_f1": 0.816
+          }
+        },
+        "mostly_non_native": {
+          "n": 4,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "IS1009a",
+            "IS1009b",
+            "IS1009c",
+            "IS1009d"
+          ],
+          "mean": {
+            "rouge1": 0.2934,
+            "rouge2": 0.0433,
+            "rougeL": 0.1458,
+            "rougeSU4": 0.0853,
+            "bertscore_f1": 0.8148
+          }
+        },
+        "some_non_native": {
+          "n": 4,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "ES2004a",
+            "ES2004b",
+            "ES2004c",
+            "ES2004d"
+          ],
+          "mean": {
+            "rouge1": 0.3068,
+            "rouge2": 0.0446,
+            "rougeL": 0.1611,
+            "rougeSU4": 0.0896,
+            "bertscore_f1": 0.8138
+          }
+        }
+      },
+      "gap": {
+        "rouge1": 0.0148,
+        "rouge2": 0.0102,
+        "rougeL": 0.0183,
+        "rougeSU4": 0.0125,
+        "bertscore_f1": 0.0022
+      },
+      "worst": {
+        "rouge1": "mostly_non_native",
+        "rouge2": "mostly_non_native",
+        "rougeL": "mostly_non_native",
+        "rougeSU4": "mostly_non_native",
+        "bertscore_f1": "some_non_native"
+      }
+    }
+  },
+  "meetings_hash": "cc86e00bd353",
+  "n_seeds": 1,
+  "metrics_mean": {
+    "rouge1": 0.3049,
+    "rouge2": 0.0497,
+    "rougeL": 0.1599,
+    "rougeSU4": 0.0937,
+    "bertscore_f1": 0.8153
+  },
+  "metrics_std": {
+    "rouge1": 0.0,
+    "rouge2": 0.0,
+    "rougeL": 0.0,
+    "rougeSU4": 0.0,
+    "bertscore_f1": 0.0
+  },
+  "metrics_per_seed": {
+    "42": {
+      "rouge1": 0.3049,
+      "rouge2": 0.0497,
+      "rougeL": 0.1599,
+      "rougeSU4": 0.0937,
+      "bertscore_f1": 0.8153
+    }
+  },
+  "identical_across_seeds": true,
+  "seed_variation": {
+    "verdict": "Only one seed was run, so there is no seed variation to measure.",
+    "why": "TextRank (summa) has no random step: PageRank over a sentence-similarity graph, fixed input order. The seed cannot change the summary, so every seed should give the same text and std 0. Each seed sets Python random, NumPy and torch. PYTHONHASHSEED is fixed to the FIRST seed for the whole run.",
+    "seeds": [
+      42
+    ],
+    "metrics": {
+      "rouge1": {
+        "mean": 0.3049,
+        "std": 0.0,
+        "min": 0.3049,
+        "min_seed": 42,
+        "max": 0.3049,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rouge2": {
+        "mean": 0.0497,
+        "std": 0.0,
+        "min": 0.0497,
+        "min_seed": 42,
+        "max": 0.0497,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rougeL": {
+        "mean": 0.1599,
+        "std": 0.0,
+        "min": 0.1599,
+        "min_seed": 42,
+        "max": 0.1599,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rougeSU4": {
+        "mean": 0.0937,
+        "std": 0.0,
+        "min": 0.0937,
+        "min_seed": 42,
+        "max": 0.0937,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "bertscore_f1": {
+        "mean": 0.8153,
+        "std": 0.0,
+        "min": 0.8153,
+        "min_seed": 42,
+        "max": 0.8153,
+        "max_seed": 42,
+        "range": 0.0
+      }
+    },
+    "meetings_changed": 0,
+    "meetings_total": 20,
+    "per_meeting": {}
+  },
+  "seconds_per_meeting": 0.152,
+  "python": "3.12.10",
+  "packages": {
+    "summa": "1.2.0",
+    "rouge-score": "0.1.2",
+    "numpy": "2.5.4",
+    "torch": "2.14.1",
+    "transformers": "5.20.2",
+    "bert-score": "0.3.13",
+    "anthropic": "1.17.0"
+  },
+  "hardware": {
+    "machine": "AMD64",
+    "system": "Windows-11-10.0.26200-SP0",
+    "cpus": 16
+  },
+  "per_seed_runs": {
+    "42": {
+      "scores": {
+        "rouge1": 0.3049,
+        "rouge2": 0.0497,
+        "rougeL": 0.1599,
+        "rougeSU4": 0.0937,
+        "bertscore_f1": 0.8153
+      },
+      "per_meeting": {
+        "ES2004a": {
+          "rouge1": 0.27272727272727276,
+          "rouge2": 0.037634408602150546,
+          "rougeL": 0.16042780748663105,
+          "rougeSU4": 0.07407407407407407,
+          "bertscore_f1": 0.8144043684005737
+        },
+        "ES2004b": {
+          "rouge1": 0.34324942791762014,
+          "rouge2": 0.06896551724137931,
+          "rougeL": 0.1922196796338673,
+          "rougeSU4": 0.10570987654320987,
+          "bertscore_f1": 0.8146876096725464
+        },
+        "ES2004c": {
+          "rouge1": 0.3205417607223477,
+          "rouge2": 0.027210884353741496,
+          "rougeL": 0.1489841986455982,
+          "rougeSU4": 0.091324200913242,
+          "bertscore_f1": 0.8064463138580322
+        },
+        "ES2004d": {
+          "rouge1": 0.29064039408867,
+          "rouge2": 0.04455445544554455,
+          "rougeL": 0.14285714285714288,
+          "rougeSU4": 0.08728179551122195,
+          "bertscore_f1": 0.8198311924934387
+        },
+        "ES2014a": {
+          "rouge1": 0.3020833333333333,
+          "rouge2": 0.05235602094240838,
+          "rougeL": 0.16666666666666669,
+          "rougeSU4": 0.0932277924362357,
+          "bertscore_f1": 0.8238253593444824
+        },
+        "ES2014b": {
+          "rouge1": 0.3891402714932127,
+          "rouge2": 0.06363636363636364,
+          "rougeL": 0.19457013574660634,
+          "rougeSU4": 0.13119755911517927,
+          "bertscore_f1": 0.8240031003952026
+        },
+        "ES2014c": {
+          "rouge1": 0.30905077262693154,
+          "rouge2": 0.06208425720620843,
+          "rougeL": 0.16777041942604856,
+          "rougeSU4": 0.10863095238095238,
+          "bertscore_f1": 0.8188561797142029
+        },
+        "ES2014d": {
+          "rouge1": 0.25282167042889386,
+          "rouge2": 0.027210884353741496,
+          "rougeL": 0.11738148984198647,
+          "rougeSU4": 0.07229832572298325,
+          "bertscore_f1": 0.8032441735267639
+        },
+        "IS1009a": {
+          "rouge1": 0.2786516853932584,
+          "rouge2": 0.05869074492099323,
+          "rougeL": 0.15730337078651688,
+          "rougeSU4": 0.10303030303030304,
+          "bertscore_f1": 0.8103122115135193
+        },
+        "IS1009b": {
+          "rouge1": 0.2870588235294117,
+          "rouge2": 0.028368794326241138,
+          "rougeL": 0.15058823529411766,
+          "rougeSU4": 0.0761904761904762,
+          "bertscore_f1": 0.8151533007621765
+        },
+        "IS1009c": {
+          "rouge1": 0.3317307692307692,
+          "rouge2": 0.053140096618357495,
+          "rougeL": 0.14903846153846154,
+          "rougeSU4": 0.08840227088402272,
+          "bertscore_f1": 0.8164863586425781
+        },
+        "IS1009d": {
+          "rouge1": 0.27634660421545665,
+          "rouge2": 0.032941176470588245,
+          "rougeL": 0.12646370023419204,
+          "rougeSU4": 0.07345971563981042,
+          "bertscore_f1": 0.817315936088562
+        },
+        "TS3003a": {
+          "rouge1": 0.3010752688172043,
+          "rouge2": 0.0756756756756757,
+          "rougeL": 0.1989247311827957,
+          "rougeSU4": 0.10354223433242507,
+          "bertscore_f1": 0.8241592049598694
+        },
+        "TS3003b": {
+          "rouge1": 0.3024390243902439,
+          "rouge2": 0.05392156862745098,
+          "rougeL": 0.175609756097561,
+          "rougeSU4": 0.10534979423868313,
+          "bertscore_f1": 0.8105494976043701
+        },
+        "TS3003c": {
+          "rouge1": 0.3225806451612903,
+          "rouge2": 0.07567567567567568,
+          "rougeL": 0.1827956989247312,
+          "rougeSU4": 0.11444141689373295,
+          "bertscore_f1": 0.8294076919555664
+        },
+        "TS3003d": {
+          "rouge1": 0.3611738148984199,
+          "rouge2": 0.04081632653061224,
+          "rougeL": 0.15349887133182843,
+          "rougeSU4": 0.1050228310502283,
+          "bertscore_f1": 0.8160075545310974
+        },
+        "TS3007a": {
+          "rouge1": 0.29828850855745725,
+          "rouge2": 0.0687960687960688,
+          "rougeL": 0.176039119804401,
+          "rougeSU4": 0.0948844884488449,
+          "bertscore_f1": 0.813005268573761
+        },
+        "TS3007b": {
+          "rouge1": 0.3448275862068966,
+          "rouge2": 0.05627705627705627,
+          "rougeL": 0.15086206896551724,
+          "rougeSU4": 0.10167029774872911,
+          "bertscore_f1": 0.8071747422218323
+        },
+        "TS3007c": {
+          "rouge1": 0.24074074074074073,
+          "rouge2": 0.023255813953488372,
+          "rougeL": 0.12037037037037036,
+          "rougeSU4": 0.05698672911787665,
+          "bertscore_f1": 0.8071863055229187
+        },
+        "TS3007d": {
+          "rouge1": 0.27358490566037735,
+          "rouge2": 0.042654028436018954,
+          "rougeL": 0.16509433962264153,
+          "rougeSU4": 0.08671439936356404,
+          "bertscore_f1": 0.8144963979721069
+        }
+      },
+      "predictions": {
+        "ES2004a": "Project Manager: just that it's going to be in the international market like Australia, America, things like that. Project Manager: I mean I've got we got we had three videos, a T_V_ and a sort of amp thing all set up. Project Manager: so we got one of the universal remote controls, that you programme each of your things into. Project Manager: and a section opens up or something to the other functions where you can do sound or options kind of recording, things like that inside it. Marketing Expert: but you know on a mobile phone, you can press a key and it gives you a menu, it's got a menu display. Industrial Designer: 'cause I mean, menus on sort of new phones now they've sort of got all these pictures and stuff which makes it fairly obvious what you're trying to do. Project Manager: I don't like the, you know the new phones that have kind of got a Windows-based running system. Project Manager: and also and then a menu to go into with obvious pictures, obvious symbols and that's where you control recording and things like that. Marketing Expert: The other thing is, just ch chucking into mobile phone f design features again, it could have a flip top remote control. Marketing Expert: And there's no reason we need to make it look as fashionable and stylish as a mobile phone.",
+        "ES2004b": "Industrial Designer: Well, a device which basically just sends the signal to the T_V_ to change its state. Industrial Designer: and I found out that most controls use some form of infrared to send signals to the T_V_. Industrial Designer: presumably because of the cost issue of something like the same thing that computers use, wireless. Industrial Designer: so I d I didn't know if you wanted to look at something else so we could shrink down the size of the control. Industrial Designer: if you if you look at if you look at most remote controls they're quite they're quite chunky. Industrial Designer: we've just got the power going to the infrared bulb with the chip and the U_I_ interface. User Interface Designer: and maybe having a remote control which has the main features like volume control or channel ch changing the channel or whatever. User Interface Designer: because there are times like people have used a remote control for say a year or something and they are not used maybe thirty to forty percent of the buttons. User Interface Designer: so it's not of no use of punching in the trying to put in those things in on the top of the remote control and try to confuse the user. User Interface Designer: and s maybe we should look at also like the buttons whe whether they are like soft or little hard.",
+        "ES2004c": "Industrial Designer: The kinetic charging which is like you get it in r you get it in wrist watches. Industrial Designer: I mean the amount the amount of probably moving around you'd be doing all the time would charge it up. Industrial Designer: but the thing with the solar cells is you would need to put them on the case. Industrial Designer: the thing about is they can be as big or as small as you want them to be. Industrial Designer: Now what I was thinking about that was 'cause sometimes when y when you have these things, they've got little lights on behind the buttons, so you can see what all the buttons are. Industrial Designer: and after like five or ten seconds of not being used I'd have that turned off. Industrial Designer: two they you can have them in a sort of array and you can arrange the buttons on the screen in a sort of set thing and you could have them like a touch. Industrial Designer: 'cause if you if you just put the full charge through an L_C_D_ display it'll completely blank it out. Industrial Designer: Yeah the well I think were we're going for the L_C_D_ on that one, on the buttons. Industrial Designer: okay on we've got the flip the flip-screen, the top one is gonna be the L_C_D_ and the bottom one is gonna be the rubberised buttons.",
+        "ES2004d": "Marketing Expert: This stage of the evaluation is really for us as a team to evaluate if we have now got a product specification and prototype design that meets the criteria that we got from our market research. Marketing Expert: and those the two main ones, they were the spongy texture and the fruit and vegetable strong design colours. Marketing Expert: and I will just do a preliminary rating of all those criteria on the whiteboard here. Marketing Expert: Adding those up, we've got a six and a five, eleven divided by four is what? Marketing Expert: oh, for you? Marketing Expert: I'm just thinking, before I give it my rating, you were limited in the use of materials for your prototype here. Marketing Expert: So we could use any strong fruit and veg colours and that's what we're intending to do. Marketing Expert: And are we happy with the costs on that? Marketing Expert: We've got our we've got the highest rating of meeting the specifications that is definitely true for two of the six criteria there. Marketing Expert: Might do, if we go for some of the more exotic aubergines and such like colours. Marketing Expert: they're not gonna say I'm not getting this, 'cause I've got to buy a battery for a remote control. Marketing Expert: I don't think that's something we have to look at and find a way of raising the cash for.",
+        "ES2014a": "Project Manager: So we have the project team, which is to basically to come up with a new r remote control device. Project Manager: And our idea is to make the new remote control device more user friendly than the previous one. Project Manager: in each of these phases we'll basically be handing over to yourselves, the designers of this device. Project Manager: And one of the best things about fish is that they don't really take too much looking after. Project Manager: because with most of the animals if you're going away on holiday or whatever, you've gotta spend money or get a friend or whatever to look after them for you. Project Manager: We're looking at having our production costs limited to twelve and an half Euro per unit. Project Manager: And so depending what the overhead costs are will determine how many units we're looking to sell or projecting to sell at this point in time. Project Manager: 'cause as you rightly said, there's nothing more annoying than having three or four devices littered about the about the room. Project Manager: you could argue that experience of using devices and similar devices as people get more and more used to using remotes. Project Manager: 'cause during the course of our day we might make decisions based on information or meetings that would change where we're going. Project Manager: But at this point in time I think you're right that shall we make it just a T_V_.",
+        "ES2014b": "Industrial Designer: We then have the user interface, which is basically the like the buttons on the actual remote. User Interface Designer: I like the use of the kind of symbols like the triangles and the squares and the arrows as well as the words on the kind of play functions and all that. User Interface Designer: But I think a lot of like Cable and Sky and stuff, that would be tuned to one channel. Marketing Expert: we could maybe come up with a menu, a sort of a an L_C_D_ menu for other functions on the remote control. Marketing Expert: And we could maybe think about using speech recogniti recognition as a way to find the remote control if it's lost in a room, rather than sort of having it to speech recognition to change the channels. User Interface Designer: Well I think it'd be really easy and it'd be a big advantage if we did have some sort of kind of whistle back kind of function. Industrial Designer: Would you maybe have like one menu button, then you'd use the other buttons, maybe the number buttons to actually do the separate functions. User Interface Designer: So I think there's quite a lot of like Dolby surround studio, surround sort of things. User Interface Designer: Oh no, I mean like there's kind of individual buttons for them, like on the T_V_ remote.",
+        "ES2014c": "Industrial Designer: This says it's similar to the button on the mouse for a normal for like modern computer. Industrial Designer: Basically for the circuit board which is the middle, it's just see it down there the chips like the like the workings of the actual of the remote. Industrial Designer: So if we've got the scroll wheel for one of the buttons, that would require a slightly more advanced circuit board than if we just had a standard push button. Industrial Designer: for the buttons, I thought we'd probably get away with just having the standard push buttons rather than the scroll wheel. Industrial Designer: So if we wanted the scroll wheel and wanted the voice recognition, then we'd have to get a more costly circuit board. Industrial Designer: As I say it only specified that we need a more advanced circuit board for the scroll wheel. User Interface Designer: Yeah, and if we're going for sleek and sexy, I think a scroll wheel is maybe a bit kinda bulky? User Interface Designer: Yeah, 'cause I think you program this one yourself, like to say like whatever you want to your question. User Interface Designer: I think the thing was that if you decide to do this, to have triangular buttons, somebody might look at this one and say oh well this triangular button is pointing up. User Interface Designer: Well if it's for young people, like the phone generation, that sort of thing'd probably go down well.",
+        "ES2014d": "Project Manager: And so when I done my thing on cost a I had assumed that the only button that would be a different colour would be the red apple button. Project Manager: and the only thing that has really changed is the is the colouration of the buttons. Project Manager: And the r I mean effectively we've got sixteen buttons that we're gonna have on there. Project Manager: if we just had all the buttons as standard, except for the one red apple, then that would take care of that, I guess. Project Manager: you were saying that it would be that one, that you would put in one there. Project Manager: And there's nothing else as far as I can see that we had planned to put on. Project Manager: In a sense, at the moment, we've got a total which we need to reduce down by one point two. Project Manager: Well, it's just that saying something remember that when you look down, we've got solar power, we've got various other things you could have. Project Manager: The problem is we have to reduce down from there to get it down to twelve point five. Project Manager: If you want to keep kinetic, right, you've got a choice there of going down to battery, which would save you one. Project Manager: You were making these buttons down the bottom, I was presuming, bigger than the other ones.",
+        "IS1009a": "Project Manager: Would you like s like just to see how it feels, so that you have a little idea? Project Manager: So these are all things, of course, to remember with the budget and when you design. Project Manager: now having used a remote control for years does anybody already have like an idea like things you didn't like with it, things you would like to change, things you would like to improve with this thing. Project Manager: have more have more buttons on it or maybe clearly better marked buttons, you know, things like that? Project Manager: Like trendy no like f for earlier we saw maybe it should be something trendy you know. Project Manager: because they put a newspaper or they put it behind a plant or, we you know, whatever. Project Manager: Okay, my idea is maybe that the minute it's really hidden, in other words if it's like in a dark spot, meaning you know like a newspaper is on top, a sweater is on top or it's behind a plant, at that moment it's it's like, it's like what you call it a light s sensors, you know? Project Manager: In that moment it has a sensor, i it gets a certain darkness, it ge has a sensor and it gives out a signal whether that be a light signal or a beep. Project Manager: I know there are the lamps and stuff, you know, you can clap on and off.",
+        "IS1009b": "Marketing Expert: 'cause I think it might be helpful if we looked at the slides at the same time. Marketing Expert: and then the things that seem the most attractive that to a customer we'll try to then prioritise those. Marketing Expert: because if we're gonna sell this thing, I think the best time to sell it is as a Christmas present. Marketing Expert: and then I'll be coming to you as the User Interface person to try to tell me from your point of view what are the most friendly features that we could put on it. Marketing Expert: and I'll be coming back to you to help weed out those suggestions from that point of view. Marketing Expert: and I'll be coming to you to tell me what's gonna make somebody take out their wallet you know. Marketing Expert: A lot of times the thing that works the best from an engineering point of view isn't the thing that somebody's really just gonna take out their wallet and buy for Christmas for their child or for their husband or whatever. Marketing Expert: I'd like the suggestions to be really specific, so that we'll have a list of things we can cross off, not something like you know whole house control. Marketing Expert: and I think that those are things after my research that we definitely wanna try to incorporate.",
+        "IS1009c": "User Interface Designer: Now as an interface designer, I would give more emphasis on the interface, how the remote looks like. User Interface Designer: and next button channel by which you can keep on v eh scrolling the channels one by one. User Interface Designer: Then, there should be a button which can give subtitles for a particular program which is going on a television. User Interface Designer: Then there should d there should be some buttons which can control features like the colour, colour of the picture, the contrast, sharpness, brightness of the picture. User Interface Designer: Now the most important feature I would like to have in my remote would be the speech recognition feature. User Interface Designer: So a remote can be th can be designed which can have the voice recognisers, you can record your own voice. User Interface Designer: Then, these are some of the remotes which are different in shape and colour, but they have many buttons. User Interface Designer: So sometimes the user finds it very difficult to recognise which button is for what function and all that. User Interface Designer: Yeah, so this is one of the interface or one of the remote which has this vi voice recogniser. User Interface Designer: Yeah, now this is an interface for a chil for a remote which a child can use.",
+        "IS1009d": "Project Manager: speech recognition is one of her very f favourite personal features she would like see d to be integrated in this in this new remote. Project Manager: But her very f personal favourite really she, she would very much like to see a speech recogniser integrated in this remote. Project Manager: The marketing expert who has to finally come up with to market this product has been watching the competition, has done some research on the internet and also has used h her personal observations to come up with the fact that such a remote sh should be small, easy to use and it should be eye catching. Project Manager: From her point of view of course one of the most important facts is that we should get to market before our competition does. Project Manager: And the decision that we took last time was that the special feature we would like to see is a speech recogniser. Project Manager: will there be anything written on the buttons, like that people know, or they have to learn that from a piece of paper which button does what? Project Manager: And I don't know how we can evaluate that or how we can include that, too. Project Manager: the other things you have more is are more tangible so from that point of view. Project Manager: and that we still you know we probably can't, with this particular item, we probably can't just add a whole lot of more things.",
+        "TS3003a": "Project Manager: The Industrial Designer is going to work on the working design, components design and a bit of the look and feel design. Project Manager: As you can see we've got the smart boards here and here in the white board. Project Manager: because you can draw with it on this page in the think it is form of. Project Manager: as you can see we g all going to draw a animal. Project Manager: the only thing we have to look after is that we use different colours, and different line width. Project Manager: because if you wan ar are going to do it like this then it will be a stripe. Project Manager: if you have any ideas or if you wanna draw anything on the white board, just ask. Project Manager: as you can see, we for our remote control, a selling price is twenty five Euros. Project Manager: just try to remember these points. Project Manager: does everybody has experiences with remote controls, and I mean not the ordinary mote controls, but also a little bit different ones? Project Manager: So that's pretty handy when you have a video recorder or D_V_D_ player downstairs and you've got a link to your T_V_ on the second floor. Project Manager: I think that if you can put different kind of devices in one remote control, it makes it a lot easier as well.",
+        "TS3003b": "Marketing Expert: seventy five percent of the people questioned indicated that they thought their remote were was ugly. Marketing Expert: Fifty percent of the people indicated they only loo used about ten percent of the buttons on a remote control. Marketing Expert: And fifty percent of the people indicated that their remote tended to get lost in their room. Marketing Expert: The results also indicated that about one quarter of the people questioned thought that the remote control caused R_S_ R_S_I_. Marketing Expert: And the functionality As a lot of people indicated, they only use about ten percent of the buttons. Marketing Expert: Then as mo as a lot of people indicated that their remote got lost in the room. Marketing Expert: But I don't think I think if you're gonna make a remote control only to operate a T_V_, you there's not much you can gain on having as few buttons as possible. Marketing Expert: but I think there's simply not much to gain on the competition when you when you're making a remote control only for to operate only the T_V_. Marketing Expert: 'Cause if you have a remote control only to operate a T_V_ there's simply not a lot of buttons required. Marketing Expert: I think since a lot of people indicated that a new remote control is hard to learn. Marketing Expert: I think probably elderly people would be a little bit more careful with their remote controls than youngsters.",
+        "TS3003c": "Marketing Expert: well the trend-watchers I consulted advised that it b should be, the remote control and the docking station should be telephone-shaped. Marketing Expert: So you could imagine that the remote control will be standing up straight in the docking station. Marketing Expert: So they would prefer a design where the remote control just lies flat in the docking station. User Interface Designer: finding an attractive way to control the remote control. User Interface Designer: you can think about when you lost your remote control, you can call it and it gives an sig signal. User Interface Designer: we've got the buttons we have to use. User Interface Designer: also we want to use a little d display for displaying the functions of the buttons. Marketing Expert: personally I don't think that older people like to shake their remote control before they use it. Marketing Expert: we also asked if w they would, if people would pay more for speech recognition in a remote control. Marketing Expert: And on top of that the L_C_D_ screen would help in making the remote control easier to use. Marketing Expert: And I think a voice recognition function would not make the remote control much easier to use. Marketing Expert: But if we would make a changing channels and changing volume button on both sides, that would certainly yield great options for the design of the remote.",
+        "TS3003d": "Project Manager: So we have to see if it fits within the twelve and a half Euro per remote. Project Manager: but I think the single curved is good for design, and also for the display to have a prominent place on the remote control. Project Manager: I think we can discard the help and the mute button by pressing down volume long, or pressing down a number long. Project Manager: So maybe we can we can even make one button with the volume and the channel in one, by pressing. Project Manager: Also the L_C_ display, I think it's, I think it's too expensive for the display we use. Project Manager: Don't you think we can, if we can count this as v as one button, and integrate th these buttons in three. Project Manager: It is. Project Manager: Yeah. Project Manager: I think if you make a good advertisement on television and in the in the guide, you can explain to the people how to use the scroll wheel. Project Manager: But th I think we can then keep the single curved one. Project Manager: I think it was better to have this price list a bit earlier. Marketing Expert: I think a radio button is not exactly what older people expect to have a remote control. Project Manager: Teamwork? Project Manager: So you can also try to reach the younger people by putting fancy covers on the market.",
+        "TS3007a": "Project Manager: before I start with the with the meeting I have a few things to tell you about the setting we're in. Project Manager: because at the detailed design, how, part two, we go to dig in really about how the te the technical of If it's it's possible technical-wise. Project Manager: This one is for the presentations, the PowerPoint presentations or the Word presentation of whatever you had. Project Manager: and as you may have heard, the documents in the shared folder can be showed on this screen. Project Manager: So I think you can see it's real really a easy programme to use. Project Manager: from my point of view, I don't think it's gonna be very high tech, high definition, ultra modern kinda remote, for twelve fift twelve and a half Euro. Project Manager: I think w when the selling price is twenty five, you got two million, two million remotes. Project Manager: So not a not a remote control who which can be used for television and a D_V_D_ and radio. Project Manager: I think when it is in Word and you have saved it in the Shared Documents folder, you can show it there. Project Manager: So you don't come up with the user requirements who don't fit the technical functions at all. Project Manager: each individually i individually must think on what's at his point of view is the most important.",
+        "TS3007b": "User Interface Designer: 'Cause if you use a memory display on the T_V_, you can simply push a more menu and then select the options you want to have and press okay. User Interface Designer: and more advanced options may be put it s somewhere away on the remote, behind a little thing or a touch screen. User Interface Designer: or at least putting them somewhere on the remote where they're not in the way for the for the most important functions. User Interface Designer: an elder parents or grandparent picks up the remote from the little child and who's all in the systems functions, you'll have to have the possibility to turn off the T_V_ or to switch the channel without well using all the menu structures to get back to the primary functions. User Interface Designer: I think that he means that maybe by some option make sure that remote control and the T_V_ match. User Interface Designer: you can use when you how do you call it, s synchronized, the remote and the T_V_. User Interface Designer: and well maybe we can look out if there's options that the remote in its memory can see what kinda T_V_ it is. User Interface Designer: if you look at the manuals from universal remotes, there are maybe three four hundreds T_V_s at maximum. User Interface Designer: that if you di display buttons about the same as they would look on a normal remote all elderly people will know what to do.",
+        "TS3007c": "User Interface Designer: When your parents are watching some boring program, you can take the remote and do something else. User Interface Designer: Yeah, well m multiple system options can, maybe five or ten or one, can fit in. User Interface Designer: But if you're programming the colour of the T_V_, do not display twenty other options that are possible. User Interface Designer: channel one, two. User Interface Designer: But if you're really switching between two channels, you won't have time to d use the other options. User Interface Designer: Yeah, the disadvantage vantage is that someone will has to send all the show-view numbers of the programs that they remotes and edit it all. User Interface Designer: But I don't think when you're watching T_V_ hearing loud noises from the T_V_, someone screaming one, and you f the channel switches, Yeah. User Interface Designer: Is t some menu function, you choose parental control, and maybe four files will emerge from menu where put it on. User Interface Designer: Well, maybe you just have to restrict it to what programs, where the parent says, you cannot watch channel seven, nine, and ten, and you cannot watch all channels after ten o'clock. User Interface Designer: What I was thinking about is just a menu structure, when you don't use it is simple.",
+        "TS3007d": "User Interface Designer: so the young people will buy an orange and a red and blue and a purple. User Interface Designer: but when the o older people go in the shop and they see an orange remote control, it would be less appealing than a white one. Project Manager: and for the people who really want a more sophisticated, more traditional look, they're willing to pay that. User Interface Designer: It is r it is rather easy to use, because you have the primary buttons always visible. User Interface Designer: But you can use rechargeable batteries anyway, just you s you have to recharge them manual. User Interface Designer: As I said a m a c few moments ago, it I would like, myself, to write with a normal pen. User Interface Designer: Yeah, it's almost the same concept, but you can just sim more simply put it on our scanner. User Interface Designer: I it's the same concept as the pen, where you f have to download the software or s very slow. User Interface Designer: Yeah, and tr try to wri write your name in a in a normal size, yeah. User Interface Designer: And th the one or two things you have to draw when you're there, just use a flip-board. Project Manager: it must be simple to use, very clear what to do, and at the younger people."
+      },
+      "seconds": 3.0396539999637753
+    }
+  }
+}
