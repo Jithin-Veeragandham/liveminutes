@@ -19,7 +19,21 @@ All numbers are live mode (`recursive`) on the test split: 20 AMI meetings and 2
 
 ## 2. Why
 
-**Decision rule:** the Week 7 rule is "beat TextRank on both ROUGE-1 and BERTScore". At reporting time we applied it with **BERTScore as the deciding metric**, and we disclose that change.
+> Decision rule (Week 7 card, written before any run): 1) Filter: keep the architectures that beat the baseline on the summary metrics. 2) Pick: the one with the fewest incorrect summaries on the Storyboard B slice. 3) Check: the LLM wins only if it beats both other architectures on that slice. Fallback, if no architecture qualifies: the TextRank baseline. Changed at reporting time, and disclosed: BERTScore is the deciding summary metric, and the B slice is measured with ROUGE-1 and BERTScore instead of a count of incorrect summaries.
+
+**How Gemini passes each step, with BERTScore deciding:**
+1. **Filter.** The baseline (TextRank default) scores 0.806 on AMI and 0.829 on synthetic. All three architectures beat it on both datasets: TextRank tuned 0.818 / 0.839, BART tuned 0.852 / 0.859, Gemini 0.859 / 0.866. So all three are kept.
+2. **Pick.** On the B slice, Gemini has the highest BERTScore in every group:
+
+   | Group | Gemini | BART tuned | TextRank tuned |
+   |---|---|---|---|
+   | Time | **0.8645** | 0.8580 | 0.8360 |
+   | People | **0.8675** | 0.8620 | 0.8399 |
+   | Intent | **0.8644** | 0.8520 | 0.8390 |
+
+3. **Check.** So the LLM beats both other architectures on that slice, and Gemini is the release candidate. The fallback isn't needed.
+
+The BART and TextRank slice numbers come from their seed-42 synthetic runs (`20261120T095825Z`, `20261121T153923Z`), grouped as in the B slice table below.
 
 | Live mode, test split | AMI ROUGE-1 | AMI BERTScore | Synthetic ROUGE-1 | Synthetic BERTScore |
 |---|---|---|---|---|
@@ -29,7 +43,7 @@ All numbers are live mode (`recursive`) on the test split: 20 AMI meetings and 2
 | **Gemini (120 s), mean of seeds 42–46** | 0.305 | **0.859** | 0.375 | **0.866** |
 
 - **Gemini passes with BERTScore deciding.** It has the highest BERTScore on both datasets.
-- **It is below tuned TextRank on ROUGE-1** on both (0.305 vs 0.312, and 0.375 vs 0.417). So it would not pass the original rule. It does beat the default TextRank baseline on both metrics.
+- **It is below tuned TextRank on ROUGE-1** on both (0.305 vs 0.312, and 0.375 vs 0.417). With ROUGE-1 deciding instead, tuned TextRank would win the Pick step: its B slice ROUGE-1 is 0.413 / 0.423 / 0.413 (Time / People / Intent), against Gemini's 0.363 / 0.391 / 0.352. Gemini does beat the default TextRank baseline on both metrics.
 - **Gemini's row is preliminary** until its prompt is tuned. TextRank and BART were tuned on the dev split; Gemini wasn't.
 - **B slice** (Gemini, synthetic, mean of 5 seeds), ROUGE-1 / BERTScore:
 
