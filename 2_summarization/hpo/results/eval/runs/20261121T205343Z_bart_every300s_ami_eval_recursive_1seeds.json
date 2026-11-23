@@ -1,0 +1,639 @@
+{
+  "run_id": "20261121T205343Z_bart_every300s_ami_eval_recursive_1seeds",
+  "commit": "ab5eaff434c35f2379f65c7cf07d19dcc768dfcc",
+  "uncommitted_changes": [],
+  "dataset": "ami",
+  "mode": "recursive",
+  "data_hash": "1ce0450de10c44aa3d794865f7b53f50eab8a94b0027899c51d5dd2e6797c048",
+  "split_file_sha256": "09e6d3ee32281507391f23bb3bda6d6d98bacac9979e68cbd173702d4e1068c0",
+  "config": {
+    "model": {
+      "model": "philschmid/bart-large-cnn-samsum",
+      "revision": "e49b3d60d923f12db22bdd363356f1a4c68532ad",
+      "window_seconds": 300,
+      "num_beams": 4,
+      "device": "cpu",
+      "mode": "recursive",
+      "rec_max_tokens": 300,
+      "floor_ratio": 1.0,
+      "floor_cap": 150,
+      "length_penalty": 1.0
+    },
+    "mode": "recursive",
+    "seeds": [
+      42
+    ],
+    "pythonhashseed": 42,
+    "bertscore": {
+      "model": "FacebookAI/roberta-large",
+      "revision": "722cf37b1afa9454edce342e7895e588b6ff1d59",
+      "rescale_with_baseline": false
+    },
+    "params_file": "2_summarization/hpo/results/interval_params/bart_300.json"
+  },
+  "config_hash": "caea3720355b",
+  "model": "bart",
+  "model_version": "philschmid/bart-large-cnn-samsum@e49b3d60d923",
+  "split": "eval",
+  "meetings": [
+    "ES2004a",
+    "ES2004b",
+    "ES2004c",
+    "ES2004d",
+    "ES2014a",
+    "ES2014b",
+    "ES2014c",
+    "ES2014d",
+    "IS1009a",
+    "IS1009b",
+    "IS1009c",
+    "IS1009d",
+    "TS3003a",
+    "TS3003b",
+    "TS3003c",
+    "TS3003d",
+    "TS3007a",
+    "TS3007b",
+    "TS3007c",
+    "TS3007d"
+  ],
+  "meeting_groups": {
+    "ES2004a": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2004b": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2004c": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2004d": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2014a": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "ES2014b": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "ES2014c": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "ES2014d": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "IS1009a": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "IS1009b": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "IS1009c": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "IS1009d": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "TS3003a": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3003b": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3003c": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3003d": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007a": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007b": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007c": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007d": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    }
+  },
+  "metrics_by_group": {
+    "gender_mix": {
+      "groups": {
+        "all_female": {
+          "n": 4,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "IS1009a",
+            "IS1009b",
+            "IS1009c",
+            "IS1009d"
+          ],
+          "mean": {
+            "rouge1": 0.34,
+            "rouge2": 0.0895,
+            "rougeL": 0.1897,
+            "rougeSU4": 0.1086,
+            "bertscore_f1": 0.8527
+          }
+        },
+        "all_male": {
+          "n": 8,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "TS3003a",
+            "TS3003b",
+            "TS3003c",
+            "TS3003d",
+            "TS3007a",
+            "TS3007b",
+            "TS3007c",
+            "TS3007d"
+          ],
+          "mean": {
+            "rouge1": 0.3341,
+            "rouge2": 0.0836,
+            "rougeL": 0.19,
+            "rougeSU4": 0.1112,
+            "bertscore_f1": 0.8441
+          }
+        },
+        "mixed": {
+          "n": 8,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "ES2004a",
+            "ES2004b",
+            "ES2004c",
+            "ES2004d",
+            "ES2014a",
+            "ES2014b",
+            "ES2014c",
+            "ES2014d"
+          ],
+          "mean": {
+            "rouge1": 0.3404,
+            "rouge2": 0.0844,
+            "rougeL": 0.1771,
+            "rougeSU4": 0.1093,
+            "bertscore_f1": 0.8551
+          }
+        }
+      },
+      "gap": {
+        "rouge1": 0.0063,
+        "rouge2": 0.0059,
+        "rougeL": 0.0129,
+        "rougeSU4": 0.0026,
+        "bertscore_f1": 0.011
+      },
+      "worst": {
+        "rouge1": "all_male",
+        "rouge2": "all_male",
+        "rougeL": "mixed",
+        "rougeSU4": "all_female",
+        "bertscore_f1": "all_male"
+      }
+    },
+    "non_native": {
+      "groups": {
+        "all_native": {
+          "n": 12,
+          "n_series": 3,
+          "small": false,
+          "meetings": [
+            "ES2014a",
+            "ES2014b",
+            "ES2014c",
+            "ES2014d",
+            "TS3003a",
+            "TS3003b",
+            "TS3003c",
+            "TS3003d",
+            "TS3007a",
+            "TS3007b",
+            "TS3007c",
+            "TS3007d"
+          ],
+          "mean": {
+            "rouge1": 0.3289,
+            "rouge2": 0.0867,
+            "rougeL": 0.1837,
+            "rougeSU4": 0.1088,
+            "bertscore_f1": 0.8494
+          }
+        },
+        "mostly_non_native": {
+          "n": 4,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "IS1009a",
+            "IS1009b",
+            "IS1009c",
+            "IS1009d"
+          ],
+          "mean": {
+            "rouge1": 0.34,
+            "rouge2": 0.0895,
+            "rougeL": 0.1897,
+            "rougeSU4": 0.1086,
+            "bertscore_f1": 0.8527
+          }
+        },
+        "some_non_native": {
+          "n": 4,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "ES2004a",
+            "ES2004b",
+            "ES2004c",
+            "ES2004d"
+          ],
+          "mean": {
+            "rouge1": 0.3623,
+            "rouge2": 0.0757,
+            "rougeL": 0.1833,
+            "rougeSU4": 0.1146,
+            "bertscore_f1": 0.8504
+          }
+        }
+      },
+      "gap": {
+        "rouge1": 0.0334,
+        "rouge2": 0.0138,
+        "rougeL": 0.0064,
+        "rougeSU4": 0.006,
+        "bertscore_f1": 0.0033
+      },
+      "worst": {
+        "rouge1": "all_native",
+        "rouge2": "some_non_native",
+        "rougeL": "some_non_native",
+        "rougeSU4": "mostly_non_native",
+        "bertscore_f1": "all_native"
+      }
+    }
+  },
+  "meetings_hash": "cc86e00bd353",
+  "n_seeds": 1,
+  "metrics_mean": {
+    "rouge1": 0.3378,
+    "rouge2": 0.0851,
+    "rougeL": 0.1848,
+    "rougeSU4": 0.1099,
+    "bertscore_f1": 0.8502
+  },
+  "metrics_std": {
+    "rouge1": 0.0,
+    "rouge2": 0.0,
+    "rougeL": 0.0,
+    "rougeSU4": 0.0,
+    "bertscore_f1": 0.0
+  },
+  "metrics_per_seed": {
+    "42": {
+      "rouge1": 0.3378,
+      "rouge2": 0.0851,
+      "rougeL": 0.1848,
+      "rougeSU4": 0.1099,
+      "bertscore_f1": 0.8502
+    }
+  },
+  "identical_across_seeds": true,
+  "seed_variation": {
+    "verdict": "Only one seed was run, so there is no seed variation to measure.",
+    "why": "BART decodes with beam search (do_sample=False), so on the same hardware it is deterministic too. Differences between seeds can only come from nondeterministic float math (e.g. GPU kernels, thread scheduling), which can flip a beam choice and change a few words. Each seed sets Python random, NumPy and torch. PYTHONHASHSEED is fixed to the FIRST seed for the whole run.",
+    "seeds": [
+      42
+    ],
+    "metrics": {
+      "rouge1": {
+        "mean": 0.3378,
+        "std": 0.0,
+        "min": 0.3378,
+        "min_seed": 42,
+        "max": 0.3378,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rouge2": {
+        "mean": 0.0851,
+        "std": 0.0,
+        "min": 0.0851,
+        "min_seed": 42,
+        "max": 0.0851,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rougeL": {
+        "mean": 0.1848,
+        "std": 0.0,
+        "min": 0.1848,
+        "min_seed": 42,
+        "max": 0.1848,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rougeSU4": {
+        "mean": 0.1099,
+        "std": 0.0,
+        "min": 0.1099,
+        "min_seed": 42,
+        "max": 0.1099,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "bertscore_f1": {
+        "mean": 0.8502,
+        "std": 0.0,
+        "min": 0.8502,
+        "min_seed": 42,
+        "max": 0.8502,
+        "max_seed": 42,
+        "range": 0.0
+      }
+    },
+    "meetings_changed": 0,
+    "meetings_total": 20,
+    "per_meeting": {}
+  },
+  "seconds_per_meeting": 876.023,
+  "python": "3.12.10",
+  "packages": {
+    "summa": "1.2.0",
+    "rouge-score": "0.1.2",
+    "numpy": "2.5.4",
+    "torch": "2.14.1",
+    "transformers": "5.20.2",
+    "bert-score": "0.3.13",
+    "anthropic": "1.17.0"
+  },
+  "hardware": {
+    "machine": "AMD64",
+    "system": "Windows-11-10.0.26200-SP0",
+    "cpus": 16
+  },
+  "per_seed_runs": {
+    "42": {
+      "scores": {
+        "rouge1": 0.3378,
+        "rouge2": 0.0851,
+        "rougeL": 0.1848,
+        "rougeSU4": 0.1099,
+        "bertscore_f1": 0.8502
+      },
+      "per_meeting": {
+        "ES2004a": {
+          "rouge1": 0.2857142857142857,
+          "rouge2": 0.05347593582887701,
+          "rougeL": 0.1693121693121693,
+          "rougeSU4": 0.07246376811594202,
+          "bertscore_f1": 0.8556835055351257
+        },
+        "ES2004b": {
+          "rouge1": 0.33865814696485624,
+          "rouge2": 0.0707395498392283,
+          "rougeL": 0.1661341853035144,
+          "rougeSU4": 0.10064935064935067,
+          "bertscore_f1": 0.8431655764579773
+        },
+        "ES2004c": {
+          "rouge1": 0.43504531722054385,
+          "rouge2": 0.09726443768996962,
+          "rougeL": 0.19939577039274925,
+          "rougeSU4": 0.15030674846625766,
+          "bertscore_f1": 0.8460993766784668
+        },
+        "ES2004d": {
+          "rouge1": 0.38970588235294124,
+          "rouge2": 0.08148148148148147,
+          "rougeL": 0.19852941176470587,
+          "rougeSU4": 0.13483146067415733,
+          "bertscore_f1": 0.8567543625831604
+        },
+        "ES2014a": {
+          "rouge1": 0.3026315789473684,
+          "rouge2": 0.12000000000000001,
+          "rougeL": 0.14473684210526316,
+          "rougeSU4": 0.09750566893424036,
+          "bertscore_f1": 0.8710148930549622
+        },
+        "ES2014b": {
+          "rouge1": 0.2878228782287823,
+          "rouge2": 0.09665427509293681,
+          "rougeL": 0.16236162361623616,
+          "rougeSU4": 0.10150375939849625,
+          "bertscore_f1": 0.8631365895271301
+        },
+        "ES2014c": {
+          "rouge1": 0.3819444444444445,
+          "rouge2": 0.12587412587412591,
+          "rougeL": 0.22222222222222224,
+          "rougeSU4": 0.13074204946996468,
+          "bertscore_f1": 0.8673153519630432
+        },
+        "ES2014d": {
+          "rouge1": 0.3014705882352941,
+          "rouge2": 0.029629629629629634,
+          "rougeL": 0.15441176470588236,
+          "rougeSU4": 0.08614232209737828,
+          "bertscore_f1": 0.8379836082458496
+        },
+        "IS1009a": {
+          "rouge1": 0.32452830188679244,
+          "rouge2": 0.12167300380228137,
+          "rougeL": 0.18867924528301885,
+          "rougeSU4": 0.1141025641025641,
+          "bertscore_f1": 0.8553605675697327
+        },
+        "IS1009b": {
+          "rouge1": 0.391304347826087,
+          "rouge2": 0.08759124087591241,
+          "rougeL": 0.18115942028985507,
+          "rougeSU4": 0.0984009840098401,
+          "bertscore_f1": 0.8519835472106934
+        },
+        "IS1009c": {
+          "rouge1": 0.33082706766917297,
+          "rouge2": 0.07575757575757576,
+          "rougeL": 0.18796992481203006,
+          "rougeSU4": 0.10727969348659004,
+          "bertscore_f1": 0.8474329113960266
+        },
+        "IS1009d": {
+          "rouge1": 0.31325301204819284,
+          "rouge2": 0.07287449392712551,
+          "rougeL": 0.20080321285140565,
+          "rougeSU4": 0.11475409836065575,
+          "bertscore_f1": 0.8559608459472656
+        },
+        "TS3003a": {
+          "rouge1": 0.2608695652173913,
+          "rouge2": 0.058536585365853655,
+          "rougeL": 0.18357487922705312,
+          "rougeSU4": 0.06435643564356436,
+          "bertscore_f1": 0.8424938321113586
+        },
+        "TS3003b": {
+          "rouge1": 0.47547169811320755,
+          "rouge2": 0.12927756653992395,
+          "rougeL": 0.2339622641509434,
+          "rougeSU4": 0.1794871794871795,
+          "bertscore_f1": 0.8606500029563904
+        },
+        "TS3003c": {
+          "rouge1": 0.45378151260504207,
+          "rouge2": 0.09322033898305085,
+          "rougeL": 0.22689075630252103,
+          "rougeSU4": 0.16452074391988553,
+          "bertscore_f1": 0.8561539649963379
+        },
+        "TS3003d": {
+          "rouge1": 0.2771084337349397,
+          "rouge2": 0.04242424242424243,
+          "rougeL": 0.15060240963855423,
+          "rougeSU4": 0.07339449541284404,
+          "bertscore_f1": 0.8175662755966187
+        },
+        "TS3007a": {
+          "rouge1": 0.2792792792792793,
+          "rouge2": 0.08181818181818183,
+          "rougeL": 0.1801801801801802,
+          "rougeSU4": 0.0890937019969278,
+          "bertscore_f1": 0.8506734371185303
+        },
+        "TS3007b": {
+          "rouge1": 0.31475409836065577,
+          "rouge2": 0.0726072607260726,
+          "rougeL": 0.15737704918032788,
+          "rougeSU4": 0.10666666666666666,
+          "bertscore_f1": 0.8407703042030334
+        },
+        "TS3007c": {
+          "rouge1": 0.3097643097643098,
+          "rouge2": 0.10169491525423728,
+          "rougeL": 0.18181818181818182,
+          "rougeSU4": 0.10958904109589042,
+          "bertscore_f1": 0.8403601050376892
+        },
+        "TS3007d": {
+          "rouge1": 0.30147058823529416,
+          "rouge2": 0.08888888888888889,
+          "rougeL": 0.2058823529411765,
+          "rougeSU4": 0.10237203495630462,
+          "bertscore_f1": 0.8441087007522583
+        }
+      },
+      "predictions": {
+        "ES2004a": "User Interface Designer and Project Manager are developing a remote control. The profit aim is fifty million Euros in the first year. The product has to be accessible and usable by all age groups. The flip top remote control might save a bit of space. It doesn't need to be fashionable. It can be easily moulded and produced.",
+        "ES2004b": "Industrial Designer and Marketing Expert have a second meeting today. They will discuss a universal control, one handset for all, T_V_ and a flip-open design. Project Manager wants to make sure the corporate image is incorporated into the handset. User Interface Designer suggests coming up with 5-6 designs. The project manager suggests the use of Videoplus as an add-on feature to the instruction manual. Marketing Expert will look at all the issues involved before the next meeting. The meeting is at lunchtime now.   If there are any more questions, Project Manager will be able to not answer them, as he will be away from the meeting at the time, but he will email them later.  .    .",
+        "ES2004c": "Industrial Designer and Project Manager are designing a remote control device for a young business. Marketing Expert suggests that the flip-top shell could be used to create a mirror effect on the remote control, but the project manager and Industrial Designer are sceptical about the idea. They decide to leave the mirror on the side of the device and use the standard buttons on the top and the more complex buttons under the device. The material that they would be using would be cheap and it could be red, psychedelic or black and white zebra stripes. The body should be retouchable and the case should be moulded in such a way that you can change it every time. The company wants it to be obvious that it's their product. The logo will be incorporated in the design.",
+        "ES2004d": "Marketing Expert has designed the case material for the kinetic charger. The project manager and Industrial Designer are happy to go ahead with the product, but the costs are below budget. The team will have to look for a new project. Project Manager will be delegating in his role as Project Supervisor, so he has to catch up with everything that he fell behind with. The final questionnaire for the project has been completed and the celebration is expected to be around twenty five pounds.   The team has been evaluated well and they have got the meeting survey and questionnaire and they will be celebrating soon, or else they'll be dancing on the desks.",
+        "ES2014a": "Project Manager, Marketing Expert, User Interface Designer, Industrial Designer, Project Manager and Alastair are going to meet to discuss the design of a new remote control device.",
+        "ES2014b": "The project has to be finished within 4 hours. Marketing Expert suggests using speech recognition in the remote control. Project Manager suggests cutting down on the number of buttons used in remotes. Industrial Designer suggests focusing on the whistle back function. The decision on remote control functions will be made at the next meeting. The project manager will do the minutes of this meeting and they will meet back in 40 minutes.",
+        "ES2014c": "Industrial Designer and Project Manager are meeting to discuss the conceptual design of the remote device. Marketing Expert has been looking at trends in fashion and research into the remote control market. People want clothes and shoes with a fruit and vegetables theme. The buttons could be spongy, rubber or fruit shaped. The logo of the company is going to be incorporated onto the device. The standby button is gonna be a red apple. The shape of the buttons will be simple and the labelling of them should be simple as well.",
+        "ES2014d": "User Interface Designer and Industrial Designer have made a prototype of a computer screen. The project manager will have to re-do it as the mute could be a bit smaller and the colouration of the buttons has cost implications. Marketing Expert explains the evaluation criteria that they use for the prototype. Industrial Designer will probably give up on kinetic and go for battery instead. Project Manager needs to complete the final questionnaire and the meeting summary.",
+        "IS1009a": "The project is to design a new remote control. The selling price is supposed to be twenty five Euro, profit for the company is fifty million Euro, the market range is unlimited, and the production cost should be less than twelve fifty Euro. There will be three types of design: functional, conception and detailed. After the remote control, there will be a tool training and participants can draw their favourite animal on the white board.",
+        "IS1009b": "The Marketing Expert wants to sell the product as a Christmas present for around 25 Euros. User Interface Designer will help Marketing Expert with prioritising the features and of the look and the colour. Industrial Designer will talk about the working design of the remote controller. Project Manager will get the slide show. The remote should be compact and have as many buttons as possible for controlling different functionalities of the T_V_ television. The material used for remotes should be human friendly. It should have a child lock and a timer.",
+        "IS1009c": "The project manager is gathering suggestions on how to market the product within the budget. The most important feature of the remote would be the speech recognition feature. The components of the concept are the energy, battery and chip on print. The next meeting will be in thirty minutes. Jana and Francine are supposed to work together on a prototype using modelling clay. The U_I_D_ is supposed to come up with the user interface design.",
+        "IS1009d": "Project Manager has to redo the minutes from the last meeting. Marketing Expert has to give her opinion on the new remote design. Project Manager would like to see a speech recognition integrated in the remote and a circuit board. Text will be printed on the case and symbols as well as the buttons. Voice recognition and practicality of use will be the selling points. The project manager will talk about the financing after the presentation.",
+        "TS3003a": "Frank is a Marketing Expert and Bart is the Project Manager for Real Reaction, a company that puts fashion in electronics. The company's profit aim is fifty million Euros. The production cost can be maximal twelve and a half Euros. Marketing Expert, Project Manager and User Interface Designer will meet in half an hour to discuss the design of a remote control that can control a variety of devices. They will also discuss the production costs.",
+        "TS3003b": "Project Manager wants to design a remote control suitable for T_V. Marketing Expert is against teletext function. Industrial Designer thinks if they focus on the functionality, they can make a lot of money. Project Manager suggests adding an audio signal and a docking station to the remote. The target group is elderly people or people from 40 to 80. The design should focus on aesthetics, the design and the user interface. The default materials should be titanium or plastic. Specific instructions will be sent to the designer by the personal coach. The meeting is over and they have a lunch-break now.   The minutes are in the project document folder.",
+        "TS3003c": "Project Manager is having a conceptual design meeting today. Marketing Expert recommends the remote control and the docking station should blend in in the room. Industrial Designer suggests the single curved case, the double curved case and the flat case. The on-off button should be placed in the corner, the display should show the functions of the buttons, the battery should be used for the energy source and the chip-set should be advanced. The voice recognition function would increase the price for which they're selling their remote control. The Industrial Designer and User Interface Designer are going to work together on this one.",
+        "TS3003d": "Project Manager wants to keep the single curved remote for under twelve and a half Euros. Marketing Expert would prefer to get them to spend eighteen dollars a remote. The evaluation is supposed to take place in 15 minutes. The project manager thinks they are going to get the budget of 15.15 million and export the product to the U.S., where people are more decadent than in the rest of the world. They still have to fit in one more questionnaire and they will have their celebration right now. In the meantime, they are planning to have a party and celebrate the budget. Project Manager will meet with Marketing Expert and User Interface Designer in about ten minutes.   They are supposed to go into their own rooms again and fill another questionnaire.",
+        "TS3007a": "Project Manager is making a new remote control for an ambitious company. The production cost may be more than twenty and a half Euro. Marketing Expert suggests sending the remote over radio waves or bluetooth. Project Manager suggests that pen drawings can be shown on screens. The Industrial Designer has to look at the working design. The next meeting starts in 30 minutes.",
+        "TS3007b": "Industrial Designer will design a placeholder for the remote control for the project. Marketing Expert suggests incorporating Bluetooth or a radio receiver in the place-holder next to the T-V_ but Industrial Designer thinks it's the wrong idea. Project Manager thinks PIN code is a nice idea, but it should be added later in the stage. The most common remote control is a P_C_ most people have, but not everybody has one. User Interface Designer and Project Manager will bring the P-C_ to their personal room after lunch and leave it on. They will then work on the project together.",
+        "TS3007c": "Industrial Designer is at the conceptual design meeting for Real Reaction. Marketing Expert went to Paris and Milan for trend-watching. Project Manager went to a master class on knowledge engineering. The next meeting starts in 30 minutes. The industrial development centre and the user interface designer will work together on a prototype. The most specific instructions will be sent to them by email. They will draw the prototype on the SMARTboard. The project manager wants them to keep an eye on their laptops for a real action.   They will see each other in a half hour.",
+        "TS3007d": "Industrial Designer and Project Manager have to create a remote control with the panel L_C_D_ and a screen. Marketing Expert recommends wood, white c, fruity colours and a standard model with buttons except for the buttons. The advanced chip is three Euro. The push-button, the scroll wheel and the speaker are not included in the price. The digital pen is not user-friendly and the eraser is too big. The computer is locked up during the process. The costs are within the budget."
+      },
+      "seconds": 17520.466597300023
+    }
+  }
+}
