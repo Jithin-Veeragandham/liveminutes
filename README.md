@@ -2,6 +2,8 @@
 
 CS6170 AI Capstone, Northeastern. This README covers the **summarization baseline**, from a fresh clone to the logged number. Details are in [`docs/`](docs/): [SUMMARIZATION.md](docs/SUMMARIZATION.md), [INGESTION.md](docs/INGESTION.md) (the meeting bot) and [PROJECT.md](docs/PROJECT.md) (layout, plans for Features 2 and 3).
 
+**Week 11 release:** [RELEASE_PLAN.md](RELEASE_PLAN.md) has the release candidate, the fallback, how to roll back, and how to reproduce each reported number.
+
 ## 1. What LiveMinutes is
 
 - **Meeting bot** ([`1_ingestion/`](1_ingestion/)): the open-source [Attendee](https://github.com/attendee-labs/attendee) bot joins the call. Our `bridge.py` keeps no audio until everyone has said yes in chat, then transcribes with Groq Whisper.
