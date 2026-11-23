@@ -13,9 +13,8 @@ All numbers are live mode (`recursive`) on the test split: 20 AMI meetings and 2
 - **Commit:** the `week11-release` tag.
 - **Prompt caveat:** the Gemini numbers were measured with the prompt at `ab5eaff`. The tagged prompt has one reworded instruction about `<earlier_lines>` (the split-task fix from #13). The reworded prompt hasn't been scored yet.
 - **Interval caveat:** the meeting bot's live notes update every 30 s (`NOTES_INTERVAL_S` in `1_ingestion/settings.py`). Only 120 s was scored with Gemini.
-- **Fallback:** TextRank with `2_summarization/hpo/results/textrank_best.json`.
-  - That file's `recursive` block now holds the later search's best: 180 s, buffer 3.0. On test it scores AMI 0.302 / 0.816 and synthetic 0.419 / 0.840 (runs `20261121T154645Z`, `20261121T154719Z`).
-  - The "TextRank tuned" row below used the earlier best: 120 s, buffer 1.0, still recorded in `textrank_report.json`.
+- **Fallback:** the default TextRank baseline with `2_summarization/hpo/textrank_live_120s.json` (the slide 3 baseline).
+  - The tuned TextRank row below is shown for comparison only.
 
 ## 2. Why
 
@@ -37,7 +36,7 @@ The BART and TextRank slice numbers come from their seed-42 synthetic runs (`202
 
 | Live mode, test split | AMI ROUGE-1 | AMI BERTScore | Synthetic ROUGE-1 | Synthetic BERTScore |
 |---|---|---|---|---|
-| TextRank, default (baseline, 120 s) | 0.229 | 0.806 | 0.334 | 0.829 |
+| TextRank, default (baseline, 120 s) | 0.229 | 0.806 | 0.335 | 0.829 |
 | TextRank, tuned (120 s) | 0.312 | 0.818 | 0.417 | 0.839 |
 | BART, tuned (180 s) | 0.350 | 0.852 | 0.355 | 0.859 |
 | **Gemini (120 s), mean of seeds 42–46** | 0.305 | **0.859** | 0.375 | **0.866** |
@@ -58,7 +57,7 @@ The BART and TextRank slice numbers come from their seed-42 synthetic runs (`202
 ## 3. Rollback
 
 - **Meeting bot:** set `LIVE_NOTES=0` in `.env`, then run `dc up -d` from `1_ingestion/` (README section 7). The live notes stop, and new meetings show the labelled sample data instead. The bot has no TextRank path.
-- **Scored summaries:** `.venv/bin/python 2_summarization/run.py --model textrank --params 2_summarization/hpo/results/textrank_best.json`
+- **Scored summaries:** `.venv/bin/python 2_summarization/run.py --model textrank --params 2_summarization/hpo/textrank_live_120s.json`
 
 ## 4. Before the Final Showcase
 
