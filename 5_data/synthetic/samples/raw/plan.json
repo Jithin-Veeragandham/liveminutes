@@ -1,0 +1,99 @@
+{
+  "plan": [
+    {
+      "series_id": "SY0201",
+      "feature": "F2",
+      "product": "a wearable step counter for seniors",
+      "meetings": [
+        {
+          "meeting_id": "SY0201a",
+          "series_id": "SY0201",
+          "meeting_letter": "a",
+          "stage": "kickoff",
+          "feature": "F2",
+          "product": "a wearable step counter for seniors",
+          "participants": [
+            {
+              "label": "A",
+              "role": "PM",
+              "status": "present"
+            },
+            {
+              "label": "B",
+              "role": "ME",
+              "status": "present"
+            },
+            {
+              "label": "C",
+              "role": "UI",
+              "status": "present"
+            },
+            {
+              "label": "D",
+              "role": "ID",
+              "status": "present"
+            }
+          ],
+          "scenario_ids": [
+            "F2_OFFERED_TAKEN_BY_OTHER",
+            "F2_VAGUE_NO_OWNER"
+          ],
+          "target_segments": [
+            90,
+            140
+          ]
+        },
+        {
+          "meeting_id": "SY0201b",
+          "series_id": "SY0201",
+          "meeting_letter": "b",
+          "stage": "functional design",
+          "feature": "F2",
+          "product": "a wearable step counter for seniors",
+          "participants": [
+            {
+              "label": "A",
+              "role": "PM",
+              "status": "present"
+            },
+            {
+              "label": "B",
+              "role": "ME",
+              "status": "absent"
+            },
+            {
+              "label": "C",
+              "role": "UI",
+              "status": "present"
+            },
+            {
+              "label": "D",
+              "role": "ID",
+              "status": "present"
+            }
+          ],
+          "scenario_ids": [
+            "F2_TASK_TO_ABSENT",
+            "F2_REASSIGNED_OR_DROPPED"
+          ],
+          "target_segments": [
+            90,
+            140
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "occurrences": {
+      "F2_OFFERED_TAKEN_BY_OTHER": 1,
+      "F2_REASSIGNED_OR_DROPPED": 1,
+      "F2_TASK_TO_ABSENT": 1,
+      "F2_VAGUE_NO_OWNER": 1
+    },
+    "combinations": {
+      "F2_OFFERED_TAKEN_BY_OTHER + F2_VAGUE_NO_OWNER": 1,
+      "F2_REASSIGNED_OR_DROPPED + F2_TASK_TO_ABSENT": 1
+    }
+  }
+}

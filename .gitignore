@@ -24,3 +24,12 @@ __pycache__/
 1_ingestion/tools/receiver/models/
 *.log
 .DS_Store
+
+# test caches
+.pytest_cache/
+
+# hyperparameter search: BART generation cache (rebuilt by tune_bart.py)
+2_summarization/hpo/cache/
+
+# LLM eval calls saved for resuming (run.py), can be large
+**/llm_cache.jsonl

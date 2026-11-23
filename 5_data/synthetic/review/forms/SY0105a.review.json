@@ -1,0 +1,1377 @@
+{
+  "meeting_id": "SY0105a",
+  "raw_sha256": "0f475f2e313663a459b87932694138a320ce87652f755921f317639b6ed24523",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the kickoff meeting and the team introduced themselves. The project is a new app for CityCycle, the city bike-share operator, that will work with its roughly 120 docking stations. CityCycle wants the app to replace its current one, which requires users to type a six-digit dock code. The app has an 80,000 euro budget, must be free to download, and should launch next spring.",
+        "On target users, the marketing expert reported that about seventy percent of trips are weekday commuter trips, with many first-time tourist riders at weekends. The team agreed that commuters are the primary target group, who mainly need speed, and that tourists are a secondary group to support. How tourists without an account would rent a bike was left open. The user interface designer suggested a web page reached from a QR code with mobile payment.",
+        "On how the app connects to the dock, the industrial designer first proposed a kiosk screen on each dock. The team set this aside because the budget covers only the app and any dock changes need a separate budget that may not exist. The team agreed on a phone-first design in which each dock only carries a cheap identifier, such as an NFC tag or a QR sticker.",
+        "For user research, the marketing expert will run an online survey through CityCycle's mailing list and analyse CityCycle's trip data. This replaces the street interviews at three docks that the team had agreed on earlier in the meeting."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The marketing expert will send an online survey through CityCycle's mailing list and analyse the trip data, with early results by the Thursday meeting.",
+        "The user interface designer will send a few survey questions about the current app to the marketing expert by tomorrow.",
+        "The user interface designer will map the user flow from opening the app to unlocking a bike and review other bike-share apps.",
+        "The industrial designer will compare NFC, QR codes and possibly Bluetooth for identifying docks, looking at cost and reliability.",
+        "The project manager will send round the minutes.",
+        "The project manager will ask CityCycle about a dock hardware budget and whether it would want dock screens later."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "Commuters are the primary target users. Tourists are a secondary group that the app should support.",
+        "The app will be phone-first. No kiosk screens will be designed for now, and each dock only needs a cheap identifier such as an NFC tag or a QR sticker.",
+        "User research will be an online survey through CityCycle's mailing list, plus analysis of CityCycle's trip data. This replaces the street interviews agreed earlier in the meeting.",
+        "The next meeting is the functional design meeting, on Thursday morning."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "It is not settled how tourists without an account would rent a bike. A QR-linked web page with mobile payment was suggested, but it would be extra work to build.",
+        "It is unknown whether CityCycle has any separate budget for changes to the docks.",
+        "The dock identification technology (NFC, QR or Bluetooth) has not been chosen. QR codes may be unreliable in the dark or with slow cameras."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0105a.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0105a.ai1",
+        "description": "Run user research through an online survey sent via CityCycle's mailing list and analyse CityCycle's trip data, with early results for Thursday. This was revised from street interviews at three docks.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0105a.s0027",
+            "event": "proposed",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0105a.s0031",
+            "event": "assigned",
+            "by": "B",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0105a.s0032",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0105a.s0093",
+            "event": "restated",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0105a.s0099",
+            "event": "restated",
+            "by": "B",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0105a.s0100",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0105a.s0111",
+            "event": "restated",
+            "by": "B",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0105a.s0027",
+          "SY0105a.s0028",
+          "SY0105a.s0031",
+          "SY0105a.s0032",
+          "SY0105a.s0093",
+          "SY0105a.s0094",
+          "SY0105a.s0096",
+          "SY0105a.s0099",
+          "SY0105a.s0100",
+          "SY0105a.s0111",
+          "SY0105a.s0115"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0105a.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0105a.ai2",
+        "description": "Send a few survey questions about the current app to the marketing expert by tomorrow.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0105a.s0101",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0105a.s0102",
+            "event": "accepted",
+            "by": "A",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0105a.s0101",
+          "SY0105a.s0102",
+          "SY0105a.s0103"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0105a.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0105a.ai3",
+        "description": "Map the user flow from opening the app to unlocking a bike and review what other bike-share apps do.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0105a.s0106",
+            "event": "assigned",
+            "by": "B",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0105a.s0107",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0105a.s0106",
+          "SY0105a.s0107"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0105a.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0105a.ai4",
+        "description": "Compare NFC, QR codes and possibly Bluetooth for identifying docks, covering cost and reliability.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0105a.s0108",
+            "event": "assigned",
+            "by": "B",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0105a.s0109",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0105a.s0108",
+          "SY0105a.s0109"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0105a.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0105a.ai5",
+        "description": "Send round the meeting minutes.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0105a.s0113",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0105a.s0113"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0105a.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0105a.ai6",
+        "description": "Ask CityCycle about a budget for dock hardware changes and whether it would want dock screens later.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0105a.s0081",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0105a.s0113",
+            "event": "restated",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0105a.s0071",
+          "SY0105a.s0081",
+          "SY0105a.s0113"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0105a.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0105a.ai7",
+        "description": "Mock up kiosk screens for a dock-mounted screen.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "dropped",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0105a.s0049",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0105a.s0082",
+            "event": "dropped",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0105a.s0049",
+          "SY0105a.s0050",
+          "SY0105a.s0082",
+          "SY0105a.s0083"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f1",
+        "type": "absence",
+        "fact": "All four participants were present; no one was absent.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0005",
+          "SY0105a.s0007",
+          "SY0105a.s0009",
+          "SY0105a.s0011"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f2",
+        "type": "other",
+        "fact": "The client is CityCycle, the city bike-share operator, which has about 120 docking stations.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0013",
+          "SY0105a.s0014",
+          "SY0105a.s0017"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f3",
+        "type": "other",
+        "fact": "CityCycle's current app makes users type a six-digit dock code.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0019",
+          "SY0105a.s0020"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f4",
+        "type": "other",
+        "fact": "The app budget is 80,000 euros, the app must be free to download, and it should be live by next spring.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0022",
+          "SY0105a.s0023"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f5",
+        "type": "other",
+        "fact": "The 80,000 euro budget covers only the app. Changes to the docks would need a separate budget whose existence is unknown.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0070",
+          "SY0105a.s0071"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f6",
+        "type": "other",
+        "fact": "About seventy percent of trips are weekday commuter trips, and weekends bring many first-time tourist riders.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0034",
+          "SY0105a.s0035",
+          "SY0105a.s0037"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f7",
+        "type": "decision",
+        "fact": "The team agreed that commuters are the primary target users and tourists are a secondary group.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0061",
+          "SY0105a.s0062",
+          "SY0105a.s0063",
+          "SY0105a.s0064",
+          "SY0105a.s0065",
+          "SY0105a.s0066"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f8",
+        "type": "decision",
+        "fact": "The team agreed on a phone-first app with no kiosk screens designed for now. Docks only need a cheap identifier such as an NFC tag or a QR sticker.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0075",
+          "SY0105a.s0076",
+          "SY0105a.s0077",
+          "SY0105a.s0078",
+          "SY0105a.s0079",
+          "SY0105a.s0080",
+          "SY0105a.s0081"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f9",
+        "type": "unagreed_proposal",
+        "fact": "The industrial designer proposed putting a kiosk screen on each dock. It was set aside because of cost, budget scope and vandalism.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0046",
+          "SY0105a.s0072",
+          "SY0105a.s0073",
+          "SY0105a.s0074"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f10",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer suggested that tourists could rent through a web page reached from a QR code and pay with Apple Pay or Google Pay. It was left as an open question.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0086",
+          "SY0105a.s0087",
+          "SY0105a.s0088",
+          "SY0105a.s0089"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f11",
+        "type": "plan_change",
+        "fact": "The team first agreed that the marketing expert would do street interviews at three docks. Later in the meeting this was replaced by an online survey through CityCycle's mailing list plus trip data analysis.",
+        "agreed": null,
+        "related_action_item": "SY0105a.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0027",
+          "SY0105a.s0031",
+          "SY0105a.s0032",
+          "SY0105a.s0090",
+          "SY0105a.s0093",
+          "SY0105a.s0094",
+          "SY0105a.s0095",
+          "SY0105a.s0096",
+          "SY0105a.s0099",
+          "SY0105a.s0100"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f12",
+        "type": "decision",
+        "fact": "User research will use an online survey via CityCycle's roughly 40,000-member mailing list and CityCycle's trip data.",
+        "agreed": true,
+        "related_action_item": "SY0105a.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0093",
+          "SY0105a.s0094",
+          "SY0105a.s0099",
+          "SY0105a.s0100"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f13",
+        "type": "decision",
+        "fact": "The next meeting is the functional design meeting on Thursday morning.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f14",
+        "type": "action_item",
+        "fact": "The marketing expert will run the online survey and analyse trip data, with early results by Thursday.",
+        "agreed": null,
+        "related_action_item": "SY0105a.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0099",
+          "SY0105a.s0100",
+          "SY0105a.s0111",
+          "SY0105a.s0115",
+          "SY0105a.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f15",
+        "type": "action_item",
+        "fact": "The user interface designer will send survey questions about the current app to the marketing expert by tomorrow.",
+        "agreed": null,
+        "related_action_item": "SY0105a.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0101",
+          "SY0105a.s0102"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f16",
+        "type": "action_item",
+        "fact": "The user interface designer will map the user flow from opening the app to unlocking a bike and review other bike-share apps.",
+        "agreed": null,
+        "related_action_item": "SY0105a.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0106",
+          "SY0105a.s0107"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f17",
+        "type": "action_item",
+        "fact": "The industrial designer will compare NFC, QR and possibly Bluetooth for dock identification on cost and reliability.",
+        "agreed": null,
+        "related_action_item": "SY0105a.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0108",
+          "SY0105a.s0109"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f18",
+        "type": "action_item",
+        "fact": "The project manager will send round the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0105a.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f19",
+        "type": "action_item",
+        "fact": "The project manager will ask CityCycle about a dock budget and whether it would want dock screens later.",
+        "agreed": null,
+        "related_action_item": "SY0105a.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0081",
+          "SY0105a.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0105a.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0105a.f20",
+        "type": "action_item_removed",
+        "fact": "The user interface designer offered to mock up kiosk screens but dropped this once the team chose a phone-first design.",
+        "agreed": null,
+        "related_action_item": "SY0105a.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0105a.s0049",
+          "SY0105a.s0082",
+          "SY0105a.s0083"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_INTERLEAVED_TOPICS",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_INTERLEAVED_TOPICS",
+        "segments": [
+          "SY0105a.s0033",
+          "SY0105a.s0034",
+          "SY0105a.s0035",
+          "SY0105a.s0037",
+          "SY0105a.s0038",
+          "SY0105a.s0039",
+          "SY0105a.s0040",
+          "SY0105a.s0041",
+          "SY0105a.s0042",
+          "SY0105a.s0043",
+          "SY0105a.s0044",
+          "SY0105a.s0045",
+          "SY0105a.s0046",
+          "SY0105a.s0047",
+          "SY0105a.s0048",
+          "SY0105a.s0049",
+          "SY0105a.s0051",
+          "SY0105a.s0052",
+          "SY0105a.s0054",
+          "SY0105a.s0056",
+          "SY0105a.s0057",
+          "SY0105a.s0058",
+          "SY0105a.s0059",
+          "SY0105a.s0060",
+          "SY0105a.s0061",
+          "SY0105a.s0062",
+          "SY0105a.s0063",
+          "SY0105a.s0064",
+          "SY0105a.s0066",
+          "SY0105a.s0067",
+          "SY0105a.s0068",
+          "SY0105a.s0069",
+          "SY0105a.s0070",
+          "SY0105a.s0071",
+          "SY0105a.s0072",
+          "SY0105a.s0073",
+          "SY0105a.s0074",
+          "SY0105a.s0075",
+          "SY0105a.s0076",
+          "SY0105a.s0077",
+          "SY0105a.s0079",
+          "SY0105a.s0080",
+          "SY0105a.s0081",
+          "SY0105a.s0082",
+          "SY0105a.s0084",
+          "SY0105a.s0085",
+          "SY0105a.s0086",
+          "SY0105a.s0087",
+          "SY0105a.s0088",
+          "SY0105a.s0089"
+        ],
+        "note": "The discussion alternates between target users (33-42, 56-66, 84-89) and dock-app hardware (43-55, 67-83), switching between the two topics several times."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_PLAN_CHANGE",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_PLAN_CHANGE",
+        "segments": [
+          "SY0105a.s0026",
+          "SY0105a.s0027",
+          "SY0105a.s0028",
+          "SY0105a.s0029",
+          "SY0105a.s0030",
+          "SY0105a.s0031",
+          "SY0105a.s0032",
+          "SY0105a.s0090",
+          "SY0105a.s0091",
+          "SY0105a.s0092",
+          "SY0105a.s0093",
+          "SY0105a.s0094",
+          "SY0105a.s0095",
+          "SY0105a.s0096",
+          "SY0105a.s0097",
+          "SY0105a.s0099",
+          "SY0105a.s0100"
+        ],
+        "note": "The team first agrees that the marketing expert will do street interviews at three docks, then later switches to an online survey via the mailing list plus trip data."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

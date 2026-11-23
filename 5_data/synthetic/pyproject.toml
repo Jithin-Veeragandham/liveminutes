@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools==75.6.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "liveminutes-synthetic"
+version = "0.1.0"
+description = "Reproducible LLM-generated synthetic meetings (AMI-compatible) for LiveMinutes"
+requires-python = ">=3.11"
+dependencies = [
+  "PyYAML==6.0.3",
+  "jsonschema==4.23.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -27,26 +27,34 @@ def parse_reply(text):
     return None
 
 
-def find_name(name_words, names):
-    """The one display name these words point to: an exact match, else the only name that
-    contains all the words ("jithin" -> "Veeragandham, Jithin"). None if zero or several fit."""
+def find_name(name_words, names, own_name=None):
+    """The one display name these words point to: an exact match first, else the only name that
+    contains all the words ("jithin" -> "Veeragandham, Jithin"). None if zero or several fit.
+    own_name: our own bot's name. It isn't in `names` (Attendee leaves the bot out) and never needs to
+    answer, but it still counts when looking for a fit: with another bot "LiveMinutes - Aatmaj" in the
+    meeting, "LiveMinutes yes" sent to the bot "LiveMinutes" is about itself, not the other bot."""
     exact = [n for n in names if normalize(n).split() == name_words]
+    if exact:
+        return exact[0] if len(exact) == 1 else None
+    own = normalize(own_name).split() if own_name else []
+    if own and set(name_words) <= set(own):
+        return None  # our own bot (or it could be): nobody else
     partial = [n for n in names if set(name_words) <= set(normalize(n).split())]
-    hits = exact or partial
-    return hits[0] if len(hits) == 1 else None
+    return partial[0] if len(partial) == 1 else None
 
 
-def parse_vouch(text, names):
+def parse_vouch(text, names, own_name=None):
     """A reply for someone else (a meeting room, phone line or bot that can't type):
     "<name> yes", "yes <name>", "yes for <name>", "yes on behalf of <name>" (same with no).
-    names: display names of the people present. Returns (name, "yes" | "no") or None."""
+    names: display names of the people present; own_name: our bot's name (see find_name).
+    Returns (name, "yes" | "no") for one person, or None."""
     words = normalize(text).split()
     for cut in range(1, len(words)):
         # Try both orders: the name first, then the answer; or the answer first, then the name.
         for name_words, answer_words in ((words[:cut], words[cut:]), (words[cut:], words[:cut])):
             answer = " ".join(answer_words).removesuffix(" for").removesuffix(" on behalf of")
             decision = parse_reply(answer)
-            name = find_name(name_words, names) if decision else None
+            name = find_name(name_words, names, own_name) if decision else None
             if name:
                 return name, decision
     return None

@@ -1,0 +1,1532 @@
+{
+  "schema_version": "1.0",
+  "source": "synthetic",
+  "meeting_id": "SY0101b",
+  "series_id": "SY0101",
+  "meeting_letter": "b",
+  "scenario_type": "scenario",
+  "stage": "functional design",
+  "duration_sec": 544.69,
+  "participants": [
+    {
+      "label": "A",
+      "role": "ID",
+      "name": "Tomas",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "B",
+      "role": "ME",
+      "name": "Grace",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "C",
+      "role": "UI",
+      "name": "Ravi",
+      "global_id": null,
+      "status": "absent"
+    },
+    {
+      "label": "D",
+      "role": "PM",
+      "name": "Helen",
+      "global_id": null,
+      "status": "present"
+    }
+  ],
+  "segments": [
+    {
+      "id": "SY0101b.s0001",
+      "speaker": "D",
+      "start": 5.0,
+      "end": 7.31,
+      "text": "Okay, um, are we all set?",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0101b.s0002",
+      "speaker": "B",
+      "start": 7.7,
+      "end": 8.1,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0101b.s0003",
+      "speaker": "A",
+      "start": 8.35,
+      "end": 9.12,
+      "text": "Yeah, ready.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0004",
+      "speaker": "D",
+      "start": 9.46,
+      "end": 12.54,
+      "text": "Right, so this is the functional design meeting.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0005",
+      "speaker": "D",
+      "start": 13.08,
+      "end": 16.54,
+      "text": "Uh, Ravi isn't here, as you can probably see.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0006",
+      "speaker": "B",
+      "start": 17.1,
+      "end": 18.64,
+      "text": "Oh, is he okay?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0101b.s0007",
+      "speaker": "D",
+      "start": 19.21,
+      "end": 26.13,
+      "text": "Yeah, he's fine, he got pulled into the, um, the user testing session for the other project downstairs.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0008",
+      "speaker": "D",
+      "start": 26.28,
+      "end": 30.9,
+      "text": "He messaged me just before, said he couldn't get out of it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0009",
+      "speaker": "A",
+      "start": 31.4,
+      "end": 36.4,
+      "text": "Ah, that's a shame, 'cause half of today is kind of his stuff.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0010",
+      "speaker": "D",
+      "start": 37.31,
+      "end": 41.16,
+      "text": "Yeah, I know. We'll just have to work around it.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0011",
+      "speaker": "D",
+      "start": 41.7,
+      "end": 48.24,
+      "text": "Um, first thing, I sent round the minutes from the kickoff, so you should all have those.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0012",
+      "speaker": "B",
+      "start": 48.59,
+      "end": 49.74,
+      "text": "Mm-hmm, got them.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0101b.s0013",
+      "speaker": "D",
+      "start": 50.42,
+      "end": 59.65,
+      "text": "And the agenda today is, um, Grace with the user requirements, then Tomas with the components, and then we try and decide the functions.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0014",
+      "speaker": "D",
+      "start": 59.95,
+      "end": 62.26,
+      "text": "Grace, do you want to start?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0101b.s0015",
+      "speaker": "B",
+      "start": 62.59,
+      "end": 67.97,
+      "text": "Sure, yeah. So, um, I did a quick survey like we said last time.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0016",
+      "speaker": "B",
+      "start": 68.36,
+      "end": 72.59,
+      "text": "Just an online thing, I got twenty-three home cooks to answer.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0017",
+      "speaker": "D",
+      "start": 73.44,
+      "end": 73.84,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0101b.s0018",
+      "speaker": "B",
+      "start": 74.47,
+      "end": 84.09,
+      "text": "And the biggest thing, by far, was hands. Like, people have dough on their hands, or raw chicken, and they don't want to touch anything.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0019",
+      "speaker": "A",
+      "start": 84.42,
+      "end": 84.82,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0101b.s0020",
+      "speaker": "B",
+      "start": 85.2,
+      "end": 90.2,
+      "text": "So that's good for us, that's the whole point of the voice thing.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0021",
+      "speaker": "B",
+      "start": 90.5,
+      "end": 97.42,
+      "text": "Second thing, um, when they've got more than one timer going they lose track of which one's beeping.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0022",
+      "speaker": "B",
+      "start": 98.1,
+      "end": 100.79,
+      "text": "Like fifteen of the twenty-three said that.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0023",
+      "speaker": "D",
+      "start": 101.09,
+      "end": 103.01,
+      "text": "Oh, that's quite a lot.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0024",
+      "speaker": "B",
+      "start": 103.36,
+      "end": 109.51,
+      "text": "Yeah, so I think that kind of backs up my spoken alarm idea from last time.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0025",
+      "speaker": "D",
+      "start": 110.27,
+      "end": 113.73,
+      "text": "The one where it says which timer is done.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0101b.s0026",
+      "speaker": "B",
+      "start": 114.33,
+      "end": 115.1,
+      "text": "Yeah, exactly.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0101b.s0027",
+      "speaker": "B",
+      "start": 115.97,
+      "end": 125.2,
+      "text": "And then the other things were, um, it has to be loud enough to hear over the extractor fan, and easy to wipe down.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0028",
+      "speaker": "B",
+      "start": 126.12,
+      "end": 131.89,
+      "text": "And nobody wants to change batteries all the time, that came up a few times.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0029",
+      "speaker": "D",
+      "start": 132.72,
+      "end": 133.49,
+      "text": "Okay, great.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0101b.s0030",
+      "speaker": "D",
+      "start": 134.08,
+      "end": 137.16,
+      "text": "Tomas, what did you find on the chips?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0101b.s0031",
+      "speaker": "A",
+      "start": 138.08,
+      "end": 143.46,
+      "text": "Right, so, um, there's basically two kinds of voice chip in our price range.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0032",
+      "speaker": "A",
+      "start": 144.02,
+      "end": 152.87,
+      "text": "There's the fixed vocabulary ones, where the wake word and the commands are set at the factory, those are about two euros eighty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0033",
+      "speaker": "A",
+      "start": 153.73,
+      "end": 161.42,
+      "text": "And then the trainable ones, where the user can record their own wake word, and they're more like six fifty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0034",
+      "speaker": "D",
+      "start": 162.41,
+      "end": 164.72,
+      "text": "Six fifty out of twelve fifty.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0101b.s0035",
+      "speaker": "A",
+      "start": 165.27,
+      "end": 171.81,
+      "text": "Yeah, that's more than half the budget just on the chip, so I don't really see it.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0036",
+      "speaker": "B",
+      "start": 172.05,
+      "end": 175.51,
+      "text": "Can the fixed one do the named timers though?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0101b.s0037",
+      "speaker": "A",
+      "start": 176.17,
+      "end": 183.48,
+      "text": "Um, it can do a fixed list of words. So like up to, I think, forty words in total.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0038",
+      "speaker": "B",
+      "start": 184.1,
+      "end": 190.64,
+      "text": "Because that links to the alarm thing, if it knows the name, it could say the name.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0039",
+      "speaker": "A",
+      "start": 191.33,
+      "end": 198.64,
+      "text": "Yeah, so for the alarm you'd need a little speaker, those are about one euro twenty with the amplifier.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0040",
+      "speaker": "B",
+      "start": 199.05,
+      "end": 200.97,
+      "text": "That's not bad at all.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0041",
+      "speaker": "A",
+      "start": 201.26,
+      "end": 207.41,
+      "text": "And the chip can play back short recorded phrases, so no extra memory if they're short.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0042",
+      "speaker": "D",
+      "start": 208.1,
+      "end": 211.18,
+      "text": "So it could say like, 'pasta timer done'?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0101b.s0043",
+      "speaker": "A",
+      "start": 211.89,
+      "end": 216.12,
+      "text": "If pasta is one of the words in the list, yeah.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0044",
+      "speaker": "D",
+      "start": 216.68,
+      "end": 221.68,
+      "text": "Okay, um, but let's go back to the wake word for a second.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0101b.s0045",
+      "speaker": "D",
+      "start": 222.53,
+      "end": 228.3,
+      "text": "If we go with the fixed chip, then the wake word is fixed too, right?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0101b.s0046",
+      "speaker": "A",
+      "start": 228.87,
+      "end": 231.56,
+      "text": "Yeah, it's burned in. Can't change it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0047",
+      "speaker": "B",
+      "start": 232.06,
+      "end": 237.83,
+      "text": "Is Ravi gonna be okay with that? He really wanted people to pick their own.",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0101b.s0048",
+      "speaker": "D",
+      "start": 238.73,
+      "end": 243.35,
+      "text": "He did, yeah. In the kickoff he was quite keen on it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0049",
+      "speaker": "A",
+      "start": 244.05,
+      "end": 249.05,
+      "text": "I think if he saw the six fifty he'd drop it himself, honestly.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0050",
+      "speaker": "B",
+      "start": 249.25,
+      "end": 250.02,
+      "text": "Yeah, probably.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0101b.s0051",
+      "speaker": "D",
+      "start": 250.44,
+      "end": 256.21,
+      "text": "I mean, we can't really say what he'd think, but the numbers are the numbers.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0052",
+      "speaker": "D",
+      "start": 256.45,
+      "end": 261.83,
+      "text": "I'd say we go with the fixed vocabulary chip and a fixed wake word.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0101b.s0053",
+      "speaker": "A",
+      "start": 262.1,
+      "end": 262.87,
+      "text": "Yeah, agreed.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0054",
+      "speaker": "B",
+      "start": 263.36,
+      "end": 264.9,
+      "text": "Yep, fine with me.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0055",
+      "speaker": "D",
+      "start": 265.25,
+      "end": 267.94,
+      "text": "Okay, so that's decided, fixed wake word.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0056",
+      "speaker": "B",
+      "start": 268.31,
+      "end": 272.54,
+      "text": "So back to the alarm, are we doing the speaker then?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0101b.s0057",
+      "speaker": "A",
+      "start": 272.88,
+      "end": 277.88,
+      "text": "I mean, with the fixed chip we've got the money, so cost-wise yeah.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0058",
+      "speaker": "A",
+      "start": 278.33,
+      "end": 283.33,
+      "text": "Two eighty plus one twenty is four euros for voice in and out.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0059",
+      "speaker": "D",
+      "start": 284.14,
+      "end": 286.45,
+      "text": "That leaves plenty for the rest.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0060",
+      "speaker": "B",
+      "start": 287.18,
+      "end": 293.72,
+      "text": "And I'd still keep a beep as well, like a beep and then it says the name.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0101b.s0061",
+      "speaker": "B",
+      "start": 293.96,
+      "end": 298.58,
+      "text": "Because of the extractor fan thing, people said they want it loud.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0062",
+      "speaker": "D",
+      "start": 299.23,
+      "end": 299.63,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0101b.s0063",
+      "speaker": "A",
+      "start": 300.19,
+      "end": 303.65,
+      "text": "Yeah, the beep is free, the speaker does both.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0064",
+      "speaker": "D",
+      "start": 304.42,
+      "end": 310.57,
+      "text": "But the names, um, how many names can we have if the list is forty words?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0101b.s0065",
+      "speaker": "A",
+      "start": 310.96,
+      "end": 315.58,
+      "text": "Well the commands take some, set, cancel, how long, minutes, the numbers...",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0066",
+      "speaker": "A",
+      "start": 316.11,
+      "end": 320.34,
+      "text": "Numbers alone are like twenty words. So maybe ten names, tops.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0067",
+      "speaker": "B",
+      "start": 320.53,
+      "end": 324.38,
+      "text": "Ten's fine I think. People mostly time the same things.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0068",
+      "speaker": "D",
+      "start": 324.99,
+      "end": 329.99,
+      "text": "So the named timers would come from a fixed list, like ten names.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0101b.s0069",
+      "speaker": "A",
+      "start": 330.64,
+      "end": 331.04,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0101b.s0070",
+      "speaker": "B",
+      "start": 331.31,
+      "end": 331.71,
+      "text": "Okay.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0071",
+      "speaker": "D",
+      "start": 331.95,
+      "end": 334.26,
+      "text": "Okay so that's decided as well.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0072",
+      "speaker": "D",
+      "start": 334.64,
+      "end": 336.18,
+      "text": "Um, and the alarm,",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0101b.s0073",
+      "speaker": "D",
+      "start": 336.34,
+      "end": 341.72,
+      "text": "so, spoken alarm, with the beep first and then the name of the timer.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0074",
+      "speaker": "B",
+      "start": 342.42,
+      "end": 344.34,
+      "text": "Great, I'm happy with that.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0101b.s0075",
+      "speaker": "A",
+      "start": 344.53,
+      "end": 344.93,
+      "text": "Yep.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0076",
+      "speaker": "D",
+      "start": 345.4,
+      "end": 351.94,
+      "text": "Now, the list of names, I'd normally give that to Ravi, since it's part of the commands.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0077",
+      "speaker": "D",
+      "start": 352.73,
+      "end": 354.65,
+      "text": "Do we wait for him?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0101b.s0078",
+      "speaker": "B",
+      "start": 355.24,
+      "end": 361.39,
+      "text": "Actually I could do it. I've got the survey answers, I asked what people time most.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0101b.s0079",
+      "speaker": "D",
+      "start": 361.71,
+      "end": 363.25,
+      "text": "Oh, that's better actually.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0080",
+      "speaker": "D",
+      "start": 363.87,
+      "end": 369.25,
+      "text": "Okay, so Grace, you pick the ten names from the survey instead of Ravi.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0081",
+      "speaker": "B",
+      "start": 369.64,
+      "end": 370.41,
+      "text": "Okay, sure.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0101b.s0082",
+      "speaker": "A",
+      "start": 370.96,
+      "end": 375.19,
+      "text": "Should we tell him that? So he doesn't do it twice?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0101b.s0083",
+      "speaker": "D",
+      "start": 375.61,
+      "end": 383.3,
+      "text": "Yeah, I'll email him after this. Tell him fixed wake word, the ten names coming from Grace, and the alarm.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0084",
+      "speaker": "D",
+      "start": 383.87,
+      "end": 389.64,
+      "text": "And he still does the rest of his bit, the commands, the display, the button.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0085",
+      "speaker": "B",
+      "start": 390.23,
+      "end": 397.54,
+      "text": "Maybe tell him why on the wake word, the price, so it doesn't look like we just overruled him.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0101b.s0086",
+      "speaker": "D",
+      "start": 397.91,
+      "end": 401.37,
+      "text": "Yeah, good point, I'll put the chip prices in.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0087",
+      "speaker": "D",
+      "start": 401.76,
+      "end": 402.91,
+      "text": "Okay. Um, power.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0101b.s0088",
+      "speaker": "D",
+      "start": 403.83,
+      "end": 405.37,
+      "text": "Tomas, battery or mains?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0101b.s0089",
+      "speaker": "A",
+      "start": 405.95,
+      "end": 413.26,
+      "text": "So my first thought was batteries, like three AAs, keeps it off the cable, you can put it anywhere.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0090",
+      "speaker": "D",
+      "start": 413.82,
+      "end": 416.51,
+      "text": "Okay, that sounds sensible, let's say batteries.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0091",
+      "speaker": "A",
+      "start": 417.32,
+      "end": 424.24,
+      "text": "But, um, then I worked out the listening, the chip is always on, waiting for the wake word.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0092",
+      "speaker": "A",
+      "start": 424.86,
+      "end": 428.32,
+      "text": "And with that, three AAs last about three weeks.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0093",
+      "speaker": "B",
+      "start": 428.78,
+      "end": 433.4,
+      "text": "Oh no, that's terrible. That's exactly what people said they didn't want.",
+      "da_type": "be.neg"
+    },
+    {
+      "id": "SY0101b.s0094",
+      "speaker": "D",
+      "start": 433.7,
+      "end": 436.01,
+      "text": "Yeah, three weeks is no good.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0095",
+      "speaker": "A",
+      "start": 436.45,
+      "end": 442.99,
+      "text": "So I'd say mains, with a USB adapter. Cheap, and everyone's got a socket on the counter.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0101b.s0096",
+      "speaker": "B",
+      "start": 443.43,
+      "end": 444.97,
+      "text": "Yeah, that makes sense.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0097",
+      "speaker": "D",
+      "start": 445.35,
+      "end": 450.35,
+      "text": "Okay, so change of plan, mains power with a USB adapter, not batteries.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0098",
+      "speaker": "A",
+      "start": 451.1,
+      "end": 457.25,
+      "text": "We could maybe add a small backup battery, so the timers don't vanish if it's unplugged.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0101b.s0099",
+      "speaker": "D",
+      "start": 458.12,
+      "end": 459.66,
+      "text": "What would that cost?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0101b.s0100",
+      "speaker": "A",
+      "start": 459.83,
+      "end": 463.68,
+      "text": "Um, I'd have to check. Maybe fifty cents, maybe more.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0101",
+      "speaker": "D",
+      "start": 463.91,
+      "end": 469.68,
+      "text": "Okay, can you look into that for next time? Along with the speaker price properly.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0101b.s0102",
+      "speaker": "A",
+      "start": 470.38,
+      "end": 473.07,
+      "text": "Yeah, I'll get proper quotes for both.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0103",
+      "speaker": "D",
+      "start": 474.0,
+      "end": 474.4,
+      "text": "Great.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0101b.s0104",
+      "speaker": "B",
+      "start": 474.8,
+      "end": 479.8,
+      "text": "And the cleaning thing, the splash-proof, are we doing anything on that today?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0101b.s0105",
+      "speaker": "A",
+      "start": 480.45,
+      "end": 485.07,
+      "text": "That's really the casing, I think that's next meeting with the materials.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0106",
+      "speaker": "D",
+      "start": 485.7,
+      "end": 488.78,
+      "text": "Yeah, let's leave that for the conceptual meeting.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0107",
+      "speaker": "B",
+      "start": 489.34,
+      "end": 489.74,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0101b.s0108",
+      "speaker": "D",
+      "start": 490.09,
+      "end": 492.78,
+      "text": "Right, um, let me just sum up.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0101b.s0109",
+      "speaker": "D",
+      "start": 492.97,
+      "end": 498.74,
+      "text": "Fixed vocabulary chip, fixed wake word, up to ten timer names from a fixed list.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0110",
+      "speaker": "D",
+      "start": 499.17,
+      "end": 504.55,
+      "text": "Spoken alarm with a beep and then the name, and mains power by USB.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0111",
+      "speaker": "D",
+      "start": 504.91,
+      "end": 510.29,
+      "text": "Grace does the name list, Tomas checks the backup battery and the speaker price.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0112",
+      "speaker": "D",
+      "start": 510.59,
+      "end": 518.28,
+      "text": "And I'll email Ravi, and he carries on with the commands, the display and the button fallback for next time.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0113",
+      "speaker": "A",
+      "start": 518.71,
+      "end": 524.09,
+      "text": "Do we think he'll want to change the button though, with the fixed words?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0101b.s0114",
+      "speaker": "D",
+      "start": 524.68,
+      "end": 530.45,
+      "text": "I don't think it changes the button much, but he can tell us next time.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0115",
+      "speaker": "B",
+      "start": 530.98,
+      "end": 532.52,
+      "text": "Yeah, he'll have opinions.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0101b.s0116",
+      "speaker": "D",
+      "start": 533.06,
+      "end": 534.21,
+      "text": "Ha, he will.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0101b.s0117",
+      "speaker": "D",
+      "start": 535.17,
+      "end": 538.63,
+      "text": "Okay, next meeting is the conceptual design, after lunch.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0101b.s0118",
+      "speaker": "A",
+      "start": 538.87,
+      "end": 539.27,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0101b.s0119",
+      "speaker": "B",
+      "start": 539.42,
+      "end": 540.19,
+      "text": "Cool, thanks.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0101b.s0120",
+      "speaker": "D",
+      "start": 540.92,
+      "end": 541.69,
+      "text": "Thanks everyone.",
+      "da_type": "inf"
+    }
+  ],
+  "summary": {
+    "abstract": [
+      "The project manager opened the functional design meeting, noted that the user interface designer was absent because he had been called into a user testing session for another project, and confirmed that the kickoff minutes had been sent round.",
+      "The marketing expert presented the results of an online survey of twenty-three home cooks: users want to avoid touching the device with dirty hands, often lose track of which of several timers is going off, need an alarm loud enough to be heard over an extractor fan, want an easy-to-clean device and do not want to change batteries often.",
+      "The industrial designer compared a fixed vocabulary voice chip (about 2.80 euros) with a trainable chip that allows a user-chosen wake word (about 6.50 euros). The team chose the fixed vocabulary chip with a fixed wake word, and limited named timers to a fixed list of about ten names because the chip recognises only about forty words.",
+      "The team also agreed on a spoken alarm that beeps and then says the timer's name, using a small speaker of about 1.20 euros, so that voice input and output together cost about four euros.",
+      "For power, the team first leaned towards three AA batteries but switched to mains power with a USB adapter after the industrial designer calculated that always-on listening would drain the batteries in about three weeks. The project manager will inform the absent user interface designer of the decisions."
+    ],
+    "actions": [
+      "The marketing expert will choose the list of about ten timer names from the survey results. This task was first intended for the user interface designer.",
+      "The industrial designer will get proper price quotes for the speaker and for a small backup battery.",
+      "The project manager will email the absent user interface designer the decisions on the fixed wake word, the timer name list and the alarm, including the chip prices behind the wake word decision.",
+      "The user interface designer will continue working on the voice commands, the display and the button fallback for the conceptual design meeting."
+    ],
+    "decisions": [
+      "The timer will use a fixed vocabulary voice recognition chip (about 2.80 euros) rather than a trainable chip.",
+      "The wake word will be fixed and not user-selectable.",
+      "Named timers will use a fixed list of up to about ten names.",
+      "The alarm will beep and then speak the name of the finished timer, using a small speaker.",
+      "The timer will be mains-powered with a USB adapter instead of batteries.",
+      "Splash-proofing and easy cleaning will be dealt with in the conceptual design meeting together with the casing materials."
+    ],
+    "problems": [
+      "The cost of a small backup battery is unknown, and it is not decided whether one will be included.",
+      "The speaker price of about 1.20 euros has not been confirmed with a proper quote.",
+      "The splash-proof and easy-to-clean casing has not yet been specified.",
+      "The user interface designer has not yet been told about the decisions, and the effect of the fixed vocabulary on the button fallback is still open."
+    ]
+  },
+  "action_items": [
+    {
+      "id": "SY0101b.ai1",
+      "description": "Choose the list of about ten timer names from the survey answers on what home cooks time most.",
+      "owner": "B",
+      "owner_unclear": false,
+      "status": "reassigned",
+      "previous_owners": [
+        "C"
+      ],
+      "history": [
+        {
+          "segment": "SY0101b.s0076",
+          "event": "proposed",
+          "by": "D",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0101b.s0078",
+          "event": "offered",
+          "by": "B",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0101b.s0080",
+          "event": "reassigned",
+          "by": "D",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0101b.s0081",
+          "event": "accepted",
+          "by": "B",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0101b.s0111",
+          "event": "restated",
+          "by": "D",
+          "owner": "B"
+        }
+      ],
+      "evidence_segments": [
+        "SY0101b.s0076",
+        "SY0101b.s0077",
+        "SY0101b.s0078",
+        "SY0101b.s0079",
+        "SY0101b.s0080",
+        "SY0101b.s0081",
+        "SY0101b.s0111"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0101b.ai2",
+      "description": "Get proper price quotes for the speaker and for a small backup battery.",
+      "owner": "A",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0101b.s0101",
+          "event": "assigned",
+          "by": "D",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0101b.s0102",
+          "event": "accepted",
+          "by": "A",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0101b.s0111",
+          "event": "restated",
+          "by": "D",
+          "owner": "A"
+        }
+      ],
+      "evidence_segments": [
+        "SY0101b.s0098",
+        "SY0101b.s0099",
+        "SY0101b.s0100",
+        "SY0101b.s0101",
+        "SY0101b.s0102",
+        "SY0101b.s0111"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0101b.ai3",
+      "description": "Email the absent user interface designer the decisions (fixed wake word, timer names coming from the marketing expert, spoken alarm), including the chip prices explaining the wake word decision.",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0101b.s0083",
+          "event": "offered",
+          "by": "D",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0101b.s0086",
+          "event": "restated",
+          "by": "D",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0101b.s0112",
+          "event": "restated",
+          "by": "D",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0101b.s0082",
+        "SY0101b.s0083",
+        "SY0101b.s0085",
+        "SY0101b.s0086",
+        "SY0101b.s0112"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0101b.ai4",
+      "description": "Continue working on the voice commands, the display and the button fallback for the conceptual design meeting.",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0101b.s0084",
+          "event": "assigned",
+          "by": "D",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0101b.s0112",
+          "event": "restated",
+          "by": "D",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0101b.s0084",
+        "SY0101b.s0112",
+        "SY0101b.s0113",
+        "SY0101b.s0114"
+      ],
+      "owner_source": "gold"
+    }
+  ],
+  "qa_facts": [
+    {
+      "id": "SY0101b.f1",
+      "type": "absence",
+      "fact": "The user interface designer (Ravi) was absent because he had been pulled into a user testing session for another project.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0101b.s0005",
+        "SY0101b.s0006",
+        "SY0101b.s0007",
+        "SY0101b.s0008"
+      ]
+    },
+    {
+      "id": "SY0101b.f2",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager said she had sent round the minutes of the kickoff meeting.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0101a",
+      "evidence_segments": [
+        "SY0101b.s0011",
+        "SY0101b.s0012"
+      ]
+    },
+    {
+      "id": "SY0101b.f3",
+      "type": "reference_to_prior_meeting",
+      "fact": "The marketing expert carried out the survey agreed in the kickoff meeting and said its results supported her spoken alarm idea from that meeting.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0101a",
+      "evidence_segments": [
+        "SY0101b.s0015",
+        "SY0101b.s0024",
+        "SY0101b.s0025"
+      ]
+    },
+    {
+      "id": "SY0101b.f4",
+      "type": "reference_to_prior_meeting",
+      "fact": "The marketing expert and the project manager recalled that the user interface designer had wanted a user-selectable wake word in the kickoff meeting.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0101a",
+      "evidence_segments": [
+        "SY0101b.s0047",
+        "SY0101b.s0048"
+      ]
+    },
+    {
+      "id": "SY0101b.f5",
+      "type": "other",
+      "fact": "The marketing expert's online survey had twenty-three home cook respondents. Fifteen of them said they lose track of which timer is beeping.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0101b.s0016",
+        "SY0101b.s0021",
+        "SY0101b.s0022"
+      ]
+    },
+    {
+      "id": "SY0101b.f6",
+      "type": "other",
+      "fact": "Survey respondents wanted an alarm loud enough to be heard over the extractor fan, a device that is easy to wipe down, and no frequent battery changes.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0101b.s0027",
+        "SY0101b.s0028"
+      ]
+    },
+    {
+      "id": "SY0101b.f7",
+      "type": "other",
+      "fact": "A fixed vocabulary voice chip costs about 2.80 euros. A trainable chip that allows a user-chosen wake word costs about 6.50 euros.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0101b.s0032",
+        "SY0101b.s0033",
+        "SY0101b.s0034",
+        "SY0101b.s0035"
+      ]
+    },
+    {
+      "id": "SY0101b.f8",
+      "type": "decision",
+      "fact": "The team chose the fixed vocabulary voice chip with a fixed wake word.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0101b.s0052",
+        "SY0101b.s0053",
+        "SY0101b.s0054",
+        "SY0101b.s0055"
+      ]
+    },
+    {
+      "id": "SY0101b.f9",
+      "type": "decision",
+      "fact": "Named timers will come from a fixed list of up to about ten names, because the chip recognises only about forty words.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0101b.s0037",
+        "SY0101b.s0064",
+        "SY0101b.s0065",
+        "SY0101b.s0066",
+        "SY0101b.s0067",
+        "SY0101b.s0068",
+        "SY0101b.s0069",
+        "SY0101b.s0070",
+        "SY0101b.s0071"
+      ]
+    },
+    {
+      "id": "SY0101b.f10",
+      "type": "decision",
+      "fact": "The alarm will beep and then speak the name of the finished timer through a small speaker costing about 1.20 euros.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0101b.s0039",
+        "SY0101b.s0060",
+        "SY0101b.s0063",
+        "SY0101b.s0073",
+        "SY0101b.s0074",
+        "SY0101b.s0075"
+      ]
+    },
+    {
+      "id": "SY0101b.f11",
+      "type": "plan_change",
+      "fact": "The team first agreed on battery power with three AA batteries, then switched to mains power with a USB adapter because always-on listening would drain the batteries in about three weeks.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0101b.s0089",
+        "SY0101b.s0090",
+        "SY0101b.s0091",
+        "SY0101b.s0092",
+        "SY0101b.s0093",
+        "SY0101b.s0094",
+        "SY0101b.s0095",
+        "SY0101b.s0096",
+        "SY0101b.s0097"
+      ]
+    },
+    {
+      "id": "SY0101b.f12",
+      "type": "decision",
+      "fact": "The timer will be mains-powered with a USB adapter.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0101b.s0095",
+        "SY0101b.s0096",
+        "SY0101b.s0097"
+      ]
+    },
+    {
+      "id": "SY0101b.f13",
+      "type": "unagreed_proposal",
+      "fact": "The industrial designer suggested adding a small backup battery so that timers are kept if the device is unplugged. This was not decided and will be costed first.",
+      "agreed": false,
+      "related_action_item": "SY0101b.ai2",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0101b.s0098",
+        "SY0101b.s0099",
+        "SY0101b.s0100",
+        "SY0101b.s0101"
+      ]
+    },
+    {
+      "id": "SY0101b.f14",
+      "type": "decision",
+      "fact": "Splash-proofing and easy cleaning were deferred to the conceptual design meeting, together with the casing materials.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0101b.s0104",
+        "SY0101b.s0105",
+        "SY0101b.s0106"
+      ]
+    },
+    {
+      "id": "SY0101b.f15",
+      "type": "action_item",
+      "fact": "The marketing expert will choose the list of about ten timer names from the survey. The task was first intended for the absent user interface designer.",
+      "agreed": null,
+      "related_action_item": "SY0101b.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0101b.s0076",
+        "SY0101b.s0078",
+        "SY0101b.s0080",
+        "SY0101b.s0081"
+      ]
+    },
+    {
+      "id": "SY0101b.f16",
+      "type": "action_item",
+      "fact": "The industrial designer will get price quotes for the speaker and a small backup battery.",
+      "agreed": null,
+      "related_action_item": "SY0101b.ai2",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0101b.s0101",
+        "SY0101b.s0102"
+      ]
+    },
+    {
+      "id": "SY0101b.f17",
+      "type": "action_item",
+      "fact": "The project manager will email the absent user interface designer the decisions, including the chip prices behind the fixed wake word.",
+      "agreed": null,
+      "related_action_item": "SY0101b.ai3",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0101b.s0083",
+        "SY0101b.s0085",
+        "SY0101b.s0086"
+      ]
+    },
+    {
+      "id": "SY0101b.f18",
+      "type": "action_item",
+      "fact": "The user interface designer remains responsible for the voice commands, the display and the button fallback for the next meeting.",
+      "agreed": null,
+      "related_action_item": "SY0101b.ai4",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0101b.s0084",
+        "SY0101b.s0112"
+      ]
+    }
+  ],
+  "edge_cases": [
+    {
+      "scenario_id": "F1_ABSENT_DISCUSSED",
+      "segments": [
+        "SY0101b.s0005",
+        "SY0101b.s0006",
+        "SY0101b.s0007",
+        "SY0101b.s0008",
+        "SY0101b.s0009",
+        "SY0101b.s0010",
+        "SY0101b.s0047",
+        "SY0101b.s0048",
+        "SY0101b.s0049",
+        "SY0101b.s0050",
+        "SY0101b.s0051",
+        "SY0101b.s0076",
+        "SY0101b.s0077",
+        "SY0101b.s0078",
+        "SY0101b.s0079",
+        "SY0101b.s0080",
+        "SY0101b.s0082",
+        "SY0101b.s0083",
+        "SY0101b.s0084",
+        "SY0101b.s0085",
+        "SY0101b.s0086",
+        "SY0101b.s0112",
+        "SY0101b.s0113",
+        "SY0101b.s0114",
+        "SY0101b.s0115",
+        "SY0101b.s0116"
+      ],
+      "note": "The user interface designer, Ravi, is absent. The others discuss why he is away, how he might react to the fixed wake word, take over his name-list task and agree what the project manager will email him. He never speaks."
+    },
+    {
+      "scenario_id": "F1_INTERLEAVED_TOPICS",
+      "segments": [
+        "SY0101b.s0031",
+        "SY0101b.s0032",
+        "SY0101b.s0033",
+        "SY0101b.s0034",
+        "SY0101b.s0035",
+        "SY0101b.s0036",
+        "SY0101b.s0037",
+        "SY0101b.s0038",
+        "SY0101b.s0039",
+        "SY0101b.s0040",
+        "SY0101b.s0041",
+        "SY0101b.s0042",
+        "SY0101b.s0043",
+        "SY0101b.s0044",
+        "SY0101b.s0045",
+        "SY0101b.s0046",
+        "SY0101b.s0052",
+        "SY0101b.s0053",
+        "SY0101b.s0054",
+        "SY0101b.s0055",
+        "SY0101b.s0056",
+        "SY0101b.s0057",
+        "SY0101b.s0058",
+        "SY0101b.s0059",
+        "SY0101b.s0060",
+        "SY0101b.s0061",
+        "SY0101b.s0062",
+        "SY0101b.s0063",
+        "SY0101b.s0064",
+        "SY0101b.s0065",
+        "SY0101b.s0066",
+        "SY0101b.s0067",
+        "SY0101b.s0068",
+        "SY0101b.s0069",
+        "SY0101b.s0070",
+        "SY0101b.s0071",
+        "SY0101b.s0072",
+        "SY0101b.s0073",
+        "SY0101b.s0074",
+        "SY0101b.s0075"
+      ],
+      "note": "The discussion switches between the voice chip, wake word and vocabulary (31-37, 44-55, 64-71) and the spoken alarm and speaker (38-43, 56-63, 72-75)."
+    }
+  ],
+  "provenance": {
+    "generator": "liveminutes-synthetic",
+    "cache_key": "de9147078dcca26f69644cf77e2fd1dcc705dc620766b38ff336787bdbb52d4d",
+    "attempt": 0,
+    "model": "claude-opus-5-5",
+    "prompt_version": "v1",
+    "scenario_spec_version": 1,
+    "feature": "F1",
+    "product": "a voice-controlled kitchen timer",
+    "planned_scenarios": [
+      "F1_ABSENT_DISCUSSED",
+      "F1_INTERLEAVED_TOPICS"
+    ]
+  }
+}

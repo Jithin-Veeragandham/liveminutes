@@ -1,0 +1,1315 @@
+{
+  "meeting_id": "SY0208b",
+  "raw_sha256": "41968e27f853f7b96dbc1888f0c56cb9a5b99e1be2fb6bec6b69fac508ad6aef",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager welcomed back the industrial designer, recapped the kickoff decisions and confirmed that he had received her email about his tasks.",
+        "The marketing expert reported that existing self-checkout kiosks cost between 9,000 and 20,000 euros per unit, and that users most often complain about missed items in stacks, confusing error messages and security tags that are not deactivated. She also reported that users want a running list of their borrowed items on screen.",
+        "The industrial designer presented component costs: about 600 euros for an RFID pad, 150 euros for a barcode scanner, 700 for the touchscreen, 500 for the PC, 800 for the casing and 200 for a thermal printer, about 2,950 euros in total. The team agreed to support both RFID and barcodes and to keep the printer.",
+        "The user interface designer reported about 1,200 checkouts a day at the main branch, with peaks on Saturday mornings and weekdays from three to six. He set a target of under one minute per borrow and presented a flow that starts with a borrow/return screen with language names.",
+        "Voice instructions were proposed and parked, and the question of connecting to the library catalogue system was raised but not assigned to anyone."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will look into how the kiosk deactivates security tags for RFID and barcode items. The marketing expert offered first, but he took it because it is tied to the reader.",
+        "The industrial designer will firm up the component costing and start on the casing.",
+        "The user interface designer will turn the user flow into rough screen sketches for borrowing and returns.",
+        "The marketing expert will research accessibility guidelines, such as screen height for wheelchair users and children.",
+        "The project manager will send the minutes out tonight.",
+        "Checking which catalogue systems libraries run and whether there is a standard connection was raised, but nobody took it."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The kiosk will read both RFID tags and barcodes.",
+        "A small thermal receipt printer will be included instead of email-only receipts.",
+        "The start screen will have two large buttons, borrow and return, with language names along the bottom."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "Integration with the libraries' catalogue systems is unresolved and has no owner.",
+        "Casing costs could rise and eat into the roughly 550 euro margin under the 3,500 euro target.",
+        "Security tag deactivation must be solved to avoid gate alarms, a common complaint about existing kiosks.",
+        "Borrowing must be fast, under a minute, to handle after-school and Saturday peaks.",
+        "Voice instructions were parked over noise concerns in a quiet library."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0208b.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0208b.ai1",
+        "description": "Look into security tag deactivation for RFID and barcode items so gate alarms are not triggered",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0208b.s0031",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0208b.s0034",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0208b.s0036",
+            "event": "accepted",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0208b.s0111",
+            "event": "restated",
+            "by": "A",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0208b.s0027",
+          "SY0208b.s0031",
+          "SY0208b.s0032",
+          "SY0208b.s0033",
+          "SY0208b.s0034",
+          "SY0208b.s0035",
+          "SY0208b.s0036",
+          "SY0208b.s0111",
+          "SY0208b.s0112"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0208b.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0208b.ai2",
+        "description": "Check which catalogue systems the libraries run and whether there is a standard connection for the kiosk to record loans",
+        "owner": null,
+        "owner_unclear": true,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0208b.s0104",
+            "event": "proposed",
+            "by": "B",
+            "owner": null
+          }
+        ],
+        "evidence_segments": [
+          "SY0208b.s0103",
+          "SY0208b.s0104",
+          "SY0208b.s0105",
+          "SY0208b.s0106",
+          "SY0208b.s0107"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0208b.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0208b.ai3",
+        "description": "Firm up the component costing and start on the casing design",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0208b.s0109",
+            "event": "assigned",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0208b.s0110",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0208b.s0109",
+          "SY0208b.s0110"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0208b.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0208b.ai4",
+        "description": "Turn the user flow into rough screen sketches for borrowing and returns",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0208b.s0113",
+            "event": "assigned",
+            "by": "A",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0208b.s0114",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0208b.s0113",
+          "SY0208b.s0114"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0208b.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0208b.ai5",
+        "description": "Research accessibility guidelines such as screen height for wheelchair users and children",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0208b.s0115",
+            "event": "assigned",
+            "by": "A",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0208b.s0116",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0208b.s0115",
+          "SY0208b.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0208b.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0208b.ai6",
+        "description": "Send the meeting minutes out tonight",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0208b.s0117",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0208b.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f1",
+        "type": "decision",
+        "fact": "The kiosk will read both RFID tags and barcodes.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208b.s0060",
+          "SY0208b.s0061",
+          "SY0208b.s0062",
+          "SY0208b.s0063"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f2",
+        "type": "decision",
+        "fact": "A small thermal receipt printer will be included in the kiosk.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208b.s0071",
+          "SY0208b.s0072",
+          "SY0208b.s0073",
+          "SY0208b.s0074",
+          "SY0208b.s0075"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f3",
+        "type": "decision",
+        "fact": "The start screen will have two big buttons, borrow and return, with language names along the bottom.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208b.s0085",
+          "SY0208b.s0091",
+          "SY0208b.s0092",
+          "SY0208b.s0093",
+          "SY0208b.s0094"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f4",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested emailing receipts instead of printing them; the team kept the printer because not all borrowers, especially children, have email.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208b.s0067",
+          "SY0208b.s0068",
+          "SY0208b.s0069",
+          "SY0208b.s0070"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f5",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer suggested voice instructions that read the steps out loud; it was parked over noise concerns in the library.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208b.s0095",
+          "SY0208b.s0096",
+          "SY0208b.s0097",
+          "SY0208b.s0098"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f6",
+        "type": "action_item",
+        "fact": "The industrial designer will look into security tag deactivation; the marketing expert offered first, but he took it because it is tied to the reader.",
+        "agreed": null,
+        "related_action_item": "SY0208b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208b.s0031",
+          "SY0208b.s0034",
+          "SY0208b.s0035",
+          "SY0208b.s0036"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f7",
+        "type": "action_item",
+        "fact": "Checking the library catalogue system connection was raised as something someone should do, but nobody took it.",
+        "agreed": null,
+        "related_action_item": "SY0208b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208b.s0103",
+          "SY0208b.s0104",
+          "SY0208b.s0107"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f8",
+        "type": "action_item",
+        "fact": "The industrial designer will firm up the costing and start on the casing.",
+        "agreed": null,
+        "related_action_item": "SY0208b.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208b.s0109",
+          "SY0208b.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f9",
+        "type": "action_item",
+        "fact": "The user interface designer will make rough screen sketches for borrowing and returns.",
+        "agreed": null,
+        "related_action_item": "SY0208b.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208b.s0113",
+          "SY0208b.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f10",
+        "type": "action_item",
+        "fact": "The marketing expert will research accessibility guidelines for screen height for wheelchair users and children.",
+        "agreed": null,
+        "related_action_item": "SY0208b.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208b.s0115",
+          "SY0208b.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f11",
+        "type": "action_item",
+        "fact": "The project manager will send the minutes out tonight.",
+        "agreed": null,
+        "related_action_item": "SY0208b.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208b.s0117"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f12",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recapped the kickoff decisions: one unit for borrowing and returns, and language selection by language name instead of flags.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0208a",
+        "evidence_segments": [
+          "SY0208b.s0006",
+          "SY0208b.s0008",
+          "SY0208b.s0009",
+          "SY0208b.s0010"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f13",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer, absent from the kickoff through illness, returned and confirmed he received the project manager's email about his tasks.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0208a",
+        "evidence_segments": [
+          "SY0208b.s0003",
+          "SY0208b.s0004",
+          "SY0208b.s0012",
+          "SY0208b.s0013"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f14",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer recalled that he had suggested supporting both RFID and barcodes at the kickoff, and the industrial designer agreed he was right.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0208a",
+        "evidence_segments": [
+          "SY0208b.s0048",
+          "SY0208b.s0049"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f15",
+        "type": "reference_to_prior_meeting",
+        "fact": "Face recognition sign-in from the kickoff remains parked.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0208a",
+        "evidence_segments": [
+          "SY0208b.s0100",
+          "SY0208b.s0101"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f16",
+        "type": "other",
+        "fact": "The industrial designer first said an RFID pad costs about 900 euros, then corrected this to about 600 euros for the pad alone; a barcode scanner costs about 150 euros.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208b.s0050",
+          "SY0208b.s0051",
+          "SY0208b.s0052",
+          "SY0208b.s0053",
+          "SY0208b.s0054"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f17",
+        "type": "other",
+        "fact": "The estimated total component cost is about 2,950 euros, leaving about 550 euros of margin under the 3,500 euro target.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208b.s0055",
+          "SY0208b.s0057",
+          "SY0208b.s0058",
+          "SY0208b.s0059"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f18",
+        "type": "other",
+        "fact": "Existing self-checkout kiosks cost between 9,000 and 20,000 euros per unit.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208b.s0019",
+          "SY0208b.s0021"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f19",
+        "type": "other",
+        "fact": "The common complaints about existing kiosks are missed items in stacks, confusing error messages and security tags that are not deactivated.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208b.s0024",
+          "SY0208b.s0025",
+          "SY0208b.s0026",
+          "SY0208b.s0027"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f20",
+        "type": "other",
+        "fact": "The main branch has about 1,200 checkouts per day, with peaks on Saturday mornings and weekdays from about three to six.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208b.s0077",
+          "SY0208b.s0078",
+          "SY0208b.s0079"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f21",
+        "type": "other",
+        "fact": "The user interface designer set a target of under one minute per borrow.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208b.s0082",
+          "SY0208b.s0083"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208b.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208b.f22",
+        "type": "other",
+        "fact": "In the proposed flow, returns do not require a library card.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208b.s0087",
+          "SY0208b.s0088",
+          "SY0208b.s0089"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_OFFERED_TAKEN_BY_OTHER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_OFFERED_TAKEN_BY_OTHER",
+        "segments": [
+          "SY0208b.s0031",
+          "SY0208b.s0032",
+          "SY0208b.s0033",
+          "SY0208b.s0034",
+          "SY0208b.s0035",
+          "SY0208b.s0036",
+          "SY0208b.s0111",
+          "SY0208b.s0112"
+        ],
+        "note": "The marketing expert offers to research security tag deactivation, but the industrial designer takes it because it is tied to the reader, and the project manager confirms him as owner."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_VAGUE_NO_OWNER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_VAGUE_NO_OWNER",
+        "segments": [
+          "SY0208b.s0103",
+          "SY0208b.s0104",
+          "SY0208b.s0105",
+          "SY0208b.s0106",
+          "SY0208b.s0107"
+        ],
+        "note": "The industrial designer says someone should check the library catalogue system connection; the project manager moves on and nobody takes it."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,1188 @@
+{
+  "meeting_id": "SY0302d",
+  "raw_sha256": "a9844e36842457622bfc01c9892211eeccd79a296c33fd19fef65d123d89faf4",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting, noted that the industrial designer was absent because he was at the casing supplier for the seal test, and welcomed back the user interface designer after her illness. She recapped the decisions from the conceptual design meeting and presented the industrial designer's foam model and his cost sheet, which still totals 12.20 Euro. The user interface designer presented the updated interaction flow with commands starting with 'Tico', spoken confirmations, a fallback name for unlisted timers and a three-row display, and confirmed that everything fits in about 170 of the 200 words. The marketing expert presented four evaluation criteria scored on a seven-point scale, and the team rated the design 2 for voice reliability, 1 for the button, 2 for looks and 3 for price. The team chose a white body with an orange stop button. The project manager assigned the absent industrial designer the task of confirming the two-colour casing cost, and cancelled a handling test the marketing expert had offered, because the design must be signed off at this meeting."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer (absent) will get the casing supplier to confirm the two-colour casing (white body, orange button) and send the final cost, to confirm it stays under 12.50 Euro. This was assigned by the project manager.",
+        "The project manager will email the industrial designer his task tonight.",
+        "The user interface designer will make a quick-start card for the box listing the main commands.",
+        "The project manager will write up the final report and minutes."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The timer will have a white body with an orange stop button.",
+        "The interaction flow is accepted as presented: commands start with 'Tico', the timer repeats the timer name and time as confirmation, and the display shows three rows (name and countdown) with the ringing timer flashing.",
+        "Timers with names not on the vocabulary list will fall back to 'timer one', 'timer two' and so on.",
+        "The final design was evaluated on four criteria (scale 1 to 7, 1 best): voice reliability 2, button ease of use 1, looks 2, price 3."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The production cost of 12.20 Euro leaves only 30 cents of margin, and the orange button may add a few cents. The exact amount is not yet confirmed by the supplier.",
+        "The result of the seal test at the casing supplier was not yet available."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0302d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0302d.ai1",
+        "description": "Take the foam model to some of the research participants for a quick button handling test",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "dropped",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0302d.s0064",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0302d.s0067",
+            "event": "accepted",
+            "by": "B",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0302d.s0110",
+            "event": "dropped",
+            "by": "B",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0302d.s0064",
+          "SY0302d.s0065",
+          "SY0302d.s0066",
+          "SY0302d.s0067",
+          "SY0302d.s0108",
+          "SY0302d.s0109",
+          "SY0302d.s0110",
+          "SY0302d.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0302d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0302d.ai2",
+        "description": "Get the casing supplier to confirm the two-colour casing (white body, orange stop button) and send the final cost to confirm it stays under 12.50 Euro",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0302d.s0102",
+            "event": "assigned",
+            "by": "B",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0302d.s0031",
+          "SY0302d.s0033",
+          "SY0302d.s0101",
+          "SY0302d.s0102",
+          "SY0302d.s0104",
+          "SY0302d.s0119"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0302d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0302d.ai3",
+        "description": "Email Tomas (industrial designer) his assigned task, since he was absent",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0302d.s0104",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0302d.s0104"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0302d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0302d.ai4",
+        "description": "Make a quick-start card for the box listing the main voice commands",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0302d.s0114",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0302d.s0116",
+            "event": "accepted",
+            "by": "B",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0302d.s0114",
+          "SY0302d.s0115",
+          "SY0302d.s0116",
+          "SY0302d.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0302d.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0302d.ai5",
+        "description": "Write up the final report and minutes",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0302d.s0118",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0302d.s0118"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f1",
+        "type": "absence",
+        "fact": "Tomas (A), the industrial designer, was absent from the detailed design meeting because he was at the casing supplier for the seal test on the sample.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302d.s0004"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f2",
+        "type": "action_item",
+        "fact": "While Tomas (A) was absent, he was given the task of getting the casing supplier to confirm the two-colour casing and sending the final cost to show it stays under 12.50 Euro.",
+        "agreed": null,
+        "related_action_item": "SY0302d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302d.s0101",
+          "SY0302d.s0102"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f3",
+        "type": "other",
+        "fact": "The project manager (Rachel, B) assigned the casing cost task to the absent industrial designer and said she would email it to him tonight.",
+        "agreed": null,
+        "related_action_item": "SY0302d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302d.s0102",
+          "SY0302d.s0104"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f4",
+        "type": "action_item",
+        "fact": "The project manager will email Tomas his assigned task because he was not at the meeting.",
+        "agreed": null,
+        "related_action_item": "SY0302d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302d.s0104"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f5",
+        "type": "action_item",
+        "fact": "The marketing expert offered to take the foam model to some of his research participants for a quick button handling test, and the project manager accepted.",
+        "agreed": null,
+        "related_action_item": "SY0302d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302d.s0064",
+          "SY0302d.s0065",
+          "SY0302d.s0066",
+          "SY0302d.s0067"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f6",
+        "type": "action_item_removed",
+        "fact": "The project manager cancelled the marketing expert's handling test, because the brief requires the design to be signed off at the end of this meeting.",
+        "agreed": null,
+        "related_action_item": "SY0302d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302d.s0108",
+          "SY0302d.s0109",
+          "SY0302d.s0110",
+          "SY0302d.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f7",
+        "type": "decision",
+        "fact": "The timer will have a white body with an orange stop button.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302d.s0083",
+          "SY0302d.s0084",
+          "SY0302d.s0085",
+          "SY0302d.s0086",
+          "SY0302d.s0087",
+          "SY0302d.s0088",
+          "SY0302d.s0089"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f8",
+        "type": "plan_change",
+        "fact": "The marketing expert gave up his earlier position that the whole timer be bright orange and accepted a white body with an orange stop button.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0302c",
+        "evidence_segments": [
+          "SY0302d.s0017",
+          "SY0302d.s0085",
+          "SY0302d.s0087"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f9",
+        "type": "decision",
+        "fact": "The interaction flow was accepted: commands start with 'Tico', the timer repeats the name and time as confirmation, and the display shows three rows with the ringing timer flashing.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302d.s0036",
+          "SY0302d.s0037",
+          "SY0302d.s0039",
+          "SY0302d.s0048",
+          "SY0302d.s0049",
+          "SY0302d.s0050",
+          "SY0302d.s0119"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f10",
+        "type": "decision",
+        "fact": "Timers with names not on the vocabulary list will fall back to 'timer one', 'timer two' and so on.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302d.s0045",
+          "SY0302d.s0046",
+          "SY0302d.s0047"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f11",
+        "type": "other",
+        "fact": "The full vocabulary (numbers up to sixty, about twenty timer names and the commands) comes to about 170 words, which fits within the 200-word chip.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302d.s0040",
+          "SY0302d.s0041",
+          "SY0302d.s0042",
+          "SY0302d.s0044"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f12",
+        "type": "other",
+        "fact": "The industrial designer's cost sheet still gives a total of 12.20 Euro. A separate button colour might add a few cents.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302d.s0008",
+          "SY0302d.s0029",
+          "SY0302d.s0031",
+          "SY0302d.s0033"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f13",
+        "type": "other",
+        "fact": "The foam model is about the size of a flattened large egg, with the stop button on top and the display on the front tilted upwards.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302d.s0006",
+          "SY0302d.s0022",
+          "SY0302d.s0025",
+          "SY0302d.s0027"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f14",
+        "type": "decision",
+        "fact": "The design was evaluated on four criteria using a 1 to 7 scale (1 best): voice reliability 2, button ease of use 1, looks 2, price 3.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302d.s0058",
+          "SY0302d.s0059",
+          "SY0302d.s0061",
+          "SY0302d.s0074",
+          "SY0302d.s0075",
+          "SY0302d.s0076",
+          "SY0302d.s0078",
+          "SY0302d.s0079",
+          "SY0302d.s0080",
+          "SY0302d.s0091",
+          "SY0302d.s0092",
+          "SY0302d.s0093",
+          "SY0302d.s0096",
+          "SY0302d.s0097",
+          "SY0302d.s0098",
+          "SY0302d.s0099"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f15",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert proposed a magnet on the back so the timer could stick to the fridge. The user interface designer doubted it, and the project manager declined to add it.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302d.s0069",
+          "SY0302d.s0070",
+          "SY0302d.s0071",
+          "SY0302d.s0105",
+          "SY0302d.s0106"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f16",
+        "type": "action_item",
+        "fact": "The user interface designer will make a quick-start card listing the main commands for the box.",
+        "agreed": null,
+        "related_action_item": "SY0302d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302d.s0114",
+          "SY0302d.s0115",
+          "SY0302d.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f17",
+        "type": "action_item",
+        "fact": "The project manager will write up the final report and minutes.",
+        "agreed": null,
+        "related_action_item": "SY0302d.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302d.s0118"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f18",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recapped the conceptual design meeting's decisions: the 200-word chip, a splash-proof casing with a rubber seal, two microphones, two AA batteries and the wake word 'Tico'.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0302c",
+        "evidence_segments": [
+          "SY0302d.s0014",
+          "SY0302d.s0016"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f19",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer thanked the project manager for emailing her the task she was assigned while she was off sick at the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0302c",
+        "evidence_segments": [
+          "SY0302d.s0010",
+          "SY0302d.s0011",
+          "SY0302d.s0012"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302d.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302d.f20",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer said that the stop button stops anything ringing, as decided in the functional design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0302b",
+        "evidence_segments": [
+          "SY0302d.s0051"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_ACTION_REMOVED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_ACTION_REMOVED",
+        "segments": [
+          "SY0302d.s0064",
+          "SY0302d.s0065",
+          "SY0302d.s0066",
+          "SY0302d.s0067",
+          "SY0302d.s0108",
+          "SY0302d.s0109",
+          "SY0302d.s0110",
+          "SY0302d.s0111"
+        ],
+        "note": "The marketing expert offers a foam-model handling test and the project manager accepts it. Later the project manager cancels it because the brief requires sign-off at this meeting."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_TASK_TO_ABSENT",
+        "segments": [
+          "SY0302d.s0004",
+          "SY0302d.s0101",
+          "SY0302d.s0102",
+          "SY0302d.s0104"
+        ],
+        "note": "The industrial designer is absent at the casing supplier. The project manager assigns him the two-colour casing cost confirmation and says she will email it to him."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

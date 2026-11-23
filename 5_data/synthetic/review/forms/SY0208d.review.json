@@ -1,0 +1,1378 @@
+{
+  "meeting_id": "SY0208d",
+  "raw_sha256": "57045f33244958408c8196041c0f81793f13560d36a65160fe55eadc69e8ec92",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting with all four members present, confirmed that the user interface designer had received her email and redone his sketches for landscape, and recapped the conceptual design decisions.",
+        "The industrial designer presented a to-scale foam mock-up. It has a screen tilted about twenty degrees at ninety centimetres, a combined RFID and desensitiser shelf, the barcode scanner and printer slot on the right, and about seventy centimetres of knee space. The mock-up showed that the PC box needs a ventilation fan, which raises the cost to about 3,390 euros, 110 euros under target.",
+        "He reported that two of three libraries support SIP2 and the third uses a newer web API, so the team adopted SIP2 as the standard. The marketing expert reported that two libraries want the swappable front panel (dark blue and green) as an option, so the team made it an optional add-on.",
+        "The user interface designer presented the landscape flow with a running item list, a count-check screen with a one-at-a-time fallback, and plain-language error messages. His headphone-jack idea for audio instructions was left out, and he took over a user test with older borrowers that the marketing expert had offered to run.",
+        "Running costs such as paper rolls and servicing were raised, but nobody took the task. The team evaluated the design as fast, accessible and under budget, though with a tight margin."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will email the catalogue system vendor of the third library about whether a SIP2 bridge exists.",
+        "The user interface designer will run a user test with older borrowers and time it against the one-minute target. The marketing expert offered first, but he took it because the screens are his.",
+        "The marketing expert will give the user interface designer a contact at the central library for the test.",
+        "The marketing expert will prepare the pitch for the library authorities, including the panel colours.",
+        "The industrial designer will bring the foam mock-up to the pitch.",
+        "The project manager will write the final report and send the minutes tonight.",
+        "Checking the running costs (paper rolls, servicing) was raised, but nobody took it."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "A small ventilation fan (about 40 euros) will be added for the PC, bringing the unit cost to about 3,390 euros.",
+        "SIP2 will be the standard connection to library catalogue systems.",
+        "The grey body is standard, and the colour front panel will be an optional add-on.",
+        "Audio instructions via a headphone jack will be left out of this version.",
+        "The team evaluated the kiosk as meeting the speed, accessibility and budget criteria."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "One of the three libraries uses a newer system with a web API instead of SIP2, so a bridge or second connector may be needed.",
+        "The cost margin is only about 110 euros under the 3,500 euro target.",
+        "Running costs such as paper rolls and servicing have not been estimated, and nobody owns this task."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0208d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0208d.ai1",
+        "description": "Email the third library's catalogue system vendor about whether a SIP2 bridge exists",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0208d.s0045",
+            "event": "assigned",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0208d.s0046",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0208d.s0108",
+            "event": "restated",
+            "by": "A",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0208d.s0039",
+          "SY0208d.s0041",
+          "SY0208d.s0045",
+          "SY0208d.s0046",
+          "SY0208d.s0108",
+          "SY0208d.s0109"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0208d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0208d.ai2",
+        "description": "Run a user test of the screens with older borrowers and time borrowing against the one-minute target",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0208d.s0081",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0208d.s0082",
+            "event": "proposed",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0208d.s0084",
+            "event": "assigned",
+            "by": "A",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0208d.s0086",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0208d.s0110",
+            "event": "restated",
+            "by": "A",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0208d.s0081",
+          "SY0208d.s0082",
+          "SY0208d.s0083",
+          "SY0208d.s0084",
+          "SY0208d.s0085",
+          "SY0208d.s0086",
+          "SY0208d.s0110",
+          "SY0208d.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0208d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0208d.ai3",
+        "description": "Give the user interface designer a contact at the central library for the user test",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0208d.s0087",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0208d.s0088",
+            "event": "accepted",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0208d.s0087",
+          "SY0208d.s0088"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0208d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0208d.ai4",
+        "description": "Look at the kiosk's running costs, such as paper rolls and servicing",
+        "owner": null,
+        "owner_unclear": true,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0208d.s0092",
+            "event": "proposed",
+            "by": "C",
+            "owner": null
+          }
+        ],
+        "evidence_segments": [
+          "SY0208d.s0090",
+          "SY0208d.s0091",
+          "SY0208d.s0092",
+          "SY0208d.s0093",
+          "SY0208d.s0094",
+          "SY0208d.s0095"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0208d.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0208d.ai5",
+        "description": "Prepare the pitch for the library authorities, including the panel colours",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0208d.s0112",
+            "event": "assigned",
+            "by": "A",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0208d.s0113",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0208d.s0112",
+          "SY0208d.s0113"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0208d.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0208d.ai6",
+        "description": "Write the final report and send the minutes tonight",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0208d.s0114",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0208d.s0114"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0208d.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0208d.ai7",
+        "description": "Bring the foam mock-up to the pitch",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0208d.s0117",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0208d.s0118",
+            "event": "accepted",
+            "by": "C",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0208d.s0117",
+          "SY0208d.s0118"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f1",
+        "type": "other",
+        "fact": "All four team members were present at the detailed design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208d.s0001",
+          "SY0208d.s0003",
+          "SY0208d.s0004"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer confirmed that he received the project manager's email about his sketches and had redone them for the landscape screen.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0208c",
+        "evidence_segments": [
+          "SY0208d.s0005",
+          "SY0208d.s0006"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recapped the earlier decisions: a fixed screen at about 90 cm with knee space, and a grey body with a swappable front panel.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0208c",
+        "evidence_segments": [
+          "SY0208d.s0011"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f4",
+        "type": "other",
+        "fact": "The industrial designer presented a to-scale foam mock-up. Its screen is tilted about 20 degrees at 90 cm, the RFID pad and desensitiser plate share one shelf, and it has about 70 cm of knee space.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208d.s0015",
+          "SY0208d.s0017",
+          "SY0208d.s0018",
+          "SY0208d.s0020",
+          "SY0208d.s0023"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f5",
+        "type": "decision",
+        "fact": "A ventilation fan costing about 40 euros will be added for the PC, raising the unit cost to about 3,390 euros, 110 euros under target.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208d.s0025",
+          "SY0208d.s0026",
+          "SY0208d.s0028",
+          "SY0208d.s0029",
+          "SY0208d.s0035"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f6",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested passive vents instead of a fan; this was rejected because the PC runs all day.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208d.s0032",
+          "SY0208d.s0033",
+          "SY0208d.s0034"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f7",
+        "type": "other",
+        "fact": "Two of the three libraries checked support SIP2, and the third uses a newer system with a web API.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208d.s0037",
+          "SY0208d.s0038",
+          "SY0208d.s0039"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f8",
+        "type": "decision",
+        "fact": "SIP2 will be the standard catalogue connection.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208d.s0042",
+          "SY0208d.s0043",
+          "SY0208d.s0044"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f9",
+        "type": "action_item",
+        "fact": "The industrial designer will email the third library's vendor about a SIP2 bridge.",
+        "agreed": null,
+        "related_action_item": "SY0208d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208d.s0045",
+          "SY0208d.s0046",
+          "SY0208d.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f10",
+        "type": "other",
+        "fact": "Two libraries liked the swappable panel: the central library wants dark blue and the other wants green.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208d.s0049",
+          "SY0208d.s0050",
+          "SY0208d.s0051"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f11",
+        "type": "decision",
+        "fact": "The grey body is standard, and the colour front panel is an optional add-on.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208d.s0052",
+          "SY0208d.s0053",
+          "SY0208d.s0055",
+          "SY0208d.s0056",
+          "SY0208d.s0057"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f12",
+        "type": "other",
+        "fact": "The interface includes a running item list, a count-check screen with a one-at-a-time fallback, and plain-language error messages with pictures.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208d.s0062",
+          "SY0208d.s0064",
+          "SY0208d.s0065",
+          "SY0208d.s0067",
+          "SY0208d.s0071"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f13",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer brought back the voice instructions idea from the functional design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0208b",
+        "evidence_segments": [
+          "SY0208d.s0073"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f14",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer proposed a headphone jack for audio instructions; it was left out of this version.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208d.s0074",
+          "SY0208d.s0075",
+          "SY0208d.s0076",
+          "SY0208d.s0077",
+          "SY0208d.s0078",
+          "SY0208d.s0079"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f15",
+        "type": "action_item",
+        "fact": "The user interface designer will run a user test with older borrowers. The marketing expert offered to do it, but he took it.",
+        "agreed": null,
+        "related_action_item": "SY0208d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208d.s0081",
+          "SY0208d.s0082",
+          "SY0208d.s0084",
+          "SY0208d.s0086"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f16",
+        "type": "action_item",
+        "fact": "The marketing expert will give the user interface designer a contact at the central library.",
+        "agreed": null,
+        "related_action_item": "SY0208d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208d.s0087",
+          "SY0208d.s0088"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f17",
+        "type": "action_item",
+        "fact": "Someone should check the running costs (paper rolls, servicing), but nobody took it.",
+        "agreed": null,
+        "related_action_item": "SY0208d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208d.s0090",
+          "SY0208d.s0091",
+          "SY0208d.s0092",
+          "SY0208d.s0095"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f18",
+        "type": "decision",
+        "fact": "The team evaluated the kiosk as fast, accessible and under budget, with a tight margin.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208d.s0097",
+          "SY0208d.s0098",
+          "SY0208d.s0100",
+          "SY0208d.s0103",
+          "SY0208d.s0104"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f19",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert compared the kiosk with existing kiosks costing 9,000 to 20,000 euros.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0208b",
+        "evidence_segments": [
+          "SY0208d.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f20",
+        "type": "action_item",
+        "fact": "The marketing expert will prepare the pitch for library authorities, including panel colours.",
+        "agreed": null,
+        "related_action_item": "SY0208d.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208d.s0112",
+          "SY0208d.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f21",
+        "type": "action_item",
+        "fact": "The project manager will write the final report and send the minutes tonight.",
+        "agreed": null,
+        "related_action_item": "SY0208d.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208d.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208d.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208d.f22",
+        "type": "action_item",
+        "fact": "The industrial designer will bring the foam mock-up to the pitch.",
+        "agreed": null,
+        "related_action_item": "SY0208d.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208d.s0117",
+          "SY0208d.s0118"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_OFFERED_TAKEN_BY_OTHER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_OFFERED_TAKEN_BY_OTHER",
+        "segments": [
+          "SY0208d.s0081",
+          "SY0208d.s0082",
+          "SY0208d.s0083",
+          "SY0208d.s0084",
+          "SY0208d.s0085",
+          "SY0208d.s0086"
+        ],
+        "note": "The marketing expert offers to run the older-borrower user test, but the user interface designer takes it as his own and the PM gives it to him."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_VAGUE_NO_OWNER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_VAGUE_NO_OWNER",
+        "segments": [
+          "SY0208d.s0090",
+          "SY0208d.s0091",
+          "SY0208d.s0092",
+          "SY0208d.s0093",
+          "SY0208d.s0094",
+          "SY0208d.s0095"
+        ],
+        "note": "The marketing expert says someone should probably look at running costs, nobody takes it, and the PM moves on."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

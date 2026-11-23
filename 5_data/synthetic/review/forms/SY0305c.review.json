@@ -1,0 +1,1354 @@
+{
+  "meeting_id": "SY0305c",
+  "raw_sha256": "9a7df8a63a7f76c071fdef869e641fafd004f58d87e21dc8f53672368311d27b",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the conceptual design meeting with all four members present and confirmed that the marketing expert had received her email about his research task and the minutes.",
+        "The industrial designer reported that the firm supplier quotes came to about 1,240 euros, up from the earlier estimate of 1,185 euros but still about 160 euros under the 1,400 euro limit, with the printed front panel at about 45 euros.",
+        "The marketing expert reported that roughly a third of medium-sized libraries still use barcodes and that nearly all require a PIN, which confirmed the barcode scanner and keypad; he also relayed that returns cause the biggest desk queues at Wilson Street.",
+        "The user interface designer presented the borrow and return mockups with a three-button start screen, a large text mode, and an account screen that shows fines but directs users to pay at the desk. He also declared a built-in return slot with a drop bin, but this was not agreed and was set aside.",
+        "The team chose a powder-coated steel body in warm white, carrying the branding on the printed front panel, with mains power, a standard PC board and a screen at about 100 cm tilted back. The project manager then assigned tasks for the detailed design meeting."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will build the prototype model of the kiosk.",
+        "The user interface designer will give the industrial designer the screen layout for the prototype and will finish the screens in the branded version, including the large text mode.",
+        "The marketing expert will prepare evaluation criteria for the detailed design meeting.",
+        "The marketing expert will check with the Wilson Street branch what they would want on a front panel.",
+        "The industrial designer will update the cost sheet with the steel body and warm white finish.",
+        "The project manager will send round the minutes."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The barcode scanner and PIN keypad stay in the design, because about a third of libraries still use barcodes and nearly all require PINs.",
+        "The kiosk body will be powder-coated sheet steel with the removable printed front panel carrying the branding and colour.",
+        "The body colour will be warm white.",
+        "The kiosk will run on mains power with a standard small PC board.",
+        "The screen will be at about 100 cm, tilted back, so it is usable standing and from a wheelchair.",
+        "As a provisional layout to be checked on the prototype, the RFID pad will sit on a shelf to the right of the screen, with the scanner and keypad on the left.",
+        "The screen colours will follow the library's branding but will always be high contrast, with dark text on light."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "How returned books are handled is still unresolved. The proposal for a built-in return slot and drop bin was not agreed, since it would double the kiosk size, the bin needs emptying and capacity is unknown.",
+        "The cost margin is only about 160 euros under the 1,400 euro limit.",
+        "The left and right placement of the keypad, scanner and RFID pad still needs checking on the prototype.",
+        "Children under about eight may not reach the screen comfortably and will need a parent's help.",
+        "Barcode-only libraries will still have to scan books one at a time."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0305c.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0305c.ai1",
+        "description": "Get a quote for a curved moulded plastic shell from the second supplier to compare with the steel body",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "dropped",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0305c.s0029",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0305c.s0030",
+            "event": "accepted",
+            "by": "C",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0305c.s0083",
+            "event": "dropped",
+            "by": "C",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0305c.s0029",
+          "SY0305c.s0030",
+          "SY0305c.s0031",
+          "SY0305c.s0081",
+          "SY0305c.s0082",
+          "SY0305c.s0083"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0305c.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0305c.ai2",
+        "description": "Build the prototype model of the kiosk for the detailed design meeting",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0305c.s0110",
+            "event": "assigned",
+            "by": "C",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0305c.s0111",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0305c.s0110",
+          "SY0305c.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0305c.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0305c.ai3",
+        "description": "Provide the screen layout for the prototype and finish the screens in the branded version, including large text mode",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0305c.s0110",
+            "event": "assigned",
+            "by": "C",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0305c.s0112",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0305c.s0113",
+            "event": "restated",
+            "by": "C",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0305c.s0114",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0305c.s0110",
+          "SY0305c.s0112",
+          "SY0305c.s0113",
+          "SY0305c.s0114"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0305c.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0305c.ai4",
+        "description": "Put together evaluation criteria for the detailed design meeting",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0305c.s0115",
+            "event": "assigned",
+            "by": "C",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0305c.s0116",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0305c.s0115",
+          "SY0305c.s0116",
+          "SY0305c.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0305c.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0305c.ai5",
+        "description": "Check with the Wilson Street branch what they would want on a front panel",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0305c.s0116",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0305c.s0117",
+            "event": "accepted",
+            "by": "C",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0305c.s0116",
+          "SY0305c.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0305c.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0305c.ai6",
+        "description": "Update the cost sheet with the steel body and warm white finish",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0305c.s0118",
+            "event": "assigned",
+            "by": "C",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0305c.s0119",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0305c.s0118",
+          "SY0305c.s0119"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0305c.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0305c.ai7",
+        "description": "Send round the meeting minutes",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0305c.s0120",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0305c.s0120"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f1",
+        "type": "decision",
+        "fact": "The barcode scanner and PIN keypad stay in the design, based on the marketing expert's research that about a third of libraries use barcodes and nearly all require PINs.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305c.s0034",
+          "SY0305c.s0036",
+          "SY0305c.s0037",
+          "SY0305c.s0038",
+          "SY0305c.s0039"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f2",
+        "type": "decision",
+        "fact": "The kiosk body will be powder-coated sheet steel with the printed front panel carrying the branding.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305c.s0077",
+          "SY0305c.s0078",
+          "SY0305c.s0079",
+          "SY0305c.s0080"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f3",
+        "type": "decision",
+        "fact": "The body colour will be warm white.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305c.s0085",
+          "SY0305c.s0086",
+          "SY0305c.s0087"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f4",
+        "type": "decision",
+        "fact": "The kiosk will use mains power and a standard small PC board.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305c.s0088",
+          "SY0305c.s0089",
+          "SY0305c.s0090",
+          "SY0305c.s0091"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f5",
+        "type": "decision",
+        "fact": "The screen will be at about 100 cm, tilted back, for standing and wheelchair users.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305c.s0092",
+          "SY0305c.s0093",
+          "SY0305c.s0094",
+          "SY0305c.s0095",
+          "SY0305c.s0096",
+          "SY0305c.s0097"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f6",
+        "type": "decision",
+        "fact": "Provisionally, the RFID pad goes on a shelf to the right of the screen, with the scanner and keypad on the left, to be checked on the prototype.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305c.s0098",
+          "SY0305c.s0099",
+          "SY0305c.s0100",
+          "SY0305c.s0101",
+          "SY0305c.s0102"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f7",
+        "type": "decision",
+        "fact": "Screen colours will follow the library branding but always be high contrast, with dark text on light.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305c.s0105",
+          "SY0305c.s0106",
+          "SY0305c.s0107",
+          "SY0305c.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f8",
+        "type": "unagreed_proposal",
+        "fact": "Kofi (D) declared that the kiosk would get a built-in return slot with a drop bin underneath; Priya raised size and emptying concerns, Tomasz asked about capacity, and Helen set it aside without agreement.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305c.s0059",
+          "SY0305c.s0060",
+          "SY0305c.s0061",
+          "SY0305c.s0062",
+          "SY0305c.s0063",
+          "SY0305c.s0064",
+          "SY0305c.s0065",
+          "SY0305c.s0066",
+          "SY0305c.s0067"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f9",
+        "type": "action_item_removed",
+        "fact": "Priya (A) offered to get a quote for a curved moulded plastic shell and Helen (C) accepted, but after the steel body was chosen Helen cancelled the task and Priya agreed.",
+        "agreed": null,
+        "related_action_item": "SY0305c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305c.s0029",
+          "SY0305c.s0030",
+          "SY0305c.s0081",
+          "SY0305c.s0082",
+          "SY0305c.s0083"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f10",
+        "type": "plan_change",
+        "fact": "The component cost changed from the earlier estimate of about 1,185 euros to a firm figure of about 1,240 euros, still about 160 euros under the 1,400 euro limit.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0305b",
+        "evidence_segments": [
+          "SY0305c.s0015",
+          "SY0305c.s0016",
+          "SY0305c.s0017",
+          "SY0305c.s0018",
+          "SY0305c.s0021",
+          "SY0305c.s0022"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f11",
+        "type": "other",
+        "fact": "The printed removable front panel costs about 45 euros per panel according to the printing supplier.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305c.s0019"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f12",
+        "type": "other",
+        "fact": "The Wilson Street staff said returns cause the biggest desk queue in the afternoons.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305c.s0044",
+          "SY0305c.s0045"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f13",
+        "type": "action_item",
+        "fact": "Priya (A) is to build the prototype model of the kiosk.",
+        "agreed": null,
+        "related_action_item": "SY0305c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305c.s0110",
+          "SY0305c.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f14",
+        "type": "action_item",
+        "fact": "Kofi (D) is to provide the screen layout for the prototype and finish the branded screens with large text mode.",
+        "agreed": null,
+        "related_action_item": "SY0305c.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305c.s0110",
+          "SY0305c.s0112",
+          "SY0305c.s0113",
+          "SY0305c.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f15",
+        "type": "action_item",
+        "fact": "Tomasz (B) is to prepare evaluation criteria for the detailed design meeting.",
+        "agreed": null,
+        "related_action_item": "SY0305c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305c.s0115",
+          "SY0305c.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f16",
+        "type": "action_item",
+        "fact": "Tomasz (B) will check with Wilson Street what they would want on a front panel.",
+        "agreed": null,
+        "related_action_item": "SY0305c.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305c.s0116",
+          "SY0305c.s0117"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f17",
+        "type": "action_item",
+        "fact": "Priya (A) is to update the cost sheet with the steel body and warm white finish.",
+        "agreed": null,
+        "related_action_item": "SY0305c.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305c.s0118",
+          "SY0305c.s0119"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f18",
+        "type": "action_item",
+        "fact": "Helen (C) will send round the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0305c.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0305c.s0120"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f19",
+        "type": "reference_to_prior_meeting",
+        "fact": "Tomasz apologised for missing the functional design meeting while at Wilson Street and confirmed he received Helen's email about his task and the minutes.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0305b",
+        "evidence_segments": [
+          "SY0305c.s0007",
+          "SY0305c.s0009",
+          "SY0305c.s0010"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f20",
+        "type": "reference_to_prior_meeting",
+        "fact": "Helen noted that the PIN keypad from the last meeting stays and that no payment on the kiosk was agreed last time.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0305b",
+        "evidence_segments": [
+          "SY0305c.s0039",
+          "SY0305c.s0055",
+          "SY0305c.s0056"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0305c.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0305c.f21",
+        "type": "reference_to_prior_meeting",
+        "fact": "Helen raised kiosk height because accessibility was made a requirement in the first meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0305a",
+        "evidence_segments": [
+          "SY0305c.s0092"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_UNAGREED_DECISION",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_UNAGREED_DECISION",
+        "segments": [
+          "SY0305c.s0059",
+          "SY0305c.s0060",
+          "SY0305c.s0061",
+          "SY0305c.s0062",
+          "SY0305c.s0063",
+          "SY0305c.s0064",
+          "SY0305c.s0065",
+          "SY0305c.s0066",
+          "SY0305c.s0067"
+        ],
+        "note": "Kofi announces a built-in return slot and drop bin as decided; others raise concerns, and Helen sets it aside without anyone agreeing."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_ACTION_REMOVED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_ACTION_REMOVED",
+        "segments": [
+          "SY0305c.s0029",
+          "SY0305c.s0030",
+          "SY0305c.s0031",
+          "SY0305c.s0075",
+          "SY0305c.s0076",
+          "SY0305c.s0077",
+          "SY0305c.s0080",
+          "SY0305c.s0081",
+          "SY0305c.s0082",
+          "SY0305c.s0083"
+        ],
+        "note": "Priya's offer to get a curved plastic shell quote is accepted, then cancelled once the steel body is chosen."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

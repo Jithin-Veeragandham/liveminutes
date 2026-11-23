@@ -1,0 +1,1334 @@
+{
+  "run_id": "20261121T213328Z_llm_synthetic_eval_full_1seeds",
+  "commit": "ab5eaff434c35f2379f65c7cf07d19dcc768dfcc",
+  "uncommitted_changes": [],
+  "dataset": "synthetic",
+  "mode": "full",
+  "data_hash": "f2af2f66b099d7985070904f3ea9fcf1623134d4f41b25a0b6abdd91a01d0eae",
+  "split_file_sha256": "975f4160185cd1360c4cb4546e0fc717a10ccc1ccd9d6124bf99a85fef464cee",
+  "config": {
+    "model": {
+      "provider": "gemini",
+      "model": "gemini-3.5-flash-lite",
+      "chunk_seconds": 1000000000,
+      "context_lines": 6,
+      "min_seconds_between_calls": 30,
+      "summary_words": 199,
+      "effort": "medium",
+      "max_tokens": 16000,
+      "fallbacks": "default",
+      "mode": "full"
+    },
+    "mode": "full",
+    "seeds": [
+      45
+    ],
+    "pythonhashseed": 45,
+    "bertscore": {
+      "model": "FacebookAI/roberta-large",
+      "revision": "722cf37b1afa9454edce342e7895e588b6ff1d59",
+      "rescale_with_baseline": false
+    }
+  },
+  "config_hash": "e42e19d8c407",
+  "model": "llm",
+  "model_version": "gemini:gemini-3.5-flash-lite",
+  "split": "eval",
+  "meetings": [
+    "SY0103a",
+    "SY0103b",
+    "SY0103c",
+    "SY0103d",
+    "SY0110a",
+    "SY0110b",
+    "SY0110c",
+    "SY0110d",
+    "SY0202a",
+    "SY0202b",
+    "SY0202c",
+    "SY0202d",
+    "SY0209a",
+    "SY0209b",
+    "SY0209c",
+    "SY0209d",
+    "SY0304a",
+    "SY0304b",
+    "SY0304c",
+    "SY0304d"
+  ],
+  "meeting_groups": {
+    "SY0103a": {
+      "feature": "F1",
+      "scenario": [
+        "F1_INTERLEAVED_TOPICS",
+        "F1_SARCASM_AS_FACT"
+      ],
+      "absent_participants": 0
+    },
+    "SY0103b": {
+      "feature": "F1",
+      "scenario": [
+        "F1_ABSENT_DISCUSSED",
+        "F1_PLAN_CHANGE"
+      ],
+      "absent_participants": 1
+    },
+    "SY0103c": {
+      "feature": "F1",
+      "scenario": [
+        "F1_OFF_TOPIC_TANGENT",
+        "F1_SELF_CORRECTION"
+      ],
+      "absent_participants": 0
+    },
+    "SY0103d": {
+      "feature": "F1",
+      "scenario": [
+        "F1_INTERLEAVED_TOPICS",
+        "F1_SARCASM_AS_FACT"
+      ],
+      "absent_participants": 0
+    },
+    "SY0110a": {
+      "feature": "F1",
+      "scenario": [
+        "F1_ABSENT_DISCUSSED",
+        "F1_SELF_CORRECTION"
+      ],
+      "absent_participants": 1
+    },
+    "SY0110b": {
+      "feature": "F1",
+      "scenario": [
+        "F1_INTERLEAVED_TOPICS",
+        "F1_PLAN_CHANGE"
+      ],
+      "absent_participants": 0
+    },
+    "SY0110c": {
+      "feature": "F1",
+      "scenario": [
+        "F1_OFF_TOPIC_TANGENT",
+        "F1_SARCASM_AS_FACT"
+      ],
+      "absent_participants": 0
+    },
+    "SY0110d": {
+      "feature": "F1",
+      "scenario": [
+        "F1_ABSENT_DISCUSSED",
+        "F1_SELF_CORRECTION"
+      ],
+      "absent_participants": 1
+    },
+    "SY0202a": {
+      "feature": "F2",
+      "scenario": [
+        "F2_OFFERED_TAKEN_BY_OTHER",
+        "F2_VAGUE_NO_OWNER"
+      ],
+      "absent_participants": 0
+    },
+    "SY0202b": {
+      "feature": "F2",
+      "scenario": [
+        "F2_REASSIGNED_OR_DROPPED",
+        "F2_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0202c": {
+      "feature": "F2",
+      "scenario": [
+        "F2_OFFERED_TAKEN_BY_OTHER",
+        "F2_VAGUE_NO_OWNER"
+      ],
+      "absent_participants": 0
+    },
+    "SY0202d": {
+      "feature": "F2",
+      "scenario": [
+        "F2_REASSIGNED_OR_DROPPED",
+        "F2_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0209a": {
+      "feature": "F2",
+      "scenario": [
+        "F2_OFFERED_TAKEN_BY_OTHER",
+        "F2_VAGUE_NO_OWNER"
+      ],
+      "absent_participants": 0
+    },
+    "SY0209b": {
+      "feature": "F2",
+      "scenario": [
+        "F2_REASSIGNED_OR_DROPPED",
+        "F2_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0209c": {
+      "feature": "F2",
+      "scenario": [
+        "F2_OFFERED_TAKEN_BY_OTHER",
+        "F2_VAGUE_NO_OWNER"
+      ],
+      "absent_participants": 0
+    },
+    "SY0209d": {
+      "feature": "F2",
+      "scenario": [
+        "F2_REASSIGNED_OR_DROPPED",
+        "F2_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0304a": {
+      "feature": "F3",
+      "scenario": [
+        "F3_TASK_TO_ABSENT",
+        "F3_UNAGREED_DECISION"
+      ],
+      "absent_participants": 1
+    },
+    "SY0304b": {
+      "feature": "F3",
+      "scenario": [
+        "F3_ACTION_REMOVED",
+        "F3_UNAGREED_DECISION"
+      ],
+      "absent_participants": 0
+    },
+    "SY0304c": {
+      "feature": "F3",
+      "scenario": [
+        "F3_ACTION_REMOVED",
+        "F3_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0304d": {
+      "feature": "F3",
+      "scenario": [
+        "F3_TASK_TO_ABSENT",
+        "F3_UNAGREED_DECISION"
+      ],
+      "absent_participants": 1
+    }
+  },
+  "metrics_by_group": {
+    "feature": {
+      "groups": {
+        "F1": {
+          "n": 8,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103a",
+            "SY0103b",
+            "SY0103c",
+            "SY0103d",
+            "SY0110a",
+            "SY0110b",
+            "SY0110c",
+            "SY0110d"
+          ],
+          "mean": {
+            "rouge1": 0.4217,
+            "rouge2": 0.1544,
+            "rougeL": 0.2794,
+            "rougeSU4": 0.1677,
+            "bertscore_f1": 0.8743
+          }
+        },
+        "F2": {
+          "n": 8,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202a",
+            "SY0202b",
+            "SY0202c",
+            "SY0202d",
+            "SY0209a",
+            "SY0209b",
+            "SY0209c",
+            "SY0209d"
+          ],
+          "mean": {
+            "rouge1": 0.4354,
+            "rouge2": 0.1661,
+            "rougeL": 0.2804,
+            "rougeSU4": 0.1705,
+            "bertscore_f1": 0.8733
+          }
+        },
+        "F3": {
+          "n": 4,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "SY0304a",
+            "SY0304b",
+            "SY0304c",
+            "SY0304d"
+          ],
+          "mean": {
+            "rouge1": 0.4492,
+            "rouge2": 0.1951,
+            "rougeL": 0.3082,
+            "rougeSU4": 0.1998,
+            "bertscore_f1": 0.8753
+          }
+        }
+      },
+      "gap": {
+        "rouge1": 0.0275,
+        "rouge2": 0.0407,
+        "rougeL": 0.0288,
+        "rougeSU4": 0.0321,
+        "bertscore_f1": 0.002
+      },
+      "worst": {
+        "rouge1": "F1",
+        "rouge2": "F1",
+        "rougeL": "F1",
+        "rougeSU4": "F1",
+        "bertscore_f1": "F2"
+      }
+    },
+    "scenario": {
+      "groups": {
+        "F1_ABSENT_DISCUSSED": {
+          "n": 3,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103b",
+            "SY0110a",
+            "SY0110d"
+          ],
+          "mean": {
+            "rouge1": 0.4339,
+            "rouge2": 0.1708,
+            "rougeL": 0.2831,
+            "rougeSU4": 0.1829,
+            "bertscore_f1": 0.8781
+          }
+        },
+        "F1_INTERLEAVED_TOPICS": {
+          "n": 3,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103a",
+            "SY0103d",
+            "SY0110b"
+          ],
+          "mean": {
+            "rouge1": 0.3948,
+            "rouge2": 0.1309,
+            "rougeL": 0.2591,
+            "rougeSU4": 0.15,
+            "bertscore_f1": 0.8701
+          }
+        },
+        "F1_OFF_TOPIC_TANGENT": {
+          "n": 2,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103c",
+            "SY0110c"
+          ],
+          "mean": {
+            "rouge1": 0.4439,
+            "rouge2": 0.1651,
+            "rougeL": 0.3043,
+            "rougeSU4": 0.1715,
+            "bertscore_f1": 0.8747
+          }
+        },
+        "F1_PLAN_CHANGE": {
+          "n": 2,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103b",
+            "SY0110b"
+          ],
+          "mean": {
+            "rouge1": 0.3559,
+            "rouge2": 0.117,
+            "rougeL": 0.2344,
+            "rougeSU4": 0.136,
+            "bertscore_f1": 0.8653
+          }
+        },
+        "F1_SARCASM_AS_FACT": {
+          "n": 3,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103a",
+            "SY0103d",
+            "SY0110c"
+          ],
+          "mean": {
+            "rouge1": 0.4333,
+            "rouge2": 0.149,
+            "rougeL": 0.2899,
+            "rougeSU4": 0.1694,
+            "bertscore_f1": 0.8766
+          }
+        },
+        "F1_SELF_CORRECTION": {
+          "n": 3,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103c",
+            "SY0110a",
+            "SY0110d"
+          ],
+          "mean": {
+            "rouge1": 0.454,
+            "rouge2": 0.1848,
+            "rougeL": 0.299,
+            "rougeSU4": 0.1872,
+            "bertscore_f1": 0.8779
+          }
+        },
+        "F2_OFFERED_TAKEN_BY_OTHER": {
+          "n": 4,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202a",
+            "SY0202c",
+            "SY0209a",
+            "SY0209c"
+          ],
+          "mean": {
+            "rouge1": 0.415,
+            "rouge2": 0.1706,
+            "rougeL": 0.2852,
+            "rougeSU4": 0.1715,
+            "bertscore_f1": 0.8729
+          }
+        },
+        "F2_REASSIGNED_OR_DROPPED": {
+          "n": 4,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202b",
+            "SY0202d",
+            "SY0209b",
+            "SY0209d"
+          ],
+          "mean": {
+            "rouge1": 0.4557,
+            "rouge2": 0.1615,
+            "rougeL": 0.2757,
+            "rougeSU4": 0.1695,
+            "bertscore_f1": 0.8736
+          }
+        },
+        "F2_TASK_TO_ABSENT": {
+          "n": 4,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202b",
+            "SY0202d",
+            "SY0209b",
+            "SY0209d"
+          ],
+          "mean": {
+            "rouge1": 0.4557,
+            "rouge2": 0.1615,
+            "rougeL": 0.2757,
+            "rougeSU4": 0.1695,
+            "bertscore_f1": 0.8736
+          }
+        },
+        "F2_VAGUE_NO_OWNER": {
+          "n": 4,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202a",
+            "SY0202c",
+            "SY0209a",
+            "SY0209c"
+          ],
+          "mean": {
+            "rouge1": 0.415,
+            "rouge2": 0.1706,
+            "rougeL": 0.2852,
+            "rougeSU4": 0.1715,
+            "bertscore_f1": 0.8729
+          }
+        },
+        "F3_ACTION_REMOVED": {
+          "n": 2,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "SY0304b",
+            "SY0304c"
+          ],
+          "mean": {
+            "rouge1": 0.4028,
+            "rouge2": 0.1632,
+            "rougeL": 0.2489,
+            "rougeSU4": 0.1597,
+            "bertscore_f1": 0.8685
+          }
+        },
+        "F3_TASK_TO_ABSENT": {
+          "n": 3,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "SY0304a",
+            "SY0304c",
+            "SY0304d"
+          ],
+          "mean": {
+            "rouge1": 0.4539,
+            "rouge2": 0.201,
+            "rougeL": 0.3191,
+            "rougeSU4": 0.2059,
+            "bertscore_f1": 0.8766
+          }
+        },
+        "F3_UNAGREED_DECISION": {
+          "n": 3,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "SY0304a",
+            "SY0304b",
+            "SY0304d"
+          ],
+          "mean": {
+            "rouge1": 0.4755,
+            "rouge2": 0.2104,
+            "rougeL": 0.3369,
+            "rougeSU4": 0.2205,
+            "bertscore_f1": 0.8785
+          }
+        }
+      },
+      "gap": {
+        "rouge1": 0.1196,
+        "rouge2": 0.0934,
+        "rougeL": 0.1025,
+        "rougeSU4": 0.0845,
+        "bertscore_f1": 0.0132
+      },
+      "worst": {
+        "rouge1": "F1_PLAN_CHANGE",
+        "rouge2": "F1_PLAN_CHANGE",
+        "rougeL": "F1_PLAN_CHANGE",
+        "rougeSU4": "F1_PLAN_CHANGE",
+        "bertscore_f1": "F1_PLAN_CHANGE"
+      }
+    }
+  },
+  "meetings_hash": "b421b56079cc",
+  "n_seeds": 1,
+  "metrics_mean": {
+    "rouge1": 0.4327,
+    "rouge2": 0.1672,
+    "rougeL": 0.2856,
+    "rougeSU4": 0.1753,
+    "bertscore_f1": 0.8741
+  },
+  "metrics_std": {
+    "rouge1": 0.0,
+    "rouge2": 0.0,
+    "rougeL": 0.0,
+    "rougeSU4": 0.0,
+    "bertscore_f1": 0.0
+  },
+  "metrics_per_seed": {
+    "45": {
+      "rouge1": 0.4327,
+      "rouge2": 0.1672,
+      "rougeL": 0.2856,
+      "rougeSU4": 0.1753,
+      "bertscore_f1": 0.8741
+    }
+  },
+  "identical_across_seeds": true,
+  "seed_variation": {
+    "verdict": "Only one seed was run, so there is no seed variation to measure.",
+    "why": "A hosted LLM cannot be seeded: our seeds only reach local random generators, and the provider's sampling (temperature etc.) is fixed for this model. So every run can give different text, and the spread across seeds measures the model's own run-to-run variation. Each seed repeats every API call. Each seed sets Python random, NumPy and torch. PYTHONHASHSEED is fixed to the FIRST seed for the whole run.",
+    "seeds": [
+      45
+    ],
+    "metrics": {
+      "rouge1": {
+        "mean": 0.4327,
+        "std": 0.0,
+        "min": 0.4327,
+        "min_seed": 45,
+        "max": 0.4327,
+        "max_seed": 45,
+        "range": 0.0
+      },
+      "rouge2": {
+        "mean": 0.1672,
+        "std": 0.0,
+        "min": 0.1672,
+        "min_seed": 45,
+        "max": 0.1672,
+        "max_seed": 45,
+        "range": 0.0
+      },
+      "rougeL": {
+        "mean": 0.2856,
+        "std": 0.0,
+        "min": 0.2856,
+        "min_seed": 45,
+        "max": 0.2856,
+        "max_seed": 45,
+        "range": 0.0
+      },
+      "rougeSU4": {
+        "mean": 0.1753,
+        "std": 0.0,
+        "min": 0.1753,
+        "min_seed": 45,
+        "max": 0.1753,
+        "max_seed": 45,
+        "range": 0.0
+      },
+      "bertscore_f1": {
+        "mean": 0.8741,
+        "std": 0.0,
+        "min": 0.8741,
+        "min_seed": 45,
+        "max": 0.8741,
+        "max_seed": 45,
+        "range": 0.0
+      }
+    },
+    "meetings_changed": 0,
+    "meetings_total": 20,
+    "per_meeting": {}
+  },
+  "seconds_per_meeting": 28.6,
+  "python": "3.12.14",
+  "packages": {
+    "summa": "1.2.0",
+    "rouge-score": "0.1.2",
+    "numpy": "2.5.4",
+    "torch": "2.14.1",
+    "transformers": "5.20.2",
+    "bert-score": "0.3.13",
+    "anthropic": "1.17.0"
+  },
+  "hardware": {
+    "machine": "arm64",
+    "system": "macOS-27.0-arm64-arm-64bit",
+    "cpus": 10
+  },
+  "llm_usage": {
+    "calls": 20,
+    "input_tokens": 77734,
+    "output_tokens": 6836,
+    "served_by": [
+      "gemini-3.5-flash-lite"
+    ],
+    "cache_hits": 0
+  },
+  "per_seed_runs": {
+    "45": {
+      "scores": {
+        "rouge1": 0.4327,
+        "rouge2": 0.1672,
+        "rougeL": 0.2856,
+        "rougeSU4": 0.1753,
+        "bertscore_f1": 0.8741
+      },
+      "per_meeting": {
+        "SY0103a": {
+          "rouge1": 0.3071428571428571,
+          "rouge2": 0.07913669064748201,
+          "rougeL": 0.18571428571428572,
+          "rougeSU4": 0.09454545454545454,
+          "bertscore_f1": 0.8702032566070557
+        },
+        "SY0103b": {
+          "rouge1": 0.4,
+          "rouge2": 0.14942528735632185,
+          "rougeL": 0.2857142857142857,
+          "rougeSU4": 0.16425120772946858,
+          "bertscore_f1": 0.8706080913543701
+        },
+        "SY0103c": {
+          "rouge1": 0.4603174603174603,
+          "rouge2": 0.19148936170212763,
+          "rougeL": 0.33333333333333337,
+          "rougeSU4": 0.17694369973190352,
+          "bertscore_f1": 0.869935154914856
+        },
+        "SY0103d": {
+          "rouge1": 0.5653206650831354,
+          "rouge2": 0.22911694510739858,
+          "rougeL": 0.4085510688836104,
+          "rougeSU4": 0.24759615384615385,
+          "bertscore_f1": 0.8802053928375244
+        },
+        "SY0110a": {
+          "rouge1": 0.5241379310344827,
+          "rouge2": 0.24305555555555555,
+          "rougeL": 0.35172413793103446,
+          "rougeSU4": 0.26783625730994154,
+          "bertscore_f1": 0.8919879794120789
+        },
+        "SY0110b": {
+          "rouge1": 0.3118811881188119,
+          "rouge2": 0.08457711442786069,
+          "rougeL": 0.1831683168316832,
+          "rougeSU4": 0.10776942355889725,
+          "bertscore_f1": 0.8599677085876465
+        },
+        "SY0110c": {
+          "rouge1": 0.427536231884058,
+          "rouge2": 0.13868613138686134,
+          "rougeL": 0.2753623188405797,
+          "rougeSU4": 0.16605166051660514,
+          "bertscore_f1": 0.8794446587562561
+        },
+        "SY0110d": {
+          "rouge1": 0.3774834437086092,
+          "rouge2": 0.12000000000000001,
+          "rougeL": 0.21192052980132448,
+          "rougeSU4": 0.11672278338945005,
+          "bertscore_f1": 0.87180095911026
+        },
+        "SY0202a": {
+          "rouge1": 0.3924528301886792,
+          "rouge2": 0.11406844106463879,
+          "rougeL": 0.2113207547169811,
+          "rougeSU4": 0.12692307692307692,
+          "bertscore_f1": 0.8635789155960083
+        },
+        "SY0202b": {
+          "rouge1": 0.4290220820189274,
+          "rouge2": 0.15873015873015872,
+          "rougeL": 0.2586750788643533,
+          "rougeSU4": 0.1549145299145299,
+          "bertscore_f1": 0.87006014585495
+        },
+        "SY0202c": {
+          "rouge1": 0.3963414634146341,
+          "rouge2": 0.147239263803681,
+          "rougeL": 0.31707317073170727,
+          "rougeSU4": 0.15892672858617132,
+          "bertscore_f1": 0.8682295083999634
+        },
+        "SY0202d": {
+          "rouge1": 0.4312267657992565,
+          "rouge2": 0.1348314606741573,
+          "rougeL": 0.25278810408921937,
+          "rougeSU4": 0.13762626262626262,
+          "bertscore_f1": 0.8753023743629456
+        },
+        "SY0209a": {
+          "rouge1": 0.5311203319502075,
+          "rouge2": 0.27615062761506276,
+          "rougeL": 0.3817427385892116,
+          "rougeSU4": 0.25,
+          "bertscore_f1": 0.8944962620735168
+        },
+        "SY0209b": {
+          "rouge1": 0.4507042253521127,
+          "rouge2": 0.14893617021276595,
+          "rougeL": 0.28169014084507044,
+          "rougeSU4": 0.16606929510155316,
+          "bertscore_f1": 0.8800448775291443
+        },
+        "SY0209c": {
+          "rouge1": 0.3400576368876081,
+          "rouge2": 0.14492753623188406,
+          "rougeL": 0.23054755043227668,
+          "rougeSU4": 0.15009746588693956,
+          "bertscore_f1": 0.8654126524925232
+        },
+        "SY0209d": {
+          "rouge1": 0.5119047619047619,
+          "rouge2": 0.20359281437125748,
+          "rougeL": 0.30952380952380953,
+          "rougeSU4": 0.21953675730110778,
+          "bertscore_f1": 0.8689070343971252
+        },
+        "SY0304a": {
+          "rouge1": 0.4693140794223826,
+          "rouge2": 0.22545454545454544,
+          "rougeL": 0.36823104693140796,
+          "rougeSU4": 0.2389705882352941,
+          "bertscore_f1": 0.8820464015007019
+        },
+        "SY0304b": {
+          "rouge1": 0.43526170798898073,
+          "rouge2": 0.1772853185595568,
+          "rougeL": 0.2754820936639118,
+          "rougeSU4": 0.18156424581005587,
+          "bertscore_f1": 0.8714056611061096
+        },
+        "SY0304c": {
+          "rouge1": 0.37037037037037035,
+          "rouge2": 0.14906832298136646,
+          "rougeL": 0.2222222222222222,
+          "rougeSU4": 0.13793103448275862,
+          "bertscore_f1": 0.8655757308006287
+        },
+        "SY0304d": {
+          "rouge1": 0.5219638242894056,
+          "rouge2": 0.22857142857142856,
+          "rougeL": 0.3669250645994832,
+          "rougeSU4": 0.24083769633507857,
+          "bertscore_f1": 0.8820281028747559
+        }
+      },
+      "predictions": {
+        "SY0103a": "The team met for a kick-off meeting to discuss designing a voice-controlled kitchen timer. They reviewed financial constraints, agreeing on a twenty-five euro retail price, a twelve fifty unit production cost, and a limited on-device vocabulary to stay within budget. They decided to include a physical backup button and discussed wake words, power options, and audio feedback. Finally, they assigned tasks before concluding.",
+        "SY0103b": "The team met to discuss the functional design of the voice-activated kitchen device, noting that Tomasz was absent due to illness. They reviewed previous decisions regarding on-device speech recognition and shifted from a three named timers proposal to two numbered timers, timer one and timer two, to avoid user confusion and vocabulary recognition issues. The group discussed user research findings on pricing, deciding to market the device as a gift-focused kitchen gadget, and agreed on a loud alarm that increases in volume. They also selected Kiko as the working product name and agreed to test it against false triggers. Finally, decisions regarding a small display and power options were parked pending Tomasz's cost breakdown.",
+        "SY0103c": "The team met for a conceptual design meeting to finalise components, power, and the physical appearance of the device. Tomasz presented component costs, leading to the decision to use mains power via USB-C with an adapter included in the box. The team also agreed to include a two-digit LED display, keeping total production cost at eleven thirty against the twelve fifty limit. Priya shared the finalised command list and reported that testing the wake word 'Kiko' showed occasional false triggers with 'cocoa', prompting Tomasz to ask the supplier about tuning sensitivity. Ben outlined competitor products, establishing that the device's offline functionality and lack of required apps or Wi-Fi will be key selling points. Finally, the team agreed on a round, wipeable plastic design where the top acts as a large rubber button with the display in the centre, while deciding to defer a fridge magnet idea and leave color options for the next meeting.",
+        "SY0103d": "The team reviewed the detailed design of the Kiko voice timer, covering the supplier wake-word improvements, physical model, display and button logic, colors, and overall cost evaluation. The supplier successfully retrained the wake-word model to avoid false triggers on cocoa, and Tomasz will test it on the real hardware dev board. The prototype model features a palm-sized foam and rubber body with a full-top button, USB-C at the back, and a rubber ring for grip that costs ten cents. Priya proposed updating the display to alternate between two running timers using a decimal point indicator, dropping the double-press. The button actions were finalized so a short press stops alarms and holding for three seconds cancels timers, preventing accidental activation. Marketing presented two approved colorways, white with orange and charcoal with lime, using a white LED display. Tomasz will request rubber color samples from the moulding supplier. Finally, the total unit cost came to eleven forty, leaving a one-ten safety margin under the twelve-fifty budget, and the team evaluated the design against the original goals and confirmed it meets all requirements.",
+        "SY0110a": "Priya, Tom, and Jonas held a kickoff meeting for the reusable coffee cup project with a deposit system, while marketing expert Marta was away at a trade fair in Cologne. The team reviewed management targets including a one-euro deposit, a production cost under three euros, and an initial goal of fifty partner cafes in the first year. They discussed initial design ideas, deciding that the cup must be dishwasher-safe and fit standard cafe lids, while leaving questions open regarding collapsible designs, apps, and loss rates. Priya assigned homework tasks for the upcoming functional design meeting, asking Tom to research materials and Jonas to explore the return process.",
+        "SY0110b": "The team met for their second functional design meeting to review materials, return processes, and stakeholder feedback from Cologne. Tom presented material options, and the team agreed to drop silicone and stainless steel in favour of polypropylene. They confirmed the cup specifications, deciding on a ninety millimetre rim, stackable design, and space for a cafe logo. Jonas outlined a counter-return process with no app or automated machines, supported by a partner badge sticker on cafe doors for visibility. They also arranged a dishwasher endurance test at Caf\u00e9 Lindner instead of the office kitchen.",
+        "SY0110c": "The team reviewed the dishwasher test results for the polypropylene cups and agreed to use in-mould labelling for the logo and add a ribbed band for grip. They decided to launch with a single three hundred millilitre size in slate grey. Jonas presented the counter return flow, allowing customers to either get a refund or swap cups, along with a slate grey window badge design. The project manager will consult management regarding lost cup costs, and tasks were assigned for the detailed design phase.",
+        "SY0110d": "The team held their final detailed design meeting, noting that Jonas was absent due to illness. They reviewed the quote from the moulding company, agreeing to order ten thousand cups at one euro fifty-four each in slate grey, with the company covering unreturned cups via a five euro monthly partner fee. They confirmed the final design details, including embossing the base with a return message, and verified that the cups meet all functional and cost requirements. Finally, they assigned tasks for order confirmation, marketing outreach, and documentation.",
+        "SY0202a": "Project Manager Marcus led a kickoff meeting for a new public library self-checkout kiosk project, joined by Industrial Designer Tomas, Marketing Expert Priya, and User Interface Designer Hannah. The team defined the core functions as checkout and renewals, opting against a physical returns slot to save hardware costs and complexity. They discussed identification via barcodes and phone apps, while deferring decisions on printed receipts and physical kiosk buttons. Marcus assigned tasks to prepare for the upcoming functional design meeting, with Priya gathering user requirements and accessibility standards, Tomas working on internal component layout, Hannah mapping the user flows, and Marcus circulating the brief and notes.",
+        "SY0202b": "The project team met to discuss the functional design of the library kiosk, with Hannah absent. Tomas presented the hardware layout and estimated rough costs, which include a wood-panelling finish for a library look and an optional thermal printer for paper receipts. Priya shared user requirements and accessibility feedback from library services, noting that about a third of borrowers still want printed due-date slips and that older borrowers and visually impaired users need specific accessibility features, including a physical help button and audio mode. The team also discussed whether to use barcodes or RFID, agreeing to wait on cost estimates before deciding.",
+        "SY0202c": "The team held their third conceptual design meeting, welcoming Hannah back and reviewing previous agreements on receipts, the help button, and kiosk heights. Priya presented RFID reader pricing, leading to the decision to use both an RFID pad and a barcode scanner fallback. Tomas then presented three casing sketches, and the team selected the desk shape in oak veneer with aluminium corners to reduce costs. Hannah walked through the updated user flow incorporating the RFID batch scanning and renewal options, and the group discussed screen size, agreeing to stick with fifteen inches for now and revisit it after seeing a mock-up.",
+        "SY0202d": "The team met for their final detailed design meeting, reviewing mock-ups, screen sizes, text-to-speech options, and project costs in Hannah's absence. Tomas presented the physical mock-up, leading to a decision to use a seventeen-inch screen to stay within height limits. The group also agreed to use a licensed industrial board with a built-in text-to-speech engine to ensure high-quality audio for visually impaired borrowers. Priya presented her evaluation across seven criteria, and Marcus summarized the updated unit cost at three thousand four hundred and ten euros, leaving a healthy budget headroom. Finally, the team assigned action items and agreed on deadlines before wrapping up the project design.",
+        "SY0209a": "Laura opened the kickoff meeting for the new children's educational tablet case, accompanied by Tomasz, Priya, and Ben. The team established that the product will be a protective case designed exclusively for the Learnly seven-inch tablet, targeting children aged four to eight, with a selling price of twenty-five Euros and a maximum production cost of twelve-and-a-half Euros. They brainstormed functional and design ideas including drop protection, a carrying handle, a raised screen lip, and easy-to-clean materials. Finally, Laura assigned action items for the upcoming functional design meeting.",
+        "SY0209b": "The team met for their second functional design meeting, with Tomasz absent due to illness. They agreed to target a one-point-two-metre drop resistance based on military standards and competitive analysis, and selected EVA foam as the material for the case body to keep costs around two to three euros per unit. The design will feature a fixed handle rather than a folding stand to avoid pinch hazards, alongside open charging port access, covered power and volume buttons, and a raised screen lip instead of a flap. They also decided to drop swappable covers and defer decisions on the name tag window, wedge stand, and colour options. Finally, the project manager reassigned the competitor price check to Tomasz alongside his survey work.",
+        "SY0209c": "The team reviewed survey results showing drop protection and cleaning are top priorities, along with strong teacher demand for a name tag. Ben presented a supplier quote of eight forty per case, well under budget, and Priya shared her handle and cut-out sketches. The group agreed to include a shallow wedge back for stability, a name tag window if it costs under a euro, and two launch colors: blue and lime green. Finally, they assigned tasks for the upcoming detailed design meeting.",
+        "SY0209d": "The team met for a detailed design review, covering costs, sketches, evaluation criteria, and remaining open points. They chose a moulded foam pocket with clear film for the name tag window on the back of the case, and reviewed revised cost estimates that remained safely under budget at ten euros and ten cents. Priya presented revised sketches placing the landscape name tag pocket on the back below the handle, and confirmed the charger port remains accessible. Tomasz presented six evaluation criteria based on user survey responses, with the case scoring mostly ones and twos. The team rejected adding a shoulder strap due to safety risks and cost. Finally, the project manager agreed to email Ben to check the toy safety regulations with the supplier and request physical samples in blue and lime green.",
+        "SY0304a": "Hannah, Priya, and Tom held a kickoff meeting for a new university project to design a parking availability display for campus car park entrances, operating on a tight budget of four hundred pounds per unit and aiming for installation by the start of next term. The team agreed that target users include staff, students, and visitors, and that signs should display both the free space count and a colour indicator. They discussed technical challenges such as power supply, sensor types, and screen casing, deciding to leave sensor options and weather durability for Marcus to investigate, while Priya will survey campus users and Tom will sketch screen layouts.",
+        "SY0304b": "The team met for a functional design meeting to review survey results, sensing options, display layouts, and power requirements for the car park project. Priya presented survey feedback showing a demand for readable distance signs, green-amber-red colour coding, and no advertisements, while Marcus outlined the cost and drift drawbacks of per-bay sensors versus barrier counters. Tom presented layout designs, leading the team to agree on a sixty-centimetre LED panel with the car park name at the top and specified colour thresholds. They decided to use mains power from the barrier supply and agreed on barrier counters with a nightly reset at three a.m. Finally, the project manager assigned action items regarding barrier mains connections, final layouts, visitor surveys, and the central sign.",
+        "SY0304c": "The team discussed sign layouts, open day feedback, and power supply options during their third conceptual design meeting. They agreed to exclude the central sign due to budget constraints and decided on a navy 60-centimetre sign layout featuring a parking symbol and no flashing lights. Feedback from the open day indicated that visitors struggled to identify car park names, leading to the addition of a prominent P symbol. Marcus's cost estimates came to approximately three hundred and ninety pounds per sign, leaving a ten-pound margin, though the library car park requires a new power supply and further investigation into wall mounting.",
+        "SY0304d": "The team held their final detailed design meeting for the car park sign project, with Tom absent due to training. Marcus presented the electrician quote for the library car park, which estates agreed to cover from their building maintenance budget, and confirmed the mounting plans: galvanised steel posts for the four surface car parks and a wall bracket for the library. Tom's layout was approved with a navy top strip, P symbol, and non-flashing LED number panel, while Tom was assigned to produce the vector name files. The total cost per sign came in just under four hundred pounds, totalling one thousand nine hundred and thirty-two pounds for all five signs. They addressed counter drift with a plan for nightly resets and spot checks by Priya, and evaluated the design against survey feedback, agreeing to leave out the app and QR codes for this initial phase."
+      },
+      "seconds": 571.9999712089993,
+      "action_items": {
+        "SY0103a": [
+          {
+            "task": "Look at the components, the speech chip, mic, speaker, and the power question, and get a rough cost breakdown against the twelve fifty limit",
+            "owner": "Tomasz",
+            "due": ""
+          },
+          {
+            "task": "Look into voice commands, including the wake word, command list, talking back, and multiple timers",
+            "owner": "Priya",
+            "due": ""
+          },
+          {
+            "task": "Find out what people want from a kitchen timer by looking at existing products and user complaints, and check if customers pay twenty-five euros for a timer",
+            "owner": "Ben",
+            "due": ""
+          },
+          {
+            "task": "Throw some names around for the wake word",
+            "owner": "Ben",
+            "due": ""
+          },
+          {
+            "task": "Write up the minutes and send them round",
+            "owner": "Laura",
+            "due": ""
+          }
+        ],
+        "SY0103b": [
+          {
+            "task": "Write up the full command list for two timers and the confirmation phrases.",
+            "owner": "User Interface Designer",
+            "due": ""
+          },
+          {
+            "task": "Test the working name Kiko against a bunch of kitchen sentences to check for false triggers.",
+            "owner": "User Interface Designer",
+            "due": ""
+          },
+          {
+            "task": "Look at what voice timers already exist and what they sell for.",
+            "owner": "Marketing Expert",
+            "due": ""
+          },
+          {
+            "task": "Email Tomasz about switching to two numbered timers and ask him to check if the chip can handle the commands.",
+            "owner": "Project Manager",
+            "due": ""
+          },
+          {
+            "task": "Provide the cost breakdown and address the power question.",
+            "owner": "Tomasz",
+            "due": ""
+          }
+        ],
+        "SY0103c": [
+          {
+            "task": "Ask the supplier about tuning the wake word model against cocoa and similar words",
+            "owner": "Industrial Designer",
+            "due": ""
+          },
+          {
+            "task": "Send the command list round to everyone",
+            "owner": "User Interface Designer",
+            "due": ""
+          },
+          {
+            "task": "Bring three or four colour options",
+            "owner": "Marketing Expert",
+            "due": ""
+          },
+          {
+            "task": "Make a rough model",
+            "owner": "Industrial Designer",
+            "due": ""
+          },
+          {
+            "task": "Send the display size you want",
+            "owner": "User Interface Designer",
+            "due": ""
+          },
+          {
+            "task": "Work out what the display shows with two timers and how the button behaves",
+            "owner": "User Interface Designer",
+            "due": ""
+          }
+        ],
+        "SY0103d": [
+          {
+            "task": "Test the Kiko wake-word model on the real hardware dev board once it arrives",
+            "owner": "Industrial Designer",
+            "due": ""
+          },
+          {
+            "task": "Get rubber color samples from the moulding supplier",
+            "owner": "Industrial Designer",
+            "due": ""
+          },
+          {
+            "task": "Write up a quick-start card with the commands and button functions",
+            "owner": "User Interface Designer",
+            "due": ""
+          },
+          {
+            "task": "Draft the box text and gift angle around the offline feature and two colors",
+            "owner": "Marketing Expert",
+            "due": ""
+          },
+          {
+            "task": "Write the minutes and the final report for management",
+            "owner": "Project Manager",
+            "due": ""
+          }
+        ],
+        "SY0110a": [
+          {
+            "task": "Look into materials that are durable, dishwasher-safe, and cost under three euros",
+            "owner": "Tom",
+            "due": ""
+          },
+          {
+            "task": "Look at the return process and how customers get their deposit back",
+            "owner": "Jonas",
+            "due": ""
+          },
+          {
+            "task": "Ask Marta to talk to cafe owners at the fair about joining a deposit system and what they want from it",
+            "owner": "Priya",
+            "due": ""
+          }
+        ],
+        "SY0110b": [
+          {
+            "task": "Have the polypropylene cup samples ready",
+            "owner": "Industrial Designer",
+            "due": "by Monday"
+          },
+          {
+            "task": "Sketch out the counter return flow and the partner badge",
+            "owner": "User Interface Designer",
+            "due": ""
+          },
+          {
+            "task": "Set up the dishwasher test with Caf\u00e9 Lindner and email her this week",
+            "owner": "Marketing Expert",
+            "due": "this week"
+          },
+          {
+            "task": "Write up and send round notes from the fair",
+            "owner": "Marketing Expert",
+            "due": "tomorrow"
+          }
+        ],
+        "SY0110c": [
+          {
+            "task": "Get a quote for the three hundred millilitre cup with the in-mould label and the ribbed band",
+            "owner": "Industrial Designer",
+            "due": ""
+          },
+          {
+            "task": "Make the logo bigger on the badge",
+            "owner": "User Interface Designer",
+            "due": ""
+          },
+          {
+            "task": "Write a one-page guide for staff on how the refund and swap work and run it past Mr Lindner",
+            "owner": "Marketing Expert",
+            "due": ""
+          },
+          {
+            "task": "Check the slate grey colour with Mr Lindner",
+            "owner": "Marketing Expert",
+            "due": ""
+          },
+          {
+            "task": "Raise the issue of lost cup costs with management",
+            "owner": "Project Manager",
+            "due": "this week"
+          }
+        ],
+        "SY0110d": [
+          {
+            "task": "Laminate the staff guides for the cafes",
+            "owner": "Marketing Expert",
+            "due": ""
+          },
+          {
+            "task": "Email the list of cafe owners from the fair with the guide and the fee",
+            "owner": "Marketing Expert",
+            "due": ""
+          },
+          {
+            "task": "Confirm the ten thousand unit order with the moulders and ask for a couple of pre-production samples with the embossing",
+            "owner": "Industrial Designer",
+            "due": ""
+          }
+        ],
+        "SY0202a": [
+          {
+            "task": "Collect accessibility requirements from the library services meeting",
+            "owner": "Priya",
+            "due": ""
+          },
+          {
+            "task": "Look at the working design and internal components layout",
+            "owner": "Tomas",
+            "due": ""
+          },
+          {
+            "task": "Map out the checkout and renewal user flows and screens",
+            "owner": "Hannah",
+            "due": ""
+          },
+          {
+            "task": "Gather user requirements from the libraries and borrowers",
+            "owner": "Priya",
+            "due": ""
+          },
+          {
+            "task": "Send round the project brief and notes from today",
+            "owner": "Marcus",
+            "due": ""
+          }
+        ],
+        "SY0202b": [
+          {
+            "task": "Email the accessibility list to Hannah",
+            "owner": "Priya",
+            "due": "today"
+          },
+          {
+            "task": "Update the checkout and renewal flow with the new changes and send round the screens",
+            "owner": "Hannah",
+            "due": "before the next meeting"
+          },
+          {
+            "task": "Get the RFID pricing and price list from the library services supplier",
+            "owner": "Priya",
+            "due": ""
+          },
+          {
+            "task": "Do sketches of the casing appearance, materials, and wood panelling with the new heights",
+            "owner": "Tomas",
+            "due": "for the next meeting"
+          },
+          {
+            "task": "Write up the meeting notes and send them round, and fill Hannah in on the button",
+            "owner": "Project Manager",
+            "due": ""
+          }
+        ],
+        "SY0202c": [
+          {
+            "task": "Check the cost to tag stock in the four barcode-only branches",
+            "owner": "",
+            "due": ""
+          },
+          {
+            "task": "Look into text-to-speech engines together with the board choice",
+            "owner": "Tomas",
+            "due": ""
+          },
+          {
+            "task": "Send Tomas the list of things the text-to-speech engine has to read out",
+            "owner": "Hannah",
+            "due": ""
+          },
+          {
+            "task": "Do a foam board mock-up of the desk version with the real heights",
+            "owner": "Tomas",
+            "due": "next time"
+          },
+          {
+            "task": "Produce the final screens including the barcode fallback and the audio script",
+            "owner": "Hannah",
+            "due": "next time"
+          },
+          {
+            "task": "Put together the evaluation criteria based on the library services list",
+            "owner": "Priya",
+            "due": "next time"
+          },
+          {
+            "task": "Update the cost breakdown with the RFID and the veneer and circulate it with the notes",
+            "owner": "Project Manager",
+            "due": ""
+          }
+        ],
+        "SY0202d": [
+          {
+            "task": "Rework the screen layouts for seventeen inches and send the final set to library services for sign-off",
+            "owner": "Hannah",
+            "due": ""
+          },
+          {
+            "task": "Get the tagging contractor's rates for the four barcode-only branches from library services",
+            "owner": "Priya",
+            "due": "end of next week"
+          },
+          {
+            "task": "Write up the component spec including the board, engine, and screen for the final report",
+            "owner": "Tomas",
+            "due": "by Friday"
+          }
+        ],
+        "SY0209a": [
+          {
+            "task": "Check what existing children's cases cost in the shops.",
+            "owner": "",
+            "due": ""
+          },
+          {
+            "task": "Find out what drop test standards other cases are rated for.",
+            "owner": "Ben",
+            "due": ""
+          },
+          {
+            "task": "Find out what parents and teachers want from a case like this.",
+            "owner": "Tomasz",
+            "due": ""
+          },
+          {
+            "task": "Look at the functional side, including how the child uses the case, handle, buttons, and ports.",
+            "owner": "Priya",
+            "due": ""
+          },
+          {
+            "task": "Think about materials such as rubber, foam, and plastics that fit the budget.",
+            "owner": "Ben",
+            "due": ""
+          },
+          {
+            "task": "Write up the minutes and send them round.",
+            "owner": "Laura",
+            "due": ""
+          }
+        ],
+        "SY0209b": [
+          {
+            "task": "Email Tomasz to send the full survey results round before the next meeting",
+            "owner": "Project Manager",
+            "due": ""
+          },
+          {
+            "task": "Check what other cases sell for in the main shops for kids' tablet cases",
+            "owner": "Tomasz",
+            "due": ""
+          },
+          {
+            "task": "Sketch the fixed handle and where the cut-outs go",
+            "owner": "Priya",
+            "due": ""
+          },
+          {
+            "task": "Ask the supplier for a quote for the whole case in EVA with the handle and the lip",
+            "owner": "Ben",
+            "due": ""
+          },
+          {
+            "task": "Write the minutes and send them around",
+            "owner": "Project Manager",
+            "due": ""
+          }
+        ],
+        "SY0209c": [
+          {
+            "task": "Ask the supplier about the cost of the name tag window insert",
+            "owner": "Industrial Designer",
+            "due": ""
+          },
+          {
+            "task": "Check if the tablet case legally counts as a toy",
+            "owner": "",
+            "due": ""
+          },
+          {
+            "task": "Prepare the revised quote with the wedge, two colors, and the name window",
+            "owner": "Industrial Designer",
+            "due": ""
+          },
+          {
+            "task": "Update the sketches with the wedge and the name window",
+            "owner": "User Interface Designer",
+            "due": ""
+          },
+          {
+            "task": "Put together criteria for evaluating the final design based on the survey",
+            "owner": "Marketing Expert",
+            "due": ""
+          }
+        ],
+        "SY0209d": [
+          {
+            "task": "Check whether a case like this counts as a toy regarding children's safety rules",
+            "owner": "Ben",
+            "due": ""
+          },
+          {
+            "task": "Get physical samples in both blue and lime green",
+            "owner": "Ben",
+            "due": ""
+          },
+          {
+            "task": "Do final drawings with the pocket dimensions for the supplier",
+            "owner": "Priya",
+            "due": "this week"
+          },
+          {
+            "task": "Write up the evaluation scores as a section for the final report",
+            "owner": "Tomasz",
+            "due": ""
+          }
+        ],
+        "SY0304a": [
+          {
+            "task": "Look into sensing options, barrier counters versus bay sensors, roughly what each costs per unit, and casing durability outdoors",
+            "owner": "Marcus",
+            "due": "next time"
+          },
+          {
+            "task": "Do a quick survey of twenty or thirty people including students, staff, and a couple of visitors about what they want from the sign",
+            "owner": "Priya",
+            "due": ""
+          },
+          {
+            "task": "Sketch a few layouts for the screen using the number and colour idea in a couple of sizes",
+            "owner": "Tom",
+            "due": ""
+          },
+          {
+            "task": "Send round the minutes and the brief today and copy Marcus in with his bit",
+            "owner": "Hannah",
+            "due": "today"
+          }
+        ],
+        "SY0304b": [
+          {
+            "task": "Check the mains connection at each barrier with estates, and spec the casing properly",
+            "owner": "Marcus",
+            "due": ""
+          },
+          {
+            "task": "Produce final layout at sixty centimetres, LED, name on top, with the colour thresholds",
+            "owner": "Tom",
+            "due": ""
+          },
+          {
+            "task": "Try and get a few more visitors for the survey",
+            "owner": "Priya",
+            "due": ""
+          },
+          {
+            "task": "Chase estates on the central sign",
+            "owner": "Project Manager",
+            "due": ""
+          }
+        ],
+        "SY0304c": [
+          {
+            "task": "Create a final layout with the P symbol and navy color, without flashing, and show it on the navy casing",
+            "owner": "User Interface Designer",
+            "due": ""
+          },
+          {
+            "task": "Write up the open day results and send them round",
+            "owner": "Marketing Expert",
+            "due": "tomorrow"
+          },
+          {
+            "task": "Get a quote from an electrician for running the new supply at the library car park and spec the mounting",
+            "owner": "Marcus",
+            "due": ""
+          },
+          {
+            "task": "Check the wall mounting with estates during the site visit",
+            "owner": "Marcus",
+            "due": ""
+          }
+        ],
+        "SY0304d": [
+          {
+            "task": "Produce the five print-ready vector files for the name strips to the supplier's specification",
+            "owner": "Tom",
+            "due": "by end of next week"
+          },
+          {
+            "task": "Send the final spec to the supplier for the casing, posts, bracket, and LED panels",
+            "owner": "Marcus",
+            "due": "Monday"
+          },
+          {
+            "task": "Book the electrician with estates for the library car park",
+            "owner": "Marcus",
+            "due": ""
+          },
+          {
+            "task": "Conduct spot checks by counting cars by hand in the first couple of weeks",
+            "owner": "Priya",
+            "due": ""
+          },
+          {
+            "task": "Draft a piece for the campus newsletter explaining what the colours mean",
+            "owner": "Priya",
+            "due": ""
+          }
+        ]
+      }
+    }
+  }
+}

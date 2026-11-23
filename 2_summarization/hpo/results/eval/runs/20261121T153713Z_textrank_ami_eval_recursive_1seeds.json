@@ -1,0 +1,652 @@
+{
+  "run_id": "20261121T153713Z_textrank_ami_eval_recursive_1seeds",
+  "commit": "7cea72e708d1e24cc2cfda29055cb6507bbf3f94",
+  "uncommitted_changes": [
+    ".gitignore",
+    "1_ingestion/Dockerfile",
+    "1_ingestion/Dockerfile.dockerignore",
+    "2_summarization/bart_summarizer.py",
+    "2_summarization/llm_summarizer.py",
+    "2_summarization/run.py",
+    "2_summarization/settings.py",
+    "2_summarization/tests/test_llm_summarizer.py",
+    "2_summarization/textrank_baseline.py",
+    "5_data/ami/ami.py",
+    "README.md",
+    "docs/SUMMARIZATION.md",
+    "2_summarization/chunks.py",
+    "2_summarization/datasets.py",
+    "2_summarization/hpo/",
+    "2_summarization/tests/test_evaluation.py",
+    "6_evaluation/summarization/disaggregate.py"
+  ],
+  "dataset": "ami",
+  "mode": "recursive",
+  "data_hash": "1ce0450de10c44aa3d794865f7b53f50eab8a94b0027899c51d5dd2e6797c048",
+  "split_file_sha256": "09e6d3ee32281507391f23bb3bda6d6d98bacac9979e68cbd173702d4e1068c0",
+  "config": {
+    "model": {
+      "library": "summa",
+      "words": 160,
+      "min_line_words": 4,
+      "chunk_seconds": 30,
+      "buffer": 1.5,
+      "mode": "recursive"
+    },
+    "mode": "recursive",
+    "seeds": [
+      42
+    ],
+    "pythonhashseed": 42,
+    "bertscore": {
+      "model": "FacebookAI/roberta-large",
+      "revision": "722cf37b1afa9454edce342e7895e588b6ff1d59",
+      "rescale_with_baseline": false
+    }
+  },
+  "config_hash": "f867dba2b3f1",
+  "model": "textrank",
+  "model_version": "summa 1.2.0",
+  "split": "eval",
+  "meetings": [
+    "ES2004a",
+    "ES2004b",
+    "ES2004c",
+    "ES2004d",
+    "ES2014a",
+    "ES2014b",
+    "ES2014c",
+    "ES2014d",
+    "IS1009a",
+    "IS1009b",
+    "IS1009c",
+    "IS1009d",
+    "TS3003a",
+    "TS3003b",
+    "TS3003c",
+    "TS3003d",
+    "TS3007a",
+    "TS3007b",
+    "TS3007c",
+    "TS3007d"
+  ],
+  "meeting_groups": {
+    "ES2004a": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2004b": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2004c": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2004d": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2014a": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "ES2014b": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "ES2014c": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "ES2014d": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "IS1009a": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "IS1009b": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "IS1009c": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "IS1009d": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "TS3003a": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3003b": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3003c": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3003d": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007a": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007b": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007c": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007d": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    }
+  },
+  "metrics_by_group": {
+    "gender_mix": {
+      "groups": {
+        "all_female": {
+          "n": 4,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "IS1009a",
+            "IS1009b",
+            "IS1009c",
+            "IS1009d"
+          ],
+          "mean": {
+            "rouge1": 0.2663,
+            "rouge2": 0.0401,
+            "rougeL": 0.1477,
+            "rougeSU4": 0.0751,
+            "bertscore_f1": 0.8108
+          }
+        },
+        "all_male": {
+          "n": 8,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "TS3003a",
+            "TS3003b",
+            "TS3003c",
+            "TS3003d",
+            "TS3007a",
+            "TS3007b",
+            "TS3007c",
+            "TS3007d"
+          ],
+          "mean": {
+            "rouge1": 0.1805,
+            "rouge2": 0.0179,
+            "rougeL": 0.1032,
+            "rougeSU4": 0.0442,
+            "bertscore_f1": 0.798
+          }
+        },
+        "mixed": {
+          "n": 8,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "ES2004a",
+            "ES2004b",
+            "ES2004c",
+            "ES2004d",
+            "ES2014a",
+            "ES2014b",
+            "ES2014c",
+            "ES2014d"
+          ],
+          "mean": {
+            "rouge1": 0.2674,
+            "rouge2": 0.0359,
+            "rougeL": 0.1369,
+            "rougeSU4": 0.0756,
+            "bertscore_f1": 0.8126
+          }
+        }
+      },
+      "gap": {
+        "rouge1": 0.0869,
+        "rouge2": 0.0222,
+        "rougeL": 0.0445,
+        "rougeSU4": 0.0314,
+        "bertscore_f1": 0.0146
+      },
+      "worst": {
+        "rouge1": "all_male",
+        "rouge2": "all_male",
+        "rougeL": "all_male",
+        "rougeSU4": "all_male",
+        "bertscore_f1": "all_male"
+      }
+    },
+    "non_native": {
+      "groups": {
+        "all_native": {
+          "n": 12,
+          "n_series": 3,
+          "small": false,
+          "meetings": [
+            "ES2014a",
+            "ES2014b",
+            "ES2014c",
+            "ES2014d",
+            "TS3003a",
+            "TS3003b",
+            "TS3003c",
+            "TS3003d",
+            "TS3007a",
+            "TS3007b",
+            "TS3007c",
+            "TS3007d"
+          ],
+          "mean": {
+            "rouge1": 0.2124,
+            "rouge2": 0.0252,
+            "rougeL": 0.1168,
+            "rougeSU4": 0.0572,
+            "bertscore_f1": 0.8038
+          }
+        },
+        "mostly_non_native": {
+          "n": 4,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "IS1009a",
+            "IS1009b",
+            "IS1009c",
+            "IS1009d"
+          ],
+          "mean": {
+            "rouge1": 0.2663,
+            "rouge2": 0.0401,
+            "rougeL": 0.1477,
+            "rougeSU4": 0.0751,
+            "bertscore_f1": 0.8108
+          }
+        },
+        "some_non_native": {
+          "n": 4,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "ES2004a",
+            "ES2004b",
+            "ES2004c",
+            "ES2004d"
+          ],
+          "mean": {
+            "rouge1": 0.2586,
+            "rouge2": 0.0322,
+            "rougeL": 0.1298,
+            "rougeSU4": 0.068,
+            "bertscore_f1": 0.81
+          }
+        }
+      },
+      "gap": {
+        "rouge1": 0.0539,
+        "rouge2": 0.0149,
+        "rougeL": 0.0309,
+        "rougeSU4": 0.0179,
+        "bertscore_f1": 0.007
+      },
+      "worst": {
+        "rouge1": "all_native",
+        "rouge2": "all_native",
+        "rougeL": "all_native",
+        "rougeSU4": "all_native",
+        "bertscore_f1": "all_native"
+      }
+    }
+  },
+  "meetings_hash": "cc86e00bd353",
+  "n_seeds": 1,
+  "metrics_mean": {
+    "rouge1": 0.2324,
+    "rouge2": 0.0296,
+    "rougeL": 0.1256,
+    "rougeSU4": 0.0629,
+    "bertscore_f1": 0.8064
+  },
+  "metrics_std": {
+    "rouge1": 0.0,
+    "rouge2": 0.0,
+    "rougeL": 0.0,
+    "rougeSU4": 0.0,
+    "bertscore_f1": 0.0
+  },
+  "metrics_per_seed": {
+    "42": {
+      "rouge1": 0.2324,
+      "rouge2": 0.0296,
+      "rougeL": 0.1256,
+      "rougeSU4": 0.0629,
+      "bertscore_f1": 0.8064
+    }
+  },
+  "identical_across_seeds": true,
+  "seed_variation": {
+    "verdict": "Only one seed was run, so there is no seed variation to measure.",
+    "why": "TextRank (summa) has no random step: PageRank over a sentence-similarity graph, fixed input order. The seed cannot change the summary, so every seed should give the same text and std 0. Each seed sets Python random, NumPy and torch. PYTHONHASHSEED is fixed to the FIRST seed for the whole run.",
+    "seeds": [
+      42
+    ],
+    "metrics": {
+      "rouge1": {
+        "mean": 0.2324,
+        "std": 0.0,
+        "min": 0.2324,
+        "min_seed": 42,
+        "max": 0.2324,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rouge2": {
+        "mean": 0.0296,
+        "std": 0.0,
+        "min": 0.0296,
+        "min_seed": 42,
+        "max": 0.0296,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rougeL": {
+        "mean": 0.1256,
+        "std": 0.0,
+        "min": 0.1256,
+        "min_seed": 42,
+        "max": 0.1256,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rougeSU4": {
+        "mean": 0.0629,
+        "std": 0.0,
+        "min": 0.0629,
+        "min_seed": 42,
+        "max": 0.0629,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "bertscore_f1": {
+        "mean": 0.8064,
+        "std": 0.0,
+        "min": 0.8064,
+        "min_seed": 42,
+        "max": 0.8064,
+        "max_seed": 42,
+        "range": 0.0
+      }
+    },
+    "meetings_changed": 0,
+    "meetings_total": 20,
+    "per_meeting": {}
+  },
+  "seconds_per_meeting": 0.217,
+  "python": "3.12.10",
+  "packages": {
+    "summa": "1.2.0",
+    "rouge-score": "0.1.2",
+    "numpy": "2.5.4",
+    "torch": "2.14.1",
+    "transformers": "5.20.2",
+    "bert-score": "0.3.13",
+    "anthropic": "1.17.0"
+  },
+  "hardware": {
+    "machine": "AMD64",
+    "system": "Windows-11-10.0.26200-SP0",
+    "cpus": 16
+  },
+  "per_seed_runs": {
+    "42": {
+      "scores": {
+        "rouge1": 0.2324,
+        "rouge2": 0.0296,
+        "rougeL": 0.1256,
+        "rougeSU4": 0.0629,
+        "bertscore_f1": 0.8064
+      },
+      "per_meeting": {
+        "ES2004a": {
+          "rouge1": 0.23648648648648649,
+          "rouge2": 0.006802721088435374,
+          "rougeL": 0.10135135135135137,
+          "rougeSU4": 0.05498281786941581,
+          "bertscore_f1": 0.8138200640678406
+        },
+        "ES2004b": {
+          "rouge1": 0.3085399449035812,
+          "rouge2": 0.04986149584487534,
+          "rougeL": 0.17079889807162532,
+          "rougeSU4": 0.0968342644320298,
+          "bertscore_f1": 0.8213313817977905
+        },
+        "ES2004c": {
+          "rouge1": 0.2464985994397759,
+          "rouge2": 0.028169014084507043,
+          "rougeL": 0.1288515406162465,
+          "rougeSU4": 0.06439393939393938,
+          "bertscore_f1": 0.795131504535675
+        },
+        "ES2004d": {
+          "rouge1": 0.24299065420560748,
+          "rouge2": 0.04388714733542319,
+          "rougeL": 0.11838006230529595,
+          "rougeSU4": 0.055907172995780595,
+          "bertscore_f1": 0.809581995010376
+        },
+        "ES2014a": {
+          "rouge1": 0.30927835051546393,
+          "rouge2": 0.04844290657439447,
+          "rougeL": 0.16494845360824742,
+          "rougeSU4": 0.08624708624708623,
+          "bertscore_f1": 0.8121634125709534
+        },
+        "ES2014b": {
+          "rouge1": 0.3097826086956522,
+          "rouge2": 0.03278688524590164,
+          "rougeL": 0.16304347826086954,
+          "rougeSU4": 0.09733700642791553,
+          "bertscore_f1": 0.8295652866363525
+        },
+        "ES2014c": {
+          "rouge1": 0.23098591549295774,
+          "rouge2": 0.0339943342776204,
+          "rougeL": 0.11267605633802817,
+          "rougeSU4": 0.06476190476190477,
+          "bertscore_f1": 0.8085423707962036
+        },
+        "ES2014d": {
+          "rouge1": 0.25474254742547425,
+          "rouge2": 0.043596730245231606,
+          "rougeL": 0.13550135501355012,
+          "rougeSU4": 0.08424908424908426,
+          "bertscore_f1": 0.8104643821716309
+        },
+        "IS1009a": {
+          "rouge1": 0.32222222222222224,
+          "rouge2": 0.07262569832402234,
+          "rougeL": 0.20555555555555555,
+          "rougeSU4": 0.1004694835680751,
+          "bertscore_f1": 0.8267773389816284
+        },
+        "IS1009b": {
+          "rouge1": 0.25280898876404495,
+          "rouge2": 0.02259887005649718,
+          "rougeL": 0.1348314606741573,
+          "rougeSU4": 0.06552706552706554,
+          "bertscore_f1": 0.8058204650878906
+        },
+        "IS1009c": {
+          "rouge1": 0.19662921348314605,
+          "rouge2": 0.01694915254237288,
+          "rougeL": 0.10674157303370785,
+          "rougeSU4": 0.05128205128205128,
+          "bertscore_f1": 0.8016130924224854
+        },
+        "IS1009d": {
+          "rouge1": 0.29341317365269465,
+          "rouge2": 0.048192771084337345,
+          "rougeL": 0.1437125748502994,
+          "rougeSU4": 0.08308004052684904,
+          "bertscore_f1": 0.8088062405586243
+        },
+        "TS3003a": {
+          "rouge1": 0.12286689419795221,
+          "rouge2": 0.020618556701030927,
+          "rougeL": 0.07508532423208192,
+          "rougeSU4": 0.02662037037037037,
+          "bertscore_f1": 0.8015261888504028
+        },
+        "TS3003b": {
+          "rouge1": 0.24922118380062305,
+          "rouge2": 0.03134796238244514,
+          "rougeL": 0.16199376947040497,
+          "rougeSU4": 0.07278481012658226,
+          "bertscore_f1": 0.8139893412590027
+        },
+        "TS3003c": {
+          "rouge1": 0.24489795918367346,
+          "rouge2": 0.03424657534246576,
+          "rougeL": 0.1292517006802721,
+          "rougeSU4": 0.062283737024221464,
+          "bertscore_f1": 0.8045964241027832
+        },
+        "TS3003d": {
+          "rouge1": 0.2119565217391304,
+          "rouge2": 0.010928961748633878,
+          "rougeL": 0.11956521739130435,
+          "rougeSU4": 0.04683195592286501,
+          "bertscore_f1": 0.7922082543373108
+        },
+        "TS3007a": {
+          "rouge1": 0.15197568389057753,
+          "rouge2": 0.01834862385321101,
+          "rougeL": 0.0972644376899696,
+          "rougeSU4": 0.0360082304526749,
+          "bertscore_f1": 0.7987810969352722
+        },
+        "TS3007b": {
+          "rouge1": 0.17438692098092642,
+          "rouge2": 0.0,
+          "rougeL": 0.09264305177111717,
+          "rougeSU4": 0.041436464088397795,
+          "bertscore_f1": 0.7870544791221619
+        },
+        "TS3007c": {
+          "rouge1": 0.18082191780821918,
+          "rouge2": 0.022038567493112952,
+          "rougeL": 0.10410958904109589,
+          "rougeSU4": 0.044444444444444446,
+          "bertscore_f1": 0.7994288206100464
+        },
+        "TS3007d": {
+          "rouge1": 0.10826210826210828,
+          "rouge2": 0.005730659025787966,
+          "rougeL": 0.045584045584045586,
+          "rougeSU4": 0.023121387283236997,
+          "bertscore_f1": 0.7866958975791931
+        }
+      },
+      "predictions": {
+        "ES2004a": "Um then we'll go do tool training,. discuss our own ideas and everything um. Um, we want it to be original,. Okay, um, first is the functional design,. um this is where we all go off and do our individual work,. um what needs need to be fulfilled by the product,. um what effects the product has to have. and um sum up the characteristics of that animal. Um. yeah that's about it I think. Um, I'm very impressed with your artistic skills,. I was gonna do a big cat too, um. could have been a seagull,. I never thought of a seagull. An eagle, um again I'm thinking on my feet goodness. I'll be able to um pull it up,. um production cost's at twelve fifty, so. um making that a key point,. it's obvious what you're doing, um. Um. I think that's probably about it. and look a bit different,. which looks a bit smarter,.",
+        "ES2004b": "so it's not of no use of punching in the uh trying to put in those things in on the top of the remote control and try to confuse the user. The overall thing which I've I've got at the top there in italics is that users dislike the look and feel of current remote controls,. Um, we found that seventy five percent of users find most remote controls ugly. Um, current remote controls do not match well with the operating behaviour of the user overall. Um and possibly we can also cut back on cost if we don't have so many functions actually on the remote control. Um. the biggest frustrations that people found with regard to personal preferences were um something that you you mentioned earlier, uh remote controls are often lost in the room,. again that was to aid I think in uh when they've lost the actual remote control, some kind of speech recognition. Okay, so the remote control functions.",
+        "ES2004c": "I th I I think yeah um. and um a different shape from what's normal. just a different shape from what's normal, um. Um. and the the general feedback from them is that the most. Um, yes, thank you. And that'll that would l would last for um. Well add it in to think about um. Um, my second part of my findings. Um, the case material, I've a been sent what the factory can actually give us,. quite um there's quite a few design restrictions that they've got on the shape of the case. Well you cou um. Um, okay so we've got battery. So there's not a really a decision to be made there, um. um so you either want something that goes with that,. I think you just address that with um advertising. um that seems to make sense,. so I um think we've probably got about that time before we come back.",
+        "ES2004d": "Um not now. And then finally um on to the interface. Mm um I I think this is chip. Um mm now we're looking at. Um. maybe because it's slightl. Um I think it would r. Um it might have influenced our choice. Um and the interface. If we tr um. it um it would make one difference. Um We can do it some other way,. But we're still working to um head o. um in the sense that. um did you feel like a team? so much that we needed to um bounce off each other. Um uh I'm still not caught up. Um like the whole picture of the thing. I mean they could even go into um you go in with an idea. Um our costs are below budget. Um it's it is it's a conspiracy going on here. Um the project has been evaluated well and truly. Um yeah, just the last, I think.",
+        "ES2014a": "We uh are to get acquainted. And uh having uh meetings so that we can uh during the course of the day um come up with a better better inst implement than we had before. And therefore um have a successful uh conclusion to the day. Um. and you'll be doing uh various designs uh throughout the day to meet this end. Uh. So we will um. uh if we're still all with us. to help uh you um folks design our our new model as it were. So uh any any thoughts? And um sometimes uh they sort of remote controls defeat their own purpose. we need to sort of maybe think about how um we could maybe uh develop a remote control which moves around the room. Um if you grab the kind of uh slide to the left and pull it down? Marketing, the user requirement specification. Specific instructions will be sent to you by your person by your personal coach.",
+        "ES2014b": "Um of the of the remote control. first is the research I made on the on the remote control itself um. Um I've established what the components required for the remote control to function, actually are. Um here are two example remotes. Um how d how does a remote control look and feel for them,. Um we also asked what frustrated people about remote controls. Um we could maybe come up with a menu, a sort of a an L_C_D_ menu for other functions on the remote control. And we could maybe think about using speech recogniti recognition as a way to find the remote control if it's lost in a room, rather than sort of um having it to speech recognition to change the channels. Um would it take quite a while to sort of develop the speech recognition software in the remote control? But I don't really know what they're for,. I just know they're something to do with Dolby.",
+        "ES2014c": "so if we go through those and then um. Um that's one option,. Um which is the next section. The firm supplies a simple, a regular and an advanced um circuit board. Um and I guess that would require a more advanced circuit board,. Um and for the circuit board, again depends on which features we want in the actual in the remote. Um that's a that's a decision for all of us. Um yeah we should. if if you down um. Um but then we don't know for sure whether it would require a more complicated circuit board. Um if it's just the push button then it just needs the simple circuit board. Um. What did they say? Um oh no no no. So it is a possibility, um. Um it's not very clear up there,. Fairly sort of self explanatory. We should now go away and get these things sorted out.",
+        "ES2014d": "And we've got the stick on the button with the company logo on. so you've got the volume in orange on design there,. So we've got um detail design meeting. Well, so we've got one special button form, which was the apple. it's nine point seven I've got. We've got almost everything we can. and we've got it in at the moment. Well, we've got special form. And we've got special form is the one apple. but we've now s we now sort of got an extra form, and an extra colour for the buttons. Well, but you've got the company logo on there,. And then y but you've got the space for it to stick it on. we've got point two to play with if you really wanted to. Well, in this one, you've actually got three colours of buttons. We've got the closing. so we've got uh. I think that we've got two questionnaires.",
+        "IS1009a": "Uh I think the first thing we do is introduce ourselves. And my role is to design uh a television remote control. Uh I'm Jeanne-Oui. Um uh my role is industrial designer. and my responsibilities are uh uh um deal with the technical-functional designs. This thing we are gonna um uh design is a new remote control. uh which, of course, we all have to think about when we design this thing. Now, uh the discussion I guess is um does anyone of you have experience with remote control? So it should be a multi-functional uh gadget that would um control all your household uh uh machines basically. Uh so, so it's really the beep or, or a light should blink. Beep or uh it's a light, maybe it's a light. Well, because you're s because you're silly. Because people are silly. I_D_ uh who is this? Uh working design, yeah, it's it's uh mainly technical-functional design.",
+        "IS1009b": "It should be a battery because uh uh remote controller should be like you you you should take it t to wherever you want. like if you press a button channel or something like that then uh the remote uh remote controller will send a send a se send a signal,. So I I just would like to uh add some extra features to the remote controller. it's like el the text or buttons which uh which are there on the uh remote controller they those we can make uh um like fluorescent. uh they'll be like light emitting if it is dark so that you can find your remote controller if it is dark. like uh uh you should be able to lock your remote controller so that uh um whatever buttons are pressed by a child they can't be like y you i you if you have ki kids and all then they'll be pl playing with the remote controllers so can lock the remote controller.",
+        "IS1009c": "Um how uh how we doing? interface designer um uh has mentioned that the that it, of course, should have an on-off button,. And then you have swapping of uh button. So can you go on t t uh to the next slide. Uh, can you go on to the next slide, please. uh um mm yeah,. Yeah, di um can y uh. Uh and also there are uh um resistors. and also you can see uh there are b s like uh um access for buttons,. uh th it will. Uh yeah, on the scroll and the push-button, um ca you can achieve scrolling by repeatedly pushing a button? So I think it's better we go for uh um ordinary buttons. so it like it's uh everything so i. No, it's it's, uh yeah,. Okay, so why don't we put down speech recognition if possible pending some more research from our industrial engineer on how expensive that is. Okay.",
+        "IS1009d": "She would like uh this whole thing should be push buttons with a simple chip. Uh um and also i it it will be easily fit into into the hands and you can access all the buttons easily. Um the material is plastic and uh for the buttons it is uh s soft rubber. and the button button's part uh will be explained by F Francina. Now uh we have included the switch on and off button. Um the um these buttons uh around here are the mute. Uh, button supplement special colour? Uh, I think I would give it a two. yeah, include some more buttons and uh um. Uh I think they are quite big,. Uh, um are we happy with the creativity that has passed here. Do we do we have some time left? Ah yes we have time later. It'll take me the rest of the time to get my microphone out from my necklace.",
+        "TS3003a": "Uh let's see. Uh there are also some microphones there. because it will uh disappear when you don't attend to it. uh we make it work,. Uh maybe I can sit down,. But that will be all worked out in uh other meetings. uh these functions we don't have anything to do with,. Uh select a pen,. Uh. Maybe you have to hold it a bit upside-down. because uh they are uh independent. It's pretty uh easy. Uh that's the least we have to get from our remote controls,. Uh we can do it international,. So that uh that's something we have to find out, I think. Maybe we can make it uh uh. Uh, you never no know uh,. Thought it might be handy to put a battery status display on it. how much is left in the battery. That's an idea as well. Other ideas? Quick ideas. Any questions about this uh presentation?",
+        "TS3003b": "So these are the most most uh important functions on a remote control. I think uh we uh must use the general functions uh of the uh remote control. I I've been thinking about a simple manner uh to put a lot of functions uh uh in one um in one uh remote control. Got uh many functions in one uh remote control,. Um few uh buttons. Uh it's not too much. And uh you only have to design a remote once,. And uh it's a function we don't need in our remote control. Uh if we put a lot of effort in those, we can make a remote control with uh just two or three buttons. Uh. I think so as well. Maybe we can make that um another point of advantage in our remote control, if we uh make a k a button ex for example for big subtitles,. I think uh that's very important we have a few buttons.",
+        "TS3003c": "Uh these are the points um we agreed on. Um the uh last meeting uh we had a about um uh using a f few buttons. So uh um uh. Um uh let's see. um just one button to keep it uh simple. So uh Um Yeah. Just um we can put uh the on-off button uh over in this uh corner,. um almost uh e all uh remote controls uh are using a on-off button on that place. Uh um you can put it uh on top. So um and uh. Um for the case, uh the supplement and the buttons, it really depends on the designer. but it's um not quite uh fancy. Um you uh said you wanted to put the um changing channels button on the right side,. Then we can save this one in the folders group. if you wanna have a look at it, it's over there in the projects folder.",
+        "TS3003d": "Uh, let me see. after this you will be uh free to go. Uh but um. But uh I think these are altogether quite a quite a few buttons. we don't uh have to use it. And uh that's about it. So there's not much to uh to save there. So that's uh not much to save either. Uh seventeen. Uh with the help button. Uh, it's just one button. I think they uh try t. but then you you can push uh some other button as well. It's uh it's more the moulds in which they are being made, I think. Might uh might be confusing too. Uh, yes they are. Uh, is it functional? Think it's uh seven. Uh We have to test it. Uh, minus one. that will be the evaluation. Also, you two of you with the uh last phase? Evaluation criteria. Then we still have some questions. If somebody has some questions they can ask them now.",
+        "TS3007a": "uh These are cameras,. so we don't have our uh laptops in front of the cameras. Uh first a little opening. Uh I will introduce myself,. So uh we get to know each other. They uh they wanna do something else. That's two things really uh close to each other. that's uh very important uh for them. Uh there are three stages. what are we going uh to uh to do? So it's uh it's very straightforward. That's a very important uh thing. or uh did you just make it up yourself? It's uh it's uh I I. 'Cause we uh really don't know each other,. so uh watch it. You don't see it uh at the ears? Mm uh Not really. why was your cat uh red? so uh must be red. But what is he uh? Uh but I have some points. that's the thing we uh discussed. And then you s then you can delete uh.",
+        "TS3007b": "I will uh take minutes. so you can read that uh now or afterwards. we have uh forty minutes,. and how we could uh build one. Uh well. and those uh have a transmitter. and thus uh that's. But it may be uh may be something to explore. uh that you can find anywhere. So we didn't and we don't have to do all uh to be too complicated about that. there is a switch uh between these. but what should we uh s I I I f. And uh don't overbuild,. uh and never use,. and therefore it's uh important. Uh I do agree,. and have them uh hidden or something,. so you must uh the the the. uh you can go back to the shop. I was uh doubting about which one to take,. uh I have updated them. uh how late do we have to get back be back here? in my own uh in my own messenger.",
+        "TS3007c": "Uh how how about the energy? So uh where to put what button. Uh, let me see. Uh below forty five and above. And so that Uh Uh well,. Uh that might be an idea,. Uh that's maybe just me,. but Uh, we could uh. What uh what do you think? uh so what are the opinions? Can I uh do my thing? I think he did some uh. So, uh we decided to take. Uh, it's very innovative. Yeah, it it can be uh very expensive. So that will uh that that that must be in it, you think? So the games uh are in it. But it would would be uh more expensive. But, on the T_V_. at least my T_V_, is a is a compartment which you can press. Uh but there may not be too many buttons. and uh it has m. I will thank you all. Thank you. Thank you very much. Thank you too, lord.",
+        "TS3007d": "we have we have must uh,. Not not too uh yeah. uh three or yeah. Uh, I don I don't know. Well, then uh then I'll go for four. Uh,. Okay, I will uh. you give it a sample, uh one. but what else uh do we have to cut out? No, tho uh that that can be done. No, leadership was uh. but uh, it was your first,. no uh no disrespect or something,. No, uh that's true. You can go uh. What I really miss also is uh. well you you ca uh you can,. and then you can react uh on it. But, uh you can still discuss about it,. Uh well, just about,. Uh, that must be made,. Okay well, that uh that can be done. Maybe we can do it uh together. and uh here here it is. Uh, it's very cheap,. but so we can discuss that uh. And we have uh, another blank one."
+      },
+      "seconds": 4.345426799962297
+    }
+  }
+}

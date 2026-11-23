@@ -1,0 +1,1260 @@
+{
+  "meeting_id": "SY0101d",
+  "raw_sha256": "699605d242d75f6f60948c9132e31c3d525950e4f1127499512cb8e5db08546d",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting and confirmed that everyone had received the minutes of the conceptual design meeting.",
+        "The industrial designer and the user interface designer presented the mock-up of the counter-top timer with a flat display window, a row of ten timer icons, a rotary dial and a cancel button that was moved further from the dial and made square after it was pressed by mistake during testing.",
+        "The industrial designer presented the cost breakdown: 11.10 euros per unit, or 12.00 euros with the 0.90 euro backup battery. A third sage green colour would add about 0.40 euros per unit in setup fees, so the team revised its earlier agreement on sage green and chose to include the backup battery and keep only white and black.",
+        "The user interface designer presented the final forty-word vocabulary and the alarm wording, three beeps followed by '[name] timer is done', repeated every ten seconds until cancelled.",
+        "The marketing expert evaluated the design against five survey criteria on a scale of one to seven. All scored one or two except alarm loudness over an extractor fan, which scored three because the speaker has not been tested."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will test the speaker next to a running extractor fan.",
+        "The industrial designer will update the cost sheet to include the backup battery and remove the sage green colour.",
+        "The user interface designer will send round the final vocabulary list with example phrases.",
+        "The marketing expert will write up the evaluation.",
+        "The project manager will put together the final report and send round the minutes."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The cancel button is moved about two centimetres below the dial and made square so it can be told apart from the round dial by touch.",
+        "The backup battery (0.90 euros) is included, bringing the unit cost to 12.00 euros and leaving 0.50 euros of margin.",
+        "The timer will come in white and black only. Sage green was agreed at the start of the meeting but dropped after the cost breakdown showed a setup fee of about 0.40 euros per unit.",
+        "The vocabulary uses exactly forty words: the wake word, the commands, the ten timer names and the number words.",
+        "The alarm beeps three times and then says '[name] timer is done', for example 'pasta timer is done', and repeats every ten seconds until the user says cancel or presses the button. The alarm phrases are stored audio and do not use the chip's vocabulary.",
+        "The design scored one for hands-free use, one for telling timers apart, three for alarm loudness, two for ease of cleaning and one for not changing batteries."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The speaker's loudness over an extractor fan has not been tested, which is why that criterion scored only three.",
+        "The margin is only 0.50 euros per unit, so any component price increase could push the timer over budget.",
+        "Sage green might come back as a later edition if the product sells, but this was not agreed.",
+        "The timer is wipe-clean but not dishwasher safe."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0101d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0101d.ai1",
+        "description": "Test the speaker's loudness next to a running extractor fan.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0101d.s0120",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0101d.s0121",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0101d.s0110",
+          "SY0101d.s0111",
+          "SY0101d.s0120",
+          "SY0101d.s0121"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0101d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0101d.ai2",
+        "description": "Update the cost sheet to include the backup battery and remove the sage green colour.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0101d.s0120",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0101d.s0121",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0101d.s0061",
+          "SY0101d.s0120",
+          "SY0101d.s0121"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0101d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0101d.ai3",
+        "description": "Send round the final forty-word vocabulary list with example phrases.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0101d.s0081",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0101d.s0122",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0101d.s0123",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0101d.s0081",
+          "SY0101d.s0122",
+          "SY0101d.s0123"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0101d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0101d.ai4",
+        "description": "Write up the evaluation of the design against the survey criteria.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0101d.s0124",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0101d.s0125",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0101d.s0124",
+          "SY0101d.s0125"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0101d.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0101d.ai5",
+        "description": "Put together the final report and send round the minutes.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0101d.s0126",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0101d.s0126"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f1",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager confirmed that everyone had received the minutes of the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0101c",
+        "evidence_segments": [
+          "SY0101d.s0004",
+          "SY0101d.s0005",
+          "SY0101d.s0006"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert brought back the third colour (sage green), which had been left open in the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0101c",
+        "evidence_segments": [
+          "SY0101d.s0011",
+          "SY0101d.s0012"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer confirmed the 4.20 euro voice input and output cost and the 11.10 euro unit estimate from the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0101c",
+        "evidence_segments": [
+          "SY0101d.s0041",
+          "SY0101d.s0044"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f4",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert recalled that in the survey from the functional design meeting, people mainly did not want to change batteries.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0101b",
+        "evidence_segments": [
+          "SY0101d.s0056",
+          "SY0101d.s0057"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f5",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert asked whether her earlier suggestion 'pasta is done' had been used for the alarm wording.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0101c",
+        "evidence_segments": [
+          "SY0101d.s0084",
+          "SY0101d.s0085"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f6",
+        "type": "plan_change",
+        "fact": "Early in the meeting the team agreed to add sage green as a third colour. After the cost breakdown showed a setup fee of about 0.40 euros per unit, they dropped sage green, kept white and black only, and included the backup battery.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101d.s0011",
+          "SY0101d.s0014",
+          "SY0101d.s0015",
+          "SY0101d.s0016",
+          "SY0101d.s0017",
+          "SY0101d.s0049",
+          "SY0101d.s0050",
+          "SY0101d.s0052",
+          "SY0101d.s0055",
+          "SY0101d.s0056",
+          "SY0101d.s0058",
+          "SY0101d.s0059",
+          "SY0101d.s0060",
+          "SY0101d.s0061",
+          "SY0101d.s0062",
+          "SY0101d.s0063",
+          "SY0101d.s0064",
+          "SY0101d.s0065"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f7",
+        "type": "decision",
+        "fact": "The timer will come in white and black only. Sage green was dropped.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101d.s0061",
+          "SY0101d.s0062",
+          "SY0101d.s0063",
+          "SY0101d.s0064",
+          "SY0101d.s0065"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f8",
+        "type": "decision",
+        "fact": "The 0.90 euro backup battery is included, so the unit cost is 12.00 euros with 0.50 euros of margin.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101d.s0046",
+          "SY0101d.s0061",
+          "SY0101d.s0068"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f9",
+        "type": "decision",
+        "fact": "The cancel button is moved about two centimetres below the dial and made square to tell it apart from the round dial.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101d.s0030",
+          "SY0101d.s0031",
+          "SY0101d.s0033",
+          "SY0101d.s0034",
+          "SY0101d.s0035"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f10",
+        "type": "decision",
+        "fact": "The final vocabulary uses exactly forty words: the wake word, the commands, the ten timer names and the number words.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101d.s0082",
+          "SY0101d.s0083"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f11",
+        "type": "decision",
+        "fact": "The alarm beeps three times, then says '[name] timer is done', and repeats every ten seconds until cancelled by voice or button.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101d.s0085",
+          "SY0101d.s0086",
+          "SY0101d.s0087",
+          "SY0101d.s0088",
+          "SY0101d.s0091"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f12",
+        "type": "other",
+        "fact": "The alarm phrases are stored audio clips and do not use any of the chip's forty recognised words.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101d.s0089",
+          "SY0101d.s0090"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f13",
+        "type": "other",
+        "fact": "The cost breakdown was: voice chip 2.80, speaker 1.40, backlit LCD 1.60, dial and button about 1.00, ABS case with seals 2.20, and the rest for the board, power, USB adapter and assembly, totalling 11.10 euros.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101d.s0041",
+          "SY0101d.s0042",
+          "SY0101d.s0043",
+          "SY0101d.s0044"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f14",
+        "type": "decision",
+        "fact": "The design was evaluated on a 1-7 scale (1 best): hands-free use 1, telling timers apart 1, alarm loudness over the extractor fan 3, ease of cleaning 2, not changing batteries 1.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101d.s0101",
+          "SY0101d.s0105",
+          "SY0101d.s0107",
+          "SY0101d.s0111",
+          "SY0101d.s0112",
+          "SY0101d.s0114",
+          "SY0101d.s0116",
+          "SY0101d.s0117",
+          "SY0101d.s0118"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f15",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested sage green as a later edition if the timer sells. The project manager said not for now.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101d.s0066",
+          "SY0101d.s0067"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f16",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer proposed letting users turn off the spoken alarm and keep only the beep by holding the cancel button. It was not adopted.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101d.s0093",
+          "SY0101d.s0094",
+          "SY0101d.s0095",
+          "SY0101d.s0096",
+          "SY0101d.s0097"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f17",
+        "type": "action_item",
+        "fact": "The industrial designer will test the speaker next to a running extractor fan.",
+        "agreed": null,
+        "related_action_item": "SY0101d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101d.s0120",
+          "SY0101d.s0121"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f18",
+        "type": "action_item",
+        "fact": "The industrial designer will update the cost sheet with the backup battery and without sage green.",
+        "agreed": null,
+        "related_action_item": "SY0101d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101d.s0120",
+          "SY0101d.s0121"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f19",
+        "type": "action_item",
+        "fact": "The user interface designer will send round the vocabulary list.",
+        "agreed": null,
+        "related_action_item": "SY0101d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101d.s0081",
+          "SY0101d.s0122",
+          "SY0101d.s0123"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f20",
+        "type": "action_item",
+        "fact": "The marketing expert will write up the evaluation.",
+        "agreed": null,
+        "related_action_item": "SY0101d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101d.s0124",
+          "SY0101d.s0125"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101d.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101d.f21",
+        "type": "action_item",
+        "fact": "The project manager will put together the final report and send round the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0101d.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101d.s0126"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_OFF_TOPIC_TANGENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_OFF_TOPIC_TANGENT",
+        "segments": [
+          "SY0101d.s0069",
+          "SY0101d.s0070",
+          "SY0101d.s0071",
+          "SY0101d.s0072",
+          "SY0101d.s0073",
+          "SY0101d.s0074",
+          "SY0101d.s0075",
+          "SY0101d.s0076",
+          "SY0101d.s0077",
+          "SY0101d.s0078"
+        ],
+        "note": "After the cost discussion the team drifts into a ten-segment chat about the broken office coffee machine and who has a fourth-floor badge, until the project manager steers back at segment 79."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_PLAN_CHANGE",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_PLAN_CHANGE",
+        "segments": [
+          "SY0101d.s0011",
+          "SY0101d.s0012",
+          "SY0101d.s0013",
+          "SY0101d.s0014",
+          "SY0101d.s0015",
+          "SY0101d.s0016",
+          "SY0101d.s0017",
+          "SY0101d.s0049",
+          "SY0101d.s0050",
+          "SY0101d.s0051",
+          "SY0101d.s0052",
+          "SY0101d.s0053",
+          "SY0101d.s0054",
+          "SY0101d.s0055",
+          "SY0101d.s0056",
+          "SY0101d.s0057",
+          "SY0101d.s0058",
+          "SY0101d.s0059",
+          "SY0101d.s0060",
+          "SY0101d.s0061",
+          "SY0101d.s0062",
+          "SY0101d.s0063",
+          "SY0101d.s0064",
+          "SY0101d.s0065"
+        ],
+        "note": "The team agrees early on to add sage green as a third colour, then after the cost breakdown reverses this, keeping white and black only and including the backup battery instead."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

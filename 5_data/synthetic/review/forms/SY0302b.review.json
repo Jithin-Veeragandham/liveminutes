@@ -1,0 +1,1170 @@
+{
+  "meeting_id": "SY0302b",
+  "raw_sha256": "9c4d1cfe389c612be25a41ae26f71b65d0c0c4e86d8077e1209f76fd988255e4",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the functional design meeting, welcomed the marketing expert back after his absence from the kick-off, and recapped the earlier decisions and open questions.",
+        "The industrial designer presented component research: offline fixed-vocabulary voice chips cost about 3.80 Euro, online recognition is far over budget, and kitchen noise above about 65 decibels may cause missed commands, so he recommended two microphones.",
+        "The user interface designer presented a small command set with named timers, short spoken confirmations and a three-row display. The marketing expert's research supported named timers and showed most users run two or three timers at once.",
+        "The marketing expert reported that most people time cooking with their phone or oven timer, and that users like a wake word because it prevents false triggers, although 'Hey Chef' got a mixed reaction.",
+        "The industrial designer declared that the timer would be fully waterproof, but nobody agreed and the question was left open. A task for the user interface designer to record kitchen noise clips was created and then cancelled because the chip maker supplies a noise test kit."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will prepare a cost breakdown (chip, two microphones, display) and check whether a larger-vocabulary chip is needed.",
+        "The user interface designer will turn the command list into a full interaction flow covering three timers and the display.",
+        "The marketing expert will test two or three two-syllable wake word names with the people from his research.",
+        "The project manager will write up the minutes and send them round."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "Voice recognition will run offline on the device with a fixed vocabulary.",
+        "Timers can be given names (such as 'pasta'), rather than being numbered.",
+        "The timer will support a maximum of three simultaneous timers.",
+        "The physical stop button stops all timers that are currently ringing.",
+        "The timer will have a wake word. The name is still to be decided."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The fixed vocabulary of about fifty words may be too small for numbers, commands and timer names, so a larger chip may be needed.",
+        "Kitchen noise such as an extractor fan can exceed the chip's roughly 65 decibel limit. A second microphone is recommended but must fit the budget.",
+        "Whether the timer should be waterproof or splash-proof is still unresolved.",
+        "The wake word name is not yet chosen. 'Hey Chef' received mixed reactions."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0302b.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0302b.ai1",
+        "description": "Record kitchen noise clips (fan, tap, etc.) for testing the voice chip",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "dropped",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0302b.s0035",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0302b.s0037",
+            "event": "assigned",
+            "by": "B",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0302b.s0038",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0302b.s0102",
+            "event": "dropped",
+            "by": "B",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0302b.s0035",
+          "SY0302b.s0036",
+          "SY0302b.s0037",
+          "SY0302b.s0038",
+          "SY0302b.s0098",
+          "SY0302b.s0099",
+          "SY0302b.s0100",
+          "SY0302b.s0101",
+          "SY0302b.s0102",
+          "SY0302b.s0103"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0302b.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0302b.ai2",
+        "description": "Prepare cost breakdown (chip, two microphones, display) and check whether the larger-vocabulary chip is needed",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0302b.s0053",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0302b.s0105",
+            "event": "assigned",
+            "by": "B",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0302b.s0106",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0302b.s0053",
+          "SY0302b.s0105",
+          "SY0302b.s0106"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0302b.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0302b.ai3",
+        "description": "Turn the command list into a full interaction flow with three timers and the display",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0302b.s0107",
+            "event": "assigned",
+            "by": "B",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0302b.s0108",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0302b.s0107",
+          "SY0302b.s0108"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0302b.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0302b.ai4",
+        "description": "Test two or three two-syllable wake word names with research participants",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0302b.s0096",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0302b.s0097",
+            "event": "assigned",
+            "by": "B",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0302b.s0109",
+            "event": "restated",
+            "by": "B",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0302b.s0110",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0302b.s0091",
+          "SY0302b.s0096",
+          "SY0302b.s0097",
+          "SY0302b.s0109",
+          "SY0302b.s0110"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0302b.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0302b.ai5",
+        "description": "Write up the minutes and send them round",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0302b.s0111",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0302b.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302b.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302b.f1",
+        "type": "decision",
+        "fact": "The team agreed that voice recognition will be offline, on the device, with a fixed vocabulary.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302b.s0018",
+          "SY0302b.s0019",
+          "SY0302b.s0020",
+          "SY0302b.s0021",
+          "SY0302b.s0022",
+          "SY0302b.s0023",
+          "SY0302b.s0024",
+          "SY0302b.s0025",
+          "SY0302b.s0026"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302b.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302b.f2",
+        "type": "decision",
+        "fact": "The team agreed to keep named timers rather than numbering them.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302b.s0046",
+          "SY0302b.s0054",
+          "SY0302b.s0055",
+          "SY0302b.s0056",
+          "SY0302b.s0057",
+          "SY0302b.s0058",
+          "SY0302b.s0059",
+          "SY0302b.s0060"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302b.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302b.f3",
+        "type": "decision",
+        "fact": "The team agreed to cap the timer at three simultaneous timers.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302b.s0064",
+          "SY0302b.s0066",
+          "SY0302b.s0068",
+          "SY0302b.s0069",
+          "SY0302b.s0070",
+          "SY0302b.s0071",
+          "SY0302b.s0072",
+          "SY0302b.s0073"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302b.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302b.f4",
+        "type": "decision",
+        "fact": "The team agreed that the physical stop button stops all timers currently ringing.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302b.s0074",
+          "SY0302b.s0075",
+          "SY0302b.s0076",
+          "SY0302b.s0077",
+          "SY0302b.s0078"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302b.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302b.f5",
+        "type": "decision",
+        "fact": "The team agreed the timer will have a wake word, with the name still to be decided.",
+        "agreed": true,
+        "related_action_item": "SY0302b.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302b.s0085",
+          "SY0302b.s0086",
+          "SY0302b.s0091",
+          "SY0302b.s0092",
+          "SY0302b.s0093",
+          "SY0302b.s0094"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302b.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302b.f6",
+        "type": "unagreed_proposal",
+        "fact": "The industrial designer stated that the timer would be made fully waterproof as if it were settled, but nobody agreed and the project manager moved on to the commands.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302b.s0040",
+          "SY0302b.s0041",
+          "SY0302b.s0042"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302b.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302b.f7",
+        "type": "unagreed_proposal",
+        "fact": "The project manager suggested numbering timers instead of naming them. The user interface designer and marketing expert argued against it and it was not adopted.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302b.s0054",
+          "SY0302b.s0055",
+          "SY0302b.s0056",
+          "SY0302b.s0057"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302b.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302b.f8",
+        "type": "action_item",
+        "fact": "The user interface designer offered to record kitchen noise clips for the industrial designer, and the project manager put it down as a task.",
+        "agreed": null,
+        "related_action_item": "SY0302b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302b.s0035",
+          "SY0302b.s0036",
+          "SY0302b.s0037",
+          "SY0302b.s0038"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302b.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302b.f9",
+        "type": "action_item_removed",
+        "fact": "The project manager cancelled the kitchen noise clips task because the chip maker provides a calibrated kitchen noise test kit.",
+        "agreed": null,
+        "related_action_item": "SY0302b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302b.s0098",
+          "SY0302b.s0099",
+          "SY0302b.s0100",
+          "SY0302b.s0101",
+          "SY0302b.s0102",
+          "SY0302b.s0103"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302b.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302b.f10",
+        "type": "action_item",
+        "fact": "The industrial designer will prepare a cost breakdown and check whether the larger-vocabulary chip is needed.",
+        "agreed": null,
+        "related_action_item": "SY0302b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302b.s0053",
+          "SY0302b.s0105",
+          "SY0302b.s0106"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302b.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302b.f11",
+        "type": "action_item",
+        "fact": "The user interface designer will produce the full interaction flow with three timers and the display.",
+        "agreed": null,
+        "related_action_item": "SY0302b.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302b.s0107",
+          "SY0302b.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302b.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302b.f12",
+        "type": "action_item",
+        "fact": "The marketing expert will test a few two-syllable wake word names.",
+        "agreed": null,
+        "related_action_item": "SY0302b.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302b.s0096",
+          "SY0302b.s0097",
+          "SY0302b.s0109",
+          "SY0302b.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302b.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302b.f13",
+        "type": "action_item",
+        "fact": "The project manager will write up and circulate the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0302b.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302b.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302b.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302b.f14",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert apologised for missing the kick-off and confirmed he received the project manager's email with the brief and his task.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0302a",
+        "evidence_segments": [
+          "SY0302b.s0004",
+          "SY0302b.s0005",
+          "SY0302b.s0007",
+          "SY0302b.s0008",
+          "SY0302b.s0009"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302b.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302b.f15",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recapped the kick-off decisions (multiple timers, physical stop button) and its open questions (on-device vs online, wake word, splash-proofing).",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0302a",
+        "evidence_segments": [
+          "SY0302b.s0011",
+          "SY0302b.s0012"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302b.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302b.f16",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer confirmed with the project manager that physical prototypes are allowed at the next, conceptual design meeting, as the brief stated at the kick-off.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0302a",
+        "evidence_segments": [
+          "SY0302b.s0112",
+          "SY0302b.s0113",
+          "SY0302b.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302b.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302b.f17",
+        "type": "other",
+        "fact": "The marketing expert reported that the 'Hey Chef' wake word name got a mixed reaction, with some people finding it cheesy.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302b.s0088",
+          "SY0302b.s0089"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302b.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302b.f18",
+        "type": "other",
+        "fact": "The offline voice chips cost about 3.80 Euro and handle about fifty words. A basic microphone costs about forty cents.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302b.s0016",
+          "SY0302b.s0027",
+          "SY0302b.s0031"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_UNAGREED_DECISION",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_UNAGREED_DECISION",
+        "segments": [
+          "SY0302b.s0040",
+          "SY0302b.s0041",
+          "SY0302b.s0042"
+        ],
+        "note": "The industrial designer declares full waterproofing 'settled', the marketing expert hesitates, and the project manager moves on to the commands without anyone agreeing."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_ACTION_REMOVED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_ACTION_REMOVED",
+        "segments": [
+          "SY0302b.s0035",
+          "SY0302b.s0036",
+          "SY0302b.s0037",
+          "SY0302b.s0038",
+          "SY0302b.s0098",
+          "SY0302b.s0099",
+          "SY0302b.s0100",
+          "SY0302b.s0101",
+          "SY0302b.s0102",
+          "SY0302b.s0103"
+        ],
+        "note": "The user interface designer's noise-clip recording task is assigned, then cancelled once the industrial designer says the chip maker supplies a calibrated noise test kit."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

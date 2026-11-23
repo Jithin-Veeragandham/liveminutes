@@ -1,0 +1,817 @@
+{
+  "run_id": "20261123T013638Z_textrank_default_every120s_synthetic_eval_recursive_1seeds",
+  "commit": "ee9b0cde2eb52fb6293187ae896c414edd9e8116",
+  "uncommitted_changes": [
+    "2_summarization/hpo/textrank_live_120s.json"
+  ],
+  "dataset": "synthetic",
+  "mode": "recursive",
+  "data_hash": "f2af2f66b099d7985070904f3ea9fcf1623134d4f41b25a0b6abdd91a01d0eae",
+  "split_file_sha256": "975f4160185cd1360c4cb4546e0fc717a10ccc1ccd9d6124bf99a85fef464cee",
+  "config": {
+    "model": {
+      "library": "summa",
+      "words": 199,
+      "min_line_words": 4,
+      "chunk_seconds": 120,
+      "buffer": 1.5,
+      "mode": "recursive"
+    },
+    "mode": "recursive",
+    "seeds": [
+      42
+    ],
+    "pythonhashseed": 42,
+    "bertscore": {
+      "model": "FacebookAI/roberta-large",
+      "revision": "722cf37b1afa9454edce342e7895e588b6ff1d59",
+      "rescale_with_baseline": false
+    },
+    "params_file": "2_summarization/hpo/textrank_live_120s.json"
+  },
+  "config_hash": "bf82c1c28083",
+  "model": "textrank",
+  "model_version": "summa 1.2.0",
+  "split": "eval",
+  "meetings": [
+    "SY0103a",
+    "SY0103b",
+    "SY0103c",
+    "SY0103d",
+    "SY0110a",
+    "SY0110b",
+    "SY0110c",
+    "SY0110d",
+    "SY0202a",
+    "SY0202b",
+    "SY0202c",
+    "SY0202d",
+    "SY0209a",
+    "SY0209b",
+    "SY0209c",
+    "SY0209d",
+    "SY0304a",
+    "SY0304b",
+    "SY0304c",
+    "SY0304d"
+  ],
+  "meeting_groups": {
+    "SY0103a": {
+      "feature": "F1",
+      "scenario": [
+        "F1_INTERLEAVED_TOPICS",
+        "F1_SARCASM_AS_FACT"
+      ],
+      "absent_participants": 0
+    },
+    "SY0103b": {
+      "feature": "F1",
+      "scenario": [
+        "F1_ABSENT_DISCUSSED",
+        "F1_PLAN_CHANGE"
+      ],
+      "absent_participants": 1
+    },
+    "SY0103c": {
+      "feature": "F1",
+      "scenario": [
+        "F1_OFF_TOPIC_TANGENT",
+        "F1_SELF_CORRECTION"
+      ],
+      "absent_participants": 0
+    },
+    "SY0103d": {
+      "feature": "F1",
+      "scenario": [
+        "F1_INTERLEAVED_TOPICS",
+        "F1_SARCASM_AS_FACT"
+      ],
+      "absent_participants": 0
+    },
+    "SY0110a": {
+      "feature": "F1",
+      "scenario": [
+        "F1_ABSENT_DISCUSSED",
+        "F1_SELF_CORRECTION"
+      ],
+      "absent_participants": 1
+    },
+    "SY0110b": {
+      "feature": "F1",
+      "scenario": [
+        "F1_INTERLEAVED_TOPICS",
+        "F1_PLAN_CHANGE"
+      ],
+      "absent_participants": 0
+    },
+    "SY0110c": {
+      "feature": "F1",
+      "scenario": [
+        "F1_OFF_TOPIC_TANGENT",
+        "F1_SARCASM_AS_FACT"
+      ],
+      "absent_participants": 0
+    },
+    "SY0110d": {
+      "feature": "F1",
+      "scenario": [
+        "F1_ABSENT_DISCUSSED",
+        "F1_SELF_CORRECTION"
+      ],
+      "absent_participants": 1
+    },
+    "SY0202a": {
+      "feature": "F2",
+      "scenario": [
+        "F2_OFFERED_TAKEN_BY_OTHER",
+        "F2_VAGUE_NO_OWNER"
+      ],
+      "absent_participants": 0
+    },
+    "SY0202b": {
+      "feature": "F2",
+      "scenario": [
+        "F2_REASSIGNED_OR_DROPPED",
+        "F2_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0202c": {
+      "feature": "F2",
+      "scenario": [
+        "F2_OFFERED_TAKEN_BY_OTHER",
+        "F2_VAGUE_NO_OWNER"
+      ],
+      "absent_participants": 0
+    },
+    "SY0202d": {
+      "feature": "F2",
+      "scenario": [
+        "F2_REASSIGNED_OR_DROPPED",
+        "F2_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0209a": {
+      "feature": "F2",
+      "scenario": [
+        "F2_OFFERED_TAKEN_BY_OTHER",
+        "F2_VAGUE_NO_OWNER"
+      ],
+      "absent_participants": 0
+    },
+    "SY0209b": {
+      "feature": "F2",
+      "scenario": [
+        "F2_REASSIGNED_OR_DROPPED",
+        "F2_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0209c": {
+      "feature": "F2",
+      "scenario": [
+        "F2_OFFERED_TAKEN_BY_OTHER",
+        "F2_VAGUE_NO_OWNER"
+      ],
+      "absent_participants": 0
+    },
+    "SY0209d": {
+      "feature": "F2",
+      "scenario": [
+        "F2_REASSIGNED_OR_DROPPED",
+        "F2_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0304a": {
+      "feature": "F3",
+      "scenario": [
+        "F3_TASK_TO_ABSENT",
+        "F3_UNAGREED_DECISION"
+      ],
+      "absent_participants": 1
+    },
+    "SY0304b": {
+      "feature": "F3",
+      "scenario": [
+        "F3_ACTION_REMOVED",
+        "F3_UNAGREED_DECISION"
+      ],
+      "absent_participants": 0
+    },
+    "SY0304c": {
+      "feature": "F3",
+      "scenario": [
+        "F3_ACTION_REMOVED",
+        "F3_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0304d": {
+      "feature": "F3",
+      "scenario": [
+        "F3_TASK_TO_ABSENT",
+        "F3_UNAGREED_DECISION"
+      ],
+      "absent_participants": 1
+    }
+  },
+  "metrics_by_group": {
+    "feature": {
+      "groups": {
+        "F1": {
+          "n": 8,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103a",
+            "SY0103b",
+            "SY0103c",
+            "SY0103d",
+            "SY0110a",
+            "SY0110b",
+            "SY0110c",
+            "SY0110d"
+          ],
+          "mean": {
+            "rouge1": 0.3516,
+            "rouge2": 0.0923,
+            "rougeL": 0.189,
+            "rougeSU4": 0.1293,
+            "bertscore_f1": 0.8315
+          }
+        },
+        "F2": {
+          "n": 8,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202a",
+            "SY0202b",
+            "SY0202c",
+            "SY0202d",
+            "SY0209a",
+            "SY0209b",
+            "SY0209c",
+            "SY0209d"
+          ],
+          "mean": {
+            "rouge1": 0.3294,
+            "rouge2": 0.074,
+            "rougeL": 0.1786,
+            "rougeSU4": 0.112,
+            "bertscore_f1": 0.8275
+          }
+        },
+        "F3": {
+          "n": 4,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "SY0304a",
+            "SY0304b",
+            "SY0304c",
+            "SY0304d"
+          ],
+          "mean": {
+            "rouge1": 0.3105,
+            "rouge2": 0.0673,
+            "rougeL": 0.1521,
+            "rougeSU4": 0.09,
+            "bertscore_f1": 0.8249
+          }
+        }
+      },
+      "gap": {
+        "rouge1": 0.0411,
+        "rouge2": 0.025,
+        "rougeL": 0.0369,
+        "rougeSU4": 0.0393,
+        "bertscore_f1": 0.0066
+      },
+      "worst": {
+        "rouge1": "F3",
+        "rouge2": "F3",
+        "rougeL": "F3",
+        "rougeSU4": "F3",
+        "bertscore_f1": "F3"
+      }
+    },
+    "scenario": {
+      "groups": {
+        "F1_ABSENT_DISCUSSED": {
+          "n": 3,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103b",
+            "SY0110a",
+            "SY0110d"
+          ],
+          "mean": {
+            "rouge1": 0.37,
+            "rouge2": 0.1106,
+            "rougeL": 0.2043,
+            "rougeSU4": 0.1389,
+            "bertscore_f1": 0.8383
+          }
+        },
+        "F1_INTERLEAVED_TOPICS": {
+          "n": 3,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103a",
+            "SY0103d",
+            "SY0110b"
+          ],
+          "mean": {
+            "rouge1": 0.3305,
+            "rouge2": 0.0757,
+            "rougeL": 0.1701,
+            "rougeSU4": 0.1135,
+            "bertscore_f1": 0.8255
+          }
+        },
+        "F1_OFF_TOPIC_TANGENT": {
+          "n": 2,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103c",
+            "SY0110c"
+          ],
+          "mean": {
+            "rouge1": 0.3555,
+            "rouge2": 0.0898,
+            "rougeL": 0.1945,
+            "rougeSU4": 0.1383,
+            "bertscore_f1": 0.8304
+          }
+        },
+        "F1_PLAN_CHANGE": {
+          "n": 2,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103b",
+            "SY0110b"
+          ],
+          "mean": {
+            "rouge1": 0.3715,
+            "rouge2": 0.0928,
+            "rougeL": 0.175,
+            "rougeSU4": 0.1233,
+            "bertscore_f1": 0.833
+          }
+        },
+        "F1_SARCASM_AS_FACT": {
+          "n": 3,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103a",
+            "SY0103d",
+            "SY0110c"
+          ],
+          "mean": {
+            "rouge1": 0.3189,
+            "rouge2": 0.0731,
+            "rougeL": 0.1773,
+            "rougeSU4": 0.1147,
+            "bertscore_f1": 0.8253
+          }
+        },
+        "F1_SELF_CORRECTION": {
+          "n": 3,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103c",
+            "SY0110a",
+            "SY0110d"
+          ],
+          "mean": {
+            "rouge1": 0.371,
+            "rouge2": 0.1112,
+            "rougeL": 0.2101,
+            "rougeSU4": 0.1477,
+            "bertscore_f1": 0.8367
+          }
+        },
+        "F2_OFFERED_TAKEN_BY_OTHER": {
+          "n": 4,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202a",
+            "SY0202c",
+            "SY0209a",
+            "SY0209c"
+          ],
+          "mean": {
+            "rouge1": 0.3301,
+            "rouge2": 0.0739,
+            "rougeL": 0.1892,
+            "rougeSU4": 0.1175,
+            "bertscore_f1": 0.8285
+          }
+        },
+        "F2_REASSIGNED_OR_DROPPED": {
+          "n": 4,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202b",
+            "SY0202d",
+            "SY0209b",
+            "SY0209d"
+          ],
+          "mean": {
+            "rouge1": 0.3287,
+            "rouge2": 0.074,
+            "rougeL": 0.1679,
+            "rougeSU4": 0.1064,
+            "bertscore_f1": 0.8265
+          }
+        },
+        "F2_TASK_TO_ABSENT": {
+          "n": 4,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202b",
+            "SY0202d",
+            "SY0209b",
+            "SY0209d"
+          ],
+          "mean": {
+            "rouge1": 0.3287,
+            "rouge2": 0.074,
+            "rougeL": 0.1679,
+            "rougeSU4": 0.1064,
+            "bertscore_f1": 0.8265
+          }
+        },
+        "F2_VAGUE_NO_OWNER": {
+          "n": 4,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202a",
+            "SY0202c",
+            "SY0209a",
+            "SY0209c"
+          ],
+          "mean": {
+            "rouge1": 0.3301,
+            "rouge2": 0.0739,
+            "rougeL": 0.1892,
+            "rougeSU4": 0.1175,
+            "bertscore_f1": 0.8285
+          }
+        },
+        "F3_ACTION_REMOVED": {
+          "n": 2,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "SY0304b",
+            "SY0304c"
+          ],
+          "mean": {
+            "rouge1": 0.2944,
+            "rouge2": 0.0613,
+            "rougeL": 0.136,
+            "rougeSU4": 0.0768,
+            "bertscore_f1": 0.8198
+          }
+        },
+        "F3_TASK_TO_ABSENT": {
+          "n": 3,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "SY0304a",
+            "SY0304c",
+            "SY0304d"
+          ],
+          "mean": {
+            "rouge1": 0.3115,
+            "rouge2": 0.0677,
+            "rougeL": 0.1574,
+            "rougeSU4": 0.0938,
+            "bertscore_f1": 0.8256
+          }
+        },
+        "F3_UNAGREED_DECISION": {
+          "n": 3,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "SY0304a",
+            "SY0304b",
+            "SY0304d"
+          ],
+          "mean": {
+            "rouge1": 0.3204,
+            "rouge2": 0.071,
+            "rougeL": 0.1575,
+            "rougeSU4": 0.0949,
+            "bertscore_f1": 0.8276
+          }
+        }
+      },
+      "gap": {
+        "rouge1": 0.0771,
+        "rouge2": 0.0499,
+        "rougeL": 0.0741,
+        "rougeSU4": 0.0709,
+        "bertscore_f1": 0.0185
+      },
+      "worst": {
+        "rouge1": "F3_ACTION_REMOVED",
+        "rouge2": "F3_ACTION_REMOVED",
+        "rougeL": "F3_ACTION_REMOVED",
+        "rougeSU4": "F3_ACTION_REMOVED",
+        "bertscore_f1": "F3_ACTION_REMOVED"
+      }
+    }
+  },
+  "meetings_hash": "b421b56079cc",
+  "n_seeds": 1,
+  "metrics_mean": {
+    "rouge1": 0.3345,
+    "rouge2": 0.08,
+    "rougeL": 0.1775,
+    "rougeSU4": 0.1145,
+    "bertscore_f1": 0.8286
+  },
+  "metrics_std": {
+    "rouge1": 0.0,
+    "rouge2": 0.0,
+    "rougeL": 0.0,
+    "rougeSU4": 0.0,
+    "bertscore_f1": 0.0
+  },
+  "metrics_per_seed": {
+    "42": {
+      "rouge1": 0.3345,
+      "rouge2": 0.08,
+      "rougeL": 0.1775,
+      "rougeSU4": 0.1145,
+      "bertscore_f1": 0.8286
+    }
+  },
+  "identical_across_seeds": true,
+  "seed_variation": {
+    "verdict": "Only one seed was run, so there is no seed variation to measure.",
+    "why": "TextRank (summa) has no random step: PageRank over a sentence-similarity graph, fixed input order. The seed cannot change the summary, so every seed should give the same text and std 0. Each seed sets Python random, NumPy and torch. PYTHONHASHSEED is fixed to the FIRST seed for the whole run.",
+    "seeds": [
+      42
+    ],
+    "metrics": {
+      "rouge1": {
+        "mean": 0.3345,
+        "std": 0.0,
+        "min": 0.3345,
+        "min_seed": 42,
+        "max": 0.3345,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rouge2": {
+        "mean": 0.08,
+        "std": 0.0,
+        "min": 0.08,
+        "min_seed": 42,
+        "max": 0.08,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rougeL": {
+        "mean": 0.1775,
+        "std": 0.0,
+        "min": 0.1775,
+        "min_seed": 42,
+        "max": 0.1775,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rougeSU4": {
+        "mean": 0.1145,
+        "std": 0.0,
+        "min": 0.1145,
+        "min_seed": 42,
+        "max": 0.1145,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "bertscore_f1": {
+        "mean": 0.8286,
+        "std": 0.0,
+        "min": 0.8286,
+        "min_seed": 42,
+        "max": 0.8286,
+        "max_seed": 42,
+        "range": 0.0
+      }
+    },
+    "meetings_changed": 0,
+    "meetings_total": 20,
+    "per_meeting": {}
+  },
+  "seconds_per_meeting": 0.03,
+  "python": "3.12.10",
+  "packages": {
+    "summa": "1.2.0",
+    "rouge-score": "0.1.2",
+    "numpy": "2.5.4",
+    "torch": "2.14.1",
+    "transformers": "5.20.2",
+    "bert-score": "0.3.13",
+    "anthropic": "1.17.0"
+  },
+  "hardware": {
+    "machine": "AMD64",
+    "system": "Windows-11-10.0.26200-SP0",
+    "cpus": 16
+  },
+  "per_seed_runs": {
+    "42": {
+      "scores": {
+        "rouge1": 0.3345,
+        "rouge2": 0.08,
+        "rougeL": 0.1775,
+        "rougeSU4": 0.1145,
+        "bertscore_f1": 0.8286
+      },
+      "per_meeting": {
+        "SY0103a": {
+          "rouge1": 0.26730310262529833,
+          "rouge2": 0.014388489208633094,
+          "rougeL": 0.13365155131264916,
+          "rougeSU4": 0.06682769726247986,
+          "bertscore_f1": 0.8179858326911926
+        },
+        "SY0103b": {
+          "rouge1": 0.3250564334085779,
+          "rouge2": 0.06802721088435373,
+          "rougeL": 0.16252821670428896,
+          "rougeSU4": 0.09741248097412482,
+          "bertscore_f1": 0.8265520930290222
+        },
+        "SY0103c": {
+          "rouge1": 0.32794457274826794,
+          "rouge2": 0.06960556844547564,
+          "rougeL": 0.18013856812933027,
+          "rougeSU4": 0.12383177570093458,
+          "bertscore_f1": 0.8217504620552063
+        },
+        "SY0103d": {
+          "rouge1": 0.30630630630630634,
+          "rouge2": 0.09502262443438914,
+          "rougeL": 0.18918918918918917,
+          "rougeSU4": 0.12452543659832953,
+          "bertscore_f1": 0.8189821839332581
+        },
+        "SY0110a": {
+          "rouge1": 0.3969465648854961,
+          "rouge2": 0.1432225063938619,
+          "rougeL": 0.22391857506361323,
+          "rougeSU4": 0.16752577319587628,
+          "bertscore_f1": 0.846976101398468
+        },
+        "SY0110b": {
+          "rouge1": 0.41796874999999994,
+          "rouge2": 0.11764705882352941,
+          "rougeL": 0.1875,
+          "rougeSU4": 0.1492439184746877,
+          "bertscore_f1": 0.8395166993141174
+        },
+        "SY0110c": {
+          "rouge1": 0.38308457711442784,
+          "rouge2": 0.11,
+          "rougeL": 0.20895522388059704,
+          "rougeSU4": 0.1528127623845508,
+          "bertscore_f1": 0.8389824628829956
+        },
+        "SY0110d": {
+          "rouge1": 0.3879907621247113,
+          "rouge2": 0.12064965197215778,
+          "rougeL": 0.22632794457274824,
+          "rougeSU4": 0.15186915887850466,
+          "bertscore_f1": 0.8413856625556946
+        },
+        "SY0202a": {
+          "rouge1": 0.26666666666666666,
+          "rouge2": 0.02793296089385475,
+          "rougeL": 0.14999999999999997,
+          "rougeSU4": 0.0647887323943662,
+          "bertscore_f1": 0.8206576704978943
+        },
+        "SY0202b": {
+          "rouge1": 0.32482598607888635,
+          "rouge2": 0.07459207459207459,
+          "rougeL": 0.14849187935034802,
+          "rougeSU4": 0.10015649452269171,
+          "bertscore_f1": 0.8300361633300781
+        },
+        "SY0202c": {
+          "rouge1": 0.3674418604651163,
+          "rouge2": 0.07476635514018691,
+          "rougeL": 0.20465116279069767,
+          "rougeSU4": 0.1341176470588235,
+          "bertscore_f1": 0.8313109278678894
+        },
+        "SY0202d": {
+          "rouge1": 0.3699731903485255,
+          "rouge2": 0.07008086253369272,
+          "rougeL": 0.1769436997319035,
+          "rougeSU4": 0.11865942028985507,
+          "bertscore_f1": 0.8371294140815735
+        },
+        "SY0209a": {
+          "rouge1": 0.3579545454545454,
+          "rouge2": 0.10285714285714286,
+          "rougeL": 0.22727272727272724,
+          "rougeSU4": 0.1431316042267051,
+          "bertscore_f1": 0.8389524221420288
+        },
+        "SY0209b": {
+          "rouge1": 0.2615803814713897,
+          "rouge2": 0.049315068493150684,
+          "rougeL": 0.15258855585831063,
+          "rougeSU4": 0.07458563535911603,
+          "bertscore_f1": 0.8200922608375549
+        },
+        "SY0209c": {
+          "rouge1": 0.32835820895522394,
+          "rouge2": 0.08993576017130621,
+          "rougeL": 0.17484008528784648,
+          "rougeSU4": 0.1278735632183908,
+          "bertscore_f1": 0.8229591250419617
+        },
+        "SY0209d": {
+          "rouge1": 0.35835351089588374,
+          "rouge2": 0.10218978102189781,
+          "rougeL": 0.19370460048426152,
+          "rougeSU4": 0.1323529411764706,
+          "bertscore_f1": 0.8187514543533325
+        },
+        "SY0304a": {
+          "rouge1": 0.2708333333333333,
+          "rouge2": 0.0418848167539267,
+          "rougeL": 0.140625,
+          "rougeSU4": 0.06860158311345646,
+          "bertscore_f1": 0.8344984650611877
+        },
+        "SY0304b": {
+          "rouge1": 0.30769230769230765,
+          "rouge2": 0.0662251655629139,
+          "rougeL": 0.13626373626373625,
+          "rougeSU4": 0.07851851851851852,
+          "bertscore_f1": 0.8227679133415222
+        },
+        "SY0304c": {
+          "rouge1": 0.28103044496487123,
+          "rouge2": 0.05647058823529412,
+          "rougeL": 0.1358313817330211,
+          "rougeSU4": 0.07503949447077408,
+          "bertscore_f1": 0.8168485760688782
+        },
+        "SY0304d": {
+          "rouge1": 0.3826086956521739,
+          "rouge2": 0.10480349344978167,
+          "rougeL": 0.19565217391304346,
+          "rougeSU4": 0.13772893772893774,
+          "bertscore_f1": 0.8255265355110168
+        }
+      },
+      "predictions": {
+        "SY0103a": "So how people actually, uh, talk to it and what it does back. Uh, finding out what people want and what they'll pay for. We're designing a kitchen timer. Yeah, I've had that, with like, raw chicken hands. Yeah, people won't want to pair it with an app just to boil an egg. Yeah. And does twenty-five euros sound right for this, like, to the customer? Because a normal kitchen timer is what, five euros? Like, the radio's on, people are chatting in the kitchen. You say like 'timer' first. Yeah, but 'timer' is a normal word, you'll trigger it by accident. Like a little brand name. And that's good for marketing as well, actually, people like naming stuff. Yeah, and um -. Which actually helps on cost, a button's like nothing. Like pasta and the sauce at the same time? I can think about how you'd name them, like 'pasta timer'. Ben, can you find out what people actually want from a kitchen timer? Yeah, I'll look at what's out there and what people complain about. I can also check if anyone actually pays twenty-five for a timer. Yeah, that'd be useful.",
+        "SY0103b": "Yeah, it does. Um, so maybe we start with the multiple timers, since that affects Priya's part. Okay, so, um, first the multiple timers thing. And my idea was you name them, so you'd say the wake word and then 'set a pasta timer for ten minutes'. And then it says back, you know, 'pasta timer, ten minutes'. Three named timers. Yeah, three named timers sounds good to me. So let's go with that, three timers you can name. So I looked at reviews of kitchen timers online, and, um, talked to a few people who cook a lot. But the third thing, and this is the timers bit, um, people with multi-timer devices said they get confused which one's going off. Yeah, I didn't really think that through. So what, just one timer then? 'Timer one', 'timer two'. Yeah, two seems right. Not three named timers. Two timers, timer one and timer two. Yeah, it'd say 'timer two, done' and then the alarm. Most people said they'd never pay twenty-five for a normal timer. So I'd sell it as a kitchen gadget, not as a timer. Yeah. Yeah, same problem as 'timer' last time. Yeah, I'll do that. Yeah.",
+        "SY0103c": "Okay, um, I think we're all here. Yeah, yeah, much better, thanks. I did, yeah. And checking the chip, yeah? Okay. And last time we settled on two timers, timer one and timer two, and Kiko as the working wake word. Yeah. Yeah, true. Okay, mains it is. Yeah. Yeah, eleven thirty. Okay, display's in. Yeah, there's a little button at the bottom, you have to hold it down. Okay, um, let's get back to it. Priya, you had the command list and the Kiko testing. Yeah. Basically it's always Kiko, then the command, then which timer. Like \"Kiko, set timer one for ten minutes,\" and it says back \"Timer one, ten minutes.\". If both are running it says both, yeah. And then the Kiko test. Kiko, cocoa. Yeah, I can hear it. Yeah, I'd keep Kiko. Yeah, I'll email them. Okay, so Kiko stays. Yeah, I'm less worried about the price than I was. Yeah, the whole top could be the button basically, with the display in the middle. Yeah, I'll pull together three or four. Okay, Tomasz does the model then. Priya, the command list to everyone, and work out what the display shows with two timers and how the button behaves.",
+        "SY0103d": "Okay, um, so I think we're all here. So the plan is, um, Tomasz shows us the model, Priya does the display and the button, Ben's got colours, and then we check the final cost and evaluate it. Yeah, got them, thanks. Yeah, they did. Two out of forty, yeah. Yeah, fair. Yeah, so here it is. Um, a bit, yeah. Yeah. So, um, the display's two digits, so it shows minutes. Yeah, the all-white does look a bit like a thermometer. Yeah, we've got one euro something left, so metal's not happening. Um, okay, so let's go back to the button a sec, Priya, then we'll pick colours. Yeah, drop it. Yeah, that's the whole point, isn't it. Okay, I like that. Yeah, white's good, it looks cleaner as well. Okay, so two colourways, white and orange, charcoal and lime, with a white LED display. Yeah. Still out, yeah. Okay, um, evaluation. Okay. Yeah, I'm happy with it. Okay, actions. Yeah, I'll do that, one side, with the phrases. Yeah, I'll do a draft of the box text and the gift angle, around the offline thing and the two colours. Okay, I think that's it.",
+        "SY0110a": "Which for a cup is a bit of a funny job, but uh, yeah. We'll get to that. There'll be loads of cafe people there. Yeah, exactly. I think we should, yeah. We're designing a reusable coffee cup with a deposit system. So the idea is, the customer pays a small deposit when they buy their coffee, they take the cup away, and they bring it back to any partner cafe and get the deposit back. And we sell the cups to the cafes, or to the customers? Deposit per cup is one euro. And the production cost, um, has to stay under five euros per cup. Under three euros per cup. Yeah, it's not loads. One euro, yeah. Hmm. If it costs nearly three to make and the deposit's one, people losing cups is a problem for the cafes. Tea, honestly. Builder's tea. On a coffee cup project. Yeah, fair, there's that. Yeah, I don't know. We'll see what she finds out. Yep, I'll do that. I'll ask her to talk to cafe owners at the fair, see if they'd join a deposit system and what they'd want from it. So she'll be at the next meeting.",
+        "SY0110b": "Tom's going to go through materials, Jonas has the return process, and Marta, you've got the cafe owner stuff from Cologne. I looked at how the bottle deposit works in supermarkets, and a couple of the cup schemes that are already running in Germany. The cup schemes mostly just do it at the counter. And that works at any cafe in the scheme? Yeah, that's the whole point, you can take it from one cafe and return it at another. But they did ask how the customer knows which cafes take the cup back. Most of the cafes I've seen use ninety for the regular size. Marta, were the cafe owners worried about that? If a customer keeps the cup they lose a euro, but the cafe has lost a cup that cost more than that. What about, um, a return machine in the busier cafes? There was an owner at the fair, she runs Caf\u00e9 Lindner, and she said she'd happily test cups in her dishwasher. Ninety millimetre rim, stackable, space for a cafe logo. Returns are at the counter at any partner cafe, no app, no machines. Tom, samples and the test at the cafe.",
+        "SY0110c": "Okay, um, so I think we're all here. Um, okay, I did it in just under two hours. Okay, it's back. About fifteen cents more per cup, so we'd be at roughly one thirty-five. Okay, polypropylene confirmed then, with an in-mould label for the logo. Okay, yeah, that makes sense for now. Hmm, but the cups go from cafe to cafe. You'd return a pink cup to a cafe with green ones. Yeah, okay, fair point. Everyone okay with slate grey? Okay, slate grey, one colour for every cafe. The customer brings the cup to any partner cafe and hands it over at the counter. It's a round window sticker, slate grey now I guess, with the cup outline and the same logo as on the cup. Okay, so the badge in slate grey with the matching logo, and Jonas makes the logo bigger. With the label the cup's about one thirty-five. So now a cafe loses about thirty-five cents on every cup that doesn't come back, not twenty. Yeah, sure, solid gold cups next. Yeah, I'll ask the moulding company for a quote on the three hundred mil cup with both. Okay, thanks everyone, see you next week.",
+        "SY0110d": "One euro fifty-four. Okay, so one fifty-four with everything. The mould is separate, it's a one-off, um, about six thousand euros. Well, per cup we're still way under three euros. And honestly, fifty cafes, if each one gets two hundred cups, that's already ten thousand. Oh right, yeah, okay. So let's go with the ten thousand at one fifty-four. If the cup costs one fifty-four and the deposit's one euro, a cafe loses fifty-four cents on every cup that doesn't come back. But it's paid for with a partner fee, so each cafe pays five euros a month. Five euros covers it, does it? The company covers the gap, and cafes pay the five euro fee. He just wanted a line in bold saying cracked cups still get the euro back, because his staff weren't sure. One thing I'd add, um, I'd emboss 'return for one euro' on the bottom. It's just part of the mould, it doesn't cost anything per cup. Okay, just the euro then. Yeah, okay, no, I see that. Knowing Jonas he'll still want to tweak the cup outline, he's such a perfectionist. Production cost under three euros? And the deposit stays at one euro.",
+        "SY0202a": "Sure, yeah. So I'll be looking at, um, what the customers want, what the market's like, competitors. Um, the client is mainly public library networks, so like city libraries with lots of branches. Sort of, yeah. Everything, yeah. Yeah, that's a good point actually, libraries are quite, um, particular about that. Yeah, renewals for sure, people do that all the time. Yeah, like a slot. Um, I think most libraries already have a, a book drop for that. Yeah, I think that's sensible. Yeah, fine by me. Um, a lot of libraries have moved to RFID now, but not all of them. Yeah, someone should probably check what those RFID readers actually cost at some point. Yeah, that could just be a QR code, same scanner. Yeah. And I'd quite like it to be, um, all touchscreen, no physical buttons at all. Um, I could look into the accessibility guidelines, if you like. Yeah, I'll do it. Like what components go inside, and, um, rough layout. Yeah, that ties in with the meeting with the library people anyway. Is the four thousand fixed or is there wiggle room? Under four thousand. Yeah, I think so.",
+        "SY0202b": "Um, so it'll just be the three of us. Oh, and the RFID cost, nobody actually picked that up. Yeah, I'll look into it. Okay, that's actually something I'll come back to, from the accessibility side. Yeah, but, um, that's actually in my findings, so maybe let me go. Tomas, would you be okay with that? Optional print is fine, I'll keep the printer in. Okay, so that's decided then, email by default, printing optional. Okay. Yeah, but it's a requirement from the libraries, it's not really optional. Okay, let's go with one hardware help button, and the rest on the touchscreen. She said she'd got a draft, she'll send it round. Oh, actually, about the RFID cost. Yeah, the readers and the tags. Okay, so Priya, you take the RFID pricing instead of Tomas? Yeah, I'll do it. But if the books aren't tagged yet, RFID means the libraries have to tag everything first. Yeah, but we can't decide that until we've got the cost. Yeah, I'll do some sketches, with the new heights. And I'll write up the notes and send them round, and I'll fill Hannah in on the button. Okay, thanks, see you next time.",
+        "SY0202c": "Yeah, I'm here this time. Yeah, you sent me the notes, and we talked about the button on the phone. Yeah, I emailed it the same day, the reach heights and the screen reader notes. Got it, yeah, I've used it in the screens. Okay. Including the antenna, yeah, it's one module. The RFID pad, and a barcode scanner as a fallback. Yeah, and the barcode scanner is cheap, we already had one in the estimate. Roughly, yeah. Yeah, that'd be a big job, I mean, the... Yeah, I think it's the only option that works in every branch. Yeah, okay, so um. Yeah, the screen's tilted back about thirty degrees. Yeah, the desk one's nice. Yeah, aluminium edge strips, that's cheap, maybe twenty euros. Okay, yeah, fair enough. And if a book has no tag, the screen says scan the barcode and you use the scanner. Oh, yeah, that's fair, it is tied to the hardware. Okay, Tomas, you take the text-to-speech then, along with the board. Yeah, in foam board, I can do that. Hannah, the final screens, including the barcode fallback and the audio script. Yeah, after the mock-up.",
+        "SY0202d": "Hannah's not with us today, she's at the library tech conference in Leeds, she sent her apologies. The tagging cost for the four barcode-only branches. But the fifteen-inch screen, honestly, it looks a bit lost on the desk. Hannah wanted nineteen. Hannah really wanted the bigger one. Which means Hannah needs to redo the screen layouts for seventeen. I'll give that to her, she can rework the layouts and send the final set to library services for sign-off. Library services said people stop using audio if they can't understand the book titles. Then Hannah's screens quickly. So I built the criteria from the library services requirements, seven criteria, scored one to seven. Speed, accessibility, fits a library look, ease of use, print option, staff help, cost. Library look, seven. I'm at library services on Thursday anyway, and they've got the tagging contractor's rates. Okay, the tagging cost for the four branches goes to Priya then. Library services wanted it simple, and it's already a big yellow button. Hannah, the seventeen-inch layouts and send the final screens to library services. Priya, the tagging cost for the four branches. And I'll write the final report with the cost breakdown and send it round, and brief Hannah on Monday.",
+        "SY0209a": "Yeah, sure, I'm Tomasz, I'm the marketing expert. Uh, we're designing a case for a children's educational tablet. Oh, so just the case, not the tablet? Just the case, yeah. And the production cost can't be more than twelve fifty per case. Just the case itself I think. Yeah, four to eight's fine. And the case only has to fit the Learnly seven-inch, not other tablets. What should a case like this actually do? Yeah, with twelve fifty we have to be a bit careful. A raised lip, yeah, that's pretty standard. Yeah, wipeable material, definitely. Yeah, someone should probably check what the existing kids' cases cost in the shops. Yeah, would be good to know. I could look into the drop tests, like what heights the other cases are rated for. Oh, yeah, makes sense, go for it. Yeah, I'll do it. Tomasz, could you find out what parents and teachers actually want from a case like this? Yeah, I can do a bit of user research, maybe a short survey. Yeah, I'll make sure the buttons and the charging port are still reachable. Yeah, you'll each get some extra information in your inbox.",
+        "SY0209b": "Okay, um, I think we can start. Right, so the plan is, um, Priya you've got the functional side, Ben you've got drop tests and materials. Um, Priya, could you have a look at that? Yeah, sure, I can do that. Okay, um, Tomasz did send me a short note about his survey. Right, um, Ben, do you want to go first with the drop stuff? Yeah, I can go first. Yeah, with decent corners, I think so. So, um, I looked at three things really, silicone, EVA foam, and hard plastic shells, polycarbonate. Oh yeah, like the, the hairy ones. Um, Priya, your bit. Um, I'd say covered for the power and volume, like the foam has a little bump you press through, and open for the charging port. Yeah, covered buttons are easy enough in foam. Now the handle, um. Yeah, okay, Ben, do that. And, um, the name tag window, I still think for schools it's really useful. Yeah, I think we wait for Tomasz's survey on that, see if teachers ask for it. Okay, um, so going back to the price thing. Yeah, you're right, it fits better with him. Yeah, I'll do a few sketches.",
+        "SY0209c": "Okay, um, are we all set? Yeah, I got it. So the plan for today, um, we've got Tomasz's survey results and the price check, then Ben's quote, then Priya's sketches. And then we need to sort out the things we put off last time, the wedge back, the name tag, and colours. Yeah, I think that's your name tag window, Priya. Yeah, so we've got about four euros to play with. Okay, so, um, the wedge. Yeah, I'd be for that. Okay, wedge is in. Um, the name tag window then. Oh, okay, yeah, even better. Okay, so Ben prices the name window. Okay, so name tag window yes in principle, if it comes in under a euro. Yeah, two is enough for now I think. Yeah, okay, just a thought. Eight forty, plus sixty for the wedge, plus thirty for the second colour. That's nine thirty, plus whatever the window is. So even with a euro for the window we're at ten thirty. Ben, the revised quote with the wedge, the two colours and the window. Priya, can you update the sketches with the wedge and the name window? Yeah, I can do that.",
+        "SY0209d": "Yeah, all day. And the moulded foam pocket with the clear film over it is seventy cents. Both under, yeah. Then the pocket, surely. Yeah, I'd go with the pocket. Everyone happy with the foam pocket then? Okay, foam pocket with clear film it is. So with the pocket that's... Ten euros ten, yeah. Yeah, it's comfortable. yeah, okay, I can have a look. Yeah, the camera cut-out is top left, so the pocket sits to the right of it and lower down. Yeah, the back faces out to the side, so someone across the classroom can read the name. I'd say we keep the pocket on the back rather than the front, because the front is mostly screen anyway. One is good, yeah. The foam wipes down, but with the film on the pocket, dirt might get in at the edge. Hmm, a bit, yeah. Yeah, fair. Yeah, and honestly I'd have to ask Ben for the supplier contact anyway, I don't have it. That'd be much better, yeah. Yeah, two of each colour. Name tag is the foam pocket with clear film, on the back, below the handle. I'll send him that. Sure, I'll send that to you.",
+        "SY0304a": "Um, Marcus isn't with us today, he's, uh, he's at the supplier visit for the other project. Uh, do you want to just quickly say who you are and what you're doing? So I'll be looking at, like, what the users actually want and what's out there already. And Marcus is our industrial designer, so he'll handle the, you know, the physical unit. What do people want from this? Well, I mean, from my side the big complaint on campus is people driving round and round looking for a space. Hmm, I like the colour, but people do want the number I think. Like if it says three spaces, you know you might not get one by the time you get there. Visitors are actually the tricky ones, because they don't know the campus at all. So for visitors you'd want, like, the lot name really clearly. So, um, I'll give that one to Marcus. I can do a quick survey, like, ask people on campus what they'd want from the sign. Yeah, but then you've got people looking at phones while driving. I'll send round the minutes and the brief today, and I'll copy Marcus in with his bit.",
+        "SY0304b": "Yeah, sorry about that, I was at the supplier thing for the other project. Yeah, got them, and your note about the sensing stuff. Yeah, I know, I'm just saying it came up a lot. But yeah, the drift thing is real, if someone tailgates through the barrier it misses a car. Each bay, yeah, so the library car park is a hundred and eighty bays, that's over five grand. Yeah, I can ask the supplier, they owe me an email anyway. Yeah, so I did three layouts, in a small and a big size. Yeah, honestly, I think it is, you can't read it past about twenty metres. Oh, yeah, that'd look like the petrol station signs. Yeah, five feels right for red, you'd not bother at that point. Yeah, I still think solar's the obvious one for outdoor. Oh. Yeah, okay, fair. Yeah, no, that makes sense, if it's already there. Yeah, honestly I'd go barrier counters with a reset every night. Yeah, I'll not bother then. Yeah, cross that one off. I think visitors would like it, they don't know which car park to go to. Yeah, I'll do that. Yeah, there's an open day next week, I'll stand by the main gate.",
+        "SY0304c": "Yeah, he said he wasn't feeling great on Friday. It would, yeah, and we've got no margin as it is. Yeah, and it needs data from every car park, so cabling or wireless, that's not cheap. Yeah, I think that's sensible. Yeah, so, um, this is the sixty centimetre version, like we agreed. Yeah, I like that. And I've still got the flashing below ten in here, um, which I think we should keep. Um, Tom, could you do a version with the flashing and one without, so we can compare them properly next time? Yeah, I can do a quick animated mock-up, no problem. Yeah, so I stood at the main gate for, um, about two hours. Yeah, let's add that. Oh yeah? Yeah, that saves me a job. Let's, um, park that, no pun intended. It's the library, yeah, the underground one. For that one sign, quite possibly, yeah. Yeah, I think navy all over looks smarter. Yeah, I'll put that in the email, he can do both in one visit. Ten pounds spare, yeah. Yeah, I'll send them tomorrow. For now, yeah, the attendant can correct it, we haven't got anything better.",
+        "SY0304d": "Okay, um, shall we start? Yeah, okay. So, um. Library car park first, because that was the problem one. I asked estates whether they'd pay for the library electrics separately, like we said last time. Yeah. Yeah, fine by me. So, the four surface car parks, I'd go for a post. Yeah, that's the idea, you see it over a car roof from the road. And in the library one there's no room for a post, the ramp's too narrow, so it's a wall bracket. So post at four, bracket at the library. Okay, so that's decided then, post for the four outside ones, wall bracket in the library. Mm. Um, let's park the totals, I'll do the sums in a minute. Um, one thing. Yeah, five. The library one's the same artwork, the bracket doesn't change it. Yeah, I'll forward you the supplier's template. Okay, um, let's come back to costs actually, because I want to get the total done. And the library's three seventy-two with the bracket. Yeah, I'd say no QR code for this phase. Yeah, I'd say so. Yeah, apart from being tight on budget. And the electrician for the library, who's booking that? Yeah, I can do that."
+      },
+      "seconds": 0.6095771000254899
+    }
+  }
+}

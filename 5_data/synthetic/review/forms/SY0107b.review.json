@@ -1,0 +1,1316 @@
+{
+  "meeting_id": "SY0107b",
+  "raw_sha256": "6d44c092efb0016f5e265c0c09c54f3091a21f13ede1b65b0da3a070bd2fb482",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the functional design meeting and reported that the industrial designer was absent through illness and that his microphone research was not yet available. The team discussed how to handle his absence, agreeing to make assumptions and check them with him afterwards.",
+        "The project manager recapped the kickoff decisions (multiple timers and a wake word) and the open issues. The marketing expert presented user requirements from a small survey of about forty home cooks: the main complaint was the timer and user not hearing each other over kitchen noise such as extractor fans, most cooks run at most three things at once, and users want to set a timer in one sentence.",
+        "The user interface designer presented the technical functions: the user says the wake word and a one-sentence command, and the timer announces which timer has finished.",
+        "On the number and naming of timers, the team settled on three timers identified by colour (red, blue, green), each with its own light, because free names would need costly voice recognition and four timers would crowd the display. When two timers finish together, both are announced; the button stops all ringing timers and a voice command can stop one.",
+        "On kitchen noise, the team agreed to include a single stop button for the alarm as a backup, subject to the industrial designer's input, and noted that the alarm speaker must also be loud enough over a fan. The phone app was dropped and the fridge magnet remains for the conceptual design meeting."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer (absent) is to finish the microphone research, check whether an affordable microphone copes with extractor-fan noise, check speaker volume, and take into account the stop button and three coloured lights.",
+        "The project manager will email the industrial designer with the decisions and his tasks, and write up and distribute the minutes.",
+        "The user interface designer will write out the voice command list and sketch the display and lights.",
+        "The marketing expert will research kitchen design trends, such as colours and materials, for the conceptual design meeting."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The timer will support three simultaneous timers.",
+        "The timers will be identified by colour (red, blue, green), each with its own light, instead of free names.",
+        "A single physical stop button will silence the alarm as a backup in noisy kitchens, pending confirmation from the industrial designer.",
+        "If two timers finish at once, both are announced; the button stops all ringing timers, while a voice command can stop a single one.",
+        "The phone app will not be pursued."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The microphone research is not finished, so it is unknown whether an affordable microphone can handle extractor-fan noise within the 12.50 euro budget.",
+        "The stop button still needs to be checked with the industrial designer, who will have to fit it in.",
+        "The alarm speaker must be loud enough to be heard over a fan.",
+        "The user survey was small (about forty people).",
+        "The fridge magnet or stand is still deferred to the conceptual design meeting."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0107b.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0107b.ai1",
+        "description": "Finish the microphone research, check whether an affordable microphone can cope with extractor-fan noise, check speaker volume, and account for the stop button and three coloured lights",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0107b.s0057",
+            "event": "proposed",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0107b.s0093",
+            "event": "restated",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0107b.s0106",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0107b.s0009",
+          "SY0107b.s0010",
+          "SY0107b.s0057",
+          "SY0107b.s0093",
+          "SY0107b.s0105",
+          "SY0107b.s0106",
+          "SY0107b.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0107b.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0107b.ai2",
+        "description": "Email the industrial designer the decisions of this meeting and his tasks, and check the stop button with him",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0107b.s0079",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0107b.s0108",
+            "event": "restated",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0107b.s0079",
+          "SY0107b.s0084",
+          "SY0107b.s0107",
+          "SY0107b.s0108",
+          "SY0107b.s0110",
+          "SY0107b.s0111",
+          "SY0107b.s0112"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0107b.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0107b.ai3",
+        "description": "Write out the voice command list and sketch the display and coloured lights",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0107b.s0113",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0107b.s0114",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0107b.s0113",
+          "SY0107b.s0114"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0107b.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0107b.ai4",
+        "description": "Research kitchen design trends (colours, materials) for the conceptual design meeting",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0107b.s0115",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0107b.s0116",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0107b.s0115",
+          "SY0107b.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0107b.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0107b.ai5",
+        "description": "Write up and distribute the meeting minutes",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0107b.s0117",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0107b.s0108",
+          "SY0107b.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f1",
+        "type": "absence",
+        "fact": "The industrial designer (Rafael) was absent from the meeting because of a stomach bug.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107b.s0004",
+          "SY0107b.s0005",
+          "SY0107b.s0006",
+          "SY0107b.s0008"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f2",
+        "type": "other",
+        "fact": "The industrial designer's microphone research from the kickoff was not available because it was unfinished.",
+        "agreed": null,
+        "related_action_item": "SY0107b.ai1",
+        "refers_to_meeting": "SY0107a",
+        "evidence_segments": [
+          "SY0107b.s0009",
+          "SY0107b.s0010"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recapped that the kickoff meeting agreed on multiple simultaneous timers and a wake word, and left the button, app, magnet and number of timers open.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0107a",
+        "evidence_segments": [
+          "SY0107b.s0018",
+          "SY0107b.s0019"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f4",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert repeated her suggestion from the kickoff meeting of a backup button.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0107a",
+        "evidence_segments": [
+          "SY0107b.s0050"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f5",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager brought back the phone app, which had been parked at the kickoff meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0107a",
+        "evidence_segments": [
+          "SY0107b.s0095"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f6",
+        "type": "other",
+        "fact": "The marketing expert surveyed about forty home cooks; the top complaint was the timer and user not hearing each other over noise such as extractor fans.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107b.s0024",
+          "SY0107b.s0025",
+          "SY0107b.s0027",
+          "SY0107b.s0028"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f7",
+        "type": "other",
+        "fact": "The survey found most home cooks run two or three things at once and almost none more than three, and they want to set a timer in one sentence.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107b.s0030",
+          "SY0107b.s0032",
+          "SY0107b.s0040"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f8",
+        "type": "decision",
+        "fact": "The timer will support three simultaneous timers.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107b.s0071",
+          "SY0107b.s0072",
+          "SY0107b.s0073"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f9",
+        "type": "plan_change",
+        "fact": "The user interface designer's plan for four timers was reduced to three.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107b.s0039",
+          "SY0107b.s0040",
+          "SY0107b.s0042",
+          "SY0107b.s0073"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f10",
+        "type": "decision",
+        "fact": "Timers will be identified by colour (red, blue, green), each with its own light.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107b.s0062",
+          "SY0107b.s0064",
+          "SY0107b.s0065",
+          "SY0107b.s0066",
+          "SY0107b.s0071",
+          "SY0107b.s0072",
+          "SY0107b.s0073"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f11",
+        "type": "plan_change",
+        "fact": "Freely named timers (e.g. 'pasta') were replaced by fixed colour names because free names would need harder, costlier voice recognition.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107b.s0036",
+          "SY0107b.s0044",
+          "SY0107b.s0046",
+          "SY0107b.s0062",
+          "SY0107b.s0067",
+          "SY0107b.s0073"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f12",
+        "type": "decision",
+        "fact": "A single stop button for the alarm will be included as a backup for noisy kitchens, unless the industrial designer raises a problem.",
+        "agreed": true,
+        "related_action_item": "SY0107b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107b.s0054",
+          "SY0107b.s0056",
+          "SY0107b.s0081",
+          "SY0107b.s0082",
+          "SY0107b.s0083",
+          "SY0107b.s0084"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f13",
+        "type": "decision",
+        "fact": "When two timers finish at once both are announced; the button stops all ringing timers and voice can stop a single one.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107b.s0087",
+          "SY0107b.s0088",
+          "SY0107b.s0089",
+          "SY0107b.s0090"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f14",
+        "type": "decision",
+        "fact": "The phone app was dropped because of cost and lack of user demand.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0107a",
+        "evidence_segments": [
+          "SY0107b.s0096",
+          "SY0107b.s0097",
+          "SY0107b.s0098",
+          "SY0107b.s0099",
+          "SY0107b.s0100",
+          "SY0107b.s0101"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f15",
+        "type": "other",
+        "fact": "The fridge magnet remains deferred to the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0107a",
+        "evidence_segments": [
+          "SY0107b.s0102"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f16",
+        "type": "other",
+        "fact": "The alarm speaker must be loud enough to be heard over an extractor fan; this was added to the industrial designer's tasks.",
+        "agreed": null,
+        "related_action_item": "SY0107b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107b.s0091",
+          "SY0107b.s0092",
+          "SY0107b.s0093"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f17",
+        "type": "action_item",
+        "fact": "The industrial designer, though absent, was assigned to finish the microphone research and check fan noise handling and speaker volume.",
+        "agreed": null,
+        "related_action_item": "SY0107b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107b.s0105",
+          "SY0107b.s0106"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f18",
+        "type": "action_item",
+        "fact": "The project manager will email the industrial designer with the decisions and his tasks.",
+        "agreed": null,
+        "related_action_item": "SY0107b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107b.s0079",
+          "SY0107b.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f19",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer offered to message the industrial designer himself; the project manager declined and will email him instead.",
+        "agreed": false,
+        "related_action_item": "SY0107b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107b.s0107",
+          "SY0107b.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f20",
+        "type": "action_item",
+        "fact": "The user interface designer will write the voice command list and sketch the display and lights.",
+        "agreed": null,
+        "related_action_item": "SY0107b.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107b.s0113",
+          "SY0107b.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f21",
+        "type": "action_item",
+        "fact": "The marketing expert will research kitchen design trends for the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": "SY0107b.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107b.s0115",
+          "SY0107b.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0107b.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0107b.f22",
+        "type": "action_item",
+        "fact": "The project manager will write up the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0107b.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0107b.s0117"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_ABSENT_DISCUSSED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_ABSENT_DISCUSSED",
+        "segments": [
+          "SY0107b.s0004",
+          "SY0107b.s0005",
+          "SY0107b.s0006",
+          "SY0107b.s0007",
+          "SY0107b.s0008",
+          "SY0107b.s0009",
+          "SY0107b.s0010",
+          "SY0107b.s0011",
+          "SY0107b.s0012",
+          "SY0107b.s0013",
+          "SY0107b.s0057",
+          "SY0107b.s0058",
+          "SY0107b.s0076",
+          "SY0107b.s0077",
+          "SY0107b.s0078",
+          "SY0107b.s0079",
+          "SY0107b.s0084",
+          "SY0107b.s0093",
+          "SY0107b.s0105",
+          "SY0107b.s0106",
+          "SY0107b.s0107",
+          "SY0107b.s0108",
+          "SY0107b.s0110",
+          "SY0107b.s0111",
+          "SY0107b.s0120",
+          "SY0107b.s0121"
+        ],
+        "note": "Rafael (ID) is off sick; the others discuss why he is away, his missing mic research, what he would think of the button, and what to tell him; he never speaks."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_INTERLEAVED_TOPICS",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_INTERLEAVED_TOPICS",
+        "segments": [
+          "SY0107b.s0041",
+          "SY0107b.s0042",
+          "SY0107b.s0044",
+          "SY0107b.s0045",
+          "SY0107b.s0046",
+          "SY0107b.s0048",
+          "SY0107b.s0050",
+          "SY0107b.s0051",
+          "SY0107b.s0052",
+          "SY0107b.s0053",
+          "SY0107b.s0054",
+          "SY0107b.s0056",
+          "SY0107b.s0057",
+          "SY0107b.s0058",
+          "SY0107b.s0059",
+          "SY0107b.s0060",
+          "SY0107b.s0061",
+          "SY0107b.s0062",
+          "SY0107b.s0064",
+          "SY0107b.s0067",
+          "SY0107b.s0068",
+          "SY0107b.s0069",
+          "SY0107b.s0071",
+          "SY0107b.s0072",
+          "SY0107b.s0073",
+          "SY0107b.s0074",
+          "SY0107b.s0075",
+          "SY0107b.s0081",
+          "SY0107b.s0082",
+          "SY0107b.s0083",
+          "SY0107b.s0084",
+          "SY0107b.s0085",
+          "SY0107b.s0087",
+          "SY0107b.s0088",
+          "SY0107b.s0089",
+          "SY0107b.s0090",
+          "SY0107b.s0091",
+          "SY0107b.s0092",
+          "SY0107b.s0093"
+        ],
+        "note": "Timer count/naming (41-46, 61-73, 85-90) alternates with kitchen noise/backup button (48-60, 74-84, 91-93)."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

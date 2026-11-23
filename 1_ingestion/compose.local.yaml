@@ -21,7 +21,7 @@ services:
     image: liveminutes-bridge:dev
     networks:
       - attendee_network         # the bot reaches it as liveminutes-bridge:8775 / :8776
-    env_file: ../../.env         # the repo's .env: GROQ_API_KEY, ATTENDEE_API_KEY
+    env_file: ../../.env         # the repo's .env: GROQ_API_KEY, ATTENDEE_API_KEY, GEMINI_API_KEY + LIVEMINUTES_LLM_* (live notes)
     volumes:
       - ../certs:/app/certs:ro
       - ../sessions:/app/sessions  # transcripts land in 1_ingestion/sessions/ on your computer

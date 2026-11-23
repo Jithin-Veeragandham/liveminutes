@@ -1,0 +1,145 @@
+# Edge-case scenario spec. The generator reads scenarios ONLY from this file.
+#
+# Fields
+#   id               stable ID, used in cache keys and edge_cases[].scenario_id
+#   feature          F1 live summary | F2 action items | F3 Q&A over past meetings
+#   description      what must happen in the meeting (inserted verbatim into the prompt)
+#   required_gold    gold-label fields that must be filled for this scenario
+#   needs_absent     true -> the planner marks one participant absent for the meeting
+#   checks           machine checks run by `validate` (see src/synthetic/validate.py)
+#
+# Editing any entry changes the cache key of every meeting that uses it, so that
+# meeting is regenerated on the next `generate`. Bump spec_version when you do.
+
+spec_version: 1
+
+scenarios:
+  # ---------------- F1: live summary ----------------
+  - id: F1_PLAN_CHANGE
+    feature: F1
+    description: >-
+      The team agrees on a plan early in the meeting, then later in the same meeting
+      changes it (different choice, date, or approach). The gold summary must state only
+      the FINAL plan, and may mention that it was revised.
+    required_gold: [summary, edge_cases]
+    needs_absent: false
+    checks: [{min_tagged_segments: 2}, {qa_fact_type: plan_change}]
+
+  - id: F1_SELF_CORRECTION
+    feature: F1
+    description: >-
+      A speaker states a fact or number, then corrects themselves ("sorry, I mean ...")
+      within the same or the next turn. The gold summary must use the corrected value.
+    required_gold: [summary, edge_cases]
+    needs_absent: false
+    checks: [{min_tagged_segments: 1}, same_speaker_tagged]
+
+  - id: F1_OFF_TOPIC_TANGENT
+    feature: F1
+    description: >-
+      A long off-topic tangent (at least 8 consecutive segments, e.g. weekend plans, a
+      film, the coffee machine) unrelated to the project. The gold summary must NOT
+      include the tangent's content.
+    required_gold: [summary, edge_cases]
+    needs_absent: false
+    checks: [{min_tagged_segments: 8}, contiguous_tagged]
+
+  - id: F1_ABSENT_DISCUSSED
+    feature: F1
+    description: >-
+      One team member is absent. The others discuss them (why they are away, what they
+      would think, what to tell them). The absent person never speaks. The gold summary
+      must not attribute any statement to the absent person.
+    required_gold: [summary, edge_cases]
+    needs_absent: true
+    checks: [{min_tagged_segments: 2}, absent_participant]
+
+  - id: F1_SARCASM_AS_FACT
+    feature: F1
+    description: >-
+      Someone makes a joke or sarcastic remark phrased as a statement of fact (e.g. "great,
+      so we'll just make it out of solid gold"), and the team does not adopt it. The gold
+      summary must NOT report the joke as a decision or fact.
+    required_gold: [summary, edge_cases]
+    needs_absent: false
+    checks: [{min_tagged_segments: 1}]
+
+  - id: F1_INTERLEAVED_TOPICS
+    feature: F1
+    description: >-
+      Two agenda topics are discussed interleaved: the conversation switches back and
+      forth between topic X and topic Y at least twice each. The gold summary must
+      present each topic coherently.
+    required_gold: [summary, edge_cases]
+    needs_absent: false
+    checks: [{min_tagged_segments: 4}, non_contiguous_tagged]
+
+  # ---------------- F2: action items ----------------
+  - id: F2_TASK_TO_ABSENT
+    feature: F2
+    description: >-
+      A task is assigned to a team member who is absent from this meeting. The gold
+      action item owner is that absent participant.
+    required_gold: [action_items, edge_cases]
+    needs_absent: true
+    checks: [{min_tagged_segments: 1}, absent_participant, absent_owner]
+
+  - id: F2_OFFERED_TAKEN_BY_OTHER
+    feature: F2
+    description: >-
+      One person offers to do a task ("I could look into ..."), but a different person
+      ends up taking it. The gold owner is the person who took it, and the history records
+      the offer and the acceptance.
+    required_gold: [action_items, edge_cases]
+    needs_absent: false
+    checks: [{min_tagged_segments: 2}, offered_taken_by_other]
+
+  - id: F2_REASSIGNED_OR_DROPPED
+    feature: F2
+    description: >-
+      A task is assigned early in the meeting and later in the same meeting is either
+      reassigned to someone else (status reassigned, owner = new owner, previous_owners
+      lists the original) or dropped entirely (status dropped).
+    required_gold: [action_items, edge_cases]
+    needs_absent: false
+    checks: [{min_tagged_segments: 2}, {status_in: [reassigned, dropped]}]
+
+  - id: F2_VAGUE_NO_OWNER
+    feature: F2
+    description: >-
+      A task is mentioned vaguely ("someone should probably check the costs") and no one
+      takes it. The gold action item has owner null and owner_unclear true.
+    required_gold: [action_items, edge_cases]
+    needs_absent: false
+    checks: [{min_tagged_segments: 1}, vague_owner]
+
+  # ---------------- F3: Q&A over past meetings ----------------
+  - id: F3_TASK_TO_ABSENT
+    feature: F3
+    description: >-
+      A task is assigned to a team member who is absent from this meeting. Record F3
+      facts for who was absent, who got the task, and who assigned it, so a later
+      question ("what was X asked to do while they were away?") can be answered.
+    required_gold: [action_items, qa_facts, edge_cases]
+    needs_absent: true
+    checks: [{min_tagged_segments: 1}, absent_participant, absent_owner, {qa_fact_type: absence}, {qa_fact_type: action_item}]
+
+  - id: F3_UNAGREED_DECISION
+    feature: F3
+    description: >-
+      Someone raises a proposal as if it were a decision, but no one agrees to it and the
+      meeting moves on without settling it. Record an F3 fact of type unagreed_proposal
+      with agreed false. It must not appear in summary.decisions.
+    required_gold: [summary, qa_facts, edge_cases]
+    needs_absent: false
+    checks: [{min_tagged_segments: 1}, {qa_fact_type: unagreed_proposal}, unagreed_not_in_decisions]
+
+  - id: F3_ACTION_REMOVED
+    feature: F3
+    description: >-
+      An action item is created and later in the same meeting explicitly removed or
+      cancelled. The action item has status dropped. Record an F3 fact of type
+      action_item_removed linked to it.
+    required_gold: [action_items, qa_facts, edge_cases]
+    needs_absent: false
+    checks: [{min_tagged_segments: 2}, {status_in: [dropped]}, {qa_fact_type: action_item_removed}]

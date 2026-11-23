@@ -1,0 +1,651 @@
+{
+  "run_id": "20261120T075708Z_bart_ami_eval_recursive_1seeds",
+  "commit": "7cea72e708d1e24cc2cfda29055cb6507bbf3f94",
+  "uncommitted_changes": [
+    ".gitignore",
+    "1_ingestion/Dockerfile",
+    "1_ingestion/Dockerfile.dockerignore",
+    "2_summarization/bart_summarizer.py",
+    "2_summarization/llm_summarizer.py",
+    "2_summarization/run.py",
+    "2_summarization/settings.py",
+    "2_summarization/textrank_baseline.py",
+    "5_data/ami/ami.py",
+    "README.md",
+    "docs/SUMMARIZATION.md",
+    "2_summarization/chunks.py",
+    "2_summarization/datasets.py",
+    "2_summarization/hpo/",
+    "2_summarization/tests/test_evaluation.py",
+    "6_evaluation/summarization/disaggregate.py"
+  ],
+  "dataset": "ami",
+  "mode": "recursive",
+  "data_hash": "1ce0450de10c44aa3d794865f7b53f50eab8a94b0027899c51d5dd2e6797c048",
+  "split_file_sha256": "09e6d3ee32281507391f23bb3bda6d6d98bacac9979e68cbd173702d4e1068c0",
+  "config": {
+    "model": {
+      "model": "philschmid/bart-large-cnn-samsum",
+      "revision": "e49b3d60d923f12db22bdd363356f1a4c68532ad",
+      "window_seconds": 60,
+      "num_beams": 4,
+      "device": "cpu",
+      "mode": "recursive"
+    },
+    "mode": "recursive",
+    "seeds": [
+      42
+    ],
+    "pythonhashseed": 42,
+    "bertscore": {
+      "model": "FacebookAI/roberta-large",
+      "revision": "722cf37b1afa9454edce342e7895e588b6ff1d59",
+      "rescale_with_baseline": false
+    }
+  },
+  "config_hash": "57d188ffbeb9",
+  "model": "bart",
+  "model_version": "philschmid/bart-large-cnn-samsum@e49b3d60d923",
+  "split": "eval",
+  "meetings": [
+    "ES2004a",
+    "ES2004b",
+    "ES2004c",
+    "ES2004d",
+    "ES2014a",
+    "ES2014b",
+    "ES2014c",
+    "ES2014d",
+    "IS1009a",
+    "IS1009b",
+    "IS1009c",
+    "IS1009d",
+    "TS3003a",
+    "TS3003b",
+    "TS3003c",
+    "TS3003d",
+    "TS3007a",
+    "TS3007b",
+    "TS3007c",
+    "TS3007d"
+  ],
+  "meeting_groups": {
+    "ES2004a": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2004b": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2004c": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2004d": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2014a": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "ES2014b": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "ES2014c": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "ES2014d": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "IS1009a": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "IS1009b": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "IS1009c": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "IS1009d": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "TS3003a": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3003b": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3003c": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3003d": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007a": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007b": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007c": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007d": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    }
+  },
+  "metrics_by_group": {
+    "gender_mix": {
+      "groups": {
+        "all_female": {
+          "n": 4,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "IS1009a",
+            "IS1009b",
+            "IS1009c",
+            "IS1009d"
+          ],
+          "mean": {
+            "rouge1": 0.2646,
+            "rouge2": 0.0724,
+            "rougeL": 0.1589,
+            "rougeSU4": 0.0905,
+            "bertscore_f1": 0.8503
+          }
+        },
+        "all_male": {
+          "n": 8,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "TS3003a",
+            "TS3003b",
+            "TS3003c",
+            "TS3003d",
+            "TS3007a",
+            "TS3007b",
+            "TS3007c",
+            "TS3007d"
+          ],
+          "mean": {
+            "rouge1": 0.2443,
+            "rouge2": 0.0586,
+            "rougeL": 0.1452,
+            "rougeSU4": 0.0765,
+            "bertscore_f1": 0.848
+          }
+        },
+        "mixed": {
+          "n": 8,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "ES2004a",
+            "ES2004b",
+            "ES2004c",
+            "ES2004d",
+            "ES2014a",
+            "ES2014b",
+            "ES2014c",
+            "ES2014d"
+          ],
+          "mean": {
+            "rouge1": 0.2332,
+            "rouge2": 0.0621,
+            "rougeL": 0.1389,
+            "rougeSU4": 0.0726,
+            "bertscore_f1": 0.8521
+          }
+        }
+      },
+      "gap": {
+        "rouge1": 0.0314,
+        "rouge2": 0.0138,
+        "rougeL": 0.02,
+        "rougeSU4": 0.0179,
+        "bertscore_f1": 0.0041
+      },
+      "worst": {
+        "rouge1": "mixed",
+        "rouge2": "all_male",
+        "rougeL": "mixed",
+        "rougeSU4": "mixed",
+        "bertscore_f1": "all_male"
+      }
+    },
+    "non_native": {
+      "groups": {
+        "all_native": {
+          "n": 12,
+          "n_series": 3,
+          "small": false,
+          "meetings": [
+            "ES2014a",
+            "ES2014b",
+            "ES2014c",
+            "ES2014d",
+            "TS3003a",
+            "TS3003b",
+            "TS3003c",
+            "TS3003d",
+            "TS3007a",
+            "TS3007b",
+            "TS3007c",
+            "TS3007d"
+          ],
+          "mean": {
+            "rouge1": 0.231,
+            "rouge2": 0.0614,
+            "rougeL": 0.1399,
+            "rougeSU4": 0.0727,
+            "bertscore_f1": 0.8491
+          }
+        },
+        "mostly_non_native": {
+          "n": 4,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "IS1009a",
+            "IS1009b",
+            "IS1009c",
+            "IS1009d"
+          ],
+          "mean": {
+            "rouge1": 0.2646,
+            "rouge2": 0.0724,
+            "rougeL": 0.1589,
+            "rougeSU4": 0.0905,
+            "bertscore_f1": 0.8503
+          }
+        },
+        "some_non_native": {
+          "n": 4,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "ES2004a",
+            "ES2004b",
+            "ES2004c",
+            "ES2004d"
+          ],
+          "mean": {
+            "rouge1": 0.2619,
+            "rouge2": 0.057,
+            "rougeL": 0.1484,
+            "rougeSU4": 0.0801,
+            "bertscore_f1": 0.8528
+          }
+        }
+      },
+      "gap": {
+        "rouge1": 0.0336,
+        "rouge2": 0.0154,
+        "rougeL": 0.019,
+        "rougeSU4": 0.0178,
+        "bertscore_f1": 0.0037
+      },
+      "worst": {
+        "rouge1": "all_native",
+        "rouge2": "some_non_native",
+        "rougeL": "all_native",
+        "rougeSU4": "all_native",
+        "bertscore_f1": "all_native"
+      }
+    }
+  },
+  "meetings_hash": "cc86e00bd353",
+  "n_seeds": 1,
+  "metrics_mean": {
+    "rouge1": 0.2439,
+    "rouge2": 0.0628,
+    "rougeL": 0.1454,
+    "rougeSU4": 0.0777,
+    "bertscore_f1": 0.8501
+  },
+  "metrics_std": {
+    "rouge1": 0.0,
+    "rouge2": 0.0,
+    "rougeL": 0.0,
+    "rougeSU4": 0.0,
+    "bertscore_f1": 0.0
+  },
+  "metrics_per_seed": {
+    "42": {
+      "rouge1": 0.2439,
+      "rouge2": 0.0628,
+      "rougeL": 0.1454,
+      "rougeSU4": 0.0777,
+      "bertscore_f1": 0.8501
+    }
+  },
+  "identical_across_seeds": true,
+  "seed_variation": {
+    "verdict": "Only one seed was run, so there is no seed variation to measure.",
+    "why": "BART decodes with beam search (do_sample=False), so on the same hardware it is deterministic too. Differences between seeds can only come from nondeterministic float math (e.g. GPU kernels, thread scheduling), which can flip a beam choice and change a few words. Each seed sets Python random, NumPy and torch. PYTHONHASHSEED is fixed to the FIRST seed for the whole run.",
+    "seeds": [
+      42
+    ],
+    "metrics": {
+      "rouge1": {
+        "mean": 0.2439,
+        "std": 0.0,
+        "min": 0.2439,
+        "min_seed": 42,
+        "max": 0.2439,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rouge2": {
+        "mean": 0.0628,
+        "std": 0.0,
+        "min": 0.0628,
+        "min_seed": 42,
+        "max": 0.0628,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rougeL": {
+        "mean": 0.1454,
+        "std": 0.0,
+        "min": 0.1454,
+        "min_seed": 42,
+        "max": 0.1454,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rougeSU4": {
+        "mean": 0.0777,
+        "std": 0.0,
+        "min": 0.0777,
+        "min_seed": 42,
+        "max": 0.0777,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "bertscore_f1": {
+        "mean": 0.8501,
+        "std": 0.0,
+        "min": 0.8501,
+        "min_seed": 42,
+        "max": 0.8501,
+        "max_seed": 42,
+        "range": 0.0
+      }
+    },
+    "meetings_changed": 0,
+    "meetings_total": 20,
+    "per_meeting": {}
+  },
+  "seconds_per_meeting": 240.639,
+  "python": "3.12.10",
+  "packages": {
+    "summa": "1.2.0",
+    "rouge-score": "0.1.2",
+    "numpy": "2.5.4",
+    "torch": "2.14.1",
+    "transformers": "5.20.2",
+    "bert-score": "0.3.13",
+    "anthropic": "1.17.0"
+  },
+  "hardware": {
+    "machine": "AMD64",
+    "system": "Windows-11-10.0.26200-SP0",
+    "cpus": 16
+  },
+  "per_seed_runs": {
+    "42": {
+      "scores": {
+        "rouge1": 0.2439,
+        "rouge2": 0.0628,
+        "rougeL": 0.1454,
+        "rougeSU4": 0.0777,
+        "bertscore_f1": 0.8501
+      },
+      "per_meeting": {
+        "ES2004a": {
+          "rouge1": 0.2458100558659218,
+          "rouge2": 0.06779661016949153,
+          "rougeL": 0.1564245810055866,
+          "rougeSU4": 0.07662835249042145,
+          "bertscore_f1": 0.855623722076416
+        },
+        "ES2004b": {
+          "rouge1": 0.19920318725099598,
+          "rouge2": 0.0321285140562249,
+          "rougeL": 0.11155378486055777,
+          "rougeSU4": 0.05962059620596205,
+          "bertscore_f1": 0.8399659395217896
+        },
+        "ES2004c": {
+          "rouge1": 0.3089430894308943,
+          "rouge2": 0.0819672131147541,
+          "rougeL": 0.17886178861788615,
+          "rougeSU4": 0.09820193637621023,
+          "bertscore_f1": 0.8626250624656677
+        },
+        "ES2004d": {
+          "rouge1": 0.29357798165137616,
+          "rouge2": 0.046296296296296294,
+          "rougeL": 0.14678899082568808,
+          "rougeSU4": 0.08607198748043818,
+          "bertscore_f1": 0.8528611660003662
+        },
+        "ES2014a": {
+          "rouge1": 0.22784810126582275,
+          "rouge2": 0.07692307692307691,
+          "rougeL": 0.12658227848101264,
+          "rougeSU4": 0.056644880174291944,
+          "bertscore_f1": 0.8582454919815063
+        },
+        "ES2014b": {
+          "rouge1": 0.2222222222222222,
+          "rouge2": 0.08298755186721991,
+          "rougeL": 0.14814814814814817,
+          "rougeSU4": 0.08683473389355742,
+          "bertscore_f1": 0.8616077899932861
+        },
+        "ES2014c": {
+          "rouge1": 0.25619834710743805,
+          "rouge2": 0.09166666666666667,
+          "rougeL": 0.1487603305785124,
+          "rougeSU4": 0.08438818565400844,
+          "bertscore_f1": 0.8637668490409851
+        },
+        "ES2014d": {
+          "rouge1": 0.11158798283261803,
+          "rouge2": 0.017316017316017316,
+          "rougeL": 0.09442060085836909,
+          "rougeSU4": 0.032163742690058485,
+          "bertscore_f1": 0.822341799736023
+        },
+        "IS1009a": {
+          "rouge1": 0.2809917355371901,
+          "rouge2": 0.05833333333333333,
+          "rougeL": 0.1487603305785124,
+          "rougeSU4": 0.10267229254571025,
+          "bertscore_f1": 0.8503592014312744
+        },
+        "IS1009b": {
+          "rouge1": 0.2026431718061674,
+          "rouge2": 0.04444444444444444,
+          "rougeL": 0.12334801762114539,
+          "rougeSU4": 0.04954954954954954,
+          "bertscore_f1": 0.8402283191680908
+        },
+        "IS1009c": {
+          "rouge1": 0.3,
+          "rouge2": 0.11764705882352941,
+          "rougeL": 0.19166666666666665,
+          "rougeSU4": 0.12340425531914893,
+          "bertscore_f1": 0.8598200678825378
+        },
+        "IS1009d": {
+          "rouge1": 0.2746781115879828,
+          "rouge2": 0.06926406926406926,
+          "rougeL": 0.17167381974248927,
+          "rougeSU4": 0.08625730994152045,
+          "bertscore_f1": 0.8506235480308533
+        },
+        "TS3003a": {
+          "rouge1": 0.25,
+          "rouge2": 0.04395604395604395,
+          "rougeL": 0.16304347826086957,
+          "rougeSU4": 0.07262569832402235,
+          "bertscore_f1": 0.8381877541542053
+        },
+        "TS3003b": {
+          "rouge1": 0.25,
+          "rouge2": 0.03883495145631068,
+          "rougeL": 0.16346153846153846,
+          "rougeSU4": 0.06568144499178982,
+          "bertscore_f1": 0.8500021696090698
+        },
+        "TS3003c": {
+          "rouge1": 0.2983425414364641,
+          "rouge2": 0.0782122905027933,
+          "rougeL": 0.16574585635359115,
+          "rougeSU4": 0.10037878787878789,
+          "bertscore_f1": 0.8663547039031982
+        },
+        "TS3003d": {
+          "rouge1": 0.24175824175824176,
+          "rouge2": 0.04428044280442804,
+          "rougeL": 0.13919413919413917,
+          "rougeSU4": 0.07462686567164178,
+          "bertscore_f1": 0.82221919298172
+        },
+        "TS3007a": {
+          "rouge1": 0.22885572139303484,
+          "rouge2": 0.07035175879396985,
+          "rougeL": 0.12935323383084577,
+          "rougeSU4": 0.0816326530612245,
+          "bertscore_f1": 0.8543850183486938
+        },
+        "TS3007b": {
+          "rouge1": 0.25384615384615383,
+          "rouge2": 0.062015503875969,
+          "rougeL": 0.13846153846153844,
+          "rougeSU4": 0.09411764705882351,
+          "bertscore_f1": 0.84968101978302
+        },
+        "TS3007c": {
+          "rouge1": 0.24031007751937983,
+          "rouge2": 0.07812500000000001,
+          "rougeL": 0.1317829457364341,
+          "rougeSU4": 0.07114624505928854,
+          "bertscore_f1": 0.852236807346344
+        },
+        "TS3007d": {
+          "rouge1": 0.19130434782608696,
+          "rouge2": 0.052631578947368425,
+          "rougeL": 0.13043478260869565,
+          "rougeSU4": 0.05185185185185185,
+          "bertscore_f1": 0.8507137298583984
+        }
+      },
+      "predictions": {
+        "ES2004a": "Sarah is the Project Manager and Marketing Expert is the Marketing Expert. They discuss the design of a remote control. The older generation could have an extra button for large print and a flip top remote control so that when you flip over the top, your screen is bigger.",
+        "ES2004b": "Project Manager and Marketing Expert want to produce their own mobile phones for business people, young people and trendy people. People between age group of twenty to thirty-five are the biggest market. Most people would like a universal control, one handset for all, flip-open design and reducing the size of the control and electronic panel.",
+        "ES2004c": "Marketing Expert wants the remote control to be technologically innovative and easy to use. The project manager has decided on leaving out the voice recognition and a flip design. The kinetic batteries will be used. The rubberised covers are going to be cheap to produce. The company logo will be incorporated in the design.",
+        "ES2004d": "Industrial Designer, Marketing Expert and Project Manager are going to use a seven point scale to assess the case material. Marketing Expert will do a preliminary rating of all the criteria on the whiteboard and they will discuss each one and come to a consensus rating of 12 point 5. Project Manager will be delegating in his role as Project Supervisor.",
+        "ES2014a": "Industrial Designer and Marketing Expert will help Project Manager design a new remote control. Production costs are limited to twelve and a half Euro per unit. Project Manager is looking to sell internationally.",
+        "ES2014b": "The project manager and Industrial Designer want to develop the technology for speech recognition. Marketing Expert has an idea about the menu. The decision on the remote control functions will be made in 5 minutes. Project Manager will do the minutes of the meeting.",
+        "ES2014c": "Industrial Designer and Project Manager are discussing the design of the volume button. Marketing Expert is not convinced that changeable covers would be something that people would buy into. They decide to go for a single curved curve, rubber push buttons, rubber case and a sticker.",
+        "ES2014d": "The wife of Project Manager's wife is a computer tutor. She spends a lot of time at the computer terminal. Project Manager advises her to either help the students directly or point them in the right direction.",
+        "IS1009a": "Francina, Eileen, Industrial Designer, Jeanne-Oui and Betty are going to meet with Project Manager to discuss the presentation of a new remote control. The selling price is supposed to be twenty five Euro and the profit aim for the company is fifty million Euro. The light sensor would activate the signal.",
+        "IS1009b": "User Interface Designer will help Marketing Expert with prioritising functional requirements of the product Marketing Expert is trying to sell. Project Manager and Industrial Designer will be asked for their opinion on functional requirements. Industrial Designer can design different remotes for different people.",
+        "IS1009c": "The project manager is going over the minutes of the last meeting. Marketing manager presented her method of working. Marketing Expert suggests using push buttons. The components of the concept are the energy, battery and the interface type. Jana and Francine have to work together on a prototype using modelling clay.",
+        "IS1009d": "The project manager has to redo the meetings from the minutes from the last meeting. Marketing Expert has to give her suggestion on the new remote. The new remote should have nine channel buttons, a next button, volume buttons, subtitle buttons, switch to control features, colour contrast, sharpness etc. Voice recognition and practicality of use will be the selling points.",
+        "TS3003a": "Project Manager Frank and Marketing Expert are meeting to discuss the new remote control for Real Reaction. The Industrial Designer will work on the working design, components design and a bit of the look and feel design. The User Interface Designer will do the technical function design, user interface concept and user interface design.",
+        "TS3003b": "Project Manager wants to design a remote suitable for T_V. Freek Van Ponnen will present his presentation on the functional design phase. Marketing Expert will talk about his research on remote control and market research. Industrial Designer has a presentation about the working design. Personal coach will send specific instructions to the designer.",
+        "TS3003c": "Industrial Designer and User Interface Designer are having a conceptual design meeting today. Marketing Expert will start with the trend-watching he did over the past few days. Project Manager suggests discarding the voice recognition and changing the case covers. Remote control and docking station should be telephone-shaped.",
+        "TS3003d": "The Marketing Expert got stuck in the traffic on his way to the fourth and last meeting with Project Manager. They are going to discuss the final design and evaluation of the product and the project. The project is budgeted for $15.15 million. They will have the prototype presentation first, then they will set up some evaluation criteria and close the meeting at 3 pm. Project Manager will meet Marketing Expert in 10 minutes.",
+        "TS3007a": "Project Manager wants to make a new remote control. Marketing Expert and User Interface Designer are going to discuss it with Project Manager at the table. Project Manager will paint his cat red to distinguish his remote control from all the others.",
+        "TS3007b": "Industrial Designer will present the things he worked on to the functional design meeting. Internet and teletext teletext will be the main focus of the meeting. Marketing Expert says the following buttons are most important: Switching channels, teletext and volume controls, and a placeholder on the side of the T_V. Project Manager will bring it home after lunch.",
+        "TS3007c": "User Interface Designer is going to the conceptual design meeting for Real Reaction. Project Manager wants him to draw it in three-D. Marketing Expert thinks they should use kinetic energy sources instead of a normal battery. The next meeting starts in 30 minutes. The industrial development centre and the user interface designer will work on a prototype.",
+        "TS3007d": "Project Manager and Marketing Expert have to prepare a presentation and an evaluation of the SMARTboard. Marketing Expert suggests developing a cover with wood style, a white c and a couple of h colours. The production cost is under twelve and a half Euro."
+      },
+      "seconds": 4812.782106899889
+    }
+  }
+}

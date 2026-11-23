@@ -1,0 +1,1397 @@
+{
+  "meeting_id": "SY0110d",
+  "raw_sha256": "fedcbcaaee54a5c3bfe2e547557428405521068b8ee233f639c2700471339cb0",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting and explained that the user interface designer was absent with the flu; the partner badge with the enlarged logo had been finished beforehand and was in the shared folder.",
+        "The industrial designer reported the moulding company's quote of 1.54 euros per cup for the 300 ml polypropylene cup with in-mould label and ribbed grip band, at a minimum order of 10,000 units, plus a one-off mould cost of about 6,000 euros; the team chose the 10,000-unit order and rejected a smaller order of 5,000.",
+        "With the higher cup cost a cafe loses fifty-four cents per unreturned cup, and the project manager reported that management will cover this gap, funded by a partner fee of five euros a month per cafe.",
+        "The marketing expert presented the one-page staff guide, which the owner of Café Lindner approved with a bold line on refunds for cracked cups and a request to laminate it, and confirmed that he was happy with the slate grey colour.",
+        "The final design was confirmed with an embossed 'return for one euro' on the base, and the team checked it against management's requirements, with only the fifty partner cafes still to be achieved."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will confirm the order of 10,000 cups with the moulding company and request a few pre-production samples with the embossing.",
+        "The marketing expert will email the cafe owners from the trade fair list with the staff guide and the partner fee to recruit partner cafes.",
+        "The marketing expert will have the staff guides laminated, one per cafe.",
+        "The user interface designer (absent) is to prepare the print file for the partner badge once he has recovered.",
+        "The project manager will send the minutes to the user interface designer, ask him to do the badge print file and tell him there is no rush.",
+        "The project manager will write the final report for management and the minutes."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The team will place the minimum order of 10,000 cups at 1.54 euros per cup; a smaller first order of 5,000 was rejected.",
+        "The company will cover the cost of unreturned cups (fifty-four cents per cup), funded by a partner fee of five euros a month per cafe.",
+        "The staff guide is final, with a bold line that cracked cups are still refunded, and will be laminated with one copy per cafe.",
+        "The cup stays slate grey only; a limited launch edition in a second colour was rejected.",
+        "The final cup is a 300 ml tapered, stackable polypropylene cup with a 90 mm rim, a moulded ribbed grip band, slate grey colour and an in-mould label logo.",
+        "'Return for one euro' will be embossed on the base of the cup at no extra cost per cup; adding the website address was rejected.",
+        "The partner badge with the enlarged logo is considered basically final."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The target of fifty partner cafes in the first year has not yet been reached.",
+        "The badge print file depends on the user interface designer, who is off sick.",
+        "The pre-production samples with the embossing still have to be checked; lead time is about eight weeks."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0110d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0110d.ai1",
+        "description": "Confirm the order of 10,000 cups with the moulding company and request a couple of pre-production samples with the embossing.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0110d.s0112",
+            "event": "assigned",
+            "by": "C",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0110d.s0113",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0110d.s0112",
+          "SY0110d.s0113"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0110d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0110d.ai2",
+        "description": "Email the cafe owners from the trade fair list with the staff guide and partner fee to recruit partner cafes.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0110d.s0110",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0110d.s0111",
+            "event": "accepted",
+            "by": "C",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0110d.s0109",
+          "SY0110d.s0110",
+          "SY0110d.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0110d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0110d.ai3",
+        "description": "Get the staff guides laminated, one per cafe.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0110d.s0057",
+            "event": "assigned",
+            "by": "C",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0110d.s0058",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0110d.s0115",
+            "event": "restated",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0110d.s0054",
+          "SY0110d.s0057",
+          "SY0110d.s0058",
+          "SY0110d.s0115"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0110d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0110d.ai4",
+        "description": "Prepare the print file for the partner badge once recovered.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0110d.s0093",
+            "event": "assigned",
+            "by": "C",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0110d.s0092",
+          "SY0110d.s0093",
+          "SY0110d.s0094"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0110d.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0110d.ai5",
+        "description": "Send the minutes to the absent user interface designer, ask him to do the badge print file and tell him there is no rush.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0110d.s0093",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0110d.s0095",
+            "event": "restated",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0110d.s0093",
+          "SY0110d.s0094",
+          "SY0110d.s0095"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0110d.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0110d.ai6",
+        "description": "Write the final report for management and the meeting minutes.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0110d.s0116",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0110d.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f1",
+        "type": "absence",
+        "fact": "The user interface designer (Jonas) was absent because he had the flu and was expected to be out until Wednesday.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110d.s0005",
+          "SY0110d.s0008"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f2",
+        "type": "other",
+        "fact": "The partner badge with the enlarged logo had been finished before the user interface designer fell ill and was in the shared folder; the logo is about twice the size.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0110c",
+        "evidence_segments": [
+          "SY0110d.s0009",
+          "SY0110d.s0088"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f3",
+        "type": "other",
+        "fact": "The moulding company quoted 1.54 euros per cup with in-mould label and ribbed band, at a minimum order of 10,000 units; the industrial designer first said 1.45 and corrected himself.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0110c",
+        "evidence_segments": [
+          "SY0110d.s0018",
+          "SY0110d.s0019",
+          "SY0110d.s0021"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f4",
+        "type": "other",
+        "fact": "The mould is a one-off cost of about 6,000 euros.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110d.s0023"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f5",
+        "type": "decision",
+        "fact": "The team will order 10,000 cups at 1.54 euros per cup.",
+        "agreed": true,
+        "related_action_item": "SY0110d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110d.s0028",
+          "SY0110d.s0030",
+          "SY0110d.s0031"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f6",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested a smaller first order of 5,000 cups; it was not adopted because the price rises to about 1.80 per cup and fifty cafes need about 10,000 cups.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110d.s0026",
+          "SY0110d.s0027",
+          "SY0110d.s0028",
+          "SY0110d.s0030"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f7",
+        "type": "other",
+        "fact": "With the cup at 1.54 euros and a one-euro deposit, a cafe loses fifty-four cents per unreturned cup.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110d.s0034",
+          "SY0110d.s0035"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f8",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager reported back on the question of unreturned cup costs she had taken to management after the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0110c",
+        "evidence_segments": [
+          "SY0110d.s0037",
+          "SY0110d.s0039",
+          "SY0110d.s0041"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f9",
+        "type": "decision",
+        "fact": "The company will cover the cost of unreturned cups, funded by a partner fee of five euros a month per cafe.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110d.s0039",
+          "SY0110d.s0041",
+          "SY0110d.s0047"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f10",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert noted the partner fee was what she had suggested in the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0110c",
+        "evidence_segments": [
+          "SY0110d.s0042"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f11",
+        "type": "decision",
+        "fact": "The staff guide includes a bold line that cracked cups are still refunded and will be laminated, one per cafe.",
+        "agreed": true,
+        "related_action_item": "SY0110d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110d.s0052",
+          "SY0110d.s0054",
+          "SY0110d.s0057",
+          "SY0110d.s0058"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f12",
+        "type": "decision",
+        "fact": "The slate grey colour stays; the owner of Café Lindner was happy with it.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110d.s0060",
+          "SY0110d.s0061",
+          "SY0110d.s0063"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f13",
+        "type": "decision",
+        "fact": "The final cup is 300 ml polypropylene, 90 mm rim, tapered and stackable, with a moulded ribbed grip band, slate grey, with an in-mould label logo.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110d.s0065",
+          "SY0110d.s0066",
+          "SY0110d.s0067"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f14",
+        "type": "decision",
+        "fact": "'Return for one euro' will be embossed on the base of the cup at no extra cost.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110d.s0069",
+          "SY0110d.s0070",
+          "SY0110d.s0071",
+          "SY0110d.s0074",
+          "SY0110d.s0075"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f15",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested putting the website address on the base; it was dropped because it would be too small and the window badge already shows partner cafes.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110d.s0076",
+          "SY0110d.s0077",
+          "SY0110d.s0078",
+          "SY0110d.s0079"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f16",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested a limited launch edition in a second colour; it was rejected because one colour keeps the cup recognisable and a second colour needs extra setup.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0110c",
+        "evidence_segments": [
+          "SY0110d.s0081",
+          "SY0110d.s0082",
+          "SY0110d.s0083",
+          "SY0110d.s0084",
+          "SY0110d.s0085"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f17",
+        "type": "decision",
+        "fact": "The partner badge is considered basically final.",
+        "agreed": true,
+        "related_action_item": "SY0110d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110d.s0089",
+          "SY0110d.s0092"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f18",
+        "type": "other",
+        "fact": "Lead time is about six weeks for the mould and two weeks for the first 10,000 cups, about eight weeks in total.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110d.s0097",
+          "SY0110d.s0098"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f19",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer cited the Café Lindner dishwasher test (140 cycles, no problems) as proof the cup is dishwasher-safe.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0110c",
+        "evidence_segments": [
+          "SY0110d.s0102"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f20",
+        "type": "action_item",
+        "fact": "The industrial designer will confirm the 10,000-cup order and request pre-production samples with the embossing.",
+        "agreed": null,
+        "related_action_item": "SY0110d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110d.s0112",
+          "SY0110d.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f21",
+        "type": "action_item",
+        "fact": "The marketing expert will email cafe owners from the fair list to recruit partner cafes.",
+        "agreed": null,
+        "related_action_item": "SY0110d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110d.s0110",
+          "SY0110d.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f22",
+        "type": "action_item",
+        "fact": "The marketing expert will get the staff guides laminated.",
+        "agreed": null,
+        "related_action_item": "SY0110d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110d.s0057",
+          "SY0110d.s0058",
+          "SY0110d.s0115"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f23",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f23",
+        "type": "action_item",
+        "fact": "The absent user interface designer is to prepare the badge print file once recovered.",
+        "agreed": null,
+        "related_action_item": "SY0110d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110d.s0093"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f24",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f24",
+        "type": "action_item",
+        "fact": "The project manager will send the minutes to the user interface designer and tell him there is no rush.",
+        "agreed": null,
+        "related_action_item": "SY0110d.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110d.s0093",
+          "SY0110d.s0094",
+          "SY0110d.s0095"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0110d.f25",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0110d.f25",
+        "type": "action_item",
+        "fact": "The project manager will write the final report for management and the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0110d.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0110d.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_ABSENT_DISCUSSED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_ABSENT_DISCUSSED",
+        "segments": [
+          "SY0110d.s0005",
+          "SY0110d.s0006",
+          "SY0110d.s0007",
+          "SY0110d.s0008",
+          "SY0110d.s0009",
+          "SY0110d.s0010",
+          "SY0110d.s0087",
+          "SY0110d.s0090",
+          "SY0110d.s0091",
+          "SY0110d.s0093",
+          "SY0110d.s0094",
+          "SY0110d.s0095"
+        ],
+        "note": "The others discuss Jonas's flu, his finished badge file, what he would think of the outline and what to tell him; he never speaks."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_SELF_CORRECTION",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_SELF_CORRECTION",
+        "segments": [
+          "SY0110d.s0018",
+          "SY0110d.s0019"
+        ],
+        "note": "The industrial designer says the quote is 1.45 per cup, then corrects himself in the next turn to 1.54."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,1233 @@
+{
+  "meeting_id": "SY0303b",
+  "raw_sha256": "e2c9a0e80e5d9495d459268ce867fb6bb238a6a372785a75a1eaa0e68ce36de4",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the functional design meeting, noted that the industrial designer was absent through illness, and welcomed the marketing expert, who had missed the kickoff and confirmed she had received the brief and minutes.",
+        "He recapped the kickoff: the target age group of four to eight was agreed, while the material was still open after the industrial designer's EVA foam proposal. He reported that management requires the company logo and the company yellow on the case.",
+        "The marketing expert presented her market research. Competitor cases sell for roughly 15 to 30 euros. Parents rank drop protection first, ease of cleaning second and a carrying handle third, and only one competitor case offered a stand.",
+        "The user interface designer presented how children use the tablet. He recommended thick, grippy edges, soft covers over the volume buttons, a slightly recessed power button and an open charging port. He also proposed a raised lip around the screen instead of a separate screen protector.",
+        "The team agreed on the raised lip and confirmed the handle that folds into a stand. The material question was handed to the absent industrial designer for costing. A parent survey was assigned to the marketing expert and then cancelled within the meeting."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer, who was absent, will cost EVA foam against silicone relative to the 12.50 euro limit, check whether foam can be wiped clean, and send the figures before the next meeting. The project manager assigned this task.",
+        "The project manager will email the industrial designer her task and the minutes today.",
+        "The marketing expert will look into colour trends for children's products that work with the company yellow.",
+        "The user interface designer will sketch the button cut-outs and the handle-stand for the conceptual design meeting.",
+        "The project manager will send out the minutes."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The case will have a raised lip around the screen, and no separate screen protector will be included.",
+        "The handle that folds into a stand will be kept as a key feature and selling point.",
+        "The planned parent survey through the company newsletter was cancelled, and the team will rely on the marketing expert's existing research."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The case material, EVA foam or silicone, is still unresolved and waits for the industrial designer's cost figures.",
+        "The 12.50 euro production cost limit remains tight, especially if silicone is used.",
+        "A shoulder strap was suggested but parked over safety concerns for young children.",
+        "The raised lip protects against drops but not against scratches."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303b.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303b.ai1",
+        "description": "Cost EVA foam against silicone relative to the 12.50 euro production limit, check whether foam can be wiped clean, and send figures before the next meeting.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303b.s0092",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0303b.s0098",
+            "event": "restated",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303b.s0085",
+          "SY0303b.s0091",
+          "SY0303b.s0092",
+          "SY0303b.s0093",
+          "SY0303b.s0097",
+          "SY0303b.s0098",
+          "SY0303b.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303b.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303b.ai2",
+        "description": "Email the absent industrial designer her costing task and the minutes today.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303b.s0095",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303b.s0094",
+          "SY0303b.s0095"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303b.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303b.ai3",
+        "description": "Run a quick parent survey through the company newsletter on the strap, the handle and willingness to pay.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "dropped",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303b.s0050",
+            "event": "proposed",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0303b.s0053",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0303b.s0103",
+            "event": "dropped",
+            "by": "D",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303b.s0050",
+          "SY0303b.s0051",
+          "SY0303b.s0052",
+          "SY0303b.s0053",
+          "SY0303b.s0099",
+          "SY0303b.s0100",
+          "SY0303b.s0101",
+          "SY0303b.s0102",
+          "SY0303b.s0103",
+          "SY0303b.s0105"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303b.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303b.ai4",
+        "description": "Look into colour trends for children's products that work with the company yellow.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303b.s0107",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0303b.s0108",
+            "event": "accepted",
+            "by": "D",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303b.s0107",
+          "SY0303b.s0108"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303b.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303b.ai5",
+        "description": "Sketch the button cut-outs and the handle-stand for the conceptual design meeting.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303b.s0109",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0303b.s0110",
+            "event": "accepted",
+            "by": "D",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303b.s0109",
+          "SY0303b.s0110"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303b.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303b.ai6",
+        "description": "Send out the minutes of the meeting.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303b.s0111",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303b.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303b.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303b.f1",
+        "type": "absence",
+        "fact": "Lena (C), the industrial designer, was absent from the functional design meeting because she was off sick.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303b.s0004",
+          "SY0303b.s0006"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303b.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303b.f2",
+        "type": "action_item",
+        "fact": "While she was absent, Lena (C) was given the task of costing EVA foam against silicone relative to the 12.50 euro limit, checking whether foam can be wiped clean, and sending figures before the next meeting.",
+        "agreed": null,
+        "related_action_item": "SY0303b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303b.s0091",
+          "SY0303b.s0092",
+          "SY0303b.s0093",
+          "SY0303b.s0097",
+          "SY0303b.s0098"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303b.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303b.f3",
+        "type": "other",
+        "fact": "Marcus (D), the project manager, assigned the costing task to the absent Lena (C) and added the cleaning check at Tom's (B) request.",
+        "agreed": null,
+        "related_action_item": "SY0303b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303b.s0091",
+          "SY0303b.s0092",
+          "SY0303b.s0097",
+          "SY0303b.s0098"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303b.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303b.f4",
+        "type": "action_item",
+        "fact": "Marcus (D) will email Lena (C) her task and the minutes today.",
+        "agreed": null,
+        "related_action_item": "SY0303b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303b.s0094",
+          "SY0303b.s0095"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303b.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303b.f5",
+        "type": "action_item",
+        "fact": "Marcus (D) asked Priya (A) to run a parent survey through the company newsletter, and she accepted.",
+        "agreed": null,
+        "related_action_item": "SY0303b.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303b.s0050",
+          "SY0303b.s0051",
+          "SY0303b.s0052",
+          "SY0303b.s0053"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303b.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303b.f6",
+        "type": "action_item_removed",
+        "fact": "The parent survey was cancelled later in the meeting because the newsletter goes out only at the end of the month, too late for results.",
+        "agreed": null,
+        "related_action_item": "SY0303b.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303b.s0099",
+          "SY0303b.s0100",
+          "SY0303b.s0101",
+          "SY0303b.s0102",
+          "SY0303b.s0103",
+          "SY0303b.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303b.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303b.f7",
+        "type": "decision",
+        "fact": "The team agreed on a raised lip around the screen instead of including a separate screen protector.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303b.s0073",
+          "SY0303b.s0077",
+          "SY0303b.s0078",
+          "SY0303b.s0079",
+          "SY0303b.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303b.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303b.f8",
+        "type": "plan_change",
+        "fact": "The kickoff idea of including a screen protector was replaced by a raised lip, because children peel protectors off.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0303a",
+        "evidence_segments": [
+          "SY0303b.s0069",
+          "SY0303b.s0070",
+          "SY0303b.s0071",
+          "SY0303b.s0073",
+          "SY0303b.s0077",
+          "SY0303b.s0078",
+          "SY0303b.s0079"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303b.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303b.f9",
+        "type": "decision",
+        "fact": "The team confirmed the handle that folds into a stand as a key feature and selling point.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303b.s0080",
+          "SY0303b.s0081",
+          "SY0303b.s0082",
+          "SY0303b.s0083",
+          "SY0303b.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303b.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303b.f10",
+        "type": "unagreed_proposal",
+        "fact": "Priya (A) suggested a shoulder strap. Tom (B) raised safety concerns and it was parked, not agreed.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303b.s0044",
+          "SY0303b.s0045",
+          "SY0303b.s0046",
+          "SY0303b.s0047",
+          "SY0303b.s0048",
+          "SY0303b.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303b.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303b.f11",
+        "type": "reference_to_prior_meeting",
+        "fact": "Marcus (D) recapped the kickoff: the age group of four to eight was agreed, but Lena's EVA foam proposal was not agreed and the material was deferred until costs are known.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0303a",
+        "evidence_segments": [
+          "SY0303b.s0011",
+          "SY0303b.s0012",
+          "SY0303b.s0013",
+          "SY0303b.s0015",
+          "SY0303b.s0016"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303b.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303b.f12",
+        "type": "reference_to_prior_meeting",
+        "fact": "Priya (A) confirmed she received the brief and the kickoff minutes by email after missing the kickoff for a trade show.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0303a",
+        "evidence_segments": [
+          "SY0303b.s0007",
+          "SY0303b.s0008",
+          "SY0303b.s0009",
+          "SY0303b.s0010"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303b.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303b.f13",
+        "type": "reference_to_prior_meeting",
+        "fact": "Following up his kickoff action item, Marcus (D) reported that management requires the company logo and the company yellow on the case, with everything else free.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0303a",
+        "evidence_segments": [
+          "SY0303b.s0017",
+          "SY0303b.s0018",
+          "SY0303b.s0019",
+          "SY0303b.s0020"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303b.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303b.f14",
+        "type": "other",
+        "fact": "Priya's (A) market research found competitor cases priced at about 15 to 30 euros. Parents prioritise drop protection, then ease of cleaning, then a handle, and only one of six competitors had a stand.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303b.s0026",
+          "SY0303b.s0027",
+          "SY0303b.s0029",
+          "SY0303b.s0030",
+          "SY0303b.s0033",
+          "SY0303b.s0035",
+          "SY0303b.s0041"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303b.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303b.f15",
+        "type": "other",
+        "fact": "Tom (B) recommended thick grippy edges, soft covers over the volume buttons, a slightly recessed power button and an open charging port.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303b.s0059",
+          "SY0303b.s0060",
+          "SY0303b.s0062",
+          "SY0303b.s0064",
+          "SY0303b.s0065",
+          "SY0303b.s0066",
+          "SY0303b.s0067"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303b.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303b.f16",
+        "type": "other",
+        "fact": "The case material, EVA foam or silicone, remains undecided pending Lena's cost figures.",
+        "agreed": null,
+        "related_action_item": "SY0303b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303b.s0084",
+          "SY0303b.s0085",
+          "SY0303b.s0086",
+          "SY0303b.s0087",
+          "SY0303b.s0088",
+          "SY0303b.s0089",
+          "SY0303b.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303b.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303b.f17",
+        "type": "action_item",
+        "fact": "Priya (A) will look into colour trends for children's products that go with the company yellow.",
+        "agreed": null,
+        "related_action_item": "SY0303b.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303b.s0107",
+          "SY0303b.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303b.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303b.f18",
+        "type": "action_item",
+        "fact": "Tom (B) will sketch the button cut-outs and the handle-stand for the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": "SY0303b.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303b.s0109",
+          "SY0303b.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303b.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303b.f19",
+        "type": "action_item",
+        "fact": "Marcus (D) will send out the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0303b.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303b.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_ACTION_REMOVED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_ACTION_REMOVED",
+        "segments": [
+          "SY0303b.s0050",
+          "SY0303b.s0051",
+          "SY0303b.s0052",
+          "SY0303b.s0053",
+          "SY0303b.s0099",
+          "SY0303b.s0100",
+          "SY0303b.s0101",
+          "SY0303b.s0102",
+          "SY0303b.s0103",
+          "SY0303b.s0105"
+        ],
+        "note": "The PM assigns the marketing expert a newsletter parent survey, which she accepts, and later scraps it because the newsletter goes out too late."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_TASK_TO_ABSENT",
+        "segments": [
+          "SY0303b.s0004",
+          "SY0303b.s0091",
+          "SY0303b.s0092",
+          "SY0303b.s0093",
+          "SY0303b.s0094",
+          "SY0303b.s0095",
+          "SY0303b.s0097",
+          "SY0303b.s0098"
+        ],
+        "note": "The PM assigns the material costing task to the absent industrial designer (off sick) and offers to email it to her."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

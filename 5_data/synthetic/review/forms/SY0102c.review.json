@@ -1,0 +1,1584 @@
+{
+  "meeting_id": "SY0102c",
+  "raw_sha256": "ac7af5139a41217b4574bdabd9bbe20909fcb658d61a2546686d5e415717e6e7",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the conceptual design meeting and reported that the corporate colours were now in the shared folder and that the client accepts losing about eighty cents per unreturned cup, so the one-euro deposit stays; the client will count stock per shop and does not need individual cup tracking, so the team dropped the QR code on the bottom of the cup.",
+        "The industrial designer showed a standard polypropylene sample from the Rotterdam plant, which the team found light and somewhat cheap-looking, and reported a matte finish at about twelve cents extra and two-colour logo printing at about ten cents; the team chose a matte finish.",
+        "The marketing expert presented competitor research showing muted, earthy colours and slightly tapered shapes that stack well, and the team agreed on a dark green matte, slightly tapered cup with a white logo in one size.",
+        "The user interface designer presented the cup markings (white logo on one side, a return message on the other, an embossed one-euro symbol on the base) and a three-step counter sign, which were accepted.",
+        "On the lid, the industrial designer recommended a sip lid with a slider, rated for the full five hundred washes, and the team adopted it after first leaning towards a flip lid; this brings the cost to about two euros seven per cup, under the three-euro limit."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will ask the Rotterdam plant for a sample in the client's dark green, matte, with the slider sip lid, using the hex codes from the shared folder.",
+        "The industrial designer will prepare a full cost breakdown of the final design.",
+        "The user interface designer will produce the final artwork for the cup markings and the counter sign, trying the wording \"any of our forty shops\".",
+        "The marketing expert will put together evaluation criteria for judging the final design at the detailed design meeting.",
+        "The marketing expert will show the sample cup to a few students at a campus shop to get a quick reaction once the sample is available.",
+        "The project manager will send the client the concept (dark green matte cup, logo and slider lid) for approval before the design is finalised.",
+        "The project manager will write the minutes."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The deposit stays at one euro; the client accepts the loss of about eighty cents on each unreturned cup.",
+        "No QR code will be printed on the bottom of the cup, since the client will count stock per shop instead of tracking individual cups.",
+        "The cup will have a matte finish.",
+        "The cup will be dark green with a white logo and a slightly tapered shape that stacks, in a single size for now.",
+        "The cup markings are: the white logo on one side about halfway up, the line \"Bring me back to any counter, get your euro back\" on the other side, and an embossed one-euro symbol on the base.",
+        "The lid will be a sip lid with a clip-in slider, at about two euros seven per cup in total; this replaces the flip lid the team had first chosen in the meeting."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The plant may not be able to match the client's exact dark green.",
+        "The slider sip lid does not close as tightly as a flip lid, although it does not spill when tipped slightly.",
+        "Offering two cup sizes was raised and parked; the team stays with one size for now.",
+        "The client has not yet approved the concept.",
+        "The counter sign wording (\"any shop\" or \"any of our forty shops\") is still to be tried out."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0102c.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0102c.ai1",
+        "description": "Check the cost of printing a QR code on the bottom of the cup",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "dropped",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0102c.s0016",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0102c.s0018",
+            "event": "dropped",
+            "by": "C",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0102c.s0013",
+          "SY0102c.s0014",
+          "SY0102c.s0015",
+          "SY0102c.s0016",
+          "SY0102c.s0017",
+          "SY0102c.s0018",
+          "SY0102c.s0019",
+          "SY0102c.s0020"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0102c.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0102c.ai2",
+        "description": "Ask the Rotterdam plant for a sample cup in the client's green, matte, with the slider sip lid",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0102c.s0116",
+            "event": "assigned",
+            "by": "C",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0102c.s0117",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0102c.s0116",
+          "SY0102c.s0117",
+          "SY0102c.s0118",
+          "SY0102c.s0119"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0102c.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0102c.ai3",
+        "description": "Prepare a full cost breakdown of the final design",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0102c.s0120",
+            "event": "assigned",
+            "by": "C",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0102c.s0121",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0102c.s0120",
+          "SY0102c.s0121"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0102c.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0102c.ai4",
+        "description": "Produce the final artwork for the cup markings and the counter sign, trying the wording \"any of our forty shops\"",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0102c.s0091",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0102c.s0122",
+            "event": "assigned",
+            "by": "C",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0102c.s0123",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0102c.s0090",
+          "SY0102c.s0091",
+          "SY0102c.s0122",
+          "SY0102c.s0123"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0102c.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0102c.ai5",
+        "description": "Put together evaluation criteria for judging the final design at the detailed design meeting",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0102c.s0124",
+            "event": "assigned",
+            "by": "C",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0102c.s0125",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0102c.s0124",
+          "SY0102c.s0125"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0102c.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0102c.ai6",
+        "description": "Show the sample cup to a few students at a campus shop to get a quick reaction, once the sample is available",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0102c.s0125",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0102c.s0126",
+            "event": "accepted",
+            "by": "C",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0102c.s0125",
+          "SY0102c.s0126"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0102c.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0102c.ai7",
+        "description": "Send the client the concept (green matte cup, logo, slider lid) for approval before finalising",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0102c.s0127",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0102c.s0127"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0102c.ai8",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0102c.ai8",
+        "description": "Write the minutes of the meeting",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0102c.s0128",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0102c.s0128"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f1",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager reported that she had put the client's corporate colours, dark green and white with hex codes, in the shared folder, completing her action from the previous meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0102b",
+        "evidence_segments": [
+          "SY0102c.s0004",
+          "SY0102c.s0005",
+          "SY0102c.s0007",
+          "SY0102c.s0008"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager reported that the client accepts losing about eighty cents on each unreturned cup, which was her open question from the functional design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0102b",
+        "evidence_segments": [
+          "SY0102c.s0008",
+          "SY0102c.s0009",
+          "SY0102c.s0010"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f3",
+        "type": "decision",
+        "fact": "The deposit stays at one euro per cup.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0011",
+          "SY0102c.s0012"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f4",
+        "type": "other",
+        "fact": "The client does not need to track individual cups and will count stock at each shop once a month.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0013"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f5",
+        "type": "decision",
+        "fact": "The team decided not to print a QR code on the bottom of the cup.",
+        "agreed": true,
+        "related_action_item": "SY0102c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0014",
+          "SY0102c.s0015",
+          "SY0102c.s0017",
+          "SY0102c.s0018",
+          "SY0102c.s0019",
+          "SY0102c.s0020"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f6",
+        "type": "action_item_removed",
+        "fact": "The user interface designer offered to check the cost of printing a QR code on the bottom of the cup, but the project manager dropped the task because the QR code is no longer needed.",
+        "agreed": null,
+        "related_action_item": "SY0102c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0016",
+          "SY0102c.s0018",
+          "SY0102c.s0019"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f7",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer brought a standard polypropylene sample cup from the Rotterdam plant and the matte finish quote requested at the previous meeting; the user interface designer said it looked a bit cheap, as discussed last time.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0102b",
+        "evidence_segments": [
+          "SY0102c.s0021",
+          "SY0102c.s0022",
+          "SY0102c.s0023",
+          "SY0102c.s0027",
+          "SY0102c.s0028"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f8",
+        "type": "other",
+        "fact": "The matte finish costs about twelve cents extra per cup and two-colour logo printing about ten cents, on top of the base cost of one euro eighty.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0028",
+          "SY0102c.s0029",
+          "SY0102c.s0030",
+          "SY0102c.s0031",
+          "SY0102c.s0033"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f9",
+        "type": "decision",
+        "fact": "The cup will have a matte finish.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0035",
+          "SY0102c.s0036",
+          "SY0102c.s0037",
+          "SY0102c.s0038",
+          "SY0102c.s0039"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f10",
+        "type": "other",
+        "fact": "The marketing expert's competitor research showed mostly muted, earthy colours and slightly tapered shapes that stack, with many competitors offering two sizes.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0050",
+          "SY0102c.s0051",
+          "SY0102c.s0054",
+          "SY0102c.s0055",
+          "SY0102c.s0060"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f11",
+        "type": "decision",
+        "fact": "The cup will be dark green with a white logo and a slightly tapered shape.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0056",
+          "SY0102c.s0057",
+          "SY0102c.s0058",
+          "SY0102c.s0059",
+          "SY0102c.s0062"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f12",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested offering the cup in two sizes; the project manager preferred one size because a second mould is costly, and the idea was parked.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0060",
+          "SY0102c.s0061",
+          "SY0102c.s0062",
+          "SY0102c.s0063",
+          "SY0102c.s0064",
+          "SY0102c.s0065",
+          "SY0102c.s0066"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f13",
+        "type": "decision",
+        "fact": "The cup will be produced in one size for now.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0062",
+          "SY0102c.s0066",
+          "SY0102c.s0067"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f14",
+        "type": "decision",
+        "fact": "The cup markings are a white logo on one side, the line \"Bring me back to any counter, get your euro back\" on the other side, and an embossed one-euro symbol on the base.",
+        "agreed": true,
+        "related_action_item": "SY0102c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0081",
+          "SY0102c.s0082",
+          "SY0102c.s0083",
+          "SY0102c.s0084",
+          "SY0102c.s0085",
+          "SY0102c.s0086"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f15",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested the counter sign say \"any of our forty shops\"; the user interface designer agreed only to try it.",
+        "agreed": false,
+        "related_action_item": "SY0102c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0088",
+          "SY0102c.s0089",
+          "SY0102c.s0090",
+          "SY0102c.s0091"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f16",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer suggested a different lid colour for each shop location; it was rejected because of stock complexity and because cups move between shops.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0092",
+          "SY0102c.s0093",
+          "SY0102c.s0094",
+          "SY0102c.s0095"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f17",
+        "type": "plan_change",
+        "fact": "The team first chose a flip lid but changed to a sip lid with a slider after the industrial designer reported that the flip lid hinge only survives about two hundred washes, against about five hundred for the cup.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0046",
+          "SY0102c.s0047",
+          "SY0102c.s0048",
+          "SY0102c.s0097",
+          "SY0102c.s0098",
+          "SY0102c.s0100",
+          "SY0102c.s0105",
+          "SY0102c.s0106",
+          "SY0102c.s0109",
+          "SY0102c.s0110",
+          "SY0102c.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f18",
+        "type": "decision",
+        "fact": "The lid will be a sip lid with a clip-in slider, rated for five hundred washes and about five cents more than a plain sip lid.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0105",
+          "SY0102c.s0106",
+          "SY0102c.s0108",
+          "SY0102c.s0109",
+          "SY0102c.s0110",
+          "SY0102c.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f19",
+        "type": "other",
+        "fact": "The final design costs about two euros seven per cup, under the three-euro limit.",
+        "agreed": null,
+        "related_action_item": "SY0102c.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0112",
+          "SY0102c.s0113",
+          "SY0102c.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f20",
+        "type": "action_item",
+        "fact": "The industrial designer will ask the Rotterdam plant for a sample in the client's green, matte, with the slider lid.",
+        "agreed": null,
+        "related_action_item": "SY0102c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0116",
+          "SY0102c.s0117",
+          "SY0102c.s0118",
+          "SY0102c.s0119"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f21",
+        "type": "action_item",
+        "fact": "The industrial designer will prepare a full cost breakdown of the final design.",
+        "agreed": null,
+        "related_action_item": "SY0102c.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0120",
+          "SY0102c.s0121"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f22",
+        "type": "action_item",
+        "fact": "The user interface designer will produce the final artwork for the cup markings and the counter sign.",
+        "agreed": null,
+        "related_action_item": "SY0102c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0122",
+          "SY0102c.s0123"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f23",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f23",
+        "type": "action_item",
+        "fact": "The marketing expert will put together evaluation criteria for the detailed design meeting.",
+        "agreed": null,
+        "related_action_item": "SY0102c.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0124",
+          "SY0102c.s0125"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f24",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f24",
+        "type": "action_item",
+        "fact": "The marketing expert will show the sample cup to students at a campus shop once it is available.",
+        "agreed": null,
+        "related_action_item": "SY0102c.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0125",
+          "SY0102c.s0126"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f25",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f25",
+        "type": "action_item",
+        "fact": "The project manager will send the client the concept for approval before finalising.",
+        "agreed": null,
+        "related_action_item": "SY0102c.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0127"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0102c.f26",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0102c.f26",
+        "type": "action_item",
+        "fact": "The project manager will write the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0102c.ai8",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0102c.s0128"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_OFF_TOPIC_TANGENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_OFF_TOPIC_TANGENT",
+        "segments": [
+          "SY0102c.s0068",
+          "SY0102c.s0069",
+          "SY0102c.s0070",
+          "SY0102c.s0071",
+          "SY0102c.s0072",
+          "SY0102c.s0073",
+          "SY0102c.s0074",
+          "SY0102c.s0075",
+          "SY0102c.s0076",
+          "SY0102c.s0077",
+          "SY0102c.s0078"
+        ],
+        "note": "The team digresses about the broken office coffee machine and the café across the road until the project manager steers back to the cups."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_PLAN_CHANGE",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_PLAN_CHANGE",
+        "segments": [
+          "SY0102c.s0042",
+          "SY0102c.s0043",
+          "SY0102c.s0044",
+          "SY0102c.s0046",
+          "SY0102c.s0047",
+          "SY0102c.s0048",
+          "SY0102c.s0097",
+          "SY0102c.s0098",
+          "SY0102c.s0100",
+          "SY0102c.s0103",
+          "SY0102c.s0105",
+          "SY0102c.s0106",
+          "SY0102c.s0109",
+          "SY0102c.s0110",
+          "SY0102c.s0111",
+          "SY0102c.s0112",
+          "SY0102c.s0113"
+        ],
+        "note": "The team agrees on a flip lid early, then switches to a sip lid with a slider after learning that the flip lid hinge only lasts about two hundred washes."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

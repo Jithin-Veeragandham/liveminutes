@@ -1,0 +1,1520 @@
+{
+  "schema_version": "1.0",
+  "source": "synthetic",
+  "meeting_id": "SY0106b",
+  "series_id": "SY0106",
+  "meeting_letter": "b",
+  "scenario_type": "scenario",
+  "stage": "functional design",
+  "duration_sec": 501.97,
+  "participants": [
+    {
+      "label": "A",
+      "role": "ID",
+      "name": "Tomasz",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "B",
+      "role": "UI",
+      "name": "Priya",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "C",
+      "role": "ME",
+      "name": "Helen",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "D",
+      "role": "PM",
+      "name": "Marcus",
+      "global_id": null,
+      "status": "present"
+    }
+  ],
+  "segments": [
+    {
+      "id": "SY0106b.s0001",
+      "speaker": "D",
+      "start": 5.0,
+      "end": 6.92,
+      "text": "Okay, um, shall we start?",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0106b.s0002",
+      "speaker": "C",
+      "start": 7.3,
+      "end": 7.7,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0003",
+      "speaker": "D",
+      "start": 7.99,
+      "end": 11.84,
+      "text": "So this is the functional design meeting, the second one.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0004",
+      "speaker": "D",
+      "start": 12.02,
+      "end": 15.87,
+      "text": "And Priya, welcome back, good to have the full team.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0106b.s0005",
+      "speaker": "B",
+      "start": 16.81,
+      "end": 20.27,
+      "text": "Thanks, yeah, nice to actually be here this time.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0106b.s0006",
+      "speaker": "D",
+      "start": 20.91,
+      "end": 25.91,
+      "text": "Did you get the minutes I sent over? With the brief and everything?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0106b.s0007",
+      "speaker": "B",
+      "start": 26.27,
+      "end": 32.04,
+      "text": "Yeah, I got them on Monday. The height question and the fines thing as well.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0008",
+      "speaker": "D",
+      "start": 32.45,
+      "end": 32.84,
+      "text": "Great.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0009",
+      "speaker": "D",
+      "start": 33.33,
+      "end": 40.64,
+      "text": "So, agenda. Tomasz first with components and costs, then Helen on user requirements, then Priya on the interface flow.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0010",
+      "speaker": "D",
+      "start": 41.09,
+      "end": 44.55,
+      "text": "And then we try to actually decide some things.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0011",
+      "speaker": "A",
+      "start": 45.14,
+      "end": 45.54,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0012",
+      "speaker": "D",
+      "start": 46.05,
+      "end": 47.97,
+      "text": "Tomasz, you want to go?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0106b.s0013",
+      "speaker": "A",
+      "start": 48.14,
+      "end": 49.29,
+      "text": "Yeah, um, so.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0106b.s0014",
+      "speaker": "A",
+      "start": 49.51,
+      "end": 55.66,
+      "text": "I looked at the main components. The RFID pad, the barcode scanner, the printer, the screen.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0015",
+      "speaker": "A",
+      "start": 56.14,
+      "end": 62.29,
+      "text": "The RFID pad, a decent one with the antenna, is about two hundred and eighty euros.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0016",
+      "speaker": "A",
+      "start": 62.48,
+      "end": 66.71,
+      "text": "The backup barcode scanner is cheap, around a hundred and ten.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0017",
+      "speaker": "A",
+      "start": 67.65,
+      "end": 70.73,
+      "text": "Thermal receipt printer, about a hundred and forty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0018",
+      "speaker": "A",
+      "start": 71.69,
+      "end": 75.15,
+      "text": "And the touchscreen comes to about four hundred euros.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0019",
+      "speaker": "A",
+      "start": 75.59,
+      "end": 84.82,
+      "text": "Sorry, no, that's the fifteen inch one. The twenty-two inch, which is what I'd want for a tilted screen, is six hundred and fifty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0020",
+      "speaker": "C",
+      "start": 85.29,
+      "end": 86.44,
+      "text": "Six fifty. Ouch.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0106b.s0021",
+      "speaker": "A",
+      "start": 86.78,
+      "end": 91.78,
+      "text": "Yeah. Plus a small PC unit to run it all, about three hundred.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0022",
+      "speaker": "D",
+      "start": 92.45,
+      "end": 94.76,
+      "text": "So what's that, before the housing?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0106b.s0023",
+      "speaker": "A",
+      "start": 95.2,
+      "end": 96.35,
+      "text": "Um, fourteen eighty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0024",
+      "speaker": "A",
+      "start": 97.24,
+      "end": 103.78,
+      "text": "And the housing, steel, with the front panel and the lock, I'd guess three to four hundred.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0025",
+      "speaker": "D",
+      "start": 104.59,
+      "end": 108.05,
+      "text": "So we're right on the eighteen hundred. Or over.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0106b.s0026",
+      "speaker": "A",
+      "start": 108.35,
+      "end": 111.43,
+      "text": "Yeah, it's tight. Like we said last time.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0106b.s0027",
+      "speaker": "C",
+      "start": 111.83,
+      "end": 116.45,
+      "text": "Great, so we'll just ask people to bring their own screens then.",
+      "da_type": "oth"
+    },
+    {
+      "id": "SY0106b.s0028",
+      "speaker": "B",
+      "start": 117.13,
+      "end": 117.53,
+      "text": "Ha.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0029",
+      "speaker": "A",
+      "start": 117.86,
+      "end": 119.78,
+      "text": "Yeah, bring your own touchscreen.",
+      "da_type": "oth"
+    },
+    {
+      "id": "SY0106b.s0030",
+      "speaker": "D",
+      "start": 120.08,
+      "end": 120.85,
+      "text": "Okay, okay.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0106b.s0031",
+      "speaker": "D",
+      "start": 121.25,
+      "end": 125.87,
+      "text": "Seriously though, could we go to the smaller screen to save money?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0106b.s0032",
+      "speaker": "A",
+      "start": 126.41,
+      "end": 132.56,
+      "text": "We could, but the fifteen inch is hard to read at an angle, especially for kids.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0033",
+      "speaker": "B",
+      "start": 133.24,
+      "end": 139.39,
+      "text": "And from the workshop, bigger touch targets matter a lot. I'd rather keep the bigger screen.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0034",
+      "speaker": "D",
+      "start": 139.8,
+      "end": 144.42,
+      "text": "Okay. So we keep the twenty-two inch and look for savings elsewhere.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0106b.s0035",
+      "speaker": "A",
+      "start": 144.8,
+      "end": 149.03,
+      "text": "I can look at the housing, maybe a cheaper sheet metal.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0106b.s0036",
+      "speaker": "D",
+      "start": 149.18,
+      "end": 149.58,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0037",
+      "speaker": "A",
+      "start": 149.95,
+      "end": 154.57,
+      "text": "Also, I did the library visit. Went last Saturday with my cousin.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0038",
+      "speaker": "D",
+      "start": 155.53,
+      "end": 157.45,
+      "text": "Oh good, how was that?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0106b.s0039",
+      "speaker": "A",
+      "start": 158.43,
+      "end": 164.97,
+      "text": "Interesting. The staff said the number one problem is the printer. Jams, and the paper running out.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0040",
+      "speaker": "A",
+      "start": 165.68,
+      "end": 170.3,
+      "text": "So the front panel with the key, they really liked that idea.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0041",
+      "speaker": "A",
+      "start": 170.91,
+      "end": 176.68,
+      "text": "With their current machines you have to pull the whole thing out from the wall.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0042",
+      "speaker": "C",
+      "start": 177.41,
+      "end": 177.81,
+      "text": "Mm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0043",
+      "speaker": "A",
+      "start": 178.5,
+      "end": 185.42,
+      "text": "And they want a staff mode. Like you scan a staff card and you get a maintenance screen.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0044",
+      "speaker": "B",
+      "start": 185.87,
+      "end": 190.87,
+      "text": "Oh, that's nice, that fits with the two user groups from the kickoff.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0106b.s0045",
+      "speaker": "A",
+      "start": 191.54,
+      "end": 194.62,
+      "text": "And here's the first sketch of the housing.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0046",
+      "speaker": "A",
+      "start": 195.56,
+      "end": 201.33,
+      "text": "It's basically a column, screen on top, tilted, and the pad sticking out lower down.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0047",
+      "speaker": "A",
+      "start": 202.04,
+      "end": 206.27,
+      "text": "I've left the heights open in the drawing until we decide.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0048",
+      "speaker": "D",
+      "start": 207.21,
+      "end": 207.61,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0049",
+      "speaker": "D",
+      "start": 207.81,
+      "end": 210.89,
+      "text": "Let's come back to heights with Priya. Helen?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0106b.s0050",
+      "speaker": "C",
+      "start": 211.69,
+      "end": 212.46,
+      "text": "Um, yeah.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0106b.s0051",
+      "speaker": "C",
+      "start": 213.45,
+      "end": 217.3,
+      "text": "So I looked at user requirements and at some competitors.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0052",
+      "speaker": "C",
+      "start": 218.27,
+      "end": 225.96,
+      "text": "For patrons the big thing is speed. At universities students want to be in and out in like twenty seconds.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0053",
+      "speaker": "C",
+      "start": 226.44,
+      "end": 234.13,
+      "text": "But in public libraries it's a lot of older people, and kids, and they just want it to be obvious.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0054",
+      "speaker": "C",
+      "start": 234.51,
+      "end": 242.97,
+      "text": "And a lot of people don't speak the local language well. Most competitor machines have a language button on the first screen.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0055",
+      "speaker": "D",
+      "start": 243.45,
+      "end": 243.85,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0056",
+      "speaker": "C",
+      "start": 244.09,
+      "end": 249.86,
+      "text": "Competitors, the main ones have about the same features. Check out, renew, see your loans.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0057",
+      "speaker": "C",
+      "start": 250.52,
+      "end": 253.98,
+      "text": "Some of them do fines payment, but not most.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0058",
+      "speaker": "C",
+      "start": 254.16,
+      "end": 257.24,
+      "text": "And a couple send the receipt by email.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0059",
+      "speaker": "C",
+      "start": 258.19,
+      "end": 263.19,
+      "text": "I think we should offer email receipts too. People lose the paper ones.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0106b.s0060",
+      "speaker": "D",
+      "start": 263.37,
+      "end": 267.22,
+      "text": "Does that work? We'd need the email address from somewhere.",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0106b.s0061",
+      "speaker": "B",
+      "start": 267.97,
+      "end": 274.51,
+      "text": "It'd have to come from the library's system, so it depends on what the catalogue gives us.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0062",
+      "speaker": "D",
+      "start": 274.73,
+      "end": 278.96,
+      "text": "Let's park that until we know more about the catalogue then.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0106b.s0063",
+      "speaker": "C",
+      "start": 279.27,
+      "end": 280.04,
+      "text": "Okay, fair.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0064",
+      "speaker": "D",
+      "start": 280.26,
+      "end": 281.8,
+      "text": "Priya, over to you.",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0106b.s0065",
+      "speaker": "B",
+      "start": 282.41,
+      "end": 283.56,
+      "text": "Okay, so, um.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0106b.s0066",
+      "speaker": "B",
+      "start": 284.33,
+      "end": 288.56,
+      "text": "First the height thing, since I was at the accessibility workshop.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0067",
+      "speaker": "B",
+      "start": 289.49,
+      "end": 296.41,
+      "text": "The guidelines say anything you have to operate should be between about forty centimetres and one metre twenty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0068",
+      "speaker": "B",
+      "start": 296.75,
+      "end": 301.37,
+      "text": "So Tomasz's idea, the tilted screen at about one metre, that works.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0106b.s0069",
+      "speaker": "A",
+      "start": 301.68,
+      "end": 302.45,
+      "text": "Oh, good.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0106b.s0070",
+      "speaker": "B",
+      "start": 303.42,
+      "end": 311.88,
+      "text": "And the pad lower, at eighty centimetres maybe, so a wheelchair user can reach it and kids can put books on it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0071",
+      "speaker": "A",
+      "start": 312.12,
+      "end": 314.81,
+      "text": "Eighty is fine, that's basically counter height.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0106b.s0072",
+      "speaker": "D",
+      "start": 315.11,
+      "end": 320.49,
+      "text": "So everyone happy with that? Screen tilted at about one metre, pad at eighty?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0106b.s0073",
+      "speaker": "C",
+      "start": 320.86,
+      "end": 321.26,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0074",
+      "speaker": "A",
+      "start": 321.69,
+      "end": 322.09,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0075",
+      "speaker": "D",
+      "start": 322.76,
+      "end": 323.91,
+      "text": "Okay, that's decided.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0076",
+      "speaker": "B",
+      "start": 324.69,
+      "end": 332.38,
+      "text": "Then the flow. The start screen is just one big button, check out, plus the language button in the corner.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0077",
+      "speaker": "B",
+      "start": 332.72,
+      "end": 334.64,
+      "text": "You scan your library card.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0078",
+      "speaker": "B",
+      "start": 334.82,
+      "end": 340.97,
+      "text": "Then you put the books on the pad, or scan the barcode if it's not tagged.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0079",
+      "speaker": "B",
+      "start": 341.83,
+      "end": 345.29,
+      "text": "The books appear in a list as they're read.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0080",
+      "speaker": "B",
+      "start": 345.65,
+      "end": 349.5,
+      "text": "Then you press done and choose receipt or no receipt.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0081",
+      "speaker": "D",
+      "start": 350.26,
+      "end": 351.8,
+      "text": "That's nice and short.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0106b.s0082",
+      "speaker": "B",
+      "start": 352.29,
+      "end": 358.06,
+      "text": "Renew and see my loans are there too, but small, after you've scanned the card.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0083",
+      "speaker": "C",
+      "start": 358.64,
+      "end": 362.1,
+      "text": "Yeah, that fits with checkout being the main thing.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0106b.s0084",
+      "speaker": "B",
+      "start": 362.58,
+      "end": 368.35,
+      "text": "And then a hidden staff mode, like Tomasz said, that opens with the staff card.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0085",
+      "speaker": "D",
+      "start": 368.73,
+      "end": 369.5,
+      "text": "Okay. Fines?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0106b.s0086",
+      "speaker": "B",
+      "start": 370.46,
+      "end": 372.77,
+      "text": "Right. So my view on fines.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0087",
+      "speaker": "B",
+      "start": 373.2,
+      "end": 380.51,
+      "text": "A card reader is extra hardware, and with the payment rules it's a whole extra branch in the flow.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0088",
+      "speaker": "A",
+      "start": 381.43,
+      "end": 387.2,
+      "text": "And a card reader's about two hundred euros, so we can't really afford it anyway.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0089",
+      "speaker": "B",
+      "start": 388.1,
+      "end": 395.02,
+      "text": "I'd say we show the fines on screen after the card scan, but you pay at the desk.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0106b.s0090",
+      "speaker": "C",
+      "start": 395.92,
+      "end": 400.92,
+      "text": "Hmm. Bit of a shame, but yeah, with the budget it makes sense.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0106b.s0091",
+      "speaker": "C",
+      "start": 401.19,
+      "end": 403.11,
+      "text": "Maybe for a later version.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0106b.s0092",
+      "speaker": "D",
+      "start": 403.86,
+      "end": 408.09,
+      "text": "Okay, so show the fines, no payment at the kiosk. Agreed?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0106b.s0093",
+      "speaker": "A",
+      "start": 408.25,
+      "end": 408.65,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0094",
+      "speaker": "C",
+      "start": 409.34,
+      "end": 409.74,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0095",
+      "speaker": "D",
+      "start": 410.67,
+      "end": 415.67,
+      "text": "And one more thing from last time, the catalogue question. Nobody took that.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0096",
+      "speaker": "B",
+      "start": 416.38,
+      "end": 422.92,
+      "text": "Actually, that came up at the workshop. There's a standard called SIP2 that most library systems support.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0097",
+      "speaker": "D",
+      "start": 423.26,
+      "end": 423.66,
+      "text": "SIP2?",
+      "da_type": "el.und"
+    },
+    {
+      "id": "SY0106b.s0098",
+      "speaker": "B",
+      "start": 424.39,
+      "end": 430.54,
+      "text": "Standard Interchange Protocol. It's what self-checkouts use to check the card and mark books as out.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0099",
+      "speaker": "A",
+      "start": 430.72,
+      "end": 433.8,
+      "text": "Oh, that would make life a lot easier.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0106b.s0100",
+      "speaker": "D",
+      "start": 434.43,
+      "end": 439.81,
+      "text": "Can you find out for sure? Whether the big catalogue vendors all support it?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0106b.s0101",
+      "speaker": "B",
+      "start": 440.7,
+      "end": 442.24,
+      "text": "Yeah, I'll take that.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0106b.s0102",
+      "speaker": "D",
+      "start": 442.44,
+      "end": 442.84,
+      "text": "Great.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0103",
+      "speaker": "B",
+      "start": 443.51,
+      "end": 449.28,
+      "text": "And that would also tell us whether email addresses come through, for Helen's receipt idea.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0104",
+      "speaker": "C",
+      "start": 449.84,
+      "end": 450.61,
+      "text": "Oh, good.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0105",
+      "speaker": "D",
+      "start": 451.14,
+      "end": 453.45,
+      "text": "Okay, so, um, for next time.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0106b.s0106",
+      "speaker": "D",
+      "start": 454.17,
+      "end": 456.86,
+      "text": "The next meeting is the conceptual design.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0106b.s0107",
+      "speaker": "D",
+      "start": 457.38,
+      "end": 464.3,
+      "text": "Tomasz, can you do a housing concept with the heights we just agreed, and a firmer cost breakdown?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0106b.s0108",
+      "speaker": "A",
+      "start": 464.62,
+      "end": 465.02,
+      "text": "Sure.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0109",
+      "speaker": "A",
+      "start": 465.97,
+      "end": 470.2,
+      "text": "And I'll look for that cheaper sheet metal like I said.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0106b.s0110",
+      "speaker": "D",
+      "start": 470.4,
+      "end": 475.02,
+      "text": "Priya, the screen mock-ups, for the checkout flow and the staff mode.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0106b.s0111",
+      "speaker": "B",
+      "start": 475.55,
+      "end": 475.95,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0112",
+      "speaker": "D",
+      "start": 476.77,
+      "end": 481.0,
+      "text": "Helen, look and feel. What library networks like, colours, materials, trends.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0106b.s0113",
+      "speaker": "C",
+      "start": 481.48,
+      "end": 486.1,
+      "text": "Yeah, and I'll check which languages they need, for the language button.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0106b.s0114",
+      "speaker": "D",
+      "start": 486.77,
+      "end": 487.17,
+      "text": "Good.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0115",
+      "speaker": "D",
+      "start": 487.68,
+      "end": 491.53,
+      "text": "And I'll write up the minutes and send them round.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0106b.s0116",
+      "speaker": "D",
+      "start": 492.31,
+      "end": 493.85,
+      "text": "Same time next Thursday?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0106b.s0117",
+      "speaker": "B",
+      "start": 494.35,
+      "end": 495.5,
+      "text": "Fine by me.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0118",
+      "speaker": "A",
+      "start": 495.66,
+      "end": 496.06,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0119",
+      "speaker": "C",
+      "start": 496.57,
+      "end": 496.97,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0106b.s0120",
+      "speaker": "D",
+      "start": 497.82,
+      "end": 498.97,
+      "text": "Great. Thanks everyone.",
+      "da_type": "be.pos"
+    }
+  ],
+  "summary": {
+    "abstract": [
+      "The project manager opened the functional design meeting and welcomed back the user interface designer, who confirmed she had received the kickoff minutes, the brief, the height question and the fines idea.",
+      "The industrial designer presented component costs: an RFID pad at about 280 euros, a barcode scanner at about 110, a thermal printer at about 140, a 22-inch touchscreen at 650 euros and a PC unit at about 300, totalling 1,480 euros before a housing estimated at 300 to 400 euros, which puts the kiosk at or over the 1,800 euro budget. He also reported on his visit to the central library, where staff named printer jams and paper running out as the main problem, liked the key-locked front panel, and asked for a staff maintenance mode, and he showed a first housing sketch.",
+      "The marketing expert reported that university users want speed while public library users want obviousness, that competitors offer checkout, renewals and loan lists, and that a language button on the first screen is common; her suggestion of email receipts was parked.",
+      "The user interface designer reported accessibility guidelines from her workshop and presented the screen flow from card scan to receipt. She advised displaying fines but taking payment at the desk, and identified SIP2 as a likely standard interface to library catalogue systems."
+    ],
+    "actions": [
+      "The industrial designer will produce a housing concept using the agreed heights, with a firmer cost breakdown, and look for cheaper sheet metal to save money.",
+      "The user interface designer will produce screen mock-ups for the checkout flow and the staff maintenance mode.",
+      "The user interface designer will confirm whether the major library catalogue vendors support the SIP2 standard, and whether patron email addresses are available through it.",
+      "The marketing expert will research look and feel for the conceptual design, including what library networks prefer in colours, materials and trends.",
+      "The marketing expert will find out which languages libraries need for the language button.",
+      "The project manager will write up the minutes and send them to the team."
+    ],
+    "decisions": [
+      "The kiosk will keep the 22-inch touchscreen rather than the cheaper 15-inch one, and savings will be sought elsewhere.",
+      "The screen will be tilted at about one metre high and the book pad will sit at about 80 centimetres, within the accessibility guidelines' reach range.",
+      "The interface flow will be: a start screen with one large check-out button and a language button, card scan, books placed on the pad or barcodes scanned, a list of items, then done with a choice of receipt or no receipt; renew and loan list options will be secondary.",
+      "There will be a hidden staff maintenance mode opened with a staff card.",
+      "The kiosk will display outstanding fines after the card scan, but fines will be paid at the desk, not at the kiosk.",
+      "The next meeting, on conceptual design, will be at the same time next Thursday."
+    ],
+    "problems": [
+      "The estimated cost of 1,480 euros plus a 300 to 400 euro housing puts the kiosk at or over the 1,800 euro production budget; savings on the housing are still to be found.",
+      "Email receipts were suggested but parked, because it is unknown whether the catalogue system provides patron email addresses.",
+      "It is not yet confirmed that all major catalogue vendors support the SIP2 standard.",
+      "Fine payment at the kiosk might be considered for a later version but is out of the current design."
+    ]
+  },
+  "action_items": [
+    {
+      "id": "SY0106b.ai1",
+      "description": "Produce a housing concept using the agreed screen and pad heights, with a firmer cost breakdown, and look for cheaper sheet metal to reduce cost.",
+      "owner": "A",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0106b.s0035",
+          "event": "offered",
+          "by": "A",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0106b.s0107",
+          "event": "assigned",
+          "by": "D",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0106b.s0108",
+          "event": "accepted",
+          "by": "A",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0106b.s0109",
+          "event": "restated",
+          "by": "A",
+          "owner": "A"
+        }
+      ],
+      "evidence_segments": [
+        "SY0106b.s0035",
+        "SY0106b.s0107",
+        "SY0106b.s0108",
+        "SY0106b.s0109"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0106b.ai2",
+      "description": "Produce screen mock-ups for the checkout flow and the staff maintenance mode.",
+      "owner": "B",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0106b.s0110",
+          "event": "assigned",
+          "by": "D",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0106b.s0111",
+          "event": "accepted",
+          "by": "B",
+          "owner": "B"
+        }
+      ],
+      "evidence_segments": [
+        "SY0106b.s0110",
+        "SY0106b.s0111"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0106b.ai3",
+      "description": "Confirm whether the major library catalogue vendors support the SIP2 standard for checking cards and marking books out, and whether patron email addresses come through.",
+      "owner": "B",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0106b.s0095",
+          "event": "restated",
+          "by": "D",
+          "owner": null
+        },
+        {
+          "segment": "SY0106b.s0100",
+          "event": "assigned",
+          "by": "D",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0106b.s0101",
+          "event": "accepted",
+          "by": "B",
+          "owner": "B"
+        }
+      ],
+      "evidence_segments": [
+        "SY0106b.s0095",
+        "SY0106b.s0096",
+        "SY0106b.s0098",
+        "SY0106b.s0100",
+        "SY0106b.s0101",
+        "SY0106b.s0103"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0106b.ai4",
+      "description": "Research look and feel for the conceptual design: what library networks prefer in colours, materials and trends.",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0106b.s0112",
+          "event": "assigned",
+          "by": "D",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0106b.s0113",
+          "event": "accepted",
+          "by": "C",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0106b.s0112",
+        "SY0106b.s0113"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0106b.ai5",
+      "description": "Find out which languages libraries need for the language button.",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0106b.s0113",
+          "event": "offered",
+          "by": "C",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0106b.s0054",
+        "SY0106b.s0113"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0106b.ai6",
+      "description": "Write up the minutes and send them to the team.",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0106b.s0115",
+          "event": "offered",
+          "by": "D",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0106b.s0115"
+      ],
+      "owner_source": "gold"
+    }
+  ],
+  "qa_facts": [
+    {
+      "id": "SY0106b.f1",
+      "type": "reference_to_prior_meeting",
+      "fact": "The user interface designer confirmed she received the kickoff minutes from the project manager, including the brief, the screen and pad height question, and the fines payment idea.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0106a",
+      "evidence_segments": [
+        "SY0106b.s0006",
+        "SY0106b.s0007"
+      ]
+    },
+    {
+      "id": "SY0106b.f2",
+      "type": "reference_to_prior_meeting",
+      "fact": "The industrial designer carried out the central library visit assigned at the kickoff, going with his cousin; staff said printer jams and paper running out are the main problem, liked the key-locked front panel, and asked for a staff mode.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0106a",
+      "evidence_segments": [
+        "SY0106b.s0037",
+        "SY0106b.s0039",
+        "SY0106b.s0040",
+        "SY0106b.s0041",
+        "SY0106b.s0043"
+      ]
+    },
+    {
+      "id": "SY0106b.f3",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager raised the catalogue interface question left without an owner at the kickoff.",
+      "agreed": null,
+      "related_action_item": "SY0106b.ai3",
+      "refers_to_meeting": "SY0106a",
+      "evidence_segments": [
+        "SY0106b.s0095"
+      ]
+    },
+    {
+      "id": "SY0106b.f4",
+      "type": "other",
+      "fact": "The 22-inch touchscreen costs 650 euros; the 400 euro figure the industrial designer first gave was for a 15-inch screen.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0106b.s0018",
+        "SY0106b.s0019"
+      ]
+    },
+    {
+      "id": "SY0106b.f5",
+      "type": "other",
+      "fact": "Components before the housing total 1,480 euros (RFID pad 280, barcode scanner 110, printer 140, 22-inch screen 650, PC unit 300), and the housing is estimated at 300 to 400 euros, putting the kiosk at or over the 1,800 euro budget.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0106b.s0015",
+        "SY0106b.s0016",
+        "SY0106b.s0017",
+        "SY0106b.s0019",
+        "SY0106b.s0021",
+        "SY0106b.s0023",
+        "SY0106b.s0024",
+        "SY0106b.s0025"
+      ]
+    },
+    {
+      "id": "SY0106b.f6",
+      "type": "decision",
+      "fact": "The team will keep the 22-inch touchscreen and look for savings elsewhere.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0106b.s0032",
+        "SY0106b.s0033",
+        "SY0106b.s0034"
+      ]
+    },
+    {
+      "id": "SY0106b.f7",
+      "type": "unagreed_proposal",
+      "fact": "The project manager asked whether a smaller 15-inch screen could be used to save money; it was rejected for readability and touch-target reasons.",
+      "agreed": false,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0106b.s0031",
+        "SY0106b.s0032",
+        "SY0106b.s0033",
+        "SY0106b.s0034"
+      ]
+    },
+    {
+      "id": "SY0106b.f8",
+      "type": "decision",
+      "fact": "The screen will be tilted at about one metre high and the book pad will be at about 80 centimetres.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0106b.s0067",
+        "SY0106b.s0068",
+        "SY0106b.s0070",
+        "SY0106b.s0071",
+        "SY0106b.s0072",
+        "SY0106b.s0073",
+        "SY0106b.s0074",
+        "SY0106b.s0075"
+      ]
+    },
+    {
+      "id": "SY0106b.f9",
+      "type": "decision",
+      "fact": "The interface flow is a start screen with a large check-out button and a language button, card scan, books on the pad or barcode scan, item list, then done with receipt or no receipt; renew and loans are secondary options.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0106b.s0076",
+        "SY0106b.s0077",
+        "SY0106b.s0078",
+        "SY0106b.s0079",
+        "SY0106b.s0080",
+        "SY0106b.s0081",
+        "SY0106b.s0082",
+        "SY0106b.s0083"
+      ]
+    },
+    {
+      "id": "SY0106b.f10",
+      "type": "decision",
+      "fact": "The kiosk will have a hidden staff maintenance mode opened with a staff card.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0106b.s0043",
+        "SY0106b.s0044",
+        "SY0106b.s0084"
+      ]
+    },
+    {
+      "id": "SY0106b.f11",
+      "type": "decision",
+      "fact": "The kiosk will display outstanding fines after the card scan, but payment will be made at the desk, not at the kiosk.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0106b.s0087",
+        "SY0106b.s0088",
+        "SY0106b.s0089",
+        "SY0106b.s0090",
+        "SY0106b.s0092",
+        "SY0106b.s0093",
+        "SY0106b.s0094"
+      ]
+    },
+    {
+      "id": "SY0106b.f12",
+      "type": "unagreed_proposal",
+      "fact": "The marketing expert suggested offering email receipts; it was parked until it is known whether the catalogue system provides email addresses.",
+      "agreed": false,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0106b.s0059",
+        "SY0106b.s0060",
+        "SY0106b.s0061",
+        "SY0106b.s0062",
+        "SY0106b.s0063"
+      ]
+    },
+    {
+      "id": "SY0106b.f13",
+      "type": "decision",
+      "fact": "The next meeting, on conceptual design, will be at the same time next Thursday.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0106b.s0106",
+        "SY0106b.s0116",
+        "SY0106b.s0117",
+        "SY0106b.s0118",
+        "SY0106b.s0119"
+      ]
+    },
+    {
+      "id": "SY0106b.f14",
+      "type": "plan_change",
+      "fact": "The catalogue interface question, which had no owner after the kickoff, was taken on by the user interface designer, who will confirm SIP2 support.",
+      "agreed": null,
+      "related_action_item": "SY0106b.ai3",
+      "refers_to_meeting": "SY0106a",
+      "evidence_segments": [
+        "SY0106b.s0095",
+        "SY0106b.s0100",
+        "SY0106b.s0101"
+      ]
+    },
+    {
+      "id": "SY0106b.f15",
+      "type": "action_item",
+      "fact": "The industrial designer will produce a housing concept with the agreed heights and a firmer cost breakdown, looking for cheaper sheet metal.",
+      "agreed": null,
+      "related_action_item": "SY0106b.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0106b.s0035",
+        "SY0106b.s0107",
+        "SY0106b.s0108",
+        "SY0106b.s0109"
+      ]
+    },
+    {
+      "id": "SY0106b.f16",
+      "type": "action_item",
+      "fact": "The user interface designer will produce screen mock-ups for the checkout flow and staff mode.",
+      "agreed": null,
+      "related_action_item": "SY0106b.ai2",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0106b.s0110",
+        "SY0106b.s0111"
+      ]
+    },
+    {
+      "id": "SY0106b.f17",
+      "type": "action_item",
+      "fact": "The user interface designer will confirm whether major catalogue vendors support SIP2.",
+      "agreed": null,
+      "related_action_item": "SY0106b.ai3",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0106b.s0100",
+        "SY0106b.s0101"
+      ]
+    },
+    {
+      "id": "SY0106b.f18",
+      "type": "action_item",
+      "fact": "The marketing expert will research look and feel preferences of library networks.",
+      "agreed": null,
+      "related_action_item": "SY0106b.ai4",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0106b.s0112",
+        "SY0106b.s0113"
+      ]
+    },
+    {
+      "id": "SY0106b.f19",
+      "type": "action_item",
+      "fact": "The marketing expert will check which languages libraries need for the language button.",
+      "agreed": null,
+      "related_action_item": "SY0106b.ai5",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0106b.s0113"
+      ]
+    },
+    {
+      "id": "SY0106b.f20",
+      "type": "action_item",
+      "fact": "The project manager will write up and send the minutes.",
+      "agreed": null,
+      "related_action_item": "SY0106b.ai6",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0106b.s0115"
+      ]
+    }
+  ],
+  "edge_cases": [
+    {
+      "scenario_id": "F1_SARCASM_AS_FACT",
+      "segments": [
+        "SY0106b.s0027",
+        "SY0106b.s0028",
+        "SY0106b.s0029",
+        "SY0106b.s0030",
+        "SY0106b.s0031"
+      ],
+      "note": "The marketing expert jokes that people will just bring their own screens; the industrial designer plays along, the project manager moves on, and nothing is adopted."
+    },
+    {
+      "scenario_id": "F1_SELF_CORRECTION",
+      "segments": [
+        "SY0106b.s0018",
+        "SY0106b.s0019"
+      ],
+      "note": "The industrial designer says the touchscreen costs about 400 euros, then corrects himself: that is the 15-inch, and the 22-inch costs 650 euros."
+    }
+  ],
+  "provenance": {
+    "generator": "liveminutes-synthetic",
+    "cache_key": "c31d1db0db34c32939e522926f8d1e33fa536a0a72e7c7e64aabe5860c9b993e",
+    "attempt": 1,
+    "model": "claude-opus-5-5",
+    "prompt_version": "v1",
+    "scenario_spec_version": 1,
+    "feature": "F1",
+    "product": "a library self-checkout kiosk",
+    "planned_scenarios": [
+      "F1_SARCASM_AS_FACT",
+      "F1_SELF_CORRECTION"
+    ]
+  }
+}

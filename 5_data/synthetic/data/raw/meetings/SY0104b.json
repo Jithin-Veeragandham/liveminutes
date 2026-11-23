@@ -1,0 +1,1507 @@
+{
+  "schema_version": "1.0",
+  "source": "synthetic",
+  "meeting_id": "SY0104b",
+  "series_id": "SY0104",
+  "meeting_letter": "b",
+  "scenario_type": "scenario",
+  "stage": "functional design",
+  "duration_sec": 538.01,
+  "participants": [
+    {
+      "label": "A",
+      "role": "ME",
+      "name": "Priya",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "B",
+      "role": "PM",
+      "name": "Tom",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "C",
+      "role": "ID",
+      "name": "Lena",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "D",
+      "role": "UI",
+      "name": "Marco",
+      "global_id": null,
+      "status": "present"
+    }
+  ],
+  "segments": [
+    {
+      "id": "SY0104b.s0001",
+      "speaker": "B",
+      "start": 5.0,
+      "end": 6.92,
+      "text": "Okay, um, shall we start?",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0104b.s0002",
+      "speaker": "D",
+      "start": 7.44,
+      "end": 7.84,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0104b.s0003",
+      "speaker": "B",
+      "start": 8.3,
+      "end": 12.15,
+      "text": "So this is our second meeting, the functional design one.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0004",
+      "speaker": "B",
+      "start": 12.35,
+      "end": 17.73,
+      "text": "And, uh, good news, Priya's back from Hamburg, so we're all here this time.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0005",
+      "speaker": "A",
+      "start": 18.42,
+      "end": 21.88,
+      "text": "Yes, hi everyone. Sorry I missed the first one.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0006",
+      "speaker": "C",
+      "start": 22.06,
+      "end": 22.46,
+      "text": "Hi.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0104b.s0007",
+      "speaker": "B",
+      "start": 23.22,
+      "end": 26.3,
+      "text": "You got the minutes I sent you, right?",
+      "da_type": "el.und"
+    },
+    {
+      "id": "SY0104b.s0008",
+      "speaker": "A",
+      "start": 26.96,
+      "end": 33.11,
+      "text": "I did, yeah, and the task list. Thanks for that, and for the chat on Thursday.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0009",
+      "speaker": "B",
+      "start": 33.63,
+      "end": 42.86,
+      "text": "Good. So just to recap from last time, um, we said café chains, returns over the counter, separate lid, and one size for now.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0010",
+      "speaker": "B",
+      "start": 43.33,
+      "end": 46.41,
+      "text": "And the deposit amount was left for Priya.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0011",
+      "speaker": "B",
+      "start": 47.07,
+      "end": 56.69,
+      "text": "So today, Lena on materials, Marco on the return flow, then Priya on deposits and competitors, and then we come back to the app thing.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0012",
+      "speaker": "B",
+      "start": 57.46,
+      "end": 59.77,
+      "text": "Lena, do you want to start?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0104b.s0013",
+      "speaker": "C",
+      "start": 60.69,
+      "end": 61.84,
+      "text": "Sure, um, yeah.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0104b.s0014",
+      "speaker": "C",
+      "start": 62.52,
+      "end": 67.52,
+      "text": "So I looked at polypropylene and bamboo fibre, like I said I would.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0015",
+      "speaker": "C",
+      "start": 68.01,
+      "end": 71.09,
+      "text": "And honestly bamboo fibre is pretty much out.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0016",
+      "speaker": "C",
+      "start": 71.76,
+      "end": 79.84,
+      "text": "The melamine binder, which I mentioned last time, it can migrate into the drink when it's hot, above about seventy degrees.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0017",
+      "speaker": "D",
+      "start": 80.44,
+      "end": 83.52,
+      "text": "Even with coffee? Coffee's like eighty, ninety degrees.",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0104b.s0018",
+      "speaker": "C",
+      "start": 84.45,
+      "end": 86.37,
+      "text": "Exactly, coffee is the problem.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0019",
+      "speaker": "C",
+      "start": 86.68,
+      "end": 92.45,
+      "text": "And they also don't do well in commercial dishwashers, they start cracking after a while.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0020",
+      "speaker": "B",
+      "start": 93.13,
+      "end": 93.53,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0104b.s0021",
+      "speaker": "C",
+      "start": 94.32,
+      "end": 104.7,
+      "text": "Polypropylene on the other hand is fine with heat, it's food-safe, and the suppliers I talked to rate it for, um, around five hundred commercial wash cycles.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0022",
+      "speaker": "A",
+      "start": 105.46,
+      "end": 107.77,
+      "text": "Five hundred, is that a lot?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0104b.s0023",
+      "speaker": "C",
+      "start": 108.27,
+      "end": 113.27,
+      "text": "Well if a cup goes round maybe twice a week that's several years.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0024",
+      "speaker": "A",
+      "start": 113.64,
+      "end": 114.04,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0104b.s0025",
+      "speaker": "C",
+      "start": 114.7,
+      "end": 121.62,
+      "text": "And cost, they quoted me roughly one euro sixty for a cup and lid in polypropylene, at volume.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0026",
+      "speaker": "B",
+      "start": 122.0,
+      "end": 124.69,
+      "text": "That's well under the three euros, nice.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0104b.s0027",
+      "speaker": "C",
+      "start": 124.9,
+      "end": 128.75,
+      "text": "Yeah, but that's for one mould. One size, three-fifty millilitres.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0028",
+      "speaker": "B",
+      "start": 129.13,
+      "end": 133.75,
+      "text": "So, um, I think we can confirm polypropylene. Everyone okay with that?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0104b.s0029",
+      "speaker": "D",
+      "start": 134.18,
+      "end": 135.33,
+      "text": "Yeah, sounds good.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0104b.s0030",
+      "speaker": "A",
+      "start": 135.78,
+      "end": 136.93,
+      "text": "Fine with me.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0104b.s0031",
+      "speaker": "B",
+      "start": 137.38,
+      "end": 142.0,
+      "text": "Okay, polypropylene. And we stay with one size, three-fifty, like we said.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0032",
+      "speaker": "C",
+      "start": 142.22,
+      "end": 142.62,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0104b.s0033",
+      "speaker": "D",
+      "start": 143.24,
+      "end": 143.64,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0104b.s0034",
+      "speaker": "B",
+      "start": 144.21,
+      "end": 145.75,
+      "text": "Marco, the return flow?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0104b.s0035",
+      "speaker": "D",
+      "start": 146.19,
+      "end": 148.88,
+      "text": "Yeah, um, so I mapped it out.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0104b.s0036",
+      "speaker": "D",
+      "start": 149.23,
+      "end": 154.23,
+      "text": "Step one, customer comes to the counter with the cup and the lid.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0037",
+      "speaker": "D",
+      "start": 154.8,
+      "end": 160.95,
+      "text": "Barista takes it, looks at it quickly, is it cracked, is it one of our cups.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0038",
+      "speaker": "D",
+      "start": 161.54,
+      "end": 167.69,
+      "text": "Then they give back the deposit, either cash or they take it off the next drink.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0039",
+      "speaker": "A",
+      "start": 168.04,
+      "end": 173.81,
+      "text": "Off the next drink, so like if I order another coffee in the same cup?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0104b.s0040",
+      "speaker": "D",
+      "start": 174.19,
+      "end": 179.57,
+      "text": "No, they'd give you a clean one, the dirty one goes in the wash.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0041",
+      "speaker": "A",
+      "start": 180.38,
+      "end": 181.15,
+      "text": "Ah, okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0104b.s0042",
+      "speaker": "D",
+      "start": 181.91,
+      "end": 189.22,
+      "text": "And the one thing I wasn't sure about, what happens if someone brings back the cup without the lid.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0043",
+      "speaker": "C",
+      "start": 189.84,
+      "end": 192.92,
+      "text": "Oh, that'll happen a lot. People lose lids.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0104b.s0044",
+      "speaker": "D",
+      "start": 193.37,
+      "end": 198.37,
+      "text": "So I'd say the deposit is for the set, cup and lid together.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0104b.s0045",
+      "speaker": "D",
+      "start": 198.71,
+      "end": 203.71,
+      "text": "And maybe if there's no lid you get, like, part of it back.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0104b.s0046",
+      "speaker": "B",
+      "start": 204.39,
+      "end": 208.24,
+      "text": "Does that work for baristas though? Working out partial refunds?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0104b.s0047",
+      "speaker": "A",
+      "start": 208.43,
+      "end": 211.89,
+      "text": "Hmm, it's a bit fiddly at a busy counter.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0104b.s0048",
+      "speaker": "D",
+      "start": 212.56,
+      "end": 213.71,
+      "text": "Yeah, that's fair.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0104b.s0049",
+      "speaker": "B",
+      "start": 214.12,
+      "end": 222.2,
+      "text": "Okay so the deposit is for cup and lid as a set, but the no-lid case we leave open for now.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0050",
+      "speaker": "D",
+      "start": 223.0,
+      "end": 223.4,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0104b.s0051",
+      "speaker": "B",
+      "start": 223.77,
+      "end": 224.17,
+      "text": "Priya?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0104b.s0052",
+      "speaker": "A",
+      "start": 224.36,
+      "end": 225.51,
+      "text": "Right, so, um.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0104b.s0053",
+      "speaker": "A",
+      "start": 225.87,
+      "end": 230.49,
+      "text": "I looked at the existing schemes, mostly in Germany and the UK.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0054",
+      "speaker": "A",
+      "start": 231.17,
+      "end": 240.4,
+      "text": "The big German one charges one euro, the UK ones are around a pound, and a few smaller ones go up to two euros.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0055",
+      "speaker": "A",
+      "start": 241.11,
+      "end": 249.96,
+      "text": "And what they've found is with one euro, a lot of people just don't bother bringing it back. It's like a throwaway amount.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0056",
+      "speaker": "C",
+      "start": 250.43,
+      "end": 252.35,
+      "text": "So they lose the cups?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0104b.s0057",
+      "speaker": "A",
+      "start": 253.01,
+      "end": 256.09,
+      "text": "Yeah, return rates were lower than they wanted.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0058",
+      "speaker": "A",
+      "start": 256.98,
+      "end": 259.29,
+      "text": "So my recommendation is two euros.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0104b.s0059",
+      "speaker": "A",
+      "start": 260.27,
+      "end": 267.58,
+      "text": "It's more than what the cup costs to make, so if it's not returned the café isn't losing money.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0060",
+      "speaker": "D",
+      "start": 268.04,
+      "end": 273.42,
+      "text": "Two euros feels like a lot though, if the coffee itself is three euros.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0104b.s0061",
+      "speaker": "A",
+      "start": 274.0,
+      "end": 282.46,
+      "text": "But you get it back. And the café managers I spoke to at the fair said two was fine for their customers.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0062",
+      "speaker": "B",
+      "start": 282.93,
+      "end": 285.62,
+      "text": "Lena, Marco, can we live with two?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0104b.s0063",
+      "speaker": "C",
+      "start": 286.04,
+      "end": 288.35,
+      "text": "I think it makes sense, yeah.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0104b.s0064",
+      "speaker": "D",
+      "start": 288.88,
+      "end": 291.96,
+      "text": "Yeah okay, if they get it back. Fine.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0104b.s0065",
+      "speaker": "B",
+      "start": 292.78,
+      "end": 294.7,
+      "text": "Okay, so two euros deposit.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0066",
+      "speaker": "A",
+      "start": 295.37,
+      "end": 297.68,
+      "text": "And then the other thing, sizes.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0067",
+      "speaker": "A",
+      "start": 298.33,
+      "end": 306.02,
+      "text": "So I spoke to people from three chains at the fair, and all of them said one size won't work.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0068",
+      "speaker": "A",
+      "start": 306.31,
+      "end": 314.39,
+      "text": "They sell a small and a regular at least, and they don't want customers in the scheme stuck with just one.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0069",
+      "speaker": "B",
+      "start": 315.11,
+      "end": 318.57,
+      "text": "Ah. Okay, so that's against what we just said.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0104b.s0070",
+      "speaker": "C",
+      "start": 318.83,
+      "end": 319.23,
+      "text": "Hmm.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0104b.s0071",
+      "speaker": "C",
+      "start": 319.43,
+      "end": 323.28,
+      "text": "Two sizes means two moulds, that pushes the cost up.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0072",
+      "speaker": "A",
+      "start": 324.06,
+      "end": 325.21,
+      "text": "By how much?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0104b.s0073",
+      "speaker": "C",
+      "start": 326.21,
+      "end": 331.21,
+      "text": "Tooling mainly, the unit price maybe ten, twenty cents more. Still under three.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0074",
+      "speaker": "D",
+      "start": 331.69,
+      "end": 337.46,
+      "text": "What if both sizes use the same lid? Same top diameter, just a different height.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0104b.s0075",
+      "speaker": "C",
+      "start": 338.44,
+      "end": 342.67,
+      "text": "Oh, that's actually good. Then you only need one lid mould.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0104b.s0076",
+      "speaker": "C",
+      "start": 343.58,
+      "end": 349.35,
+      "text": "And if they taper the same way they still stack, sort of, inside each other.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0077",
+      "speaker": "B",
+      "start": 349.76,
+      "end": 353.61,
+      "text": "And returns? Does it make it harder for the barista?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0104b.s0078",
+      "speaker": "D",
+      "start": 354.5,
+      "end": 361.42,
+      "text": "Not really, the deposit's the same for both, so they don't have to check which one it is.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0079",
+      "speaker": "A",
+      "start": 361.73,
+      "end": 364.42,
+      "text": "Yeah, that's what the chains would want.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0104b.s0080",
+      "speaker": "B",
+      "start": 365.26,
+      "end": 370.26,
+      "text": "Okay, so we change what we said earlier then. Two sizes, same lid?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0104b.s0081",
+      "speaker": "C",
+      "start": 370.53,
+      "end": 370.93,
+      "text": "Yes.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0104b.s0082",
+      "speaker": "D",
+      "start": 371.1,
+      "end": 371.5,
+      "text": "Yep.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0104b.s0083",
+      "speaker": "A",
+      "start": 371.72,
+      "end": 375.95,
+      "text": "I'd say two-fifty and three-fifty millilitres, that's what they mostly use.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0104b.s0084",
+      "speaker": "B",
+      "start": 376.55,
+      "end": 384.63,
+      "text": "Okay. So, two sizes, two-fifty and three-fifty, one shared lid, same two euro deposit for both. That replaces the one size.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0085",
+      "speaker": "C",
+      "start": 385.3,
+      "end": 385.7,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0104b.s0086",
+      "speaker": "B",
+      "start": 386.68,
+      "end": 393.6,
+      "text": "Last thing then, the app and the QR code, we said last time we'd come back to it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0087",
+      "speaker": "D",
+      "start": 393.77,
+      "end": 401.08,
+      "text": "Yeah, so, I still think tracking is useful, for the cafés, to know how many cups are out there.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0088",
+      "speaker": "D",
+      "start": 401.4,
+      "end": 409.48,
+      "text": "But maybe not an app for customers. Just a code on the cup that the café scans when it comes back.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0104b.s0089",
+      "speaker": "C",
+      "start": 410.17,
+      "end": 413.25,
+      "text": "Printed? Because print won't survive five hundred washes.",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0104b.s0090",
+      "speaker": "D",
+      "start": 413.69,
+      "end": 415.61,
+      "text": "Laser etched, on the bottom.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0104b.s0091",
+      "speaker": "C",
+      "start": 416.05,
+      "end": 419.13,
+      "text": "Laser etching is fine, that's pretty cheap actually.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0104b.s0092",
+      "speaker": "D",
+      "start": 419.74,
+      "end": 425.51,
+      "text": "And maybe also an NFC chip in the base, so you can just tap it.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0104b.s0093",
+      "speaker": "C",
+      "start": 426.51,
+      "end": 433.05,
+      "text": "Oh brilliant, and a little GPS tracker in the lid, so we can follow every cup home.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0104b.s0094",
+      "speaker": "A",
+      "start": 433.84,
+      "end": 434.61,
+      "text": "Ha, yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0104b.s0095",
+      "speaker": "C",
+      "start": 435.46,
+      "end": 441.23,
+      "text": "No, seriously, a chip in every base, at that cost, and through the dishwasher, no.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0104b.s0096",
+      "speaker": "D",
+      "start": 442.18,
+      "end": 443.72,
+      "text": "Okay, okay, no chip.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0104b.s0097",
+      "speaker": "B",
+      "start": 444.21,
+      "end": 449.98,
+      "text": "So, an etched code on the base, the café scans it, and no customer app?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0104b.s0098",
+      "speaker": "A",
+      "start": 450.82,
+      "end": 455.82,
+      "text": "I like that it doesn't exclude anyone. Customers don't have to do anything.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0104b.s0099",
+      "speaker": "C",
+      "start": 456.63,
+      "end": 461.25,
+      "text": "Yeah, that's fine with me, the app was my problem last time.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0104b.s0100",
+      "speaker": "B",
+      "start": 461.78,
+      "end": 465.63,
+      "text": "Okay, good. Code on the base, no app for now.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0101",
+      "speaker": "D",
+      "start": 466.21,
+      "end": 470.44,
+      "text": "Though for the scanning, the café needs something to scan with.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0102",
+      "speaker": "B",
+      "start": 471.09,
+      "end": 475.71,
+      "text": "Can you look at that? What the barista needs at the counter?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0104b.s0103",
+      "speaker": "D",
+      "start": 476.61,
+      "end": 480.07,
+      "text": "Yeah, I can work that into the return flow.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0104b.s0104",
+      "speaker": "B",
+      "start": 481.04,
+      "end": 483.73,
+      "text": "Okay, let me go through the actions.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0105",
+      "speaker": "B",
+      "start": 484.32,
+      "end": 491.24,
+      "text": "Lena, can you get a proper quote for the two sizes and the shared lid, with the etching?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0104b.s0106",
+      "speaker": "C",
+      "start": 491.93,
+      "end": 494.62,
+      "text": "Yep, I'll go back to the supplier.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0104b.s0107",
+      "speaker": "B",
+      "start": 495.43,
+      "end": 498.51,
+      "text": "Marco, the return flow with the scanning step.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0108",
+      "speaker": "D",
+      "start": 499.02,
+      "end": 499.42,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0104b.s0109",
+      "speaker": "D",
+      "start": 500.27,
+      "end": 504.89,
+      "text": "And I'll add the no-lid case, a couple of options for it.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0104b.s0110",
+      "speaker": "B",
+      "start": 505.55,
+      "end": 510.93,
+      "text": "Priya, could you check with those chains that two-fifty and three-fifty fit their menus?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0104b.s0111",
+      "speaker": "A",
+      "start": 511.12,
+      "end": 516.5,
+      "text": "Sure, I have their contacts. I can also ask them about the no-lid thing.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0104b.s0112",
+      "speaker": "B",
+      "start": 517.1,
+      "end": 517.87,
+      "text": "Yeah, good.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0104b.s0113",
+      "speaker": "B",
+      "start": 518.18,
+      "end": 522.03,
+      "text": "And I'll write up the minutes and send them round.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0104b.s0114",
+      "speaker": "B",
+      "start": 522.39,
+      "end": 523.16,
+      "text": "Anything else?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0104b.s0115",
+      "speaker": "C",
+      "start": 524.11,
+      "end": 525.65,
+      "text": "Um, just, the lid...",
+      "da_type": "fra"
+    },
+    {
+      "id": "SY0104b.s0116",
+      "speaker": "C",
+      "start": 525.85,
+      "end": 528.93,
+      "text": "Never mind, I'll put it in the quote.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0117",
+      "speaker": "B",
+      "start": 529.76,
+      "end": 533.22,
+      "text": "Okay, thanks everyone. Next time is the conceptual design.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0104b.s0118",
+      "speaker": "D",
+      "start": 533.44,
+      "end": 533.84,
+      "text": "Thanks.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0104b.s0119",
+      "speaker": "A",
+      "start": 534.61,
+      "end": 535.01,
+      "text": "Bye.",
+      "da_type": "bck"
+    }
+  ],
+  "summary": {
+    "abstract": [
+      "The project manager opened the functional design meeting, noted that the marketing expert was back from the trade fair in Hamburg, and recapped the kickoff decisions.",
+      "The industrial designer reported on materials: bamboo fibre was ruled out because its melamine binder can migrate into hot drinks and it cracks in commercial dishwashers, while polypropylene is food-safe, heat-resistant, rated for around five hundred commercial wash cycles and quoted at roughly 1.60 euros per cup and lid, so the team chose polypropylene.",
+      "The user interface designer presented the over-the-counter return flow, and the team agreed that the deposit covers cup and lid as a set, leaving the case of a cup returned without its lid open.",
+      "The marketing expert presented competitor schemes, where one-euro deposits led to low return rates, and the team adopted her recommendation of a two-euro deposit.",
+      "After the marketing expert reported that café chains need more than one size, the team revised its earlier confirmation of a single size and settled on two sizes, 250 ml and 350 ml, sharing one lid.",
+      "Revisiting the app idea from the kickoff, the team agreed on a laser-etched code on the cup base that cafés scan on return, with no customer app for now."
+    ],
+    "actions": [
+      "The industrial designer will get a supplier quote for the two cup sizes with the shared lid, including the laser-etched code.",
+      "The user interface designer will update the return flow with the café scanning step and what the barista needs at the counter.",
+      "The user interface designer will add options for handling cups returned without a lid to the return flow.",
+      "The marketing expert will check with the café chains that 250 ml and 350 ml fit their menus, and ask them about cups returned without lids.",
+      "The project manager will write up the minutes and send them to the team."
+    ],
+    "decisions": [
+      "The cup will be made of polypropylene; bamboo fibre is ruled out.",
+      "The deposit will be two euros.",
+      "The deposit covers the cup and lid together as a set.",
+      "The cup will come in two sizes, 250 ml and 350 ml, with one shared lid and the same deposit for both; this replaced the single-size plan confirmed earlier in the meeting.",
+      "Cups will carry a laser-etched code on the base that cafés scan on return; there will be no customer app for now."
+    ],
+    "problems": [
+      "How to handle a cup returned without its lid is unresolved; a partial refund was considered too fiddly for baristas.",
+      "What scanning equipment cafés need at the counter is not yet worked out.",
+      "The cost impact of a second cup mould is only estimated at ten to twenty cents per unit and needs a proper quote.",
+      "Whether 250 ml and 350 ml fit the café chains' menus still needs confirmation."
+    ]
+  },
+  "action_items": [
+    {
+      "id": "SY0104b.ai1",
+      "description": "Get a supplier quote for the two cup sizes with the shared lid, including the laser-etched code.",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0104b.s0105",
+          "event": "assigned",
+          "by": "B",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0104b.s0106",
+          "event": "accepted",
+          "by": "C",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0104b.s0105",
+        "SY0104b.s0106",
+        "SY0104b.s0116"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0104b.ai2",
+      "description": "Update the return flow with the café scanning step and what the barista needs at the counter.",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0104b.s0102",
+          "event": "assigned",
+          "by": "B",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0104b.s0103",
+          "event": "accepted",
+          "by": "D",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0104b.s0107",
+          "event": "restated",
+          "by": "B",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0104b.s0101",
+        "SY0104b.s0102",
+        "SY0104b.s0103",
+        "SY0104b.s0107",
+        "SY0104b.s0108"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0104b.ai3",
+      "description": "Add options for handling cups returned without a lid to the return flow.",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0104b.s0109",
+          "event": "offered",
+          "by": "D",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0104b.s0042",
+        "SY0104b.s0049",
+        "SY0104b.s0109"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0104b.ai4",
+      "description": "Check with the café chains that 250 ml and 350 ml fit their menus.",
+      "owner": "A",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0104b.s0110",
+          "event": "assigned",
+          "by": "B",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0104b.s0111",
+          "event": "accepted",
+          "by": "A",
+          "owner": "A"
+        }
+      ],
+      "evidence_segments": [
+        "SY0104b.s0110",
+        "SY0104b.s0111"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0104b.ai5",
+      "description": "Ask the café chains how they would want to handle cups returned without a lid.",
+      "owner": "A",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0104b.s0111",
+          "event": "offered",
+          "by": "A",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0104b.s0112",
+          "event": "accepted",
+          "by": "B",
+          "owner": "A"
+        }
+      ],
+      "evidence_segments": [
+        "SY0104b.s0111",
+        "SY0104b.s0112"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0104b.ai6",
+      "description": "Write up the minutes and send them to the team.",
+      "owner": "B",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0104b.s0113",
+          "event": "offered",
+          "by": "B",
+          "owner": "B"
+        }
+      ],
+      "evidence_segments": [
+        "SY0104b.s0113"
+      ],
+      "owner_source": "gold"
+    }
+  ],
+  "qa_facts": [
+    {
+      "id": "SY0104b.f1",
+      "type": "other",
+      "fact": "The marketing expert was back from the packaging trade fair in Hamburg and attended this meeting; all four team members were present.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0104b.s0004",
+        "SY0104b.s0005"
+      ]
+    },
+    {
+      "id": "SY0104b.f2",
+      "type": "reference_to_prior_meeting",
+      "fact": "The marketing expert confirmed she received the minutes and task list from the project manager and spoke with him on Thursday, following up the kickoff action item.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0104a",
+      "evidence_segments": [
+        "SY0104b.s0007",
+        "SY0104b.s0008"
+      ]
+    },
+    {
+      "id": "SY0104b.f3",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager recapped the kickoff decisions: café chains, over-the-counter returns, a separate lid, one size for now, and the deposit amount left to the marketing expert.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0104a",
+      "evidence_segments": [
+        "SY0104b.s0009",
+        "SY0104b.s0010"
+      ]
+    },
+    {
+      "id": "SY0104b.f4",
+      "type": "reference_to_prior_meeting",
+      "fact": "The industrial designer referred back to her kickoff concern about the melamine binder in bamboo fibre cups.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0104a",
+      "evidence_segments": [
+        "SY0104b.s0014",
+        "SY0104b.s0016"
+      ]
+    },
+    {
+      "id": "SY0104b.f5",
+      "type": "other",
+      "fact": "The industrial designer reported that polypropylene is rated for around five hundred commercial wash cycles and was quoted at roughly 1.60 euros per cup and lid at volume for one size.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0104b.s0021",
+        "SY0104b.s0025",
+        "SY0104b.s0027"
+      ]
+    },
+    {
+      "id": "SY0104b.f6",
+      "type": "decision",
+      "fact": "The team chose polypropylene for the cup and ruled out bamboo fibre.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0104b.s0015",
+        "SY0104b.s0028",
+        "SY0104b.s0029",
+        "SY0104b.s0030",
+        "SY0104b.s0031"
+      ]
+    },
+    {
+      "id": "SY0104b.f7",
+      "type": "decision",
+      "fact": "The deposit covers the cup and lid together as a set.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0104b.s0044",
+        "SY0104b.s0049"
+      ]
+    },
+    {
+      "id": "SY0104b.f8",
+      "type": "unagreed_proposal",
+      "fact": "The user interface designer suggested a partial refund for cups returned without a lid; it was considered too fiddly for baristas and the no-lid case was left open.",
+      "agreed": false,
+      "related_action_item": "SY0104b.ai3",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0104b.s0045",
+        "SY0104b.s0046",
+        "SY0104b.s0047",
+        "SY0104b.s0048",
+        "SY0104b.s0049"
+      ]
+    },
+    {
+      "id": "SY0104b.f9",
+      "type": "other",
+      "fact": "The marketing expert reported that competitor schemes charge around one euro or one pound, some up to two euros, and that one-euro deposits led to low return rates.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0104b.s0053",
+        "SY0104b.s0054",
+        "SY0104b.s0055",
+        "SY0104b.s0057"
+      ]
+    },
+    {
+      "id": "SY0104b.f10",
+      "type": "decision",
+      "fact": "The deposit was set at two euros, on the marketing expert's recommendation.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0104b.s0058",
+        "SY0104b.s0059",
+        "SY0104b.s0061",
+        "SY0104b.s0062",
+        "SY0104b.s0063",
+        "SY0104b.s0064",
+        "SY0104b.s0065"
+      ]
+    },
+    {
+      "id": "SY0104b.f11",
+      "type": "decision",
+      "fact": "The cup will come in two sizes, 250 ml and 350 ml, sharing one lid, with the same deposit for both.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0104b.s0074",
+        "SY0104b.s0075",
+        "SY0104b.s0080",
+        "SY0104b.s0081",
+        "SY0104b.s0082",
+        "SY0104b.s0083",
+        "SY0104b.s0084"
+      ]
+    },
+    {
+      "id": "SY0104b.f12",
+      "type": "plan_change",
+      "fact": "The team first confirmed a single 350 ml size, then changed to two sizes with a shared lid after the marketing expert reported that café chains need at least a small and a regular size.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0104b.s0031",
+        "SY0104b.s0067",
+        "SY0104b.s0068",
+        "SY0104b.s0069",
+        "SY0104b.s0080",
+        "SY0104b.s0084"
+      ]
+    },
+    {
+      "id": "SY0104b.f13",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager brought the app/QR-code tracking idea back for discussion, as agreed at the kickoff.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0104a",
+      "evidence_segments": [
+        "SY0104b.s0086",
+        "SY0104b.s0099"
+      ]
+    },
+    {
+      "id": "SY0104b.f14",
+      "type": "decision",
+      "fact": "Cups will have a laser-etched code on the base that cafés scan on return, with no customer app for now.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0104b.s0088",
+        "SY0104b.s0090",
+        "SY0104b.s0091",
+        "SY0104b.s0097",
+        "SY0104b.s0098",
+        "SY0104b.s0099",
+        "SY0104b.s0100"
+      ]
+    },
+    {
+      "id": "SY0104b.f15",
+      "type": "unagreed_proposal",
+      "fact": "The user interface designer suggested an NFC chip in the cup base; the industrial designer rejected it because of cost and dishwasher exposure, and it was dropped.",
+      "agreed": false,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0104b.s0092",
+        "SY0104b.s0095",
+        "SY0104b.s0096"
+      ]
+    },
+    {
+      "id": "SY0104b.f16",
+      "type": "action_item",
+      "fact": "The industrial designer will get a supplier quote for the two sizes with the shared lid and etching.",
+      "agreed": null,
+      "related_action_item": "SY0104b.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0104b.s0105",
+        "SY0104b.s0106"
+      ]
+    },
+    {
+      "id": "SY0104b.f17",
+      "type": "action_item",
+      "fact": "The user interface designer will update the return flow with the café scanning step.",
+      "agreed": null,
+      "related_action_item": "SY0104b.ai2",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0104b.s0102",
+        "SY0104b.s0103",
+        "SY0104b.s0107"
+      ]
+    },
+    {
+      "id": "SY0104b.f18",
+      "type": "action_item",
+      "fact": "The user interface designer will add options for cups returned without a lid.",
+      "agreed": null,
+      "related_action_item": "SY0104b.ai3",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0104b.s0109"
+      ]
+    },
+    {
+      "id": "SY0104b.f19",
+      "type": "action_item",
+      "fact": "The marketing expert will check with the café chains that 250 ml and 350 ml fit their menus.",
+      "agreed": null,
+      "related_action_item": "SY0104b.ai4",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0104b.s0110",
+        "SY0104b.s0111"
+      ]
+    },
+    {
+      "id": "SY0104b.f20",
+      "type": "action_item",
+      "fact": "The marketing expert will ask the café chains about cups returned without a lid.",
+      "agreed": null,
+      "related_action_item": "SY0104b.ai5",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0104b.s0111"
+      ]
+    },
+    {
+      "id": "SY0104b.f21",
+      "type": "action_item",
+      "fact": "The project manager will write up and send the minutes.",
+      "agreed": null,
+      "related_action_item": "SY0104b.ai6",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0104b.s0113"
+      ]
+    }
+  ],
+  "edge_cases": [
+    {
+      "scenario_id": "F1_SARCASM_AS_FACT",
+      "segments": [
+        "SY0104b.s0092",
+        "SY0104b.s0093",
+        "SY0104b.s0094",
+        "SY0104b.s0095",
+        "SY0104b.s0096"
+      ],
+      "note": "The industrial designer sarcastically says they'll put a GPS tracker in the lid to follow every cup home, in response to the NFC chip idea; nobody adopts it and the chip is dropped too."
+    },
+    {
+      "scenario_id": "F1_PLAN_CHANGE",
+      "segments": [
+        "SY0104b.s0027",
+        "SY0104b.s0031",
+        "SY0104b.s0067",
+        "SY0104b.s0068",
+        "SY0104b.s0069",
+        "SY0104b.s0080",
+        "SY0104b.s0084"
+      ],
+      "note": "The team confirms a single 350 ml size early on, then switches to two sizes (250 and 350 ml) with a shared lid after the marketing expert's café chain feedback."
+    }
+  ],
+  "provenance": {
+    "generator": "liveminutes-synthetic",
+    "cache_key": "12f4cce59d209e3f59b7c90e602293d367e3f04acc7898c761ddbb670715707e",
+    "attempt": 0,
+    "model": "claude-opus-5-5",
+    "prompt_version": "v1",
+    "scenario_spec_version": 1,
+    "feature": "F1",
+    "product": "a reusable coffee cup with a deposit system",
+    "planned_scenarios": [
+      "F1_SARCASM_AS_FACT",
+      "F1_PLAN_CHANGE"
+    ]
+  }
+}

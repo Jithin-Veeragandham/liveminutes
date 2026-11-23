@@ -1,0 +1,1075 @@
+{
+  "meeting_id": "SY0101a",
+  "raw_sha256": "163e746a5f7b01ea2d489d77dc0843ad593b0b91e119711623f608ad8322f2c8",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the kickoff meeting, introduced the team and presented the project: a voice-controlled kitchen timer that sits on the counter and can be operated hands-free.",
+        "She presented the budget: a selling price of 25 euros, a maximum production cost of 12.50 euros per unit, and a profit target of 50 million euros.",
+        "The team discussed the target group and first features. The final target group is home cooks. This replaced an earlier choice of professional kitchens, which the team revised because of the price point and the kitchen noise.",
+        "The user interface designer raised the wake word problem, the alarm, and a simple display. The industrial designer pointed out that a custom wake word and a spoken alarm would increase the hardware cost.",
+        "The project manager assigned research tasks to each team member. The next meeting, the functional design meeting, is in thirty minutes."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The marketing expert will research what home cooks need from a kitchen timer, possibly with a quick survey.",
+        "The industrial designer will investigate voice recognition chips and whether they fit within the 12.50 euro production cost. He will also look at battery versus mains power.",
+        "The user interface designer will work out the wake word, the voice commands (set, cancel, time remaining), the display and a button fallback.",
+        "The project manager will send round the minutes."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The target group is home cooks in ordinary households. This was revised during the meeting from an earlier choice of professional kitchens.",
+        "The timer will support multiple named timers.",
+        "The display will use large, readable digits rather than a colour screen.",
+        "The timer will have a physical button fallback in case voice commands are not recognised.",
+        "The team will meet again in thirty minutes for the functional design meeting."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "It is unknown whether a voice recognition chip fits within the 12.50 euro production cost.",
+        "The power source (battery or mains) is undecided, because always-on listening consumes power.",
+        "It is undecided whether the wake word will be fixed or user-selectable. A user-selectable wake word needs a more expensive chip.",
+        "It is undecided whether the alarm will announce which timer finished or only beep. A spoken alarm needs a speaker and adds cost.",
+        "The device should be easy to clean and at least splash-proof, but this has not been specified further."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0101a.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0101a.ai1",
+        "description": "Research user requirements for the kitchen timer among home cooks, possibly through a quick survey. This was originally assigned as research into chefs' needs.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0101a.s0041",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0101a.s0042",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0101a.s0089",
+            "event": "restated",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0101a.s0090",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0101a.s0041",
+          "SY0101a.s0042",
+          "SY0101a.s0089",
+          "SY0101a.s0090"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0101a.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0101a.ai2",
+        "description": "Investigate available voice recognition chips and their cost relative to the 12.50 euro production budget, including battery versus mains power.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0101a.s0092",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0101a.s0093",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0101a.s0092",
+          "SY0101a.s0093",
+          "SY0101a.s0094"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0101a.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0101a.ai3",
+        "description": "Design the wake word, the voice commands (set, cancel, time remaining), the display and a button fallback.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0101a.s0096",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0101a.s0097",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0101a.s0096",
+          "SY0101a.s0097",
+          "SY0101a.s0098",
+          "SY0101a.s0099"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0101a.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0101a.ai4",
+        "description": "Send round the minutes of the kickoff meeting.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0101a.s0113",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0101a.s0113"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101a.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101a.f1",
+        "type": "other",
+        "fact": "The project is a voice-controlled kitchen timer.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101a.s0016",
+          "SY0101a.s0017",
+          "SY0101a.s0019"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101a.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101a.f2",
+        "type": "other",
+        "fact": "The selling price is 25 euros, the maximum production cost is 12.50 euros per unit, and the profit target is 50 million euros.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101a.s0024",
+          "SY0101a.s0025",
+          "SY0101a.s0027"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101a.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101a.f3",
+        "type": "other",
+        "fact": "All four participants attended the meeting; no one was absent.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101a.s0002",
+          "SY0101a.s0008",
+          "SY0101a.s0011",
+          "SY0101a.s0013"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101a.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101a.f4",
+        "type": "decision",
+        "fact": "The team agreed that the target group is home cooks.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101a.s0080",
+          "SY0101a.s0081",
+          "SY0101a.s0082",
+          "SY0101a.s0085",
+          "SY0101a.s0086",
+          "SY0101a.s0087",
+          "SY0101a.s0088",
+          "SY0101a.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101a.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101a.f5",
+        "type": "plan_change",
+        "fact": "The team first agreed to target professional kitchens and restaurants. Later in the meeting they changed the target to home cooks, because of the 25 euro price point and the noise in professional kitchens.",
+        "agreed": null,
+        "related_action_item": "SY0101a.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101a.s0031",
+          "SY0101a.s0036",
+          "SY0101a.s0037",
+          "SY0101a.s0040",
+          "SY0101a.s0073",
+          "SY0101a.s0074",
+          "SY0101a.s0077",
+          "SY0101a.s0078",
+          "SY0101a.s0080",
+          "SY0101a.s0085",
+          "SY0101a.s0086"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101a.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101a.f6",
+        "type": "decision",
+        "fact": "The timer will support multiple named timers.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101a.s0034",
+          "SY0101a.s0035",
+          "SY0101a.s0083",
+          "SY0101a.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101a.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101a.f7",
+        "type": "decision",
+        "fact": "The display will show big readable digits rather than a colour screen.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101a.s0055",
+          "SY0101a.s0056",
+          "SY0101a.s0057",
+          "SY0101a.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101a.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101a.f8",
+        "type": "decision",
+        "fact": "The timer will include a physical button fallback.",
+        "agreed": true,
+        "related_action_item": "SY0101a.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101a.s0098",
+          "SY0101a.s0099",
+          "SY0101a.s0100"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101a.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101a.f9",
+        "type": "decision",
+        "fact": "The next meeting, the functional design meeting, is in thirty minutes.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101a.s0112",
+          "SY0101a.s0114",
+          "SY0101a.s0115"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101a.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101a.f10",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer proposed letting users choose their own wake word. This was not agreed because of the chip cost.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101a.s0048",
+          "SY0101a.s0049"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101a.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101a.f11",
+        "type": "unagreed_proposal",
+        "fact": "The industrial designer suggested a fixed wake word to allow a cheap chip. The project manager only said to keep it in mind.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101a.s0051",
+          "SY0101a.s0052"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101a.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101a.f12",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert proposed a spoken alarm that announces which timer is done. This was left open because it needs a speaker.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101a.s0106",
+          "SY0101a.s0107",
+          "SY0101a.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101a.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101a.f13",
+        "type": "other",
+        "fact": "The marketing expert said the device should be easy to wipe down. The industrial designer said it should be at least splash-proof and that he would keep this in mind.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101a.s0101",
+          "SY0101a.s0102"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101a.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101a.f14",
+        "type": "action_item",
+        "fact": "The marketing expert was asked to research what home cooks need from a timer. This task was first framed as research into chefs' needs.",
+        "agreed": null,
+        "related_action_item": "SY0101a.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101a.s0041",
+          "SY0101a.s0042",
+          "SY0101a.s0089",
+          "SY0101a.s0090"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101a.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101a.f15",
+        "type": "action_item",
+        "fact": "The industrial designer was asked to investigate voice recognition chips against the 12.50 euro cost limit, plus battery versus mains power.",
+        "agreed": null,
+        "related_action_item": "SY0101a.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101a.s0092",
+          "SY0101a.s0093",
+          "SY0101a.s0094"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101a.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101a.f16",
+        "type": "action_item",
+        "fact": "The user interface designer was asked to work out the wake word, the voice commands and the display, including a button fallback.",
+        "agreed": null,
+        "related_action_item": "SY0101a.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101a.s0096",
+          "SY0101a.s0097",
+          "SY0101a.s0098",
+          "SY0101a.s0099"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0101a.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0101a.f17",
+        "type": "action_item",
+        "fact": "The project manager will send round the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0101a.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0101a.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_OFF_TOPIC_TANGENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_OFF_TOPIC_TANGENT",
+        "segments": [
+          "SY0101a.s0058",
+          "SY0101a.s0059",
+          "SY0101a.s0060",
+          "SY0101a.s0061",
+          "SY0101a.s0062",
+          "SY0101a.s0063",
+          "SY0101a.s0064",
+          "SY0101a.s0065",
+          "SY0101a.s0066",
+          "SY0101a.s0067",
+          "SY0101a.s0068",
+          "SY0101a.s0069"
+        ],
+        "note": "Twelve consecutive segments about a TV baking competition final, ended when the project manager steers back to the timer at segment 71."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_PLAN_CHANGE",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_PLAN_CHANGE",
+        "segments": [
+          "SY0101a.s0031",
+          "SY0101a.s0036",
+          "SY0101a.s0037",
+          "SY0101a.s0038",
+          "SY0101a.s0039",
+          "SY0101a.s0040",
+          "SY0101a.s0041",
+          "SY0101a.s0073",
+          "SY0101a.s0074",
+          "SY0101a.s0075",
+          "SY0101a.s0076",
+          "SY0101a.s0077",
+          "SY0101a.s0078",
+          "SY0101a.s0079",
+          "SY0101a.s0080",
+          "SY0101a.s0081",
+          "SY0101a.s0082",
+          "SY0101a.s0083",
+          "SY0101a.s0084",
+          "SY0101a.s0085",
+          "SY0101a.s0086",
+          "SY0101a.s0087",
+          "SY0101a.s0088",
+          "SY0101a.s0089",
+          "SY0101a.s0090"
+        ],
+        "note": "The team first agrees to target professional kitchens. After the tangent they switch to home cooks because of price and noise, and the marketing expert's research task is restated accordingly."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

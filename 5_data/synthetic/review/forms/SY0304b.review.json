@@ -1,0 +1,1250 @@
+{
+  "meeting_id": "SY0304b",
+  "raw_sha256": "c0117ffe5d3fb743e5097db1b15e52e0f8fbf12dfbe0588b6b19a4b1eff0a6e2",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the functional design meeting with all four members present. She welcomed the industrial designer, who had missed the kickoff, and confirmed she had emailed him the brief and minutes.",
+        "The marketing expert reported survey results from twenty-four people (fourteen students, eight staff, two visitors). Users want to read the number from the road before turning in, liked the colour coding, did not want adverts, and often asked for an app, which remains a later idea.",
+        "The industrial designer compared barrier counters (about seventy pounds per entrance, but prone to drift from tailgating) with per-bay sensors (about thirty pounds per bay, over five thousand pounds for the library car park). He also recommended an IP65 outdoor casing and an LED number panel instead of an LCD screen.",
+        "The user interface designer presented three layouts in two sizes. The team chose the larger sixty-centimetre LED display with the car park name on top and agreed the colour thresholds. They settled power on mains from the barrier supply, because the underground library car parks get no sun, and chose barrier counters with a nightly reset. This made the per-bay sensor quote the project manager had requested earlier in the meeting unnecessary, so it was cancelled.",
+        "The estimated cost per sign is around four hundred pounds. The central sign near the main gate is still undecided pending input from the estates office."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will check the mains connection at each barrier with the estates office and specify the casing properly.",
+        "The user interface designer will produce the final layout at sixty centimetres, LED, with the car park name on top and the agreed colour thresholds.",
+        "The marketing expert will survey more visitors at the main gate during next week's open day.",
+        "The project manager will ask the estates office whether they want the central sign near the main gate and whether there is separate budget for it.",
+        "The project manager will send the minutes round."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The display will be the larger size, about sixty centimetres wide.",
+        "The number will be shown on an LED number panel rather than an LCD screen.",
+        "The car park name will appear on top of the number.",
+        "Colour thresholds: green above twenty free spaces, amber at twenty or fewer, red at five or fewer.",
+        "The signs will run on mains power taken from the existing barrier supply, not solar.",
+        "Sensing will use barrier counters with a nightly reset, and the attendant can enter a correction."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "Making the number flash below ten free spaces was stated as settled by the user interface designer, but nobody agreed and the point was left unresolved.",
+        "The estimated cost of about four hundred pounds per sign leaves no margin in the budget.",
+        "Barrier counters can still drift during the day because of tailgating, which the nightly reset only partly addresses.",
+        "It is undecided whether the central sign near the main gate will be included. It would need data from every car park via cabling or a wireless link.",
+        "Visitors are under-represented in the survey, with only two respondents.",
+        "Many users asked for an app, which remains out of scope for now."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304b.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304b.ai1",
+        "description": "Get a proper quote from the supplier for per-bay sensors for the library car park",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "dropped",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304b.s0043",
+            "event": "assigned",
+            "by": "C",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0304b.s0044",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0304b.s0096",
+            "event": "dropped",
+            "by": "C",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304b.s0043",
+          "SY0304b.s0044",
+          "SY0304b.s0096",
+          "SY0304b.s0097",
+          "SY0304b.s0098"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304b.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304b.ai2",
+        "description": "Check the mains connection at each barrier with the estates office and specify the outdoor casing properly",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304b.s0111",
+            "event": "assigned",
+            "by": "C",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0304b.s0112",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304b.s0111",
+          "SY0304b.s0112"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304b.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304b.ai3",
+        "description": "Produce the final layout at sixty centimetres, LED, with the car park name on top and the agreed colour thresholds",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304b.s0113",
+            "event": "assigned",
+            "by": "C",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0304b.s0114",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304b.s0113",
+          "SY0304b.s0114"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304b.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304b.ai4",
+        "description": "Survey more visitors by standing at the main gate during next week's open day",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304b.s0115",
+            "event": "assigned",
+            "by": "C",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0304b.s0116",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304b.s0115",
+          "SY0304b.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304b.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304b.ai5",
+        "description": "Ask the estates office whether they want the central sign near the main gate and whether there is separate budget for it",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304b.s0108",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0304b.s0118",
+            "event": "restated",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304b.s0108",
+          "SY0304b.s0118"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0304b.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0304b.ai6",
+        "description": "Send the minutes round to the team",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0304b.s0118",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0304b.s0118"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f1",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager noted that the industrial designer had missed the first meeting, and he explained he had been at a supplier visit for another project.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0304a",
+        "evidence_segments": [
+          "SY0304b.s0002",
+          "SY0304b.s0003"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager confirmed she had emailed the industrial designer the brief and minutes, following up her action from the kickoff, and he confirmed receiving them.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0304a",
+        "evidence_segments": [
+          "SY0304b.s0005",
+          "SY0304b.s0006"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recalled that the team had agreed in the kickoff that an app is a later idea and physical signs come first.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0304a",
+        "evidence_segments": [
+          "SY0304b.s0019",
+          "SY0304b.s0020",
+          "SY0304b.s0021"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f4",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager reopened the power question, noting the marketing expert had proposed solar in the first meeting but it was never agreed.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0304a",
+        "evidence_segments": [
+          "SY0304b.s0075",
+          "SY0304b.s0076",
+          "SY0304b.s0077"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f5",
+        "type": "other",
+        "fact": "The marketing expert surveyed twenty-four people: fourteen students, eight staff and two visitors. They wanted the number readable from the road, liked the colour coding, did not want adverts, and often asked for an app.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304b.s0012",
+          "SY0304b.s0013",
+          "SY0304b.s0016",
+          "SY0304b.s0017",
+          "SY0304b.s0019",
+          "SY0304b.s0022",
+          "SY0304b.s0025"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f6",
+        "type": "other",
+        "fact": "Barrier counters cost about seventy pounds per entrance but drift with tailgating. Per-bay sensors cost about thirty pounds per bay, over five thousand pounds for the hundred-and-eighty-bay library car park.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304b.s0030",
+          "SY0304b.s0031",
+          "SY0304b.s0032",
+          "SY0304b.s0034",
+          "SY0304b.s0037",
+          "SY0304b.s0039"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f7",
+        "type": "decision",
+        "fact": "The team agreed on the larger sixty-centimetre display using an LED number panel, with the car park name on top.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304b.s0057",
+          "SY0304b.s0058",
+          "SY0304b.s0059",
+          "SY0304b.s0062",
+          "SY0304b.s0063",
+          "SY0304b.s0064",
+          "SY0304b.s0065",
+          "SY0304b.s0066"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f8",
+        "type": "decision",
+        "fact": "The team agreed the colour thresholds: green above twenty free spaces, amber at twenty or fewer, red at five or fewer.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304b.s0067",
+          "SY0304b.s0068",
+          "SY0304b.s0069",
+          "SY0304b.s0070",
+          "SY0304b.s0071"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f9",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer stated that the number would flash below ten free spaces and called it settled, but nobody agreed. The industrial designer began to object and the project manager moved on to power.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304b.s0072",
+          "SY0304b.s0073",
+          "SY0304b.s0074",
+          "SY0304b.s0075"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f10",
+        "type": "decision",
+        "fact": "The team agreed the signs will be powered from the mains supply already at the barriers rather than by solar, because the underground library car parks get no sun.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304b.s0078",
+          "SY0304b.s0079",
+          "SY0304b.s0081",
+          "SY0304b.s0082",
+          "SY0304b.s0083",
+          "SY0304b.s0084",
+          "SY0304b.s0085",
+          "SY0304b.s0086"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f11",
+        "type": "decision",
+        "fact": "The team agreed to use barrier counters with a nightly reset at three a.m., and the attendant can enter a correction.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304b.s0088",
+          "SY0304b.s0089",
+          "SY0304b.s0091",
+          "SY0304b.s0092",
+          "SY0304b.s0093",
+          "SY0304b.s0094",
+          "SY0304b.s0095"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f12",
+        "type": "action_item",
+        "fact": "The project manager asked the industrial designer to get a quote for per-bay sensors for the library car park, and he agreed.",
+        "agreed": null,
+        "related_action_item": "SY0304b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304b.s0043",
+          "SY0304b.s0044"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f13",
+        "type": "action_item_removed",
+        "fact": "The per-bay sensor quote was cancelled by the project manager after the team chose barrier counters.",
+        "agreed": null,
+        "related_action_item": "SY0304b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304b.s0096",
+          "SY0304b.s0097",
+          "SY0304b.s0098"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f14",
+        "type": "other",
+        "fact": "The industrial designer estimated about four hundred pounds per sign: LED panel one hundred and fifty, casing eighty, counter seventy, controller fifty, and about fifty for mounting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304b.s0100",
+          "SY0304b.s0101",
+          "SY0304b.s0102"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f15",
+        "type": "other",
+        "fact": "Whether to include the central sign near the main gate was left undecided pending the estates office.",
+        "agreed": null,
+        "related_action_item": "SY0304b.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304b.s0103",
+          "SY0304b.s0104",
+          "SY0304b.s0105",
+          "SY0304b.s0106",
+          "SY0304b.s0107",
+          "SY0304b.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f16",
+        "type": "action_item",
+        "fact": "The industrial designer will check the mains connection at each barrier with the estates office and specify the casing.",
+        "agreed": null,
+        "related_action_item": "SY0304b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304b.s0111",
+          "SY0304b.s0112"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f17",
+        "type": "action_item",
+        "fact": "The user interface designer will produce the final sixty-centimetre LED layout with the name on top and the colour thresholds.",
+        "agreed": null,
+        "related_action_item": "SY0304b.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304b.s0113",
+          "SY0304b.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f18",
+        "type": "action_item",
+        "fact": "The marketing expert will survey more visitors at the main gate during next week's open day.",
+        "agreed": null,
+        "related_action_item": "SY0304b.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304b.s0115",
+          "SY0304b.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f19",
+        "type": "action_item",
+        "fact": "The project manager will ask the estates office about the central sign and its budget.",
+        "agreed": null,
+        "related_action_item": "SY0304b.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304b.s0108",
+          "SY0304b.s0118"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0304b.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0304b.f20",
+        "type": "action_item",
+        "fact": "The project manager will send the minutes round.",
+        "agreed": null,
+        "related_action_item": "SY0304b.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0304b.s0118"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_ACTION_REMOVED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_ACTION_REMOVED",
+        "segments": [
+          "SY0304b.s0043",
+          "SY0304b.s0044",
+          "SY0304b.s0096",
+          "SY0304b.s0097",
+          "SY0304b.s0098"
+        ],
+        "note": "The project manager assigns the industrial designer a per-bay sensor quote, then cancels it once the team chooses barrier counters."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_UNAGREED_DECISION",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_UNAGREED_DECISION",
+        "segments": [
+          "SY0304b.s0072",
+          "SY0304b.s0073",
+          "SY0304b.s0074",
+          "SY0304b.s0075"
+        ],
+        "note": "The user interface designer declares flashing below ten spaces settled. The industrial designer starts to object, nobody agrees, and the project manager moves on to power."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

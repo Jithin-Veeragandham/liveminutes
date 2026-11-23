@@ -18,6 +18,7 @@ CS6170 AI Capstone, Northeastern. This README covers the **summarization baselin
 | How it's downloaded | Automatically, the first time you run the baseline (or with `.venv/bin/python 5_data/ami/fetch_data.py`). It goes to `5_data/raw/ami/`, which is gitignored and never committed. |
 | Manifest | [`5_data/ami/MANIFEST.json`](5_data/ami/MANIFEST.json): URL, retrieval date (2026-11-07), size, the zip's SHA-256, and one `data_hash` over every extracted file we use. **Every run checks both hashes and stops if either is different.** |
 | Split | AMI's official scenario-only split, **by team**: each team of 4 people recorded 4 meetings (a to d), and a team's meetings all go to one split, so no person is in both train and test. 98 train / 20 dev / 20 eval meetings. Smoke test = 3 dev meetings. Rule: [`5_data/ami/split.py`](5_data/ami/split.py) (`THE SPLIT IS MADE HERE`). Result: [`5_data/ami/ami_scenario_split.json`](5_data/ami/ami_scenario_split.json). |
+| Synthetic data | [`5_data/synthetic/`](5_data/synthetic/README.md): 100 LLM-generated meetings (25 series of 4, AMI's format and schema) built around 13 hand-written edge cases that AMI's clean role-play meetings lack, e.g. a plan changed mid-meeting, a task given to someone absent, a proposal nobody agreed to ([`scenarios.yaml`](5_data/synthetic/scenarios/scenarios.yaml)). Each meeting is checked automatically, then human-reviewed. The raw LLM responses are committed in `cache/`, so `python -m synthetic build` rebuilds the dataset byte for byte with no API calls. Its own split: [`synthetic_splits.json`](5_data/synthetic/data/splits/synthetic_splits.json). |
 
 ## 3. Baseline and metric
 
@@ -25,6 +26,7 @@ CS6170 AI Capstone, Northeastern. This README covers the **summarization baselin
 |---|---|---|
 | **Baseline: TextRank** ([Mihalcea & Tarau 2004](https://aclanthology.org/W04-3252/); [`textrank_baseline.py`](2_summarization/textrank_baseline.py), `summa` 1.2.0) | Builds a graph of transcript lines linked by shared words, ranks them with PageRank, and keeps the top lines (in meeting order) up to 160 words. 160 = the average length of the **train** summaries. | No training (nothing can leak, no GPU). Fast. Only copies real lines, so it can't make things up. A standard published AMI baseline, so we can compare. |
 | **Deep model: BART** ([`bart_summarizer.py`](2_summarization/bart_summarizer.py), `philschmid/bart-large-cnn-samsum`, pinned revision) | Summarizes every 60 s of meeting, then summarizes those summaries. | Writes new sentences, like a person would. Trained on chat summaries (SAMSum), never on AMI. **Not logged yet.** |
+| **LLM: rolling notes** ([`llm_summarizer.py`](2_summarization/llm_summarizer.py), Claude `claude-sonnet-5-5` by default, provider-agnostic via [`llm_providers.py`](2_summarization/llm_providers.py)) | Sends the transcript ~30 s at a time (at most one call per 30 s), each time with the notes so far, and gets back updated notes as structured JSON: a summary plus action items (task, owner's name if said, due date). Run: `run.py --model llm` (AMI, scored) or `llm_summarizer.py <transcript.txt>` (a live meeting). Needs `ANTHROPIC_API_KEY` (Claude) or `GEMINI_API_KEY` (Gemini) in `.env`. | Shows what an LLM adds over TextRank and BART, and produces the action items. The rolling setup is how notes would update during a live meeting. Details: [docs/SUMMARIZATION.md 2.12](docs/SUMMARIZATION.md#212-llm-rolling-notes-summary--action-items). **Not logged yet.** |
 | **Metric: ROUGE-1 / 2 / L** (+ ROUGE-SU4) ([`metrics.py`](6_evaluation/summarization/metrics.py), Google `rouge-score` 0.1.2, stemming on) | Word overlap between our summary and AMI's human summary. F-measure, 0 to 1, averaged over meetings. | The standard metric in AMI summarization papers, so our numbers are comparable. Cheap and deterministic. |
 | **Metric: BERTScore** (`bert-score` 0.3.13, `roberta-large`, pinned revision) | Meaning overlap, using a language model's embeddings. | ROUGE gives no credit for paraphrases. BERTScore does, which is fair to BART. |
 
@@ -63,7 +65,7 @@ uv pip install --python .venv\Scripts\python.exe -r requirements.txt
 
 The only difference is where the environment keeps Python: `.venv/bin/python` on macOS/Linux, `.venv\Scripts\python` on Windows. **Every command in this README uses `.venv/bin/python`: on Windows, type `.venv\Scripts\python` instead.** There's no need to activate the environment (uv suggests it): every command calls that Python directly. On Windows, keep the repo outside a OneDrive folder; installs there are much slower.
 
-**The one command** (runs the baseline on the smoke-test subset):
+**The one command** (runs the baseline on the smoke-test subset of both datasets, AMI and synthetic):
 
 macOS / Linux:
 
@@ -78,25 +80,40 @@ $env:PYTHONHASHSEED = "42"
 .venv\Scripts\python 2_summarization\run.py --model textrank --split smoke
 ```
 
-First run: 30 to 40 s, mostly the 23 MB download. Later runs: about 3 s. It downloads AMI and checks its hashes, checks the split, then summarizes the 3 smoke meetings once per seed (20 seeds) and scores them. You should see:
+First run: 30 to 40 s, mostly the 23 MB download. Later runs: about 5 s. For each dataset it checks the data's hashes and the split, then summarizes the 3 smoke meetings recursively (the way the live bot does) once per seed (20 seeds), scores them, and breaks the scores down by group. Each dataset is logged as its own run. You should see (shortened):
 
 ```
+============================== dataset 1 of 2: ami ==============================
 downloading https://groups.inf.ed.ac.uk/ami/AMICorpusAnnotations/ami_public_manual_1.6.2.zip (23 MB) ...
 AMI data OK  (data_hash 1ce0450de10c...)
-split OK; smoke: 3 meetings
+ami: data OK, split OK; smoke: 3 meetings; mode recursive
 seeds: 20 (42..61)
-  seed 42: rouge1 0.2600  rouge2 0.0399  rougeL 0.1498  rougeSU4 0.0757
+  seed 42: rouge1 0.2460  rouge2 0.0421  rougeL 0.1427  rougeSU4 0.0702
   ... (the same line for seeds 43 to 61)
 
-mean over 20 seeds:  rouge1 0.26 (±0.0)  rouge2 0.0399 (±0.0)  rougeL 0.1498 (±0.0)  rougeSU4 0.0757 (±0.0)
-seconds_per_meeting 0.04  identical_across_seeds True
+mean over 20 seeds:  rouge1 0.246 (±0.0)  rouge2 0.0421 (±0.0)  rougeL 0.1427 (±0.0)  rougeSU4 0.0702 (±0.0)
+seconds_per_meeting 0.1  identical_across_seeds True
 seed variation: Nothing changed: all 20 seeds produced identical summaries for all 3 meetings, so every metric has std 0.
-  rouge1       std 0.0  min 0.26 (seed 42)  max 0.26 (seed 42)  range 0.0
-  ... (the same line for rouge2, rougeL, rougeSU4)
-logged <run_id>  commit <current commit>  data 1ce0450de10c  config f92e56918eb9
+  ...
+scores by group (mean over seeds; n = meetings, ser = series, i.e. different groups of people):
+  by gender_mix:
+    group       n ser     rouge1     rouge2     rougeL   rougeSU4
+    all_male    2   2     0.2091     0.0291     0.1248     0.0533
+    mixed       1   1     0.3200     0.0681     0.1785     0.1042  (1 series: indicative only)
+    gap                   0.1109     0.0390     0.0537     0.0509
+  by non_native:
+    ...
+logged <run_id>  commit <current commit>  data 1ce0450de10c  config d4429ae20744
+
+============================== dataset 2 of 2: synthetic ==============================
+synthetic: data OK, split OK; smoke: 3 meetings; mode recursive
+  ...
+mean over 20 seeds:  rouge1 0.3207 (±0.0)  rouge2 0.0731 (±0.0)  rougeL 0.1704 (±0.0)  rougeSU4 0.0996 (±0.0)
+  ... (then scores by feature tier F1/F2/F3 and by edge-case scenario)
+logged <run_id>  commit <current commit>  data f2af2f66b099  config cda0f4840ca0
 ```
 
-`seconds_per_meeting`, `<run_id>` and the commit will differ on your machine. The four scores, the data hash and the config hash must match exactly.
+`seconds_per_meeting`, `<run_id>` and the commit will differ on your machine. The scores, the data hashes and the config hashes must match exactly. One dataset only: add `--dataset ami` or `--dataset synthetic`. The older logged numbers (ROUGE-1 0.26 on smoke) are `--mode full`, which gives the whole transcript at once; `--dataset ami --mode full` reproduces them.
 
 **Run it again:** you get the same numbers (no download this time). To compare your runs with the committed ones, print every smoke line in the results log:
 
@@ -128,12 +145,12 @@ From the repo root, after the quick start. Times measured on the macOS machine a
 |---|---|---|
 | Set up the environment | `uv venv` + `uv pip install` (quick start) | about 5 s here from an empty cache: a 900 MB download, mostly torch for BART (about 3 GB on Linux x86_64), so longer on a slow connection |
 | Download + check data (first run only) | runs automatically, or `.venv/bin/python 5_data/ami/fetch_data.py` | 10 to 30 s (network) |
-| Baseline, smoke (3 meetings × 20 seeds) | `.venv/bin/python 2_summarization/run.py --model textrank --split smoke` | about 3 s |
-| **Baseline, eval (20 test meetings × 20 seeds)** | `.venv/bin/python 2_summarization/run.py --model textrank --split eval` | about 70 s |
-| Baseline, dev (20 meetings × 20 seeds) | `.venv/bin/python 2_summarization/run.py --model textrank --split dev` | about 65 s |
+| Baseline, smoke (3 meetings of each dataset × 20 seeds) | `.venv/bin/python 2_summarization/run.py --model textrank --split smoke` | about 5 s |
+| **Baseline, eval (20 test meetings of each dataset × 20 seeds)** | `.venv/bin/python 2_summarization/run.py --model textrank --split eval` | about 3 min (not re-timed on the macOS machine) |
+| Baseline, dev (20 meetings of each dataset × 20 seeds) | `.venv/bin/python 2_summarization/run.py --model textrank --split dev` | about 3 min (not re-timed on the macOS machine) |
 | Optional: BART + BERTScore | `.venv/bin/python 2_summarization/run.py --model bart --split smoke --seeds 3 --bertscore` | about 8 min the first time: a one-time download of about 4.5 GB of models, then about 30 s per meeting per seed on CPU |
 
-Useful flags: `--seeds 5` (5 seeds), `--seed 7` (exactly one seed), `--no-log`. Checks on their own: `.venv/bin/python 5_data/ami/fetch_data.py --verify` (data) and `.venv/bin/python 5_data/ami/split.py --check` (split). More in [docs/SUMMARIZATION.md](docs/SUMMARIZATION.md).
+Useful flags: `--dataset ami` / `--dataset synthetic` (one dataset; default both), `--mode full` (whole transcript at once; default recursive), `--seeds 5` (5 seeds), `--seed 7` (exactly one seed), `--no-log`. Checks on their own: `.venv/bin/python 5_data/ami/fetch_data.py --verify` (data) and `.venv/bin/python 5_data/ami/split.py --check` (split). More in [docs/SUMMARIZATION.md](docs/SUMMARIZATION.md).
 
 ## 6. Where things are recorded
 
@@ -178,7 +195,46 @@ dc ps                                      # 6 services Up; liveminutes-bridge (
 curl http://127.0.0.1:8776/health          # -> ok
 ```
 
-**Demo:** open http://localhost:8776/live, go to **Send bot**, paste a Google Meet link and press **Send bot**. Admit "LiveMinutes" from the lobby (it takes 20 to 60 s), and everyone types `yes` in the chat. The transcript then appears live. **Stop:** `dc down` (keeps the database and transcripts). **Start again later:** `dc up -d`.
+**Demo:** open http://localhost:8776/live, press **Send bot to a meeting**, paste a Google Meet link and press **Send bot**. Admit "LiveMinutes" from the lobby (it takes 20 to 60 s), and everyone types `yes` in the chat. The transcript then appears live. **Stop:** `dc down` (keeps the database and transcripts). **Start again later:** `dc up -d`.
+
+**Participants' live view.** Once everyone has said yes, the bot posts one chat message with a link and a 6-character access code.
+- **Joining:** participants open the link, type the code and pick their name. That's name selection, not a login.
+- **What they can do:** follow the live transcript, summary and action items; edit and approve them (every change goes into an append-only edit log); approve and export the minutes.
+- **Organizer:** your own view of a meeting is on http://localhost:8776/live (click the meeting). It's the only UI: the old pages are gone.
+
+**Live summary and action items (LLM).** With a free Gemini key, the summary and action items are written by the LLM during the meeting (Jithin's live notes). Add three lines to `../.env`, then run `dc up -d` (it restarts the bridge with them):
+
+```bash
+GEMINI_API_KEY=...                         # https://aistudio.google.com/apikey -> Create API key
+LIVEMINUTES_LLM_PROVIDER=gemini
+LIVEMINUTES_LLM_MODEL=gemini-3.5-flash-lite
+```
+
+- **How often:** every 30 s, the bridge sends Gemini the lines said since the last update plus the notes so far, and gets the updated notes back. The first update comes about 30 s after people start talking. Lines from the last 5 s wait for the next update, and there is one last update when the meeting ends. At most 10 calls a minute.
+- **The countdown:** under **Summary** and **Action items**, "Updated 20 s ago · next in 10 s". The thin bar fills up until the next update. While Gemini answers it says "Updating the summary…".
+- **When it's slow or fails:** "Summary update delayed" shows when an update takes over 20 s, fails (a rate limit, a network error) or is held back by the 10-a-minute cap. The page keeps the last notes and tries again at the next update, with the same lines. In the organizer view, the **Activity** tab lists every update with how long it took, its tokens, and the exact text sent.
+- **Edits are safe:** once someone edits, approves or deletes an item, later updates don't change it. Approved minutes stay as approved.
+- **Labels:** with real notes, there's no "Sample data" label. Ask stays sample data until the knowledge base is connected.
+- **No key:** the page shows sample data, labelled, as before. The organizer sees "Live summary is off" and why.
+
+**Share outside this computer** with a free Cloudflare quick tunnel (no account). Without it, links point to localhost and only open on this computer; the organizer view says so. Through the tunnel, only the participant pages answer. Quick tunnels don't pass the live stream on, so pages opened through one update by polling ("Live · polling" in the header).
+
+```bash
+brew install cloudflared      # macOS; other systems: docs/UI.md
+bash tunnel.sh                # starts `cloudflared tunnel --url http://localhost:8776` and gives its address to the bridge
+```
+
+Or put `PUBLIC_BASE_URL=https://...` in `../.env` and run `dc up -d`.
+
+**Demo mode** needs no meeting and no Groq. It plays a scripted, invented 5-minute product meeting through the real consent flow, with a late joiner, a plan change, summary updates and two action items. Start it with **Start demo meeting** on http://localhost:8776/live, or:
+
+```bash
+curl -s -X POST "http://localhost:8776/live/api/demo?wait=1"    # prints the organizer link, the participant link and the code
+```
+
+Add `&speed=5` to run 5× faster. Demo meetings are folders named `sessions/demo_*`; delete them any time.
+
+The full guide (features, keyboard shortcuts, tests, security, limits) is in [docs/UI.md](docs/UI.md). Plugging the LLM summary and the knowledge base into it: [docs/INTEGRATION.md](docs/INTEGRATION.md).
 
 Notes:
 - **Windows:** run this whole section in **Git Bash** (installed with Git for Windows), not PowerShell: the commands then work exactly as written, including `dc up -d`, the `curl` checks and `dc restart attendee-app-local`. In PowerShell, `bash` starts WSL instead of Git Bash, and `>` writes files in UTF-16, which breaks `attendee/.env`. Start Docker Desktop first.
