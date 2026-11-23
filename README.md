@@ -18,6 +18,7 @@ CS6170 AI Capstone, Northeastern. This README covers the **summarization baselin
 | How it's downloaded | Automatically, the first time you run the baseline (or with `.venv/bin/python 5_data/ami/fetch_data.py`). It goes to `5_data/raw/ami/`, which is gitignored and never committed. |
 | Manifest | [`5_data/ami/MANIFEST.json`](5_data/ami/MANIFEST.json): URL, retrieval date (2026-11-07), size, the zip's SHA-256, and one `data_hash` over every extracted file we use. **Every run checks both hashes and stops if either is different.** |
 | Split | AMI's official scenario-only split, **by team**: each team of 4 people recorded 4 meetings (a to d), and a team's meetings all go to one split, so no person is in both train and test. 98 train / 20 dev / 20 eval meetings. Smoke test = 3 dev meetings. Rule: [`5_data/ami/split.py`](5_data/ami/split.py) (`THE SPLIT IS MADE HERE`). Result: [`5_data/ami/ami_scenario_split.json`](5_data/ami/ami_scenario_split.json). |
+| Synthetic data | [`5_data/synthetic/`](5_data/synthetic/README.md): 100 LLM-generated meetings (25 series of 4, AMI's format and schema) built around 13 hand-written edge cases that AMI's clean role-play meetings lack, e.g. a plan changed mid-meeting, a task given to someone absent, a proposal nobody agreed to ([`scenarios.yaml`](5_data/synthetic/scenarios/scenarios.yaml)). Each meeting is checked automatically, then human-reviewed. The raw LLM responses are committed in `cache/`, so `python -m synthetic build` rebuilds the dataset byte for byte with no API calls. Its own split: [`synthetic_splits.json`](5_data/synthetic/data/splits/synthetic_splits.json). |
 
 ## 3. Baseline and metric
 
@@ -64,7 +65,7 @@ uv pip install --python .venv\Scripts\python.exe -r requirements.txt
 
 The only difference is where the environment keeps Python: `.venv/bin/python` on macOS/Linux, `.venv\Scripts\python` on Windows. **Every command in this README uses `.venv/bin/python`: on Windows, type `.venv\Scripts\python` instead.** There's no need to activate the environment (uv suggests it): every command calls that Python directly. On Windows, keep the repo outside a OneDrive folder; installs there are much slower.
 
-**The one command** (runs the baseline on the smoke-test subset):
+**The one command** (runs the baseline on the smoke-test subset of both datasets, AMI and synthetic):
 
 macOS / Linux:
 
@@ -79,25 +80,40 @@ $env:PYTHONHASHSEED = "42"
 .venv\Scripts\python 2_summarization\run.py --model textrank --split smoke
 ```
 
-First run: 30 to 40 s, mostly the 23 MB download. Later runs: about 3 s. It downloads AMI and checks its hashes, checks the split, then summarizes the 3 smoke meetings once per seed (20 seeds) and scores them. You should see:
+First run: 30 to 40 s, mostly the 23 MB download. Later runs: about 5 s. For each dataset it checks the data's hashes and the split, then summarizes the 3 smoke meetings recursively (the way the live bot does) once per seed (20 seeds), scores them, and breaks the scores down by group. Each dataset is logged as its own run. You should see (shortened):
 
 ```
+============================== dataset 1 of 2: ami ==============================
 downloading https://groups.inf.ed.ac.uk/ami/AMICorpusAnnotations/ami_public_manual_1.6.2.zip (23 MB) ...
 AMI data OK  (data_hash 1ce0450de10c...)
-split OK; smoke: 3 meetings
+ami: data OK, split OK; smoke: 3 meetings; mode recursive
 seeds: 20 (42..61)
-  seed 42: rouge1 0.2600  rouge2 0.0399  rougeL 0.1498  rougeSU4 0.0757
+  seed 42: rouge1 0.2460  rouge2 0.0421  rougeL 0.1427  rougeSU4 0.0702
   ... (the same line for seeds 43 to 61)
 
-mean over 20 seeds:  rouge1 0.26 (±0.0)  rouge2 0.0399 (±0.0)  rougeL 0.1498 (±0.0)  rougeSU4 0.0757 (±0.0)
-seconds_per_meeting 0.04  identical_across_seeds True
+mean over 20 seeds:  rouge1 0.246 (±0.0)  rouge2 0.0421 (±0.0)  rougeL 0.1427 (±0.0)  rougeSU4 0.0702 (±0.0)
+seconds_per_meeting 0.1  identical_across_seeds True
 seed variation: Nothing changed: all 20 seeds produced identical summaries for all 3 meetings, so every metric has std 0.
-  rouge1       std 0.0  min 0.26 (seed 42)  max 0.26 (seed 42)  range 0.0
-  ... (the same line for rouge2, rougeL, rougeSU4)
-logged <run_id>  commit <current commit>  data 1ce0450de10c  config f92e56918eb9
+  ...
+scores by group (mean over seeds; n = meetings, ser = series, i.e. different groups of people):
+  by gender_mix:
+    group       n ser     rouge1     rouge2     rougeL   rougeSU4
+    all_male    2   2     0.2091     0.0291     0.1248     0.0533
+    mixed       1   1     0.3200     0.0681     0.1785     0.1042  (1 series: indicative only)
+    gap                   0.1109     0.0390     0.0537     0.0509
+  by non_native:
+    ...
+logged <run_id>  commit <current commit>  data 1ce0450de10c  config d4429ae20744
+
+============================== dataset 2 of 2: synthetic ==============================
+synthetic: data OK, split OK; smoke: 3 meetings; mode recursive
+  ...
+mean over 20 seeds:  rouge1 0.3207 (±0.0)  rouge2 0.0731 (±0.0)  rougeL 0.1704 (±0.0)  rougeSU4 0.0996 (±0.0)
+  ... (then scores by feature tier F1/F2/F3 and by edge-case scenario)
+logged <run_id>  commit <current commit>  data f2af2f66b099  config cda0f4840ca0
 ```
 
-`seconds_per_meeting`, `<run_id>` and the commit will differ on your machine. The four scores, the data hash and the config hash must match exactly.
+`seconds_per_meeting`, `<run_id>` and the commit will differ on your machine. The scores, the data hashes and the config hashes must match exactly. One dataset only: add `--dataset ami` or `--dataset synthetic`. The older logged numbers (ROUGE-1 0.26 on smoke) are `--mode full`, which gives the whole transcript at once; `--dataset ami --mode full` reproduces them.
 
 **Run it again:** you get the same numbers (no download this time). To compare your runs with the committed ones, print every smoke line in the results log:
 
@@ -129,12 +145,12 @@ From the repo root, after the quick start. Times measured on the macOS machine a
 |---|---|---|
 | Set up the environment | `uv venv` + `uv pip install` (quick start) | about 5 s here from an empty cache: a 900 MB download, mostly torch for BART (about 3 GB on Linux x86_64), so longer on a slow connection |
 | Download + check data (first run only) | runs automatically, or `.venv/bin/python 5_data/ami/fetch_data.py` | 10 to 30 s (network) |
-| Baseline, smoke (3 meetings × 20 seeds) | `.venv/bin/python 2_summarization/run.py --model textrank --split smoke` | about 3 s |
-| **Baseline, eval (20 test meetings × 20 seeds)** | `.venv/bin/python 2_summarization/run.py --model textrank --split eval` | about 70 s |
-| Baseline, dev (20 meetings × 20 seeds) | `.venv/bin/python 2_summarization/run.py --model textrank --split dev` | about 65 s |
+| Baseline, smoke (3 meetings of each dataset × 20 seeds) | `.venv/bin/python 2_summarization/run.py --model textrank --split smoke` | about 5 s |
+| **Baseline, eval (20 test meetings of each dataset × 20 seeds)** | `.venv/bin/python 2_summarization/run.py --model textrank --split eval` | about 3 min (not re-timed on the macOS machine) |
+| Baseline, dev (20 meetings of each dataset × 20 seeds) | `.venv/bin/python 2_summarization/run.py --model textrank --split dev` | about 3 min (not re-timed on the macOS machine) |
 | Optional: BART + BERTScore | `.venv/bin/python 2_summarization/run.py --model bart --split smoke --seeds 3 --bertscore` | about 8 min the first time: a one-time download of about 4.5 GB of models, then about 30 s per meeting per seed on CPU |
 
-Useful flags: `--seeds 5` (5 seeds), `--seed 7` (exactly one seed), `--no-log`. Checks on their own: `.venv/bin/python 5_data/ami/fetch_data.py --verify` (data) and `.venv/bin/python 5_data/ami/split.py --check` (split). More in [docs/SUMMARIZATION.md](docs/SUMMARIZATION.md).
+Useful flags: `--dataset ami` / `--dataset synthetic` (one dataset; default both), `--mode full` (whole transcript at once; default recursive), `--seeds 5` (5 seeds), `--seed 7` (exactly one seed), `--no-log`. Checks on their own: `.venv/bin/python 5_data/ami/fetch_data.py --verify` (data) and `.venv/bin/python 5_data/ami/split.py --check` (split). More in [docs/SUMMARIZATION.md](docs/SUMMARIZATION.md).
 
 ## 6. Where things are recorded
 

@@ -1,0 +1,1374 @@
+{
+  "meeting_id": "SY0209d",
+  "raw_sha256": "935aa996de28d4355bc377f3437fe0a3a9a2fe65e1e6f9525d6fa58b59d42b0c",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting, noted that the industrial designer was absent because he was at the supplier's factory, and confirmed that she had sent round the previous minutes.",
+        "She reported the industrial designer's emailed figures: a name tag window would cost 0.95 Euros as a clear plastic insert or 0.70 Euros as a moulded foam pocket with clear film, and the revised supplier quote with the wedge back and second colour is 9.40 Euros, giving a total cost of 10.10 Euros, within the 12.50 Euro limit.",
+        "The team chose the foam pocket because the insert could crack, and the user interface designer presented updated sketches showing the shallow wedge back and a landscape, business-card-sized name tag pocket centred on the back below the handle.",
+        "The marketing expert presented six survey-based evaluation criteria scored from one (very good) to seven (bad), and the design scored mostly ones and twos, with a three for the lime green showing dirt.",
+        "The toy safety check was first given to the user interface designer and later reassigned to the absent industrial designer, who will also be asked to get physical samples in both colours."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer (absent) will check with the supplier whether the case counts as a toy under children's product safety rules. This was first assigned to the user interface designer and then reassigned to him.",
+        "The industrial designer (absent) will get physical samples from the supplier, two in blue and two in lime green, for testing.",
+        "The project manager will email the industrial designer about his tasks.",
+        "The user interface designer will produce final drawings with the pocket dimensions for the supplier.",
+        "The marketing expert will write up the evaluation scores as a section for the final report.",
+        "The project manager will put together the final report and the minutes."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The name tag window will be a moulded foam pocket with clear film (0.70 Euros) rather than a clear plastic insert.",
+        "The name tag pocket will be centred on the back of the case below the handle, in landscape orientation, sized for a business-card-sized card.",
+        "The selling price stays at 25 Euros.",
+        "The total production cost is 10.10 Euros per case (9.40 Euros revised quote plus 0.70 Euros pocket), within the 12.50 Euro limit."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "It is still unknown whether the case counts as a toy under children's product safety rules; the check now sits with the absent industrial designer.",
+        "The lime green colour may show dirt and marks; this will be checked on the samples.",
+        "Dirt may get in at the edge of the clear film on the name tag pocket.",
+        "No physical sample has been tested yet, so the drop protection rating is not confirmed.",
+        "The 25 Euro price is at the upper end of the competitor range and relies on the name tag and stand-up back to justify it.",
+        "The industrial designer has not yet been told about his new tasks."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0209d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0209d.ai1",
+        "description": "Check whether the case counts as a toy under children's product safety rules, using the supplier's test certificates",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "reassigned",
+        "previous_owners": [
+          "C"
+        ],
+        "history": [
+          {
+            "segment": "SY0209d.s0035",
+            "event": "proposed",
+            "by": "A",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0209d.s0037",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0209d.s0038",
+            "event": "assigned",
+            "by": "A",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0209d.s0108",
+            "event": "reassigned",
+            "by": "A",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0209d.s0121",
+            "event": "restated",
+            "by": "A",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0209d.s0032",
+          "SY0209d.s0033",
+          "SY0209d.s0035",
+          "SY0209d.s0037",
+          "SY0209d.s0038",
+          "SY0209d.s0104",
+          "SY0209d.s0105",
+          "SY0209d.s0106",
+          "SY0209d.s0107",
+          "SY0209d.s0108",
+          "SY0209d.s0121"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0209d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0209d.ai2",
+        "description": "Get physical samples from the supplier, two in blue and two in lime green, for testing",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0209d.s0112",
+            "event": "assigned",
+            "by": "A",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0209d.s0115",
+            "event": "restated",
+            "by": "A",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0209d.s0121",
+            "event": "restated",
+            "by": "A",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0209d.s0112",
+          "SY0209d.s0113",
+          "SY0209d.s0114",
+          "SY0209d.s0115",
+          "SY0209d.s0121"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0209d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0209d.ai3",
+        "description": "Email the industrial designer about his assigned tasks (toy safety check and samples)",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0209d.s0109",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0209d.s0115",
+            "event": "restated",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0209d.s0121",
+            "event": "restated",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0209d.s0109",
+          "SY0209d.s0115",
+          "SY0209d.s0121"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0209d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0209d.ai4",
+        "description": "Produce final drawings with the name tag pocket dimensions for the supplier",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0209d.s0122",
+            "event": "proposed",
+            "by": "A",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0209d.s0123",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0209d.s0122",
+          "SY0209d.s0123"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0209d.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0209d.ai5",
+        "description": "Write up the evaluation scores as a section for the final report",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0209d.s0124",
+            "event": "proposed",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0209d.s0125",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0209d.s0124",
+          "SY0209d.s0125"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0209d.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0209d.ai6",
+        "description": "Put together the final report and the meeting minutes",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0209d.s0126",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0209d.s0126"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f1",
+        "type": "absence",
+        "fact": "The industrial designer, Ben, was absent from the detailed design meeting because he was at the supplier's factory for the sample run.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209d.s0005",
+          "SY0209d.s0006",
+          "SY0209d.s0007"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f2",
+        "type": "other",
+        "fact": "The project manager confirmed she had sent round the minutes from the conceptual design meeting, and both present members had received them.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0209c",
+        "evidence_segments": [
+          "SY0209d.s0009",
+          "SY0209d.s0010",
+          "SY0209d.s0011"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f3",
+        "type": "other",
+        "fact": "The industrial designer emailed that a clear plastic name tag insert would cost 0.95 Euros per case and a moulded foam pocket with clear film 0.70 Euros.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209d.s0013",
+          "SY0209d.s0014",
+          "SY0209d.s0015"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f4",
+        "type": "decision",
+        "fact": "The team chose the moulded foam pocket with clear film for the name tag window, because it is cheaper and the clear insert could crack.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209d.s0017",
+          "SY0209d.s0019",
+          "SY0209d.s0020",
+          "SY0209d.s0021",
+          "SY0209d.s0022",
+          "SY0209d.s0023",
+          "SY0209d.s0024",
+          "SY0209d.s0117"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f5",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer recalled that in the previous meeting she had worried a separate plastic window part could crack.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0209c",
+        "evidence_segments": [
+          "SY0209d.s0018"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f6",
+        "type": "other",
+        "fact": "The revised supplier quote including the wedge back and the second colour is 9.40 Euros, ten cents more than the 9.30 Euro estimate, because the supplier added ten cents for the wedge mould.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0209c",
+        "evidence_segments": [
+          "SY0209d.s0025",
+          "SY0209d.s0026",
+          "SY0209d.s0027"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f7",
+        "type": "decision",
+        "fact": "The total production cost is 10.10 Euros per case, leaving 2.40 Euros of margin under the 12.50 Euro limit.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209d.s0028",
+          "SY0209d.s0029",
+          "SY0209d.s0030",
+          "SY0209d.s0031",
+          "SY0209d.s0120"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f8",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager noted that nobody had taken the toy safety check at the last meeting.",
+        "agreed": null,
+        "related_action_item": "SY0209d.ai1",
+        "refers_to_meeting": "SY0209c",
+        "evidence_segments": [
+          "SY0209d.s0032",
+          "SY0209d.s0033"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f9",
+        "type": "action_item",
+        "fact": "The industrial designer was given the task of checking whether the case counts as a toy under children's product safety rules.",
+        "agreed": null,
+        "related_action_item": "SY0209d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209d.s0106",
+          "SY0209d.s0108",
+          "SY0209d.s0121"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f10",
+        "type": "plan_change",
+        "fact": "The toy safety check was first assigned to the user interface designer, then reassigned to the absent industrial designer because the supplier likely has test certificates and he is in contact with them.",
+        "agreed": null,
+        "related_action_item": "SY0209d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209d.s0035",
+          "SY0209d.s0037",
+          "SY0209d.s0038",
+          "SY0209d.s0104",
+          "SY0209d.s0105",
+          "SY0209d.s0106",
+          "SY0209d.s0107",
+          "SY0209d.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f11",
+        "type": "decision",
+        "fact": "The name tag pocket will be centred on the back below the handle, in landscape orientation, sized for a business-card-sized card, and clear of the camera cut-out.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209d.s0046",
+          "SY0209d.s0048",
+          "SY0209d.s0049",
+          "SY0209d.s0051",
+          "SY0209d.s0060",
+          "SY0209d.s0061",
+          "SY0209d.s0062",
+          "SY0209d.s0063"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f12",
+        "type": "other",
+        "fact": "The shallow wedge back tilts the tablet back about twenty degrees when standing, and it does not block the charging port on the bottom edge.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209d.s0041",
+          "SY0209d.s0042",
+          "SY0209d.s0044",
+          "SY0209d.s0057",
+          "SY0209d.s0058"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f13",
+        "type": "other",
+        "fact": "The marketing expert turned the 31 survey responses into six evaluation criteria scored from one (very good) to seven (bad): drop protection, easy cleaning, handle, telling cases apart, colours not showing dirt, and price.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209d.s0065",
+          "SY0209d.s0066",
+          "SY0209d.s0067",
+          "SY0209d.s0068",
+          "SY0209d.s0069"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f14",
+        "type": "other",
+        "fact": "The design scored 1.5 for drop protection, 2 for cleaning, 1 for the handle, 1 for telling cases apart, 3 for colours not showing dirt, and 2 for price.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209d.s0071",
+          "SY0209d.s0072",
+          "SY0209d.s0073",
+          "SY0209d.s0074",
+          "SY0209d.s0078",
+          "SY0209d.s0079",
+          "SY0209d.s0081",
+          "SY0209d.s0083",
+          "SY0209d.s0085",
+          "SY0209d.s0086",
+          "SY0209d.s0089",
+          "SY0209d.s0090",
+          "SY0209d.s0092",
+          "SY0209d.s0093",
+          "SY0209d.s0095"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f15",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert referred to his fold-out stand being dropped in the functional design meeting and agreed that the fixed handle is safest.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0209b",
+        "evidence_segments": [
+          "SY0209d.s0081",
+          "SY0209d.s0082"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f16",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested clipping a shoulder strap onto the handle; it was not adopted because of strangling risk and extra cost.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209d.s0097",
+          "SY0209d.s0098",
+          "SY0209d.s0099",
+          "SY0209d.s0100",
+          "SY0209d.s0101",
+          "SY0209d.s0102"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f17",
+        "type": "decision",
+        "fact": "The selling price stays at 25 Euros.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209d.s0091",
+          "SY0209d.s0092",
+          "SY0209d.s0118",
+          "SY0209d.s0119"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f18",
+        "type": "action_item",
+        "fact": "The absent industrial designer was asked to get physical samples from the supplier, two in blue and two in lime green.",
+        "agreed": null,
+        "related_action_item": "SY0209d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209d.s0112",
+          "SY0209d.s0114",
+          "SY0209d.s0115",
+          "SY0209d.s0121"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f19",
+        "type": "action_item",
+        "fact": "The project manager will email the industrial designer about his tasks.",
+        "agreed": null,
+        "related_action_item": "SY0209d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209d.s0109",
+          "SY0209d.s0115",
+          "SY0209d.s0121"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f20",
+        "type": "action_item",
+        "fact": "The user interface designer will produce final drawings with the pocket dimensions for the supplier.",
+        "agreed": null,
+        "related_action_item": "SY0209d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209d.s0122",
+          "SY0209d.s0123"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f21",
+        "type": "action_item",
+        "fact": "The marketing expert will write up the evaluation scores for the final report.",
+        "agreed": null,
+        "related_action_item": "SY0209d.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209d.s0124",
+          "SY0209d.s0125"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0209d.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0209d.f22",
+        "type": "action_item",
+        "fact": "The project manager will put together the final report and the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0209d.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0209d.s0126"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_REASSIGNED_OR_DROPPED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_REASSIGNED_OR_DROPPED",
+        "segments": [
+          "SY0209d.s0035",
+          "SY0209d.s0036",
+          "SY0209d.s0037",
+          "SY0209d.s0038",
+          "SY0209d.s0104",
+          "SY0209d.s0105",
+          "SY0209d.s0106",
+          "SY0209d.s0107",
+          "SY0209d.s0108"
+        ],
+        "note": "The toy safety check is given to the user interface designer early on, then reassigned to the industrial designer later in the meeting."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_TASK_TO_ABSENT",
+        "segments": [
+          "SY0209d.s0106",
+          "SY0209d.s0108",
+          "SY0209d.s0109",
+          "SY0209d.s0112",
+          "SY0209d.s0114",
+          "SY0209d.s0115",
+          "SY0209d.s0121"
+        ],
+        "note": "The absent industrial designer is given the toy safety check and the task of getting colour samples, to be passed on by email."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

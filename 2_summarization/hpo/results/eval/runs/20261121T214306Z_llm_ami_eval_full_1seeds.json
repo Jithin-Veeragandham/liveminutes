@@ -1,0 +1,707 @@
+{
+  "run_id": "20261121T214306Z_llm_ami_eval_full_1seeds",
+  "commit": "ab5eaff434c35f2379f65c7cf07d19dcc768dfcc",
+  "uncommitted_changes": [],
+  "dataset": "ami",
+  "mode": "full",
+  "data_hash": "1ce0450de10c44aa3d794865f7b53f50eab8a94b0027899c51d5dd2e6797c048",
+  "split_file_sha256": "09e6d3ee32281507391f23bb3bda6d6d98bacac9979e68cbd173702d4e1068c0",
+  "config": {
+    "model": {
+      "provider": "gemini",
+      "model": "gemini-3.5-flash-lite",
+      "chunk_seconds": 1000000000,
+      "context_lines": 6,
+      "min_seconds_between_calls": 30,
+      "summary_words": 160,
+      "effort": "medium",
+      "max_tokens": 16000,
+      "fallbacks": "default",
+      "mode": "full"
+    },
+    "mode": "full",
+    "seeds": [
+      46
+    ],
+    "pythonhashseed": 46,
+    "bertscore": {
+      "model": "FacebookAI/roberta-large",
+      "revision": "722cf37b1afa9454edce342e7895e588b6ff1d59",
+      "rescale_with_baseline": false
+    }
+  },
+  "config_hash": "8dc26772614a",
+  "model": "llm",
+  "model_version": "gemini:gemini-3.5-flash-lite",
+  "split": "eval",
+  "meetings": [
+    "ES2004a",
+    "ES2004b",
+    "ES2004c",
+    "ES2004d",
+    "ES2014a",
+    "ES2014b",
+    "ES2014c",
+    "ES2014d",
+    "IS1009a",
+    "IS1009b",
+    "IS1009c",
+    "IS1009d",
+    "TS3003a",
+    "TS3003b",
+    "TS3003c",
+    "TS3003d",
+    "TS3007a",
+    "TS3007b",
+    "TS3007c",
+    "TS3007d"
+  ],
+  "meeting_groups": {
+    "ES2004a": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2004b": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2004c": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2004d": {
+      "gender_mix": "mixed",
+      "non_native": "some_non_native",
+      "speakers": 4,
+      "female_speakers": 2,
+      "non_native_speakers": 1
+    },
+    "ES2014a": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "ES2014b": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "ES2014c": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "ES2014d": {
+      "gender_mix": "mixed",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 1,
+      "non_native_speakers": 0
+    },
+    "IS1009a": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "IS1009b": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "IS1009c": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "IS1009d": {
+      "gender_mix": "all_female",
+      "non_native": "mostly_non_native",
+      "speakers": 4,
+      "female_speakers": 4,
+      "non_native_speakers": 3
+    },
+    "TS3003a": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3003b": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3003c": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3003d": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007a": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007b": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007c": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    },
+    "TS3007d": {
+      "gender_mix": "all_male",
+      "non_native": "all_native",
+      "speakers": 4,
+      "female_speakers": 0,
+      "non_native_speakers": 0
+    }
+  },
+  "metrics_by_group": {
+    "gender_mix": {
+      "groups": {
+        "all_female": {
+          "n": 4,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "IS1009a",
+            "IS1009b",
+            "IS1009c",
+            "IS1009d"
+          ],
+          "mean": {
+            "rouge1": 0.3873,
+            "rouge2": 0.0951,
+            "rougeL": 0.2137,
+            "rougeSU4": 0.1323,
+            "bertscore_f1": 0.8661
+          }
+        },
+        "all_male": {
+          "n": 8,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "TS3003a",
+            "TS3003b",
+            "TS3003c",
+            "TS3003d",
+            "TS3007a",
+            "TS3007b",
+            "TS3007c",
+            "TS3007d"
+          ],
+          "mean": {
+            "rouge1": 0.3738,
+            "rouge2": 0.089,
+            "rougeL": 0.2176,
+            "rougeSU4": 0.1127,
+            "bertscore_f1": 0.8666
+          }
+        },
+        "mixed": {
+          "n": 8,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "ES2004a",
+            "ES2004b",
+            "ES2004c",
+            "ES2004d",
+            "ES2014a",
+            "ES2014b",
+            "ES2014c",
+            "ES2014d"
+          ],
+          "mean": {
+            "rouge1": 0.3585,
+            "rouge2": 0.076,
+            "rougeL": 0.1915,
+            "rougeSU4": 0.1084,
+            "bertscore_f1": 0.8652
+          }
+        }
+      },
+      "gap": {
+        "rouge1": 0.0288,
+        "rouge2": 0.0191,
+        "rougeL": 0.0261,
+        "rougeSU4": 0.0239,
+        "bertscore_f1": 0.0014
+      },
+      "worst": {
+        "rouge1": "mixed",
+        "rouge2": "mixed",
+        "rougeL": "mixed",
+        "rougeSU4": "mixed",
+        "bertscore_f1": "mixed"
+      }
+    },
+    "non_native": {
+      "groups": {
+        "all_native": {
+          "n": 12,
+          "n_series": 3,
+          "small": false,
+          "meetings": [
+            "ES2014a",
+            "ES2014b",
+            "ES2014c",
+            "ES2014d",
+            "TS3003a",
+            "TS3003b",
+            "TS3003c",
+            "TS3003d",
+            "TS3007a",
+            "TS3007b",
+            "TS3007c",
+            "TS3007d"
+          ],
+          "mean": {
+            "rouge1": 0.376,
+            "rouge2": 0.0878,
+            "rougeL": 0.2122,
+            "rougeSU4": 0.1133,
+            "bertscore_f1": 0.8663
+          }
+        },
+        "mostly_non_native": {
+          "n": 4,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "IS1009a",
+            "IS1009b",
+            "IS1009c",
+            "IS1009d"
+          ],
+          "mean": {
+            "rouge1": 0.3873,
+            "rouge2": 0.0951,
+            "rougeL": 0.2137,
+            "rougeSU4": 0.1323,
+            "bertscore_f1": 0.8661
+          }
+        },
+        "some_non_native": {
+          "n": 4,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "ES2004a",
+            "ES2004b",
+            "ES2004c",
+            "ES2004d"
+          ],
+          "mean": {
+            "rouge1": 0.3365,
+            "rouge2": 0.0667,
+            "rougeL": 0.1818,
+            "rougeSU4": 0.1021,
+            "bertscore_f1": 0.8646
+          }
+        }
+      },
+      "gap": {
+        "rouge1": 0.0508,
+        "rouge2": 0.0284,
+        "rougeL": 0.0319,
+        "rougeSU4": 0.0302,
+        "bertscore_f1": 0.0017
+      },
+      "worst": {
+        "rouge1": "some_non_native",
+        "rouge2": "some_non_native",
+        "rougeL": "some_non_native",
+        "rougeSU4": "some_non_native",
+        "bertscore_f1": "some_non_native"
+      }
+    }
+  },
+  "meetings_hash": "cc86e00bd353",
+  "n_seeds": 1,
+  "metrics_mean": {
+    "rouge1": 0.3704,
+    "rouge2": 0.085,
+    "rougeL": 0.2064,
+    "rougeSU4": 0.1149,
+    "bertscore_f1": 0.866
+  },
+  "metrics_std": {
+    "rouge1": 0.0,
+    "rouge2": 0.0,
+    "rougeL": 0.0,
+    "rougeSU4": 0.0,
+    "bertscore_f1": 0.0
+  },
+  "metrics_per_seed": {
+    "46": {
+      "rouge1": 0.3704,
+      "rouge2": 0.085,
+      "rougeL": 0.2064,
+      "rougeSU4": 0.1149,
+      "bertscore_f1": 0.866
+    }
+  },
+  "identical_across_seeds": true,
+  "seed_variation": {
+    "verdict": "Only one seed was run, so there is no seed variation to measure.",
+    "why": "A hosted LLM cannot be seeded: our seeds only reach local random generators, and the provider's sampling (temperature etc.) is fixed for this model. So every run can give different text, and the spread across seeds measures the model's own run-to-run variation. Each seed repeats every API call. Each seed sets Python random, NumPy and torch. PYTHONHASHSEED is fixed to the FIRST seed for the whole run.",
+    "seeds": [
+      46
+    ],
+    "metrics": {
+      "rouge1": {
+        "mean": 0.3704,
+        "std": 0.0,
+        "min": 0.3704,
+        "min_seed": 46,
+        "max": 0.3704,
+        "max_seed": 46,
+        "range": 0.0
+      },
+      "rouge2": {
+        "mean": 0.085,
+        "std": 0.0,
+        "min": 0.085,
+        "min_seed": 46,
+        "max": 0.085,
+        "max_seed": 46,
+        "range": 0.0
+      },
+      "rougeL": {
+        "mean": 0.2064,
+        "std": 0.0,
+        "min": 0.2064,
+        "min_seed": 46,
+        "max": 0.2064,
+        "max_seed": 46,
+        "range": 0.0
+      },
+      "rougeSU4": {
+        "mean": 0.1149,
+        "std": 0.0,
+        "min": 0.1149,
+        "min_seed": 46,
+        "max": 0.1149,
+        "max_seed": 46,
+        "range": 0.0
+      },
+      "bertscore_f1": {
+        "mean": 0.866,
+        "std": 0.0,
+        "min": 0.866,
+        "min_seed": 46,
+        "max": 0.866,
+        "max_seed": 46,
+        "range": 0.0
+      }
+    },
+    "meetings_changed": 0,
+    "meetings_total": 20,
+    "per_meeting": {}
+  },
+  "seconds_per_meeting": 28.588,
+  "python": "3.12.14",
+  "packages": {
+    "summa": "1.2.0",
+    "rouge-score": "0.1.2",
+    "numpy": "2.5.4",
+    "torch": "2.14.1",
+    "transformers": "5.20.2",
+    "bert-score": "0.3.13",
+    "anthropic": "1.17.0"
+  },
+  "hardware": {
+    "machine": "arm64",
+    "system": "macOS-27.0-arm64-arm-64bit",
+    "cpus": 10
+  },
+  "llm_usage": {
+    "calls": 20,
+    "input_tokens": 286027,
+    "output_tokens": 2983,
+    "served_by": [
+      "gemini-3.5-flash-lite"
+    ],
+    "cache_hits": 0
+  },
+  "per_seed_runs": {
+    "46": {
+      "scores": {
+        "rouge1": 0.3704,
+        "rouge2": 0.085,
+        "rougeL": 0.2064,
+        "rougeSU4": 0.1149,
+        "bertscore_f1": 0.866
+      },
+      "per_meeting": {
+        "ES2004a": {
+          "rouge1": 0.4297520661157025,
+          "rouge2": 0.08333333333333333,
+          "rougeL": 0.20661157024793392,
+          "rougeSU4": 0.12517580872011252,
+          "bertscore_f1": 0.8812902569770813
+        },
+        "ES2004b": {
+          "rouge1": 0.25095057034220536,
+          "rouge2": 0.05363984674329502,
+          "rougeL": 0.1596958174904943,
+          "rougeSU4": 0.08139534883720931,
+          "bertscore_f1": 0.859997034072876
+        },
+        "ES2004c": {
+          "rouge1": 0.33676975945017185,
+          "rouge2": 0.04152249134948097,
+          "rougeL": 0.18556701030927833,
+          "rougeSU4": 0.10139860139860139,
+          "bertscore_f1": 0.8561468720436096
+        },
+        "ES2004d": {
+          "rouge1": 0.3284671532846715,
+          "rouge2": 0.08823529411764706,
+          "rougeL": 0.1751824817518248,
+          "rougeSU4": 0.1003717472118959,
+          "bertscore_f1": 0.8611065745353699
+        },
+        "ES2014a": {
+          "rouge1": 0.3627906976744186,
+          "rouge2": 0.06572769953051642,
+          "rougeL": 0.20465116279069767,
+          "rougeSU4": 0.09682539682539683,
+          "bertscore_f1": 0.8721005916595459
+        },
+        "ES2014b": {
+          "rouge1": 0.3525423728813559,
+          "rouge2": 0.054607508532423216,
+          "rougeL": 0.18305084745762712,
+          "rougeSU4": 0.10919540229885058,
+          "bertscore_f1": 0.86383056640625
+        },
+        "ES2014c": {
+          "rouge1": 0.4193548387096774,
+          "rouge2": 0.14285714285714285,
+          "rougeL": 0.2129032258064516,
+          "rougeSU4": 0.12349726775956284,
+          "bertscore_f1": 0.86069256067276
+        },
+        "ES2014d": {
+          "rouge1": 0.3873239436619718,
+          "rouge2": 0.07801418439716312,
+          "rougeL": 0.20422535211267606,
+          "rougeSU4": 0.12903225806451613,
+          "bertscore_f1": 0.8668257594108582
+        },
+        "IS1009a": {
+          "rouge1": 0.38283828382838286,
+          "rouge2": 0.11295681063122923,
+          "rougeL": 0.2442244224422442,
+          "rougeSU4": 0.13758389261744966,
+          "bertscore_f1": 0.8645682334899902
+        },
+        "IS1009b": {
+          "rouge1": 0.38436482084690554,
+          "rouge2": 0.05901639344262295,
+          "rougeL": 0.18892508143322478,
+          "rougeSU4": 0.11368653421633554,
+          "bertscore_f1": 0.8608445525169373
+        },
+        "IS1009c": {
+          "rouge1": 0.36912751677852346,
+          "rouge2": 0.1081081081081081,
+          "rougeL": 0.20805369127516776,
+          "rougeSU4": 0.1149032992036405,
+          "bertscore_f1": 0.8707982301712036
+        },
+        "IS1009d": {
+          "rouge1": 0.4128113879003559,
+          "rouge2": 0.1003584229390681,
+          "rougeL": 0.21352313167259784,
+          "rougeSU4": 0.16304347826086957,
+          "bertscore_f1": 0.8681331872940063
+        },
+        "TS3003a": {
+          "rouge1": 0.334841628959276,
+          "rouge2": 0.0730593607305936,
+          "rougeL": 0.1900452488687783,
+          "rougeSU4": 0.08641975308641976,
+          "bertscore_f1": 0.8602352738380432
+        },
+        "TS3003b": {
+          "rouge1": 0.48192771084337344,
+          "rouge2": 0.11336032388663966,
+          "rougeL": 0.21686746987951808,
+          "rougeSU4": 0.12704918032786885,
+          "bertscore_f1": 0.8793638348579407
+        },
+        "TS3003c": {
+          "rouge1": 0.2830188679245283,
+          "rouge2": 0.047619047619047616,
+          "rougeL": 0.16037735849056603,
+          "rougeSU4": 0.07085346215780998,
+          "bertscore_f1": 0.8568415641784668
+        },
+        "TS3003d": {
+          "rouge1": 0.3478260869565218,
+          "rouge2": 0.06734006734006734,
+          "rougeL": 0.21404682274247494,
+          "rougeSU4": 0.10657596371882086,
+          "bertscore_f1": 0.8552206158638
+        },
+        "TS3007a": {
+          "rouge1": 0.27234042553191495,
+          "rouge2": 0.06866952789699571,
+          "rougeL": 0.17872340425531916,
+          "rougeSU4": 0.08840579710144927,
+          "bertscore_f1": 0.8631364703178406
+        },
+        "TS3007b": {
+          "rouge1": 0.3470031545741325,
+          "rouge2": 0.05714285714285714,
+          "rougeL": 0.2082018927444795,
+          "rougeSU4": 0.10042735042735042,
+          "bertscore_f1": 0.858302891254425
+        },
+        "TS3007c": {
+          "rouge1": 0.46875,
+          "rouge2": 0.15094339622641506,
+          "rougeL": 0.3,
+          "rougeSU4": 0.15767195767195769,
+          "bertscore_f1": 0.8828831911087036
+        },
+        "TS3007d": {
+          "rouge1": 0.45454545454545453,
+          "rouge2": 0.13414634146341464,
+          "rougeL": 0.2727272727272727,
+          "rougeSU4": 0.1641025641025641,
+          "bertscore_f1": 0.8767373561859131
+        }
+      },
+      "predictions": {
+        "ES2004a": "The team introduced themselves and established the project goal: designing an original, trendy, user-friendly, and universally accessible remote control. They shared personal animal drawings and discussed financial constraints, noting a selling price of twenty-five Euros, production costs of twelve Euros fifty, and a profit target of fifty million Euros for the first year. The team explored design features such as basic buttons combined with an LCD menu display, simplified symbols, a possible large-print option for older users, and lightweight plastic materials aligned with the company motto of putting fashion into electronics. Finally, the project manager instructed everyone to break off for individual work before reconvening in half an hour.",
+        "ES2004b": "The team reviewed design concepts for a new TV and video remote control, prioritizing simplicity, a fashionable and distinctive exterior like a shell or curved shape, and reduced button count. They discussed incorporating rechargeable batteries with a docking station, a TV-based locating beep to prevent loss, and VideoPlus for programming. The group also addressed ergonomic concerns, explored touch-sensitive panels, and emphasized making the instruction manual user-friendly.",
+        "ES2004c": "The team reviewed market trends and fashion updates, noting a preference for fancy, technologically innovative designs, vibrant fruit and vegetable colors, and spongy materials. They discussed component design, choosing a flip-top shape with a plastic inner body, a rubberized removable outer sleeve for custom colors and grip, kinetic charging, and standard internal circuitry. For the interface, they decided on an LCD touch display on the top half and anti-RSI rubber buttons for frequently used controls on the lower half. They also agreed to explore incorporating voice recognition for a lost-remote locator feature, pending a cost check.",
+        "ES2004d": "The team reviewed the prototype of the remote control, discussing its plastic and rubber materials, customizable fruit and vegetable colors, kinetic charging, and layout featuring an inset touch screen and standard buttons. They evaluated the design against market research criteria using a rating scale, finding strong alignment on fashion trends and ease of location, and lower scores for minimizing repetitive strain injury. The group then examined the financial spreadsheet, adjusting components like the rubber casing and speaker to bring the production cost just under budget, while suggesting voice recognition could be an upgrade for business class. Finally, they reflected positively on their teamwork and the innovative nature of the project before preparing to complete the final questionnaires.",
+        "ES2014a": "The team held their first meeting to get acquainted, test the whiteboard, and outline the goal of designing a new, more user-friendly television remote control. They discussed financial targets including a 25 Euro selling price and a 12.50 Euro production cost limit. The team also addressed design challenges such as button size, simplicity versus multi-functionality, and market research findings about confusion over too many buttons. Finally, the project manager assigned upcoming design tasks and agreed to circulate the meeting minutes before the next session in thirty minutes.",
+        "ES2014b": "The team discussed design requirements for a new, simplified television remote control that can be brought to market quickly. They reviewed research on user preferences, including the desire for a sleek, high-tech look and a low number of buttons. The group decided to include a clap-activated locating feature to address the common problem of lost remotes. They agreed on a layout with sixteen essential buttons on the front, including number keys, channel up and down, volume, mute, and power, while placing secondary features like brightness, contrast, and tuning controls on a hidden rear panel.",
+        "ES2014c": "The team held a conceptual design meeting to finalize the features and components of their new remote control device. They discussed power supply options, agreeing to use a kinetic mechanism to avoid battery replacements. For the internal workings, they chose a simple circuit board and standard push buttons while rejecting a scroll wheel and voice recognition for main functions, though they noted a call-and-find speech feature could be added separately. To incorporate current fruit and vegetable fashion trends without overcomplicating production or confusing users, they decided on a rubber case with a single curve and an apple-shaped red standby button, while keeping the rest of the button shapes and labeling simple.",
+        "ES2014d": "The team presented their television remote control prototype, featuring a curved design, a slide-away panel, custom buttons including a cherry shape, and a company logo badge. They evaluated the prototype against marketing and financial criteria, discussing button supplements and materials. To meet the budget target of twelve and a half Euros, they decided to use a plastic case instead of rubber while keeping the kinetic power and voice recognition features. Finally, the team evaluated the project process, discussing creativity, leadership, teamwork, and the tools used during the course.",
+        "IS1009a": "The team introduced themselves and reviewed the project goals for designing a new television remote control that is original, trendy, and user-friendly, while targeting a selling price of twenty-five Euros, production costs under twelve-fifty Euros, and a profit aim of fifty million Euros. They discussed design ideas, proposing a compact and multi-functional device that can control household machines like air conditioners and audio players, feature a friendly shape, and include a light sensor to trigger a light or beep signal when lost in dark spots. Finally, the project manager assigned individual tasks for the next meeting in thirty minutes, where they will work on functional, conceptual, and detailed designs.",
+        "IS1009b": "The team met to discuss the design and marketing strategy for a new remote control. The Marketing Expert presented functional requirements focusing on simplicity, impulse-buying appeal at a price point of twenty-five Euros, and a September market launch for the Christmas season. The Industrial Designer and User Interface Designer outlined technical components, suggesting features such as fluorescent buttons for visibility in the dark, a child lock, a built-in clock, and a locator beep or light. Management clarified that the remote should exclusively control the television, omit teletext, and maintain corporate branding. Finally, the team discussed target groups, agreeing that the product is meant for everyone while potentially catering to subgroups through interchangeable cosmetic cases or colour options, pending budget constraints.",
+        "IS1009c": "The team reviewed the minutes of the previous meeting and agreed on the general requirements of a simple, attractive, and easy-to-use remote control. Each member delivered their presentation: the user interface designer covered various button layouts and proposed a speech recognition feature, the industrial designer detailed the technical components including batteries and circuit boards, and the marketing expert presented competitor research and emphasized eye-catching designs and a fast time-to-market. Finally, the team agreed on core product concepts, selecting standard batteries, chip-on-print technology, a bright, strong, and compact case with push buttons, and tentatively including speech recognition pending further research on its cost.",
+        "IS1009d": "The team reviewed the previous meeting minutes and evaluated the proposed remote control prototype. The industrial designer and user interface designer presented a snail-shaped, compact remote featuring soft rubber buttons, an on-off button, a menu button, a swapping button, and integrated voice recognition, accompanied by a shell-shaped holder. The marketing expert evaluated the product, noting its ergonomic one-thumb reach, attractive colours, and marketability. The team discussed the project financing, confirming they are within budget while noting the need to account for the voice recognition feature cost. Finally, the team reviewed the project process, expressing overall satisfaction with the teamwork, leadership, and final product design.",
+        "TS3003a": "The team held a kick-off meeting for their electronic fashion project at Real Reaction, led by Project Manager Bart. They reviewed corporate information, individual project roles, and tool training by drawing animals on the smart board. The team discussed project finance, noting a selling price of twenty-five euros, production costs under twelve and a half euros, and a profit target of fifty million euros. Finally, they brainstormed features for a new universal remote control, suggesting multi-device operation, infrared capabilities, shockproofing, waterproofing, and a battery status indicator or LED.",
+        "TS3003b": "The team held their second meeting to discuss functional design, starting with presentations from the Marketing Expert, User Interface Designer, and Industrial Designer. They reviewed market research showing that remote controls are often considered ugly and hard to learn, and discussed interface ideas like touchscreens, simple buttons, and docking stations. The Project Manager introduced new constraints, shifting the focus to a TV-only remote targeting elderly users aged sixty plus. After discussion, the team agreed to include teletext for subtitles, a small LCD screen for button feedback and language support, and a simple plastic design.",
+        "TS3003c": "The team reviewed individual presentations on trend-watching, user interface design, and component design, focusing on a remote control targeted at sixty to eighty year old users. They decided to drop voice recognition due to high costs and instead use a standard battery powered by a docking station, which will also feature a remote-finding beeper. The group agreed on an advanced chipset, an LCD screen on top, and a single-curved casing design with interchangeable covers for different colors.",
+        "TS3003d": "The team held their final meeting to review the remote control prototype, evaluate the project, and close the project. They discussed the prototype design featuring an LCD screen, a scroll wheel, and integrated volume and channel buttons to keep production costs under twelve and a half Euros. Marketing Expert presented evaluation criteria covering appearance, innovation, usability, functionality, cost, target group, and brand recognition, resulting in an overall score of eighty-four percent. Finally, the group evaluated the project process, noting that price information should have been introduced earlier, and discussed potential target markets before preparing to fill out final individual questionnaires.",
+        "TS3007a": "The team held a kick-off meeting for designing a new, trendy, original, and user-friendly remote control with a production cost limit of 20.50 Euros. They completed a tool training exercise on the smart boards by drawing their favorite animals and discussed initial ideas for features, such as multi-purpose use, alternative technologies like Bluetooth or radio waves, and an LCD screen. Finally, they planned individual work before the next meeting in thirty minutes.",
+        "TS3007b": "The team reviewed management guidelines and individual presentations on designing a new television remote. Marketing presented survey results showing that most users prefer fancy designs and that the primary target audience should be users aged sixteen to forty-five. Industrial Design proposed a simple infrared remote with basic components and a physical placeholder next to the television, while rejecting complex wireless connectivity and built-in receivers to keep costs low. User Interface Design and the team discussed incorporating a touch screen that displays primary buttons and menu options stored in the remote's memory, with software updates handled at service centers. Finally, the team voted on the design approach and discussed lunch and post-lunch tasks.",
+        "TS3007c": "The team met for the conceptual design meeting for Real Reaction. The industrial designer presented component options, preferring a rubber casing, a double-curved shape for a dynamic look, and a combination of battery and kinetic energy. The marketing expert shared trend-watching findings from Paris and Milan, noting that the target audience prefers fresh fruit colors and innovative features like games, while voice recognition was discarded due to cost and complexity. The user interface designer proposed a touch-screen layout with simple menu structures and easy access to primary buttons. The team discussed incorporating parental control as an optional menu feature. Finally, the project manager shared insights on knowledge management and branding the company as a large, trustworthy provider.",
+        "TS3007d": "The team began with a prototype presentation from the user interface and industrial designers showing a single-touchscreen remote control styled after an Easter egg, featuring exchangeable covers, a thin profile, and a youthful design tailored mainly for younger users while remaining accessible to adults. Next, the marketing expert led an evaluation of the prototype against earlier requirements using a scoring scale, concluding that the concept met most criteria. The project manager then guided a calculation of production costs, which led the group to cut kinetic charging and switch from double-curved to single-curved casing to stay under the twelve and a half Euro budget limit. Finally, the team discussed the meeting process, noting that the SMARTboard pen tool was slow and not very user-friendly, and spent the remaining time reviewing and editing the project's end report before closing the meeting."
+      },
+      "seconds": 571.7649441249996,
+      "action_items": {
+        "ES2004a": [],
+        "ES2004b": [],
+        "ES2004c": [],
+        "ES2004d": [],
+        "ES2014a": [
+          {
+            "task": "Write up minutes of this meeting to give to the team for the next meeting",
+            "owner": "Alastair",
+            "due": ""
+          }
+        ],
+        "ES2014b": [
+          {
+            "task": "Compile and finalize the list of button functions for the next meeting",
+            "owner": "",
+            "due": ""
+          }
+        ],
+        "ES2014c": [],
+        "ES2014d": [],
+        "IS1009a": [],
+        "IS1009b": [],
+        "IS1009c": [
+          {
+            "task": "Research how expensive the speech recognition feature is",
+            "owner": "Industrial Designer",
+            "due": ""
+          },
+          {
+            "task": "Come up with the look and feel design",
+            "owner": "Industrial Designer",
+            "due": ""
+          },
+          {
+            "task": "Come up with the user interface design",
+            "owner": "User Interface Designer",
+            "due": ""
+          },
+          {
+            "task": "Conduct the product evaluation",
+            "owner": "Marketing Expert",
+            "due": ""
+          },
+          {
+            "task": "Work together on a prototype using modelling clay",
+            "owner": "Industrial Designer",
+            "due": ""
+          }
+        ],
+        "IS1009d": [],
+        "TS3003a": [],
+        "TS3003b": [],
+        "TS3003c": [],
+        "TS3003d": [],
+        "TS3007a": [],
+        "TS3007b": [],
+        "TS3007c": [],
+        "TS3007d": []
+      }
+    }
+  }
+}

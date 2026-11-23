@@ -15,7 +15,7 @@ COPY 1_ingestion/*.py ./
 COPY 1_ingestion/ui ./ui
 # Live notes (notes.py) use the LLM summarizer. The Gemini provider needs only the standard library;
 # the Anthropic one would also need `anthropic` (requirements section 5), which this image doesn't install.
-COPY 2_summarization/llm_providers.py 2_summarization/llm_summarizer.py 2_summarization/settings.py ./summarization/
+COPY 2_summarization/chunks.py 2_summarization/llm_providers.py 2_summarization/llm_summarizer.py 2_summarization/settings.py ./summarization/
 
 # Run as a normal user, not root. certs/ and sessions/ are mounted in by compose.
 RUN useradd --uid 10001 bridge && mkdir sessions && chown bridge sessions

@@ -1,0 +1,1311 @@
+{
+  "meeting_id": "SY0210d",
+  "raw_sha256": "9606753fc4a283a41194642e7b32fc18368f447d958e048977663cdad632fe44",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting for the voice-controlled kitchen timer with all four team members present, and the user interface designer confirmed she had received the email with her top panel task. The project manager reported that the speech chip supplier offers a general acoustic model trained on many accents at no extra cost, which the team will use, although strong accents may need slower speech; the industrial designer said someone should test it with real speakers, but nobody took this on. The industrial designer presented the clay model of the round case, about nine centimetres across and four high, with the orange stop button on top, two microphone holes, a rear speaker grille and rubber feet, and gave a firm case quote of 1.60 euros. The user interface designer presented the top panel layout and LED behaviour and recommended against a countdown screen, which the team accepted. The marketing expert presented six evaluation criteria, and the design scored an average of about 1.67 on a one-to-seven scale (one is best), with a final production cost of 8.25 euros against the 12.50 euro limit."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will test the speaker against an extractor fan in the test kitchen next week to confirm the alarm is loud enough.",
+        "The user interface designer will write the quick-start card listing the voice commands, to go in the box. The marketing expert first offered to do this, but she took it because she already has the command phrasings from her smart speaker comparison.",
+        "The project manager will write the final report for management, including the costing and the evaluation.",
+        "The project manager will send round the minutes of this meeting.",
+        "The industrial designer said someone should test the speech chip with people with different accents before sign-off, but nobody took this task."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The speech chip will use the supplier's general multi-accent acoustic model, at no extra cost.",
+        "The round case is agreed as shown on the clay model: about nine centimetres across and four high, with the stop button in the centre of the top, two microphone holes on the top edge, a speaker grille at the back, the cable out of the back and four rubber feet.",
+        "The three LEDs sit in an arc above the stop button, with raised moulded numbers one to three beside them.",
+        "The LEDs will be white. They stay steady while a timer is running, blink slowly in the last minute and flash fast when the timer finishes, until the user says stop or presses the button.",
+        "No countdown screen or other display will be added.",
+        "A quick-start card with the voice commands will go in the box rather than being printed on the base.",
+        "The final production cost is 8.25 euros per unit: 6.00 for electronics, 1.60 for the case, 0.20 for the stop button and 0.45 for the LEDs and feet.",
+        "The design scored 2 for wipe-clean, 3 for alarm loudness, 1 for messy hands, 2 for looking current, 1 for multiple timers and 1 for price, an average of about 1.67."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The speech chip may struggle with very strong accents, and nobody has taken on testing it with real speakers.",
+        "The alarm has not yet been heard over an extractor fan, so its score of 3 is provisional until the industrial designer's test.",
+        "The marketing expert's small two-digit minutes display (about 90 cents) was set aside because it would need a second button to switch between timers. He still sees a visible number as a selling point."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0210d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0210d.ai1",
+        "description": "Test the speech chip with a few people with different accents on a sample board before sign-off",
+        "owner": null,
+        "owner_unclear": true,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0210d.s0020",
+            "event": "proposed",
+            "by": "D",
+            "owner": null
+          }
+        ],
+        "evidence_segments": [
+          "SY0210d.s0017",
+          "SY0210d.s0018",
+          "SY0210d.s0019",
+          "SY0210d.s0020",
+          "SY0210d.s0021",
+          "SY0210d.s0022",
+          "SY0210d.s0023"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0210d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0210d.ai2",
+        "description": "Test the speaker against an extractor fan in the test kitchen next week to check the alarm is loud enough",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0210d.s0110",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0210d.s0111",
+            "event": "accepted",
+            "by": "A",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0210d.s0086",
+          "SY0210d.s0087",
+          "SY0210d.s0110",
+          "SY0210d.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0210d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0210d.ai3",
+        "description": "Write the quick-start card listing the voice commands, to go in the box",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0210d.s0113",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0210d.s0115",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0210d.s0116",
+            "event": "accepted",
+            "by": "B",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0210d.s0117",
+            "event": "assigned",
+            "by": "A",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0210d.s0112",
+          "SY0210d.s0113",
+          "SY0210d.s0114",
+          "SY0210d.s0115",
+          "SY0210d.s0116",
+          "SY0210d.s0117",
+          "SY0210d.s0118",
+          "SY0210d.s0119"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0210d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0210d.ai4",
+        "description": "Write the final report for management with the costing and the evaluation",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0210d.s0120",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0210d.s0120"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0210d.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0210d.ai5",
+        "description": "Send round the minutes of the detailed design meeting",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0210d.s0120",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0210d.s0120"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f1",
+        "type": "other",
+        "fact": "The user interface designer confirmed she received the project manager's email with her top panel task and the notes from the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0210c",
+        "evidence_segments": [
+          "SY0210d.s0003",
+          "SY0210d.s0004",
+          "SY0210d.s0005",
+          "SY0210d.s0006"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager said the minutes from the conceptual design meeting had been sent round on Thursday.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0210c",
+        "evidence_segments": [
+          "SY0210d.s0007"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager reported back on the accent check she took on at the conceptual design meeting: she rang the speech chip supplier on Tuesday.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0210c",
+        "evidence_segments": [
+          "SY0210d.s0010",
+          "SY0210d.s0012",
+          "SY0210d.s0013"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f4",
+        "type": "decision",
+        "fact": "The team will use the speech chip's general acoustic model, trained on a wide mix of accents, at no extra cost.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0210d.s0013",
+          "SY0210d.s0014",
+          "SY0210d.s0015"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f5",
+        "type": "other",
+        "fact": "The supplier said the chip handles most regional accents, but users with very strong accents may need to speak more slowly.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0210d.s0015",
+          "SY0210d.s0017",
+          "SY0210d.s0018"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f6",
+        "type": "action_item",
+        "fact": "The industrial designer said someone should test the chip with people with different accents before sign-off, but nobody took the task.",
+        "agreed": null,
+        "related_action_item": "SY0210d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0210d.s0020",
+          "SY0210d.s0021",
+          "SY0210d.s0022",
+          "SY0210d.s0023"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f7",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer noted the clay model has rubber feet instead of the magnetic back, as agreed at the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0210c",
+        "evidence_segments": [
+          "SY0210d.s0030"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f8",
+        "type": "decision",
+        "fact": "The round case is agreed as on the clay model: about nine centimetres across and four high, with the orange stop button in the centre of the top, two microphone holes on the top edge, a rear speaker grille, the cable out of the back and rubber feet.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0210d.s0026",
+          "SY0210d.s0027",
+          "SY0210d.s0029",
+          "SY0210d.s0030",
+          "SY0210d.s0032",
+          "SY0210d.s0033",
+          "SY0210d.s0043",
+          "SY0210d.s0044",
+          "SY0210d.s0045",
+          "SY0210d.s0046"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f9",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer corrected the case cost from the roughly 1.50 euros he gave at the conceptual design meeting to a firm quote of 1.60 euros per unit, because of the matte texture.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0210c",
+        "evidence_segments": [
+          "SY0210d.s0036",
+          "SY0210d.s0037",
+          "SY0210d.s0038",
+          "SY0210d.s0039"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f10",
+        "type": "other",
+        "fact": "The industrial designer tested oil on a sample of the matte finish and it wiped off with a damp cloth.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0210d.s0040",
+          "SY0210d.s0041",
+          "SY0210d.s0042"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f11",
+        "type": "decision",
+        "fact": "The three LEDs sit in an arc above the central stop button, with raised moulded numbers one to three beside them.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0210d.s0049",
+          "SY0210d.s0050",
+          "SY0210d.s0051",
+          "SY0210d.s0052",
+          "SY0210d.s0053"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f12",
+        "type": "decision",
+        "fact": "The LEDs will be white. They stay steady while a timer runs, blink slowly in the last minute and flash fast when it finishes, until the user says stop or presses the button.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0210d.s0054",
+          "SY0210d.s0055",
+          "SY0210d.s0056",
+          "SY0210d.s0057",
+          "SY0210d.s0058",
+          "SY0210d.s0059",
+          "SY0210d.s0060",
+          "SY0210d.s0061",
+          "SY0210d.s0062"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f13",
+        "type": "decision",
+        "fact": "No countdown screen will be added, on the user interface designer's recommendation. The screen would cost about 2 euros and need a bigger case.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0210d.s0063",
+          "SY0210d.s0064",
+          "SY0210d.s0065",
+          "SY0210d.s0066",
+          "SY0210d.s0072",
+          "SY0210d.s0073",
+          "SY0210d.s0074"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f14",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert proposed a small two-digit minutes display (about 90 cents) instead of a screen. It was set aside because it would need a second button to choose which timer to show.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0210d.s0067",
+          "SY0210d.s0068",
+          "SY0210d.s0069",
+          "SY0210d.s0070",
+          "SY0210d.s0071",
+          "SY0210d.s0074"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f15",
+        "type": "other",
+        "fact": "The marketing expert's six evaluation criteria were wipe-clean, alarm loud enough over an extractor fan, usable with messy hands, looks current, works for two or three things at once, and price. Each was scored from one to seven, with one best.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0210d.s0077",
+          "SY0210d.s0078",
+          "SY0210d.s0079"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f16",
+        "type": "decision",
+        "fact": "The design scored 2 for wipe-clean, 3 for alarm, 1 for messy hands, 2 for looks, 1 for multiple timers and 1 for price, an average of about 1.67.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0210d.s0084",
+          "SY0210d.s0087",
+          "SY0210d.s0088",
+          "SY0210d.s0090",
+          "SY0210d.s0091",
+          "SY0210d.s0093",
+          "SY0210d.s0096",
+          "SY0210d.s0104",
+          "SY0210d.s0106",
+          "SY0210d.s0107",
+          "SY0210d.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f17",
+        "type": "decision",
+        "fact": "The final production cost is 8.25 euros per unit: 6.00 for electronics, 1.60 for the case, 0.20 for the stop button and 0.45 for the LEDs and feet.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0210d.s0100",
+          "SY0210d.s0101",
+          "SY0210d.s0102"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f18",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager compared the final cost with the 12.50 euro production cost limit set at the kickoff meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0210a",
+        "evidence_segments": [
+          "SY0210d.s0103"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f19",
+        "type": "action_item",
+        "fact": "The industrial designer will test the speaker against an extractor fan in the test kitchen next week.",
+        "agreed": null,
+        "related_action_item": "SY0210d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0210d.s0086",
+          "SY0210d.s0110",
+          "SY0210d.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f20",
+        "type": "action_item",
+        "fact": "The user interface designer will write the quick-start card with the voice commands. The marketing expert offered first, but she took it because she has the phrasings from her smart speaker comparison.",
+        "agreed": null,
+        "related_action_item": "SY0210d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0210d.s0113",
+          "SY0210d.s0114",
+          "SY0210d.s0115",
+          "SY0210d.s0116",
+          "SY0210d.s0117"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f21",
+        "type": "decision",
+        "fact": "The quick-start card will go in the box rather than being printed on the base, because a sticker on the base would get grubby.",
+        "agreed": true,
+        "related_action_item": "SY0210d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0210d.s0117",
+          "SY0210d.s0118",
+          "SY0210d.s0119"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f22",
+        "type": "action_item",
+        "fact": "The project manager will write the final report for management with the costing and the evaluation.",
+        "agreed": null,
+        "related_action_item": "SY0210d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0210d.s0120"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0210d.f23",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0210d.f23",
+        "type": "action_item",
+        "fact": "The project manager will send round the minutes of the detailed design meeting.",
+        "agreed": null,
+        "related_action_item": "SY0210d.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0210d.s0120"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_VAGUE_NO_OWNER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_VAGUE_NO_OWNER",
+        "segments": [
+          "SY0210d.s0020",
+          "SY0210d.s0021",
+          "SY0210d.s0022",
+          "SY0210d.s0023"
+        ],
+        "note": "The industrial designer says someone should test the chip with different accents. Others agree, but the project manager just says to bear it in mind and moves on, so nobody owns it."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_OFFERED_TAKEN_BY_OTHER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_OFFERED_TAKEN_BY_OTHER",
+        "segments": [
+          "SY0210d.s0113",
+          "SY0210d.s0114",
+          "SY0210d.s0115",
+          "SY0210d.s0116",
+          "SY0210d.s0117"
+        ],
+        "note": "The marketing expert offers to write the quick-start card. The user interface designer takes it because she has the command phrasings, and the marketing expert and project manager accept this."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

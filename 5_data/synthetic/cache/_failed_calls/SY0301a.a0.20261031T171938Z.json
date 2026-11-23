@@ -1,0 +1,27 @@
+{
+  "key": "774130a24c53104e8fa3d6995641af8dbf03c06dd4d95f5b06528f3c0adb4c67",
+  "error": "claude exited 1: {\"duration_api_ms\":0,\"stop_reason\":\"stop_sequence\",\"session_id\":\"877ba683-f945-4fb4-bed6-4a5f9a37db94\",\"total_cost_usd\":0,\"usage\":{\"output_tokens_details\":{\"thinking_tokens\":0},\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{},\"permission_denials\":[],\"terminal_reason\":\"api_error\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":true,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":429,\"api_error\":\"usage_limit_reached\",\"result\":\"You've hit your session limit · resets 4:40pm (America/New_York)\",\"type\":\"result\",\"duration_ms\":571,\"uuid\":\"fa21356b-341a-45f6-a125-38a4ecd67dd2\",\"queued_turn_count\":0,\"result_index\":0}\n",
+  "argv": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--system-prompt",
+    "You generate synthetic meeting transcripts with gold annotations for LiveMinutes, a research dataset modeled on the AMI Meeting Corpus scenario meetings.\n\nIn AMI scenario meetings, a team of four plays a design team in a fictional company. The roles are Project Manager (PM), Marketing Expert (ME), User Interface designer (UI) and Industrial Designer (ID). A series has four meetings: (a) kickoff, (b) functional design, (c) conceptual design, (d) detailed design. Later meetings refer back to earlier ones.\n\nWrite natural spoken conversation the way AMI transcripts read: short turns, fillers (\"um\", \"uh\", \"yeah\"), backchannels (\"mm-hmm\", \"okay\"), interruptions, people building on each other, and some disfluency. Do not write a screenplay. Do not narrate. No stage directions.\n\nEach segment is one dialogue-act-like unit: one speaker, usually one clause or short sentence, sometimes just a backchannel. Give each segment an AMI dialogue-act type from this set:\n  bck backchannel, stl stall, fra fragment, inf inform, sug suggest, ass assess,\n  el.inf elicit-inform, el.sug elicit-offer-or-suggestion, el.ass elicit-assessment,\n  el.und elicit-comment-understanding, off offer, und comment-about-understanding,\n  be.pos be-positive, be.neg be-negative, oth other\n\nAbsent participants NEVER speak. Speaker labels are ground truth: use only the labels you are given.\n\nThe gold annotations must be exactly true of the transcript you write. Refer to segments by their \"n\" number. Every number you cite must exist.\n\nOutput a single JSON object and nothing else: no prose, no markdown fences.\n",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--setting-sources",
+    "",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--output-format",
+    "json"
+  ],
+  "stdout": "{\"duration_api_ms\":0,\"stop_reason\":\"stop_sequence\",\"session_id\":\"877ba683-f945-4fb4-bed6-4a5f9a37db94\",\"total_cost_usd\":0,\"usage\":{\"output_tokens_details\":{\"thinking_tokens\":0},\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{},\"permission_denials\":[],\"terminal_reason\":\"api_error\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":true,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":429,\"api_error\":\"usage_limit_reached\",\"result\":\"You've hit your session limit · resets 4:40pm (America/New_York)\",\"type\":\"result\",\"duration_ms\":571,\"uuid\":\"fa21356b-341a-45f6-a125-38a4ecd67dd2\",\"queued_turn_count\":0,\"result_index\":0}\n",
+  "stderr": "",
+  "returncode": 1,
+  "elapsed_sec": 2.6
+}

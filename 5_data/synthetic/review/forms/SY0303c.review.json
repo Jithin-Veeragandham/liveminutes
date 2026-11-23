@@ -1,0 +1,1335 @@
+{
+  "meeting_id": "SY0303c",
+  "raw_sha256": "4a4aec7e87224b3f03e6aa903f434d2b2c4dc66ded71af4c810ad0db05518a7f",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the conceptual design meeting and welcomed back the industrial designer, who had been off sick and confirmed she had received the minutes and her costing task. He recapped the functional design meeting: the raised lip around the screen and the handle that folds into a stand had been agreed, while the material was still open.",
+        "The industrial designer presented her costing. EVA foam costs about 4.80 euros per case body and silicone about 7.90 euros. Closed-cell EVA can be wiped clean, so the team chose EVA foam.",
+        "The user interface designer presented sketches of soft membranes over the volume buttons, a recessed power button, an open charging port and a top handle that clicks into two stand positions, one for watching and one for drawing. The team agreed on the two-position stand and on a logo embossed into the back of the case.",
+        "The marketing expert presented colour trends and declared a yellow case with a teal handle and edges, but nobody agreed and the colour question was parked. The estimated production cost came to 8.20 euros against the 12.50 euro limit, at a selling price of 25 euros.",
+        "A cardboard mock-up of the handle-stand was assigned to the user interface designer and then cancelled, because the supplier can send a working foam prototype within a week."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will order the supplier's foam prototype with a working handle and hinge before the detailed design meeting.",
+        "The industrial designer will check with the supplier that the two-position hinge does not change the handle cost.",
+        "The industrial designer will get a price for a two-colour foam moulding run.",
+        "The user interface designer will test the prototype with his six-year-old niece when it arrives.",
+        "The user interface designer will produce the final button layout drawing with the membranes for the detailed design meeting.",
+        "The marketing expert will bring colour options to the detailed design meeting.",
+        "The project manager will send out the minutes."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The case will be made of EVA foam, specifically the denser closed-cell grade, rather than silicone.",
+        "The handle will click into two stand positions, upright for watching and low for drawing.",
+        "The company logo will be embossed into the foam on the back of the case.",
+        "The cardboard mock-up of the handle-stand was cancelled in favour of the supplier's working prototype."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The colour scheme is unresolved. The marketing expert's yellow-and-teal proposal was not agreed, and the cost of a two-colour moulding run is unknown.",
+        "It is untested whether a five-year-old can push the handle into its click positions and whether the stand angles are right.",
+        "The foam can dent if children chew it.",
+        "Part of the cost headroom (8.20 euros against 12.50 euros) will go on the tooling share, so the final margin is uncertain."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303c.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303c.ai1",
+        "description": "Make a cardboard mock-up of the handle-stand to test the angles and the push force with a child.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "dropped",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303c.s0068",
+            "event": "proposed",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0303c.s0069",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0303c.s0070",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0303c.s0104",
+            "event": "dropped",
+            "by": "D",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303c.s0068",
+          "SY0303c.s0069",
+          "SY0303c.s0070",
+          "SY0303c.s0071",
+          "SY0303c.s0098",
+          "SY0303c.s0099",
+          "SY0303c.s0100",
+          "SY0303c.s0101",
+          "SY0303c.s0102",
+          "SY0303c.s0103",
+          "SY0303c.s0104",
+          "SY0303c.s0105"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303c.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303c.ai2",
+        "description": "Order the supplier's rough foam prototype with a working handle and hinge before the detailed design meeting.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303c.s0106",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0303c.s0107",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0303c.s0111",
+            "event": "restated",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303c.s0098",
+          "SY0303c.s0099",
+          "SY0303c.s0106",
+          "SY0303c.s0107",
+          "SY0303c.s0111",
+          "SY0303c.s0112"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303c.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303c.ai3",
+        "description": "Check with the supplier that the two-click-position hinge does not change the handle cost.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303c.s0061",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0303c.s0111",
+            "event": "restated",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303c.s0060",
+          "SY0303c.s0061",
+          "SY0303c.s0111",
+          "SY0303c.s0112"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303c.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303c.ai4",
+        "description": "Test the supplier prototype with his niece when it arrives.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303c.s0108",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0303c.s0109",
+            "event": "accepted",
+            "by": "D",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303c.s0108",
+          "SY0303c.s0109"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303c.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303c.ai5",
+        "description": "Produce the final button layout drawing with the membranes for the detailed design meeting.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303c.s0113",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0303c.s0114",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303c.s0113",
+          "SY0303c.s0114"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303c.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303c.ai6",
+        "description": "Bring colour options to the detailed design meeting.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303c.s0115",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0303c.s0116",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303c.s0115",
+          "SY0303c.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303c.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303c.ai7",
+        "description": "Get a price for a two-colour foam moulding run.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303c.s0117",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303c.s0086",
+          "SY0303c.s0117",
+          "SY0303c.s0118"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0303c.ai8",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0303c.ai8",
+        "description": "Send out the minutes of the meeting.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0303c.s0119",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0303c.s0119"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303c.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303c.f1",
+        "type": "decision",
+        "fact": "The team chose EVA foam over silicone for the case, after the industrial designer costed foam at about 4.80 euros and silicone at about 7.90 euros per body.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303c.s0016",
+          "SY0303c.s0017",
+          "SY0303c.s0026",
+          "SY0303c.s0033",
+          "SY0303c.s0034",
+          "SY0303c.s0035",
+          "SY0303c.s0036"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303c.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303c.f2",
+        "type": "decision",
+        "fact": "The handle will click into two stand positions, upright for watching and low for drawing.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303c.s0057",
+          "SY0303c.s0062",
+          "SY0303c.s0063",
+          "SY0303c.s0064",
+          "SY0303c.s0065"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303c.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303c.f3",
+        "type": "decision",
+        "fact": "The company logo will be embossed into the foam on the back of the case, at about 40 cents.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303c.s0074",
+          "SY0303c.s0075",
+          "SY0303c.s0076",
+          "SY0303c.s0077",
+          "SY0303c.s0078"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303c.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303c.f4",
+        "type": "unagreed_proposal",
+        "fact": "Priya (A) declared that the case would be yellow with a teal handle and edges and called it settled. Lena (C) raised the unpriced cost of two moulding runs, nobody agreed, and Marcus (D) parked the colour question.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303c.s0083",
+          "SY0303c.s0084",
+          "SY0303c.s0085",
+          "SY0303c.s0086",
+          "SY0303c.s0087",
+          "SY0303c.s0088"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303c.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303c.f5",
+        "type": "action_item_removed",
+        "fact": "Tom's (B) cardboard mock-up of the handle-stand was cancelled because the supplier can send a working foam prototype with the real hinge within a week.",
+        "agreed": null,
+        "related_action_item": "SY0303c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303c.s0068",
+          "SY0303c.s0069",
+          "SY0303c.s0070",
+          "SY0303c.s0098",
+          "SY0303c.s0099",
+          "SY0303c.s0101",
+          "SY0303c.s0102",
+          "SY0303c.s0103",
+          "SY0303c.s0104",
+          "SY0303c.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303c.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303c.f6",
+        "type": "plan_change",
+        "fact": "The plan to test the handle-stand with a cardboard mock-up was replaced by testing the supplier's real foam prototype.",
+        "agreed": null,
+        "related_action_item": "SY0303c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303c.s0102",
+          "SY0303c.s0103",
+          "SY0303c.s0104",
+          "SY0303c.s0106",
+          "SY0303c.s0107",
+          "SY0303c.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303c.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303c.f7",
+        "type": "action_item",
+        "fact": "Lena (C) will order the supplier's foam prototype with a working handle before the detailed design meeting.",
+        "agreed": null,
+        "related_action_item": "SY0303c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303c.s0106",
+          "SY0303c.s0107",
+          "SY0303c.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303c.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303c.f8",
+        "type": "action_item",
+        "fact": "Lena (C) will check that the two-position hinge does not change the handle cost.",
+        "agreed": null,
+        "related_action_item": "SY0303c.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303c.s0061",
+          "SY0303c.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303c.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303c.f9",
+        "type": "action_item",
+        "fact": "Tom (B) will test the prototype with his six-year-old niece.",
+        "agreed": null,
+        "related_action_item": "SY0303c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303c.s0108",
+          "SY0303c.s0109"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303c.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303c.f10",
+        "type": "action_item",
+        "fact": "Tom (B) will produce the final button layout drawing with the membranes.",
+        "agreed": null,
+        "related_action_item": "SY0303c.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303c.s0113",
+          "SY0303c.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303c.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303c.f11",
+        "type": "action_item",
+        "fact": "Priya (A) will bring colour options to the detailed design meeting.",
+        "agreed": null,
+        "related_action_item": "SY0303c.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303c.s0115",
+          "SY0303c.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303c.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303c.f12",
+        "type": "action_item",
+        "fact": "Lena (C) will price a two-colour foam moulding run.",
+        "agreed": null,
+        "related_action_item": "SY0303c.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303c.s0117"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303c.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303c.f13",
+        "type": "action_item",
+        "fact": "Marcus (D) will send out the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0303c.ai8",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303c.s0119"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303c.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303c.f14",
+        "type": "other",
+        "fact": "Closed-cell EVA foam can be wiped clean with a damp cloth, which addresses the cleaning question from the previous meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0303b",
+        "evidence_segments": [
+          "SY0303c.s0025",
+          "SY0303c.s0026",
+          "SY0303c.s0027"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303c.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303c.f15",
+        "type": "other",
+        "fact": "The estimated production cost is 8.20 euros (body 4.80, handle and hinge 2.10, membranes 0.90, logo 0.40) against the 12.50 euro limit, and the selling price stays at 25 euros.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0303c.s0089",
+          "SY0303c.s0090",
+          "SY0303c.s0091",
+          "SY0303c.s0095",
+          "SY0303c.s0096"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303c.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303c.f16",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recapped the functional design meeting: the raised lip and the handle-stand were agreed and the material was left open pending the industrial designer's numbers.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0303b",
+        "evidence_segments": [
+          "SY0303c.s0008",
+          "SY0303c.s0009",
+          "SY0303c.s0010",
+          "SY0303c.s0012"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303c.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303c.f17",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager noted that the industrial designer had proposed EVA foam at the kickoff meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0303a",
+        "evidence_segments": [
+          "SY0303c.s0039",
+          "SY0303c.s0040"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303c.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303c.f18",
+        "type": "reference_to_prior_meeting",
+        "fact": "Lena (C) confirmed she received the project manager's email with the minutes and her costing task, which she had missed through illness at the functional design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0303b",
+        "evidence_segments": [
+          "SY0303c.s0003",
+          "SY0303c.s0004",
+          "SY0303c.s0005"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0303c.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0303c.f19",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager restated the management requirement from the previous meeting that the case carry the company logo and the company yellow.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0303b",
+        "evidence_segments": [
+          "SY0303c.s0073"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_UNAGREED_DECISION",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_UNAGREED_DECISION",
+        "segments": [
+          "SY0303c.s0083",
+          "SY0303c.s0084",
+          "SY0303c.s0085",
+          "SY0303c.s0086",
+          "SY0303c.s0087",
+          "SY0303c.s0088"
+        ],
+        "note": "The marketing expert declares a yellow-and-teal colour scheme 'settled'. The industrial designer objects on cost, nobody agrees and the project manager parks colour."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_ACTION_REMOVED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_ACTION_REMOVED",
+        "segments": [
+          "SY0303c.s0068",
+          "SY0303c.s0069",
+          "SY0303c.s0070",
+          "SY0303c.s0071",
+          "SY0303c.s0098",
+          "SY0303c.s0099",
+          "SY0303c.s0100",
+          "SY0303c.s0101",
+          "SY0303c.s0102",
+          "SY0303c.s0103",
+          "SY0303c.s0104",
+          "SY0303c.s0105"
+        ],
+        "note": "The user interface designer is assigned a cardboard mock-up of the handle-stand. It is later scrapped because the supplier can send a working prototype."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

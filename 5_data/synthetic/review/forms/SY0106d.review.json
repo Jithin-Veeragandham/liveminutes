@@ -1,0 +1,1388 @@
+{
+  "meeting_id": "SY0106d",
+  "raw_sha256": "965f9a3ad37106f52192751730c5de31cccaf9245a421d4d4ef78edad95f2a92",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting, the last of the series. He explained that the user interface designer was absent through illness and confirmed that the minutes of the conceptual design meeting had been sent. The industrial designer presented a full-size foam model of the top half of the kiosk. It uses the agreed heights (screen at one metre, tilted about twenty degrees, pad at 80 centimetres), rounded corners, the key-locked printer panel and a birch veneer front panel on a powder-coated steel body.",
+        "The discussion alternated between the cost of the kiosk and the colour samples presented by the marketing expert. On cost, the housing came to 250 euros for the steel and 40 euros for the veneer panel, for a total of 1,770 euros. Audio guidance was first priced at 38 euros, which would have taken the kiosk over budget. The industrial designer then corrected this to 14 euros, because the PC unit already has onboard audio, so only a jack and a small amplifier are needed. The final total is 1,784 euros, 16 euros under the 1,800 euro budget.",
+        "On colours, the marketing expert presented stone grey, off-white and dark green powder coats, and natural or honey-stained birch veneer. The dark green is a non-standard colour costing 12 euros more per unit, which would leave only 4 euros of margin. The team chose a single standard stone grey with natural birch, noting that library branding is shown on the screen anyway.",
+        "The project manager took over chasing the fourth catalogue vendor from the absent user interface designer. Her outstanding mock-ups were extended to include the audio guidance. A test of the model with a wheelchair user was raised but nobody took it on."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will update the production drawings with the headphone jack and its raised tactile ring, and update the final cost sheet.",
+        "The industrial designer will send photos of the foam model to the marketing expert.",
+        "The marketing expert will write a one-page product sheet for library networks covering accessibility, on-screen branding and the six languages.",
+        "The user interface designer, assigned in her absence, will finish the final screen mock-ups with the logo bar and the six-language screen. She will also add voice prompts for each screen and show where the headphone jack is.",
+        "The project manager will chase the fourth catalogue vendor for written confirmation of SIP2 support through an adapter. This takes over the task from the user interface designer.",
+        "The project manager will write up and send the minutes. He will also send a separate note to the user interface designer covering the audio decision, the colour choice and the vendor handover.",
+        "Someone should arrange for a wheelchair user to try the foam model before production; nobody took this on."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "Audio guidance with a headphone jack and voice prompts will be included, at 14 euros using the PC unit's onboard audio.",
+        "The headphone jack will sit just under the screen on the right, with a raised ring so it can be found by touch.",
+        "The final production cost is 1,784 euros, 16 euros under the 1,800 euro budget.",
+        "The housing will use a single standard powder coat colour, stone grey; the non-standard dark green and the offer of several colour options were rejected.",
+        "The veneer front panel will be natural birch with a matt lacquer rather than a honey stain."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The margin is only 16 euros, so any rise in the steel price could push the kiosk over budget.",
+        "The fourth catalogue vendor has still not confirmed in writing that SIP2 works through an adapter.",
+        "The final screen mock-ups are not finished, and they now also need the audio prompts, while the user interface designer is ill.",
+        "Nobody has been found to arrange a test of the foam model with a wheelchair user."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0106d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0106d.ai1",
+        "description": "Update the production drawings with the headphone jack (under the screen on the right, with a raised tactile ring) and update the final cost sheet to 1,784 euros.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0106d.s0077",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0106d.s0122",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0106d.s0123",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0106d.s0075",
+          "SY0106d.s0077",
+          "SY0106d.s0122",
+          "SY0106d.s0123"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0106d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0106d.ai2",
+        "description": "Finish the final screen mock-ups with the library logo bar and the six-language screen, and add audio guidance: voice prompts for each screen and the headphone jack location.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0106d.s0011",
+            "event": "restated",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0106d.s0104",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0106d.s0009",
+          "SY0106d.s0010",
+          "SY0106d.s0011",
+          "SY0106d.s0078",
+          "SY0106d.s0104",
+          "SY0106d.s0105"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0106d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0106d.ai3",
+        "description": "Chase the fourth catalogue vendor for written confirmation that SIP2 works through an adapter.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "reassigned",
+        "previous_owners": [
+          "B"
+        ],
+        "history": [
+          {
+            "segment": "SY0106d.s0099",
+            "event": "restated",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0106d.s0100",
+            "event": "reassigned",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0106d.s0097",
+          "SY0106d.s0098",
+          "SY0106d.s0099",
+          "SY0106d.s0100",
+          "SY0106d.s0101",
+          "SY0106d.s0102"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0106d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0106d.ai4",
+        "description": "Arrange for a wheelchair user to try the foam model before production.",
+        "owner": null,
+        "owner_unclear": true,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0106d.s0109",
+            "event": "proposed",
+            "by": "A",
+            "owner": null
+          }
+        ],
+        "evidence_segments": [
+          "SY0106d.s0109",
+          "SY0106d.s0110",
+          "SY0106d.s0111",
+          "SY0106d.s0112",
+          "SY0106d.s0113",
+          "SY0106d.s0114",
+          "SY0106d.s0115"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0106d.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0106d.ai5",
+        "description": "Write a one-page product sheet for library networks covering accessibility, on-screen branding and the six languages.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0106d.s0117",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0106d.s0118",
+            "event": "accepted",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0106d.s0116",
+          "SY0106d.s0117",
+          "SY0106d.s0118"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0106d.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0106d.ai6",
+        "description": "Take photos of the foam model and send them to the marketing expert for the product sheet.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0106d.s0121",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0106d.s0119",
+          "SY0106d.s0120",
+          "SY0106d.s0121"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0106d.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0106d.ai7",
+        "description": "Write up and send the minutes, plus a separate note to the user interface designer on the audio decision, the colour choice and the vendor handover.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0106d.s0102",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0106d.s0124",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0106d.s0008",
+          "SY0106d.s0102",
+          "SY0106d.s0105",
+          "SY0106d.s0124",
+          "SY0106d.s0126"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f1",
+        "type": "absence",
+        "fact": "The user interface designer (Priya) was absent because she was off sick with flu.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106d.s0004",
+          "SY0106d.s0005",
+          "SY0106d.s0006"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager confirmed that the minutes from the previous Thursday's meeting had been sent out and received.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0106c",
+        "evidence_segments": [
+          "SY0106d.s0013",
+          "SY0106d.s0014",
+          "SY0106d.s0015"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The foam model uses the screen and pad heights agreed in the functional design meeting: screen at one metre and pad at 80 centimetres.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0106b",
+        "evidence_segments": [
+          "SY0106d.s0022"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f4",
+        "type": "reference_to_prior_meeting",
+        "fact": "The audio guidance price had been left open at the previous meeting, and the audio guidance had been the user interface designer's idea.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0106c",
+        "evidence_segments": [
+          "SY0106d.s0052",
+          "SY0106d.s0058"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f5",
+        "type": "other",
+        "fact": "The industrial designer presented a full-size foam model of the top half of the kiosk.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106d.s0019",
+          "SY0106d.s0021"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f6",
+        "type": "other",
+        "fact": "The steel housing costs 250 euros and the quoted veneer panel costs 40 euros, five less than estimated, giving a total of 1,770 euros before audio.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106d.s0029",
+          "SY0106d.s0030",
+          "SY0106d.s0031",
+          "SY0106d.s0032"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f7",
+        "type": "plan_change",
+        "fact": "The industrial designer first priced audio guidance at 38 euros with a separate audio board, then corrected it to 14 euros because the PC unit has onboard audio.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106d.s0053",
+          "SY0106d.s0055",
+          "SY0106d.s0056",
+          "SY0106d.s0062",
+          "SY0106d.s0063",
+          "SY0106d.s0065",
+          "SY0106d.s0066"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f8",
+        "type": "decision",
+        "fact": "The team agreed to include audio guidance with a headphone jack and voice prompts.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106d.s0071",
+          "SY0106d.s0072",
+          "SY0106d.s0073",
+          "SY0106d.s0074"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f9",
+        "type": "decision",
+        "fact": "The headphone jack will be placed under the screen on the right, with a raised ring so it can be found by touch.",
+        "agreed": true,
+        "related_action_item": "SY0106d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106d.s0075",
+          "SY0106d.s0076",
+          "SY0106d.s0077",
+          "SY0106d.s0078"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f10",
+        "type": "decision",
+        "fact": "The final production cost is 1,784 euros, 16 euros under the 1,800 euro budget.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106d.s0068",
+          "SY0106d.s0069",
+          "SY0106d.s0070",
+          "SY0106d.s0095",
+          "SY0106d.s0096"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f11",
+        "type": "unagreed_proposal",
+        "fact": "The dark green powder coat, favoured by the marketing expert and liked by the project manager, was not adopted because, as a non-standard colour, it costs 12 euros more per unit.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106d.s0044",
+          "SY0106d.s0045",
+          "SY0106d.s0046",
+          "SY0106d.s0048",
+          "SY0106d.s0080",
+          "SY0106d.s0081",
+          "SY0106d.s0082"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f12",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert proposed offering networks a choice of three powder coat colours; it was rejected because of extra coating runs and stock complexity.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106d.s0083",
+          "SY0106d.s0084",
+          "SY0106d.s0085",
+          "SY0106d.s0087"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f13",
+        "type": "decision",
+        "fact": "The housing will be a single standard stone grey powder coat.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106d.s0087",
+          "SY0106d.s0088",
+          "SY0106d.s0093"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f14",
+        "type": "decision",
+        "fact": "The veneer front panel will be natural birch with a matt lacquer, not honey-stained.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106d.s0090",
+          "SY0106d.s0091",
+          "SY0106d.s0092",
+          "SY0106d.s0093"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f15",
+        "type": "plan_change",
+        "fact": "Chasing the fourth catalogue vendor for written SIP2 adapter confirmation moved from the user interface designer to the project manager.",
+        "agreed": null,
+        "related_action_item": "SY0106d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106d.s0097",
+          "SY0106d.s0099",
+          "SY0106d.s0100",
+          "SY0106d.s0102"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f16",
+        "type": "action_item",
+        "fact": "The user interface designer, in her absence, still has to finish the final mock-ups and must now add voice prompts and the jack location.",
+        "agreed": null,
+        "related_action_item": "SY0106d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106d.s0010",
+          "SY0106d.s0011",
+          "SY0106d.s0104",
+          "SY0106d.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f17",
+        "type": "action_item",
+        "fact": "The industrial designer will update the drawings with the jack and the final cost sheet.",
+        "agreed": null,
+        "related_action_item": "SY0106d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106d.s0122",
+          "SY0106d.s0123"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f18",
+        "type": "action_item",
+        "fact": "Nobody took on arranging a wheelchair user test of the foam model; it was left open in the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0106d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106d.s0109",
+          "SY0106d.s0111",
+          "SY0106d.s0112",
+          "SY0106d.s0113",
+          "SY0106d.s0114",
+          "SY0106d.s0115"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f19",
+        "type": "action_item",
+        "fact": "The marketing expert will write a one-page product sheet for library networks.",
+        "agreed": null,
+        "related_action_item": "SY0106d.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106d.s0117",
+          "SY0106d.s0118"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f20",
+        "type": "action_item",
+        "fact": "The industrial designer will send photos of the foam model to the marketing expert.",
+        "agreed": null,
+        "related_action_item": "SY0106d.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106d.s0119",
+          "SY0106d.s0120",
+          "SY0106d.s0121"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106d.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106d.f21",
+        "type": "action_item",
+        "fact": "The project manager will send the minutes and a separate note to the user interface designer.",
+        "agreed": null,
+        "related_action_item": "SY0106d.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106d.s0102",
+          "SY0106d.s0105",
+          "SY0106d.s0124"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_INTERLEAVED_TOPICS",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_INTERLEAVED_TOPICS",
+        "segments": [
+          "SY0106d.s0028",
+          "SY0106d.s0029",
+          "SY0106d.s0030",
+          "SY0106d.s0031",
+          "SY0106d.s0032",
+          "SY0106d.s0035",
+          "SY0106d.s0037",
+          "SY0106d.s0039",
+          "SY0106d.s0040",
+          "SY0106d.s0042",
+          "SY0106d.s0044",
+          "SY0106d.s0046",
+          "SY0106d.s0048",
+          "SY0106d.s0050",
+          "SY0106d.s0051",
+          "SY0106d.s0053",
+          "SY0106d.s0055",
+          "SY0106d.s0057",
+          "SY0106d.s0062",
+          "SY0106d.s0063",
+          "SY0106d.s0065",
+          "SY0106d.s0068",
+          "SY0106d.s0070",
+          "SY0106d.s0071",
+          "SY0106d.s0074",
+          "SY0106d.s0079",
+          "SY0106d.s0080",
+          "SY0106d.s0083",
+          "SY0106d.s0084",
+          "SY0106d.s0087",
+          "SY0106d.s0090",
+          "SY0106d.s0093",
+          "SY0106d.s0095",
+          "SY0106d.s0096"
+        ],
+        "note": "Cost/budget (28-35, 51-78, 95-96) and colour samples (37-50, 79-94) alternate, linked by how the colour choice and audio eat into the margin."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_ABSENT_DISCUSSED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_ABSENT_DISCUSSED",
+        "segments": [
+          "SY0106d.s0004",
+          "SY0106d.s0005",
+          "SY0106d.s0006",
+          "SY0106d.s0007",
+          "SY0106d.s0008",
+          "SY0106d.s0009",
+          "SY0106d.s0010",
+          "SY0106d.s0011",
+          "SY0106d.s0058",
+          "SY0106d.s0059",
+          "SY0106d.s0060",
+          "SY0106d.s0078",
+          "SY0106d.s0098",
+          "SY0106d.s0099",
+          "SY0106d.s0100",
+          "SY0106d.s0102",
+          "SY0106d.s0104",
+          "SY0106d.s0105",
+          "SY0106d.s0106",
+          "SY0106d.s0114",
+          "SY0106d.s0125"
+        ],
+        "note": "Priya is off sick; others discuss why she is away, her unfinished mock-ups, what she would think of audio, and what to put in a note to her; she never speaks."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

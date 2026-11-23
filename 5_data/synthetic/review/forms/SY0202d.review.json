@@ -1,0 +1,1204 @@
+{
+  "meeting_id": "SY0202d",
+  "raw_sha256": "fcffac338e2d24491dc692c3dede259699cf5b68d7fbc6ba334de452ef4f4438",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting and explained that the user interface designer was absent at a conference but had emailed her final screens. The industrial designer presented the foam-board mock-up at the real accessible heights. Because a nineteen-inch screen would rise above the 120 cm reach limit, the team chose a seventeen-inch screen over the fifteen-inch one. The industrial designer reported on text-to-speech, and the team chose an embedded PC board with a licensed built-in engine for better voice quality. The project manager presented the user interface designer's screens, which cover the barcode fallback, the audio script and the optional print button. The marketing expert evaluated the design against seven criteria from the library services requirements, the project manager reported an updated cost of about 3,410 euros per unit, and the team rejected an LED ring around the help button."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The marketing expert will find out what it would cost to RFID-tag the stock in the four barcode-only branches, using the tagging contractor's rates from library services, by the end of next week. The project manager first took this task himself.",
+        "The user interface designer, who was absent, will rework the screen layouts for the seventeen-inch screen and send the final screens to library services for sign-off.",
+        "The project manager will brief the user interface designer on Monday about the screen size decision.",
+        "The industrial designer will write up the component specification (board, text-to-speech engine, screen) for the final report by Friday.",
+        "The project manager will write the final report with the cost breakdown and circulate it."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The kiosk will have a seventeen-inch screen instead of fifteen inches, which keeps the top edge at about 116 cm, within the 120 cm reach limit.",
+        "The kiosk will use an embedded PC board that comes with a licensed text-to-speech engine, adding about 60 euros.",
+        "The production cost is now about 3,410 euros per unit, under the 4,000-euro target, and the selling price stays at about 6,500 euros.",
+        "No LED ring will be added around the help button in this design."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The cost of RFID-tagging the stock in the four barcode-only branches is still unknown until the marketing expert gets the contractor's rates.",
+        "The seventeen-inch screen was decided without the user interface designer, who had wanted nineteen inches.",
+        "Ease of use has not yet been checked with the seventeen-inch screen layouts."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202d.ai1",
+        "description": "Find out what it would cost to RFID-tag the stock in the four barcode-only branches, using library services' tagging contractor rates, by the end of next week (follows up SY0202c.ai2)",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "reassigned",
+        "previous_owners": [
+          "D"
+        ],
+        "history": [
+          {
+            "segment": "SY0202d.s0012",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0202d.s0084",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0202d.s0086",
+            "event": "reassigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0202d.s0109",
+            "event": "restated",
+            "by": "D",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202d.s0010",
+          "SY0202d.s0012",
+          "SY0202d.s0083",
+          "SY0202d.s0084",
+          "SY0202d.s0085",
+          "SY0202d.s0086",
+          "SY0202d.s0109",
+          "SY0202d.s0114",
+          "SY0202d.s0115"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202d.ai2",
+        "description": "Rework the screen layouts for the seventeen-inch screen and send the final screens to library services for sign-off",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202d.s0043",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0202d.s0108",
+            "event": "restated",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202d.s0042",
+          "SY0202d.s0043",
+          "SY0202d.s0108"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202d.ai3",
+        "description": "Brief the user interface designer on Monday about the seventeen-inch screen decision",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202d.s0045",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0202d.s0113",
+            "event": "restated",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202d.s0045",
+          "SY0202d.s0113"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202d.ai4",
+        "description": "Write up the component specification (board, text-to-speech engine, screen) for the final report by Friday",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202d.s0111",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0202d.s0112",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202d.s0111",
+          "SY0202d.s0112"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202d.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202d.ai5",
+        "description": "Write the final report with the cost breakdown and circulate it",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202d.s0113",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202d.s0113",
+          "SY0202d.s0115"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f1",
+        "type": "absence",
+        "fact": "The user interface designer, Hannah (C), was absent because she was at a library technology conference, and she sent her apologies.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202d.s0004",
+          "SY0202d.s0006"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f2",
+        "type": "decision",
+        "fact": "The team decided on a seventeen-inch screen, which puts the top edge at about 116 cm and adds about 80 euros.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202d.s0033",
+          "SY0202d.s0034",
+          "SY0202d.s0036",
+          "SY0202d.s0039"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f3",
+        "type": "plan_change",
+        "fact": "The screen size changed from fifteen inches to seventeen inches after the mock-up review.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0202c",
+        "evidence_segments": [
+          "SY0202d.s0022",
+          "SY0202d.s0023",
+          "SY0202d.s0039"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f4",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested going with the nineteen-inch screen the user interface designer wanted and tilting it further back. This was not agreed because of glare, readability, the 120 cm reach limit and about 200 euros of extra cost.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202d.s0027",
+          "SY0202d.s0028",
+          "SY0202d.s0029",
+          "SY0202d.s0030",
+          "SY0202d.s0031"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f5",
+        "type": "decision",
+        "fact": "The team chose an embedded PC board with a licensed built-in text-to-speech engine, at about 60 euros extra, over a free open-source engine with a robotic voice.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202d.s0051",
+          "SY0202d.s0052",
+          "SY0202d.s0054",
+          "SY0202d.s0057",
+          "SY0202d.s0058",
+          "SY0202d.s0059",
+          "SY0202d.s0060",
+          "SY0202d.s0061"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f6",
+        "type": "other",
+        "fact": "The foam-board mock-up showed that everything is reachable from a seated position, with the shelf at 78 cm and the help button at about 105 cm.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202d.s0016",
+          "SY0202d.s0017",
+          "SY0202d.s0019",
+          "SY0202d.s0020"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f7",
+        "type": "other",
+        "fact": "The user interface designer had sent the industrial designer the list of items the audio mode must read out, completing her action item from the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0202c",
+        "evidence_segments": [
+          "SY0202d.s0049",
+          "SY0202d.s0050",
+          "SY0202d.s0065",
+          "SY0202d.s0066"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f8",
+        "type": "other",
+        "fact": "The user interface designer's final screens include the barcode fallback, with a red outline and a prompt to scan the book below, the audio script, and a small print button with email as the default.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202d.s0006",
+          "SY0202d.s0063",
+          "SY0202d.s0065",
+          "SY0202d.s0067"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f9",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert noted that email receipts by default with an optional print button were what the team agreed in the functional design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0202b",
+        "evidence_segments": [
+          "SY0202d.s0067",
+          "SY0202d.s0068"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f10",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert noted that the kiosk not looking like a cash machine was part of the brief from the kickoff meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0202a",
+        "evidence_segments": [
+          "SY0202d.s0076"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f11",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager noted that the screen size had been left open in the previous meeting until the mock-up was reviewed.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0202c",
+        "evidence_segments": [
+          "SY0202d.s0023"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f12",
+        "type": "other",
+        "fact": "The marketing expert's evaluation scored speed 6, accessibility 6, library look 7, ease of use 5, print option 6, staff help 6 and cost 6, on a scale of one to seven.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202d.s0071",
+          "SY0202d.s0072",
+          "SY0202d.s0073",
+          "SY0202d.s0075",
+          "SY0202d.s0076",
+          "SY0202d.s0078",
+          "SY0202d.s0079",
+          "SY0202d.s0097",
+          "SY0202d.s0099"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f13",
+        "type": "decision",
+        "fact": "The production cost is about 3,410 euros per unit, about 590 euros under the 4,000-euro target, and the selling price stays at about 6,500 euros.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0202c",
+        "evidence_segments": [
+          "SY0202d.s0092",
+          "SY0202d.s0093",
+          "SY0202d.s0094",
+          "SY0202d.s0095",
+          "SY0202d.s0096"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f14",
+        "type": "unagreed_proposal",
+        "fact": "The industrial designer proposed an LED ring around the help button for about 15 euros. It was not included in the design.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202d.s0101",
+          "SY0202d.s0103",
+          "SY0202d.s0104",
+          "SY0202d.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f15",
+        "type": "action_item",
+        "fact": "The marketing expert will find out the cost of RFID-tagging the stock in the four barcode-only branches by the end of next week.",
+        "agreed": null,
+        "related_action_item": "SY0202d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202d.s0084",
+          "SY0202d.s0086",
+          "SY0202d.s0109",
+          "SY0202d.s0115"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f16",
+        "type": "plan_change",
+        "fact": "The tagging cost task was first taken by the project manager and then reassigned to the marketing expert, because she is visiting library services, which has the tagging contractor's rates.",
+        "agreed": null,
+        "related_action_item": "SY0202d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202d.s0012",
+          "SY0202d.s0083",
+          "SY0202d.s0084",
+          "SY0202d.s0085",
+          "SY0202d.s0086"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f17",
+        "type": "action_item",
+        "fact": "The absent user interface designer was assigned to rework the screen layouts for seventeen inches and send the final screens to library services for sign-off.",
+        "agreed": null,
+        "related_action_item": "SY0202d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202d.s0043",
+          "SY0202d.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f18",
+        "type": "action_item",
+        "fact": "The project manager will brief the user interface designer on Monday about the screen size decision.",
+        "agreed": null,
+        "related_action_item": "SY0202d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202d.s0045",
+          "SY0202d.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f19",
+        "type": "action_item",
+        "fact": "The industrial designer will write up the component specification for the final report by Friday.",
+        "agreed": null,
+        "related_action_item": "SY0202d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202d.s0111",
+          "SY0202d.s0112"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202d.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202d.f20",
+        "type": "action_item",
+        "fact": "The project manager will write the final report with the cost breakdown and circulate it.",
+        "agreed": null,
+        "related_action_item": "SY0202d.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202d.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_REASSIGNED_OR_DROPPED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_REASSIGNED_OR_DROPPED",
+        "segments": [
+          "SY0202d.s0010",
+          "SY0202d.s0012",
+          "SY0202d.s0013",
+          "SY0202d.s0083",
+          "SY0202d.s0084",
+          "SY0202d.s0085",
+          "SY0202d.s0086",
+          "SY0202d.s0109"
+        ],
+        "note": "The project manager takes the branch tagging-cost task early on, then hands it to the marketing expert when she says she will be at library services on Thursday."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_TASK_TO_ABSENT",
+        "segments": [
+          "SY0202d.s0042",
+          "SY0202d.s0043",
+          "SY0202d.s0044",
+          "SY0202d.s0045",
+          "SY0202d.s0108"
+        ],
+        "note": "The absent user interface designer is assigned to rework the layouts for the seventeen-inch screen and send the final screens to library services."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,1178 @@
+{
+  "meeting_id": "SY0202b",
+  "raw_sha256": "fe25c8daefde83fbbe70fcb3450046c32e486cbc5a8544729b9387389c9a71bb",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the functional design meeting, noted that the user interface designer was absent through illness, and confirmed that he had sent round the brief and the kickoff notes. He recapped the earlier decisions: checkout and renewals only, and one scanner for library cards and app QR codes.",
+        "The industrial designer presented the working design: an embedded PC, a fifteen-inch touchscreen, a card and QR scanner, a barcode or RFID book reader, and a small thermal printer. Without RFID, his rough cost estimate came to about 2,900 euros, and the wood-panelled casing was the largest cost.",
+        "The marketing expert presented the user requirements and the accessibility requirements from library services. These covered speed, the fact that about a third of borrowers want printed slips, wheelchair reach heights, audio output, and a physical button.",
+        "The team agreed on email receipts by default with optional printing, and on one hardware help button with everything else on the touchscreen. They also agreed to lower the book shelf to accessible heights.",
+        "The RFID pricing task was first given to the industrial designer and then passed to the marketing expert, because library services already has an RFID supplier price list. The barcode versus RFID decision was left open until those numbers are available."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The marketing expert will get RFID reader and tag prices from library services' existing supplier. This task was first assigned to the industrial designer.",
+        "The user interface designer, who was absent, will update the checkout and renewal flow for the help button, audio mode and print option, and will send round her draft screens before the next meeting.",
+        "The marketing expert will email the accessibility requirements to the user interface designer today.",
+        "The industrial designer will prepare sketches of the casing look and materials, using the new accessible heights.",
+        "The project manager will write up and circulate the notes and brief the user interface designer on the button decision."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "Receipts will be sent by email by default, and borrowers can choose to print one; the printer stays in the design.",
+        "The kiosk will have one physical help button. The button calls staff, and holding it switches on audio mode. All other controls stay on the touchscreen.",
+        "The layout will follow the accessibility heights: the book shelf will be about 75 to 80 cm instead of 90 cm, and no controls will be above about 120 cm.",
+        "The kiosk will provide audio support, with a headphone jack and spoken instructions, for visually impaired borrowers."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The choice between barcode and RFID, or supporting both, is still open until the RFID prices are known.",
+        "It is unclear whether adding RFID keeps the unit under the 4,000-euro production cost target.",
+        "Some library branches may still be barcode-only and not RFID-tagged.",
+        "The user interface designer has not yet presented the flow or screens, and she was absent when the hardware button was decided against her earlier all-touchscreen proposal."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202b.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202b.ai1",
+        "description": "Check the cost of RFID readers and tags, using library services' existing supplier price list. This follows up the unowned SY0202a.ai5.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "reassigned",
+        "previous_owners": [
+          "A"
+        ],
+        "history": [
+          {
+            "segment": "SY0202b.s0017",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0202b.s0019",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0202b.s0097",
+            "event": "reassigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0202b.s0098",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202b.s0015",
+          "SY0202b.s0017",
+          "SY0202b.s0018",
+          "SY0202b.s0019",
+          "SY0202b.s0040",
+          "SY0202b.s0091",
+          "SY0202b.s0092",
+          "SY0202b.s0093",
+          "SY0202b.s0095",
+          "SY0202b.s0096",
+          "SY0202b.s0097",
+          "SY0202b.s0098",
+          "SY0202b.s0099"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202b.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202b.ai2",
+        "description": "Update the checkout and renewal flow for the hardware help button, audio mode and optional print, and send round the draft screens before the next meeting",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202b.s0084",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0202b.s0088",
+            "event": "restated",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202b.s0083",
+          "SY0202b.s0084",
+          "SY0202b.s0085",
+          "SY0202b.s0087",
+          "SY0202b.s0088"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202b.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202b.ai3",
+        "description": "Email the accessibility requirements from library services to the user interface designer. This carries over SY0202a.ai4.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202b.s0079",
+            "event": "restated",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0202b.s0081",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202b.s0079",
+          "SY0202b.s0080",
+          "SY0202b.s0081"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202b.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202b.ai4",
+        "description": "Prepare sketches of the casing look and materials (wood panelling), using the new accessible heights",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202b.s0111",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0202b.s0112",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202b.s0064",
+          "SY0202b.s0111",
+          "SY0202b.s0112"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202b.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202b.ai5",
+        "description": "Write up and circulate the meeting notes and brief the user interface designer on the hardware button decision",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202b.s0113",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202b.s0073",
+          "SY0202b.s0113"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202b.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202b.f1",
+        "type": "absence",
+        "fact": "The user interface designer, Hannah (C), was absent because she was off sick and had sent her apologies.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202b.s0005",
+          "SY0202b.s0007"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202b.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202b.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recapped the kickoff decisions: checkout and renewals only with no returns, and one scanner for the library card and the app QR code.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0202a",
+        "evidence_segments": [
+          "SY0202b.s0011",
+          "SY0202b.s0012"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202b.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202b.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager confirmed that he had sent round the brief and the kickoff notes, which completes SY0202a.ai6.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0202a",
+        "evidence_segments": [
+          "SY0202b.s0008",
+          "SY0202b.s0009",
+          "SY0202b.s0010"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202b.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202b.f4",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer pointed out that he had argued for a physical button in the previous meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0202a",
+        "evidence_segments": [
+          "SY0202b.s0066",
+          "SY0202b.s0067",
+          "SY0202b.s0068"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202b.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202b.f5",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager reminded the marketing expert that sharing the accessibility list with the user interface designer was her task from the kickoff meeting.",
+        "agreed": null,
+        "related_action_item": "SY0202b.ai3",
+        "refers_to_meeting": "SY0202a",
+        "evidence_segments": [
+          "SY0202b.s0079",
+          "SY0202b.s0080",
+          "SY0202b.s0081"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202b.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202b.f6",
+        "type": "other",
+        "fact": "The industrial designer's rough component cost without RFID is about 2,900 euros. This breaks down as screen 600, PC 500, scanner 300, printer 250 and casing 1,200.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202b.s0033",
+          "SY0202b.s0034"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202b.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202b.f7",
+        "type": "unagreed_proposal",
+        "fact": "The industrial designer again proposed dropping the printer to save 250 euros. He withdrew the proposal after hearing that about a third of borrowers want printed slips.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202b.s0044",
+          "SY0202b.s0045",
+          "SY0202b.s0051",
+          "SY0202b.s0055"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202b.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202b.f8",
+        "type": "decision",
+        "fact": "The team agreed on email receipts by default, with printing optional.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202b.s0053",
+          "SY0202b.s0055",
+          "SY0202b.s0056",
+          "SY0202b.s0057"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202b.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202b.f9",
+        "type": "decision",
+        "fact": "The team agreed to include one physical help button. It calls staff, holding it switches on audio mode, and all other controls stay on the touchscreen.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202b.s0066",
+          "SY0202b.s0071",
+          "SY0202b.s0072",
+          "SY0202b.s0074",
+          "SY0202b.s0075",
+          "SY0202b.s0076",
+          "SY0202b.s0077",
+          "SY0202b.s0078"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202b.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202b.f10",
+        "type": "plan_change",
+        "fact": "The book shelf height changes from about 90 cm to about 75 to 80 cm, and no controls will be above about 120 cm, to meet the wheelchair accessibility requirements.",
+        "agreed": null,
+        "related_action_item": "SY0202b.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202b.s0030",
+          "SY0202b.s0060",
+          "SY0202b.s0061",
+          "SY0202b.s0062",
+          "SY0202b.s0064"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202b.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202b.f11",
+        "type": "decision",
+        "fact": "The kiosk will offer audio support, with a headphone jack and spoken instructions, for visually impaired borrowers.",
+        "agreed": true,
+        "related_action_item": "SY0202b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202b.s0065",
+          "SY0202b.s0071",
+          "SY0202b.s0084"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202b.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202b.f12",
+        "type": "action_item",
+        "fact": "The industrial designer was first asked to check the RFID pricing.",
+        "agreed": null,
+        "related_action_item": "SY0202b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202b.s0017",
+          "SY0202b.s0018",
+          "SY0202b.s0019"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202b.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202b.f13",
+        "type": "plan_change",
+        "fact": "The RFID pricing task was reassigned from the industrial designer to the marketing expert, because library services already has a supplier price list.",
+        "agreed": null,
+        "related_action_item": "SY0202b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202b.s0092",
+          "SY0202b.s0093",
+          "SY0202b.s0095",
+          "SY0202b.s0096",
+          "SY0202b.s0097",
+          "SY0202b.s0098",
+          "SY0202b.s0099"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202b.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202b.f14",
+        "type": "action_item",
+        "fact": "The absent user interface designer was assigned to update the checkout and renewal flow for the help button, audio mode and print option, and to send round her screens.",
+        "agreed": null,
+        "related_action_item": "SY0202b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202b.s0084",
+          "SY0202b.s0085",
+          "SY0202b.s0088"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202b.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202b.f15",
+        "type": "action_item",
+        "fact": "The marketing expert will email the accessibility requirements to the user interface designer today.",
+        "agreed": null,
+        "related_action_item": "SY0202b.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202b.s0081"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202b.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202b.f16",
+        "type": "action_item",
+        "fact": "The industrial designer will sketch the casing look and materials, using the new heights.",
+        "agreed": null,
+        "related_action_item": "SY0202b.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202b.s0111",
+          "SY0202b.s0112"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202b.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202b.f17",
+        "type": "action_item",
+        "fact": "The project manager will circulate the notes and brief the user interface designer on the button decision.",
+        "agreed": null,
+        "related_action_item": "SY0202b.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202b.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202b.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202b.f18",
+        "type": "unagreed_proposal",
+        "fact": "The industrial designer suggested supporting both barcode and RFID, as the user interface designer had proposed before. This was not decided because the cost is unknown.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0202a",
+        "evidence_segments": [
+          "SY0202b.s0106",
+          "SY0202b.s0107"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202b.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202b.f19",
+        "type": "other",
+        "fact": "The barcode versus RFID decision was left open until the marketing expert has the RFID prices.",
+        "agreed": null,
+        "related_action_item": "SY0202b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202b.s0101",
+          "SY0202b.s0107",
+          "SY0202b.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_REASSIGNED_OR_DROPPED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_REASSIGNED_OR_DROPPED",
+        "segments": [
+          "SY0202b.s0015",
+          "SY0202b.s0017",
+          "SY0202b.s0018",
+          "SY0202b.s0019",
+          "SY0202b.s0091",
+          "SY0202b.s0092",
+          "SY0202b.s0093",
+          "SY0202b.s0095",
+          "SY0202b.s0096",
+          "SY0202b.s0097",
+          "SY0202b.s0098",
+          "SY0202b.s0099"
+        ],
+        "note": "The RFID pricing task is assigned to the industrial designer early in the meeting, then reassigned to the marketing expert because library services already has a supplier price list."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_TASK_TO_ABSENT",
+        "segments": [
+          "SY0202b.s0005",
+          "SY0202b.s0083",
+          "SY0202b.s0084",
+          "SY0202b.s0085",
+          "SY0202b.s0088"
+        ],
+        "note": "The project manager assigns the absent user interface designer, Hannah, to update the checkout flow and send round her screens."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

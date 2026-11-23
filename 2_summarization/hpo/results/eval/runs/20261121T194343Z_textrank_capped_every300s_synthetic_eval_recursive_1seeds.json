@@ -1,0 +1,836 @@
+{
+  "run_id": "20261121T194343Z_textrank_capped_every300s_synthetic_eval_recursive_1seeds",
+  "commit": "7cea72e708d1e24cc2cfda29055cb6507bbf3f94",
+  "uncommitted_changes": [
+    ".gitignore",
+    "1_ingestion/Dockerfile",
+    "1_ingestion/Dockerfile.dockerignore",
+    "2_summarization/bart_summarizer.py",
+    "2_summarization/llm_summarizer.py",
+    "2_summarization/run.py",
+    "2_summarization/settings.py",
+    "2_summarization/tests/test_llm_summarizer.py",
+    "2_summarization/textrank_baseline.py",
+    "5_data/ami/ami.py",
+    "README.md",
+    "docs/SUMMARIZATION.md",
+    "2_summarization/chunks.py",
+    "2_summarization/datasets.py",
+    "2_summarization/hpo/",
+    "2_summarization/tests/test_evaluation.py",
+    "6_evaluation/summarization/disaggregate.py"
+  ],
+  "dataset": "synthetic",
+  "mode": "recursive",
+  "data_hash": "f2af2f66b099d7985070904f3ea9fcf1623134d4f41b25a0b6abdd91a01d0eae",
+  "split_file_sha256": "975f4160185cd1360c4cb4546e0fc717a10ccc1ccd9d6124bf99a85fef464cee",
+  "config": {
+    "model": {
+      "library": "summa",
+      "words": 199,
+      "min_line_words": 16,
+      "chunk_seconds": 300,
+      "buffer": 3.0,
+      "mode": "recursive",
+      "words_scale": 1.0,
+      "clean": false,
+      "speaker_names": true
+    },
+    "mode": "recursive",
+    "seeds": [
+      42
+    ],
+    "pythonhashseed": 42,
+    "bertscore": {
+      "model": "FacebookAI/roberta-large",
+      "revision": "722cf37b1afa9454edce342e7895e588b6ff1d59",
+      "rescale_with_baseline": false
+    },
+    "params_file": "2_summarization/hpo/results/interval_params/textrank_capped_300.json"
+  },
+  "config_hash": "2c8eb9b88e2d",
+  "model": "textrank",
+  "model_version": "summa 1.2.0",
+  "split": "eval",
+  "meetings": [
+    "SY0103a",
+    "SY0103b",
+    "SY0103c",
+    "SY0103d",
+    "SY0110a",
+    "SY0110b",
+    "SY0110c",
+    "SY0110d",
+    "SY0202a",
+    "SY0202b",
+    "SY0202c",
+    "SY0202d",
+    "SY0209a",
+    "SY0209b",
+    "SY0209c",
+    "SY0209d",
+    "SY0304a",
+    "SY0304b",
+    "SY0304c",
+    "SY0304d"
+  ],
+  "meeting_groups": {
+    "SY0103a": {
+      "feature": "F1",
+      "scenario": [
+        "F1_INTERLEAVED_TOPICS",
+        "F1_SARCASM_AS_FACT"
+      ],
+      "absent_participants": 0
+    },
+    "SY0103b": {
+      "feature": "F1",
+      "scenario": [
+        "F1_ABSENT_DISCUSSED",
+        "F1_PLAN_CHANGE"
+      ],
+      "absent_participants": 1
+    },
+    "SY0103c": {
+      "feature": "F1",
+      "scenario": [
+        "F1_OFF_TOPIC_TANGENT",
+        "F1_SELF_CORRECTION"
+      ],
+      "absent_participants": 0
+    },
+    "SY0103d": {
+      "feature": "F1",
+      "scenario": [
+        "F1_INTERLEAVED_TOPICS",
+        "F1_SARCASM_AS_FACT"
+      ],
+      "absent_participants": 0
+    },
+    "SY0110a": {
+      "feature": "F1",
+      "scenario": [
+        "F1_ABSENT_DISCUSSED",
+        "F1_SELF_CORRECTION"
+      ],
+      "absent_participants": 1
+    },
+    "SY0110b": {
+      "feature": "F1",
+      "scenario": [
+        "F1_INTERLEAVED_TOPICS",
+        "F1_PLAN_CHANGE"
+      ],
+      "absent_participants": 0
+    },
+    "SY0110c": {
+      "feature": "F1",
+      "scenario": [
+        "F1_OFF_TOPIC_TANGENT",
+        "F1_SARCASM_AS_FACT"
+      ],
+      "absent_participants": 0
+    },
+    "SY0110d": {
+      "feature": "F1",
+      "scenario": [
+        "F1_ABSENT_DISCUSSED",
+        "F1_SELF_CORRECTION"
+      ],
+      "absent_participants": 1
+    },
+    "SY0202a": {
+      "feature": "F2",
+      "scenario": [
+        "F2_OFFERED_TAKEN_BY_OTHER",
+        "F2_VAGUE_NO_OWNER"
+      ],
+      "absent_participants": 0
+    },
+    "SY0202b": {
+      "feature": "F2",
+      "scenario": [
+        "F2_REASSIGNED_OR_DROPPED",
+        "F2_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0202c": {
+      "feature": "F2",
+      "scenario": [
+        "F2_OFFERED_TAKEN_BY_OTHER",
+        "F2_VAGUE_NO_OWNER"
+      ],
+      "absent_participants": 0
+    },
+    "SY0202d": {
+      "feature": "F2",
+      "scenario": [
+        "F2_REASSIGNED_OR_DROPPED",
+        "F2_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0209a": {
+      "feature": "F2",
+      "scenario": [
+        "F2_OFFERED_TAKEN_BY_OTHER",
+        "F2_VAGUE_NO_OWNER"
+      ],
+      "absent_participants": 0
+    },
+    "SY0209b": {
+      "feature": "F2",
+      "scenario": [
+        "F2_REASSIGNED_OR_DROPPED",
+        "F2_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0209c": {
+      "feature": "F2",
+      "scenario": [
+        "F2_OFFERED_TAKEN_BY_OTHER",
+        "F2_VAGUE_NO_OWNER"
+      ],
+      "absent_participants": 0
+    },
+    "SY0209d": {
+      "feature": "F2",
+      "scenario": [
+        "F2_REASSIGNED_OR_DROPPED",
+        "F2_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0304a": {
+      "feature": "F3",
+      "scenario": [
+        "F3_TASK_TO_ABSENT",
+        "F3_UNAGREED_DECISION"
+      ],
+      "absent_participants": 1
+    },
+    "SY0304b": {
+      "feature": "F3",
+      "scenario": [
+        "F3_ACTION_REMOVED",
+        "F3_UNAGREED_DECISION"
+      ],
+      "absent_participants": 0
+    },
+    "SY0304c": {
+      "feature": "F3",
+      "scenario": [
+        "F3_ACTION_REMOVED",
+        "F3_TASK_TO_ABSENT"
+      ],
+      "absent_participants": 1
+    },
+    "SY0304d": {
+      "feature": "F3",
+      "scenario": [
+        "F3_TASK_TO_ABSENT",
+        "F3_UNAGREED_DECISION"
+      ],
+      "absent_participants": 1
+    }
+  },
+  "metrics_by_group": {
+    "feature": {
+      "groups": {
+        "F1": {
+          "n": 8,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103a",
+            "SY0103b",
+            "SY0103c",
+            "SY0103d",
+            "SY0110a",
+            "SY0110b",
+            "SY0110c",
+            "SY0110d"
+          ],
+          "mean": {
+            "rouge1": 0.4064,
+            "rouge2": 0.1088,
+            "rougeL": 0.2082,
+            "rougeSU4": 0.1394,
+            "bertscore_f1": 0.8388
+          }
+        },
+        "F2": {
+          "n": 8,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202a",
+            "SY0202b",
+            "SY0202c",
+            "SY0202d",
+            "SY0209a",
+            "SY0209b",
+            "SY0209c",
+            "SY0209d"
+          ],
+          "mean": {
+            "rouge1": 0.3946,
+            "rouge2": 0.1086,
+            "rougeL": 0.2131,
+            "rougeSU4": 0.1397,
+            "bertscore_f1": 0.8377
+          }
+        },
+        "F3": {
+          "n": 4,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "SY0304a",
+            "SY0304b",
+            "SY0304c",
+            "SY0304d"
+          ],
+          "mean": {
+            "rouge1": 0.4305,
+            "rouge2": 0.1324,
+            "rougeL": 0.2335,
+            "rougeSU4": 0.1584,
+            "bertscore_f1": 0.8456
+          }
+        }
+      },
+      "gap": {
+        "rouge1": 0.0359,
+        "rouge2": 0.0238,
+        "rougeL": 0.0253,
+        "rougeSU4": 0.019,
+        "bertscore_f1": 0.0079
+      },
+      "worst": {
+        "rouge1": "F2",
+        "rouge2": "F2",
+        "rougeL": "F1",
+        "rougeSU4": "F1",
+        "bertscore_f1": "F2"
+      }
+    },
+    "scenario": {
+      "groups": {
+        "F1_ABSENT_DISCUSSED": {
+          "n": 3,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103b",
+            "SY0110a",
+            "SY0110d"
+          ],
+          "mean": {
+            "rouge1": 0.4357,
+            "rouge2": 0.1252,
+            "rougeL": 0.2263,
+            "rougeSU4": 0.1542,
+            "bertscore_f1": 0.8428
+          }
+        },
+        "F1_INTERLEAVED_TOPICS": {
+          "n": 3,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103a",
+            "SY0103d",
+            "SY0110b"
+          ],
+          "mean": {
+            "rouge1": 0.3676,
+            "rouge2": 0.0962,
+            "rougeL": 0.1863,
+            "rougeSU4": 0.1232,
+            "bertscore_f1": 0.8346
+          }
+        },
+        "F1_OFF_TOPIC_TANGENT": {
+          "n": 2,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103c",
+            "SY0110c"
+          ],
+          "mean": {
+            "rouge1": 0.4207,
+            "rouge2": 0.103,
+            "rougeL": 0.2138,
+            "rougeSU4": 0.1416,
+            "bertscore_f1": 0.8392
+          }
+        },
+        "F1_PLAN_CHANGE": {
+          "n": 2,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103b",
+            "SY0110b"
+          ],
+          "mean": {
+            "rouge1": 0.4276,
+            "rouge2": 0.105,
+            "rougeL": 0.1909,
+            "rougeSU4": 0.1325,
+            "bertscore_f1": 0.8378
+          }
+        },
+        "F1_SARCASM_AS_FACT": {
+          "n": 3,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103a",
+            "SY0103d",
+            "SY0110c"
+          ],
+          "mean": {
+            "rouge1": 0.3765,
+            "rouge2": 0.0966,
+            "rougeL": 0.197,
+            "rougeSU4": 0.126,
+            "bertscore_f1": 0.8346
+          }
+        },
+        "F1_SELF_CORRECTION": {
+          "n": 3,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0103c",
+            "SY0110a",
+            "SY0110d"
+          ],
+          "mean": {
+            "rouge1": 0.4221,
+            "rouge2": 0.1234,
+            "rougeL": 0.2309,
+            "rougeSU4": 0.1574,
+            "bertscore_f1": 0.8437
+          }
+        },
+        "F2_OFFERED_TAKEN_BY_OTHER": {
+          "n": 4,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202a",
+            "SY0202c",
+            "SY0209a",
+            "SY0209c"
+          ],
+          "mean": {
+            "rouge1": 0.3916,
+            "rouge2": 0.1045,
+            "rougeL": 0.21,
+            "rougeSU4": 0.1354,
+            "bertscore_f1": 0.8399
+          }
+        },
+        "F2_REASSIGNED_OR_DROPPED": {
+          "n": 4,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202b",
+            "SY0202d",
+            "SY0209b",
+            "SY0209d"
+          ],
+          "mean": {
+            "rouge1": 0.3975,
+            "rouge2": 0.1128,
+            "rougeL": 0.2163,
+            "rougeSU4": 0.1441,
+            "bertscore_f1": 0.8354
+          }
+        },
+        "F2_TASK_TO_ABSENT": {
+          "n": 4,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202b",
+            "SY0202d",
+            "SY0209b",
+            "SY0209d"
+          ],
+          "mean": {
+            "rouge1": 0.3975,
+            "rouge2": 0.1128,
+            "rougeL": 0.2163,
+            "rougeSU4": 0.1441,
+            "bertscore_f1": 0.8354
+          }
+        },
+        "F2_VAGUE_NO_OWNER": {
+          "n": 4,
+          "n_series": 2,
+          "small": false,
+          "meetings": [
+            "SY0202a",
+            "SY0202c",
+            "SY0209a",
+            "SY0209c"
+          ],
+          "mean": {
+            "rouge1": 0.3916,
+            "rouge2": 0.1045,
+            "rougeL": 0.21,
+            "rougeSU4": 0.1354,
+            "bertscore_f1": 0.8399
+          }
+        },
+        "F3_ACTION_REMOVED": {
+          "n": 2,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "SY0304b",
+            "SY0304c"
+          ],
+          "mean": {
+            "rouge1": 0.4237,
+            "rouge2": 0.1296,
+            "rougeL": 0.2074,
+            "rougeSU4": 0.1545,
+            "bertscore_f1": 0.84
+          }
+        },
+        "F3_TASK_TO_ABSENT": {
+          "n": 3,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "SY0304a",
+            "SY0304c",
+            "SY0304d"
+          ],
+          "mean": {
+            "rouge1": 0.4359,
+            "rouge2": 0.1358,
+            "rougeL": 0.2468,
+            "rougeSU4": 0.1611,
+            "bertscore_f1": 0.8482
+          }
+        },
+        "F3_UNAGREED_DECISION": {
+          "n": 3,
+          "n_series": 1,
+          "small": true,
+          "meetings": [
+            "SY0304a",
+            "SY0304b",
+            "SY0304d"
+          ],
+          "mean": {
+            "rouge1": 0.4297,
+            "rouge2": 0.1308,
+            "rougeL": 0.2377,
+            "rougeSU4": 0.1583,
+            "bertscore_f1": 0.8469
+          }
+        }
+      },
+      "gap": {
+        "rouge1": 0.0683,
+        "rouge2": 0.0396,
+        "rougeL": 0.0605,
+        "rougeSU4": 0.0379,
+        "bertscore_f1": 0.0136
+      },
+      "worst": {
+        "rouge1": "F1_INTERLEAVED_TOPICS",
+        "rouge2": "F1_INTERLEAVED_TOPICS",
+        "rougeL": "F1_INTERLEAVED_TOPICS",
+        "rougeSU4": "F1_INTERLEAVED_TOPICS",
+        "bertscore_f1": "F1_INTERLEAVED_TOPICS"
+      }
+    }
+  },
+  "meetings_hash": "b421b56079cc",
+  "n_seeds": 1,
+  "metrics_mean": {
+    "rouge1": 0.4065,
+    "rouge2": 0.1134,
+    "rougeL": 0.2152,
+    "rougeSU4": 0.1433,
+    "bertscore_f1": 0.8397
+  },
+  "metrics_std": {
+    "rouge1": 0.0,
+    "rouge2": 0.0,
+    "rougeL": 0.0,
+    "rougeSU4": 0.0,
+    "bertscore_f1": 0.0
+  },
+  "metrics_per_seed": {
+    "42": {
+      "rouge1": 0.4065,
+      "rouge2": 0.1134,
+      "rougeL": 0.2152,
+      "rougeSU4": 0.1433,
+      "bertscore_f1": 0.8397
+    }
+  },
+  "identical_across_seeds": true,
+  "seed_variation": {
+    "verdict": "Only one seed was run, so there is no seed variation to measure.",
+    "why": "TextRank (summa) has no random step: PageRank over a sentence-similarity graph, fixed input order. The seed cannot change the summary, so every seed should give the same text and std 0. Each seed sets Python random, NumPy and torch. PYTHONHASHSEED is fixed to the FIRST seed for the whole run.",
+    "seeds": [
+      42
+    ],
+    "metrics": {
+      "rouge1": {
+        "mean": 0.4065,
+        "std": 0.0,
+        "min": 0.4065,
+        "min_seed": 42,
+        "max": 0.4065,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rouge2": {
+        "mean": 0.1134,
+        "std": 0.0,
+        "min": 0.1134,
+        "min_seed": 42,
+        "max": 0.1134,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rougeL": {
+        "mean": 0.2152,
+        "std": 0.0,
+        "min": 0.2152,
+        "min_seed": 42,
+        "max": 0.2152,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "rougeSU4": {
+        "mean": 0.1433,
+        "std": 0.0,
+        "min": 0.1433,
+        "min_seed": 42,
+        "max": 0.1433,
+        "max_seed": 42,
+        "range": 0.0
+      },
+      "bertscore_f1": {
+        "mean": 0.8397,
+        "std": 0.0,
+        "min": 0.8397,
+        "min_seed": 42,
+        "max": 0.8397,
+        "max_seed": 42,
+        "range": 0.0
+      }
+    },
+    "meetings_changed": 0,
+    "meetings_total": 20,
+    "per_meeting": {}
+  },
+  "seconds_per_meeting": 0.022,
+  "python": "3.12.10",
+  "packages": {
+    "summa": "1.2.0",
+    "rouge-score": "0.1.2",
+    "numpy": "2.5.4",
+    "torch": "2.14.1",
+    "transformers": "5.20.2",
+    "bert-score": "0.3.13",
+    "anthropic": "1.17.0"
+  },
+  "hardware": {
+    "machine": "AMD64",
+    "system": "Windows-11-10.0.26200-SP0",
+    "cpus": 16
+  },
+  "per_seed_runs": {
+    "42": {
+      "scores": {
+        "rouge1": 0.4065,
+        "rouge2": 0.1134,
+        "rougeL": 0.2152,
+        "rougeSU4": 0.1433,
+        "bertscore_f1": 0.8397
+      },
+      "per_meeting": {
+        "SY0103a": {
+          "rouge1": 0.30150753768844224,
+          "rouge2": 0.0606060606060606,
+          "rougeL": 0.1457286432160804,
+          "rougeSU4": 0.08481764206955046,
+          "bertscore_f1": 0.83109450340271
+        },
+        "SY0103b": {
+          "rouge1": 0.4359550561797753,
+          "rouge2": 0.09029345372460497,
+          "rougeL": 0.19325842696629214,
+          "rougeSU4": 0.12196969696969696,
+          "bertscore_f1": 0.8338907361030579
+        },
+        "SY0103c": {
+          "rouge1": 0.3952941176470589,
+          "rouge2": 0.0851063829787234,
+          "rougeL": 0.20705882352941177,
+          "rougeSU4": 0.13174603174603175,
+          "bertscore_f1": 0.8364927768707275
+        },
+        "SY0103d": {
+          "rouge1": 0.3820224719101124,
+          "rouge2": 0.10835214446952596,
+          "rougeL": 0.2247191011235955,
+          "rougeSU4": 0.14166666666666666,
+          "bertscore_f1": 0.8307925462722778
+        },
+        "SY0110a": {
+          "rouge1": 0.46354166666666674,
+          "rouge2": 0.1518324607329843,
+          "rougeL": 0.23437500000000003,
+          "rougeSU4": 0.17502198768689536,
+          "bertscore_f1": 0.8458016514778137
+        },
+        "SY0110b": {
+          "rouge1": 0.41923076923076924,
+          "rouge2": 0.11969111969111969,
+          "rougeL": 0.18846153846153849,
+          "rougeSU4": 0.143042071197411,
+          "bertscore_f1": 0.8417860269546509
+        },
+        "SY0110c": {
+          "rouge1": 0.44611528822055135,
+          "rouge2": 0.12090680100755667,
+          "rougeL": 0.22055137844611528,
+          "rougeSU4": 0.1514382402707276,
+          "bertscore_f1": 0.8419969081878662
+        },
+        "SY0110d": {
+          "rouge1": 0.4075829383886255,
+          "rouge2": 0.13333333333333333,
+          "rougeL": 0.25118483412322273,
+          "rougeSU4": 0.16546762589928057,
+          "bertscore_f1": 0.8487988710403442
+        },
+        "SY0202a": {
+          "rouge1": 0.3911845730027548,
+          "rouge2": 0.0886426592797784,
+          "rougeL": 0.1928374655647383,
+          "rougeSU4": 0.12662942271880823,
+          "bertscore_f1": 0.8419564962387085
+        },
+        "SY0202b": {
+          "rouge1": 0.3786407766990291,
+          "rouge2": 0.10243902439024391,
+          "rougeL": 0.17475728155339806,
+          "rougeSU4": 0.12694512694512694,
+          "bertscore_f1": 0.8382912874221802
+        },
+        "SY0202c": {
+          "rouge1": 0.40952380952380957,
+          "rouge2": 0.1291866028708134,
+          "rougeL": 0.2285714285714286,
+          "rougeSU4": 0.151004016064257,
+          "bertscore_f1": 0.8340309858322144
+        },
+        "SY0202d": {
+          "rouge1": 0.42105263157894735,
+          "rouge2": 0.11699164345403901,
+          "rougeL": 0.23268698060941828,
+          "rougeSU4": 0.15636704119850187,
+          "bertscore_f1": 0.8419063091278076
+        },
+        "SY0209a": {
+          "rouge1": 0.3355263157894737,
+          "rouge2": 0.0662251655629139,
+          "rougeL": 0.17763157894736842,
+          "rougeSU4": 0.09810479375696768,
+          "bertscore_f1": 0.8325855135917664
+        },
+        "SY0209b": {
+          "rouge1": 0.40771349862258954,
+          "rouge2": 0.11634349030470913,
+          "rougeL": 0.24242424242424243,
+          "rougeSU4": 0.14525139664804468,
+          "bertscore_f1": 0.839937150478363
+        },
+        "SY0209c": {
+          "rouge1": 0.4301075268817204,
+          "rouge2": 0.13390928725701945,
+          "rougeL": 0.24086021505376345,
+          "rougeSU4": 0.16594202898550728,
+          "bertscore_f1": 0.8508897423744202
+        },
+        "SY0209d": {
+          "rouge1": 0.38277511961722493,
+          "rouge2": 0.11538461538461538,
+          "rougeL": 0.21531100478468904,
+          "rougeSU4": 0.14769975786924938,
+          "bertscore_f1": 0.821643590927124
+        },
+        "SY0304a": {
+          "rouge1": 0.4615384615384615,
+          "rouge2": 0.1333333333333333,
+          "rougeL": 0.25994694960212195,
+          "rougeSU4": 0.16756272401433694,
+          "bertscore_f1": 0.8634224534034729
+        },
+        "SY0304b": {
+          "rouge1": 0.4144144144144144,
+          "rouge2": 0.12217194570135746,
+          "rougeL": 0.19369369369369369,
+          "rougeSU4": 0.15034168564920275,
+          "bertscore_f1": 0.8380376696586609
+        },
+        "SY0304c": {
+          "rouge1": 0.4329411764705882,
+          "rouge2": 0.13711583924349882,
+          "rougeL": 0.2211764705882353,
+          "rougeSU4": 0.15873015873015872,
+          "bertscore_f1": 0.8419026136398315
+        },
+        "SY0304d": {
+          "rouge1": 0.4131868131868131,
+          "rouge2": 0.1368653421633554,
+          "rougeL": 0.2593406593406593,
+          "rougeSU4": 0.15703703703703706,
+          "bertscore_f1": 0.8391282558441162
+        }
+      },
+      "predictions": {
+        "SY0103a": "Project Manager: So the idea is you're cooking, your hands are covered in flour or whatever, and you just say set ten minutes. Project Manager: Getting to know each other, which we've sort of done, the budget, and then just some first ideas. User Interface Designer: Does it have to recognise speech on the device itself or could it, like, use your phone? Industrial Designer: Yeah, but then you need the phone near you, and it's in your pocket with flour all over it. Project Manager: But that goes back to the money though, because that chip has to fit in twelve fifty. Industrial Designer: Yeah. I mean the simple command chips aren't that expensive, I think maybe three, four euros. User Interface Designer: How does it know you're talking to it? Like, the radio's on, people are chatting in the kitchen. User Interface Designer: Like if you say ten minutes, it says 'ten minutes, started' so you know it heard. Project Manager: Tomasz, can you look at the components, the speech chip, mic, speaker, and the power question?",
+        "SY0103b": "User Interface Designer: I think people definitely want more than one, like if you're doing pasta and a sauce at the same time. User Interface Designer: And my idea was you name them, so you'd say the wake word and then 'set a pasta timer for ten minutes'. User Interface Designer: And maybe 'add a minute', because that's something you do a lot, like when the rice isn't ready. User Interface Designer: And then the spoken feedback, I've kept it really short, like 'ten minutes, set', 'stopped', 'four minutes left'. Marketing Expert: But can I do the user research bit first, 'cause it sort of affects the timers thing too. Marketing Expert: So I looked at reviews of kitchen timers online, and, um, talked to a few people who cook a lot. Marketing Expert: But the third thing, and this is the timers bit, um, people with multi-timer devices said they get confused which one's going off. User Interface Designer: Because if people can say any name, that's not a fixed command set anymore, the chip would have to recognise arbitrary words. Project Manager: I'll tell him we switched to two numbered timers, and ask him to check the chip can handle the commands.",
+        "SY0103c": "Project Manager: And last time we settled on two timers, timer one and timer two, and Kiko as the working wake word. Industrial Designer: The one I looked at takes a custom wake word plus up to about twenty commands. Industrial Designer: So set, stop, how long left, cancel, add a minute, times two timers, that's fine, we're well under. Industrial Designer: Because the chip, when it's always listening for the wake word, it draws quite a lot. Marketing Expert: I think it helps the gift thing too. User Interface Designer: Like \"Kiko, set timer one for ten minutes,\" and it says back \"Timer one, ten minutes.\". Industrial Designer: And the laptop tool's not the real thing. Project Manager: Yeah, I'd keep Kiko. Marketing Expert: The main competition is really smart speakers, which do timers, but those are fifty euros plus and they need wifi. Marketing Expert: And a lot of reviews complain about them, you know, always being connected, the privacy thing. Project Manager: For next time it'd be great to have a rough model. Project Manager: Priya, the command list to everyone, and work out what the display shows with two timers and how the button behaves.",
+        "SY0103d": "Industrial Designer: Yeah, they did. Industrial Designer: They retrained the wake word model with cocoa and, uh, a few similar ones, like kiwi and cookie. Industrial Designer: Yeah, so here it is. Industrial Designer: The whole top is the button, like we said, and the display sits in this little window in the middle. Industrial Designer: I think it needs a rubber ring on the bottom, like little feet, so it grips. User Interface Designer: With two timers running, my idea was it shows timer one, and you double-press the button to see timer two. Industrial Designer: And it's a soft rubber top, a double press on that is, uh, not very crisp. Marketing Expert: The orange and the lime tested best, people said they look like a kitchen gadget, not like a, um, a medical thing. User Interface Designer: Like three seconds timer one, three seconds timer two, with a little dot lit when it's showing timer two. User Interface Designer: Yeah, drop it. User Interface Designer: Yes, voice for everything, and the button's the whole top so you can hit it with an elbow. Industrial Designer: The speaker goes up to about eighty-five decibels, and it ramps up like we agreed in the second meeting.",
+        "SY0110a": "Project Manager: So the idea is, the customer pays a small deposit when they buy their coffee, they take the cup away, and they bring it back to any partner cafe and get the deposit back. Project Manager: To the cafes. Project Manager: Sorry, no, I mean three euros. User Interface Designer: Hmm. If it costs nearly three to make and the deposit's one, people losing cups is a problem for the cafes. Project Manager: And the other target is, um, they want it in fifty partner cafes in the first year. Project Manager: Mine's a double espresso, which is, uh, probably not the best customer for a big cup. User Interface Designer: Like, does the customer just hand it over the counter, or is there a machine, or an app, or what. User Interface Designer: I was thinking maybe an app that tracks your cups, with a QR code on the bottom. Project Manager: Jonas, can you look at the return process? Project Manager: I'll ask her to talk to cafe owners at the fair, see if they'd join a deposit system and what they'd want from it. Project Manager: Uh, I think ours, at least partly.",
+        "SY0110b": "Industrial Designer: Stainless steel is lovely, it lasts forever, but we're looking at about three eighty a cup. User Interface Designer: I looked at how the bottle deposit works in supermarkets, and a couple of the cup schemes that are already running in Germany. User Interface Designer: The bottle machines are great for the customer, but a machine is like a few thousand euros. User Interface Designer: The cup schemes mostly just do it at the counter. User Interface Designer: Yeah, that's the whole point, you can take it from one cafe and return it at another. User Interface Designer: And I've parked the app. Marketing Expert: If a customer keeps the cup they lose a euro, but the cafe has lost a cup that cost more than that. Industrial Designer: Or we could just make the deposit two euros, then the cafe's never out of pocket. User Interface Designer: What about, um, a return machine in the busier cafes? User Interface Designer: I was thinking a sticker in the window, like a partner badge, and the same logo on the cup. Marketing Expert: There was an owner at the fair, she runs Caf\u00e9 Lindner, and she said she'd happily test cups in her dishwasher.",
+        "SY0110c": "Industrial Designer: But, um, the logo. Industrial Designer: The main alternative is in-mould labelling. Marketing Expert: And the logo is really important for the cafes, that was the number one thing in my notes. Industrial Designer: So I'd suggest a ribbed band moulded round the middle, so you've got a grip and you don't need a cardboard sleeve. Industrial Designer: The thing is, a second size means a second mould, and the rim might not be ninety mill anymore. Marketing Expert: Hmm, but the cups go from cafe to cafe. Marketing Expert: I'd go for one neutral base colour so the logo stands out. User Interface Designer: The customer brings the cup to any partner cafe and hands it over at the counter. User Interface Designer: Staff do a quick check, just that it's not cracked, and they give the euro back. User Interface Designer: And here's the badge. Project Manager: Okay, so the badge in slate grey with the matching logo, and Jonas makes the logo bigger. Industrial Designer: Well, easy, we just put a GPS tracker in every cup. Industrial Designer: Yeah, I'll ask the moulding company for a quote on the three hundred mil cup with both.",
+        "SY0110d": "Project Manager: Yeah. Industrial Designer: For the three hundred mil cup with the in-mould label and the ribbed band, it's one forty-five per cup. Industrial Designer: If the cup costs one fifty-four and the deposit's one euro, a cafe loses fifty-four cents on every cup that doesn't come back. Project Manager: Which actually brings me to my bit, because I took that to management, like I said I would last time. Project Manager: But it's paid for with a partner fee, so each cafe pays five euros a month. Marketing Expert: And at the fair most of the owners said a small fee is fine, as long as they're not losing money on cups. Marketing Expert: He liked it. Marketing Expert: So I've added that. Marketing Expert: He said it looks a bit darker under their warm lights, but he actually preferred that, it looks less like plastic. Project Manager: Then the badge. Project Manager: So what I'll do is send him the minutes and ask him to do the print file for the badge once he's better. Industrial Designer: They said six weeks for the mould, then about two weeks for the first ten thousand.",
+        "SY0202a": "Project Manager: Um, the plan for today is, first, quick introductions, then I'll go through what the project actually is,. Project Manager: and then we'll do a bit of first-round ideas and hand out tasks for next time. Project Manager: Um, the client is mainly public library networks, so like city libraries with lots of branches. Project Manager: Sort of, yeah. Project Manager: and they want to sell it at around six and a half thousand to the libraries. Project Manager: And the brief says it should fit the library's look, so not something that looks like a cash machine. User Interface Designer: Like if you've got a book at home and you want to extend it, you could do that there. Marketing Expert: Maybe also a phone, like the library app, a lot of them have a digital card now. Project Manager: Yeah. Industrial Designer: Touchscreen's fine, but, uh, for a kiosk I'd want at least one hardware button, like a cancel or a help. Project Manager: Tomas, can you look at the working design? Project Manager: And I'll send round the project brief and the notes from today, so you've got the numbers.",
+        "SY0202b": "Project Manager: Uh, first thing, I did send round the brief and the notes from last time, hopefully you both got those. Project Manager: And then there were a few things we left open. Marketing Expert: Main thing for borrowers is speed. Marketing Expert: And a lot of older borrowers don't have email set up with the library, or don't want it. Marketing Expert: Staff said something like a third of borrowers still ask for a printed slip with the due dates. Marketing Expert: And then for visually impaired borrowers they want audio, so a headphone jack and spoken instructions. Marketing Expert: And, this is the button thing, they really want at least one physical button. Marketing Expert: They said a help button that calls staff, and that also, like, switches on the audio mode if you hold it. Project Manager: Priya, did you send the accessibility list to Hannah yet? Project Manager: Hannah needs to update the checkout and renewal flow for all this, the help button, audio mode, and the print option at the end. Project Manager: So Hannah, update the flow with today's changes and send round the screens before the next meeting.",
+        "SY0202c": "User Interface Designer: I mean, I was the one who wanted no buttons at all, but honestly I think one help button is fine. Industrial Designer: Someone should probably check what it'd cost to tag the stock in those four branches though, at some point. Industrial Designer: All three use the new heights, with the shelf at seventy-eight and the screen centre at about a hundred and ten. Industrial Designer: And the third is basically a box with wood panels, closest to what I costed last time. User Interface Designer: In step two you put your whole stack on the pad and it reads them all at once. User Interface Designer: And if a book has no tag, the screen says scan the barcode and you use the scanner. User Interface Designer: Renewals is a button on the home screen after you log in. User Interface Designer: And for the help button, a short press calls staff, and the screen shows someone is coming. User Interface Designer: One more thing. Project Manager: Priya, could you put together the evaluation criteria, so we can check the design against the user requirements next time?",
+        "SY0202d": "Project Manager: Hannah's not with us today, she's at the library tech conference in Leeds, she sent her apologies. Project Manager: But she did email me her final screens last night, so I'll go through those for her. Project Manager: Um, agenda. Industrial Designer: Yeah. Project Manager: I'll give that to her, she can rework the layouts and send the final set to library services for sign-off. Industrial Designer: So Hannah did send me the list of what audio mode has to read out, before she left. Industrial Designer: And I looked at boards. Project Manager: She's done the barcode fallback, so if a book isn't picked up on the pad there's a red outline and it says scan this book below. Marketing Expert: So I built the criteria from the library services requirements, seven criteria, scored one to seven. Marketing Expert: Library look, seven. Industrial Designer: Should we, um, put an LED ring round the help button? Project Manager: Tomas, can you write up the component spec, the board, the engine, the screen, for the final report? Project Manager: And I'll write the final report with the cost breakdown and send it round, and brief Hannah on Monday.",
+        "SY0209a": "Project Manager: But the idea is it should feel like part of the product, not just, you know, a cover. Project Manager: Um, so the agenda is, I'll go through the project aim, then we get a bit of a feel for each other's ideas, and then I'll hand out tasks for next time. Marketing Expert: I'd stick with it for now, uh, it's the parents buying it, not really the kids. User Interface Designer: I could look into the drop tests, like what heights the other cases are rated for. Project Manager: Tomasz, could you find out what parents and teachers actually want from a case like this? Project Manager: Priya, you look at the functional side, how the kid actually uses it, the handle, buttons, ports, that kind of thing. User Interface Designer: Just, maybe we could do a name tag thing, like a little window for the kid's name?",
+        "SY0209b": "Project Manager: Right, so the plan is, um, Priya you've got the functional side, Ben you've got drop tests and materials. Project Manager: Um, Priya, could you have a look at that? Project Manager: Um, he said the main thing parents mentioned was dropping, and, uh, sticky fingers, so cleaning. Industrial Designer: So, um, I looked at three things really, silicone, EVA foam, and hard plastic shells, polycarbonate. Industrial Designer: And EVA foam is what most kids' cases use, it's light, it's thick, it's cheap, I got about two to three euros a unit for the moulded body. Industrial Designer: So I'd go with EVA foam for the body, and thick corners, like we said at the kickoff. User Interface Designer: Um, I'd say covered for the power and volume, like the foam has a little bump you press through, and open for the charging port. User Interface Designer: I'd rather have a fixed handle moulded into the foam, and if they want a stand, the back could just have, like, a wedge shape. Project Manager: Ben, could you get a rough cost for the whole case in EVA, with the handle and the lip?",
+        "SY0209c": "Project Manager: And then we need to sort out the things we put off last time, the wedge back, the name tag, and colours. Marketing Expert: So the survey, I've now got thirty-one responses, so a lot more than the dozen you had last time. Marketing Expert: And the teachers, um, six of the eight said they need some way to tell the cases apart in a classroom. Marketing Expert: Kids' tablet cases go from about twelve euros for the really cheap ones up to about thirty. Industrial Designer: So I got the supplier quote for the whole EVA case, with the handle and the raised lip moulded in. Industrial Designer: That's one colour though. A second colour is another mould run, they said it adds about thirty cents a case. User Interface Designer: The handle's along the top edge, it's just a loop moulded into the foam, so there's no moving parts. User Interface Designer: I still think we should do it. Industrial Designer: I asked the supplier, actually. Industrial Designer: They might be able to mould a pocket into the foam and just add a clear film. Marketing Expert: I'd say yes.",
+        "SY0209d": "Project Manager: Both under, yeah. User Interface Designer: Yeah, I tried it with a book propped at that angle, it's fine on a table. User Interface Designer: Then the name tag pocket goes here, in the middle of the back, just below the handle. User Interface Designer: Yeah, the camera cut-out is top left, so the pocket sits to the right of it and lower down. User Interface Designer: Um, and I made it landscape so the name reads the right way round when it's carried by the handle. User Interface Designer: Yeah, the back faces out to the side, so someone across the classroom can read the name. User Interface Designer: And the front's the same as before. User Interface Designer: No, the wedge is on the back face and the port is on the edge, so the cable still goes straight in. User Interface Designer: I'd say we keep the pocket on the back rather than the front, because the front is mostly screen anyway. User Interface Designer: The foam wipes down, but with the film on the pocket, dirt might get in at the edge. User Interface Designer: Yeah, and honestly I'd have to ask Ben for the supplier contact anyway, I don't have it.",
+        "SY0304a": "Project Manager: Um, Marcus isn't with us today, he's, uh, he's at the supplier visit for the other project. Project Manager: Great. Project Manager: Um, we've been asked by the university estates office to design a parking availability display for the campus. Project Manager: So the idea is, at the entrance to each car park, there's a sign that tells you how many spaces are free. Project Manager: And possibly a sort of central one near the main gate that shows all the lots. Project Manager: Uh, the brief says at least the lot entrances. Marketing Expert: Like if it says three spaces, you know you might not get one by the time you get there. Project Manager: He can look into the sensing options, barrier counters versus bay sensors, and roughly what each costs per unit, for next time. Project Manager: And also the casing, whether it'll survive outdoors, rain and so on, I'll add that for him. Project Manager: Let's keep it to the signs for now, and maybe flag the app as a later idea. Project Manager: I'll send round the minutes and the brief today, and I'll copy Marcus in with his bit.",
+        "SY0304b": "Industrial Designer: Barrier counters, which is a loop in the road at the entrance and exit, counts cars in and out. Industrial Designer: But yeah, the drift thing is real, if someone tailgates through the barrier it misses a car. Industrial Designer: Supplier reckoned a few cars a day, so over a week it could be off by twenty or thirty. Industrial Designer: Each bay, yeah, so the library car park is a hundred and eighty bays, that's over five grand. Project Manager: Marcus, could you get a proper quote on the per-bay ones for just the library car park, so we've got an actual number? User Interface Designer: And all three have the number in the middle with the colour behind it, like we said. User Interface Designer: One has the car park name on top, one has an arrow, one is just the number. Industrial Designer: And I'd say do it as an LED number, not a proper screen, LCDs are awful in sunlight. User Interface Designer: Right, but this is what I was trying to say, the library car parks are underground. Industrial Designer: But it'd need data from every car park, so cabling or some kind of wireless link.",
+        "SY0304c": "Project Manager: So it's just the three of us. Project Manager: Okay. Project Manager: So I asked estates about the central sign by the main gate, like we said last week. Project Manager: So I think we leave the central sign out of this phase. Project Manager: No, we didn't, Marcus was starting to object last time and then we moved on to power. Project Manager: Um, Tom, could you do a version with the flashing and one without, so we can compare them properly next time? Project Manager: He went round with estates, and there's a supply at the barrier at four of the five car parks. Project Manager: It's the library, yeah, the underground one. Project Manager: So they'd need to run a new supply down there, and we don't know what that costs. Project Manager: Um, and on the casing, he's gone for the IP65 one he talked about last time, aluminium, powder coated. Project Manager: I want Marcus to get a quote from an electrician for running the new supply at the library car park. Project Manager: Okay, so rough cost. Project Manager: Maybe at the end of the project, if there's time.",
+        "SY0304d": "Project Manager: But he did send me his final layout last night, so I'll show that in a bit. Project Manager: Um, I did email you after the last meeting about the electrician quote and the mounting. Project Manager: So, agenda, um, Marcus first with the electrics and the mounting, then Tom's layout, then costs, and then we evaluate it against what Priya found in the surveys. Project Manager: I asked estates whether they'd pay for the library electrics separately, like we said last time. Project Manager: Yeah. Project Manager: Okay, so that's decided then, post for the four outside ones, wall bracket in the library. Project Manager: Navy strip on top with the car park name in white, P symbol on the left of it. Project Manager: So I'll put Tom down for the five print-ready files for the name strips, to the supplier's spec, by end of next week. Project Manager: Okay, um, let's come back to costs actually, because I want to get the total done. Project Manager: Marcus, you're sending the final spec to the supplier, casing, posts, bracket, and the LED panels. Project Manager: And I'll write up the minutes and the final design report and send it to the estates office."
+      },
+      "seconds": 0.4339717999100685
+    }
+  }
+}

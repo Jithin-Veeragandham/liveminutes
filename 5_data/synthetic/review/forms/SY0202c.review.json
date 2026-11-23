@@ -1,0 +1,1344 @@
+{
+  "meeting_id": "SY0202c",
+  "raw_sha256": "25e94df3c213fa0b9ed8b37c8e4896217ab1690f9a9c8bfd00c988b64d31d4da",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the conceptual design meeting, welcomed back the user interface designer, and recapped the functional design decisions on email receipts, the help button and the accessible heights. The user interface designer said she accepted the single hardware help button, and the marketing expert confirmed she had sent her the accessibility requirements.",
+        "The marketing expert reported the supplier's RFID prices: about 700 euros for a reader pad and about ten cents per tag. She added that four branches are still barcode-only, so the team decided to fit an RFID pad with a barcode scanner as a fallback.",
+        "The industrial designer presented three casing sketches at the new accessible heights. The team chose the low desk-shaped design with a tilted screen and an oak veneer over MDF with aluminium corner edging, rather than solid oak, which brings the estimate to about 3,270 euros.",
+        "The user interface designer presented the revised flow: card or QR login, stack reading on the RFID pad with a barcode fallback, renewals from the home screen, email receipts with an optional printed slip, and the help button with short and long presses.",
+        "The user interface designer offered to research text-to-speech engines, but the industrial designer took that task because it depends on the embedded PC choice. Tasks were then assigned for the detailed design meeting."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will research text-to-speech engine options together with the choice of embedded PC board. The user interface designer had first offered to do this.",
+        "The user interface designer will send the industrial designer the list of items the audio mode has to read out.",
+        "The industrial designer will build a foam-board mock-up of the desk-shaped kiosk at the real heights.",
+        "The user interface designer will finalise the screens, including the barcode fallback and the audio script.",
+        "The marketing expert will prepare evaluation criteria based on the library services user requirements.",
+        "The project manager will update the cost breakdown with the RFID pad and the veneer casing and circulate it with the meeting notes.",
+        "Someone should check what it would cost to RFID-tag the stock in the four barcode-only branches, but no one took this task."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The kiosk will have both an RFID reader pad and a barcode scanner as a fallback.",
+        "The casing will follow the second sketch: a low desk shape with the screen tilted back about thirty degrees.",
+        "The casing will use oak veneer over MDF with aluminium corner edging instead of solid oak, bringing the estimated cost to about 3,270 euros."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The cost of tagging the stock in the four barcode-only branches is unknown, and no one is assigned to check it.",
+        "The screen size is still open. The user interface designer wants nineteen inches, and it stays at fifteen inches until the mock-up is reviewed.",
+        "The cost and licensing of the text-to-speech engine are unknown until the embedded PC board is chosen."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202c.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202c.ai1",
+        "description": "Research text-to-speech engine options for the audio mode, together with the embedded PC board choice",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202c.s0091",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0202c.s0094",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0202c.s0096",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0202c.s0097",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0202c.s0108",
+            "event": "restated",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202c.s0089",
+          "SY0202c.s0090",
+          "SY0202c.s0091",
+          "SY0202c.s0092",
+          "SY0202c.s0093",
+          "SY0202c.s0094",
+          "SY0202c.s0095",
+          "SY0202c.s0096",
+          "SY0202c.s0097",
+          "SY0202c.s0108"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202c.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202c.ai2",
+        "description": "Check what it would cost to RFID-tag the stock in the four barcode-only branches",
+        "owner": null,
+        "owner_unclear": true,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202c.s0039",
+            "event": "proposed",
+            "by": "A",
+            "owner": null
+          }
+        ],
+        "evidence_segments": [
+          "SY0202c.s0029",
+          "SY0202c.s0030",
+          "SY0202c.s0039",
+          "SY0202c.s0040",
+          "SY0202c.s0041",
+          "SY0202c.s0042"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202c.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202c.ai3",
+        "description": "Send the industrial designer the list of items the audio mode must read out",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202c.s0098",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202c.s0098",
+          "SY0202c.s0099"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202c.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202c.ai4",
+        "description": "Build a foam-board mock-up of the desk-shaped kiosk at the real heights",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202c.s0106",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0202c.s0107",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202c.s0106",
+          "SY0202c.s0107"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202c.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202c.ai5",
+        "description": "Finalise the screens, including the barcode fallback and the audio script",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202c.s0109",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0202c.s0110",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202c.s0109",
+          "SY0202c.s0110"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202c.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202c.ai6",
+        "description": "Prepare evaluation criteria based on the library services user requirements",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202c.s0111",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0202c.s0112",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202c.s0111",
+          "SY0202c.s0112"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202c.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202c.ai7",
+        "description": "Update the cost breakdown with the RFID pad and veneer casing and circulate it with the meeting notes",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202c.s0113",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202c.s0113"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f1",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recapped the functional design decisions for the user interface designer, who had been absent: email receipts by default with optional printing, one help button, and the lowered shelf height.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0202b",
+        "evidence_segments": [
+          "SY0202c.s0007",
+          "SY0202c.s0008",
+          "SY0202c.s0009",
+          "SY0202c.s0010"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer, who proposed an all-touchscreen interface in the kickoff, said she now accepts the single hardware help button.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0202a",
+        "evidence_segments": [
+          "SY0202c.s0011",
+          "SY0202c.s0012",
+          "SY0202c.s0013"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f3",
+        "type": "other",
+        "fact": "The marketing expert confirmed she had emailed the accessibility requirements to the user interface designer, who has used them in the screens.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0202b",
+        "evidence_segments": [
+          "SY0202c.s0015",
+          "SY0202c.s0016",
+          "SY0202c.s0017"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f4",
+        "type": "other",
+        "fact": "The supplier's RFID reader pad costs about 700 euros per unit, including the antenna, and tags cost about ten cents each.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202c.s0024",
+          "SY0202c.s0025",
+          "SY0202c.s0026",
+          "SY0202c.s0027"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f5",
+        "type": "other",
+        "fact": "Four library branches are still barcode-only and their stock is not RFID-tagged.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202c.s0028",
+          "SY0202c.s0029",
+          "SY0202c.s0030"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f6",
+        "type": "decision",
+        "fact": "The kiosk will have both an RFID reader pad and a barcode scanner as a fallback.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202c.s0031",
+          "SY0202c.s0032",
+          "SY0202c.s0043",
+          "SY0202c.s0044",
+          "SY0202c.s0045",
+          "SY0202c.s0046",
+          "SY0202c.s0047"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f7",
+        "type": "decision",
+        "fact": "The casing will use the desk-shaped second sketch, with the screen tilted back about thirty degrees.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202c.s0053",
+          "SY0202c.s0055",
+          "SY0202c.s0056",
+          "SY0202c.s0057",
+          "SY0202c.s0058",
+          "SY0202c.s0059",
+          "SY0202c.s0072"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f8",
+        "type": "unagreed_proposal",
+        "fact": "The industrial designer proposed keeping solid oak panels for the casing at about 900 euros; the team chose veneer instead.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202c.s0061",
+          "SY0202c.s0062",
+          "SY0202c.s0063"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f9",
+        "type": "decision",
+        "fact": "The casing will be oak veneer over MDF, about 550 euros, with aluminium corner edging of about 20 euros.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202c.s0064",
+          "SY0202c.s0066",
+          "SY0202c.s0067",
+          "SY0202c.s0068",
+          "SY0202c.s0069",
+          "SY0202c.s0070",
+          "SY0202c.s0071",
+          "SY0202c.s0072"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f10",
+        "type": "plan_change",
+        "fact": "The casing material changed from solid oak panels to oak veneer over MDF with aluminium edging.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202c.s0061",
+          "SY0202c.s0064",
+          "SY0202c.s0069",
+          "SY0202c.s0071"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f11",
+        "type": "other",
+        "fact": "With the RFID pad and the veneer casing, the estimated production cost is about 3,270 euros, which is under the 4,000-euro target.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202c.s0034",
+          "SY0202c.s0035",
+          "SY0202c.s0036",
+          "SY0202c.s0037",
+          "SY0202c.s0073",
+          "SY0202c.s0074",
+          "SY0202c.s0075"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f12",
+        "type": "plan_change",
+        "fact": "The checkout flow changed from scanning books one at a time to placing the whole stack on the RFID pad, with a barcode scan only for untagged books.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202c.s0078",
+          "SY0202c.s0079",
+          "SY0202c.s0080",
+          "SY0202c.s0081",
+          "SY0202c.s0082"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f13",
+        "type": "other",
+        "fact": "In the flow, a short press of the help button calls staff, and a long press of about two seconds starts audio mode.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202c.s0087",
+          "SY0202c.s0088"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f14",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer proposed a nineteen-inch screen. It was not agreed because of reach and cost, and the screen stays at fifteen inches until the mock-up is reviewed.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202c.s0100",
+          "SY0202c.s0101",
+          "SY0202c.s0102",
+          "SY0202c.s0103",
+          "SY0202c.s0104",
+          "SY0202c.s0114",
+          "SY0202c.s0115"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f15",
+        "type": "action_item",
+        "fact": "The industrial designer will research text-to-speech engines together with the PC board; the user interface designer had first offered to do this.",
+        "agreed": null,
+        "related_action_item": "SY0202c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202c.s0091",
+          "SY0202c.s0094",
+          "SY0202c.s0096",
+          "SY0202c.s0097"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f16",
+        "type": "action_item",
+        "fact": "Someone should check the cost of tagging the stock in the barcode-only branches, but no one took the task.",
+        "agreed": null,
+        "related_action_item": "SY0202c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202c.s0039",
+          "SY0202c.s0040",
+          "SY0202c.s0041",
+          "SY0202c.s0042"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f17",
+        "type": "action_item",
+        "fact": "The user interface designer will send the industrial designer the list of items the audio mode must read out.",
+        "agreed": null,
+        "related_action_item": "SY0202c.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202c.s0098"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f18",
+        "type": "action_item",
+        "fact": "The industrial designer will build a foam-board mock-up of the desk version at the real heights.",
+        "agreed": null,
+        "related_action_item": "SY0202c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202c.s0106",
+          "SY0202c.s0107"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f19",
+        "type": "action_item",
+        "fact": "The user interface designer will finalise the screens, including the barcode fallback and the audio script.",
+        "agreed": null,
+        "related_action_item": "SY0202c.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202c.s0109",
+          "SY0202c.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f20",
+        "type": "action_item",
+        "fact": "The marketing expert will prepare evaluation criteria based on the user requirements.",
+        "agreed": null,
+        "related_action_item": "SY0202c.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202c.s0111",
+          "SY0202c.s0112"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202c.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202c.f21",
+        "type": "action_item",
+        "fact": "The project manager will update the cost breakdown and circulate it with the notes.",
+        "agreed": null,
+        "related_action_item": "SY0202c.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202c.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_VAGUE_NO_OWNER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_VAGUE_NO_OWNER",
+        "segments": [
+          "SY0202c.s0039",
+          "SY0202c.s0040",
+          "SY0202c.s0041",
+          "SY0202c.s0042",
+          "SY0202c.s0043"
+        ],
+        "note": "The industrial designer says someone should check the cost of tagging the four barcode-only branches; no one takes it and the project manager moves on."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_OFFERED_TAKEN_BY_OTHER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_OFFERED_TAKEN_BY_OTHER",
+        "segments": [
+          "SY0202c.s0091",
+          "SY0202c.s0092",
+          "SY0202c.s0093",
+          "SY0202c.s0094",
+          "SY0202c.s0095",
+          "SY0202c.s0096",
+          "SY0202c.s0097"
+        ],
+        "note": "The user interface designer offers to research text-to-speech engines; the industrial designer takes it because it depends on the PC board, and the project manager confirms."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

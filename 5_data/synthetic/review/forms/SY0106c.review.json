@@ -1,0 +1,1224 @@
+{
+  "meeting_id": "SY0106c",
+  "raw_sha256": "dba334b29572c64b8e146577e064e8e661ba3364e6a1301df03efa4b465c0e20",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the conceptual design meeting and confirmed that the minutes of the functional design meeting had been sent and received.",
+        "The marketing expert reported that library networks want a warm, calm look with natural materials and rounded edges rather than a supermarket-till look, and that each network wants its own branding. The team agreed to show the library's logo and colours on the start screen and to support up to six languages, configurable per library.",
+        "The industrial designer presented a pedestal housing concept using the agreed heights, with rounded corners and the key-locked printer panel. The team first agreed on brushed aluminium, but at 1,870 euros in total this was 70 euros over budget, so the team revised the choice to powder-coated mild steel with a birch veneer front panel, bringing the estimate to 1,775 euros.",
+        "The user interface designer presented mock-ups of the checkout flow, including a non-blocking fines banner and a staff maintenance mode with printer guidance. She proposed audio guidance with a headphone jack, which was left open pending a price. She reported that three of the four major catalogue vendors support SIP2 directly. The fourth supports it through an adapter but has not confirmed this in writing, and many libraries do not fill in the SIP2 email field."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will produce the final housing design in powder-coated steel with a birch veneer front panel, with a full cost breakdown and a foam model, for the detailed design meeting.",
+        "The industrial designer will price the audio guidance option (headphone jack and audio board).",
+        "The user interface designer will produce final mock-ups including the library logo bar and the language screen with six languages.",
+        "The user interface designer will chase the fourth catalogue vendor for written confirmation of SIP2 support through an adapter.",
+        "The marketing expert will put together colour options and samples for the powder coat and the veneer.",
+        "The project manager will write up and send the minutes."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The library's own logo and colours will appear on the start screen in software, rather than each kiosk being painted differently.",
+        "The kiosk will support up to six languages, and each library will configure which ones appear behind the language button.",
+        "The housing will be powder-coated mild steel with a birch veneer front panel. This revises the earlier choice of brushed aluminium in the same meeting, which went over budget.",
+        "Email receipts stay out of the current version, because many libraries do not fill in the SIP2 email field.",
+        "The next meeting, on detailed design, will be held at the same time next Thursday."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The steel and veneer housing leaves only about 25 euros of margin under the 1,800 euro budget.",
+        "Audio guidance with a headphone jack is undecided. Its cost is unknown and an estimated 30 to 40 euros could push the kiosk over budget again.",
+        "The fourth major catalogue vendor's SIP2 support through an adapter is not yet confirmed in writing."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0106c.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0106c.ai1",
+        "description": "Produce the final housing design in powder-coated steel with a birch veneer front panel, with a full cost breakdown and a foam model, for the detailed design meeting.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0106c.s0107",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0106c.s0108",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0106c.s0095",
+          "SY0106c.s0107",
+          "SY0106c.s0108"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0106c.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0106c.ai2",
+        "description": "Price the audio guidance option (headphone jack and audio board).",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0106c.s0058",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0106c.s0059",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0106c.s0054",
+          "SY0106c.s0057",
+          "SY0106c.s0058",
+          "SY0106c.s0059",
+          "SY0106c.s0105"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0106c.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0106c.ai3",
+        "description": "Produce final screen mock-ups including the library logo bar and the language screen with six languages.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0106c.s0109",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0106c.s0110",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0106c.s0109",
+          "SY0106c.s0110"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0106c.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0106c.ai4",
+        "description": "Chase the fourth catalogue vendor for written confirmation that SIP2 works through an adapter.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0106c.s0063",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0106c.s0064",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0106c.s0062",
+          "SY0106c.s0063",
+          "SY0106c.s0064"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0106c.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0106c.ai5",
+        "description": "Put together colour options and samples for the powder coat and the veneer.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0106c.s0111",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0106c.s0112",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0106c.s0111",
+          "SY0106c.s0112"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0106c.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0106c.ai6",
+        "description": "Write up and send the minutes.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0106c.s0113",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0106c.s0113"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106c.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106c.f1",
+        "type": "decision",
+        "fact": "The library's logo and colours will be shown on the start screen in software, rather than each kiosk being painted differently.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106c.s0017",
+          "SY0106c.s0018",
+          "SY0106c.s0020",
+          "SY0106c.s0021",
+          "SY0106c.s0022"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106c.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106c.f2",
+        "type": "decision",
+        "fact": "The kiosk will support up to six languages, configurable per library.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106c.s0024",
+          "SY0106c.s0025",
+          "SY0106c.s0026",
+          "SY0106c.s0027",
+          "SY0106c.s0028",
+          "SY0106c.s0029"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106c.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106c.f3",
+        "type": "decision",
+        "fact": "The housing will be powder-coated mild steel with a birch veneer front panel.",
+        "agreed": true,
+        "related_action_item": "SY0106c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106c.s0088",
+          "SY0106c.s0089",
+          "SY0106c.s0095",
+          "SY0106c.s0098",
+          "SY0106c.s0099",
+          "SY0106c.s0100",
+          "SY0106c.s0101"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106c.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106c.f4",
+        "type": "plan_change",
+        "fact": "The team first agreed on a brushed aluminium housing, then changed to powder-coated steel with a birch veneer front panel because aluminium brought the total to 1,870 euros, 70 over budget.",
+        "agreed": null,
+        "related_action_item": "SY0106c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106c.s0036",
+          "SY0106c.s0040",
+          "SY0106c.s0085",
+          "SY0106c.s0086",
+          "SY0106c.s0095"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106c.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106c.f5",
+        "type": "decision",
+        "fact": "Email receipts stay out of the current version because many libraries do not fill in the SIP2 email field.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106c.s0065",
+          "SY0106c.s0067",
+          "SY0106c.s0068"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106c.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106c.f6",
+        "type": "decision",
+        "fact": "The detailed design meeting will be at the same time next Thursday.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106c.s0114",
+          "SY0106c.s0115",
+          "SY0106c.s0116",
+          "SY0106c.s0117"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106c.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106c.f7",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer proposed audio guidance with voice prompts and a headphone jack for visually impaired users. It was left undecided pending a price.",
+        "agreed": false,
+        "related_action_item": "SY0106c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106c.s0054",
+          "SY0106c.s0055",
+          "SY0106c.s0056",
+          "SY0106c.s0057",
+          "SY0106c.s0058",
+          "SY0106c.s0102",
+          "SY0106c.s0104",
+          "SY0106c.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106c.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106c.f8",
+        "type": "other",
+        "fact": "The steel housing at 250 euros plus a 45 euro veneer panel brings the total estimate to 1,775 euros, 25 euros under budget.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106c.s0088",
+          "SY0106c.s0090",
+          "SY0106c.s0091",
+          "SY0106c.s0092"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106c.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106c.f9",
+        "type": "other",
+        "fact": "Three of the four major catalogue vendors support SIP2 directly; the fourth says it works through an adapter but has not confirmed this in writing.",
+        "agreed": null,
+        "related_action_item": "SY0106c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106c.s0061",
+          "SY0106c.s0062"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106c.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106c.f10",
+        "type": "other",
+        "fact": "The fines banner shown after the card scan is yellow, asks the patron to pay at the desk, and does not block checkout.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106c.s0046",
+          "SY0106c.s0047",
+          "SY0106c.s0048"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106c.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106c.f11",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer's housing uses the screen height of about one metre and the 80 cm pad agreed at the functional design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0106b",
+        "evidence_segments": [
+          "SY0106c.s0032"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106c.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106c.f12",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer followed up on the action from the functional design meeting to look for cheaper sheet metal.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0106b",
+        "evidence_segments": [
+          "SY0106c.s0084",
+          "SY0106c.s0088"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106c.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106c.f13",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer kept renew and loan list as secondary options, as agreed at the functional design meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0106b",
+        "evidence_segments": [
+          "SY0106c.s0050",
+          "SY0106c.s0051"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106c.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106c.f14",
+        "type": "action_item",
+        "fact": "The industrial designer will produce the final steel and veneer housing with a full cost breakdown and a foam model.",
+        "agreed": null,
+        "related_action_item": "SY0106c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106c.s0107",
+          "SY0106c.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106c.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106c.f15",
+        "type": "action_item",
+        "fact": "The industrial designer will price the audio guidance option.",
+        "agreed": null,
+        "related_action_item": "SY0106c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106c.s0058",
+          "SY0106c.s0059"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106c.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106c.f16",
+        "type": "action_item",
+        "fact": "The user interface designer will produce final mock-ups with the logo bar and a six-language screen.",
+        "agreed": null,
+        "related_action_item": "SY0106c.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106c.s0109",
+          "SY0106c.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106c.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106c.f17",
+        "type": "action_item",
+        "fact": "The user interface designer will chase the fourth vendor for written SIP2 confirmation.",
+        "agreed": null,
+        "related_action_item": "SY0106c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106c.s0063",
+          "SY0106c.s0064"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106c.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106c.f18",
+        "type": "action_item",
+        "fact": "The marketing expert will put together colour options and samples for the powder coat and veneer.",
+        "agreed": null,
+        "related_action_item": "SY0106c.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106c.s0111",
+          "SY0106c.s0112"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0106c.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0106c.f19",
+        "type": "action_item",
+        "fact": "The project manager will write up and send the minutes.",
+        "agreed": null,
+        "related_action_item": "SY0106c.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0106c.s0113"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_OFF_TOPIC_TANGENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_OFF_TOPIC_TANGENT",
+        "segments": [
+          "SY0106c.s0070",
+          "SY0106c.s0071",
+          "SY0106c.s0072",
+          "SY0106c.s0073",
+          "SY0106c.s0074",
+          "SY0106c.s0075",
+          "SY0106c.s0076",
+          "SY0106c.s0077",
+          "SY0106c.s0078",
+          "SY0106c.s0079",
+          "SY0106c.s0080",
+          "SY0106c.s0081",
+          "SY0106c.s0082"
+        ],
+        "note": "The team chats about the broken coffee machine, a nearby café and a cafetière before the project manager steers back to costs."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_PLAN_CHANGE",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_PLAN_CHANGE",
+        "segments": [
+          "SY0106c.s0036",
+          "SY0106c.s0037",
+          "SY0106c.s0038",
+          "SY0106c.s0039",
+          "SY0106c.s0040",
+          "SY0106c.s0041",
+          "SY0106c.s0083",
+          "SY0106c.s0084",
+          "SY0106c.s0085",
+          "SY0106c.s0086",
+          "SY0106c.s0087",
+          "SY0106c.s0088",
+          "SY0106c.s0089",
+          "SY0106c.s0090",
+          "SY0106c.s0091",
+          "SY0106c.s0092",
+          "SY0106c.s0093",
+          "SY0106c.s0094",
+          "SY0106c.s0095",
+          "SY0106c.s0096",
+          "SY0106c.s0097",
+          "SY0106c.s0098",
+          "SY0106c.s0099",
+          "SY0106c.s0100",
+          "SY0106c.s0101"
+        ],
+        "note": "Brushed aluminium is agreed for the housing early on, then replaced by powder-coated steel with a birch veneer front panel once the cost comes out 70 euros over budget."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

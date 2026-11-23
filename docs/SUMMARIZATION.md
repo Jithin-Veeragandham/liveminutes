@@ -7,6 +7,9 @@ Feature 1: summarize a meeting. The short version (quick start, results, where t
 - **Deep model:** BART (`philschmid/bart-large-cnn-samsum`). Writes new sentences. Not trained on AMI. About 45 s per meeting on CPU.
 - **LLM:** rolling notes from a hosted LLM (default: Claude Sonnet 5.5, provider-agnostic). One call per ~30 s of meeting, at most one call every 30 s, each given the notes so far; returns a summary **and action items with owners**. See [2.12](#212-llm-rolling-notes-summary--action-items).
 - **Score:** ROUGE (word overlap with the human summary). BERTScore (meaning overlap) for BART.
+- **Datasets:** every run scores **both** AMI and the synthetic edge-case meetings in `5_data/synthetic`, one after the other, each logged as its own run. `--dataset ami` or `--dataset synthetic` runs just one.
+- **Modes:** every model runs **recursively** by default (summary so far + next chunk -> new summary, like the live bot); `--mode full` gives it the whole transcript at once.
+- **Scores by group:** every run also reports the metrics per group of meetings (AMI: speakers' gender mix and non-native share; synthetic: feature tier and edge-case scenario). See [2.13](#213-synthetic-data-recursive-mode-and-scores-by-group).
 
 ## 2.1 Commands
 
@@ -27,6 +30,8 @@ Setup and the one smoke-test command are in the [README quick start](../README.m
 | Only check the data | `.venv/bin/python 5_data/ami/fetch_data.py --verify` |
 | Only check the split | `.venv/bin/python 5_data/ami/split.py --check` |
 | Run without saving a result | add `--no-log` |
+| Only one dataset (default: both, AMI then synthetic) | add `--dataset ami` or `--dataset synthetic` |
+| Whole transcript at once instead of recursive | add `--mode full` |
 
 ## 2.2 Seeds
 
@@ -49,22 +54,26 @@ FIRST_SEED = 42   # seeds are 42, 43, ..., 61
 
 ```
 0. seeds          -> pick the seeds (top of the file or --seeds / --seed), fix PYTHONHASHSEED
-1. check data     -> fetch_data.py: download AMI if missing, check its hash against MANIFEST.json
-2. load split     -> split.py: load train/dev/eval, check it against MANIFEST.json, check no person is in two splits
-3. build model    -> TextRank (or BART, or the LLM)
-4. run            -> for each seed: set seeds, summarize each meeting (ami.py reads it), score it (metrics.py)
+1. check data     -> datasets.py: AMI via fetch_data.py (download if missing, hash vs MANIFEST.json);
+                     synthetic: every file's sha256 vs its data/raw/manifest.json
+2. load split     -> AMI: split.py (no person in two splits); synthetic: data/splits/synthetic_splits.json
+3. build model    -> TextRank (or BART, or the LLM), in recursive or full mode
+4. run            -> for each seed: set seeds, summarize each meeting, score it (metrics.py)
 5. average        -> mean and std over seeds, and seed_variation (what changed between seeds, and why)
-6. save           -> one line in 6_evaluation/summarization/results/results_log.jsonl
+6. by group       -> disaggregate.py: the same metrics per group of meetings, and the gap between groups
+7. save           -> one line in 6_evaluation/summarization/results/results_log.jsonl
 ```
 
 ## 2.4 What each file does
 
 | File | What it does |
 |---|---|
-| `2_summarization/run.py` | **Start here.** The one command. Seeds at the top. Runs the 6 steps above. |
+| `2_summarization/run.py` | **Start here.** The one command. Seeds at the top. Runs the 7 steps above. |
+| `2_summarization/datasets.py` | AMI and synthetic meetings in one shape (lines, reference, groups), their splits and data checks. |
+| `2_summarization/chunks.py` | Cuts a meeting into ~30 s chunks: shared by every model's recursive mode. |
 | `2_summarization/settings.py` | Model settings: TextRank, BART and BERTScore versions. |
-| `2_summarization/textrank_baseline.py` | The baseline. ~30 lines. |
-| `2_summarization/bart_summarizer.py` | The deep model. Summarizes ~60 s chunks, then combines them. |
+| `2_summarization/textrank_baseline.py` | The baseline. Full: one ranking. Recursive: re-ranks kept lines + each new chunk, keeping 1.5x the word budget, trimmed at the end. |
+| `2_summarization/bart_summarizer.py` | The deep model. Full: ~60 s windows, then a summary of summaries. Recursive: summary so far + next window -> new summary. |
 | `2_summarization/llm_summarizer.py` | The LLM row: rolling summary + action items, one call per chunk with the notes so far. Also a command for live transcripts. |
 | `2_summarization/llm_providers.py` | Provider-agnostic LLM access (`generate_json`). Today: Anthropic. Add a class here for another provider. |
 | `2_summarization/tests/` | Offline tests for the LLM code (a fake provider, no API calls). |
@@ -77,6 +86,7 @@ FIRST_SEED = 42   # seeds are 42, 43, ..., 61
 | `5_data/ami/ami_scenario_split.json` | The saved split. |
 | `5_data/raw/ami/` | Downloaded data. **Not committed** (gitignored). |
 | `6_evaluation/summarization/metrics.py` | ROUGE-1, ROUGE-2, ROUGE-L and BERTScore. |
+| `6_evaluation/summarization/disaggregate.py` | Scores per group of meetings, the gap between groups, small-group flags. |
 | `6_evaluation/summarization/results/results_log.jsonl` | One line per run: scores + everything needed to repeat it. |
 | `6_evaluation/summarization/results/runs/<run_id>.json` | Same, plus every summary the model wrote, per seed and meeting. |
 
@@ -96,7 +106,7 @@ All scores are F-measures from 0 to 1: our summary compared with AMI's human sum
 
 ## 2.6 Results
 
-The numbers are in `6_evaluation/summarization/results/results_log.jsonl`. **TextRank baseline, 20 seeds:**
+The numbers are in `6_evaluation/summarization/results/results_log.jsonl`. **TextRank baseline, 20 seeds** (logged before `--mode` existed: these are `full` mode, which `--mode full` reproduces exactly):
 
 | Split | ROUGE-1 | ROUGE-2 | ROUGE-L | Std over seeds | Time per meeting |
 |---|---|---|---|---|---|
@@ -195,3 +205,30 @@ AMI meetings come in groups of 4 (a, b, c, d) by the same 4 people. We split **b
 **Key.** `ANTHROPIC_API_KEY` (Claude) or `GEMINI_API_KEY` (Gemini) goes in the repo's `.env` (see `.env.example`). Without it, both commands stop with a message saying so.
 
 **First result (not logged, uncommitted code, 5-minute chunks at the time):** Gemini `gemini-3.5-flash-lite`, smoke split, 1 seed: ROUGE-1 0.378, ROUGE-2 0.098, ROUGE-L 0.206, ROUGE-SU4 0.129 (TextRank: 0.260 / 0.040 / 0.150 / 0.076). About 8 s per meeting.
+
+## 2.13 Synthetic data, recursive mode and scores by group
+
+**Synthetic data** (scored by default after AMI; `--dataset synthetic` for it alone). The 100 LLM-generated meetings in `5_data/synthetic/data/raw` (25 series of 4), each built around two planned edge cases from `scenarios.yaml` (a plan that changes, a self-correction, an off-topic tangent, an absent person, sarcasm, interleaved topics, tasks given to absent people, reassigned or dropped tasks, ...). Its own committed split (`data/splits/synthetic_splits.json`, whole series per split): `eval` is its 20 test meetings, `smoke` the first dev meeting of each feature (F1, F2, F3). The reference is the meeting's `summary.abstract`, the same section AMI's reference uses, and speakers become roles (PM, ME, ...) as in AMI. Before a run, every file is checked against the sha256 in its `manifest.json`; the run's `data_hash` is the manifest's own sha256.
+
+**Recursive mode** (default; `--mode full` for the old behaviour). The meeting is fed in chunks, and after each one the model turns (summary so far + new chunk) into a new summary so far, which is what the live bot does:
+
+| Model | Recursive | Full |
+|---|---|---|
+| TextRank | every 30 s: rank (lines kept so far + new lines), keep 1.5x the word budget (the buffer, so a line that only becomes central later isn't dropped too early); at the end, trim to the budget | one ranking over the whole meeting |
+| BART | every 60 s window: summarize ("Summary: <so far>" + the window as chat lines); the minimum length grows with the summary so it doesn't collapse | each window, then a summary of the summaries |
+| LLM | every 30 s: notes so far + new lines (always worked this way) | one call with the whole transcript |
+
+Recursive BART makes one longer generation per window, so it is slower on CPU than full mode.
+
+**Scores by group** (`metrics_by_group` in every log line, and printed at the end of a run). Summaries are per meeting, so the groups describe meetings:
+
+| Dataset | Group | Values |
+|---|---|---|
+| AMI | `gender_mix` (from `participants.xml` sex, via `meetings.xml` global_name) | `all_male`, `mixed`, `all_female` |
+| AMI | `non_native` (native language other than English) | `all_native`, `some_non_native` (1-2 speakers), `mostly_non_native` (3+) |
+| synthetic | `feature` (what the meeting was generated to test) | `F1` live summary, `F2` action items, `F3` Q&A |
+| synthetic | `scenario` (edge cases in the meeting; each meeting has two, so it counts in both) | the 13 scenario IDs |
+
+Each group shows `n` (meetings), `n_series` and the mean of every metric; each breakdown shows the `gap` (best minus worst group) and the `worst` group per metric. **Read small groups with care:** AMI meetings come in series of 4 with the same 4 people, so `n_series` is the real sample size, and groups with one series are flagged "indicative only". On the AMI eval split the `all_female` and `mostly_non_native` groups are the same single series, so those two can't be told apart. Each meeting's groups (and the raw counts: speakers, female speakers, non-native speakers) are in `meeting_groups`, so other groupings can be computed from the log later.
+
+First TextRank numbers (eval split, 1 seed, not logged): AMI full 0.238 / recursive 0.232 ROUGE-1; synthetic full 0.368 / recursive 0.330.

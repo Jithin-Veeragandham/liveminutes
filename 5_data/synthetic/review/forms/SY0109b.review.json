@@ -1,0 +1,1222 @@
+{
+  "meeting_id": "SY0109b",
+  "raw_sha256": "7731344ebc9da700fdfe7ec6bd6ff0d33bda0146dcb8dd85d446f192abd9723e",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the functional design meeting and confirmed he had sent out the kickoff minutes, the brief and the shared folder link.",
+        "The industrial designer reported back from the dock supplier: the docks use Bluetooth Low Energy with a QR sticker as backup, there is no NFC, and there is no screen, only an LED ring. The team chose Bluetooth as the main unlock method with QR as the fallback.",
+        "The user interface designer presented rough wireframes for the find, unlock and return flows. The marketing expert presented the rider survey results: the top request was seeing free return slots, the second was knowing the price before a ride, and only about eighteen percent were interested in a leaderboard. The leaderboard was dropped for the pilot.",
+        "The marketing expert's competitor review showed that most one-star reviews concern failed unlocks and returns that were never registered. This led the team to add a proper return confirmation screen showing the cost.",
+        "The project manager summarised the functions: find with bikes and free slots on the map, one-tap Bluetooth unlock with QR fallback and the price shown beforehand, and return with confirmation. Payment stays at sign-up, and a high-contrast mode will be added for night use. The next meeting was set for Tuesday at two."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will ask the dock supplier how long it takes for a dock to report a return.",
+        "The user interface designer will update the wireframes. The updates are: free slots on the map, a return confirmation with the cost, the price before unlock, a QR fallback screen, and a prompt to switch on Bluetooth.",
+        "The user interface designer will check guidance on outdoor readability, such as contrast and text size. This task was first given to the marketing expert.",
+        "The marketing expert will upload the survey results and the competitor review notes to the shared folder.",
+        "The project manager will send out the minutes and an invite for the next meeting."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "Bluetooth will be the main way to unlock a bike, with the dock's QR sticker as the fallback.",
+        "The leaderboard is dropped for the pilot, given weak survey interest.",
+        "The map will show free return slots as well as available bikes.",
+        "The return flow will end with a confirmation screen stating that the bike is locked, the ride has ended and what was paid.",
+        "The price will be shown to the rider before unlocking.",
+        "Payment setup stays at sign-up, as agreed at the kickoff.",
+        "The app will have a high-contrast mode for night use.",
+        "If Bluetooth is off on the phone, the app will prompt the rider to switch it on.",
+        "The next meeting (conceptual design) will be on Tuesday at two."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "It is not yet known how quickly a dock reports a return to the system. This matters for the return confirmation.",
+        "The Bluetooth range is only about two metres, so riders must stand at the dock.",
+        "Riders may not understand the dock's LED colours, so the phone has to carry all feedback.",
+        "The QR fallback remains unreliable in rain and at night.",
+        "The readability standards for outdoor and night use still need to be checked."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0109b.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0109b.ai1",
+        "description": "Ask the dock supplier how long it takes for a dock to report a returned bike to the system",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0109b.s0073",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0109b.s0074",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0109b.s0075",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0109b.s0071",
+          "SY0109b.s0072",
+          "SY0109b.s0073",
+          "SY0109b.s0074",
+          "SY0109b.s0075"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0109b.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0109b.ai2",
+        "description": "Update the wireframes: free slots on the map, a return confirmation with the cost, the price before unlock, a QR fallback screen and a Bluetooth-on prompt",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0109b.s0105",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0109b.s0106",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0109b.s0115",
+            "event": "restated",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0109b.s0105",
+          "SY0109b.s0106",
+          "SY0109b.s0108",
+          "SY0109b.s0109",
+          "SY0109b.s0114",
+          "SY0109b.s0115"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0109b.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0109b.ai3",
+        "description": "Check guidance on outdoor readability (contrast, text size) for the high-contrast mode",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "reassigned",
+        "previous_owners": [
+          "C"
+        ],
+        "history": [
+          {
+            "segment": "SY0109b.s0099",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0109b.s0102",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0109b.s0103",
+            "event": "reassigned",
+            "by": "D",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0109b.s0099",
+          "SY0109b.s0100",
+          "SY0109b.s0101",
+          "SY0109b.s0102",
+          "SY0109b.s0103",
+          "SY0109b.s0104"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0109b.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0109b.ai4",
+        "description": "Upload the survey results and the competitor review notes to the shared folder",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0109b.s0110",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0109b.s0111",
+            "event": "accepted",
+            "by": "D",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0109b.s0110",
+          "SY0109b.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0109b.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0109b.ai5",
+        "description": "Send out the minutes and an invite for the next meeting",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0109b.s0121",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0109b.s0117",
+          "SY0109b.s0121"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f1",
+        "type": "decision",
+        "fact": "Bluetooth is the main unlock method and the QR sticker is the fallback.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109b.s0024",
+          "SY0109b.s0028",
+          "SY0109b.s0029",
+          "SY0109b.s0030",
+          "SY0109b.s0031",
+          "SY0109b.s0032"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f2",
+        "type": "decision",
+        "fact": "The leaderboard is dropped for the pilot.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109b.s0054",
+          "SY0109b.s0056",
+          "SY0109b.s0057",
+          "SY0109b.s0058",
+          "SY0109b.s0059",
+          "SY0109b.s0060"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f3",
+        "type": "decision",
+        "fact": "The map will show free return slots as well as available bikes.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109b.s0043",
+          "SY0109b.s0048",
+          "SY0109b.s0076",
+          "SY0109b.s0077"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f4",
+        "type": "decision",
+        "fact": "The return flow ends with a confirmation screen showing that the bike is locked, the ride has ended and the cost.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109b.s0068",
+          "SY0109b.s0069",
+          "SY0109b.s0070",
+          "SY0109b.s0079"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f5",
+        "type": "decision",
+        "fact": "The price is shown before unlocking.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109b.s0080",
+          "SY0109b.s0081"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f6",
+        "type": "decision",
+        "fact": "Payment setup stays at sign-up.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109b.s0082",
+          "SY0109b.s0083"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f7",
+        "type": "decision",
+        "fact": "The app will have a high-contrast mode for night use.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109b.s0084",
+          "SY0109b.s0085",
+          "SY0109b.s0086"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f8",
+        "type": "decision",
+        "fact": "The app will prompt riders to switch on Bluetooth if it is off, instead of the industrial designer asking the supplier about it.",
+        "agreed": true,
+        "related_action_item": "SY0109b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109b.s0112",
+          "SY0109b.s0113",
+          "SY0109b.s0114",
+          "SY0109b.s0115",
+          "SY0109b.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f9",
+        "type": "decision",
+        "fact": "The next meeting (conceptual design) is on Tuesday at two.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109b.s0117",
+          "SY0109b.s0118",
+          "SY0109b.s0119",
+          "SY0109b.s0120"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f10",
+        "type": "action_item",
+        "fact": "The industrial designer will ask the dock supplier how quickly a dock reports a return.",
+        "agreed": null,
+        "related_action_item": "SY0109b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109b.s0073",
+          "SY0109b.s0074",
+          "SY0109b.s0075"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f11",
+        "type": "action_item",
+        "fact": "The user interface designer will update the wireframes with the new screens and features.",
+        "agreed": null,
+        "related_action_item": "SY0109b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109b.s0105",
+          "SY0109b.s0106",
+          "SY0109b.s0115"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f12",
+        "type": "action_item",
+        "fact": "The outdoor readability check was first given to the marketing expert and then reassigned to the user interface designer.",
+        "agreed": null,
+        "related_action_item": "SY0109b.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109b.s0099",
+          "SY0109b.s0101",
+          "SY0109b.s0102",
+          "SY0109b.s0103"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f13",
+        "type": "action_item",
+        "fact": "The marketing expert will upload the survey results and the competitor notes to the shared folder.",
+        "agreed": null,
+        "related_action_item": "SY0109b.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109b.s0110",
+          "SY0109b.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f14",
+        "type": "action_item",
+        "fact": "The project manager will send the minutes and the next meeting invite.",
+        "agreed": null,
+        "related_action_item": "SY0109b.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0109b.s0121"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f15",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer linked the Bluetooth choice to the one-tap unlocking agreed at the kickoff.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0109a",
+        "evidence_segments": [
+          "SY0109b.s0024"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f16",
+        "type": "reference_to_prior_meeting",
+        "fact": "The user interface designer confirmed that payment stays at sign-up, as decided in the first meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0109a",
+        "evidence_segments": [
+          "SY0109b.s0082",
+          "SY0109b.s0083"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f17",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager reported that he had sent the kickoff minutes, the brief and the shared folder link.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0109a",
+        "evidence_segments": [
+          "SY0109b.s0005",
+          "SY0109b.s0006"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f18",
+        "type": "other",
+        "fact": "The dock supplier confirmed that the docks use Bluetooth Low Energy with a QR sticker backup, no NFC and no screen, only an LED ring.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0109a",
+        "evidence_segments": [
+          "SY0109b.s0010",
+          "SY0109b.s0011",
+          "SY0109b.s0012",
+          "SY0109b.s0014"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f19",
+        "type": "other",
+        "fact": "The rider survey got 212 responses. The top request was seeing free slots, the second was the price before a ride, and about 18% were interested in a leaderboard.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0109a",
+        "evidence_segments": [
+          "SY0109b.s0047",
+          "SY0109b.s0048",
+          "SY0109b.s0052",
+          "SY0109b.s0054"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0109b.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0109b.f20",
+        "type": "other",
+        "fact": "The competitor review found that most one-star reviews concern failed unlocks and unregistered returns.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0109a",
+        "evidence_segments": [
+          "SY0109b.s0061",
+          "SY0109b.s0062",
+          "SY0109b.s0063",
+          "SY0109b.s0065"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_OFF_TOPIC_TANGENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_OFF_TOPIC_TANGENT",
+        "segments": [
+          "SY0109b.s0087",
+          "SY0109b.s0088",
+          "SY0109b.s0089",
+          "SY0109b.s0090",
+          "SY0109b.s0091",
+          "SY0109b.s0092",
+          "SY0109b.s0093",
+          "SY0109b.s0094",
+          "SY0109b.s0095",
+          "SY0109b.s0096",
+          "SY0109b.s0097",
+          "SY0109b.s0098"
+        ],
+        "note": "A twelve-segment tangent about the broken coffee machine and a café across the road. The project manager ends it at 98."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F1_SARCASM_AS_FACT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F1_SARCASM_AS_FACT",
+        "segments": [
+          "SY0109b.s0033",
+          "SY0109b.s0034",
+          "SY0109b.s0035",
+          "SY0109b.s0036",
+          "SY0109b.s0037"
+        ],
+        "note": "The industrial designer jokes that they are putting an umbrella over every dock so QR works. Others play along, the project manager moves on, and it is not adopted."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

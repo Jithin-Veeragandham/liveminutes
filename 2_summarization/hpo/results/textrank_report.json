@@ -1,0 +1,2006 @@
+{
+  "full": {
+    "best": {
+      "params": {
+        "words_scale": 1.5,
+        "min_line_words": 16,
+        "clean": true,
+        "speaker_names": true,
+        "mode": "full"
+      },
+      "ami": {
+        "rouge1": 0.3128,
+        "rouge2": 0.0591,
+        "rougeL": 0.1637,
+        "rougeSU4": 0.0967,
+        "words": 239.7,
+        "avg": 0.1785,
+        "per_meeting": {
+          "ES2003a": {
+            "rouge1": 0.1818,
+            "rouge2": 0.0177,
+            "rougeL": 0.1114,
+            "rougeSU4": 0.0506,
+            "words": 241
+          },
+          "ES2003b": {
+            "rouge1": 0.2952,
+            "rouge2": 0.0563,
+            "rougeL": 0.1832,
+            "rougeSU4": 0.1005,
+            "words": 241
+          },
+          "ES2003c": {
+            "rouge1": 0.2842,
+            "rouge2": 0.0519,
+            "rougeL": 0.1602,
+            "rougeSU4": 0.0829,
+            "words": 244
+          },
+          "ES2003d": {
+            "rouge1": 0.3148,
+            "rouge2": 0.0438,
+            "rougeL": 0.1501,
+            "rougeSU4": 0.098,
+            "words": 238
+          },
+          "ES2011a": {
+            "rouge1": 0.3673,
+            "rouge2": 0.0923,
+            "rougeL": 0.1735,
+            "rougeSU4": 0.1137,
+            "words": 251
+          },
+          "ES2011b": {
+            "rouge1": 0.289,
+            "rouge2": 0.0562,
+            "rougeL": 0.1678,
+            "rougeSU4": 0.0833,
+            "words": 238
+          },
+          "ES2011c": {
+            "rouge1": 0.1964,
+            "rouge2": 0.0448,
+            "rougeL": 0.1205,
+            "rougeSU4": 0.0579,
+            "words": 242
+          },
+          "ES2011d": {
+            "rouge1": 0.3255,
+            "rouge2": 0.0616,
+            "rougeL": 0.1604,
+            "rougeSU4": 0.0994,
+            "words": 236
+          },
+          "IS1008a": {
+            "rouge1": 0.3535,
+            "rouge2": 0.0827,
+            "rougeL": 0.1985,
+            "rougeSU4": 0.1225,
+            "words": 254
+          },
+          "IS1008b": {
+            "rouge1": 0.3494,
+            "rouge2": 0.0647,
+            "rougeL": 0.1793,
+            "rougeSU4": 0.1093,
+            "words": 235
+          },
+          "IS1008c": {
+            "rouge1": 0.3805,
+            "rouge2": 0.0699,
+            "rougeL": 0.181,
+            "rougeSU4": 0.1111,
+            "words": 236
+          },
+          "IS1008d": {
+            "rouge1": 0.3168,
+            "rouge2": 0.0665,
+            "rougeL": 0.1797,
+            "rougeSU4": 0.0965,
+            "words": 237
+          },
+          "TS3004a": {
+            "rouge1": 0.3952,
+            "rouge2": 0.0766,
+            "rougeL": 0.2,
+            "rougeSU4": 0.1357,
+            "words": 241
+          },
+          "TS3004b": {
+            "rouge1": 0.291,
+            "rouge2": 0.0371,
+            "rougeL": 0.1524,
+            "rougeSU4": 0.0748,
+            "words": 230
+          },
+          "TS3004c": {
+            "rouge1": 0.2844,
+            "rouge2": 0.0599,
+            "rougeL": 0.1789,
+            "rougeSU4": 0.092,
+            "words": 237
+          },
+          "TS3004d": {
+            "rouge1": 0.2574,
+            "rouge2": 0.0348,
+            "rougeL": 0.1287,
+            "rougeSU4": 0.071,
+            "words": 245
+          },
+          "TS3006a": {
+            "rouge1": 0.3123,
+            "rouge2": 0.0506,
+            "rougeL": 0.1511,
+            "rougeSU4": 0.091,
+            "words": 240
+          },
+          "TS3006b": {
+            "rouge1": 0.4384,
+            "rouge2": 0.1055,
+            "rougeL": 0.1963,
+            "rougeSU4": 0.1609,
+            "words": 233
+          },
+          "TS3006c": {
+            "rouge1": 0.3097,
+            "rouge2": 0.0528,
+            "rougeL": 0.1575,
+            "rougeSU4": 0.0878,
+            "words": 238
+          },
+          "TS3006d": {
+            "rouge1": 0.3141,
+            "rouge2": 0.0557,
+            "rougeL": 0.1432,
+            "rougeSU4": 0.0942,
+            "words": 237
+          }
+        },
+        "by_group": {
+          "gender_mix": {
+            "all_female": {
+              "n": 4,
+              "rouge1": 0.2945,
+              "rouge2": 0.0637,
+              "rougeL": 0.1555,
+              "rougeSU4": 0.0886
+            },
+            "all_male": {
+              "n": 12,
+              "rouge1": 0.3065,
+              "rouge2": 0.0536,
+              "rougeL": 0.1594,
+              "rougeSU4": 0.095
+            },
+            "mixed": {
+              "n": 4,
+              "rouge1": 0.35,
+              "rouge2": 0.0709,
+              "rougeL": 0.1846,
+              "rougeSU4": 0.1099
+            }
+          },
+          "non_native": {
+            "all_native": {
+              "n": 16,
+              "rouge1": 0.3035,
+              "rouge2": 0.0561,
+              "rougeL": 0.1585,
+              "rougeSU4": 0.0934
+            },
+            "some_non_native": {
+              "n": 4,
+              "rouge1": 0.35,
+              "rouge2": 0.0709,
+              "rougeL": 0.1846,
+              "rougeSU4": 0.1099
+            }
+          }
+        },
+        "group_gap": {
+          "gender_mix": {
+            "rouge1": 0.0555,
+            "rouge2": 0.0173,
+            "rougeL": 0.0291,
+            "rougeSU4": 0.0213
+          },
+          "non_native": {
+            "rouge1": 0.0465,
+            "rouge2": 0.0148,
+            "rougeL": 0.0261,
+            "rougeSU4": 0.0165
+          }
+        }
+      },
+      "synthetic": {
+        "rouge1": 0.4076,
+        "rouge2": 0.105,
+        "rougeL": 0.1961,
+        "rougeSU4": 0.1399,
+        "words": 286.1,
+        "avg": 0.2362,
+        "per_meeting": {
+          "SY0106a": {
+            "rouge1": 0.3879,
+            "rouge2": 0.0983,
+            "rougeL": 0.1695,
+            "rougeSU4": 0.1305,
+            "words": 302
+          },
+          "SY0106b": {
+            "rouge1": 0.4082,
+            "rouge2": 0.0789,
+            "rougeL": 0.1835,
+            "rougeSU4": 0.1267,
+            "words": 302
+          },
+          "SY0106c": {
+            "rouge1": 0.4624,
+            "rouge2": 0.1509,
+            "rougeL": 0.2331,
+            "rougeSU4": 0.1607,
+            "words": 295
+          },
+          "SY0106d": {
+            "rouge1": 0.4235,
+            "rouge2": 0.1013,
+            "rougeL": 0.2378,
+            "rougeSU4": 0.1527,
+            "words": 302
+          },
+          "SY0107a": {
+            "rouge1": 0.335,
+            "rouge2": 0.078,
+            "rougeL": 0.1796,
+            "rougeSU4": 0.0991,
+            "words": 267
+          },
+          "SY0107b": {
+            "rouge1": 0.47,
+            "rouge2": 0.1308,
+            "rougeL": 0.2161,
+            "rougeSU4": 0.1701,
+            "words": 306
+          },
+          "SY0107c": {
+            "rouge1": 0.4246,
+            "rouge2": 0.1159,
+            "rougeL": 0.2086,
+            "rougeSU4": 0.1504,
+            "words": 292
+          },
+          "SY0107d": {
+            "rouge1": 0.4502,
+            "rouge2": 0.116,
+            "rougeL": 0.2191,
+            "rougeSU4": 0.1717,
+            "words": 295
+          },
+          "SY0201a": {
+            "rouge1": 0.3649,
+            "rouge2": 0.0905,
+            "rougeL": 0.1937,
+            "rougeSU4": 0.1192,
+            "words": 275
+          },
+          "SY0201b": {
+            "rouge1": 0.4168,
+            "rouge2": 0.1207,
+            "rougeL": 0.1964,
+            "rougeSU4": 0.1471,
+            "words": 290
+          },
+          "SY0201c": {
+            "rouge1": 0.3729,
+            "rouge2": 0.0983,
+            "rougeL": 0.1921,
+            "rougeSU4": 0.1255,
+            "words": 304
+          },
+          "SY0201d": {
+            "rouge1": 0.4427,
+            "rouge2": 0.1404,
+            "rougeL": 0.2058,
+            "rougeSU4": 0.1621,
+            "words": 289
+          },
+          "SY0208a": {
+            "rouge1": 0.3717,
+            "rouge2": 0.1014,
+            "rougeL": 0.1495,
+            "rougeSU4": 0.1136,
+            "words": 306
+          },
+          "SY0208b": {
+            "rouge1": 0.3929,
+            "rouge2": 0.0637,
+            "rougeL": 0.1667,
+            "rougeSU4": 0.1182,
+            "words": 287
+          },
+          "SY0208c": {
+            "rouge1": 0.4092,
+            "rouge2": 0.0922,
+            "rougeL": 0.1837,
+            "rougeSU4": 0.1406,
+            "words": 303
+          },
+          "SY0208d": {
+            "rouge1": 0.4319,
+            "rouge2": 0.1056,
+            "rougeL": 0.2178,
+            "rougeSU4": 0.1551,
+            "words": 300
+          },
+          "SY0302a": {
+            "rouge1": 0.3448,
+            "rouge2": 0.0556,
+            "rougeL": 0.1655,
+            "rougeSU4": 0.1064,
+            "words": 114
+          },
+          "SY0302b": {
+            "rouge1": 0.4315,
+            "rouge2": 0.1093,
+            "rougeL": 0.1895,
+            "rougeSU4": 0.1466,
+            "words": 295
+          },
+          "SY0302c": {
+            "rouge1": 0.4,
+            "rouge2": 0.1193,
+            "rougeL": 0.1901,
+            "rougeSU4": 0.1353,
+            "words": 294
+          },
+          "SY0302d": {
+            "rouge1": 0.4112,
+            "rouge2": 0.1323,
+            "rougeL": 0.2236,
+            "rougeSU4": 0.1673,
+            "words": 304
+          }
+        },
+        "by_group": {
+          "feature": {
+            "F1": {
+              "n": 8,
+              "rouge1": 0.4202,
+              "rouge2": 0.1088,
+              "rougeL": 0.2059,
+              "rougeSU4": 0.1452
+            },
+            "F2": {
+              "n": 8,
+              "rouge1": 0.4004,
+              "rouge2": 0.1016,
+              "rougeL": 0.1882,
+              "rougeSU4": 0.1352
+            },
+            "F3": {
+              "n": 4,
+              "rouge1": 0.3969,
+              "rouge2": 0.1041,
+              "rougeL": 0.1922,
+              "rougeSU4": 0.1389
+            }
+          },
+          "scenario": {
+            "F1_ABSENT_DISCUSSED": {
+              "n": 3,
+              "rouge1": 0.4271,
+              "rouge2": 0.1101,
+              "rougeL": 0.2078,
+              "rougeSU4": 0.1511
+            },
+            "F1_INTERLEAVED_TOPICS": {
+              "n": 3,
+              "rouge1": 0.4271,
+              "rouge2": 0.1101,
+              "rougeL": 0.2078,
+              "rougeSU4": 0.1511
+            },
+            "F1_OFF_TOPIC_TANGENT": {
+              "n": 2,
+              "rouge1": 0.4435,
+              "rouge2": 0.1334,
+              "rougeL": 0.2208,
+              "rougeSU4": 0.1556
+            },
+            "F1_PLAN_CHANGE": {
+              "n": 2,
+              "rouge1": 0.4435,
+              "rouge2": 0.1334,
+              "rougeL": 0.2208,
+              "rougeSU4": 0.1556
+            },
+            "F1_SARCASM_AS_FACT": {
+              "n": 3,
+              "rouge1": 0.3978,
+              "rouge2": 0.091,
+              "rougeL": 0.1941,
+              "rougeSU4": 0.1325
+            },
+            "F1_SELF_CORRECTION": {
+              "n": 3,
+              "rouge1": 0.3978,
+              "rouge2": 0.091,
+              "rougeL": 0.1941,
+              "rougeSU4": 0.1325
+            },
+            "F2_OFFERED_TAKEN_BY_OTHER": {
+              "n": 4,
+              "rouge1": 0.3906,
+              "rouge2": 0.0895,
+              "rougeL": 0.1926,
+              "rougeSU4": 0.1295
+            },
+            "F2_REASSIGNED_OR_DROPPED": {
+              "n": 4,
+              "rouge1": 0.4101,
+              "rouge2": 0.1137,
+              "rougeL": 0.1838,
+              "rougeSU4": 0.1409
+            },
+            "F2_TASK_TO_ABSENT": {
+              "n": 4,
+              "rouge1": 0.4101,
+              "rouge2": 0.1137,
+              "rougeL": 0.1838,
+              "rougeSU4": 0.1409
+            },
+            "F2_VAGUE_NO_OWNER": {
+              "n": 4,
+              "rouge1": 0.3906,
+              "rouge2": 0.0895,
+              "rougeL": 0.1926,
+              "rougeSU4": 0.1295
+            },
+            "F3_ACTION_REMOVED": {
+              "n": 3,
+              "rouge1": 0.3958,
+              "rouge2": 0.0991,
+              "rougeL": 0.1929,
+              "rougeSU4": 0.1401
+            },
+            "F3_TASK_TO_ABSENT": {
+              "n": 3,
+              "rouge1": 0.3853,
+              "rouge2": 0.1024,
+              "rougeL": 0.1931,
+              "rougeSU4": 0.1363
+            },
+            "F3_UNAGREED_DECISION": {
+              "n": 2,
+              "rouge1": 0.4158,
+              "rouge2": 0.1143,
+              "rougeL": 0.1898,
+              "rougeSU4": 0.141
+            }
+          }
+        },
+        "group_gap": {
+          "feature": {
+            "rouge1": 0.0233,
+            "rouge2": 0.0072,
+            "rougeL": 0.0177,
+            "rougeSU4": 0.01
+          },
+          "scenario": {
+            "rouge1": 0.0582,
+            "rouge2": 0.0439,
+            "rougeL": 0.037,
+            "rougeSU4": 0.0261
+          }
+        }
+      },
+      "objective": 0.2073,
+      "seconds": 4.4
+    },
+    "default": {
+      "params": {
+        "words_scale": 1.0,
+        "min_line_words": 4,
+        "clean": false,
+        "speaker_names": false,
+        "mode": "full"
+      },
+      "ami": {
+        "rouge1": 0.238,
+        "rouge2": 0.0308,
+        "rougeL": 0.1281,
+        "rougeSU4": 0.063,
+        "words": 161.1,
+        "avg": 0.1323,
+        "per_meeting": {
+          "ES2003a": {
+            "rouge1": 0.1581,
+            "rouge2": 0.008,
+            "rougeL": 0.1107,
+            "rougeSU4": 0.0363,
+            "words": 155
+          },
+          "ES2003b": {
+            "rouge1": 0.2902,
+            "rouge2": 0.0444,
+            "rougeL": 0.1703,
+            "rougeSU4": 0.0908,
+            "words": 170
+          },
+          "ES2003c": {
+            "rouge1": 0.2667,
+            "rouge2": 0.0268,
+            "rougeL": 0.1267,
+            "rougeSU4": 0.0768,
+            "words": 162
+          },
+          "ES2003d": {
+            "rouge1": 0.2435,
+            "rouge2": 0.0292,
+            "rougeL": 0.1101,
+            "rougeSU4": 0.0686,
+            "words": 172
+          },
+          "ES2011a": {
+            "rouge1": 0.2384,
+            "rouge2": 0.04,
+            "rougeL": 0.1325,
+            "rougeSU4": 0.0539,
+            "words": 158
+          },
+          "ES2011b": {
+            "rouge1": 0.2479,
+            "rouge2": 0.0567,
+            "rougeL": 0.1408,
+            "rougeSU4": 0.0686,
+            "words": 168
+          },
+          "ES2011c": {
+            "rouge1": 0.1844,
+            "rouge2": 0.0225,
+            "rougeL": 0.1173,
+            "rougeSU4": 0.0472,
+            "words": 157
+          },
+          "ES2011d": {
+            "rouge1": 0.1671,
+            "rouge2": 0.0168,
+            "rougeL": 0.1058,
+            "rougeSU4": 0.0377,
+            "words": 167
+          },
+          "IS1008a": {
+            "rouge1": 0.3282,
+            "rouge2": 0.0748,
+            "rougeL": 0.192,
+            "rougeSU4": 0.1174,
+            "words": 164
+          },
+          "IS1008b": {
+            "rouge1": 0.2216,
+            "rouge2": 0.0223,
+            "rougeL": 0.1274,
+            "rougeSU4": 0.0562,
+            "words": 167
+          },
+          "IS1008c": {
+            "rouge1": 0.28,
+            "rouge2": 0.0345,
+            "rougeL": 0.1371,
+            "rougeSU4": 0.0696,
+            "words": 160
+          },
+          "IS1008d": {
+            "rouge1": 0.2189,
+            "rouge2": 0.0357,
+            "rougeL": 0.1302,
+            "rougeSU4": 0.0531,
+            "words": 155
+          },
+          "TS3004a": {
+            "rouge1": 0.2936,
+            "rouge2": 0.0369,
+            "rougeL": 0.1468,
+            "rougeSU4": 0.0735,
+            "words": 157
+          },
+          "TS3004b": {
+            "rouge1": 0.1939,
+            "rouge2": 0.0056,
+            "rougeL": 0.0997,
+            "rougeSU4": 0.0478,
+            "words": 157
+          },
+          "TS3004c": {
+            "rouge1": 0.1433,
+            "rouge2": 0.0173,
+            "rougeL": 0.0974,
+            "rougeSU4": 0.0359,
+            "words": 153
+          },
+          "TS3004d": {
+            "rouge1": 0.1748,
+            "rouge2": 0.013,
+            "rougeL": 0.0906,
+            "rougeSU4": 0.0417,
+            "words": 160
+          },
+          "TS3006a": {
+            "rouge1": 0.2671,
+            "rouge2": 0.025,
+            "rougeL": 0.1242,
+            "rougeSU4": 0.061,
+            "words": 162
+          },
+          "TS3006b": {
+            "rouge1": 0.3476,
+            "rouge2": 0.043,
+            "rougeL": 0.1497,
+            "rougeSU4": 0.1102,
+            "words": 169
+          },
+          "TS3006c": {
+            "rouge1": 0.2945,
+            "rouge2": 0.0414,
+            "rougeL": 0.1438,
+            "rougeSU4": 0.0662,
+            "words": 152
+          },
+          "TS3006d": {
+            "rouge1": 0.1994,
+            "rouge2": 0.0229,
+            "rougeL": 0.1083,
+            "rougeSU4": 0.0482,
+            "words": 157
+          }
+        },
+        "by_group": {
+          "gender_mix": {
+            "all_female": {
+              "n": 4,
+              "rouge1": 0.2095,
+              "rouge2": 0.034,
+              "rougeL": 0.1241,
+              "rougeSU4": 0.0518
+            },
+            "all_male": {
+              "n": 12,
+              "rouge1": 0.2394,
+              "rouge2": 0.0261,
+              "rougeL": 0.1232,
+              "rougeSU4": 0.0631
+            },
+            "mixed": {
+              "n": 4,
+              "rouge1": 0.2622,
+              "rouge2": 0.0418,
+              "rougeL": 0.1467,
+              "rougeSU4": 0.0741
+            }
+          },
+          "non_native": {
+            "all_native": {
+              "n": 16,
+              "rouge1": 0.2319,
+              "rouge2": 0.0281,
+              "rougeL": 0.1234,
+              "rougeSU4": 0.0603
+            },
+            "some_non_native": {
+              "n": 4,
+              "rouge1": 0.2622,
+              "rouge2": 0.0418,
+              "rougeL": 0.1467,
+              "rougeSU4": 0.0741
+            }
+          }
+        },
+        "group_gap": {
+          "gender_mix": {
+            "rouge1": 0.0527,
+            "rouge2": 0.0157,
+            "rougeL": 0.0235,
+            "rougeSU4": 0.0223
+          },
+          "non_native": {
+            "rouge1": 0.0303,
+            "rouge2": 0.0137,
+            "rougeL": 0.0233,
+            "rougeSU4": 0.0138
+          }
+        }
+      },
+      "synthetic": {
+        "rouge1": 0.3498,
+        "rouge2": 0.0836,
+        "rougeL": 0.1738,
+        "rougeSU4": 0.1144,
+        "words": 199.65,
+        "avg": 0.2024,
+        "per_meeting": {
+          "SY0106a": {
+            "rouge1": 0.3821,
+            "rouge2": 0.0948,
+            "rougeL": 0.1698,
+            "rougeSU4": 0.1281,
+            "words": 195
+          },
+          "SY0106b": {
+            "rouge1": 0.3898,
+            "rouge2": 0.0979,
+            "rougeL": 0.1903,
+            "rougeSU4": 0.1322,
+            "words": 200
+          },
+          "SY0106c": {
+            "rouge1": 0.3724,
+            "rouge2": 0.097,
+            "rougeL": 0.1747,
+            "rougeSU4": 0.1326,
+            "words": 197
+          },
+          "SY0106d": {
+            "rouge1": 0.3523,
+            "rouge2": 0.055,
+            "rougeL": 0.1722,
+            "rougeSU4": 0.1126,
+            "words": 202
+          },
+          "SY0107a": {
+            "rouge1": 0.2849,
+            "rouge2": 0.0688,
+            "rougeL": 0.1709,
+            "rougeSU4": 0.08,
+            "words": 197
+          },
+          "SY0107b": {
+            "rouge1": 0.3257,
+            "rouge2": 0.0461,
+            "rougeL": 0.1336,
+            "rougeSU4": 0.0963,
+            "words": 204
+          },
+          "SY0107c": {
+            "rouge1": 0.3363,
+            "rouge2": 0.1171,
+            "rougeL": 0.1839,
+            "rougeSU4": 0.1209,
+            "words": 200
+          },
+          "SY0107d": {
+            "rouge1": 0.335,
+            "rouge2": 0.0594,
+            "rougeL": 0.1675,
+            "rougeSU4": 0.1147,
+            "words": 202
+          },
+          "SY0201a": {
+            "rouge1": 0.3243,
+            "rouge2": 0.0815,
+            "rougeL": 0.1784,
+            "rougeSU4": 0.0959,
+            "words": 198
+          },
+          "SY0201b": {
+            "rouge1": 0.3895,
+            "rouge2": 0.0907,
+            "rougeL": 0.1995,
+            "rougeSU4": 0.145,
+            "words": 208
+          },
+          "SY0201c": {
+            "rouge1": 0.3136,
+            "rouge2": 0.1005,
+            "rougeL": 0.1545,
+            "rougeSU4": 0.1157,
+            "words": 203
+          },
+          "SY0201d": {
+            "rouge1": 0.414,
+            "rouge2": 0.0981,
+            "rougeL": 0.1907,
+            "rougeSU4": 0.1325,
+            "words": 201
+          },
+          "SY0208a": {
+            "rouge1": 0.3536,
+            "rouge2": 0.1008,
+            "rougeL": 0.1953,
+            "rougeSU4": 0.1025,
+            "words": 196
+          },
+          "SY0208b": {
+            "rouge1": 0.3398,
+            "rouge2": 0.0585,
+            "rougeL": 0.165,
+            "rougeSU4": 0.0983,
+            "words": 195
+          },
+          "SY0208c": {
+            "rouge1": 0.369,
+            "rouge2": 0.1183,
+            "rougeL": 0.1551,
+            "rougeSU4": 0.1491,
+            "words": 196
+          },
+          "SY0208d": {
+            "rouge1": 0.2901,
+            "rouge2": 0.0486,
+            "rougeL": 0.1451,
+            "rougeSU4": 0.0778,
+            "words": 196
+          },
+          "SY0302a": {
+            "rouge1": 0.3069,
+            "rouge2": 0.072,
+            "rougeL": 0.1739,
+            "rougeSU4": 0.0855,
+            "words": 202
+          },
+          "SY0302b": {
+            "rouge1": 0.3696,
+            "rouge2": 0.0662,
+            "rougeL": 0.1671,
+            "rougeSU4": 0.1068,
+            "words": 200
+          },
+          "SY0302c": {
+            "rouge1": 0.397,
+            "rouge2": 0.1097,
+            "rougeL": 0.1886,
+            "rougeSU4": 0.1365,
+            "words": 197
+          },
+          "SY0302d": {
+            "rouge1": 0.35,
+            "rouge2": 0.0905,
+            "rougeL": 0.2,
+            "rougeSU4": 0.1241,
+            "words": 204
+          }
+        },
+        "by_group": {
+          "feature": {
+            "F1": {
+              "n": 8,
+              "rouge1": 0.3473,
+              "rouge2": 0.0795,
+              "rougeL": 0.1704,
+              "rougeSU4": 0.1147
+            },
+            "F2": {
+              "n": 8,
+              "rouge1": 0.3492,
+              "rouge2": 0.0871,
+              "rougeL": 0.173,
+              "rougeSU4": 0.1146
+            },
+            "F3": {
+              "n": 4,
+              "rouge1": 0.3559,
+              "rouge2": 0.0846,
+              "rougeL": 0.1824,
+              "rougeSU4": 0.1132
+            }
+          },
+          "scenario": {
+            "F1_ABSENT_DISCUSSED": {
+              "n": 3,
+              "rouge1": 0.3534,
+              "rouge2": 0.0653,
+              "rougeL": 0.1585,
+              "rougeSU4": 0.1123
+            },
+            "F1_INTERLEAVED_TOPICS": {
+              "n": 3,
+              "rouge1": 0.3534,
+              "rouge2": 0.0653,
+              "rougeL": 0.1585,
+              "rougeSU4": 0.1123
+            },
+            "F1_OFF_TOPIC_TANGENT": {
+              "n": 2,
+              "rouge1": 0.3543,
+              "rouge2": 0.1071,
+              "rougeL": 0.1793,
+              "rougeSU4": 0.1268
+            },
+            "F1_PLAN_CHANGE": {
+              "n": 2,
+              "rouge1": 0.3543,
+              "rouge2": 0.1071,
+              "rougeL": 0.1793,
+              "rougeSU4": 0.1268
+            },
+            "F1_SARCASM_AS_FACT": {
+              "n": 3,
+              "rouge1": 0.3366,
+              "rouge2": 0.0754,
+              "rougeL": 0.1762,
+              "rougeSU4": 0.109
+            },
+            "F1_SELF_CORRECTION": {
+              "n": 3,
+              "rouge1": 0.3366,
+              "rouge2": 0.0754,
+              "rougeL": 0.1762,
+              "rougeSU4": 0.109
+            },
+            "F2_OFFERED_TAKEN_BY_OTHER": {
+              "n": 4,
+              "rouge1": 0.3169,
+              "rouge2": 0.0723,
+              "rougeL": 0.1608,
+              "rougeSU4": 0.0969
+            },
+            "F2_REASSIGNED_OR_DROPPED": {
+              "n": 4,
+              "rouge1": 0.3815,
+              "rouge2": 0.102,
+              "rougeL": 0.1852,
+              "rougeSU4": 0.1323
+            },
+            "F2_TASK_TO_ABSENT": {
+              "n": 4,
+              "rouge1": 0.3815,
+              "rouge2": 0.102,
+              "rougeL": 0.1852,
+              "rougeSU4": 0.1323
+            },
+            "F2_VAGUE_NO_OWNER": {
+              "n": 4,
+              "rouge1": 0.3169,
+              "rouge2": 0.0723,
+              "rougeL": 0.1608,
+              "rougeSU4": 0.0969
+            },
+            "F3_ACTION_REMOVED": {
+              "n": 3,
+              "rouge1": 0.3422,
+              "rouge2": 0.0762,
+              "rougeL": 0.1803,
+              "rougeSU4": 0.1055
+            },
+            "F3_TASK_TO_ABSENT": {
+              "n": 3,
+              "rouge1": 0.3513,
+              "rouge2": 0.0907,
+              "rougeL": 0.1875,
+              "rougeSU4": 0.1154
+            },
+            "F3_UNAGREED_DECISION": {
+              "n": 2,
+              "rouge1": 0.3833,
+              "rouge2": 0.088,
+              "rougeL": 0.1779,
+              "rougeSU4": 0.1217
+            }
+          }
+        },
+        "group_gap": {
+          "feature": {
+            "rouge1": 0.0086,
+            "rouge2": 0.0076,
+            "rougeL": 0.012,
+            "rougeSU4": 0.0015
+          },
+          "scenario": {
+            "rouge1": 0.0664,
+            "rouge2": 0.0418,
+            "rougeL": 0.029,
+            "rougeSU4": 0.0354
+          }
+        }
+      },
+      "objective": 0.1673,
+      "seconds": 46.1,
+      "commit": "7cea72e"
+    },
+    "trials": 192
+  },
+  "recursive": {
+    "best": {
+      "params": {
+        "words_scale": 1.5,
+        "min_line_words": 16,
+        "clean": true,
+        "speaker_names": true,
+        "chunk_seconds": 120,
+        "buffer": 1.0,
+        "mode": "recursive"
+      },
+      "ami": {
+        "rouge1": 0.2893,
+        "rouge2": 0.0487,
+        "rougeL": 0.1516,
+        "rougeSU4": 0.0882,
+        "words": 239.05,
+        "avg": 0.1632,
+        "per_meeting": {
+          "ES2003a": {
+            "rouge1": 0.176,
+            "rouge2": 0.0118,
+            "rougeL": 0.1056,
+            "rougeSU4": 0.0486,
+            "words": 241
+          },
+          "ES2003b": {
+            "rouge1": 0.2632,
+            "rouge2": 0.0423,
+            "rougeL": 0.1684,
+            "rougeSU4": 0.0844,
+            "words": 231
+          },
+          "ES2003c": {
+            "rouge1": 0.2174,
+            "rouge2": 0.0328,
+            "rougeL": 0.1196,
+            "rougeSU4": 0.0606,
+            "words": 233
+          },
+          "ES2003d": {
+            "rouge1": 0.2775,
+            "rouge2": 0.0385,
+            "rougeL": 0.1388,
+            "rougeSU4": 0.0815,
+            "words": 247
+          },
+          "ES2011a": {
+            "rouge1": 0.3508,
+            "rouge2": 0.0789,
+            "rougeL": 0.178,
+            "rougeSU4": 0.1026,
+            "words": 240
+          },
+          "ES2011b": {
+            "rouge1": 0.3105,
+            "rouge2": 0.0413,
+            "rougeL": 0.1416,
+            "rougeSU4": 0.0855,
+            "words": 237
+          },
+          "ES2011c": {
+            "rouge1": 0.2013,
+            "rouge2": 0.0449,
+            "rougeL": 0.1253,
+            "rougeSU4": 0.0656,
+            "words": 244
+          },
+          "ES2011d": {
+            "rouge1": 0.2968,
+            "rouge2": 0.0505,
+            "rougeL": 0.1461,
+            "rougeSU4": 0.0885,
+            "words": 248
+          },
+          "IS1008a": {
+            "rouge1": 0.3579,
+            "rouge2": 0.0952,
+            "rougeL": 0.2053,
+            "rougeSU4": 0.1262,
+            "words": 222
+          },
+          "IS1008b": {
+            "rouge1": 0.3356,
+            "rouge2": 0.0416,
+            "rougeL": 0.1701,
+            "rougeSU4": 0.0899,
+            "words": 233
+          },
+          "IS1008c": {
+            "rouge1": 0.3907,
+            "rouge2": 0.0841,
+            "rougeL": 0.1907,
+            "rougeSU4": 0.1184,
+            "words": 235
+          },
+          "IS1008d": {
+            "rouge1": 0.2774,
+            "rouge2": 0.0449,
+            "rougeL": 0.1566,
+            "rougeSU4": 0.092,
+            "words": 259
+          },
+          "TS3004a": {
+            "rouge1": 0.3747,
+            "rouge2": 0.0831,
+            "rougeL": 0.2044,
+            "rougeSU4": 0.1371,
+            "words": 233
+          },
+          "TS3004b": {
+            "rouge1": 0.2792,
+            "rouge2": 0.0368,
+            "rougeL": 0.1465,
+            "rougeSU4": 0.0802,
+            "words": 235
+          },
+          "TS3004c": {
+            "rouge1": 0.287,
+            "rouge2": 0.0586,
+            "rougeL": 0.1794,
+            "rougeSU4": 0.0945,
+            "words": 246
+          },
+          "TS3004d": {
+            "rouge1": 0.2132,
+            "rouge2": 0.0306,
+            "rougeL": 0.1168,
+            "rougeSU4": 0.0591,
+            "words": 234
+          },
+          "TS3006a": {
+            "rouge1": 0.3123,
+            "rouge2": 0.0506,
+            "rougeL": 0.1511,
+            "rougeSU4": 0.091,
+            "words": 240
+          },
+          "TS3006b": {
+            "rouge1": 0.371,
+            "rouge2": 0.0636,
+            "rougeL": 0.1493,
+            "rougeSU4": 0.1312,
+            "words": 240
+          },
+          "TS3006c": {
+            "rouge1": 0.2545,
+            "rouge2": 0.0261,
+            "rougeL": 0.1247,
+            "rougeSU4": 0.0675,
+            "words": 240
+          },
+          "TS3006d": {
+            "rouge1": 0.2385,
+            "rouge2": 0.0184,
+            "rougeL": 0.1147,
+            "rougeSU4": 0.0596,
+            "words": 243
+          }
+        },
+        "by_group": {
+          "gender_mix": {
+            "all_female": {
+              "n": 4,
+              "rouge1": 0.2898,
+              "rouge2": 0.0539,
+              "rougeL": 0.1477,
+              "rougeSU4": 0.0855
+            },
+            "all_male": {
+              "n": 12,
+              "rouge1": 0.272,
+              "rouge2": 0.0411,
+              "rougeL": 0.1433,
+              "rougeSU4": 0.0829
+            },
+            "mixed": {
+              "n": 4,
+              "rouge1": 0.3404,
+              "rouge2": 0.0664,
+              "rougeL": 0.1807,
+              "rougeSU4": 0.1066
+            }
+          },
+          "non_native": {
+            "all_native": {
+              "n": 16,
+              "rouge1": 0.2765,
+              "rouge2": 0.0443,
+              "rougeL": 0.1444,
+              "rougeSU4": 0.0836
+            },
+            "some_non_native": {
+              "n": 4,
+              "rouge1": 0.3404,
+              "rouge2": 0.0664,
+              "rougeL": 0.1807,
+              "rougeSU4": 0.1066
+            }
+          }
+        },
+        "group_gap": {
+          "gender_mix": {
+            "rouge1": 0.0684,
+            "rouge2": 0.0253,
+            "rougeL": 0.0374,
+            "rougeSU4": 0.0237
+          },
+          "non_native": {
+            "rouge1": 0.0639,
+            "rouge2": 0.0221,
+            "rougeL": 0.0363,
+            "rougeSU4": 0.023
+          }
+        }
+      },
+      "synthetic": {
+        "rouge1": 0.4048,
+        "rouge2": 0.1025,
+        "rougeL": 0.1953,
+        "rougeSU4": 0.1383,
+        "words": 284.8,
+        "avg": 0.2342,
+        "per_meeting": {
+          "SY0106a": {
+            "rouge1": 0.4075,
+            "rouge2": 0.0985,
+            "rougeL": 0.1774,
+            "rougeSU4": 0.1365,
+            "words": 301
+          },
+          "SY0106b": {
+            "rouge1": 0.4075,
+            "rouge2": 0.072,
+            "rougeL": 0.1887,
+            "rougeSU4": 0.1308,
+            "words": 298
+          },
+          "SY0106c": {
+            "rouge1": 0.4486,
+            "rouge2": 0.1276,
+            "rougeL": 0.2355,
+            "rougeSU4": 0.1522,
+            "words": 296
+          },
+          "SY0106d": {
+            "rouge1": 0.4235,
+            "rouge2": 0.1013,
+            "rougeL": 0.2378,
+            "rougeSU4": 0.1527,
+            "words": 302
+          },
+          "SY0107a": {
+            "rouge1": 0.335,
+            "rouge2": 0.078,
+            "rougeL": 0.1796,
+            "rougeSU4": 0.0991,
+            "words": 267
+          },
+          "SY0107b": {
+            "rouge1": 0.4374,
+            "rouge2": 0.1239,
+            "rougeL": 0.2081,
+            "rougeSU4": 0.156,
+            "words": 292
+          },
+          "SY0107c": {
+            "rouge1": 0.4246,
+            "rouge2": 0.1159,
+            "rougeL": 0.2086,
+            "rougeSU4": 0.1504,
+            "words": 292
+          },
+          "SY0107d": {
+            "rouge1": 0.4225,
+            "rouge2": 0.101,
+            "rougeL": 0.2133,
+            "rougeSU4": 0.1592,
+            "words": 290
+          },
+          "SY0201a": {
+            "rouge1": 0.3649,
+            "rouge2": 0.0905,
+            "rougeL": 0.1937,
+            "rougeSU4": 0.1192,
+            "words": 275
+          },
+          "SY0201b": {
+            "rouge1": 0.4168,
+            "rouge2": 0.1207,
+            "rougeL": 0.1964,
+            "rougeSU4": 0.1471,
+            "words": 290
+          },
+          "SY0201c": {
+            "rouge1": 0.3762,
+            "rouge2": 0.1002,
+            "rougeL": 0.1881,
+            "rougeSU4": 0.1234,
+            "words": 293
+          },
+          "SY0201d": {
+            "rouge1": 0.4556,
+            "rouge2": 0.1434,
+            "rougeL": 0.2046,
+            "rougeSU4": 0.1709,
+            "words": 291
+          },
+          "SY0208a": {
+            "rouge1": 0.3717,
+            "rouge2": 0.1014,
+            "rougeL": 0.1495,
+            "rougeSU4": 0.1136,
+            "words": 306
+          },
+          "SY0208b": {
+            "rouge1": 0.3929,
+            "rouge2": 0.0637,
+            "rougeL": 0.1667,
+            "rougeSU4": 0.1182,
+            "words": 287
+          },
+          "SY0208c": {
+            "rouge1": 0.39,
+            "rouge2": 0.0833,
+            "rougeL": 0.1701,
+            "rougeSU4": 0.1258,
+            "words": 304
+          },
+          "SY0208d": {
+            "rouge1": 0.4319,
+            "rouge2": 0.1056,
+            "rougeL": 0.2178,
+            "rougeSU4": 0.1551,
+            "words": 300
+          },
+          "SY0302a": {
+            "rouge1": 0.3448,
+            "rouge2": 0.0556,
+            "rougeL": 0.1655,
+            "rougeSU4": 0.1064,
+            "words": 114
+          },
+          "SY0302b": {
+            "rouge1": 0.4325,
+            "rouge2": 0.1155,
+            "rougeL": 0.1984,
+            "rougeSU4": 0.1483,
+            "words": 303
+          },
+          "SY0302c": {
+            "rouge1": 0.4,
+            "rouge2": 0.1193,
+            "rougeL": 0.1901,
+            "rougeSU4": 0.1353,
+            "words": 294
+          },
+          "SY0302d": {
+            "rouge1": 0.4128,
+            "rouge2": 0.1328,
+            "rougeL": 0.2164,
+            "rougeSU4": 0.166,
+            "words": 301
+          }
+        },
+        "by_group": {
+          "feature": {
+            "F1": {
+              "n": 8,
+              "rouge1": 0.4133,
+              "rouge2": 0.1023,
+              "rougeL": 0.2061,
+              "rougeSU4": 0.1421
+            },
+            "F2": {
+              "n": 8,
+              "rouge1": 0.4,
+              "rouge2": 0.1011,
+              "rougeL": 0.1859,
+              "rougeSU4": 0.1342
+            },
+            "F3": {
+              "n": 4,
+              "rouge1": 0.3975,
+              "rouge2": 0.1058,
+              "rougeL": 0.1926,
+              "rougeSU4": 0.139
+            }
+          },
+          "scenario": {
+            "F1_ABSENT_DISCUSSED": {
+              "n": 3,
+              "rouge1": 0.4228,
+              "rouge2": 0.1079,
+              "rougeL": 0.2078,
+              "rougeSU4": 0.1484
+            },
+            "F1_INTERLEAVED_TOPICS": {
+              "n": 3,
+              "rouge1": 0.4228,
+              "rouge2": 0.1079,
+              "rougeL": 0.2078,
+              "rougeSU4": 0.1484
+            },
+            "F1_OFF_TOPIC_TANGENT": {
+              "n": 2,
+              "rouge1": 0.4366,
+              "rouge2": 0.1217,
+              "rougeL": 0.222,
+              "rougeSU4": 0.1513
+            },
+            "F1_PLAN_CHANGE": {
+              "n": 2,
+              "rouge1": 0.4366,
+              "rouge2": 0.1217,
+              "rougeL": 0.222,
+              "rougeSU4": 0.1513
+            },
+            "F1_SARCASM_AS_FACT": {
+              "n": 3,
+              "rouge1": 0.3883,
+              "rouge2": 0.0837,
+              "rougeL": 0.1939,
+              "rougeSU4": 0.1297
+            },
+            "F1_SELF_CORRECTION": {
+              "n": 3,
+              "rouge1": 0.3883,
+              "rouge2": 0.0837,
+              "rougeL": 0.1939,
+              "rougeSU4": 0.1297
+            },
+            "F2_OFFERED_TAKEN_BY_OTHER": {
+              "n": 4,
+              "rouge1": 0.3915,
+              "rouge2": 0.09,
+              "rougeL": 0.1916,
+              "rougeSU4": 0.129
+            },
+            "F2_REASSIGNED_OR_DROPPED": {
+              "n": 4,
+              "rouge1": 0.4085,
+              "rouge2": 0.1122,
+              "rougeL": 0.1802,
+              "rougeSU4": 0.1394
+            },
+            "F2_TASK_TO_ABSENT": {
+              "n": 4,
+              "rouge1": 0.4085,
+              "rouge2": 0.1122,
+              "rougeL": 0.1802,
+              "rougeSU4": 0.1394
+            },
+            "F2_VAGUE_NO_OWNER": {
+              "n": 4,
+              "rouge1": 0.3915,
+              "rouge2": 0.09,
+              "rougeL": 0.1916,
+              "rougeSU4": 0.129
+            },
+            "F3_ACTION_REMOVED": {
+              "n": 3,
+              "rouge1": 0.3967,
+              "rouge2": 0.1013,
+              "rougeL": 0.1934,
+              "rougeSU4": 0.1402
+            },
+            "F3_TASK_TO_ABSENT": {
+              "n": 3,
+              "rouge1": 0.3859,
+              "rouge2": 0.1026,
+              "rougeL": 0.1907,
+              "rougeSU4": 0.1359
+            },
+            "F3_UNAGREED_DECISION": {
+              "n": 2,
+              "rouge1": 0.4163,
+              "rouge2": 0.1174,
+              "rougeL": 0.1942,
+              "rougeSU4": 0.1418
+            }
+          }
+        },
+        "group_gap": {
+          "feature": {
+            "rouge1": 0.0158,
+            "rouge2": 0.0047,
+            "rougeL": 0.0202,
+            "rougeSU4": 0.0079
+          },
+          "scenario": {
+            "rouge1": 0.0507,
+            "rouge2": 0.038,
+            "rougeL": 0.0418,
+            "rougeSU4": 0.0223
+          }
+        }
+      },
+      "objective": 0.1987,
+      "seconds": 6.6
+    },
+    "default": {
+      "params": {
+        "words_scale": 1.0,
+        "min_line_words": 4,
+        "clean": false,
+        "speaker_names": false,
+        "chunk_seconds": 30,
+        "buffer": 1.5,
+        "mode": "recursive"
+      },
+      "ami": {
+        "rouge1": 0.2085,
+        "rouge2": 0.0247,
+        "rougeL": 0.1208,
+        "rougeSU4": 0.0539,
+        "words": 160.4,
+        "avg": 0.118,
+        "per_meeting": {
+          "ES2003a": {
+            "rouge1": 0.1465,
+            "rouge2": 0.0148,
+            "rougeL": 0.0952,
+            "rougeSU4": 0.0261,
+            "words": 176
+          },
+          "ES2003b": {
+            "rouge1": 0.2676,
+            "rouge2": 0.0471,
+            "rougeL": 0.1605,
+            "rougeSU4": 0.0873,
+            "words": 157
+          },
+          "ES2003c": {
+            "rouge1": 0.2361,
+            "rouge2": 0.035,
+            "rougeL": 0.1319,
+            "rougeSU4": 0.0683,
+            "words": 152
+          },
+          "ES2003d": {
+            "rouge1": 0.2128,
+            "rouge2": 0.0122,
+            "rougeL": 0.1216,
+            "rougeSU4": 0.0566,
+            "words": 160
+          },
+          "ES2011a": {
+            "rouge1": 0.2013,
+            "rouge2": 0.0261,
+            "rougeL": 0.1299,
+            "rougeSU4": 0.0451,
+            "words": 160
+          },
+          "ES2011b": {
+            "rouge1": 0.2114,
+            "rouge2": 0.0287,
+            "rougeL": 0.1371,
+            "rougeSU4": 0.0551,
+            "words": 167
+          },
+          "ES2011c": {
+            "rouge1": 0.1271,
+            "rouge2": 0.0056,
+            "rougeL": 0.0773,
+            "rougeSU4": 0.0243,
+            "words": 157
+          },
+          "ES2011d": {
+            "rouge1": 0.2571,
+            "rouge2": 0.0172,
+            "rougeL": 0.1371,
+            "rougeSU4": 0.058,
+            "words": 162
+          },
+          "IS1008a": {
+            "rouge1": 0.32,
+            "rouge2": 0.0681,
+            "rougeL": 0.1785,
+            "rougeSU4": 0.1042,
+            "words": 167
+          },
+          "IS1008b": {
+            "rouge1": 0.1983,
+            "rouge2": 0.0285,
+            "rougeL": 0.1246,
+            "rougeSU4": 0.0527,
+            "words": 155
+          },
+          "IS1008c": {
+            "rouge1": 0.2191,
+            "rouge2": 0.0282,
+            "rougeL": 0.118,
+            "rougeSU4": 0.0551,
+            "words": 163
+          },
+          "IS1008d": {
+            "rouge1": 0.213,
+            "rouge2": 0.0476,
+            "rougeL": 0.142,
+            "rougeSU4": 0.0571,
+            "words": 156
+          },
+          "TS3004a": {
+            "rouge1": 0.2716,
+            "rouge2": 0.0435,
+            "rougeL": 0.1543,
+            "rougeSU4": 0.0805,
+            "words": 154
+          },
+          "TS3004b": {
+            "rouge1": 0.1828,
+            "rouge2": 0.0056,
+            "rougeL": 0.0997,
+            "rougeSU4": 0.0393,
+            "words": 157
+          },
+          "TS3004c": {
+            "rouge1": 0.1538,
+            "rouge2": 0.0166,
+            "rougeL": 0.1044,
+            "rougeSU4": 0.0381,
+            "words": 164
+          },
+          "TS3004d": {
+            "rouge1": 0.1783,
+            "rouge2": 0.0128,
+            "rougeL": 0.0955,
+            "rougeSU4": 0.0431,
+            "words": 161
+          },
+          "TS3006a": {
+            "rouge1": 0.1824,
+            "rouge2": 0.0063,
+            "rougeL": 0.0818,
+            "rougeSU4": 0.0383,
+            "words": 157
+          },
+          "TS3006b": {
+            "rouge1": 0.2772,
+            "rouge2": 0.0328,
+            "rougeL": 0.1304,
+            "rougeSU4": 0.0771,
+            "words": 160
+          },
+          "TS3006c": {
+            "rouge1": 0.1733,
+            "rouge2": 0.0,
+            "rougeL": 0.1067,
+            "rougeSU4": 0.0407,
+            "words": 160
+          },
+          "TS3006d": {
+            "rouge1": 0.1393,
+            "rouge2": 0.0168,
+            "rougeL": 0.0891,
+            "rougeSU4": 0.032,
+            "words": 163
+          }
+        },
+        "by_group": {
+          "gender_mix": {
+            "all_female": {
+              "n": 4,
+              "rouge1": 0.1992,
+              "rouge2": 0.0194,
+              "rougeL": 0.1203,
+              "rougeSU4": 0.0456
+            },
+            "all_male": {
+              "n": 12,
+              "rouge1": 0.2018,
+              "rouge2": 0.0203,
+              "rougeL": 0.1143,
+              "rougeSU4": 0.0523
+            },
+            "mixed": {
+              "n": 4,
+              "rouge1": 0.2376,
+              "rouge2": 0.0431,
+              "rougeL": 0.1408,
+              "rougeSU4": 0.0673
+            }
+          },
+          "non_native": {
+            "all_native": {
+              "n": 16,
+              "rouge1": 0.2012,
+              "rouge2": 0.0201,
+              "rougeL": 0.1158,
+              "rougeSU4": 0.0506
+            },
+            "some_non_native": {
+              "n": 4,
+              "rouge1": 0.2376,
+              "rouge2": 0.0431,
+              "rougeL": 0.1408,
+              "rougeSU4": 0.0673
+            }
+          }
+        },
+        "group_gap": {
+          "gender_mix": {
+            "rouge1": 0.0384,
+            "rouge2": 0.0237,
+            "rougeL": 0.0265,
+            "rougeSU4": 0.0217
+          },
+          "non_native": {
+            "rouge1": 0.0364,
+            "rouge2": 0.023,
+            "rougeL": 0.025,
+            "rougeSU4": 0.0167
+          }
+        }
+      },
+      "synthetic": {
+        "rouge1": 0.3221,
+        "rouge2": 0.0718,
+        "rougeL": 0.1638,
+        "rougeSU4": 0.1044,
+        "words": 199.4,
+        "avg": 0.1859,
+        "per_meeting": {
+          "SY0106a": {
+            "rouge1": 0.3516,
+            "rouge2": 0.0642,
+            "rougeL": 0.1553,
+            "rougeSU4": 0.1139,
+            "words": 202
+          },
+          "SY0106b": {
+            "rouge1": 0.3821,
+            "rouge2": 0.0853,
+            "rougeL": 0.1792,
+            "rougeSU4": 0.1265,
+            "words": 195
+          },
+          "SY0106c": {
+            "rouge1": 0.3963,
+            "rouge2": 0.1111,
+            "rougeL": 0.1843,
+            "rougeSU4": 0.1422,
+            "words": 203
+          },
+          "SY0106d": {
+            "rouge1": 0.3444,
+            "rouge2": 0.0629,
+            "rougeL": 0.1722,
+            "rougeSU4": 0.114,
+            "words": 201
+          },
+          "SY0107a": {
+            "rouge1": 0.2542,
+            "rouge2": 0.0568,
+            "rougeL": 0.1525,
+            "rougeSU4": 0.0764,
+            "words": 199
+          },
+          "SY0107b": {
+            "rouge1": 0.3922,
+            "rouge2": 0.1094,
+            "rougeL": 0.1961,
+            "rougeSU4": 0.1402,
+            "words": 194
+          },
+          "SY0107c": {
+            "rouge1": 0.2477,
+            "rouge2": 0.0362,
+            "rougeL": 0.1306,
+            "rougeSU4": 0.0706,
+            "words": 202
+          },
+          "SY0107d": {
+            "rouge1": 0.2983,
+            "rouge2": 0.0541,
+            "rougeL": 0.1614,
+            "rougeSU4": 0.099,
+            "words": 200
+          },
+          "SY0201a": {
+            "rouge1": 0.3396,
+            "rouge2": 0.0976,
+            "rougeL": 0.2049,
+            "rougeSU4": 0.1111,
+            "words": 201
+          },
+          "SY0201b": {
+            "rouge1": 0.2344,
+            "rouge2": 0.0201,
+            "rougeL": 0.1147,
+            "rougeSU4": 0.053,
+            "words": 193
+          },
+          "SY0201c": {
+            "rouge1": 0.303,
+            "rouge2": 0.0749,
+            "rougeL": 0.1399,
+            "rougeSU4": 0.1046,
+            "words": 195
+          },
+          "SY0201d": {
+            "rouge1": 0.3341,
+            "rouge2": 0.0946,
+            "rougeL": 0.16,
+            "rougeSU4": 0.1246,
+            "words": 201
+          },
+          "SY0208a": {
+            "rouge1": 0.3238,
+            "rouge2": 0.0892,
+            "rougeL": 0.1671,
+            "rougeSU4": 0.0988,
+            "words": 201
+          },
+          "SY0208b": {
+            "rouge1": 0.301,
+            "rouge2": 0.0585,
+            "rougeL": 0.1505,
+            "rougeSU4": 0.0893,
+            "words": 196
+          },
+          "SY0208c": {
+            "rouge1": 0.3566,
+            "rouge2": 0.0883,
+            "rougeL": 0.1602,
+            "rougeSU4": 0.1309,
+            "words": 205
+          },
+          "SY0208d": {
+            "rouge1": 0.2658,
+            "rouge2": 0.0438,
+            "rougeL": 0.1481,
+            "rougeSU4": 0.0815,
+            "words": 199
+          },
+          "SY0302a": {
+            "rouge1": 0.2708,
+            "rouge2": 0.0576,
+            "rougeL": 0.151,
+            "rougeSU4": 0.0739,
+            "words": 197
+          },
+          "SY0302b": {
+            "rouge1": 0.3687,
+            "rouge2": 0.0761,
+            "rougeL": 0.1818,
+            "rougeSU4": 0.1151,
+            "words": 203
+          },
+          "SY0302c": {
+            "rouge1": 0.3243,
+            "rouge2": 0.079,
+            "rougeL": 0.1671,
+            "rougeSU4": 0.0978,
+            "words": 199
+          },
+          "SY0302d": {
+            "rouge1": 0.3538,
+            "rouge2": 0.0773,
+            "rougeL": 0.2,
+            "rougeSU4": 0.1255,
+            "words": 202
+          }
+        },
+        "by_group": {
+          "feature": {
+            "F1": {
+              "n": 8,
+              "rouge1": 0.3334,
+              "rouge2": 0.0725,
+              "rougeL": 0.1665,
+              "rougeSU4": 0.1104
+            },
+            "F2": {
+              "n": 8,
+              "rouge1": 0.3073,
+              "rouge2": 0.0709,
+              "rougeL": 0.1557,
+              "rougeSU4": 0.0992
+            },
+            "F3": {
+              "n": 4,
+              "rouge1": 0.3294,
+              "rouge2": 0.0725,
+              "rougeL": 0.175,
+              "rougeSU4": 0.1031
+            }
+          },
+          "scenario": {
+            "F1_ABSENT_DISCUSSED": {
+              "n": 3,
+              "rouge1": 0.3627,
+              "rouge2": 0.0788,
+              "rougeL": 0.1745,
+              "rougeSU4": 0.1227
+            },
+            "F1_INTERLEAVED_TOPICS": {
+              "n": 3,
+              "rouge1": 0.3627,
+              "rouge2": 0.0788,
+              "rougeL": 0.1745,
+              "rougeSU4": 0.1227
+            },
+            "F1_OFF_TOPIC_TANGENT": {
+              "n": 2,
+              "rouge1": 0.322,
+              "rouge2": 0.0737,
+              "rougeL": 0.1574,
+              "rougeSU4": 0.1064
+            },
+            "F1_PLAN_CHANGE": {
+              "n": 2,
+              "rouge1": 0.322,
+              "rouge2": 0.0737,
+              "rougeL": 0.1574,
+              "rougeSU4": 0.1064
+            },
+            "F1_SARCASM_AS_FACT": {
+              "n": 3,
+              "rouge1": 0.3115,
+              "rouge2": 0.0654,
+              "rougeL": 0.1644,
+              "rougeSU4": 0.1006
+            },
+            "F1_SELF_CORRECTION": {
+              "n": 3,
+              "rouge1": 0.3115,
+              "rouge2": 0.0654,
+              "rougeL": 0.1644,
+              "rougeSU4": 0.1006
+            },
+            "F2_OFFERED_TAKEN_BY_OTHER": {
+              "n": 4,
+              "rouge1": 0.3024,
+              "rouge2": 0.0687,
+              "rougeL": 0.1608,
+              "rougeSU4": 0.0966
+            },
+            "F2_REASSIGNED_OR_DROPPED": {
+              "n": 4,
+              "rouge1": 0.3122,
+              "rouge2": 0.0731,
+              "rougeL": 0.1505,
+              "rougeSU4": 0.1018
+            },
+            "F2_TASK_TO_ABSENT": {
+              "n": 4,
+              "rouge1": 0.3122,
+              "rouge2": 0.0731,
+              "rougeL": 0.1505,
+              "rougeSU4": 0.1018
+            },
+            "F2_VAGUE_NO_OWNER": {
+              "n": 4,
+              "rouge1": 0.3024,
+              "rouge2": 0.0687,
+              "rougeL": 0.1608,
+              "rougeSU4": 0.0966
+            },
+            "F3_ACTION_REMOVED": {
+              "n": 3,
+              "rouge1": 0.3311,
+              "rouge2": 0.0703,
+              "rougeL": 0.1776,
+              "rougeSU4": 0.1048
+            },
+            "F3_TASK_TO_ABSENT": {
+              "n": 3,
+              "rouge1": 0.3163,
+              "rouge2": 0.0713,
+              "rougeL": 0.1727,
+              "rougeSU4": 0.0991
+            },
+            "F3_UNAGREED_DECISION": {
+              "n": 2,
+              "rouge1": 0.3465,
+              "rouge2": 0.0776,
+              "rougeL": 0.1744,
+              "rougeSU4": 0.1064
+            }
+          }
+        },
+        "group_gap": {
+          "feature": {
+            "rouge1": 0.0261,
+            "rouge2": 0.0016,
+            "rougeL": 0.0193,
+            "rougeSU4": 0.0112
+          },
+          "scenario": {
+            "rouge1": 0.0603,
+            "rouge2": 0.0134,
+            "rougeL": 0.0271,
+            "rougeSU4": 0.0261
+          }
+        }
+      },
+      "objective": 0.152,
+      "seconds": 26.0,
+      "commit": "7cea72e"
+    },
+    "trials": 310
+  }
+}

@@ -1,0 +1,1373 @@
+{
+  "meeting_id": "SY0207d",
+  "raw_sha256": "a43109104e122eaf5fcc0882e5704b11db8f84a52fa784992e8f91d83577caa5",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting with the full team present, welcomed back the user interface designer after her illness, confirmed that she had received his email and that the previous minutes had been sent, and recapped the conceptual design decisions.",
+        "The industrial designer presented a palm-sized clay mock-up of the puck, about nine centimetres across, with a large central stop button, side speaker grille, four-LED ring, magnet and sealed battery door, and gave a detailed cost breakdown of 11.45 euros per unit for a white-only case, still excluding voice recording costs.",
+        "The user interface designer reported that she had translated the command list into German and French, adjusting some timer names, and that the wake word 'Hey timer' was poorly recognised from French speakers; the team adopted the made-up wake word 'Tilly' for all three languages.",
+        "The marketing expert checked the concept against the survey and found that users wanted to lower the alarm volume, so the team added 'louder' and 'quieter' voice commands at no extra cost; his renewed proposal for pastel colours was rejected in favour of launching in white only.",
+        "The task of getting a native-speaker recording quote was given to the marketing expert, and the speaker loudness test moved from the industrial designer to the user interface designer; in a brief evaluation the team judged the product good, with alarm loudness over an extractor fan as the main remaining risk."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The marketing expert will get a quote from the survey agency for native-speaker recordings of the spoken responses in English, German and French; the user interface designer had first offered to look into recording studios.",
+        "The user interface designer will test the speaker's loudness against a cooker hood using a sample speaker sent by the industrial designer; this task was first given to the industrial designer.",
+        "The user interface designer will add the 'louder' and 'quieter' commands to the command list in all three languages.",
+        "The user interface designer will put the final translated command list in the shared folder.",
+        "The industrial designer will update the cost breakdown with the recording quote and send round the final figure.",
+        "The project manager will send round the minutes and write the final report for management."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The wake word will be 'Tilly' in all three languages.",
+        "Volume will be adjusted by the voice commands 'louder' and 'quieter', with no extra button or dial.",
+        "The timer will launch in white only."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The cost of native-speaker recordings is still unknown, and the 11.45 euro estimate leaves about one euro of margin for it.",
+        "The speaker has not yet been tested for loudness over an extractor fan.",
+        "The marketing expert still wants coloured versions; colours may be revisited after launch but nothing was decided.",
+        "The marketing expert's idea of using 'Tilly' as the product name was not decided."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0207d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0207d.ai1",
+        "description": "Get a quote for native-speaker recordings of the spoken responses in English, German and French.",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0207d.s0063",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0207d.s0065",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0207d.s0069",
+            "event": "assigned",
+            "by": "B",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0207d.s0070",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0207d.s0117",
+            "event": "restated",
+            "by": "B",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0207d.s0062",
+          "SY0207d.s0063",
+          "SY0207d.s0064",
+          "SY0207d.s0065",
+          "SY0207d.s0066",
+          "SY0207d.s0067",
+          "SY0207d.s0068",
+          "SY0207d.s0069",
+          "SY0207d.s0070",
+          "SY0207d.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0207d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0207d.ai2",
+        "description": "Test whether the speaker can be heard over a cooker hood / extractor fan using a sample speaker.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "reassigned",
+        "previous_owners": [
+          "C"
+        ],
+        "history": [
+          {
+            "segment": "SY0207d.s0037",
+            "event": "assigned",
+            "by": "B",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0207d.s0038",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0207d.s0101",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0207d.s0103",
+            "event": "reassigned",
+            "by": "B",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0207d.s0118",
+            "event": "restated",
+            "by": "B",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0207d.s0036",
+          "SY0207d.s0037",
+          "SY0207d.s0038",
+          "SY0207d.s0098",
+          "SY0207d.s0099",
+          "SY0207d.s0100",
+          "SY0207d.s0101",
+          "SY0207d.s0102",
+          "SY0207d.s0103",
+          "SY0207d.s0118"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0207d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0207d.ai3",
+        "description": "Add the 'louder' and 'quieter' voice commands to the command list in English, German and French.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0207d.s0086",
+            "event": "assigned",
+            "by": "B",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0207d.s0087",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0207d.s0118",
+            "event": "restated",
+            "by": "B",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0207d.s0080",
+          "SY0207d.s0081",
+          "SY0207d.s0085",
+          "SY0207d.s0086",
+          "SY0207d.s0087",
+          "SY0207d.s0118"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0207d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0207d.ai4",
+        "description": "Put the final translated command list in the shared folder.",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0207d.s0044",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0207d.s0043",
+          "SY0207d.s0044"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0207d.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0207d.ai5",
+        "description": "Update the cost breakdown with the recording quote and send round the final per-unit figure.",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0207d.s0104",
+            "event": "assigned",
+            "by": "B",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0207d.s0105",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0207d.s0119",
+            "event": "restated",
+            "by": "B",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0207d.s0104",
+          "SY0207d.s0105",
+          "SY0207d.s0119"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0207d.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0207d.ai6",
+        "description": "Send round the minutes and write the final report for management.",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0207d.s0120",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0207d.s0120"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f1",
+        "type": "decision",
+        "fact": "The team agreed to use 'Tilly' as the wake word in all three languages.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207d.s0051",
+          "SY0207d.s0052",
+          "SY0207d.s0058",
+          "SY0207d.s0059",
+          "SY0207d.s0060",
+          "SY0207d.s0061"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f2",
+        "type": "decision",
+        "fact": "The team agreed to add 'louder' and 'quieter' voice commands to adjust volume, with no extra button or dial.",
+        "agreed": true,
+        "related_action_item": "SY0207d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207d.s0079",
+          "SY0207d.s0080",
+          "SY0207d.s0081",
+          "SY0207d.s0083",
+          "SY0207d.s0085"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f3",
+        "type": "decision",
+        "fact": "The team agreed to launch the timer in white only.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207d.s0093",
+          "SY0207d.s0094",
+          "SY0207d.s0095",
+          "SY0207d.s0096",
+          "SY0207d.s0097"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f4",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert proposed offering the timer in three pastel colours; it was not adopted because of tooling costs.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207d.s0089",
+          "SY0207d.s0090",
+          "SY0207d.s0091",
+          "SY0207d.s0097"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f5",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert proposed white plus one colour, sage green; the team chose white only instead.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207d.s0092",
+          "SY0207d.s0093",
+          "SY0207d.s0094",
+          "SY0207d.s0095"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f6",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested using 'Tilly' as the product name; the project manager left the product name for later.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207d.s0054",
+          "SY0207d.s0061",
+          "SY0207d.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f7",
+        "type": "action_item",
+        "fact": "The marketing expert will get a quote for native-speaker recordings in three languages, after the user interface designer first offered to look into recording studios.",
+        "agreed": null,
+        "related_action_item": "SY0207d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207d.s0063",
+          "SY0207d.s0065",
+          "SY0207d.s0067",
+          "SY0207d.s0068",
+          "SY0207d.s0069",
+          "SY0207d.s0070"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f8",
+        "type": "action_item",
+        "fact": "The user interface designer will test the speaker's loudness against a cooker hood.",
+        "agreed": null,
+        "related_action_item": "SY0207d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207d.s0101",
+          "SY0207d.s0102",
+          "SY0207d.s0103",
+          "SY0207d.s0118"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f9",
+        "type": "action_item",
+        "fact": "The user interface designer will add 'louder' and 'quieter' to the command list in all three languages.",
+        "agreed": null,
+        "related_action_item": "SY0207d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207d.s0086",
+          "SY0207d.s0087"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f10",
+        "type": "action_item",
+        "fact": "The user interface designer will put the final translated command list in the shared folder.",
+        "agreed": null,
+        "related_action_item": "SY0207d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207d.s0044"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f11",
+        "type": "action_item",
+        "fact": "The industrial designer will update the cost breakdown with the recording quote and send round the final figure.",
+        "agreed": null,
+        "related_action_item": "SY0207d.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207d.s0104",
+          "SY0207d.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f12",
+        "type": "action_item",
+        "fact": "The project manager will send round the minutes and write the final report for management.",
+        "agreed": null,
+        "related_action_item": "SY0207d.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207d.s0120"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f13",
+        "type": "plan_change",
+        "fact": "The speaker loudness test was first given to the industrial designer and then moved to the user interface designer because the industrial designer was busy with the factory drawings.",
+        "agreed": null,
+        "related_action_item": "SY0207d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207d.s0037",
+          "SY0207d.s0038",
+          "SY0207d.s0099",
+          "SY0207d.s0100",
+          "SY0207d.s0101",
+          "SY0207d.s0103"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f14",
+        "type": "plan_change",
+        "fact": "The colour question left open at the conceptual design meeting was settled by launching in white only.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0207c",
+        "evidence_segments": [
+          "SY0207d.s0015",
+          "SY0207d.s0097"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f15",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recapped the conceptual design decisions: fixed vocabulary chip, low-power wake-word circuit, two AA batteries, puck with magnet, no screen, four-LED ring, and English, German and French.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0207c",
+        "evidence_segments": [
+          "SY0207d.s0012",
+          "SY0207d.s0013"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f16",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recalled from the functional design meeting that the speaker must be heard over an extractor fan.",
+        "agreed": null,
+        "related_action_item": "SY0207d.ai2",
+        "refers_to_meeting": "SY0207b",
+        "evidence_segments": [
+          "SY0207d.s0036"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f17",
+        "type": "reference_to_prior_meeting",
+        "fact": "The unowned task of checking native-speaker recording costs from the conceptual design meeting was finally taken by the marketing expert.",
+        "agreed": null,
+        "related_action_item": "SY0207d.ai1",
+        "refers_to_meeting": "SY0207c",
+        "evidence_segments": [
+          "SY0207d.s0015",
+          "SY0207d.s0069"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f18",
+        "type": "other",
+        "fact": "The industrial designer's detailed cost breakdown came to 11.45 euros per unit for a white-only case, excluding voice recordings, up from 11.30 euros last time because of the battery door seal.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207d.s0026",
+          "SY0207d.s0027",
+          "SY0207d.s0028",
+          "SY0207d.s0029",
+          "SY0207d.s0030",
+          "SY0207d.s0031",
+          "SY0207d.s0032",
+          "SY0207d.s0033"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f19",
+        "type": "other",
+        "fact": "The clay mock-up is about nine centimetres across with a large central stop button, side speaker grille, four-LED ring, magnet and sealed battery door.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207d.s0019",
+          "SY0207d.s0021",
+          "SY0207d.s0023",
+          "SY0207d.s0024"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f20",
+        "type": "other",
+        "fact": "The user interface designer translated the command list into German and French, swapping some timer names, and found 'Hey timer' was recognised only about half the time from French speakers.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207d.s0008",
+          "SY0207d.s0041",
+          "SY0207d.s0043",
+          "SY0207d.s0047",
+          "SY0207d.s0049"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f21",
+        "type": "other",
+        "fact": "The marketing expert's survey check found that users wanted to lower the alarm volume, which the design did not yet allow.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0207d.s0077",
+          "SY0207d.s0078"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0207d.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0207d.f22",
+        "type": "other",
+        "fact": "The project manager confirmed he had emailed the user interface designer and sent round the previous minutes.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0207c",
+        "evidence_segments": [
+          "SY0207d.s0007",
+          "SY0207d.s0008",
+          "SY0207d.s0010"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_OFFERED_TAKEN_BY_OTHER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_OFFERED_TAKEN_BY_OTHER",
+        "segments": [
+          "SY0207d.s0063",
+          "SY0207d.s0064",
+          "SY0207d.s0065",
+          "SY0207d.s0066",
+          "SY0207d.s0067",
+          "SY0207d.s0068",
+          "SY0207d.s0069",
+          "SY0207d.s0070"
+        ],
+        "note": "The user interface designer offers to look into recording studios, but the marketing expert takes the recording quote via his agency contact and the project manager confirms him as owner."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_REASSIGNED_OR_DROPPED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_REASSIGNED_OR_DROPPED",
+        "segments": [
+          "SY0207d.s0037",
+          "SY0207d.s0038",
+          "SY0207d.s0098",
+          "SY0207d.s0099",
+          "SY0207d.s0100",
+          "SY0207d.s0101",
+          "SY0207d.s0102",
+          "SY0207d.s0103"
+        ],
+        "note": "The speaker loudness test is assigned to the industrial designer early on and later reassigned to the user interface designer, who has a loud cooker hood at home."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

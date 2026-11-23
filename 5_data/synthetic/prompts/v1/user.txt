@@ -1,0 +1,32 @@
+Write meeting $meeting_id: meeting "$meeting_letter" ($stage) of series $series_id.
+
+PROJECT
+The team is designing $product.
+
+PARTICIPANTS (label, role, status for this meeting)
+$participants_block
+
+$prior_block
+
+EDGE CASES THIS MEETING MUST CONTAIN
+Weave each one naturally into the project discussion. Each must be clearly present, and each must be tagged with the segments where it happens.
+$scenarios_block
+
+LENGTH
+Between $min_segments and $max_segments segments.
+
+GOLD LABELS
+- summary: AMI-style abstractive summary in third person, using role names ("The project manager ..."). Sections: abstract (3-6 sentences), actions, decisions, problems (open issues). It reflects the meeting's FINAL state: corrected values, final plans, and no jokes or tangents reported as content.
+- action_items: every task arising in the meeting. owner is the speaker label of the FINAL owner, and may be an absent participant. owner is null ONLY for a task nobody takes, with owner_unclear true. status is the final status: active, reassigned (owner changed; previous_owners lists earlier owners) or dropped. history lists the events in order. evidence_segments lists the supporting segments.
+- qa_facts: atomic facts someone could later ask about ("Who was asked to ...?", "Did the team agree on ...?"). Include every decision (agreed true), every proposal nobody agreed to (type unagreed_proposal, agreed false), action items, removed action items, absences, and plan changes.$prior_fact_rule Do NOT write questions.
+- edge_cases: one entry per edge case above, with its scenario_id and the segment numbers that contain it.
+
+OUTPUT JSON SHAPE
+{
+$names_shape  "segments": [{"n": 1, "speaker": "A", "da_type": "inf", "text": "..."}],
+  "summary": {"abstract": ["..."], "actions": ["..."], "decisions": ["..."], "problems": ["..."]},
+  "action_items": [{"n": 1, "description": "...", "owner": "C", "owner_unclear": false, "status": "active", "previous_owners": [], "history": [{"segment": 12, "event": "assigned", "by": "A", "owner": "C"}], "evidence_segments": [12, 13]}],
+  "qa_facts": [{"type": "decision", "fact": "...", "agreed": true, "related_action_item": null, "refers_to_meeting": null, "evidence_segments": [40]}],
+  "edge_cases": [{"scenario_id": "...", "segments": [20, 21, 22], "note": "one line on how it appears"}]
+}
+history events: proposed, offered, assigned, accepted, reassigned, dropped, restated. qa_facts types: decision, unagreed_proposal, action_item, action_item_removed, absence, plan_change, reference_to_prior_meeting, other. related_action_item is an action item's "n" or null. refers_to_meeting is an earlier meeting ID of this series or null.

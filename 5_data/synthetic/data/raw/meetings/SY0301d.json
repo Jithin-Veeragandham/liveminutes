@@ -1,0 +1,1497 @@
+{
+  "schema_version": "1.0",
+  "source": "synthetic",
+  "meeting_id": "SY0301d",
+  "series_id": "SY0301",
+  "meeting_letter": "d",
+  "scenario_type": "scenario",
+  "stage": "detailed design",
+  "duration_sec": 495.88,
+  "participants": [
+    {
+      "label": "A",
+      "role": "UI",
+      "name": "Tomas",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "B",
+      "role": "PM",
+      "name": "Helen",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "C",
+      "role": "ME",
+      "name": "Rafael",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "D",
+      "role": "ID",
+      "name": "Ingrid",
+      "global_id": null,
+      "status": "present"
+    }
+  ],
+  "segments": [
+    {
+      "id": "SY0301d.s0001",
+      "speaker": "B",
+      "start": 5.0,
+      "end": 6.92,
+      "text": "Okay, um, is everyone ready?",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0301d.s0002",
+      "speaker": "C",
+      "start": 7.88,
+      "end": 8.28,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0301d.s0003",
+      "speaker": "B",
+      "start": 8.69,
+      "end": 12.92,
+      "text": "Right, so this is the detailed design meeting, the last one.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0004",
+      "speaker": "B",
+      "start": 13.81,
+      "end": 18.04,
+      "text": "And, uh, it's nice to finally have Tomas back with us.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0301d.s0005",
+      "speaker": "A",
+      "start": 18.71,
+      "end": 21.02,
+      "text": "Yeah, thanks, good to be back.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0301d.s0006",
+      "speaker": "A",
+      "start": 21.19,
+      "end": 26.96,
+      "text": "Sorry about the last two, I was sick and then there was that training course.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0007",
+      "speaker": "B",
+      "start": 27.21,
+      "end": 27.98,
+      "text": "No worries.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0301d.s0008",
+      "speaker": "B",
+      "start": 28.53,
+      "end": 34.3,
+      "text": "So I did email you the minutes and your tasks after both of those meetings.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0009",
+      "speaker": "A",
+      "start": 35.07,
+      "end": 36.99,
+      "text": "Yeah, got them both, thanks.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0301d.s0010",
+      "speaker": "B",
+      "start": 37.69,
+      "end": 43.84,
+      "text": "Okay. So the plan for today, um, Tomas shows us the screen flow and the mock-ups,",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0011",
+      "speaker": "B",
+      "start": 44.74,
+      "end": 50.51,
+      "text": "Ingrid has the foam model and the casing quote, and Rafael has the style guide.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0012",
+      "speaker": "B",
+      "start": 50.86,
+      "end": 55.09,
+      "text": "And then we check the final cost and sign it off.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0013",
+      "speaker": "B",
+      "start": 55.76,
+      "end": 58.45,
+      "text": "Tomas, do you want to go first?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0301d.s0014",
+      "speaker": "A",
+      "start": 58.71,
+      "end": 59.48,
+      "text": "Sure, yeah.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0301d.s0015",
+      "speaker": "A",
+      "start": 59.66,
+      "end": 65.04,
+      "text": "So, um, I kept it to three screens, like we said at the kickoff.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0016",
+      "speaker": "A",
+      "start": 65.2,
+      "end": 70.2,
+      "text": "Screen one is the welcome, and it just says scan your library card.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0017",
+      "speaker": "A",
+      "start": 70.76,
+      "end": 75.76,
+      "text": "And that's the barcode scanner, because Rafael found all the cards have barcodes.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0018",
+      "speaker": "C",
+      "start": 76.47,
+      "end": 76.87,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0301d.s0019",
+      "speaker": "A",
+      "start": 77.4,
+      "end": 87.4,
+      "text": "Screen two is scanning items. You put the book on the pad for RFID, or if there's no tag you hold the barcode under the window.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0020",
+      "speaker": "A",
+      "start": 88.4,
+      "end": 94.17,
+      "text": "And each item pops up in a list with a big tick next to it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0021",
+      "speaker": "D",
+      "start": 94.68,
+      "end": 100.45,
+      "text": "So does the screen tell them which one to use, the pad or the window?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0301d.s0022",
+      "speaker": "A",
+      "start": 101.38,
+      "end": 105.61,
+      "text": "Yeah, there's, uh, a little picture of both, side by side.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0023",
+      "speaker": "A",
+      "start": 105.83,
+      "end": 111.98,
+      "text": "And if the pad doesn't read anything after a few seconds it says try the barcode.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0024",
+      "speaker": "D",
+      "start": 112.53,
+      "end": 115.99,
+      "text": "Oh, nice, that's good for the partly tagged branches.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0301d.s0025",
+      "speaker": "A",
+      "start": 116.54,
+      "end": 121.92,
+      "text": "Exactly. Then screen three is the receipt, email, print or both, three big buttons.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0026",
+      "speaker": "B",
+      "start": 122.24,
+      "end": 126.09,
+      "text": "Okay, that matches what we decided in the functional meeting.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0301d.s0027",
+      "speaker": "C",
+      "start": 126.94,
+      "end": 128.48,
+      "text": "What's the text size?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0301d.s0028",
+      "speaker": "A",
+      "start": 128.85,
+      "end": 132.31,
+      "text": "Um, the button labels are about twenty-four point minimum.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0029",
+      "speaker": "A",
+      "start": 132.92,
+      "end": 137.15,
+      "text": "I went through the accessibility guidelines and that's comfortably above them.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0030",
+      "speaker": "C",
+      "start": 137.87,
+      "end": 142.87,
+      "text": "Good, because the older borrowers in the survey really complained about small text.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0301d.s0031",
+      "speaker": "A",
+      "start": 143.5,
+      "end": 148.88,
+      "text": "And these are the mock-ups, in the consortium green, on the twenty-one inch layout.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0032",
+      "speaker": "B",
+      "start": 149.63,
+      "end": 151.55,
+      "text": "Oh, they look really clean.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0301d.s0033",
+      "speaker": "D",
+      "start": 152.33,
+      "end": 153.48,
+      "text": "Yeah, very clear.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0301d.s0034",
+      "speaker": "C",
+      "start": 154.32,
+      "end": 160.47,
+      "text": "Um, the green's slightly off, I think, but I'll come to that with the style guide.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0035",
+      "speaker": "A",
+      "start": 161.04,
+      "end": 161.44,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0301d.s0036",
+      "speaker": "B",
+      "start": 162.0,
+      "end": 164.31,
+      "text": "And the height and tilt, Tomas?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0301d.s0037",
+      "speaker": "A",
+      "start": 164.67,
+      "end": 173.13,
+      "text": "Right, so the guidelines say the reach range for someone in a wheelchair is roughly forty to a hundred and twenty centimetres.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0038",
+      "speaker": "A",
+      "start": 173.98,
+      "end": 181.67,
+      "text": "So I suggested the bottom of the screen at about ninety centimetres, and it tilts from fifteen to forty-five degrees.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0039",
+      "speaker": "A",
+      "start": 181.97,
+      "end": 184.66,
+      "text": "I sent that to Ingrid last Thursday.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0040",
+      "speaker": "D",
+      "start": 185.25,
+      "end": 190.25,
+      "text": "Yeah, I got it, and I built the foam model with those numbers.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0041",
+      "speaker": "B",
+      "start": 190.63,
+      "end": 191.03,
+      "text": "Great.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0301d.s0042",
+      "speaker": "D",
+      "start": 191.93,
+      "end": 197.7,
+      "text": "So here it is. It's, um, sixty by sixty at the base, like we said.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0043",
+      "speaker": "D",
+      "start": 198.0,
+      "end": 204.15,
+      "text": "The scan pad and the barcode window are at about eighty-five centimetres, just under the screen.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0044",
+      "speaker": "D",
+      "start": 204.31,
+      "end": 207.77,
+      "text": "And the printer slot is on the right side.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0045",
+      "speaker": "A",
+      "start": 208.48,
+      "end": 212.71,
+      "text": "Can you try the tilt? Does it go the full forty-five?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0301d.s0046",
+      "speaker": "D",
+      "start": 213.11,
+      "end": 219.26,
+      "text": "On the model, yeah. And for the real hinge, um, the supplier says forty-five is fine.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0047",
+      "speaker": "C",
+      "start": 220.11,
+      "end": 223.57,
+      "text": "It's quite a bit smaller than I imagined, actually.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0301d.s0048",
+      "speaker": "D",
+      "start": 224.18,
+      "end": 227.26,
+      "text": "Mm, yeah, it fits in a corner easily.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0049",
+      "speaker": "B",
+      "start": 228.01,
+      "end": 234.16,
+      "text": "Okay, so shall we just fix those numbers then, ninety centimetres and fifteen to forty-five degrees?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0301d.s0050",
+      "speaker": "D",
+      "start": 234.86,
+      "end": 236.4,
+      "text": "Yeah, fine by me.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0301d.s0051",
+      "speaker": "A",
+      "start": 236.98,
+      "end": 237.38,
+      "text": "Yep.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0301d.s0052",
+      "speaker": "C",
+      "start": 237.67,
+      "end": 238.07,
+      "text": "Sure.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0301d.s0053",
+      "speaker": "B",
+      "start": 238.25,
+      "end": 239.4,
+      "text": "Okay, that's agreed.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0054",
+      "speaker": "B",
+      "start": 240.28,
+      "end": 246.05,
+      "text": "Um, one thing on the email receipt, Tomas. Where does the email address come from?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0301d.s0055",
+      "speaker": "A",
+      "start": 246.73,
+      "end": 250.96,
+      "text": "I assumed from the borrower's record, once they scan their card.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0056",
+      "speaker": "B",
+      "start": 251.86,
+      "end": 256.86,
+      "text": "Right, but we don't actually know if the library system gives us that.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0057",
+      "speaker": "B",
+      "start": 257.13,
+      "end": 263.67,
+      "text": "Rafael, could you ask the consortium's IT people whether the borrower emails are available to the kiosk?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0301d.s0058",
+      "speaker": "C",
+      "start": 264.17,
+      "end": 266.09,
+      "text": "Yeah, I can do that.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0301d.s0059",
+      "speaker": "B",
+      "start": 267.05,
+      "end": 267.45,
+      "text": "Thanks.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0301d.s0060",
+      "speaker": "B",
+      "start": 268.14,
+      "end": 270.45,
+      "text": "Ingrid, what about the casing quote?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0301d.s0061",
+      "speaker": "D",
+      "start": 270.86,
+      "end": 274.32,
+      "text": "So, the catalogue figure was two hundred and sixty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0062",
+      "speaker": "D",
+      "start": 275.1,
+      "end": 282.79,
+      "text": "The actual quote came back at two hundred and ninety, because of the extra mould part for the screen hinge.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0063",
+      "speaker": "B",
+      "start": 283.54,
+      "end": 285.46,
+      "text": "So what's the total then?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0301d.s0064",
+      "speaker": "D",
+      "start": 286.27,
+      "end": 289.73,
+      "text": "About two thousand two hundred and thirty per unit.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0065",
+      "speaker": "B",
+      "start": 290.1,
+      "end": 293.56,
+      "text": "Okay, still under the two and a half thousand.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0301d.s0066",
+      "speaker": "D",
+      "start": 294.01,
+      "end": 297.47,
+      "text": "Yeah, about two hundred and seventy euros of margin.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0067",
+      "speaker": "C",
+      "start": 298.41,
+      "end": 299.18,
+      "text": "That's fine.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0301d.s0068",
+      "speaker": "C",
+      "start": 300.06,
+      "end": 307.75,
+      "text": "Oh, and with that margin, the kiosk will have a voice that reads out each screen, so that's in now.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0069",
+      "speaker": "C",
+      "start": 308.01,
+      "end": 311.47,
+      "text": "Like for people who can't read the screen well.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0070",
+      "speaker": "A",
+      "start": 312.39,
+      "end": 312.79,
+      "text": "Um...",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0301d.s0071",
+      "speaker": "D",
+      "start": 313.21,
+      "end": 313.61,
+      "text": "Hmm.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0301d.s0072",
+      "speaker": "B",
+      "start": 313.91,
+      "end": 317.37,
+      "text": "Okay, uh, let's... let's do the colour first actually.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0301d.s0073",
+      "speaker": "B",
+      "start": 317.59,
+      "end": 319.13,
+      "text": "Rafael, the style guide?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0301d.s0074",
+      "speaker": "C",
+      "start": 319.49,
+      "end": 324.11,
+      "text": "Yeah, so the consortium does have one. They sent me a PDF.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0075",
+      "speaker": "C",
+      "start": 324.75,
+      "end": 330.9,
+      "text": "The green is a specific colour code, a bit darker than the one in the mock-ups.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0076",
+      "speaker": "C",
+      "start": 331.05,
+      "end": 336.43,
+      "text": "And the logo has to be at the top, with clear space around it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0077",
+      "speaker": "A",
+      "start": 337.26,
+      "end": 341.11,
+      "text": "Okay, so I just swap the colour value, that's easy.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0301d.s0078",
+      "speaker": "C",
+      "start": 341.41,
+      "end": 344.87,
+      "text": "And they use one font, Source Sans, for everything.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0079",
+      "speaker": "A",
+      "start": 345.57,
+      "end": 348.65,
+      "text": "Oh, that's close to what I used anyway.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0301d.s0080",
+      "speaker": "B",
+      "start": 349.41,
+      "end": 355.95,
+      "text": "So, the consortium green from the style guide, and the logo at the top of the pedestal?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0301d.s0081",
+      "speaker": "D",
+      "start": 356.5,
+      "end": 359.19,
+      "text": "On the pedestal, or on the screen?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0301d.s0082",
+      "speaker": "C",
+      "start": 359.37,
+      "end": 362.45,
+      "text": "On the casing, they said, above the screen.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0083",
+      "speaker": "D",
+      "start": 363.24,
+      "end": 366.7,
+      "text": "Okay, I can fit that on the top panel.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0301d.s0084",
+      "speaker": "B",
+      "start": 367.39,
+      "end": 372.39,
+      "text": "Okay, so that's settled, the official green and the logo above the screen.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0085",
+      "speaker": "C",
+      "start": 373.06,
+      "end": 376.52,
+      "text": "I'll send the PDF to you both after this.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0301d.s0086",
+      "speaker": "A",
+      "start": 376.97,
+      "end": 377.37,
+      "text": "Great.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0301d.s0087",
+      "speaker": "B",
+      "start": 378.0,
+      "end": 383.38,
+      "text": "And Tomas, can you update the mock-ups with the right green and the font?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0301d.s0088",
+      "speaker": "A",
+      "start": 383.63,
+      "end": 384.78,
+      "text": "Yep, no problem.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0301d.s0089",
+      "speaker": "A",
+      "start": 385.64,
+      "end": 388.33,
+      "text": "Oh, and Helen, about the email addresses.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0090",
+      "speaker": "A",
+      "start": 389.31,
+      "end": 394.69,
+      "text": "That actually came up on the training course, it was about the library system.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0091",
+      "speaker": "A",
+      "start": 395.25,
+      "end": 403.33,
+      "text": "The system already sends the loan reminder emails, and the kiosk can use the same function, there's an API for it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0092",
+      "speaker": "B",
+      "start": 404.22,
+      "end": 407.68,
+      "text": "So the kiosk doesn't need the address at all?",
+      "da_type": "el.und"
+    },
+    {
+      "id": "SY0301d.s0093",
+      "speaker": "A",
+      "start": 407.87,
+      "end": 413.25,
+      "text": "No, it just tells the system to send the receipt to the borrower's account.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0094",
+      "speaker": "B",
+      "start": 414.14,
+      "end": 419.14,
+      "text": "Ah, okay. So Rafael, forget about asking IT then, we don't need that.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0095",
+      "speaker": "C",
+      "start": 419.62,
+      "end": 421.54,
+      "text": "Okay, fine, one less thing.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0301d.s0096",
+      "speaker": "B",
+      "start": 422.16,
+      "end": 422.56,
+      "text": "Good.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0301d.s0097",
+      "speaker": "B",
+      "start": 422.96,
+      "end": 427.19,
+      "text": "So let me just go through it for the final report.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0098",
+      "speaker": "B",
+      "start": 427.74,
+      "end": 434.66,
+      "text": "Three screens, card, scan, receipt. RFID and barcode. Moulded plastic, freestanding, about two thousand two hundred and thirty.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0099",
+      "speaker": "B",
+      "start": 434.96,
+      "end": 439.96,
+      "text": "Ninety centimetres, fifteen to forty-five degrees of tilt, consortium green with the logo.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0100",
+      "speaker": "B",
+      "start": 440.52,
+      "end": 442.44,
+      "text": "Is everyone happy with that?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0301d.s0101",
+      "speaker": "D",
+      "start": 443.38,
+      "end": 443.78,
+      "text": "Yeah.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0301d.s0102",
+      "speaker": "A",
+      "start": 444.76,
+      "end": 445.53,
+      "text": "Yep, happy.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0301d.s0103",
+      "speaker": "C",
+      "start": 446.12,
+      "end": 446.52,
+      "text": "Yes.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0301d.s0104",
+      "speaker": "B",
+      "start": 446.79,
+      "end": 450.64,
+      "text": "Okay. Then I'll write the final report for the consortium.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0301d.s0105",
+      "speaker": "B",
+      "start": 451.27,
+      "end": 458.19,
+      "text": "Ingrid, can you send me the final cost breakdown and the dimensions so I can put them in?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0301d.s0106",
+      "speaker": "D",
+      "start": 459.1,
+      "end": 461.02,
+      "text": "Sure, I'll send it tomorrow.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0301d.s0107",
+      "speaker": "B",
+      "start": 461.64,
+      "end": 465.49,
+      "text": "And Tomas, the updated mock-ups by Friday, if you can.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0301d.s0108",
+      "speaker": "A",
+      "start": 465.72,
+      "end": 466.87,
+      "text": "Yeah, Friday's fine.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0301d.s0109",
+      "speaker": "C",
+      "start": 467.63,
+      "end": 471.09,
+      "text": "Do you want anything from me for the report?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0301d.s0110",
+      "speaker": "B",
+      "start": 471.9,
+      "end": 478.05,
+      "text": "Um, maybe a short paragraph on the survey results, why we went with email and print.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0301d.s0111",
+      "speaker": "C",
+      "start": 479.0,
+      "end": 480.92,
+      "text": "Yeah, I can write that.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0301d.s0112",
+      "speaker": "B",
+      "start": 481.78,
+      "end": 484.09,
+      "text": "Okay, great. I think that's everything.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0301d.s0113",
+      "speaker": "B",
+      "start": 484.25,
+      "end": 488.48,
+      "text": "Thanks everyone, and well done, I think it's a nice kiosk.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0301d.s0114",
+      "speaker": "D",
+      "start": 489.41,
+      "end": 490.18,
+      "text": "Thanks, Helen.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0301d.s0115",
+      "speaker": "A",
+      "start": 490.86,
+      "end": 491.26,
+      "text": "Cheers.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0301d.s0116",
+      "speaker": "C",
+      "start": 491.73,
+      "end": 492.88,
+      "text": "Yeah, thanks all.",
+      "da_type": "be.pos"
+    }
+  ],
+  "summary": {
+    "abstract": [
+      "The project manager opened the detailed design meeting, welcomed back the user interface designer after his absence from the previous two meetings, and confirmed she had emailed him the minutes and his tasks after both.",
+      "The user interface designer presented the three-screen flow (scan library card by barcode, scan items by RFID pad or barcode window with an automatic prompt to try the barcode, and a receipt choice of email, print or both) and showed mock-ups on the 21-inch layout. He also presented the wheelchair height and tilt range, which he had already sent to the industrial designer.",
+      "The industrial designer showed the foam model of the 60 by 60 cm pedestal and reported that the real casing quote was 290 euros rather than the 260 euro catalogue figure, bringing the total to about 2,230 euros per unit.",
+      "The marketing expert reported that the consortium has a style guide that specifies a darker official green, a single font (Source Sans) and the logo at the top of the unit. His statement that the kiosk would include a voice reading out each screen was not taken up, and the project manager moved on.",
+      "The project manager's request that the marketing expert check with consortium IT about borrower email addresses was cancelled after the user interface designer explained that the kiosk can send receipts through the library system's existing email function. The team signed off the final design."
+    ],
+    "actions": [
+      "The user interface designer will update the mock-ups with the style guide's official green and font by Friday.",
+      "The marketing expert will send the consortium style guide PDF to the user interface designer and the industrial designer.",
+      "The industrial designer will fit the consortium logo on the top panel of the casing, above the screen.",
+      "The industrial designer will send the project manager the final cost breakdown and dimensions.",
+      "The marketing expert will write a short paragraph on the survey results for the final report, explaining the email and print receipt choice.",
+      "The project manager will write the final report for the consortium."
+    ],
+    "decisions": [
+      "The bottom of the screen will be at about 90 cm and the screen will tilt from 15 to 45 degrees.",
+      "The kiosk will use the official consortium green from the style guide, with the consortium logo on the casing above the screen.",
+      "The team signed off the final design: three screens (card, scan, receipt), RFID and barcode reading, a moulded plastic freestanding pedestal, at an estimated cost of about 2,230 euros per unit."
+    ],
+    "problems": [
+      "The marketing expert's idea of a voice that reads out each screen was raised but not discussed or agreed, and its cost was not considered.",
+      "The margin under the 2,500 euro budget is now about 270 euros, after the casing quote came in 30 euros above the catalogue figure."
+    ]
+  },
+  "action_items": [
+    {
+      "id": "SY0301d.ai1",
+      "description": "Ask the consortium's IT staff whether borrower email addresses are available to the kiosk for emailed receipts",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "dropped",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0301d.s0057",
+          "event": "assigned",
+          "by": "B",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0301d.s0058",
+          "event": "accepted",
+          "by": "C",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0301d.s0094",
+          "event": "dropped",
+          "by": "B",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0301d.s0054",
+        "SY0301d.s0055",
+        "SY0301d.s0056",
+        "SY0301d.s0057",
+        "SY0301d.s0058",
+        "SY0301d.s0091",
+        "SY0301d.s0092",
+        "SY0301d.s0093",
+        "SY0301d.s0094",
+        "SY0301d.s0095"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0301d.ai2",
+      "description": "Update the screen mock-ups with the style guide's official green and Source Sans font, by Friday",
+      "owner": "A",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0301d.s0087",
+          "event": "assigned",
+          "by": "B",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0301d.s0088",
+          "event": "accepted",
+          "by": "A",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0301d.s0107",
+          "event": "restated",
+          "by": "B",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0301d.s0108",
+          "event": "accepted",
+          "by": "A",
+          "owner": "A"
+        }
+      ],
+      "evidence_segments": [
+        "SY0301d.s0077",
+        "SY0301d.s0087",
+        "SY0301d.s0088",
+        "SY0301d.s0107",
+        "SY0301d.s0108"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0301d.ai3",
+      "description": "Send the consortium style guide PDF to the user interface designer and the industrial designer",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0301d.s0085",
+          "event": "offered",
+          "by": "C",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0301d.s0074",
+        "SY0301d.s0085",
+        "SY0301d.s0086"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0301d.ai4",
+      "description": "Fit the consortium logo on the top panel of the casing, above the screen",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0301d.s0083",
+          "event": "offered",
+          "by": "D",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0301d.s0081",
+        "SY0301d.s0082",
+        "SY0301d.s0083",
+        "SY0301d.s0084"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0301d.ai5",
+      "description": "Write the final report for the consortium",
+      "owner": "B",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0301d.s0104",
+          "event": "offered",
+          "by": "B",
+          "owner": "B"
+        }
+      ],
+      "evidence_segments": [
+        "SY0301d.s0097",
+        "SY0301d.s0104"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0301d.ai6",
+      "description": "Send the project manager the final cost breakdown and dimensions for the report",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0301d.s0105",
+          "event": "assigned",
+          "by": "B",
+          "owner": "D"
+        },
+        {
+          "segment": "SY0301d.s0106",
+          "event": "accepted",
+          "by": "D",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0301d.s0105",
+        "SY0301d.s0106"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0301d.ai7",
+      "description": "Write a short paragraph on the survey results for the final report, explaining the email and print receipt choice",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0301d.s0110",
+          "event": "assigned",
+          "by": "B",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0301d.s0111",
+          "event": "accepted",
+          "by": "C",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0301d.s0109",
+        "SY0301d.s0110",
+        "SY0301d.s0111"
+      ],
+      "owner_source": "gold"
+    }
+  ],
+  "qa_facts": [
+    {
+      "id": "SY0301d.f1",
+      "type": "decision",
+      "fact": "The bottom of the screen will be at about 90 cm and the screen will tilt from 15 to 45 degrees.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0301d.s0038",
+        "SY0301d.s0049",
+        "SY0301d.s0050",
+        "SY0301d.s0051",
+        "SY0301d.s0052",
+        "SY0301d.s0053"
+      ]
+    },
+    {
+      "id": "SY0301d.f2",
+      "type": "decision",
+      "fact": "The kiosk will use the official consortium green from the style guide, with the logo on the casing above the screen.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0301d.s0075",
+        "SY0301d.s0080",
+        "SY0301d.s0082",
+        "SY0301d.s0083",
+        "SY0301d.s0084"
+      ]
+    },
+    {
+      "id": "SY0301d.f3",
+      "type": "decision",
+      "fact": "The team signed off the final design at about 2,230 euros per unit: three screens, RFID and barcode, moulded plastic freestanding pedestal.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0301d.s0098",
+        "SY0301d.s0099",
+        "SY0301d.s0100",
+        "SY0301d.s0101",
+        "SY0301d.s0102",
+        "SY0301d.s0103"
+      ]
+    },
+    {
+      "id": "SY0301d.f4",
+      "type": "unagreed_proposal",
+      "fact": "The marketing expert stated that the kiosk would have a voice reading out each screen. Nobody agreed, and the project manager moved on to the colour.",
+      "agreed": false,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0301d.s0068",
+        "SY0301d.s0069",
+        "SY0301d.s0070",
+        "SY0301d.s0071",
+        "SY0301d.s0072"
+      ]
+    },
+    {
+      "id": "SY0301d.f5",
+      "type": "action_item",
+      "fact": "The project manager asked the marketing expert to check with consortium IT whether borrower email addresses are available to the kiosk.",
+      "agreed": null,
+      "related_action_item": "SY0301d.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0301d.s0057",
+        "SY0301d.s0058"
+      ]
+    },
+    {
+      "id": "SY0301d.f6",
+      "type": "action_item_removed",
+      "fact": "The project manager cancelled the marketing expert's IT enquiry because the kiosk can send receipts through the library system's existing email function.",
+      "agreed": null,
+      "related_action_item": "SY0301d.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0301d.s0091",
+        "SY0301d.s0092",
+        "SY0301d.s0093",
+        "SY0301d.s0094",
+        "SY0301d.s0095"
+      ]
+    },
+    {
+      "id": "SY0301d.f7",
+      "type": "action_item",
+      "fact": "The user interface designer will update the mock-ups with the official green and font by Friday.",
+      "agreed": null,
+      "related_action_item": "SY0301d.ai2",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0301d.s0087",
+        "SY0301d.s0088",
+        "SY0301d.s0107",
+        "SY0301d.s0108"
+      ]
+    },
+    {
+      "id": "SY0301d.f8",
+      "type": "action_item",
+      "fact": "The marketing expert will send the style guide PDF to the user interface designer and the industrial designer.",
+      "agreed": null,
+      "related_action_item": "SY0301d.ai3",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0301d.s0085"
+      ]
+    },
+    {
+      "id": "SY0301d.f9",
+      "type": "action_item",
+      "fact": "The industrial designer will fit the logo on the casing's top panel above the screen.",
+      "agreed": null,
+      "related_action_item": "SY0301d.ai4",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0301d.s0083"
+      ]
+    },
+    {
+      "id": "SY0301d.f10",
+      "type": "action_item",
+      "fact": "The project manager will write the final report for the consortium.",
+      "agreed": null,
+      "related_action_item": "SY0301d.ai5",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0301d.s0104"
+      ]
+    },
+    {
+      "id": "SY0301d.f11",
+      "type": "action_item",
+      "fact": "The industrial designer will send the project manager the final cost breakdown and dimensions.",
+      "agreed": null,
+      "related_action_item": "SY0301d.ai6",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0301d.s0105",
+        "SY0301d.s0106"
+      ]
+    },
+    {
+      "id": "SY0301d.f12",
+      "type": "action_item",
+      "fact": "The marketing expert will write a paragraph on the survey results for the final report.",
+      "agreed": null,
+      "related_action_item": "SY0301d.ai7",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0301d.s0110",
+        "SY0301d.s0111"
+      ]
+    },
+    {
+      "id": "SY0301d.f13",
+      "type": "plan_change",
+      "fact": "The casing cost rose from the 260 euro catalogue figure to a quoted 290 euros, bringing the total to about 2,230 euros per unit.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0301c",
+      "evidence_segments": [
+        "SY0301d.s0061",
+        "SY0301d.s0062",
+        "SY0301d.s0063",
+        "SY0301d.s0064"
+      ]
+    },
+    {
+      "id": "SY0301d.f14",
+      "type": "plan_change",
+      "fact": "Emailed receipts will be sent through the library system's existing email function, so the kiosk does not need the borrower's email address.",
+      "agreed": null,
+      "related_action_item": "SY0301d.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0301d.s0091",
+        "SY0301d.s0092",
+        "SY0301d.s0093",
+        "SY0301d.s0094"
+      ]
+    },
+    {
+      "id": "SY0301d.f15",
+      "type": "reference_to_prior_meeting",
+      "fact": "The user interface designer said he kept the flow to three screens, as agreed at the kickoff meeting.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0301a",
+      "evidence_segments": [
+        "SY0301d.s0015"
+      ]
+    },
+    {
+      "id": "SY0301d.f16",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager said the receipt screen matched what was decided in the functional design meeting.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0301b",
+      "evidence_segments": [
+        "SY0301d.s0025",
+        "SY0301d.s0026"
+      ]
+    },
+    {
+      "id": "SY0301d.f17",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager confirmed she had emailed the user interface designer the minutes and his tasks after the two meetings he missed.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0301c",
+      "evidence_segments": [
+        "SY0301d.s0006",
+        "SY0301d.s0008",
+        "SY0301d.s0009"
+      ]
+    },
+    {
+      "id": "SY0301d.f18",
+      "type": "other",
+      "fact": "The user interface designer had already sent his height and tilt range to the industrial designer, who built the foam model using those numbers.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0301c",
+      "evidence_segments": [
+        "SY0301d.s0039",
+        "SY0301d.s0040"
+      ]
+    },
+    {
+      "id": "SY0301d.f19",
+      "type": "other",
+      "fact": "The consortium style guide specifies a darker green, the Source Sans font, and the logo at the top with clear space around it.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0301d.s0074",
+        "SY0301d.s0075",
+        "SY0301d.s0076",
+        "SY0301d.s0078"
+      ]
+    }
+  ],
+  "edge_cases": [
+    {
+      "scenario_id": "F3_ACTION_REMOVED",
+      "segments": [
+        "SY0301d.s0056",
+        "SY0301d.s0057",
+        "SY0301d.s0058",
+        "SY0301d.s0089",
+        "SY0301d.s0090",
+        "SY0301d.s0091",
+        "SY0301d.s0092",
+        "SY0301d.s0093",
+        "SY0301d.s0094",
+        "SY0301d.s0095"
+      ],
+      "note": "The PM asks the ME to check borrower emails with consortium IT, then cancels it once the UI designer explains the library system's email API handles receipts."
+    },
+    {
+      "scenario_id": "F3_UNAGREED_DECISION",
+      "segments": [
+        "SY0301d.s0068",
+        "SY0301d.s0069",
+        "SY0301d.s0070",
+        "SY0301d.s0071",
+        "SY0301d.s0072"
+      ],
+      "note": "The ME states that a screen-reading voice is 'in now'. Nobody agrees, and the PM moves on to the colour without settling it."
+    }
+  ],
+  "provenance": {
+    "generator": "liveminutes-synthetic",
+    "cache_key": "86a4012430837b5bd85a2b7a5588b7680b2be607d85c4d4c6967990bcc80425c",
+    "attempt": 0,
+    "model": "claude-opus-5-5",
+    "prompt_version": "v1",
+    "scenario_spec_version": 1,
+    "feature": "F3",
+    "product": "a library self-checkout kiosk",
+    "planned_scenarios": [
+      "F3_ACTION_REMOVED",
+      "F3_UNAGREED_DECISION"
+    ]
+  }
+}

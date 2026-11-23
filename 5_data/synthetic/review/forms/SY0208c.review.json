@@ -1,0 +1,1321 @@
+{
+  "meeting_id": "SY0208c",
+  "raw_sha256": "034c8cd683f2bb6bb0adbf79504cf7e302a0558bf66591a7203a2496c8567bde",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the conceptual design meeting and noted that the user interface designer was absent on a training course but had sent his screen sketches. She recapped the functional design decisions and raised the catalogue integration question, which had no owner. The industrial designer reported that RFID tags are deactivated by the pad itself, but barcode items with magnetic strips need a desensitiser plate costing about 250 euros, which the team agreed to include. He presented a freestanding pedestal with a tilted landscape screen. After the marketing expert presented accessibility guidelines on reach range and knee space, the team chose a lower, fixed screen height with knee space over a motorised lift. The revised cost came to about 3,350 euros, 150 euros under the target. The team also agreed on a neutral body with a swappable front panel in each library's colours, and asked for the absent user interface designer's sketches to be redone for landscape with a count-check screen for missed items."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will check which catalogue systems the libraries run and whether SIP2 covers all of them. This was first given to the marketing expert and moved to him because it is tied to the reader and PC.",
+        "The user interface designer (absent) will redo his screen sketches for the landscape screen and add a count-check screen for missed items.",
+        "The project manager will email the user interface designer about his task.",
+        "The project manager will send the minutes out tonight.",
+        "The marketing expert will check with a couple of libraries whether they would use the swappable front panel, and in which colours.",
+        "The industrial designer will make a rough foam mock-up of the casing for the next meeting."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "A desensitiser plate for magnetic-strip barcode items will be included.",
+        "The kiosk will be a freestanding pedestal with a tilted landscape screen at a fixed, lower height of about 90 centimetres, with knee space underneath, instead of a motorised height-adjustable screen.",
+        "The casing will be a neutral grey powder-coated body with a swappable front panel in the library's own colours.",
+        "The interface will include a count-check screen so borrowers can confirm the number of items detected."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The cost margin is tight: the estimate is about 3,350 euros, leaving only about 150 euros under the 3,500 euro target.",
+        "It is not yet confirmed that SIP2 works with all the libraries' catalogue systems.",
+        "The user interface designer's screen sketches are in portrait and must be reworked for the landscape screen.",
+        "Missed items in stacks remain a known risk, which the count-check screen is meant to address."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0208c.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0208c.ai1",
+        "description": "Check which catalogue systems the libraries run and whether there is a standard connection (SIP2) for the kiosk to record loans",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "reassigned",
+        "previous_owners": [
+          "C"
+        ],
+        "history": [
+          {
+            "segment": "SY0208c.s0014",
+            "event": "assigned",
+            "by": "A",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0208c.s0015",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0208c.s0108",
+            "event": "proposed",
+            "by": "C",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0208c.s0109",
+            "event": "reassigned",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0208c.s0110",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0208c.s0012",
+          "SY0208c.s0014",
+          "SY0208c.s0015",
+          "SY0208c.s0104",
+          "SY0208c.s0105",
+          "SY0208c.s0107",
+          "SY0208c.s0108",
+          "SY0208c.s0109",
+          "SY0208c.s0110",
+          "SY0208c.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0208c.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0208c.ai2",
+        "description": "Redo the screen sketches for the landscape screen and add a count-check screen for missed items",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0208c.s0098",
+            "event": "assigned",
+            "by": "A",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0208c.s0091",
+          "SY0208c.s0093",
+          "SY0208c.s0094",
+          "SY0208c.s0095",
+          "SY0208c.s0096",
+          "SY0208c.s0098",
+          "SY0208c.s0099",
+          "SY0208c.s0100"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0208c.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0208c.ai3",
+        "description": "Email the user interface designer about his assigned task",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0208c.s0100",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0208c.s0121",
+            "event": "restated",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0208c.s0100",
+          "SY0208c.s0121"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0208c.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0208c.ai4",
+        "description": "Send the meeting minutes out tonight",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0208c.s0121",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0208c.s0121"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0208c.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0208c.ai5",
+        "description": "Check with a couple of libraries whether they would use the swappable front panel and which colours they want",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0208c.s0113",
+            "event": "assigned",
+            "by": "A",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0208c.s0114",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0208c.s0113",
+          "SY0208c.s0114"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0208c.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0208c.ai6",
+        "description": "Make a rough foam mock-up of the casing for the next meeting",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0208c.s0115",
+            "event": "assigned",
+            "by": "A",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0208c.s0116",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0208c.s0115",
+          "SY0208c.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f1",
+        "type": "absence",
+        "fact": "Marcus, the user interface designer, was absent because he was on a training course all day.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208c.s0005"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recapped the previous meeting's decisions: support both RFID and barcodes, keep the thermal printer, and a start screen with borrow and return buttons and language names.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0208b",
+        "evidence_segments": [
+          "SY0208c.s0009",
+          "SY0208c.s0010"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager raised the catalogue integration task that nobody took at the previous meeting.",
+        "agreed": null,
+        "related_action_item": "SY0208c.ai1",
+        "refers_to_meeting": "SY0208b",
+        "evidence_segments": [
+          "SY0208c.s0012",
+          "SY0208c.s0013"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f4",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer referred to the marketing expert's finding from the last meeting that gate alarms from non-deactivated tags are a common complaint.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0208b",
+        "evidence_segments": [
+          "SY0208c.s0027",
+          "SY0208c.s0028"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f5",
+        "type": "reference_to_prior_meeting",
+        "fact": "The industrial designer started the new costing from the previous meeting's total of about 2,950 euros.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0208b",
+        "evidence_segments": [
+          "SY0208c.s0067"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f6",
+        "type": "other",
+        "fact": "RFID tags are deactivated by the pad flipping a security bit, but barcode items with magnetic strips need a desensitiser costing about 250 euros.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208c.s0019",
+          "SY0208c.s0020",
+          "SY0208c.s0022",
+          "SY0208c.s0023",
+          "SY0208c.s0025"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f7",
+        "type": "decision",
+        "fact": "The team agreed to include a desensitiser plate for magnetic-strip barcode items.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208c.s0027",
+          "SY0208c.s0029",
+          "SY0208c.s0031"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f8",
+        "type": "other",
+        "fact": "The marketing expert reported accessibility guidelines: controls between about 80 and 120 centimetres from the floor, with knee space underneath for wheelchair users.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208c.s0043",
+          "SY0208c.s0044",
+          "SY0208c.s0045",
+          "SY0208c.s0048"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f9",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested a motorised height-adjustable screen; it was rejected because it costs about 400 euros and could break.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208c.s0053",
+          "SY0208c.s0054",
+          "SY0208c.s0056",
+          "SY0208c.s0057",
+          "SY0208c.s0058"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f10",
+        "type": "decision",
+        "fact": "The kiosk will be a freestanding pedestal with a tilted screen at a fixed, lower height of about 90 centimetres and knee space underneath.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208c.s0034",
+          "SY0208c.s0037",
+          "SY0208c.s0059",
+          "SY0208c.s0060",
+          "SY0208c.s0061",
+          "SY0208c.s0062",
+          "SY0208c.s0064"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f11",
+        "type": "other",
+        "fact": "The revised production cost is about 3,350 euros, with the casing at about 950 euros, leaving about 150 euros under the 3,500 euro target.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208c.s0068",
+          "SY0208c.s0069",
+          "SY0208c.s0070",
+          "SY0208c.s0071"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f12",
+        "type": "unagreed_proposal",
+        "fact": "The industrial designer suggested a bright orange casing; it was not adopted because libraries have their own branding colours.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208c.s0078",
+          "SY0208c.s0079",
+          "SY0208c.s0080",
+          "SY0208c.s0081"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f13",
+        "type": "decision",
+        "fact": "The casing will have a neutral grey powder-coated body with a swappable front panel in the library's colours.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208c.s0077",
+          "SY0208c.s0082",
+          "SY0208c.s0083",
+          "SY0208c.s0084",
+          "SY0208c.s0085",
+          "SY0208c.s0086"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f14",
+        "type": "decision",
+        "fact": "The interface will include a count-check screen so borrowers can confirm how many items were detected.",
+        "agreed": true,
+        "related_action_item": "SY0208c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208c.s0094",
+          "SY0208c.s0095",
+          "SY0208c.s0096",
+          "SY0208c.s0098"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f15",
+        "type": "action_item",
+        "fact": "The absent user interface designer was asked to redo his sketches for the landscape screen and add a count-check screen.",
+        "agreed": null,
+        "related_action_item": "SY0208c.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208c.s0098",
+          "SY0208c.s0100"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f16",
+        "type": "action_item",
+        "fact": "The industrial designer will check which catalogue systems the libraries run and whether SIP2 covers them.",
+        "agreed": null,
+        "related_action_item": "SY0208c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208c.s0109",
+          "SY0208c.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f17",
+        "type": "plan_change",
+        "fact": "The catalogue systems task was first given to the marketing expert and later reassigned to the industrial designer because the connection runs through the reader and PC.",
+        "agreed": null,
+        "related_action_item": "SY0208c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208c.s0014",
+          "SY0208c.s0015",
+          "SY0208c.s0107",
+          "SY0208c.s0108",
+          "SY0208c.s0109",
+          "SY0208c.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f18",
+        "type": "action_item_removed",
+        "fact": "The marketing expert was taken off the catalogue systems task.",
+        "agreed": null,
+        "related_action_item": "SY0208c.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208c.s0108",
+          "SY0208c.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f19",
+        "type": "action_item",
+        "fact": "The project manager will email the user interface designer about his task.",
+        "agreed": null,
+        "related_action_item": "SY0208c.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208c.s0100",
+          "SY0208c.s0121"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f20",
+        "type": "action_item",
+        "fact": "The project manager will send the minutes out tonight.",
+        "agreed": null,
+        "related_action_item": "SY0208c.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208c.s0121"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f21",
+        "type": "action_item",
+        "fact": "The marketing expert will check with libraries whether they would use the swappable panel and which colours they want.",
+        "agreed": null,
+        "related_action_item": "SY0208c.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208c.s0113",
+          "SY0208c.s0114"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0208c.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0208c.f22",
+        "type": "action_item",
+        "fact": "The industrial designer will make a rough foam mock-up of the casing for the next meeting.",
+        "agreed": null,
+        "related_action_item": "SY0208c.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0208c.s0115",
+          "SY0208c.s0116"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_TASK_TO_ABSENT",
+        "segments": [
+          "SY0208c.s0005",
+          "SY0208c.s0091",
+          "SY0208c.s0093",
+          "SY0208c.s0098",
+          "SY0208c.s0099",
+          "SY0208c.s0100"
+        ],
+        "note": "The PM assigns the absent UI designer (D) to redo the sketches for landscape and add a count-check screen, and says she will email him."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_REASSIGNED_OR_DROPPED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_REASSIGNED_OR_DROPPED",
+        "segments": [
+          "SY0208c.s0014",
+          "SY0208c.s0015",
+          "SY0208c.s0107",
+          "SY0208c.s0108",
+          "SY0208c.s0109",
+          "SY0208c.s0110",
+          "SY0208c.s0111"
+        ],
+        "note": "The catalogue systems check is given to the marketing expert early, then reassigned to the industrial designer once SIP2 turns out to be tied to the reader."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

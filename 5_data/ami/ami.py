@@ -5,7 +5,8 @@ Reference  = the "abstract" section of AMI's human summary (abstractive/<meeting
 """
 import os
 import xml.etree.ElementTree as ET
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from functools import lru_cache
 
 import ami_settings
 
@@ -26,6 +27,7 @@ class Meeting:
     id: str
     lines: list       # transcript lines, sorted by start time
     reference: str    # human-written abstract (empty if the meeting has none)
+    groups: dict = field(default_factory=dict)   # who was in it, for disaggregated scores (meeting_groups)
 
 
 # Map each speaker letter (A-D) of a meeting to its scenario role (PM, ME, ID, UI).
@@ -35,6 +37,32 @@ def speaker_roles(meeting):
         if m.get("observation") == meeting:
             return {s.get("nxt_agent"): s.get("role") for s in m.iter("speaker")}
     raise KeyError(meeting)
+
+
+# Every AMI participant's profile from corpusResources/participants.xml: {global id: (sex, native language)}.
+@lru_cache(maxsize=1)
+def participant_profiles():
+    root = ET.parse(os.path.join(ami_settings.AMI_DIR, "corpusResources", "participants.xml")).getroot()
+    return {p.get(NITE + "id"): (p.get("sex"), p.get("native_language")) for p in root.iter("participant")}
+
+
+# The groups a meeting belongs to, for scores broken down by who was speaking. Summaries are per meeting,
+# so the groups describe the meeting's speakers (from participants.xml, via meetings.xml global_name):
+#   gender_mix   all_male / mixed / all_female   (AMI records sex as M or F)
+#   non_native   all_native / some_non_native (1-2 of the speakers) / mostly_non_native (3 or more)
+# Plus the raw counts, so other groupings can be made from the run record later.
+def meeting_groups(meeting):
+    root = ET.parse(os.path.join(ami_settings.AMI_DIR, "corpusResources", "meetings.xml")).getroot()
+    people = next([s.get("global_name") for s in m.iter("speaker")]
+                  for m in root.iter("meeting") if m.get("observation") == meeting)
+    profiles = [participant_profiles().get(p, (None, None)) for p in people]
+    female = sum(sex == "F" for sex, _ in profiles)
+    non_native = sum(lang is not None and lang != "English" for _, lang in profiles)
+    return {
+        "gender_mix": "all_male" if female == 0 else "all_female" if female == len(people) else "mixed",
+        "non_native": "all_native" if non_native == 0 else "some_non_native" if non_native <= 2 else "mostly_non_native",
+        "speakers": len(people), "female_speakers": female, "non_native_speakers": non_native,
+    }
 
 
 # Read one speaker's words: {word id: (start time or None, text, is punctuation)}, in file order.
@@ -101,4 +129,5 @@ def load_meeting(meeting):
     lines = []
     for agent, role in speaker_roles(meeting).items():
         lines += read_lines(meeting, agent, role)
-    return Meeting(meeting, sorted(lines, key=lambda l: (l.start, l.speaker)), read_reference(meeting))
+    return Meeting(meeting, sorted(lines, key=lambda l: (l.start, l.speaker)), read_reference(meeting),
+                   meeting_groups(meeting))

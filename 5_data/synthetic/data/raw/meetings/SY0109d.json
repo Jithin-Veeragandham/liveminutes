@@ -1,0 +1,1486 @@
+{
+  "schema_version": "1.0",
+  "source": "synthetic",
+  "meeting_id": "SY0109d",
+  "series_id": "SY0109",
+  "meeting_letter": "d",
+  "scenario_type": "scenario",
+  "stage": "detailed design",
+  "duration_sec": 488.64,
+  "participants": [
+    {
+      "label": "A",
+      "role": "ID",
+      "name": "Tomas",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "B",
+      "role": "UI",
+      "name": "Priya",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "C",
+      "role": "ME",
+      "name": "Hannah",
+      "global_id": null,
+      "status": "present"
+    },
+    {
+      "label": "D",
+      "role": "PM",
+      "name": "Marcus",
+      "global_id": null,
+      "status": "present"
+    }
+  ],
+  "segments": [
+    {
+      "id": "SY0109d.s0001",
+      "speaker": "D",
+      "start": 5.0,
+      "end": 7.31,
+      "text": "Okay, um, are we all set?",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0109d.s0002",
+      "speaker": "B",
+      "start": 8.23,
+      "end": 8.63,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109d.s0003",
+      "speaker": "D",
+      "start": 9.62,
+      "end": 13.85,
+      "text": "Right, so this is the detailed design meeting, the last one.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0004",
+      "speaker": "D",
+      "start": 14.37,
+      "end": 17.06,
+      "text": "And it's good to have Priya back.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0005",
+      "speaker": "B",
+      "start": 17.87,
+      "end": 20.18,
+      "text": "Thanks, yeah, good to be back.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0109d.s0006",
+      "speaker": "C",
+      "start": 21.11,
+      "end": 21.88,
+      "text": "Welcome back.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109d.s0007",
+      "speaker": "D",
+      "start": 22.66,
+      "end": 29.2,
+      "text": "So, quick follow-up first. I sent out the minutes from last time and the invite for today.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0008",
+      "speaker": "D",
+      "start": 29.59,
+      "end": 34.59,
+      "text": "And Priya, I briefed you on the decisions on, uh, Wednesday, I think.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0009",
+      "speaker": "B",
+      "start": 35.1,
+      "end": 42.41,
+      "text": "Yeah, you did, thanks. I've had a look at the teal thing as well, but I'll come to that.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0010",
+      "speaker": "D",
+      "start": 43.15,
+      "end": 43.92,
+      "text": "Okay, great.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109d.s0011",
+      "speaker": "D",
+      "start": 44.51,
+      "end": 48.36,
+      "text": "Tomas, do you want to start with the supplier stuff?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109d.s0012",
+      "speaker": "A",
+      "start": 48.65,
+      "end": 49.8,
+      "text": "Uh, yeah, sure.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0109d.s0013",
+      "speaker": "A",
+      "start": 50.36,
+      "end": 54.21,
+      "text": "So the first one, the lock status. They confirmed it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0014",
+      "speaker": "A",
+      "start": 55.05,
+      "end": 62.74,
+      "text": "The dock sends its lock status to the phone over Bluetooth, and it includes the timestamp of when it locked.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0015",
+      "speaker": "D",
+      "start": 63.52,
+      "end": 66.6,
+      "text": "Oh good, so the two-stage return actually works.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109d.s0016",
+      "speaker": "A",
+      "start": 67.59,
+      "end": 71.05,
+      "text": "Yeah, the 'bike locked' screen can show straight away.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0017",
+      "speaker": "C",
+      "start": 72.04,
+      "end": 75.12,
+      "text": "And the timestamp is what we bill on?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109d.s0018",
+      "speaker": "A",
+      "start": 75.7,
+      "end": 80.7,
+      "text": "Yeah, exactly, billing stops at that lock time, like we agreed last week.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0019",
+      "speaker": "C",
+      "start": 80.98,
+      "end": 81.38,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109d.s0020",
+      "speaker": "A",
+      "start": 82.25,
+      "end": 85.33,
+      "text": "And the second thing, the underground car park.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0021",
+      "speaker": "A",
+      "start": 86.28,
+      "end": 92.43,
+      "text": "They can fit an external antenna at both of those docks, which should boost the signal.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0022",
+      "speaker": "A",
+      "start": 92.59,
+      "end": 95.28,
+      "text": "They said it'd take about two weeks.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0023",
+      "speaker": "A",
+      "start": 95.94,
+      "end": 103.63,
+      "text": "Sorry, no, three weeks. Two weeks was just for the parts to arrive, it's three weeks to have it fitted.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0024",
+      "speaker": "D",
+      "start": 104.17,
+      "end": 105.32,
+      "text": "Three weeks, okay.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0109d.s0025",
+      "speaker": "B",
+      "start": 106.09,
+      "end": 108.4,
+      "text": "Is that before the pilot starts?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109d.s0026",
+      "speaker": "A",
+      "start": 108.79,
+      "end": 112.64,
+      "text": "Um, I think it's tight but yeah, it should be.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0027",
+      "speaker": "D",
+      "start": 113.54,
+      "end": 118.54,
+      "text": "Can you get that in writing from them? Like a confirmed fitting date.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109d.s0028",
+      "speaker": "A",
+      "start": 118.86,
+      "end": 121.55,
+      "text": "Yeah, I'll ask them for a date.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0109d.s0029",
+      "speaker": "D",
+      "start": 122.4,
+      "end": 122.8,
+      "text": "Great.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109d.s0030",
+      "speaker": "D",
+      "start": 123.42,
+      "end": 124.57,
+      "text": "Hannah, readability check?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109d.s0031",
+      "speaker": "C",
+      "start": 125.46,
+      "end": 130.08,
+      "text": "Yeah, so I went through the accessibility guidance, the WCAG stuff mostly.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0032",
+      "speaker": "C",
+      "start": 130.89,
+      "end": 137.43,
+      "text": "For normal text you want a contrast ratio of at least four and a half to one.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0033",
+      "speaker": "C",
+      "start": 138.15,
+      "end": 142.0,
+      "text": "And for large text and buttons it's three to one.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0034",
+      "speaker": "B",
+      "start": 142.54,
+      "end": 142.94,
+      "text": "Mm-hmm.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109d.s0035",
+      "speaker": "C",
+      "start": 143.13,
+      "end": 150.44,
+      "text": "Outdoors in sunlight I'd actually aim higher than the minimum, so, um, body text at sixteen point at least.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0036",
+      "speaker": "B",
+      "start": 151.25,
+      "end": 155.1,
+      "text": "Yeah, that matches what we covered on the course actually.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109d.s0037",
+      "speaker": "C",
+      "start": 155.97,
+      "end": 160.97,
+      "text": "And then the night mode button, the yellow versus bright teal on black.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0038",
+      "speaker": "C",
+      "start": 161.78,
+      "end": 166.01,
+      "text": "Both of them pass, but the yellow has the higher contrast.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0039",
+      "speaker": "D",
+      "start": 166.64,
+      "end": 172.02,
+      "text": "Okay, so let's just go with yellow then for the night mode main button.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109d.s0040",
+      "speaker": "A",
+      "start": 172.48,
+      "end": 174.02,
+      "text": "Yeah, yellow pops more.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109d.s0041",
+      "speaker": "C",
+      "start": 174.34,
+      "end": 175.88,
+      "text": "Yeah, I'd go yellow.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109d.s0042",
+      "speaker": "D",
+      "start": 176.39,
+      "end": 180.62,
+      "text": "Okay, yellow it is. That settles that one from last time.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0043",
+      "speaker": "D",
+      "start": 181.18,
+      "end": 184.64,
+      "text": "And the brand guidelines, did the council get back?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109d.s0044",
+      "speaker": "C",
+      "start": 185.36,
+      "end": 188.44,
+      "text": "They did, yeah. Final version came on Friday.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0045",
+      "speaker": "C",
+      "start": 189.05,
+      "end": 194.05,
+      "text": "The teal is pretty much the same as the draft, just slightly darker.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0046",
+      "speaker": "C",
+      "start": 194.37,
+      "end": 200.14,
+      "text": "And the logo has to sit in the header, top left, they were quite specific.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0047",
+      "speaker": "D",
+      "start": 201.06,
+      "end": 201.46,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109d.s0048",
+      "speaker": "D",
+      "start": 202.36,
+      "end": 205.05,
+      "text": "Priya, your view on the teal shades?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0109d.s0049",
+      "speaker": "B",
+      "start": 205.59,
+      "end": 208.28,
+      "text": "So the darker teal is actually better.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109d.s0050",
+      "speaker": "B",
+      "start": 209.22,
+      "end": 216.91,
+      "text": "With white text on it, it passes four and a half to one, so it's fine for buttons with labels.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0051",
+      "speaker": "B",
+      "start": 217.85,
+      "end": 222.08,
+      "text": "The draft one was borderline, so I'm glad they changed it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0052",
+      "speaker": "D",
+      "start": 222.7,
+      "end": 223.1,
+      "text": "Good.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109d.s0053",
+      "speaker": "B",
+      "start": 223.72,
+      "end": 227.95,
+      "text": "Okay so, the wireframes. I've added the 'bike locked, confirming' state.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0054",
+      "speaker": "B",
+      "start": 228.41,
+      "end": 235.72,
+      "text": "So you get a big tick, 'bike locked', and underneath it a little spinner that says 'confirming your ride'.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0055",
+      "speaker": "B",
+      "start": 236.19,
+      "end": 239.65,
+      "text": "Then when the system confirms, the cost slides in.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0056",
+      "speaker": "A",
+      "start": 240.18,
+      "end": 241.72,
+      "text": "And after thirty seconds?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109d.s0057",
+      "speaker": "B",
+      "start": 242.58,
+      "end": 249.89,
+      "text": "After thirty seconds it changes to 'we'll send you a receipt', and then the receipt comes as a notification.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0058",
+      "speaker": "C",
+      "start": 250.45,
+      "end": 252.37,
+      "text": "That's nice, that's really clear.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109d.s0059",
+      "speaker": "D",
+      "start": 253.04,
+      "end": 254.58,
+      "text": "Yeah, I like that.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109d.s0060",
+      "speaker": "A",
+      "start": 254.94,
+      "end": 261.86,
+      "text": "Could we add a little vibration when the bike locks? Because you're usually not looking at the phone.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109d.s0061",
+      "speaker": "B",
+      "start": 262.76,
+      "end": 266.22,
+      "text": "Oh, yeah, that's a good idea, a short buzz.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109d.s0062",
+      "speaker": "D",
+      "start": 266.62,
+      "end": 268.16,
+      "text": "Any reason not to?",
+      "da_type": "el.ass"
+    },
+    {
+      "id": "SY0109d.s0063",
+      "speaker": "C",
+      "start": 268.91,
+      "end": 273.14,
+      "text": "No, I think riders would like it, you know it's done.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109d.s0064",
+      "speaker": "D",
+      "start": 273.62,
+      "end": 277.08,
+      "text": "Okay, so vibration on lock, let's put that in.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0065",
+      "speaker": "B",
+      "start": 277.4,
+      "end": 277.8,
+      "text": "Yeah.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109d.s0066",
+      "speaker": "B",
+      "start": 278.25,
+      "end": 281.71,
+      "text": "Um, there's one thing on the night mode though.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0067",
+      "speaker": "B",
+      "start": 282.07,
+      "end": 286.3,
+      "text": "The yellow. In the council guidelines, yellow is their warning colour.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0068",
+      "speaker": "C",
+      "start": 286.76,
+      "end": 289.45,
+      "text": "Oh, right, it's on all the signage.",
+      "da_type": "und"
+    },
+    {
+      "id": "SY0109d.s0069",
+      "speaker": "B",
+      "start": 289.9,
+      "end": 300.28,
+      "text": "Yeah, and we also said colours like green and red are only for status. If the main button is yellow it kind of reads like a warning.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0070",
+      "speaker": "A",
+      "start": 300.8,
+      "end": 301.95,
+      "text": "Hmm, that's fair.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109d.s0071",
+      "speaker": "B",
+      "start": 302.26,
+      "end": 307.64,
+      "text": "The guidelines actually have a bright teal variant for dark backgrounds. I'd use that.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109d.s0072",
+      "speaker": "D",
+      "start": 308.05,
+      "end": 310.74,
+      "text": "Does that still pass the contrast though?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109d.s0073",
+      "speaker": "C",
+      "start": 311.3,
+      "end": 317.07,
+      "text": "Yeah, the bright teal passed as well, just with a bit less margin than yellow.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0074",
+      "speaker": "B",
+      "start": 317.89,
+      "end": 321.74,
+      "text": "And it keeps the brand consistent between day and night.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0075",
+      "speaker": "D",
+      "start": 322.6,
+      "end": 324.52,
+      "text": "Okay, I think that's convincing.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109d.s0076",
+      "speaker": "D",
+      "start": 325.18,
+      "end": 331.72,
+      "text": "So let's change what we said earlier, the night mode main button is bright teal, not yellow.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0077",
+      "speaker": "C",
+      "start": 332.3,
+      "end": 332.7,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109d.s0078",
+      "speaker": "A",
+      "start": 333.12,
+      "end": 334.27,
+      "text": "Fine by me.",
+      "da_type": "be.pos"
+    },
+    {
+      "id": "SY0109d.s0079",
+      "speaker": "D",
+      "start": 334.86,
+      "end": 336.78,
+      "text": "Okay, so bright teal, final.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0080",
+      "speaker": "C",
+      "start": 337.19,
+      "end": 343.73,
+      "text": "One other thing, um, for launch, could we put a free first ride code into the sign-up?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109d.s0081",
+      "speaker": "C",
+      "start": 344.35,
+      "end": 348.97,
+      "text": "Some of the competitor apps do that and their reviews mention it.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0082",
+      "speaker": "D",
+      "start": 349.51,
+      "end": 353.36,
+      "text": "I mean, that's really a council pricing decision, not ours.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109d.s0083",
+      "speaker": "D",
+      "start": 353.59,
+      "end": 357.82,
+      "text": "I don't think we should design it in for the pilot.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0084",
+      "speaker": "C",
+      "start": 358.53,
+      "end": 360.07,
+      "text": "Yeah, okay, fair enough.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109d.s0085",
+      "speaker": "D",
+      "start": 360.4,
+      "end": 364.25,
+      "text": "Right, um, so where are we with the whole thing.",
+      "da_type": "stl"
+    },
+    {
+      "id": "SY0109d.s0086",
+      "speaker": "D",
+      "start": 365.07,
+      "end": 369.3,
+      "text": "Priya, can you do the final mock-ups with all of this?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109d.s0087",
+      "speaker": "B",
+      "start": 369.94,
+      "end": 376.48,
+      "text": "Yeah, so bright teal for night, the darker teal for day, the vibration, the logo top left.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0088",
+      "speaker": "B",
+      "start": 376.8,
+      "end": 381.03,
+      "text": "I can have high-fidelity mock-ups done by end of next week.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0109d.s0089",
+      "speaker": "D",
+      "start": 381.6,
+      "end": 382.0,
+      "text": "Great.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109d.s0090",
+      "speaker": "A",
+      "start": 382.4,
+      "end": 385.86,
+      "text": "Do the developers need the dock spec as well?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109d.s0091",
+      "speaker": "D",
+      "start": 386.85,
+      "end": 388.0,
+      "text": "Yeah, good point.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109d.s0092",
+      "speaker": "D",
+      "start": 388.7,
+      "end": 396.01,
+      "text": "Tomas, can you put together a short spec of the Bluetooth lock message and the timestamp for the developers?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109d.s0093",
+      "speaker": "A",
+      "start": 396.19,
+      "end": 398.11,
+      "text": "Yeah, I'll write that up.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0109d.s0094",
+      "speaker": "C",
+      "start": 398.81,
+      "end": 402.27,
+      "text": "Should I put the readability findings in the folder?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109d.s0095",
+      "speaker": "D",
+      "start": 403.11,
+      "end": 406.19,
+      "text": "Yeah, please, and the final brand guidelines too.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109d.s0096",
+      "speaker": "C",
+      "start": 406.53,
+      "end": 408.07,
+      "text": "Sure, I'll upload both.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0109d.s0097",
+      "speaker": "C",
+      "start": 408.34,
+      "end": 412.96,
+      "text": "And should I start on something for launch, like the rider comms?",
+      "da_type": "el.sug"
+    },
+    {
+      "id": "SY0109d.s0098",
+      "speaker": "D",
+      "start": 413.72,
+      "end": 419.49,
+      "text": "Yeah, I think a short launch message to the waiting list, explaining how unlocking works.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109d.s0099",
+      "speaker": "C",
+      "start": 419.99,
+      "end": 421.91,
+      "text": "Okay, I can draft that.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0109d.s0100",
+      "speaker": "B",
+      "start": 422.86,
+      "end": 427.09,
+      "text": "Mention the QR fallback in it, people won't know about it.",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109d.s0101",
+      "speaker": "C",
+      "start": 427.73,
+      "end": 428.5,
+      "text": "Yeah, good.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109d.s0102",
+      "speaker": "D",
+      "start": 429.15,
+      "end": 431.46,
+      "text": "Okay, let me just sum up.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0103",
+      "speaker": "D",
+      "start": 431.74,
+      "end": 437.12,
+      "text": "Two-stage return confirmation stays, billing on the dock's lock timestamp, which Tomas has confirmed.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0104",
+      "speaker": "D",
+      "start": 437.98,
+      "end": 442.98,
+      "text": "Darker teal from the final guidelines for buttons and headers, logo top left.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0105",
+      "speaker": "D",
+      "start": 443.9,
+      "end": 448.13,
+      "text": "Night mode main button bright teal, we changed that from yellow.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0106",
+      "speaker": "D",
+      "start": 448.35,
+      "end": 452.97,
+      "text": "Body text sixteen point minimum, four and a half to one contrast.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0107",
+      "speaker": "D",
+      "start": 453.38,
+      "end": 455.3,
+      "text": "Vibration when the bike locks.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0108",
+      "speaker": "D",
+      "start": 455.89,
+      "end": 461.66,
+      "text": "And the antenna at the car park docks, three weeks, Tomas is getting a date.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0109",
+      "speaker": "A",
+      "start": 462.34,
+      "end": 462.74,
+      "text": "Yep.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109d.s0110",
+      "speaker": "D",
+      "start": 462.9,
+      "end": 467.9,
+      "text": "And I'll write up the minutes and the final report for the council.",
+      "da_type": "off"
+    },
+    {
+      "id": "SY0109d.s0111",
+      "speaker": "C",
+      "start": 468.6,
+      "end": 470.52,
+      "text": "Do we need another meeting?",
+      "da_type": "el.inf"
+    },
+    {
+      "id": "SY0109d.s0112",
+      "speaker": "D",
+      "start": 470.89,
+      "end": 475.89,
+      "text": "Not formally, but let's do a review of Priya's mock-ups when they're ready.",
+      "da_type": "inf"
+    },
+    {
+      "id": "SY0109d.s0113",
+      "speaker": "D",
+      "start": 476.14,
+      "end": 478.45,
+      "text": "Say, um, Friday week, ten o'clock?",
+      "da_type": "sug"
+    },
+    {
+      "id": "SY0109d.s0114",
+      "speaker": "B",
+      "start": 479.22,
+      "end": 480.37,
+      "text": "Yeah, that works.",
+      "da_type": "ass"
+    },
+    {
+      "id": "SY0109d.s0115",
+      "speaker": "A",
+      "start": 481.26,
+      "end": 481.66,
+      "text": "Fine.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109d.s0116",
+      "speaker": "C",
+      "start": 482.4,
+      "end": 482.8,
+      "text": "Okay.",
+      "da_type": "bck"
+    },
+    {
+      "id": "SY0109d.s0117",
+      "speaker": "D",
+      "start": 483.72,
+      "end": 485.64,
+      "text": "Great. Thanks everyone, that's it.",
+      "da_type": "inf"
+    }
+  ],
+  "summary": {
+    "abstract": [
+      "The project manager opened the detailed design meeting, welcomed back the user interface designer and confirmed that he had sent the minutes and the invite and had briefed her on the decisions of the previous meeting.",
+      "The industrial designer reported that the dock supplier confirmed the dock sends its lock status, with a lock timestamp, to the phone over Bluetooth. This means the two-stage return confirmation works and billing can stop at the lock time. The supplier can also fit external antennas at the two underground car park docks, which will take three weeks.",
+      "The marketing expert presented the outdoor readability check: a contrast of at least 4.5:1 for normal text, 3:1 for large text and buttons, and body text of at least sixteen point. She reported that the council's final brand guidelines use a slightly darker teal and require the logo at the top left of the header. The user interface designer confirmed the darker teal passes contrast with white text.",
+      "The user interface designer presented the updated wireframes with the 'bike locked, confirming' state and the receipt notification, and the team added a short vibration when the bike locks.",
+      "The team first chose yellow for the night mode main button, but later changed this to the bright teal variant from the council guidelines, because yellow is the council's warning colour. A mock-up review was set for Friday week at ten."
+    ],
+    "actions": [
+      "The industrial designer will get a confirmed fitting date in writing from the dock supplier for the antennas at the underground car park docks.",
+      "The user interface designer will produce high-fidelity mock-ups including all final decisions by the end of next week.",
+      "The industrial designer will write a short spec of the Bluetooth lock message and timestamp for the developers.",
+      "The marketing expert will upload the readability findings and the final brand guidelines to the shared folder.",
+      "The marketing expert will draft a launch message to the pilot waiting list explaining how unlocking works, including the QR fallback.",
+      "The project manager will write up the minutes and the final report for the council."
+    ],
+    "decisions": [
+      "The two-stage return confirmation stays, now that the dock is confirmed to send its lock status with a timestamp over Bluetooth, and billing stops at the dock's lock timestamp.",
+      "The darker teal from the council's final brand guidelines is used for buttons and headers, and the council logo sits at the top left of the header.",
+      "The night mode main button will be the council's bright teal variant for dark backgrounds. This was revised during the meeting from an earlier choice of yellow.",
+      "Body text will be at least sixteen point, with a contrast of at least 4.5:1 for normal text.",
+      "The phone will give a short vibration when the bike locks.",
+      "A free first ride code will not be designed into sign-up for the pilot.",
+      "The team will review the user interface designer's mock-ups on Friday week at ten."
+    ],
+    "problems": [
+      "The antenna fitting at the underground car park docks takes three weeks and may be tight for the pilot start; no confirmed fitting date has been given yet.",
+      "The bright teal night mode button passes the contrast check but with less margin than yellow.",
+      "Riders may not know about the QR fallback, which needs to be explained in the launch communications.",
+      "A free first ride offer would be a council pricing decision and was left outside the app design."
+    ]
+  },
+  "action_items": [
+    {
+      "id": "SY0109d.ai1",
+      "description": "Get a confirmed fitting date in writing from the dock supplier for the external antennas at the two underground car park docks",
+      "owner": "A",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0109d.s0027",
+          "event": "proposed",
+          "by": "D",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0109d.s0028",
+          "event": "accepted",
+          "by": "A",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0109d.s0108",
+          "event": "restated",
+          "by": "D",
+          "owner": "A"
+        }
+      ],
+      "evidence_segments": [
+        "SY0109d.s0021",
+        "SY0109d.s0023",
+        "SY0109d.s0027",
+        "SY0109d.s0028",
+        "SY0109d.s0108"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0109d.ai2",
+      "description": "Produce high-fidelity mock-ups with all final decisions (bright teal night button, darker teal, vibration, logo top left) by end of next week",
+      "owner": "B",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0109d.s0086",
+          "event": "assigned",
+          "by": "D",
+          "owner": "B"
+        },
+        {
+          "segment": "SY0109d.s0088",
+          "event": "accepted",
+          "by": "B",
+          "owner": "B"
+        }
+      ],
+      "evidence_segments": [
+        "SY0109d.s0086",
+        "SY0109d.s0087",
+        "SY0109d.s0088"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0109d.ai3",
+      "description": "Write a short spec of the Bluetooth lock message and lock timestamp for the developers",
+      "owner": "A",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0109d.s0092",
+          "event": "assigned",
+          "by": "D",
+          "owner": "A"
+        },
+        {
+          "segment": "SY0109d.s0093",
+          "event": "accepted",
+          "by": "A",
+          "owner": "A"
+        }
+      ],
+      "evidence_segments": [
+        "SY0109d.s0090",
+        "SY0109d.s0092",
+        "SY0109d.s0093"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0109d.ai4",
+      "description": "Upload the readability findings and the final council brand guidelines to the shared folder",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0109d.s0094",
+          "event": "offered",
+          "by": "C",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0109d.s0096",
+          "event": "accepted",
+          "by": "C",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0109d.s0094",
+        "SY0109d.s0095",
+        "SY0109d.s0096"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0109d.ai5",
+      "description": "Draft a launch message to the pilot waiting list explaining how unlocking works, including the QR fallback",
+      "owner": "C",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0109d.s0098",
+          "event": "proposed",
+          "by": "D",
+          "owner": "C"
+        },
+        {
+          "segment": "SY0109d.s0099",
+          "event": "accepted",
+          "by": "C",
+          "owner": "C"
+        }
+      ],
+      "evidence_segments": [
+        "SY0109d.s0097",
+        "SY0109d.s0098",
+        "SY0109d.s0099",
+        "SY0109d.s0100"
+      ],
+      "owner_source": "gold"
+    },
+    {
+      "id": "SY0109d.ai6",
+      "description": "Write up the minutes and the final report for the council",
+      "owner": "D",
+      "owner_unclear": false,
+      "status": "active",
+      "previous_owners": [],
+      "history": [
+        {
+          "segment": "SY0109d.s0110",
+          "event": "offered",
+          "by": "D",
+          "owner": "D"
+        }
+      ],
+      "evidence_segments": [
+        "SY0109d.s0110"
+      ],
+      "owner_source": "gold"
+    }
+  ],
+  "qa_facts": [
+    {
+      "id": "SY0109d.f1",
+      "type": "reference_to_prior_meeting",
+      "fact": "The project manager confirmed he sent the minutes and the invite from the conceptual design meeting and briefed the user interface designer on its decisions.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0109c",
+      "evidence_segments": [
+        "SY0109d.s0007",
+        "SY0109d.s0008",
+        "SY0109d.s0009"
+      ]
+    },
+    {
+      "id": "SY0109d.f2",
+      "type": "other",
+      "fact": "The dock supplier confirmed that the dock sends its lock status, including the lock timestamp, to the phone over Bluetooth.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0109c",
+      "evidence_segments": [
+        "SY0109d.s0013",
+        "SY0109d.s0014",
+        "SY0109d.s0015"
+      ]
+    },
+    {
+      "id": "SY0109d.f3",
+      "type": "reference_to_prior_meeting",
+      "fact": "The industrial designer referred back to the earlier agreement that billing stops at the dock's lock time.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0109c",
+      "evidence_segments": [
+        "SY0109d.s0017",
+        "SY0109d.s0018"
+      ]
+    },
+    {
+      "id": "SY0109d.f4",
+      "type": "other",
+      "fact": "The supplier can fit external antennas at the two underground car park docks; fitting takes three weeks (two weeks is only for the parts to arrive).",
+      "agreed": null,
+      "related_action_item": "SY0109d.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109d.s0021",
+        "SY0109d.s0022",
+        "SY0109d.s0023",
+        "SY0109d.s0024"
+      ]
+    },
+    {
+      "id": "SY0109d.f5",
+      "type": "action_item",
+      "fact": "The industrial designer will get a confirmed antenna fitting date in writing from the supplier.",
+      "agreed": null,
+      "related_action_item": "SY0109d.ai1",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109d.s0027",
+        "SY0109d.s0028"
+      ]
+    },
+    {
+      "id": "SY0109d.f6",
+      "type": "other",
+      "fact": "The readability check found a minimum contrast of 4.5:1 for normal text and 3:1 for large text and buttons.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109d.s0031",
+        "SY0109d.s0032",
+        "SY0109d.s0033"
+      ]
+    },
+    {
+      "id": "SY0109d.f7",
+      "type": "decision",
+      "fact": "Body text will be at least sixteen point with at least 4.5:1 contrast.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109d.s0035",
+        "SY0109d.s0106"
+      ]
+    },
+    {
+      "id": "SY0109d.f8",
+      "type": "plan_change",
+      "fact": "The team first chose yellow for the night mode main button, then changed it to the council's bright teal variant because yellow is the council's warning colour.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109d.s0039",
+        "SY0109d.s0042",
+        "SY0109d.s0067",
+        "SY0109d.s0071",
+        "SY0109d.s0076",
+        "SY0109d.s0079"
+      ]
+    },
+    {
+      "id": "SY0109d.f9",
+      "type": "decision",
+      "fact": "The night mode main button will be the bright teal variant for dark backgrounds.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109d.s0071",
+        "SY0109d.s0076",
+        "SY0109d.s0079",
+        "SY0109d.s0105"
+      ]
+    },
+    {
+      "id": "SY0109d.f10",
+      "type": "decision",
+      "fact": "The darker teal from the council's final brand guidelines is used for buttons and headers; it passes 4.5:1 with white text.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109d.s0045",
+        "SY0109d.s0049",
+        "SY0109d.s0050",
+        "SY0109d.s0104"
+      ]
+    },
+    {
+      "id": "SY0109d.f11",
+      "type": "decision",
+      "fact": "The council logo sits at the top left of the header.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109d.s0046",
+        "SY0109d.s0104"
+      ]
+    },
+    {
+      "id": "SY0109d.f12",
+      "type": "other",
+      "fact": "The user interface designer added the 'bike locked, confirming' state and the receipt notification after thirty seconds to the wireframes.",
+      "agreed": null,
+      "related_action_item": null,
+      "refers_to_meeting": "SY0109c",
+      "evidence_segments": [
+        "SY0109d.s0053",
+        "SY0109d.s0054",
+        "SY0109d.s0055",
+        "SY0109d.s0057"
+      ]
+    },
+    {
+      "id": "SY0109d.f13",
+      "type": "decision",
+      "fact": "The phone will vibrate briefly when the bike locks.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109d.s0060",
+        "SY0109d.s0061",
+        "SY0109d.s0063",
+        "SY0109d.s0064",
+        "SY0109d.s0107"
+      ]
+    },
+    {
+      "id": "SY0109d.f14",
+      "type": "unagreed_proposal",
+      "fact": "The marketing expert proposed a free first ride code in sign-up; the project manager said it is a council pricing decision and not for the pilot.",
+      "agreed": false,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109d.s0080",
+        "SY0109d.s0082",
+        "SY0109d.s0083",
+        "SY0109d.s0084"
+      ]
+    },
+    {
+      "id": "SY0109d.f15",
+      "type": "action_item",
+      "fact": "The user interface designer will produce high-fidelity mock-ups by end of next week.",
+      "agreed": null,
+      "related_action_item": "SY0109d.ai2",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109d.s0086",
+        "SY0109d.s0088"
+      ]
+    },
+    {
+      "id": "SY0109d.f16",
+      "type": "action_item",
+      "fact": "The industrial designer will write a spec of the Bluetooth lock message and timestamp for the developers.",
+      "agreed": null,
+      "related_action_item": "SY0109d.ai3",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109d.s0092",
+        "SY0109d.s0093"
+      ]
+    },
+    {
+      "id": "SY0109d.f17",
+      "type": "action_item",
+      "fact": "The marketing expert will upload the readability findings and final brand guidelines to the shared folder.",
+      "agreed": null,
+      "related_action_item": "SY0109d.ai4",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109d.s0094",
+        "SY0109d.s0095",
+        "SY0109d.s0096"
+      ]
+    },
+    {
+      "id": "SY0109d.f18",
+      "type": "action_item",
+      "fact": "The marketing expert will draft a launch message to the waiting list, including the QR fallback.",
+      "agreed": null,
+      "related_action_item": "SY0109d.ai5",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109d.s0098",
+        "SY0109d.s0099",
+        "SY0109d.s0100"
+      ]
+    },
+    {
+      "id": "SY0109d.f19",
+      "type": "action_item",
+      "fact": "The project manager will write the minutes and the final report for the council.",
+      "agreed": null,
+      "related_action_item": "SY0109d.ai6",
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109d.s0110"
+      ]
+    },
+    {
+      "id": "SY0109d.f20",
+      "type": "decision",
+      "fact": "A mock-up review will be held on Friday week at ten.",
+      "agreed": true,
+      "related_action_item": null,
+      "refers_to_meeting": null,
+      "evidence_segments": [
+        "SY0109d.s0112",
+        "SY0109d.s0113",
+        "SY0109d.s0114"
+      ]
+    }
+  ],
+  "edge_cases": [
+    {
+      "scenario_id": "F1_SELF_CORRECTION",
+      "segments": [
+        "SY0109d.s0022",
+        "SY0109d.s0023"
+      ],
+      "note": "The industrial designer says antenna fitting takes two weeks, then corrects himself to three weeks (two weeks was only for parts)."
+    },
+    {
+      "scenario_id": "F1_PLAN_CHANGE",
+      "segments": [
+        "SY0109d.s0039",
+        "SY0109d.s0040",
+        "SY0109d.s0041",
+        "SY0109d.s0042",
+        "SY0109d.s0067",
+        "SY0109d.s0069",
+        "SY0109d.s0071",
+        "SY0109d.s0075",
+        "SY0109d.s0076",
+        "SY0109d.s0079",
+        "SY0109d.s0105"
+      ],
+      "note": "The team agrees on yellow for the night mode main button, then switches to bright teal after the user interface designer notes yellow is the council's warning colour."
+    }
+  ],
+  "provenance": {
+    "generator": "liveminutes-synthetic",
+    "cache_key": "8eea75b38d499398724decb5fce6365584763e2c78956d390a57c6466790914b",
+    "attempt": 1,
+    "model": "claude-opus-5-5",
+    "prompt_version": "v1",
+    "scenario_spec_version": 1,
+    "feature": "F1",
+    "product": "a bike-share docking station app",
+    "planned_scenarios": [
+      "F1_SELF_CORRECTION",
+      "F1_PLAN_CHANGE"
+    ]
+  }
+}

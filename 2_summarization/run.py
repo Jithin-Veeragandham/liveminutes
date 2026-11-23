@@ -1,17 +1,28 @@
-"""Run a summarizer on AMI with several seeds, score it, and log the result.
+"""Run a summarizer on AMI or the synthetic meetings with several seeds, score it, and log the result.
 
-    python 2_summarization/run.py --model textrank --split smoke             # baseline, 3 meetings, N_SEEDS seeds
-    python 2_summarization/run.py --model textrank --split eval              # baseline, 20 test meetings
+Every run scores BOTH datasets by default (AMI, then the synthetic meetings), each logged as its own run.
+--dataset ami / --dataset synthetic runs just one.
+
+    python 2_summarization/run.py --model textrank --split smoke             # baseline, smoke split of both datasets
+    python 2_summarization/run.py --model textrank --split eval              # baseline, 20 test meetings of each
+    python 2_summarization/run.py --model textrank --dataset ami             # AMI only (or --dataset synthetic)
+    python 2_summarization/run.py --model textrank --mode full               # whole transcript at once (default: recursive)
+    python 2_summarization/run.py --model textrank --params 2_summarization/hpo/results/textrank_best.json   # tuned
     python 2_summarization/run.py --model textrank --split smoke --seeds 5   # 5 seeds
     python 2_summarization/run.py --model textrank --split smoke --seed 7    # one seed: 7
     python 2_summarization/run.py --model bart --split smoke --seeds 3       # deep model (BART packages are in requirements.txt)
     python 2_summarization/run.py --model llm --split smoke                  # LLM rolling notes (needs ANTHROPIC_API_KEY; 1 seed by default)
 
+Modes (--mode, default settings.MODE = recursive): "recursive" feeds the meeting in chunks and updates a summary
+so far after each, the way the live bot does; "full" gives the model the whole transcript at once.
+
 Steps (see main() at the bottom):
   1. check the data     2. load the split     3. build the model
   4. summarize + score every meeting, once per seed     5. average over seeds, and record what changed between
      seeds (seed_variation: per-metric std/min/max with the seed, which meetings' summaries changed, and why)
-  6. save to the results log
+  6. break the scores down by group (metrics_by_group: AMI by speakers' gender and native language,
+     synthetic by feature tier and edge-case scenario; see 6_evaluation/summarization/disaggregate.py)
+  7. save to the results log
 """
 
 # =====================================================================================================
@@ -40,10 +51,10 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 for folder in ["2_summarization", "5_data/ami", "6_evaluation/summarization"]:
     sys.path.insert(0, os.path.join(REPO, folder))
 import ami  # noqa: E402
-import ami_settings  # noqa: E402
 import fetch_data  # noqa: E402
 import settings  # noqa: E402
-import split  # noqa: E402
+from datasets import DATASETS, SPLITS  # noqa: E402
+from disaggregate import by_group, format_table, mean_over_seeds  # noqa: E402
 from metrics import bertscore, rouge_all  # noqa: E402
 
 
@@ -67,7 +78,8 @@ def choose_seeds(args):
 def fix_hash_seed(seed):
     if os.environ.get("PYTHONHASHSEED") != str(seed):
         os.environ["PYTHONHASHSEED"] = str(seed)
-        os.execv(sys.executable, [sys.executable] + sys.argv)
+        # A child process, not os.execv: on Windows execv splits paths with spaces ("Capstone Project").
+        sys.exit(subprocess.call([sys.executable] + sys.argv))
 
 
 # Fix every random number generator: Python, NumPy, and torch (only installed for BART).
@@ -81,40 +93,78 @@ def set_seeds(seed):
         pass
 
 
-# ---------------------------------------------------------------- data and model
+# ---------------------------------------------------------------- model
 
-# The meetings to summarize. Meetings without a human summary can't be scored, so they are skipped.
-def load_meetings(the_split, split_name):
-    ids = ami_settings.SMOKE_MEETINGS if split_name == "smoke" else the_split[split_name]
-    meetings = [ami.load_meeting(m) for m in ids]
-    skipped = [m.id for m in meetings if not m.reference]
-    if skipped:
-        print(f"no human summary, skipped: {skipped}")
-    return [m for m in meetings if m.reference]
-
-
-# Average length in words of the TRAINING split's human summaries (train only: no leakage).
-def train_summary_words(the_split):
-    lengths = [len(ami.read_reference(m).split()) for m in the_split["train"]]
-    return round(np.mean([n for n in lengths if n]))
+# Settings that override settings.py for this run (--params FILE): a JSON file from the hyperparameter search
+# (2_summarization/hpo/), {"recursive": {...}, "full": {...}}; the entry for this run's mode is used.
+def load_params(path, mode):
+    if not path:
+        return {}
+    with open(path, encoding="utf-8") as f:
+        params = json.load(f)
+    return params.get(mode, {})
 
 
-# Build the model and return it with the exact settings it uses (these go into the log).
-def make_model(model_name, the_split, no_wait=False):
+# Build the model and return it with the exact settings it uses (these go into the log). Summary lengths come
+# from the dataset's TRAINING split (no leakage). mode: "recursive" or "full" (see the docstring at the top).
+# params: overrides from --params (they end up in the logged config too).
+def make_model(model_name, dataset, mode, no_wait=False, params=None):
+    params = params or {}
     if model_name == "textrank":
         from textrank_baseline import TextRankSummarizer
-        cfg = dict(settings.TEXTRANK)
-        cfg["words"] = cfg["words"] or train_summary_words(the_split)
-        return TextRankSummarizer(cfg["words"], cfg["min_line_words"]), cfg
+        cfg = dict(settings.TEXTRANK, mode=mode, **params)
+        # words_scale (from the search): the budget is that multiple of the train split's average summary length
+        cfg["words"] = cfg["words"] or round(cfg.get("words_scale", 1.0) * dataset.train_summary_words())
+        return TextRankSummarizer(cfg["words"], cfg["min_line_words"], mode, cfg["chunk_seconds"], cfg["buffer"],
+                                  cfg.get("clean", False), cfg.get("speaker_names", False)), cfg
     if model_name == "llm":
         from llm_summarizer import LLMSummarizer
-        cfg = dict(settings.LLM)
-        cfg["summary_words"] = cfg["summary_words"] or train_summary_words(the_split)
+        cfg = dict(settings.LLM, mode=mode, **params)
+        cfg["summary_words"] = cfg["summary_words"] or dataset.train_summary_words()
+        if mode == "full":
+            cfg["chunk_seconds"] = 10 ** 9   # one chunk: the whole transcript in one call
         if no_wait:
             cfg["min_seconds_between_calls"] = 0
         return LLMSummarizer(cfg, speaker_names=ami.ROLE_NAMES), cfg
     from bart_summarizer import BartSummarizer
-    return BartSummarizer(settings.BART), dict(settings.BART)
+    cfg = dict(settings.BART, mode=mode, **params)
+    return BartSummarizer(cfg), cfg
+
+
+# Save every LLM call to a file as soon as it returns (results dir / llm_cache.jsonl), keyed by everything that
+# goes into the call. A run that stops (rate limit, daily quota, crash) is simply started again: calls already in
+# the file are read back instead of paid for again, so it resumes where it stopped, even in the middle of a meeting.
+# The file also keeps every intermediate set of notes. The live bot does not use this.
+def add_llm_cache(model, path):
+    provider = model.provider
+    cache = {}
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                try:
+                    entry = json.loads(line)
+                except json.JSONDecodeError:   # a line cut off by a crash mid-write: ignore it
+                    continue
+                cache[entry["key"]] = entry["reply"]
+    provider.usage["cache_hits"] = 0
+    original = provider.generate_json
+
+    def cached(system, user, schema, max_tokens):
+        key = hashlib.sha256(json.dumps([provider.name, provider.model, system, user, schema, max_tokens])
+                             .encode()).hexdigest()
+        if key in cache:
+            provider.usage["cache_hits"] += 1
+            return cache[key]
+        reply = original(system, user, schema, max_tokens)
+        cache[key] = reply
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "a", encoding="utf-8") as f:
+            f.write(json.dumps({"key": key, "time": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                                "model": provider.model, "user": user, "reply": reply}) + "\n")
+        return reply
+
+    provider.generate_json = cached
+    print(f"LLM calls saved to {os.path.relpath(path, REPO)} ({len(cache)} already there, reused instead of re-asked)")
 
 
 # ---------------------------------------------------------------- run and score
@@ -131,11 +181,12 @@ def run_one_seed(seed, model, meetings, with_bertscore):
     seconds = time.perf_counter() - start
 
     per_meeting = {m.id: rouge_all(m.reference, predictions[m.id]) for m in meetings}
-    scores = {name: np.mean([s[name] for s in per_meeting.values()]) for name in per_meeting[meetings[0].id]}
-    if with_bertscore:
+    if with_bertscore:   # kept per meeting too, so the group breakdown includes it
         f1 = bertscore([m.reference for m in meetings], [predictions[m.id] for m in meetings], settings.BERTSCORE)
-        scores["bertscore_f1"] = np.mean(f1)
-    scores = {name: round(float(v), 4) for name, v in scores.items()}
+        for m, f in zip(meetings, f1):
+            per_meeting[m.id]["bertscore_f1"] = f
+    scores = {name: round(float(np.mean([s[name] for s in per_meeting.values()])), 4)
+              for name in per_meeting[meetings[0].id]}
     out = {"scores": scores, "per_meeting": per_meeting, "predictions": predictions, "seconds": seconds}
     if action_items:
         out["action_items"] = action_items
@@ -227,7 +278,7 @@ def git_state():
     def git(*cmd):
         return subprocess.run(["git", *cmd], cwd=REPO, capture_output=True, text=True).stdout
     changed = [line[3:] for line in git("status", "--porcelain").splitlines()   # line = "XY path"
-               if not line[3:].startswith("6_evaluation/summarization/results/")]
+               if not line[3:].startswith(("6_evaluation/summarization/results/", "2_summarization/hpo/results/"))]
     return git("rev-parse", "HEAD").strip() or "unknown", changed
 
 
@@ -262,30 +313,54 @@ def save(record, results):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--model", choices=["textrank", "bart", "llm"], default="textrank")
-    p.add_argument("--split", choices=["smoke", "dev", "eval"], default="smoke")
+    p.add_argument("--dataset", choices=["both"] + sorted(DATASETS), default="both",
+                   help="both (default: AMI, then synthetic, each logged as its own run), ami, or synthetic "
+                        "(5_data/synthetic, LLM-generated edge-case meetings)")
+    p.add_argument("--split", choices=SPLITS, default="smoke",
+                   help="smoke = 3 dev meetings; eval = the test split (synthetic: its 'test' series)")
+    p.add_argument("--mode", choices=["recursive", "full"], default=settings.MODE,
+                   help=f"recursive = rolling summary chunk by chunk, like the live bot; full = whole transcript at once "
+                        f"(default {settings.MODE})")
     seed_options = p.add_mutually_exclusive_group()
     seed_options.add_argument("--seeds", type=int, help=f"number of seeds (default {N_SEEDS})")
     seed_options.add_argument("--seed", type=int, help="run exactly one seed, with this value")
     p.add_argument("--bertscore", action="store_true", help="also compute BERTScore (BART packages are in requirements.txt)")
     p.add_argument("--no-log", action="store_true", help="don't save the result")
+    p.add_argument("--results-dir", help="log to this folder (results_log.jsonl + runs/) instead of "
+                                         "6_evaluation/summarization/results, e.g. the hyperparameter search's own folder")
+    p.add_argument("--params", help="JSON file of tuned settings that override settings.py for this run "
+                                    "(e.g. 2_summarization/hpo/results/textrank_best.json)")
+    p.add_argument("--tag", help="word put in the run id after the model name (default: 'tuned' with --params), "
+                                 "e.g. --tag 120s for an LLM run with longer chunks")
     p.add_argument("--no-wait", action="store_true",
                    help="LLM: don't space API calls out (settings.LLM min_seconds_between_calls); may hit rate limits")
     args = p.parse_args()
 
     seeds = choose_seeds(args)
     fix_hash_seed(seeds[0])
+    if args.results_dir:
+        settings.RESULTS_DIR = os.path.abspath(args.results_dir)
+        settings.RESULTS_LOG = os.path.join(settings.RESULTS_DIR, "results_log.jsonl")
+    names = sorted(DATASETS) if args.dataset == "both" else [args.dataset]
+    for i, name in enumerate(names):
+        if len(names) > 1:
+            print(f"\n{'=' * 30} dataset {i + 1} of {len(names)}: {name} {'=' * 30}")
+        run_dataset(args, seeds, name)
 
-    # 1. Check the data is exactly the version in MANIFEST.json (download it first if it's missing).
-    data_hash = fetch_data.verify() if os.path.isdir(ami_settings.AMI_DIR) else fetch_data.fetch()
 
-    # 2. Load the committed split and check no person is in two splits.
-    the_split = split.load_split()
-    meetings = load_meetings(the_split, args.split)
-    print(f"split OK; {args.split}: {len(meetings)} meetings")
+# Steps 1-7 for one dataset: its own model (summary lengths come from its own train split) and its own log line.
+def run_dataset(args, seeds, dataset_name):
+    # 1. Check the data is exactly the version in its manifest (AMI: downloaded first if it's missing).
+    # 2. Load the committed split (AMI: also checks no person is in two splits).
+    dataset = DATASETS[dataset_name]()
+    meetings = dataset.meetings(args.split)
+    print(f"{dataset.name}: data OK, split OK; {args.split}: {len(meetings)} meetings; mode {args.mode}")
     print(f"seeds: {len(seeds)} ({seeds[0]}..{seeds[-1]})")
 
     # 3. Build the model.
-    model, model_cfg = make_model(args.model, the_split, args.no_wait)
+    model, model_cfg = make_model(args.model, dataset, args.mode, args.no_wait, load_params(args.params, args.mode))
+    if args.model == "llm":
+        add_llm_cache(model, os.path.join(settings.RESULTS_DIR, "llm_cache.jsonl"))
     if model_cfg.get("min_seconds_between_calls"):
         calls = sum(int(m.lines[-1].start // model_cfg["chunk_seconds"]) + 1 for m in meetings if m.lines) * len(seeds)
         print(f"LLM pacing: ~{calls} calls, one per {model_cfg['min_seconds_between_calls']} s: about "
@@ -304,17 +379,28 @@ def main():
     variation = seed_variation(args.model, seeds, results, mean, std, [m.id for m in meetings])
     seconds_per_meeting = round(sum(r["seconds"] for r in results) / (len(seeds) * len(meetings)), 3)
 
-    # 6. Save the scores together with everything needed to reproduce them.
+    # 6. The same metrics per group of meetings (each meeting's scores averaged over seeds first).
+    per_meeting_mean = mean_over_seeds([r["per_meeting"] for r in results])
+    groups = {m.id: m.groups for m in meetings}
+    by_groups = by_group(per_meeting_mean, groups, dataset.group_names)
+
+    # 7. Save the scores together with everything needed to reproduce them.
     commit, changed = git_state()
-    config = {"model": model_cfg, "seeds": seeds, "pythonhashseed": seeds[0],
+    config = {"model": model_cfg, "mode": args.mode, "seeds": seeds, "pythonhashseed": seeds[0],
               "bertscore": settings.BERTSCORE if args.bertscore else None}
+    if args.params:
+        config["params_file"] = os.path.relpath(args.params, REPO).replace("\\", "/")
+    tag = args.tag if args.tag is not None else ("tuned" if args.params else "")
     record = {
-        "run_id": datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + f"_{args.model}_{args.split}_{len(seeds)}seeds",
+        "run_id": datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+                  + f"_{args.model}{'_' + tag if tag else ''}_{dataset_name}_{args.split}_{args.mode}_{len(seeds)}seeds",
         "commit": commit, "uncommitted_changes": changed,
-        "data_hash": data_hash, "split_file_sha256": fetch_data.sha256_file(ami_settings.SPLIT_FILE),
+        "dataset": dataset_name, "mode": args.mode,
+        "data_hash": dataset.data_hash, "split_file_sha256": fetch_data.sha256_file(dataset.split_file),
         "config": config, "config_hash": short_hash(config),
         "model": args.model, "model_version": model.version,
         "split": args.split, "meetings": [m.id for m in meetings],
+        "meeting_groups": groups, "metrics_by_group": by_groups,
         "meetings_hash": short_hash([m.id for m in meetings]),
         "n_seeds": len(seeds), "metrics_mean": mean, "metrics_std": std,
         "metrics_per_seed": {str(s): r["scores"] for s, r in zip(seeds, results)},
@@ -333,8 +419,11 @@ def main():
     for name, s in variation["metrics"].items():
         print(f"  {name:12} std {s['std']}  min {s['min']} (seed {s['min_seed']})  "
               f"max {s['max']} (seed {s['max_seed']})  range {s['range']}")
+    print("\nscores by group (mean over seeds; n = meetings, ser = series, i.e. different groups of people):")
+    for attribute, result in by_groups.items():
+        print(format_table(attribute, result, list(mean)))
     print(f"{'not logged (--no-log)' if args.no_log else 'logged'} {record['run_id']}  commit {commit[:12]}  "
-          f"data {data_hash[:12]}  config {record['config_hash']}")
+          f"data {dataset.data_hash[:12]}  config {record['config_hash']}")
     if changed:
         print(f"WARNING: {len(changed)} uncommitted file(s); commit them so this number traces to one commit: {changed}")
 

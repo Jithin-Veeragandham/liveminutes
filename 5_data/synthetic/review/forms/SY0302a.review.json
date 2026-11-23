@@ -1,0 +1,1082 @@
+{
+  "meeting_id": "SY0302a",
+  "raw_sha256": "01d5660e246d4f68c3977de6cfb618346705a07b3c5559639167e56054b034b9",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the kick-off meeting, noted that the marketing expert was absent at a client meeting, and had the industrial designer and user interface designer introduce themselves.",
+        "She presented the project: a voice-controlled kitchen timer that people can use while their hands are messy. It should sell for about 25 Euro, with production costs of at most 12.50 Euro per unit.",
+        "The industrial designer warned that the budget is tight for good voice recognition and mentioned cheap offline chips with a fixed vocabulary. The user interface designer thought a fixed vocabulary might be enough for a timer.",
+        "After a short whiteboard exercise, the team agreed that the timer should support several timers at once and should have one physical stop button as a backup to voice control.",
+        "A wake word name and splash-proofing were raised but left open. The project manager handed out tasks, including market research for the absent marketing expert, and cancelled a cardboard mock-up the industrial designer had offered to build."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will research components (voice recognition chip, microphone, and performance with kitchen background noise) within the 12.50 Euro cost limit.",
+        "The user interface designer will write up the command set and how the timer responds, plus a rough display sketch. The commands are the priority.",
+        "The marketing expert (absent) was assigned market research by the project manager: what people currently use for timing in the kitchen, what they would want from a voice-controlled timer, and whether a wake word name helps.",
+        "The project manager will email the marketing expert the brief and his task."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The timer will support multiple simultaneous timers.",
+        "The timer will be voice-first but will have at least one physical stop button as a backup.",
+        "The cardboard mock-up will not be made, because the brief allows no physical prototypes until the conceptual design meeting."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The 12.50 Euro production cost limit may be tight for decent voice recognition.",
+        "It is undecided whether voice recognition happens on the device or online.",
+        "It is undecided whether the timer gets a wake word name such as 'Hey Chef'. This has been passed to marketing.",
+        "It is open whether the timer needs to be waterproof or splash-proof. This will be revisited once the components are known."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0302a.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0302a.ai1",
+        "description": "Build a rough cardboard mock-up to show the timer's size on the counter for the next meeting",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "dropped",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0302a.s0075",
+            "event": "offered",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0302a.s0078",
+            "event": "assigned",
+            "by": "B",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0302a.s0079",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0302a.s0097",
+            "event": "dropped",
+            "by": "B",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0302a.s0075",
+          "SY0302a.s0076",
+          "SY0302a.s0077",
+          "SY0302a.s0078",
+          "SY0302a.s0079",
+          "SY0302a.s0097",
+          "SY0302a.s0098",
+          "SY0302a.s0099",
+          "SY0302a.s0100"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0302a.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0302a.ai2",
+        "description": "Research components: voice recognition chip, microphone, and whether it works with kitchen background noise, within the 12.50 Euro cost limit",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0302a.s0081",
+            "event": "assigned",
+            "by": "B",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0302a.s0083",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0302a.s0102",
+            "event": "restated",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0302a.s0116",
+            "event": "restated",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0302a.s0081",
+          "SY0302a.s0082",
+          "SY0302a.s0083",
+          "SY0302a.s0084",
+          "SY0302a.s0102",
+          "SY0302a.s0116"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0302a.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0302a.ai3",
+        "description": "Write up the voice command set and how the timer responds, plus a rough display sketch (commands are the priority)",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0302a.s0085",
+            "event": "assigned",
+            "by": "B",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0302a.s0087",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0302a.s0105",
+            "event": "restated",
+            "by": "B",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0302a.s0117",
+            "event": "restated",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0302a.s0085",
+          "SY0302a.s0086",
+          "SY0302a.s0087",
+          "SY0302a.s0104",
+          "SY0302a.s0105",
+          "SY0302a.s0117"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0302a.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0302a.ai4",
+        "description": "Market research: what people currently use for kitchen timing, what they would want from a voice-controlled timer, and whether a wake word name helps",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0302a.s0089",
+            "event": "assigned",
+            "by": "B",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0302a.s0095",
+            "event": "restated",
+            "by": "B",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0302a.s0088",
+          "SY0302a.s0089",
+          "SY0302a.s0090",
+          "SY0302a.s0094",
+          "SY0302a.s0095"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0302a.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0302a.ai5",
+        "description": "Email Gareth (marketing expert) the brief and his assigned task",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0302a.s0092",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0302a.s0118",
+            "event": "restated",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0302a.s0009",
+          "SY0302a.s0091",
+          "SY0302a.s0092",
+          "SY0302a.s0118"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302a.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302a.f1",
+        "type": "absence",
+        "fact": "Gareth (D), the marketing expert, was absent from the kick-off meeting because he was at a client meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302a.s0005",
+          "SY0302a.s0006",
+          "SY0302a.s0007",
+          "SY0302a.s0008"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302a.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302a.f2",
+        "type": "action_item",
+        "fact": "While absent, Gareth (D) was given the market research task: current kitchen timing habits, what users want from a voice timer, and whether a wake word name helps.",
+        "agreed": null,
+        "related_action_item": "SY0302a.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302a.s0088",
+          "SY0302a.s0089",
+          "SY0302a.s0090",
+          "SY0302a.s0094",
+          "SY0302a.s0095"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302a.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302a.f3",
+        "type": "action_item",
+        "fact": "Rachel (B), the project manager, assigned the market research task to the absent marketing expert Gareth (D).",
+        "agreed": null,
+        "related_action_item": "SY0302a.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302a.s0089",
+          "SY0302a.s0090"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302a.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302a.f4",
+        "type": "action_item",
+        "fact": "Rachel (B), the project manager, will email Gareth the brief and his task.",
+        "agreed": null,
+        "related_action_item": "SY0302a.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302a.s0091",
+          "SY0302a.s0092",
+          "SY0302a.s0118"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302a.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302a.f5",
+        "type": "action_item",
+        "fact": "Tomas (A), the industrial designer, offered to build a cardboard mock-up for the next meeting, and the project manager assigned it to him.",
+        "agreed": null,
+        "related_action_item": "SY0302a.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302a.s0075",
+          "SY0302a.s0076",
+          "SY0302a.s0077",
+          "SY0302a.s0078",
+          "SY0302a.s0079"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302a.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302a.f6",
+        "type": "action_item_removed",
+        "fact": "The project manager cancelled the cardboard mock-up task, because the brief allows no physical prototypes until the conceptual design meeting.",
+        "agreed": null,
+        "related_action_item": "SY0302a.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302a.s0097",
+          "SY0302a.s0098",
+          "SY0302a.s0099",
+          "SY0302a.s0100",
+          "SY0302a.s0101"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302a.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302a.f7",
+        "type": "action_item",
+        "fact": "Tomas (A), the industrial designer, will research the voice chip, microphone and noise handling within the 12.50 Euro cost limit.",
+        "agreed": null,
+        "related_action_item": "SY0302a.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302a.s0081",
+          "SY0302a.s0082",
+          "SY0302a.s0083",
+          "SY0302a.s0084",
+          "SY0302a.s0102"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302a.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302a.f8",
+        "type": "action_item",
+        "fact": "Priya (C), the user interface designer, will write up the command set and responses and make a rough display sketch, with commands as the priority.",
+        "agreed": null,
+        "related_action_item": "SY0302a.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302a.s0085",
+          "SY0302a.s0086",
+          "SY0302a.s0087",
+          "SY0302a.s0104",
+          "SY0302a.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302a.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302a.f9",
+        "type": "decision",
+        "fact": "The timer will support multiple simultaneous timers.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302a.s0058",
+          "SY0302a.s0059",
+          "SY0302a.s0060",
+          "SY0302a.s0061"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302a.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302a.f10",
+        "type": "decision",
+        "fact": "The timer will be voice-first with at least one physical stop button as a backup.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302a.s0062",
+          "SY0302a.s0063",
+          "SY0302a.s0065",
+          "SY0302a.s0066",
+          "SY0302a.s0067",
+          "SY0302a.s0068",
+          "SY0302a.s0069"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302a.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302a.f11",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer proposed a wake word name such as 'Hey Chef'. The project manager parked it as a marketing question.",
+        "agreed": false,
+        "related_action_item": "SY0302a.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302a.s0070",
+          "SY0302a.s0072",
+          "SY0302a.s0073"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302a.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302a.f12",
+        "type": "unagreed_proposal",
+        "fact": "The industrial designer proposed that the timer be at least splash-proof. This was left as an open question for the next meeting.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302a.s0107",
+          "SY0302a.s0108",
+          "SY0302a.s0109",
+          "SY0302a.s0110",
+          "SY0302a.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302a.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302a.f13",
+        "type": "other",
+        "fact": "The timer should sell for about 25 Euro, with production costs of at most 12.50 Euro per unit.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302a.s0028",
+          "SY0302a.s0029",
+          "SY0302a.s0030"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302a.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302a.f14",
+        "type": "other",
+        "fact": "It was not decided whether voice recognition should run online or on the device. The industrial designer mentioned cheap offline fixed-vocabulary chips.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302a.s0034",
+          "SY0302a.s0035",
+          "SY0302a.s0036",
+          "SY0302a.s0037",
+          "SY0302a.s0038"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0302a.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0302a.f15",
+        "type": "other",
+        "fact": "The next meeting is in thirty minutes.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0302a.s0112"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_ACTION_REMOVED",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_ACTION_REMOVED",
+        "segments": [
+          "SY0302a.s0075",
+          "SY0302a.s0076",
+          "SY0302a.s0077",
+          "SY0302a.s0078",
+          "SY0302a.s0079",
+          "SY0302a.s0097",
+          "SY0302a.s0098",
+          "SY0302a.s0099",
+          "SY0302a.s0100"
+        ],
+        "note": "The industrial designer's cardboard mock-up task is offered and assigned, then explicitly cancelled by the project manager because no prototypes are allowed before the conceptual design meeting."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F3_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F3_TASK_TO_ABSENT",
+        "segments": [
+          "SY0302a.s0005",
+          "SY0302a.s0006",
+          "SY0302a.s0088",
+          "SY0302a.s0089",
+          "SY0302a.s0090",
+          "SY0302a.s0091",
+          "SY0302a.s0092",
+          "SY0302a.s0094",
+          "SY0302a.s0095"
+        ],
+        "note": "The project manager assigns market research to Gareth, the marketing expert, who is absent, and says she will email him the task."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,1409 @@
+{
+  "meeting_id": "SY0205d",
+  "raw_sha256": "1f8da8bbeface013666f67cfedcff0538bf3f3ff23872e1d917862129183cd4c",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the detailed design meeting and reported that the marketing expert was absent because she was off sick, but had emailed the results of the unlock timing test.",
+        "The project manager reported that the operator's sixty-second live data feed is free and that a ten-second feed would cost a one-off 6,000 euros. The team chose the free feed, with a live refresh of a single station when a pin is tapped.",
+        "The industrial designer reported on the operator's API documentation, which includes a dock type field. The timing test showed about twenty-one seconds on QR docks but thirty-one seconds on keypad docks, so the team decided that on keypad docks the unlock button will go straight to the code.",
+        "The user interface designer presented the revised mock-up with the bikes/slots toggle, the keypad code countdown, the alert settings and layouts with room for longer strings. He estimated the development cost at about 112,000 euros without the home-screen widget, which was then deferred to a second version.",
+        "The project manager summarised the decisions and follow-up tasks, including a re-run of the keypad timing test by the absent marketing expert."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The marketing expert will re-run the timing test on keypad docks with the revised flow when she is back. The task was assigned in her absence.",
+        "The marketing expert will finish the French version of the guest pass pre-authorisation text and send it directly to the user interface designer.",
+        "The user interface designer will update the prototype with the keypad flow and send it to the marketing expert by Tuesday.",
+        "The industrial designer will write a short spec of the two unlock API calls and the dock type field for the handover, by the end of the week.",
+        "The project manager will send the marketing expert the minutes and her tasks.",
+        "The project manager will prepare the final presentation for the client.",
+        "Checking the running cost of the push notification service for alerts was raised, but nobody took it on."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The map will use the operator's free sixty-second data feed, and the bottom sheet will refresh a single station live when a pin is tapped. The paid ten-second feed will not be used.",
+        "On keypad-only docks, the unlock button will be labelled \"get code\" and will go straight to the five-digit code and countdown, skipping the camera.",
+        "For keypad docks, the app will use the dock in the open bottom sheet or the nearest dock by location, and users can change it in the sheet.",
+        "Pre-loading keypad codes for offline use will not be done.",
+        "The home-screen widget will not be in the launch version and is deferred to a second version, because it would push the app over the 120,000 euro budget."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The keypad dock unlock averaged thirty-one seconds in the test, over the thirty-second target. The revised flow has not been tested yet.",
+        "The running cost of the push notification service for low-bike alerts is unknown, and nobody took on checking it.",
+        "The French version of the guest pass pre-authorisation text has not been received, and the user interface designer needs it to check that screen's layout.",
+        "The marketing expert is absent, so her new tasks depend on her return on Wednesday."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0205d.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0205d.ai1",
+        "description": "Re-run the unlock timing test on keypad docks with the revised \"get code\" flow",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0205d.s0052",
+            "event": "assigned",
+            "by": "C",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0205d.s0111",
+            "event": "restated",
+            "by": "C",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0205d.s0051",
+          "SY0205d.s0052",
+          "SY0205d.s0053",
+          "SY0205d.s0054",
+          "SY0205d.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0205d.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0205d.ai2",
+        "description": "Check the running cost of the push notification service for low-bike alerts",
+        "owner": null,
+        "owner_unclear": true,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0205d.s0084",
+            "event": "proposed",
+            "by": "C",
+            "owner": null
+          }
+        ],
+        "evidence_segments": [
+          "SY0205d.s0082",
+          "SY0205d.s0083",
+          "SY0205d.s0084",
+          "SY0205d.s0085",
+          "SY0205d.s0086",
+          "SY0205d.s0087"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0205d.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0205d.ai3",
+        "description": "Update the prototype with the keypad flow and send it to the marketing expert by Tuesday",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0205d.s0055",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0205d.s0057",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0205d.s0111",
+            "event": "restated",
+            "by": "C",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0205d.s0055",
+          "SY0205d.s0056",
+          "SY0205d.s0057",
+          "SY0205d.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0205d.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0205d.ai4",
+        "description": "Finish the French version of the guest pass pre-authorisation text and send it directly to the user interface designer",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0205d.s0100",
+            "event": "assigned",
+            "by": "C",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0205d.s0111",
+            "event": "restated",
+            "by": "C",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0205d.s0098",
+          "SY0205d.s0099",
+          "SY0205d.s0100",
+          "SY0205d.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0205d.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0205d.ai5",
+        "description": "Write a short spec of the two unlock API calls and the dock type field for the handover, by the end of the week",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0205d.s0103",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0205d.s0104",
+            "event": "accepted",
+            "by": "C",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0205d.s0111",
+            "event": "restated",
+            "by": "C",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0205d.s0103",
+          "SY0205d.s0104",
+          "SY0205d.s0105",
+          "SY0205d.s0106",
+          "SY0205d.s0111"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0205d.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0205d.ai6",
+        "description": "Send the marketing expert the minutes and her tasks",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0205d.s0054",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0205d.s0112",
+            "event": "restated",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0205d.s0054",
+          "SY0205d.s0112"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0205d.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0205d.ai7",
+        "description": "Prepare the final presentation for the client",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0205d.s0112",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0205d.s0112"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f1",
+        "type": "absence",
+        "fact": "The marketing expert, Priya, was absent because she was off sick.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0005"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f2",
+        "type": "other",
+        "fact": "The operator's sixty-second live data feed is included in the contract at no cost. A ten-second feed would cost a one-off integration fee of 6,000 euros from the app budget.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0011",
+          "SY0205d.s0012",
+          "SY0205d.s0013",
+          "SY0205d.s0014",
+          "SY0205d.s0015"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f3",
+        "type": "decision",
+        "fact": "The map will use the free sixty-second feed, and a single station will be refreshed live when its pin is tapped.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0016",
+          "SY0205d.s0017",
+          "SY0205d.s0019",
+          "SY0205d.s0020",
+          "SY0205d.s0021",
+          "SY0205d.s0022",
+          "SY0205d.s0023",
+          "SY0205d.s0024",
+          "SY0205d.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f4",
+        "type": "other",
+        "fact": "The operator's API documentation shows that unlocking takes two calls and that each dock has a type field indicating QR or keypad-only.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0026",
+          "SY0205d.s0027",
+          "SY0205d.s0028"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f5",
+        "type": "other",
+        "fact": "In the marketing expert's timing test with five people, unlocking averaged twenty-one seconds on QR docks and thirty-one seconds on keypad docks, because users opened the camera first.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0031",
+          "SY0205d.s0032",
+          "SY0205d.s0034",
+          "SY0205d.s0036"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f6",
+        "type": "decision",
+        "fact": "On keypad-only docks the unlock button goes straight to the code and countdown, skipping the camera.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0038",
+          "SY0205d.s0040",
+          "SY0205d.s0041",
+          "SY0205d.s0047",
+          "SY0205d.s0048",
+          "SY0205d.s0049",
+          "SY0205d.s0109"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f7",
+        "type": "decision",
+        "fact": "On keypad docks the unlock button label will read \"get code\" instead of \"scan\".",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0042",
+          "SY0205d.s0043",
+          "SY0205d.s0109"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f8",
+        "type": "decision",
+        "fact": "For keypad docks the app uses the station in the open bottom sheet or the nearest dock by location, and the user can change it.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0044",
+          "SY0205d.s0045",
+          "SY0205d.s0046"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f9",
+        "type": "unagreed_proposal",
+        "fact": "The industrial designer proposed pre-loading a keypad code so users could unlock without signal. It was not adopted because codes are valid for only two minutes and of theft concerns.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0060",
+          "SY0205d.s0061",
+          "SY0205d.s0062",
+          "SY0205d.s0063",
+          "SY0205d.s0064",
+          "SY0205d.s0066",
+          "SY0205d.s0067",
+          "SY0205d.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f10",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recalled that the team had established in the previous meeting that keypad codes are valid for two minutes.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0205c",
+        "evidence_segments": [
+          "SY0205d.s0063"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f11",
+        "type": "other",
+        "fact": "The low-bike alert defaults to fewer than three bikes and can be changed by the user.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0075",
+          "SY0205d.s0076",
+          "SY0205d.s0077",
+          "SY0205d.s0078"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f12",
+        "type": "other",
+        "fact": "The user interface designer tested the layouts with German strings and there is room for Spanish and Italian later.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0079"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f13",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recalled that the home-screen widget had been left open in the previous meeting pending its cost on two platforms.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0205c",
+        "evidence_segments": [
+          "SY0205d.s0088"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f14",
+        "type": "other",
+        "fact": "The widget would take about two extra weeks per platform. Without it, development is estimated at about 112,000 euros.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0089",
+          "SY0205d.s0091",
+          "SY0205d.s0092"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f15",
+        "type": "decision",
+        "fact": "The home-screen widget will not be in the launch version and is deferred to version two.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0093",
+          "SY0205d.s0094",
+          "SY0205d.s0095",
+          "SY0205d.s0096",
+          "SY0205d.s0110"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f16",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager recalled that at the kickoff the thirty-second unlock target was considered ambitious.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0205a",
+        "evidence_segments": [
+          "SY0205d.s0115"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f17",
+        "type": "action_item",
+        "fact": "The marketing expert, who was absent, was assigned to re-run the keypad dock timing test with the revised flow.",
+        "agreed": null,
+        "related_action_item": "SY0205d.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0052",
+          "SY0205d.s0053",
+          "SY0205d.s0054",
+          "SY0205d.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f18",
+        "type": "action_item",
+        "fact": "Checking the running cost of the push notification service was raised, but nobody took it on.",
+        "agreed": null,
+        "related_action_item": "SY0205d.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0084",
+          "SY0205d.s0085",
+          "SY0205d.s0086",
+          "SY0205d.s0087"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f19",
+        "type": "action_item",
+        "fact": "The user interface designer will update the prototype and send it to the marketing expert by Tuesday.",
+        "agreed": null,
+        "related_action_item": "SY0205d.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0055",
+          "SY0205d.s0057",
+          "SY0205d.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f20",
+        "type": "action_item",
+        "fact": "The marketing expert will finish the French guest pass text and send it to the user interface designer.",
+        "agreed": null,
+        "related_action_item": "SY0205d.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0098",
+          "SY0205d.s0100",
+          "SY0205d.s0111"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f21",
+        "type": "action_item",
+        "fact": "The industrial designer will write a short API spec of the unlock calls and dock type field by the end of the week.",
+        "agreed": null,
+        "related_action_item": "SY0205d.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0103",
+          "SY0205d.s0104",
+          "SY0205d.s0105",
+          "SY0205d.s0106"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f22",
+        "type": "action_item",
+        "fact": "The project manager will send the marketing expert the minutes and her tasks.",
+        "agreed": null,
+        "related_action_item": "SY0205d.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0054",
+          "SY0205d.s0112"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205d.f23",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205d.f23",
+        "type": "action_item",
+        "fact": "The project manager will prepare the final presentation for the client.",
+        "agreed": null,
+        "related_action_item": "SY0205d.ai7",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205d.s0112"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_VAGUE_NO_OWNER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_VAGUE_NO_OWNER",
+        "segments": [
+          "SY0205d.s0082",
+          "SY0205d.s0083",
+          "SY0205d.s0084",
+          "SY0205d.s0085",
+          "SY0205d.s0086",
+          "SY0205d.s0087"
+        ],
+        "note": "The PM says someone should probably check the push notification running cost. Nobody takes it, and the discussion moves on."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_TASK_TO_ABSENT",
+        "segments": [
+          "SY0205d.s0052",
+          "SY0205d.s0053",
+          "SY0205d.s0054",
+          "SY0205d.s0100",
+          "SY0205d.s0111"
+        ],
+        "note": "The keypad timing test re-run and the French text are assigned to the absent marketing expert, Priya."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,1622 @@
+{
+  "meeting_id": "SY0205b",
+  "raw_sha256": "32e304dd1e711e7b379d859e5c5239e20cb0106292a7ca4f551bd004608c98dd",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the functional design meeting and noted that the user interface designer was absent because he was at a conference. She reported that the minutes and brief had been circulated but the operator's brand guide had not yet arrived. The marketing expert presented user requirements for commuters and tourists and her competitor app review, and reported that the operator allows a no-account guest day pass with a card pre-authorisation. The industrial designer reported that all four hundred docks have QR codes, ninety older docks have only keypads and the rest have Bluetooth, and none support NFC. The team agreed on QR scanning as the main unlock method with a one-time keypad code as fallback, and on map pins showing numbers and shapes with colour only as a secondary cue. The project manager summarised the agreed functions and assigned follow-up work, including a map screen mock-up for the absent user interface designer."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The marketing expert will send her competitor review screenshots and findings to the user interface designer.",
+        "The user interface designer will produce a first version of the map screen with numbered and shaped pins, based on the competitor findings.",
+        "The user interface designer's list of technical functions is carried over to the next meeting.",
+        "The industrial designer will work out the full unlock flow step by step, including screens and server calls, to check it fits within thirty seconds.",
+        "The industrial designer will check the timing of the one-time keypad code with the operator contact.",
+        "The marketing expert will find out from visitor statistics whether tourists need languages beyond English, German and French.",
+        "The project manager will chase the operator's brand guide again.",
+        "The project manager will send the user interface designer the minutes and his tasks, and check that he has time for them.",
+        "Checking what the operator's live data feed costs was raised, but nobody took it on."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "Tourists can buy a guest day pass without a full account, secured by a card pre-authorisation of about 150 euros.",
+        "Map pins will show the number of bikes and a shape (full circle, half circle or empty ring), with colour only as a secondary cue.",
+        "QR code scanning is the main unlock method because it works on every dock.",
+        "A one-time five-digit keypad code shown in the app is the fallback unlock method.",
+        "NFC is ruled out because no docks support it.",
+        "The agreed functions are the live availability map as main screen, favourite home and work docks, QR unlock with keypad code fallback, a guest day pass, and English, German and French language support."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "The operator's brand guide has not been received, and pin colours depend on it.",
+        "It is unknown whether the operator charges for its live availability data feed, which could affect the 120,000 euro budget, and nobody took on checking it.",
+        "The user interface designer's technical functions list is not yet finished.",
+        "There is concern about whether the user interface designer has enough time, given his workload.",
+        "The marketing expert's idea of notifications when a favourite dock runs low on bikes was left open pending the user interface designer's view.",
+        "The thirty-second unlock target depends on the number of screens before scanning, which is still to be worked out."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0205b.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0205b.ai1",
+        "description": "Send the competitor review screenshots and interface findings to the user interface designer",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0205b.s0056",
+            "event": "restated",
+            "by": "A",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0205b.s0057",
+            "event": "assigned",
+            "by": "C",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0205b.s0058",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0205b.s0055",
+          "SY0205b.s0056",
+          "SY0205b.s0057",
+          "SY0205b.s0058"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0205b.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0205b.ai2",
+        "description": "Produce a first version of the map screen mock-up with numbered and shaped pins using the competitor findings, for the next meeting",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0205b.s0057",
+            "event": "assigned",
+            "by": "C",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0205b.s0059",
+            "event": "restated",
+            "by": "C",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0205b.s0055",
+          "SY0205b.s0057",
+          "SY0205b.s0059",
+          "SY0205b.s0060",
+          "SY0205b.s0061"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0205b.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0205b.ai3",
+        "description": "Check with the user interface designer that he has time for the map screen mock-up",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0205b.s0061",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0205b.s0060",
+          "SY0205b.s0061"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0205b.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0205b.ai4",
+        "description": "Finish the list of technical functions of the app, carried over to the next meeting",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0205b.s0063",
+            "event": "restated",
+            "by": "C",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0205b.s0064",
+            "event": "restated",
+            "by": "C",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0205b.s0063",
+          "SY0205b.s0064",
+          "SY0205b.s0065"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0205b.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0205b.ai5",
+        "description": "Check what the operator's live availability data feed costs",
+        "owner": null,
+        "owner_unclear": true,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0205b.s0102",
+            "event": "proposed",
+            "by": "C",
+            "owner": null
+          }
+        ],
+        "evidence_segments": [
+          "SY0205b.s0097",
+          "SY0205b.s0098",
+          "SY0205b.s0099",
+          "SY0205b.s0100",
+          "SY0205b.s0101",
+          "SY0205b.s0102",
+          "SY0205b.s0103",
+          "SY0205b.s0104"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0205b.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0205b.ai6",
+        "description": "Work out the full unlock flow step by step, including screens and server calls, to check it fits within thirty seconds",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0205b.s0120",
+            "event": "assigned",
+            "by": "C",
+            "owner": "D"
+          },
+          {
+            "segment": "SY0205b.s0121",
+            "event": "accepted",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0205b.s0120",
+          "SY0205b.s0121"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0205b.ai7",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0205b.ai7",
+        "description": "Check the one-time keypad code timing with the operator contact",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0205b.s0121",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0205b.s0094",
+          "SY0205b.s0121"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0205b.ai8",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0205b.ai8",
+        "description": "Find out from visitor statistics whether tourists need languages beyond English, German and French",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0205b.s0122",
+            "event": "assigned",
+            "by": "C",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0205b.s0123",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0205b.s0115",
+          "SY0205b.s0122",
+          "SY0205b.s0123"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0205b.ai9",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0205b.ai9",
+        "description": "Chase the operator again for the brand guide",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0205b.s0013",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0205b.s0124",
+            "event": "restated",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0205b.s0012",
+          "SY0205b.s0013",
+          "SY0205b.s0124"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0205b.ai10",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0205b.ai10",
+        "description": "Send the user interface designer the minutes and his tasks",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0205b.s0059",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0205b.s0124",
+            "event": "restated",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0205b.s0059",
+          "SY0205b.s0124"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f1",
+        "type": "absence",
+        "fact": "The user interface designer, Tomas, was absent because he was at a developer conference in Rotterdam.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205b.s0003",
+          "SY0205b.s0006"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f2",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager reported that she had circulated the kickoff minutes and the brief, as agreed in the kickoff meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0205a",
+        "evidence_segments": [
+          "SY0205b.s0010",
+          "SY0205b.s0011"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f3",
+        "type": "reference_to_prior_meeting",
+        "fact": "The project manager had requested the brand guide from the operator after the kickoff, but it had not yet arrived.",
+        "agreed": null,
+        "related_action_item": "SY0205b.ai9",
+        "refers_to_meeting": "SY0205a",
+        "evidence_segments": [
+          "SY0205b.s0012",
+          "SY0205b.s0013"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f4",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert had forwarded the operator contact, Jan, to the industrial designer as agreed in the kickoff.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0205a",
+        "evidence_segments": [
+          "SY0205b.s0016",
+          "SY0205b.s0017"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f5",
+        "type": "reference_to_prior_meeting",
+        "fact": "The marketing expert said the favourite docks idea the user interface designer raised in the kickoff came up often with commuters.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0205a",
+        "evidence_segments": [
+          "SY0205b.s0023"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f6",
+        "type": "reference_to_prior_meeting",
+        "fact": "The open question from the kickoff about a no-account day pass for tourists was resolved when the marketing expert checked with the operator.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0205a",
+        "evidence_segments": [
+          "SY0205b.s0031",
+          "SY0205b.s0032",
+          "SY0205b.s0034"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f7",
+        "type": "other",
+        "fact": "The marketing expert interviewed twelve commuters and ran a survey with about sixty responses.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205b.s0026",
+          "SY0205b.s0027"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f8",
+        "type": "decision",
+        "fact": "Tourists can buy a guest day pass without a full account, secured by a card pre-authorisation of about 150 euros.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205b.s0034",
+          "SY0205b.s0037",
+          "SY0205b.s0038",
+          "SY0205b.s0039",
+          "SY0205b.s0040"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f9",
+        "type": "other",
+        "fact": "The marketing expert reviewed four competitor apps and found that the best ones show bike numbers directly on the map pins.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205b.s0042",
+          "SY0205b.s0043",
+          "SY0205b.s0044"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f10",
+        "type": "decision",
+        "fact": "Map pins will show numbers and shapes, with colour only as a secondary cue, so they work for colour-blind users.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205b.s0046",
+          "SY0205b.s0048",
+          "SY0205b.s0049",
+          "SY0205b.s0050",
+          "SY0205b.s0051",
+          "SY0205b.s0052"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f11",
+        "type": "action_item",
+        "fact": "The marketing expert will send her competitor screenshots and findings to the user interface designer.",
+        "agreed": null,
+        "related_action_item": "SY0205b.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205b.s0056",
+          "SY0205b.s0057",
+          "SY0205b.s0058"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f12",
+        "type": "action_item",
+        "fact": "The absent user interface designer was assigned a first map screen mock-up with numbered and shaped pins.",
+        "agreed": null,
+        "related_action_item": "SY0205b.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205b.s0057",
+          "SY0205b.s0059"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f13",
+        "type": "plan_change",
+        "fact": "The user interface designer's technical functions list, due for this meeting, was moved to the next meeting because it was unfinished.",
+        "agreed": null,
+        "related_action_item": "SY0205b.ai4",
+        "refers_to_meeting": "SY0205a",
+        "evidence_segments": [
+          "SY0205b.s0063",
+          "SY0205b.s0064",
+          "SY0205b.s0065"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f14",
+        "type": "other",
+        "fact": "All four hundred docks have a printed QR code, ninety older docks have only a keypad and the rest have Bluetooth. The industrial designer first said 120 keypad docks, then corrected it to ninety.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205b.s0068",
+          "SY0205b.s0070",
+          "SY0205b.s0071",
+          "SY0205b.s0072",
+          "SY0205b.s0073",
+          "SY0205b.s0074"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f15",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f15",
+        "type": "decision",
+        "fact": "NFC is ruled out because no docks support it.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205b.s0074"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f16",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f16",
+        "type": "other",
+        "fact": "A QR unlock goes through the operator's server and takes about three to four seconds.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205b.s0076",
+          "SY0205b.s0077",
+          "SY0205b.s0078"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f17",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f17",
+        "type": "unagreed_proposal",
+        "fact": "The industrial designer proposed Bluetooth as the main unlock method. It was not adopted because many users keep Bluetooth off and the ninety older docks lack it.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205b.s0079",
+          "SY0205b.s0080",
+          "SY0205b.s0081",
+          "SY0205b.s0082",
+          "SY0205b.s0084",
+          "SY0205b.s0085",
+          "SY0205b.s0086",
+          "SY0205b.s0087"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f18",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f18",
+        "type": "decision",
+        "fact": "QR code scanning is the main unlock method.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205b.s0085",
+          "SY0205b.s0086",
+          "SY0205b.s0087",
+          "SY0205b.s0088"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f19",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f19",
+        "type": "decision",
+        "fact": "A one-time five-digit keypad code shown in the app, valid for about a minute, is the fallback unlock method.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205b.s0091",
+          "SY0205b.s0092",
+          "SY0205b.s0093",
+          "SY0205b.s0094",
+          "SY0205b.s0095",
+          "SY0205b.s0096"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f20",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f20",
+        "type": "action_item",
+        "fact": "Checking the cost of the operator's live data feed was raised but nobody took it on.",
+        "agreed": null,
+        "related_action_item": "SY0205b.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205b.s0099",
+          "SY0205b.s0100",
+          "SY0205b.s0101",
+          "SY0205b.s0102",
+          "SY0205b.s0103",
+          "SY0205b.s0104"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f21",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f21",
+        "type": "unagreed_proposal",
+        "fact": "The marketing expert suggested notifications when a favourite dock runs low on bikes. It was left open pending the user interface designer's view.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205b.s0106",
+          "SY0205b.s0107",
+          "SY0205b.s0108",
+          "SY0205b.s0109"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f22",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f22",
+        "type": "decision",
+        "fact": "The agreed functions are the live availability map as main screen, favourite home and work docks, QR unlock with keypad code fallback, a guest day pass, and English, German and French support.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": "SY0205a",
+        "evidence_segments": [
+          "SY0205b.s0111",
+          "SY0205b.s0112",
+          "SY0205b.s0113",
+          "SY0205b.s0114",
+          "SY0205b.s0115",
+          "SY0205b.s0116",
+          "SY0205b.s0117",
+          "SY0205b.s0118"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f23",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f23",
+        "type": "action_item",
+        "fact": "The industrial designer will work out the full unlock flow and check the code timing with the operator contact.",
+        "agreed": null,
+        "related_action_item": "SY0205b.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205b.s0120",
+          "SY0205b.s0121"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f24",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f24",
+        "type": "action_item",
+        "fact": "The marketing expert will check visitor statistics for any further languages tourists need.",
+        "agreed": null,
+        "related_action_item": "SY0205b.ai8",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205b.s0122",
+          "SY0205b.s0123"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0205b.f25",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0205b.f25",
+        "type": "action_item",
+        "fact": "The project manager will chase the brand guide and send the user interface designer the minutes and his tasks.",
+        "agreed": null,
+        "related_action_item": "SY0205b.ai10",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0205b.s0124"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_VAGUE_NO_OWNER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_VAGUE_NO_OWNER",
+        "segments": [
+          "SY0205b.s0097",
+          "SY0205b.s0098",
+          "SY0205b.s0099",
+          "SY0205b.s0100",
+          "SY0205b.s0101",
+          "SY0205b.s0102",
+          "SY0205b.s0103",
+          "SY0205b.s0104",
+          "SY0205b.s0105"
+        ],
+        "note": "The PM says 'someone should probably check what that feed costs', the others only backchannel, and the topic moves on with no owner."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_TASK_TO_ABSENT",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_TASK_TO_ABSENT",
+        "segments": [
+          "SY0205b.s0055",
+          "SY0205b.s0057",
+          "SY0205b.s0059",
+          "SY0205b.s0060",
+          "SY0205b.s0061",
+          "SY0205b.s0063",
+          "SY0205b.s0064"
+        ],
+        "note": "The PM assigns the map screen mock-up to Tomas, the absent UI designer, and carries his unfinished technical functions list over to the next meeting."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}

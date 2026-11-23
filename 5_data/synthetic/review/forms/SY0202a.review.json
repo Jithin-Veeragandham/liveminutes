@@ -1,0 +1,1047 @@
+{
+  "meeting_id": "SY0202a",
+  "raw_sha256": "38e6f5de9f687794f499c0f8194de097951e854ebab981a9a74e59cdf99dd94f",
+  "instructions": "reviewer_1 / reviewer_2: {\"name\", \"decision\": accept|reject|edit|null, \"edit\": <replacement>, \"comment\"}\n  resolution:              same fields, filled in by the third reviewer when 1 and 2 disagree\nFinal decision for an item = resolution.decision if set, else the shared decision of\nreviewers 1 and 2 (for \"edit\", both edits must be identical, otherwise it needs a resolution).",
+  "items": [
+    {
+      "item_id": "meeting",
+      "kind": "meeting",
+      "gold": "Accept = usable meeting. Reject = exclude the whole meeting from the release.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "transcript",
+      "kind": "transcript",
+      "gold": "Edit = a list of {\"id\": segment id, \"text\": new text} corrections.",
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.abstract",
+      "kind": "summary",
+      "gold": [
+        "The project manager opened the kickoff meeting, the team introduced themselves, and he presented the project: a self-checkout kiosk for public library networks.",
+        "He gave the budget targets from the brief: a production cost under 4,000 euros per unit and a selling price of around 6,500 euros. The brief also asks that the kiosk fit the look of a library rather than resemble a cash machine.",
+        "The team agreed that the kiosk will handle checkout and renewals but not returns. They also agreed that borrowers will identify themselves with either a library card or a library-app digital card, both read by the same scanner.",
+        "The team discussed barcode versus RFID book reading, an email-only receipt, and a touchscreen-only interface, but did not settle any of these.",
+        "The marketing expert raised accessibility as a key requirement and took on researching it. The project manager then assigned individual preparation tasks for the functional design meeting."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.actions",
+      "kind": "summary",
+      "gold": [
+        "The industrial designer will work out the working design: the internal components and a rough layout.",
+        "The user interface designer will prepare the technical functions design: the step-by-step checkout and renewal flow and the screens.",
+        "The marketing expert will prepare the user requirements, drawing on her meeting with library services staff.",
+        "The marketing expert will gather the accessibility requirements from library services and share them with the user interface designer. The user interface designer had first offered to do this.",
+        "The project manager will send round the project brief and the notes from the meeting.",
+        "Someone should check the cost of RFID readers, but no one took this task."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.decisions",
+      "kind": "summary",
+      "gold": [
+        "The kiosk will support checkout and renewals only; returns stay with the existing book drop.",
+        "Borrowers will identify themselves with a library card or a library-app digital card (QR code), both read by one scanner.",
+        "The production cost target stays fixed at under 4,000 euros per unit."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "summary.problems",
+      "kind": "summary",
+      "gold": [
+        "It is unclear whether the kiosk should read barcodes, RFID tags or both. The cost of RFID readers is unknown, and no one is assigned to check it.",
+        "The team did not decide whether to drop the printed receipt in favour of email or to make printing optional.",
+        "The team did not decide whether the interface should be touchscreen-only or include at least one hardware button such as cancel or help."
+      ],
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202a.ai1",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202a.ai1",
+        "description": "Prepare the working design: internal components and a rough layout of the kiosk",
+        "owner": "A",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202a.s0093",
+            "event": "assigned",
+            "by": "D",
+            "owner": "A"
+          },
+          {
+            "segment": "SY0202a.s0096",
+            "event": "accepted",
+            "by": "A",
+            "owner": "A"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202a.s0093",
+          "SY0202a.s0094",
+          "SY0202a.s0095",
+          "SY0202a.s0096"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202a.ai2",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202a.ai2",
+        "description": "Prepare the technical functions design: step-by-step checkout and renewal flow and screens",
+        "owner": "C",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202a.s0097",
+            "event": "assigned",
+            "by": "D",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0202a.s0098",
+            "event": "accepted",
+            "by": "C",
+            "owner": "C"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202a.s0097",
+          "SY0202a.s0098"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202a.ai3",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202a.ai3",
+        "description": "Prepare user requirements from libraries and borrowers",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202a.s0099",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0202a.s0100",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202a.s0099",
+          "SY0202a.s0100"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202a.ai4",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202a.ai4",
+        "description": "Gather accessibility requirements (wheelchair height, screen readers) from library services and share them with the UI designer",
+        "owner": "B",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202a.s0083",
+            "event": "offered",
+            "by": "C",
+            "owner": "C"
+          },
+          {
+            "segment": "SY0202a.s0086",
+            "event": "offered",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0202a.s0089",
+            "event": "accepted",
+            "by": "B",
+            "owner": "B"
+          },
+          {
+            "segment": "SY0202a.s0090",
+            "event": "assigned",
+            "by": "D",
+            "owner": "B"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202a.s0080",
+          "SY0202a.s0081",
+          "SY0202a.s0083",
+          "SY0202a.s0084",
+          "SY0202a.s0085",
+          "SY0202a.s0086",
+          "SY0202a.s0087",
+          "SY0202a.s0088",
+          "SY0202a.s0089",
+          "SY0202a.s0090",
+          "SY0202a.s0091"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202a.ai5",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202a.ai5",
+        "description": "Check what RFID readers cost",
+        "owner": null,
+        "owner_unclear": true,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202a.s0054",
+            "event": "proposed",
+            "by": "D",
+            "owner": null
+          }
+        ],
+        "evidence_segments": [
+          "SY0202a.s0052",
+          "SY0202a.s0053",
+          "SY0202a.s0054",
+          "SY0202a.s0055",
+          "SY0202a.s0056",
+          "SY0202a.s0057"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "action_items/SY0202a.ai6",
+      "kind": "action_item",
+      "gold": {
+        "id": "SY0202a.ai6",
+        "description": "Send round the project brief and the meeting notes",
+        "owner": "D",
+        "owner_unclear": false,
+        "status": "active",
+        "previous_owners": [],
+        "history": [
+          {
+            "segment": "SY0202a.s0105",
+            "event": "offered",
+            "by": "D",
+            "owner": "D"
+          }
+        ],
+        "evidence_segments": [
+          "SY0202a.s0105",
+          "SY0202a.s0106"
+        ],
+        "owner_source": "gold"
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202a.f1",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202a.f1",
+        "type": "other",
+        "fact": "All four participants (industrial designer, marketing expert, user interface designer, project manager) were present at the kickoff meeting.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202a.s0002",
+          "SY0202a.s0009",
+          "SY0202a.s0012",
+          "SY0202a.s0014"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202a.f2",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202a.f2",
+        "type": "other",
+        "fact": "The project is a self-checkout kiosk for public library networks.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202a.s0017",
+          "SY0202a.s0018"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202a.f3",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202a.f3",
+        "type": "other",
+        "fact": "The production cost target is under 4,000 euros per unit, and the target selling price is about 6,500 euros.",
+        "agreed": null,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202a.s0024",
+          "SY0202a.s0025",
+          "SY0202a.s0027",
+          "SY0202a.s0108"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202a.f4",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202a.f4",
+        "type": "decision",
+        "fact": "The kiosk will do checkout and renewals but not returns; returns stay with the book drop.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202a.s0043",
+          "SY0202a.s0044",
+          "SY0202a.s0045",
+          "SY0202a.s0046",
+          "SY0202a.s0047"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202a.f5",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202a.f5",
+        "type": "decision",
+        "fact": "Borrowers will identify themselves with a library card or a library-app digital card, both read by the same scanner.",
+        "agreed": true,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202a.s0059",
+          "SY0202a.s0060",
+          "SY0202a.s0061",
+          "SY0202a.s0062",
+          "SY0202a.s0063",
+          "SY0202a.s0064",
+          "SY0202a.s0065"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202a.f6",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202a.f6",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer proposed supporting both barcode and RFID reading; this was not decided because of the RFID cost.",
+        "agreed": false,
+        "related_action_item": "SY0202a.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202a.s0051",
+          "SY0202a.s0052",
+          "SY0202a.s0057"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202a.f7",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202a.f7",
+        "type": "unagreed_proposal",
+        "fact": "The industrial designer proposed dropping the printed receipt in favour of email; the marketing expert objected and the decision was postponed.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202a.s0066",
+          "SY0202a.s0067",
+          "SY0202a.s0068",
+          "SY0202a.s0069",
+          "SY0202a.s0070",
+          "SY0202a.s0071",
+          "SY0202a.s0072",
+          "SY0202a.s0073"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202a.f8",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202a.f8",
+        "type": "unagreed_proposal",
+        "fact": "The user interface designer proposed an all-touchscreen interface with no physical buttons; the industrial designer wanted at least one hardware button, and the question was left for the next meeting.",
+        "agreed": false,
+        "related_action_item": null,
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202a.s0075",
+          "SY0202a.s0076",
+          "SY0202a.s0077",
+          "SY0202a.s0078",
+          "SY0202a.s0079"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202a.f9",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202a.f9",
+        "type": "action_item",
+        "fact": "The industrial designer was asked to prepare the working design (components and layout).",
+        "agreed": null,
+        "related_action_item": "SY0202a.ai1",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202a.s0093",
+          "SY0202a.s0096"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202a.f10",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202a.f10",
+        "type": "action_item",
+        "fact": "The user interface designer was asked to prepare the technical functions design (checkout and renewal flow).",
+        "agreed": null,
+        "related_action_item": "SY0202a.ai2",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202a.s0097",
+          "SY0202a.s0098"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202a.f11",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202a.f11",
+        "type": "action_item",
+        "fact": "The marketing expert was asked to prepare the user requirements.",
+        "agreed": null,
+        "related_action_item": "SY0202a.ai3",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202a.s0099",
+          "SY0202a.s0100"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202a.f12",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202a.f12",
+        "type": "action_item",
+        "fact": "The user interface designer offered to research accessibility guidelines, but the marketing expert took the task because she is meeting library services staff.",
+        "agreed": null,
+        "related_action_item": "SY0202a.ai4",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202a.s0083",
+          "SY0202a.s0086",
+          "SY0202a.s0087",
+          "SY0202a.s0089",
+          "SY0202a.s0090"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202a.f13",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202a.f13",
+        "type": "action_item",
+        "fact": "The project manager said someone should check RFID reader costs, but no one took the task.",
+        "agreed": null,
+        "related_action_item": "SY0202a.ai5",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202a.s0054",
+          "SY0202a.s0055",
+          "SY0202a.s0056",
+          "SY0202a.s0057"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "qa_facts/SY0202a.f14",
+      "kind": "qa_fact",
+      "gold": {
+        "id": "SY0202a.f14",
+        "type": "action_item",
+        "fact": "The project manager will send round the project brief and the meeting notes.",
+        "agreed": null,
+        "related_action_item": "SY0202a.ai6",
+        "refers_to_meeting": null,
+        "evidence_segments": [
+          "SY0202a.s0105"
+        ]
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_VAGUE_NO_OWNER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_VAGUE_NO_OWNER",
+        "segments": [
+          "SY0202a.s0052",
+          "SY0202a.s0053",
+          "SY0202a.s0054",
+          "SY0202a.s0055",
+          "SY0202a.s0056",
+          "SY0202a.s0057"
+        ],
+        "note": "The project manager says someone should check RFID reader costs; the others only backchannel and the topic is parked with no owner."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    },
+    {
+      "item_id": "edge_cases/F2_OFFERED_TAKEN_BY_OTHER",
+      "kind": "edge_case",
+      "gold": {
+        "scenario_id": "F2_OFFERED_TAKEN_BY_OTHER",
+        "segments": [
+          "SY0202a.s0083",
+          "SY0202a.s0084",
+          "SY0202a.s0085",
+          "SY0202a.s0086",
+          "SY0202a.s0087",
+          "SY0202a.s0088",
+          "SY0202a.s0089",
+          "SY0202a.s0090"
+        ],
+        "note": "The UI designer offers to research accessibility guidelines, but the marketing expert takes the task instead and the project manager confirms her."
+      },
+      "reviewer_1": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "reviewer_2": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      },
+      "resolution": {
+        "name": "",
+        "decision": null,
+        "edit": null,
+        "comment": ""
+      }
+    }
+  ]
+}
